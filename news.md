@@ -2,14 +2,15 @@
 title: "Latest News from the OSG"
 ---
 
-Latest OSG Updates
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
+<br/>
+Latest OSG Updates
+==================
+
+{% for post in site.posts %}
+<a href="{{ post.url }}">{{ post.title }}</a>
+{{ post.excerpt }}
+<hr/>
+{% endfor %}
 </ul>
 

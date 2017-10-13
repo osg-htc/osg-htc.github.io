@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "LIGO Collaboration wins 2017 Nobel Prize in Physics"
 date: 2017-10-05 12:00:00 -0600
 categories: LIGO
