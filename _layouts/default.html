@@ -42,11 +42,13 @@
       <p>{{ site.description | default: site.github.project_tagline }}</p>
     </header>
 
-      <section>
+      <main role="main">
 
-      {{ content }}
+      <div class="container">
+          {{ content }}
+      </div>
 
-      </section>
+      </main>
       <footer>
         Funded by the National Science Foundation under Grant No. 1148698.
       </footer>
