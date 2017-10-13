@@ -8,7 +8,7 @@ It's not meant for end-users, unless they are horribly bored or curious.
 
 The real webpage for the OSG is <https://www.opensciencegrid.org>.
 
-
+<br/>
 <div class="row">
   <div class="col-lg-4">
     <h3>What We Do</h3>
@@ -16,7 +16,6 @@ The real webpage for the OSG is <https://www.opensciencegrid.org>.
     The resources accessible through the OSG are contributed by the community, organized by the OSG, and governed by the OSG consortium.
     In the last 12 months, we have provided more than 1.2 billion CPU hours to researchers across a wide variety of projects.
     </p>
-    <p>To see the breadth of the OSG use, [explore our accounting portal](https://gracc.opensciencegrid.org).</p>
   </div>
   <div class="col-lg-4">
     <h3>Submit Locally, Run Globally</h3>
@@ -43,7 +42,8 @@ if it wasn't for the OSG. Sharing allows individual researchers to access larger
     <h3>Find Us!</h3>
     <p>Are you a user wanting more computing resources?</p>
     <p>Are you a resource provider wanting to join our collaboration?</p>
-    <pIf so, find us at the <a href="https://support.opensciencegrid.org">support desk</a>.
+    <p>If so, find us at the <a href="https://support.opensciencegrid.org">support desk</a>.
+    <p>To see the breadth of the OSG use, <a href="https://gracc.opensciencegrid.org">explore our accounting portal</a>.</p>
   </div>
 </div>
 
