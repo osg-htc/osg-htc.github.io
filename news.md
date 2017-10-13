@@ -4,6 +4,7 @@ title: "Latest News from the OSG"
 
 
 <br/>
+
 Latest OSG Updates
 ==================
 
@@ -12,5 +13,4 @@ Latest OSG Updates
 {{ post.excerpt }}
 <hr/>
 {% endfor %}
-</ul>
 
