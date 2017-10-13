@@ -6,7 +6,6 @@
 
 {% seo %}
 
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <meta name="viewport" content="width=device-width">
 
     <!-- Bootstrap CSS -->
@@ -20,11 +19,29 @@
 
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1><img src="/assets/images/osglogo.png"> {{ site.title | default: site.github.repository_name }}</h1>
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-      </header>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Open Science Grid</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Docs</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <h1><img src="/assets/images/osglogo.png"> {{ site.title | default: site.github.repository_name }}</h1>
+      <p>{{ site.description | default: site.github.project_tagline }}</p>
+    </header>
+
       <section>
 
       {{ content }}
@@ -33,7 +50,7 @@
       <footer>
         Funded by the National Science Foundation under Grant No. 1148698.
       </footer>
-    </div>
+
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
 
 
