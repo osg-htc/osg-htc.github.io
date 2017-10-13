@@ -27,11 +27,16 @@ if it wasn't for the OSG. Sharing allows individual researchers to access larger
 
 The Open Science Grid consists of computing and storage elements at over 100 individual sites spanning the United States.
 These sites, primarily at universities and national labs, range in size from a few hundred to tens of thousands of CPU cores.
-If you represent a university computing cluster and are interested in providing computing cycles opportunistically to the OSG,
-contact us at user-support@opensciencegrid.org.
 
 ### The OSG Software Stack
 
 The OSG provides an integrated software stack to enable high throughput computing; [visit our technical documents website for information](docs/).
 
+### Find Us!
+
+Are you a user wanting more computing resources?
+
+Are you a resource provider wanting to join our collaboration?
+
+If so, find us at the [support desk](https://support.opensciencegrid.org).
 
