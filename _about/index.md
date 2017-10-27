@@ -1,6 +1,5 @@
 ---
 title: Introduction
-permalink: /:collection/
 ---
 
 ### What we do
