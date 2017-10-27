@@ -22,7 +22,7 @@ Figure 1: The TRAPPIST-1 system contains a total of seven planets, all around th
 
 <center>
 <div style="width: 257px">
-<img alt="/assets/images/groom-2.jpg">
+<img alt="The Spitzer Space Telescope CTA" src="/assets/images/groom-2.jpg">
 <p style="margin-bottom: 10px">
 Figure 2: The Spitzer Space Telescope cryogenic telescope assembly (CTA) being prepared for vibration testing. Courtesy NASA/JPL-Caltech.
 </p>
