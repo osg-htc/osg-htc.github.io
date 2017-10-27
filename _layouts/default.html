@@ -45,13 +45,14 @@
       </nav>
 
       <div class="container">
+        <main role="main">
           {{ content }}
+        </main>
+        <footer>
+          <hr/>
+          Funded by the National Science Foundation under Grant No. 1148698.  Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+        </footer>
       </div>
-
-      <footer>
-        <hr/>
-        Funded by the National Science Foundation under Grant No. 1148698.  Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
-      </footer>
 
   {% if site.google_analytics %}
     <script>
