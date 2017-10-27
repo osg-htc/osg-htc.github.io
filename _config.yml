@@ -1,3 +1,15 @@
 theme: jekyll-theme-minimal
 title: Open Science Grid
 description: A national, distributed computing partnership for data-intensive research
+
+defaults:
+  - scope:
+      path: "_about"
+      type: about
+    values:
+      layout: about
+
+collections:
+  about:
+    permalink: /:collection/:path/
+    output: true

@@ -1,0 +1,14 @@
+<div class="col-sm-3">
+  <aside>
+    {% for section in site.data.docs %}
+    <h4>{{ section.title }}</h4>
+    {% include docs_ul.html items=section.docs %}
+    {% endfor %}
+    <h4>{{ section.title }}</h4>
+    <ul>
+      <li><a href="https://support.opensciencegrid.org/">Users</a>/li>
+      <li><a href="https://opensciencegrid.github.io/docs/">Sysadmins</a>/li>
+      <li><a href="https://opensciencegrid.github.io/security/">Security</a>/li>
+    </ul>
+  </aside>
+</div>
