@@ -9,17 +9,25 @@ Accumulated data sets from past and current astronomy research are not dead. Res
 Steve Groom serves as task manager for the NASA/IPAC Infrared Science Archive (IRSA), part of the Infrared Processing and Analysis Center (IPAC) located on the campus of the California Institute of Technology (Caltech) in Pasadena, California. He and his colleagues archive the data sets from NASA’s infrared astronomy missions. By preserving the data, they enable more research. One of the most valuable of these is the Spitzer Space Telescope, which was recently instrumental in confirming the existence of Trappist One, a star with several earth-like planets.
 
 
-<p align="center"> 
+<center>
+<div style="width: 477px;">
 <img alt="TRAPPIST-1 system" src="/assets/images/groom-title.jpg">
+<p style="margin-bottom: 10px">
 Figure 1: The TRAPPIST-1 system contains a total of seven planets, all around the size of Earth. Three of them — TRAPPIST-1e, f and g — dwell in their star’s so-called “habitable zone.” The habitable zone, or Goldilocks zone, is a band around every star (shown here in green) where astronomers have calculated that temperatures are just right — not too hot, not too cold — for liquid water to pool on the surface of an Earth-like world. Courtesy NASA/JPL-Caltech.
 </p>
+</div>
+</center>
 
 “For example, we are learning how galaxies form by looking at patterns,” says Groom. A partner, the NASA Extra-Galactic Database (NED), compiles measurements of galaxies into a coherent database. Researchers discovered a whole new, previously unknown, class of galaxy (a superluminous spiral). “Theories said it shouldn’t exist, but the data was there, and someone mined the data. These huge data points need to be put to use, so new science can be done. That can only be achieved through computing.”
 
-<p align="center">
+<center>
+<div style="width: 257px">
 <img alt="/assets/images/groom-2.jpg">
+<p style="margin-bottom: 10px">
 Figure 2: The Spitzer Space Telescope cryogenic telescope assembly (CTA) being prepared for vibration testing. Courtesy NASA/JPL-Caltech.
 </p>
+</div>
+</center>
 
 “We are data recyclers,” says Groom. “We exist to support research that the original mission did not envision or could not do. We are now looking at computing because the data volumes are getting really large.”
 
