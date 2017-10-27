@@ -1,5 +1,5 @@
 <div class="col-sm-3">
-  <aside>
+  <nav class="d-none d-sm-block bg-light sidebar">
     {% for section in site.data.about %}
     <h4>{{ section.title }}</h4>
     {% include about_ul.html items=section.docs %}
@@ -10,5 +10,5 @@
       <li><a href="https://opensciencegrid.github.io/docs/">Sysadmins</a></li>
       <li><a href="https://opensciencegrid.github.io/security/">Security</a></li>
     </ul>
-  </aside>
+  </nav>
 </div>
