@@ -1,5 +1,6 @@
 ---
 title: Introduction
+redirect_from: /about/index.html
 ---
 
 ### What we do

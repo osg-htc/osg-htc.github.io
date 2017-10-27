@@ -13,3 +13,7 @@ collections:
   about:
     permalink: /:collection/:path/
     output: true
+
+
+plugins:
+  - jekyll-redirect-from
