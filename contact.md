@@ -2,6 +2,8 @@
 title: Contact Information
 ---
 
+<h1>OSG Contact Information</h1>
+
 ### For Media Contact, or general questions about the OSG website.
 Email: <mailto:osg-contact@opensciencegrid.org>
 

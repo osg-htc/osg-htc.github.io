@@ -2,6 +2,7 @@
 title: "Latest News from the OSG"
 ---
 
+<h1>OSG News</h1>
 
 {% for post in site.posts %}
 <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_long_string }})
