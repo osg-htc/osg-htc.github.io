@@ -13,6 +13,7 @@ defaults:
       type: "posts"
     values:
       layout: posts
+      permalink: /news/:year/:month/:day/:title.html
 
 collections:
   about:
