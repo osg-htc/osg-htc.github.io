@@ -1,4 +1,5 @@
 ---
+title: Machine learning insights into molecular science using the Open Science Grid
 date: 2017-06-29 12:00:00 -0600
 categories: Machine Learning
 ---
@@ -19,7 +20,6 @@ For studying drug discovery, where small organic molecule binds to a protein rec
     Example of a protein model that Isayev and his group study. Courtesy image.
   </div>
 </div>
-Example of a protein model that Isayev and his group study. Courtesy image.
 
 Similar to the human genome project, five years ago President Obama created a new Materials Genome Initiative to accelerate the design of new materials. Using machine learning methods based on the crystal structure of the material he is studying, Isayev can predict its physical properties.
 

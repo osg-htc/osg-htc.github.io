@@ -8,6 +8,11 @@ defaults:
       type: about
     values:
       layout: about
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: posts
 
 collections:
   about:
