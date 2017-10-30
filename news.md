@@ -4,7 +4,7 @@ title: "Latest News from the OSG"
 
 
 {% for post in site.posts %}
-<a href="{{ post.url }}">{{ post.title }}</a>
+<a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_long_string }})
 {{ post.excerpt }}
 <hr/>
 {% endfor %}
