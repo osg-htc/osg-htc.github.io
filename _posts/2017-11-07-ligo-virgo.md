@@ -1,4 +1,10 @@
-OSG integrating global computing to support detection of colliding neutron stars by LIGO, VIRGO, and DECam
+---
+title: "OSG integrates global computing to support detection of colliding neutron stars by LIGO, VIRGO, and DECam"
+date: 2017-11-07 12:00:00 -0600
+categories: LIGO
+---
+
+OSG integrates global computing to support detection of colliding neutron stars by LIGO, VIRGO, and DECam
 ==========================================================================================================
 
 On October 16th, scientists at the LIGO and Virgo scientific collaborations
