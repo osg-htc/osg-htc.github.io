@@ -31,7 +31,12 @@ computing needs. Plus, every participant left the School with at least two ways 
 an account on a UW–Madison HTCondor submit node and an OSG Connect account — so that there
 are as few barriers to computing and storage resources as possible.
 
-<p><a href="http://www.opensciencegrid.org/wp-content/uploads/2017/11/Screen-Shot-2017-11-29-at-12.26.34-PM.png"><img class="alignright wp-image-226011" src="http://www.opensciencegrid.org/wp-content/uploads/2017/11/Screen-Shot-2017-11-29-at-12.26.34-PM-300x129.png" alt="" width="534" height="230" srcset="https://www.opensciencegrid.org/wp-content/uploads/2017/11/Screen-Shot-2017-11-29-at-12.26.34-PM-300x129.png 300w, https://www.opensciencegrid.org/wp-content/uploads/2017/11/Screen-Shot-2017-11-29-at-12.26.34-PM-768x330.png 768w, https://www.opensciencegrid.org/wp-content/uploads/2017/11/Screen-Shot-2017-11-29-at-12.26.34-PM-1024x440.png 1024w, https://www.opensciencegrid.org/wp-content/uploads/2017/11/Screen-Shot-2017-11-29-at-12.26.34-PM-600x258.png 600w, https://www.opensciencegrid.org/wp-content/uploads/2017/11/Screen-Shot-2017-11-29-at-12.26.34-PM.png 1309w" sizes="(max-width: 534px) 100vw, 534px" /></a></p>
+<div class="media border border-primary rounded-left">
+   <img class="mr-3" alt="The attendees of the OSG User School" src="/assets/images/osg_summer_school_2017.png">
+   <div class="media-body">
+     The attendees of the OSG User School in 2017.
+   </div>
+</div>
 
 From formal training evaluations to informal comments and emails, the School was clearly a
 success. Participants were happy with the program, with how much they learned, and with the
