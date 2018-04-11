@@ -29,7 +29,7 @@ intensive, as it includes massive amounts of cosmology simulation, among other t
 analysis.
 
 <div class="media border border-primary rounded-left">
-  <img class="mr-3" alt="Dark matter map" src="/assets/images/Dark-Matter-Map-II-e1428889817598-257x300.jpg">
+  <img class="mr-3" alt="Dark matter map" src="/assets/images/Dark-Matter-Map-II-e1428889817598.jpg">
   <div class="media-body">
     <h5 class="mt-0">Dark Matter map</h5>
     Map of dark matter, measured through weak lensing with Science Verification Data (Image Credit: DES Collaboration)
@@ -43,7 +43,7 @@ and the LIGO follow-up efforts," says Herner.
 [TNO stands for trans-Neptunian Object](https://phys.org/news/2016-12-dark-energy-survey-potential-dwarf.html),
 which is any is any minor planet in the Solar System that orbits the Sun at a average distance
 greater than Neptune, and LIGO is the "Laser Interferometer Gravitational-Wave Observatory,"
-which is best known for the Nobel Prize-winning direct observation of [../_posts/2017-10-05-ligo-wins-nobel-prize.md](gravitational waves).
+which is best known for the Nobel Prize-winning direct observation of [gravitational waves](../_posts/2017-10-05-ligo-wins-nobel-prize.md).
 
 Herner expects even more DES workflows coming over to OSG in the next year. With year five
 of data taking having ended just weeks ago, Herner tells us that, "there will almost
