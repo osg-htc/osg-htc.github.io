@@ -29,7 +29,7 @@ intensive, as it includes massive amounts of cosmology simulation, among other t
 analysis.
 
 <div class="media border border-primary rounded-left">
-  <img class="mr-3" alt="Dark matter map" src="/assets/images/Dark-Matter-Map-II-e1428889817598.jpg">
+  <img class="mr-3" alt="Dark matter map" src="/assets/images/Dark-Matter-Map-II-e1521045294690.jpg">
   <div class="media-body">
     <h5 class="mt-0">Dark Matter map</h5>
     Map of dark matter, measured through weak lensing with Science Verification Data (Image Credit: DES Collaboration)
