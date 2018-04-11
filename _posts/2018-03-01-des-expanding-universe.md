@@ -43,7 +43,7 @@ and the LIGO follow-up efforts," says Herner.
 [TNO stands for trans-Neptunian Object](https://phys.org/news/2016-12-dark-energy-survey-potential-dwarf.html),
 which is any is any minor planet in the Solar System that orbits the Sun at a average distance
 greater than Neptune, and LIGO is the "Laser Interferometer Gravitational-Wave Observatory,"
-which is best known for the Nobel Prize-winning direct observation of [gravitational waves](../_posts/2017-10-05-ligo-wins-nobel-prize.md).
+which is best known for the Nobel Prize-winning direct observation of [gravitational waves](/news/2017/10/05/ligo-wins-nobel-prize.html).
 
 Herner expects even more DES workflows coming over to OSG in the next year. With year five
 of data taking having ended just weeks ago, Herner tells us that, "there will almost
