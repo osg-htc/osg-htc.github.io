@@ -1,0 +1,14 @@
+<div class="col-sm-3">
+  <nav class="d-none d-sm-block bg-light sidebar">
+    {% for section in site.data.about %}
+    <h5>{{ section.title }}</h5>
+    {% include about_ul.html items=section.docs %}
+    {% endfor %}
+    <h5>Documentation</h5>
+    <ul class="nav nav-pills flex-column">
+      <li class="nav-item"><a class="nav-link" href="https://support.opensciencegrid.org/">Users</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://opensciencegrid.github.io/docs/">Sysadmins</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://opensciencegrid.github.io/security/">Security</a></li>
+    </ul>
+  </nav>
+</div>
