@@ -1,3 +1,6 @@
+---
+layout: default
+---
 
 {% include homepage_top.html %}
 
