@@ -1,4 +1,5 @@
 ---
+layout: default
 title: OSG Twiki Decommisssioned
 ---
 
