@@ -12,20 +12,20 @@ We apologize for any inconvenience this might have caused.  The following areas 
 transitioned to a new hosting system:
 
 
-*  [Systems Administrator Documentation](https://opensciencegrid.github.io/docs/): This documentation
+*  [Systems Administrator Documentation](https://opensciencegrid.org/docs/): This documentation
    aims to provide OSG _site administrators_ with the necessary information to install, configure,
    and operate site services.
 *  [User Support](https://support.opensciencegrid.org): Documentation and support for _researchers_
    interested in using OSG resources.
-*  [Security](https://opensciencegrid.github.io/security): If you need to read about OSG Security
+*  [Security](https://opensciencegrid.org/security): If you need to read about OSG Security
    practices, procedures, or need to contact the security team.</li>
-*  [Networking](https://opensciencegrid.github.io/networking/): This is an entry point for those
+*  [Networking](https://opensciencegrid.org/networking/): This is an entry point for those
    interested in Networking in OSG/WLCG or for those OSG/WLCG users experiencing network problems.
-*  [Operations](https://opensciencegrid.github.io/operations/): Documentation with regards to OSG
+*  [Operations](https://opensciencegrid.org/operations/): Documentation with regards to OSG
    Operations (SLAs, etc.)
-*  [Education](https://opensciencegrid.github.io/outreach/): OSG User School and other OSG teaching
+*  [Education](https://opensciencegrid.org/outreach/): OSG User School and other OSG teaching
    or training events.
-*  [Technology](https://opensciencegrid.github.io/technology/): Current technologies that OSG uses
+*  [Technology](https://opensciencegrid.org/technology/): Current technologies that OSG uses
    and plans for technology adoption in the future.
 
 If what you are looking for is not here, please contact us at [help@opensciencegrid.org](mailto:help@opensciencegrid.org)

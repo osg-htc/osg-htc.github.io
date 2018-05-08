@@ -25,6 +25,6 @@ The OSG is primarily used as a high-throughput grid where scientific problems ar
 
 #### More about OSG
 
-- Please see the [system administrator docs](https://opensciencegrid.github.io/docs/) for more information regarding the OSG.
+- Please see the [system administrator docs](https://opensciencegrid.org/docs/) for more information regarding the OSG.
 - [Grid Accounting portal](https://gracc.opensciencegrid.org/)
 
