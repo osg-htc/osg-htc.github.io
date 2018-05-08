@@ -10,5 +10,5 @@ The LIGO project, in order to estimate the statistical significance of gravitati
 
 Peter recently attended the OSG Council meeting as a representative for the LIGO organization, which is the newest member organization on the OSG Council, solidifying the future of collaboration between OSG and LIGO.
 
-OSG previously ran [an article](https://opensciencegrid.org/osg-website-archive/www.opensciencegrid.org/osg-helps-ligo-scientists-confirm-einsteins-last-unproven-theory/index.html) about the initial detection of the gravitational waves.
+OSG previously ran [an article](/news/2017/10/05/osg-helps-ligo-scientists-confirm-einsteins-last-unproven-theory.html) about the initial detection of the gravitational waves.
 
