@@ -1,6 +1,7 @@
 ---
 layout: default
 title: OSG Twiki Decommisssioned
+redirect_from: /osg-twiki-decommissioned/index.html
 ---
 
 The OSG TWiki service has been decommissioned
