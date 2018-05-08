@@ -4,11 +4,11 @@ title: Organization
 
 The OSG Consortium builds and operates the OSG. Consortium members contribute effort and resources to the common infrastructure, with the goal of giving scientists from many fields access to shared resources worldwide.
 
-Please see the [list of Virtual Organizations](http://myosg.grid.iu.edu/vosummary?all_vos=on&active=on&active_value=1).
+Please see the [list of Virtual Organizations](http://my.opensciencegrid.org/vosummary?all_vos=on&active=on&active_value=1).
 
-The [Council](https://opensciencegrid.github.io/council/) governs the consortium ensuring that the OSG benefits the scientific mission of its stakeholders.
+The [Council](https://opensciencegrid.org/council/) governs the consortium ensuring that the OSG benefits the scientific mission of its stakeholders.
 
-The [Executive Team](https://opensciencegrid.github.io/management/) manages the OSG project, which is organized into technical team areas.
+The [Executive Team](https://opensciencegrid.org/management/) manages the OSG project, which is organized into technical team areas.
 
 The OSG is made up of Member Organizations who register with the OSG Operations Center and works with many Partner Organizations.
 
