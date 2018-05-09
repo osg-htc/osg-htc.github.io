@@ -18,18 +18,33 @@ The LIGO project employs many concepts that the Open Science Grid (OSG) promotes
 Peter Couvares, data analysis computing manager for the Advanced LIGO project at Caltech, specializes in distributed computing problems. He and colleagues James Clark (Georgia Tech) and Larne Pekowsky (Syracuse University) explained LIGO’s computing needs and environment: The main focus is on optimization of data analysis codes, where optimization is broadly defined to encompass the overall performance and efficiency of their computing. While they use traditional optimization techniques to make things run faster, they also pursue more efficient resource management, and opportunistic resources—if there are computers available, they try to use them—thus the collaboration with OSG.
 
 <table>
-<tbody>
-<tr>
-<td>
-<p><div id="attachment_223091" style="max-width: 160px" class="wp-caption alignleft"><a href="/assets/images/couvares_cropped.jpeg"><img src="/assets/images/couvares_cropped-150x150.jpeg" alt="couvares_cropped" width="150" height="150" /></a><p class="wp-caption-text">Peter Couvares, courtesy photo</p></div></td>
-<td></td>
-<td>
-<p><div id="attachment_223081" style="max-width: 160px" class="wp-caption alignnone"><a href="/assets/images/clark_cropped.jpeg"><img class="wp-image-223081 size-thumbnail" src="/assets/images/clark_cropped-150x150.jpeg" alt="clark_cropped" width="150" height="150" /></a><p class="wp-caption-text">James Clark, courtesy photo</p></div></td>
-<td></td>
-<td>
-<p><div id="attachment_223101" style="max-width: 160px" class="wp-caption alignnone"><a href="/assets/images/pekowsy.jpeg"><img class="wp-image-223101 size-thumbnail" src="/assets/images/pekowsy-150x150.jpeg" alt="pekowsy" width="150" height="150" /></a><p class="wp-caption-text">Larne Pekowsky, courtesy photo</p></div></td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <td>
+        <div id="attachment_223091" style="max-width: 160px">
+          <a href="/assets/images/couvares_cropped.jpeg"><img src="/assets/images/couvares_cropped-150x150.jpeg" alt="couvares_cropped" width="150" height="150" /></a>
+          <br/>
+          Peter Couvares, courtesy photo
+        </div>
+      </td>
+      <td></td>
+      <td>
+        <div id="attachment_223081" style="max-width: 160px">
+          <a href="/assets/images/clark_cropped.jpeg"><img class="wp-image-223081 size-thumbnail" src="/assets/images/clark_cropped-150x150.jpeg" alt="clark_cropped" width="150" height="150" /></a>
+          <br/>
+          James Clark, courtesy photo
+        </div>
+      </td>
+      <td></td>
+      <td>
+        <div id="attachment_223101" style="max-width: 160px">
+          <a href="/assets/images/pekowsy.jpeg"><img class="wp-image-223101 size-thumbnail" src="/assets/images/pekowsy-150x150.jpeg" alt="pekowsy" width="150" height="150" /></a>
+          <br/>
+          Larne Pekowsky, courtesy photo
+        </div>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 “When a workflow might consist of 600,000 jobs, we don&#8217;t want to rerun them if we make a mistake. So we use [DAGMan](http://research.cs.wisc.edu/htcondor/dagman/dagman.html) (Directed Acyclic Graph Manager, a meta-scheduler for [HTCondor](http://research.cs.wisc.edu/htcondor/)) and Pegasus workflow manager to optimize changes,” added Couvares. “The combination of Pegasus, Condor, and OSG work great together.” Keeping track of what has run and how the workflow progresses, Pegasus translates the abstract layer of what needs to be done into actual jobs for Condor, which then puts them out on OSG.
