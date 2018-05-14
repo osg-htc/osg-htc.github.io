@@ -18,7 +18,7 @@ transitioned to a new hosting system:
 *  [User Support](https://support.opensciencegrid.org): Documentation and support for _researchers_
    interested in using OSG resources.
 *  [Security](https://opensciencegrid.org/security): If you need to read about OSG Security
-   practices, procedures, or need to contact the security team.</li>
+   practices, procedures, or need to contact the security team.
 *  [Networking](https://opensciencegrid.org/networking/): This is an entry point for those
    interested in Networking in OSG/WLCG or for those OSG/WLCG users experiencing network problems.
 *  [Operations](https://opensciencegrid.org/operations/): Documentation with regards to OSG
@@ -29,5 +29,5 @@ transitioned to a new hosting system:
    and plans for technology adoption in the future.
 
 If what you are looking for is not here, please contact us at [help@opensciencegrid.org](mailto:help@opensciencegrid.org)
-and we will be happy to assist you.</p>
+and we will be happy to assist you.
 
