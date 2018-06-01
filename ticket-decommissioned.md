@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Ticket Decomissioned
-redirect_from: /ticket-decomissioned/index.html
+redirect_from: /ticket-decommissioned/index.html
 ---
 
 The GOC Ticket services have been decommissioned
