@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ticket Decomissioned
+title: Ticket Decommissioned
 redirect_from: /ticket-decommissioned/index.html
 ---
 
