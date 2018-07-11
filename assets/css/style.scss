@@ -37,3 +37,13 @@ body {
 a{color:#b67b3c;text-decoration:none;}
 a:hover,a:focus{color:#7c5429;text-decoration:underline;}
 
+/* Stealing table CSS from jekyll-theme-minimal */
+
+table {
+  width: 100%;
+  border-collapse: collapse; }
+
+th, td {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid #e5e5e5; }
