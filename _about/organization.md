@@ -47,6 +47,7 @@ for help.
 List of Virtual Organizations
 -----------------------------
 
+The table below contains all active VOs in the OSG, their fields of science, and support information.
 
 | Virtual Organization | Fields of Science | Support |
 |----------------------|-------------------|---------|
