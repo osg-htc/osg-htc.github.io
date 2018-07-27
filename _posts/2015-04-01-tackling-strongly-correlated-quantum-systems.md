@@ -8,6 +8,10 @@ Duke University Associate Professor of Physics Shailesh Chandrasekharan and his 
 using the Open Science Grid (OSG) to tackle notoriously difficult problems in quantum systems.
 
 <style>
+figure.headshot {
+    max-width: 160px;
+}
+
 td {
     padding: 5px 200px;
     border-bottom: 0px;
@@ -18,18 +22,17 @@ td {
   <tbody>
     <tr>
       <td>
-        <div style="max-width: 160px">
+        <figure class="headshot">
           <img src="/assets/images/Shailesh-Chandrasekharan-150x150.jpg"/>
-          <br/>
-          Shailesh Chandrasekharan, courtesy photo
-        </div>
+          <figcaption>Shailesh Chandrasekharan, courtesy photo</figcaption>
+        </figure>
       </td>
       <td>
-        <div style="max-width: 160px">
+        <figure class="headshot">
           <img src="/assets/images/Venkitesh-150x150.jpg"/>
           <br/>
-          Venkitesh Ayyar, courtesy photo
-        </div>
+          <figcaption>Venkitesh Ayyar, courtesy photo</figcaption>
+        </figure>
       </td>
       <td></td>
     </tr>
