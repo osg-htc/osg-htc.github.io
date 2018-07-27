@@ -7,20 +7,26 @@ categories: Particle Physics
 Duke University Associate Professor of Physics Shailesh Chandrasekharan and his graduate student Venkitesh Ayyar are
 using the Open Science Grid (OSG) to tackle notoriously difficult problems in quantum systems.
 
+<style>
+td {
+    padding: 5px 200px;
+    border-bottom: 0px;
+}
+</style>
+
 <table>
   <tbody>
     <tr>
       <td>
         <div style="max-width: 160px">
-          <a href="/assets/images/Shailesh-Chandrasekharan-150x150.jpg"><img src="/assets/images/Shailesh-Chandrasekharan-150x150.jpg" alt="Shailesh Chandrasekharan" width="150" height="150" /></a>
+          <img src="/assets/images/Shailesh-Chandrasekharan-150x150.jpg"/>
           <br/>
           Shailesh Chandrasekharan, courtesy photo
         </div>
       </td>
-      <td></td>
       <td>
         <div style="max-width: 160px">
-          <a href="/assets/images/Venkitesh-150x150.jpg"><img src="/assets/images/Venkitesh-150x150.jpg" alt="Venkitesh" width="150" height="150" /></a>
+          <img src="/assets/images/Venkitesh-150x150.jpg"/>
           <br/>
           Venkitesh Ayyar, courtesy photo
         </div>
@@ -57,20 +63,21 @@ Typically the computational cost grows exponentially with the number of interact
 According to Chandrasekharan, the main challenge is to take this exponentially hard problem and convert it to something
 that scales as a polynomial and can be computed on a classical computer.
 “This step is often impossible for many strongly correlated quantum systems, due to the so-called
-[sign problem](http://en.wikipedia.org/wiki/Numerical_sign_problem) which arises due to quantum mechanics,” added
+[sign problem](https://en.wikipedia.org/wiki/Numerical_sign_problem) which arises due to quantum mechanics,” added
 Chandrasekharan.
 “Once the difficult sign problem is solved, we can use Monte Carlo calculations to obtain answers.
 Computing clusters like the OSG can be used at that stage.”
 
-Chandrasekharan has proposed an idea, called the [fermion bag approach](http://link.springer.com/article/10.1140%2Fepja%2Fi2013-13090-y),
+Chandrasekharan has proposed an idea, called the [fermion bag approach](https://link.springer.com/article/10.1140%2Fepja%2Fi2013-13090-y),
 that has solved numerous sign problems that seemed unsolvable in systems containing fermions (electrons and quarks are
 examples of fermions).
 In order to understand a new mechanism for the origin of mass in the universe, Ayyar is specifically using the OSG to
 study an interacting theory of fermions using the fermion bag approach.
 
-<a href="/assets/images/Fermion-Bag-300x300.jpg"><img src="/assets/images/Fermion-Bag-300x300.jpg" alt="Fermion Bag" width="300" height="300" /></a>
-
-_Illustration of a fermion bag configuration. Image credit: Shailesh Chandrasekharan_
+<figure>
+  <img src="/assets/images/Fermion-Bag-300x300.jpg" width="300" height="300" />
+  <figcaption>Illustration of a fermion bag configuration. Image credit: Shailesh Chandrasekharan</figcaption>
+</figure>
 
 “We compute correlation functions on lattices and look at their behavior as the lattice size increases,” Ayyar explained.
 In the presence of a mass, the correlation functions decay exponentially.
@@ -112,7 +119,7 @@ He says this next phase of research is already happening in nanoelectronics.
 generation of technology and give us a better understanding of the physics.”
 
 Ayyar and Chandrasekharan recently submitted a paper based on their work using the OSG.
-Titled [*Massive fermions without fermion bilinear condensates*](http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.065035),
+Titled [*Massive fermions without fermion bilinear condensates*](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.065035),
 it has been published in the journal *Physical Review D* of the American Physical Society.
 
 &#8211; Greg Moore
