@@ -1,6 +1,7 @@
 theme: jekyll-theme-minimal
 title: Open Science Grid
 description: A national, distributed computing partnership for data-intensive research
+google_analytics: UA-69012-28
 
 defaults:
   - scope:
