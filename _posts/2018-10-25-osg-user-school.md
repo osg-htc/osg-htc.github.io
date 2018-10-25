@@ -31,12 +31,11 @@ with their large-scale computing needs.  Plus, every participant left the School
 account on a UW–Madison HTCondor submit node and an OSG Connect account — so that there are as few barriers to computing
 and storage resources as possible.
 
-<div class="media border border-primary rounded-left" style="margin-bottom: 1rem;">
-   <img class="mr-3" width="900" alt="Participants of the OSG User School 2018" src="/assets/images/osg-user-school-2018.png">
-   <div class="media-body">
-     Participants of the OSG User School 2018.
-   </div>
-</div>
+
+<figure class="figure">
+  <img src="/assets/images/osg-user-school-2018.png" class="figure-img img-fluid rounded" alt="Participants of the OSG User School 2018">
+  <figcaption class="figure-caption">Participants of the OSG User School 2018.</figcaption>
+</figure>
 
 From formal training evaluations to informal comments and emails, the School was clearly a success.  Participants were
 happy with the program, with how much they learned, and with the new paths that are now open to them.  Further, many
