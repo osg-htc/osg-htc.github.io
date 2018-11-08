@@ -1,7 +1,6 @@
-## Welcome to the Open Science Grid Documentation Pages
+## Welcome to the Open Science Grid
 
-This page is meant as a test or demo of various web technologies that could be used for OSG documentation.
-It's not meant for end-users, unless they are horribly bored or curious.
+This repository contains the source code of the Open Science Grid website; it is not the public facing site.
 
 The real webpage for the OSG is <https://www.opensciencegrid.org>.
 
