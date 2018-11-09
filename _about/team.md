@@ -46,7 +46,6 @@ title: The Open Science Grid Team
      </div>
   {% endfor %}
   <br>
-{% endfor %}
 </div>
 </div>
 
