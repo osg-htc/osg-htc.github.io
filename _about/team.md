@@ -5,7 +5,7 @@ title: The Open Science Grid Team
 ---
 
 <div class="container-fluid">
-  <h1>OSG Executive Team</h1><br>
+  <h1>Executive Team</h1><br>
   <div class="row">
   {% for member in site.data.orgs.exec-team.personnel %}
      {% for person_hash in site.data.people %}
