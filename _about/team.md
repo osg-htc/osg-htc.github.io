@@ -32,7 +32,8 @@ title: The Open Science Grid Team
 
 <div class="container-fluid">
 <div class="row">
-  {% for person_hash in site.data.people %}
+  {% assign people = site.data.people | sort %}
+  {% for person_hash in people %}
      {% assign person = person_hash[1] %}
      <div class="card" style="width: 12rem;">
        <img class="card-img-top" src="{{person.photo}}" alt="Card image cap">
