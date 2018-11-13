@@ -39,3 +39,12 @@ Are you a resource provider wanting to join our collaboration?
 
 If so, find us at the [support desk](https://support.opensciencegrid.org).
 
+## Internal Documentation
+
+### Adding To the Team Page
+
+The [team page](https://opensciencegrid.org/about/team) provides an overview of those working on the OSG.  It's important to keep this updated to reflect the evolving nature of the OSG.  To add yourself to this page, [create a pull request](https://help.github.com/articles/about-pull-requests/) (using the standard GitHub workflow) with the following:
+
+* A short config file about yourself, [following this example](https://github.com/opensciencegrid/opensciencegrid.github.io/blob/master/_data/people/bbockelm.yml).  Make sure to include your *name*, *shortname* (typically either your GitHub ID as in `bbockelm` or *Firstname-Lastname* as in `Brian-Bockelman`), *institution*, *website*, and *photo*.  If you are an area coordinator or have some other named role, you can fill in *title*.
+* Upload a headshot of yourself into the `assets/images/team` directory.  Name it in the form `assets/images/team/Firstname-Lastname.jpg`; in this case, the corresponding value of the *photo* tag in your config file will be `/assets/images/team/Firstname-Lastname.jpg`.
+* If you are a member of the executive team, then add your shortname tag to the [organization file](https://github.com/opensciencegrid/opensciencegrid.github.io/blob/master/_data/orgs/exec-team.yml), `_data/orgs/exec-team.yml`.
