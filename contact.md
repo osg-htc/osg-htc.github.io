@@ -11,7 +11,6 @@ Email: <mailto:osg-contact@opensciencegrid.org>
 
 * [User support](https://support.opensciencegrid.org)
 * Email: <mailto:help@opensciencegrid.org>
-* Phone: +1 (317) 278 9699:q
 
 
 ### For OSG policies, executive information
