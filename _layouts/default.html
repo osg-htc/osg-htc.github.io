@@ -30,8 +30,16 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="/about/introduction">About</span></a>
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  About
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/about/introduction">Introduction</a>
+                  <a class="dropdown-item" href="/about/computation/">Computation on the OSG</a>
+                  <a class="dropdown-item" href="/about/organization/">Organization</a>
+                  <a class="dropdown-item" href="/about/team">Team</a>
+                </div>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="/news">News</span></a>
@@ -39,8 +47,15 @@
               <li class="nav-item active">
                 <a class="nav-link" href="/contact">Contact</span></a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="/docs">Docs</a>
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Docs
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="https://support.opensciencegrid.org/">For Users</a>
+                  <a class="dropdown-item" href="https://opensciencegrid.org/docs/">For Sysadmins</a>
+                  <a class="dropdown-item" href="https://opensciencegrid.org/security/">Security</a>
+                </div>
               </li>
             </ul>
           </div>
