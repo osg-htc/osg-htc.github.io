@@ -8,6 +8,15 @@ layout: default
 
 A national, distributed computing partnership for data-intensive research
 
+<div id="osg-special-banner">
+  <p class="special-banner-1">
+    <strong>At the 2019 NSF CC* Meeting in Minneapolis?</strong> If you are
+    participating in the OSG pre-workshop on 23 September 2019, then you can
+    find the <a href="https://docs.google.com/document/d/1kxaPY-wkDaZBiwyzkxwX3Zgx0-KcjM_1BAotnMKzfec/edit">
+    schedule and presentation materials here</a>.
+  </p>
+</div>
+
 <br/>
 <div class="row">
   <div class="col-lg-4">
