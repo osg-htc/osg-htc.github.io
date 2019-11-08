@@ -10,8 +10,10 @@ A national, distributed computing partnership for data-intensive research
 
 <div id="osg-special-banner">
   <p class="special-banner-1">
-    For OSG help with <strong>NSF Campus Cyberinfrastructure (CC*) Campus Computing and the Computing Continuum</strong>
-    proposals (NSF 20-507), contact us at
+    For OSG help with <strong>NSF Campus Cyberinfrastructure (CC*) Campus Computing and the
+    Computing Continuum</strong> proposals
+    (<a target="_blank" href="https://www.nsf.gov/pubs/2020/nsf20507/nsf20507.htm">NSF 20-507</a>),
+    contact us at
     <a href="mailto:cc-star-proposals@opensciencegrid.org">cc-star-proposals@opensciencegrid.org</a>&nbsp;—
     even over the holidays!
   </p>
