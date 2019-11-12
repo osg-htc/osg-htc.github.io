@@ -21,6 +21,11 @@ A national, distributed computing partnership for data-intensive research
     <strong>We can help with:</strong> understanding and framing science drivers, common cluster architectures, resource
     sharing via OSG, integrating cloud resources with a local cluster, etc.
   </p>
+  <p class="special-banner-2" style="margin-top: 1rem;">
+    To see materials that OSG provided at a workshop for 2019 awardees,
+    <a target="_blank" href="https://docs.google.com/document/d/1kxaPY-wkDaZBiwyzkxwX3Zgx0-KcjM_1BAotnMKzfec/">follow
+    this link to the agenda and presentations</a>.
+  </p>
 </div>
 <div class="row">
   <div class="col-lg-4">
