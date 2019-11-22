@@ -1,5 +1,6 @@
 ---
 title: "Latest News from the OSG"
+layout: default
 ---
 
 <h1>OSG News</h1>
