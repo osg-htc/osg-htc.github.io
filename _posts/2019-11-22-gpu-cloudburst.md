@@ -127,8 +127,8 @@ specifications), according to Sfiligoi.
       <td>2.5</td>
       <td>38.6</td>
       <td>48.8</td>
-      <td>25.8</td>
-      <td>6.2</td>
+      <td>51.6</td>
+      <td>12.4</td>
     </tr>
   </tbody>
 </table>
@@ -178,7 +178,7 @@ scientific research to get results quickly.”
 
 <figure class="figure float-left">
  <img src="/assets/images/2019-11-22-gpu-cloudburst/byregion.png" class="img-fluid figure-img" width=525>
-<figcaption class="figure-caption">Regions Used</figcaption>
+<figcaption class="figure-caption">Regions used in the GPU experiment across AWS, GCP, and Azure</figcaption>
 </figure>
 
 HTCondor was used to integrate all purchased GPUs into a
