@@ -177,7 +177,7 @@ elasticity is there, we believe that this can be applied across all of
 scientific research to get results quickly.”
 
 <figure class="figure float-left">
-<img src="/assets/images/2019-11-22-gpu-cloudburst/byregion.png" class="img-fluid figure-img" width=525>
+<img src="/assets/images/2019-11-22-gpu-cloudburst/byregion.png" class="img-fluid figure-img" width="525">
 <figcaption class="figure-caption">Regions used in the GPU experiment across AWS, GCP, and Azure</figcaption>
 </figure>
 
