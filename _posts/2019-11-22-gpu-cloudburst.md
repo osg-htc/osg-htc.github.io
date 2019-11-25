@@ -88,7 +88,7 @@ only starting to understand the physics behind such energetic celestial
 phenomena that can reach Earth from deepest space.”
 
 The net result was a peak of about 51k GPUs of various
-kinds, with an aggregate peak of about 350 PFLOP32s (according to NVIDIA
+kinds, with an aggregate peak of about 380 PFLOP32s (according to NVIDIA
 specifications), according to Sfiligoi.
 
 
@@ -209,6 +209,9 @@ Cloud and Strategic Blue, who helped raise all the necessary quotas and
 limits. And all of this would of course not be possible without the hard
 work of Igor Sfiligoi, David Schultz, Frank Würthwein and Benedikt Riedel.
 
+### Related Articles
+- [HPCWire - 51,000 Cloud GPUs Converge to Power Neutrino Discovery at the South Pole](https://www.hpcwire.com/2019/11/22/51000-cloud-gpus-converge-to-power-neutrino-discovery-at-the-south-pole/)
+- [Inside HPC - SDSC Conducts 50,000+ GPU Cloudburst Experiment with Wisconsin IceCube Particle Astrophysics Center](https://insidehpc.com/2019/11/sdsc-conducts-50000-gpu-cloudburst-experiment-with-wisconsin-icecube-particle-astrophysics-center/)
 
 
 
