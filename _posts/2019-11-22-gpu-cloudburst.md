@@ -93,7 +93,7 @@ specifications), according to Sfiligoi.
 
 
 <figure class="figure ">
-<table class="table">
+<table class="table table-responsive">
     <thead>
     <tr>
       <td><strong>GPU Specs</strong></td>
