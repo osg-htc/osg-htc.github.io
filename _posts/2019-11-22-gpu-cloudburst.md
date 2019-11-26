@@ -138,7 +138,7 @@ specifications), according to Sfiligoi.
 “For comparison, the Number 1 TOP100 HPC system, [*Summit*, (based at Oak Ridge National
 Laboratory)](https://www.olcf.ornl.gov/summit/) has a nominal
 performance of about 400 PFLOP32s. So, at peak, our cloud-based cluster
-provided almost 90% of the performance of *Summit*, at least for the
+provided almost 95% of the performance of *Summit*, at least for the
 purpose of IceCube simulations.
 
 The relatively short time span of the experiment showed
