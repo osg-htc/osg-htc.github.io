@@ -212,6 +212,7 @@ work of Igor Sfiligoi, David Schultz, Frank Würthwein and Benedikt Riedel.
 ### Related Articles
 - [HPCWire - 51,000 Cloud GPUs Converge to Power Neutrino Discovery at the South Pole](https://www.hpcwire.com/2019/11/22/51000-cloud-gpus-converge-to-power-neutrino-discovery-at-the-south-pole/)
 - [Inside HPC - SDSC Conducts 50,000+ GPU Cloudburst Experiment with Wisconsin IceCube Particle Astrophysics Center](https://insidehpc.com/2019/11/sdsc-conducts-50000-gpu-cloudburst-experiment-with-wisconsin-icecube-particle-astrophysics-center/)
+- [Igor Sfiligoi - Using 50k GPUs across multiple Clouds for IceCube Science](https://www.linkedin.com/pulse/using-50k-gpus-across-multiple-clouds-icecube-science-igor-sfiligoi/)
 
 
 
