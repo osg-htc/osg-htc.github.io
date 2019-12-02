@@ -18,14 +18,13 @@ A national, distributed computing partnership for data-intensive research
     even over the holidays!
   </p>
   <p class="special-banner-2">
-    <strong>We can help with:</strong> understanding and framing science drivers, common cluster architectures,
-    <a target="_blank" href="https://opensciencegrid.org/docs/">resource sharing via OSG</a>,
-    integrating cloud resources with a local cluster, etc.
+    <strong>We can help with:</strong> understanding and framing science drivers, common cluster architectures, resource
+    sharing via OSG, integrating cloud resources with a local cluster, etc.
   </p>
   <p class="special-banner-2" style="margin-top: 1rem;">
-    To see materials that OSG provided at a workshop for 2019 awardees,
-    <a target="_blank" href="https://docs.google.com/document/d/1kxaPY-wkDaZBiwyzkxwX3Zgx0-KcjM_1BAotnMKzfec/">follow
-    this link to the agenda and presentations</a>.
+    If you are interested in learning more about the OSG and what it means to share resources via the OSG services, consult
+    <a target="_blank" href="https://opensciencegrid.org/technology/policy/campus-cyberinfrastructure/">this page</a>
+    for more details.
   </p>
 </div>
 <div class="row">
