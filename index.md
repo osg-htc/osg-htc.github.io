@@ -8,25 +8,6 @@ layout: default
 
 A national, distributed computing partnership for data-intensive research
 
-<div id="osg-special-banner">
-  <p class="special-banner-1">
-    For OSG help with <strong>NSF Campus Cyberinfrastructure (CC*) Campus Computing and the
-    Computing Continuum</strong> proposals
-    (<a target="_blank" href="https://www.nsf.gov/pubs/2020/nsf20507/nsf20507.htm">NSF 20-507</a>),
-    contact us at
-    <a href="mailto:cc-star-proposals@opensciencegrid.org">cc-star-proposals@opensciencegrid.org</a>&nbsp;—
-    even over the holidays!
-  </p>
-  <p class="special-banner-2">
-    <strong>We can help with:</strong> understanding and framing science drivers, common cluster architectures, resource
-    sharing via OSG, integrating cloud resources with a local cluster, etc.
-  </p>
-  <p class="special-banner-2" style="margin-top: 1rem;">
-    If you are interested in learning more about the OSG and what it means to share resources via the OSG services, consult
-    <a target="_blank" href="https://opensciencegrid.org/technology/policy/campus-cyberinfrastructure/">this page</a>
-    for more details.
-  </p>
-</div>
 <div class="row">
   <div class="col-lg-4">
     <h3>What We Do</h3>
