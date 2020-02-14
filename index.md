@@ -8,6 +8,14 @@ layout: default
 
 A national, distributed computing partnership for data-intensive research
 
+<div id="osg-special-banner">
+  <p class="special-banner-1" style="margin-bottom: 0;">
+    Please join us at the
+    <strong><a href="https://opensciencegrid.org/all-hands/2020/">OSG All-Hands Meeting 2020</a>,</strong>
+    March 16&ndash;19 at the University of Oklahoma.
+    Registration is open now!
+  </p>
+</div>
 <div class="row">
   <div class="col-lg-4">
     <h3>What We Do</h3>
