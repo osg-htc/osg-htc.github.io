@@ -10,10 +10,10 @@ A national, distributed computing partnership for data-intensive research
 
 <div id="osg-special-banner">
   <p class="special-banner-1" style="margin-bottom: 0;">
-    Please join us at the
-    <strong><a href="https://opensciencegrid.org/all-hands/2020/">OSG All-Hands Meeting 2020</a>,</strong>
-    March 16&ndash;19 at the University of Oklahoma.
-    Registration is open now!
+    The <strong><a href="https://opensciencegrid.org/all-hands/2020/">OSG All-Hands Meeting for 2020</a></strong>
+    has been postponed from March to late summer or early fall. We plan to
+    announce new dates on March 13. For more information, see the
+    <a href="https://opensciencegrid.org/all-hands/2020/reschedule/">Reschedule FAQs page.</a>
   </p>
 </div>
 <div class="row">
