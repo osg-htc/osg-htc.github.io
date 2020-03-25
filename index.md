@@ -9,12 +9,20 @@ layout: default
 A national, distributed computing partnership for data-intensive research
 
 <div id="osg-special-banner">
-  <p class="special-banner-1" style="margin-bottom: 0;">
-    The <strong><a href="https://opensciencegrid.org/all-hands/2020/">OSG
-    All-Hands Meeting for 2020</a></strong> has been postponed from its original
-    March dates to August 31 through September 3.  For more information, see the
-    <a href="https://opensciencegrid.org/all-hands/2020/">AHM website</a>.
+  <p class="special-banner-1"><strong>Extra OSG Support for COVID-19 Research</strong></p>
+  <p class="special-banner-1" style="margin-bottom: 0.5ex;">
+    We are here to help you with your COVID-19 research! Please contact us at
+    <a href="mailto:help@opensciencegrid.org">help@opensciencegrid.org</a> if
+    you or your organization:
   </p>
+  <ul>
+    <li>Have computing and/or data needs for research relevant to the COVID-19 pandemic;</li>
+    <li>
+      Already share &ndash; or want to share &ndash; research computing capacity at your local organization via OSG,
+      and want to prioritize COVID-19 research; or
+    </li>
+    <li>Have any other creative ideas for how OSG can contribute &ndash; we are all ears!</li>
+  </ul>
 </div>
 <div class="row">
   <div class="col-lg-4">
