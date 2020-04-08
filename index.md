@@ -9,16 +9,20 @@ layout: default
 A national, distributed computing partnership for data-intensive research
 
 <div id="osg-special-banner">
-  <p class="special-banner-1">
-    For OSG help with <strong>NSF Campus Cyberinfrastructure (CC*) Campus Computing and the Computing Continuum</strong>
-    proposals (NSF 19-533), contact us at
-    <a href="mailto:cc-star-proposals@opensciencegrid.org">cc-star-proposals@opensciencegrid.org</a>&nbsp;—
-    even over the holidays!
+  <p class="special-banner-1"><strong>Extra OSG Support for COVID-19 Research</strong></p>
+  <p class="special-banner-1" style="margin-bottom: 0.5ex;">
+    We are here to help you with your COVID-19 research! Please contact us at
+    <a href="mailto:help@opensciencegrid.org">help@opensciencegrid.org</a> if
+    you or your organization:
   </p>
-  <p class="special-banner-2">
-    <strong>We can help with:</strong> understanding and framing science drivers, common cluster architectures, resource
-    sharing via OSG, integrating cloud resources with a local cluster, etc.
-  </p>
+  <ul>
+    <li>Have computing and/or data needs for research relevant to the COVID-19 pandemic;</li>
+    <li>
+      Already share &ndash; or want to share &ndash; research computing capacity at your local organization via OSG,
+      and want to prioritize COVID-19 research; or
+    </li>
+    <li>Have any other creative ideas for how OSG can contribute &ndash; we are all ears!</li>
+  </ul>
 </div>
 <div class="row">
   <div class="col-lg-4">

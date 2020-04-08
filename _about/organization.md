@@ -54,6 +54,7 @@ The table below contains all active VOs in the OSG, their fields of science, and
 | A Large Ion Collider Experiment ([ALICE](http://aliceinfo.cern.ch)) | Physics and astronomy, High Energy Physics | <http://aliceinfo.cern.ch> |
 | A worldwide e-Infrastructure for NMR and structural biology ([ENMR](http://www.wenmr.eu)) | Biochemistry, Bioinformatics, Medical Sciences, Microbiology, Molecular and Structural Biosciences, Biological Sciences | <http://www.wenmr.eu> |
 | Accelerator Neutrino Neutron Interaction Experiment ([annie](https://annie.fnal.gov/)) | High Energy Physics | <http://www.fnal.gov/> |
+| Advanced Computing Center for Research and Education ([ACCRE](https://www.vanderbilt.edu/accre/)) | High Energy Physics, Astronomy, Computational Biology | <https://www.vanderbilt.edu/accre/support/helpdesk/> |
 | Argonne National Laboratory ([ANL](http://www.anl.gov)) | Chemistry, Computer and Information Science and Engineering, Earth Sciences, High Energy Physics, Multi-Science Community, Nuclear Physics, Physics and astronomy, National Laboratory | |
 | Beocat Cluster At Kansas State University ([Beocat](http://www.cis.ksu.edu/beocat)) | Astrophysics, Biochemistry, Bioinformatics, Biophysics, Cellular Biology, Chemistry, Computer and Information Science and Engineering, Earth Sciences, Ecological and Environmental Sciences, Education, Engineering, Geographic Information Science, Gravitational Physics, High Energy Physics, Information Theory, Logic, Materials Science, Mathematical Sciences, Medical Sciences, Microbiology, Molecular and Structural Biosciences, Nanoelectronics, Nuclear Physics, Physics and astronomy, Physiology, Statistics, Technology, Multi-Science Community | <http://support.cis.ksu.edu/BeocatDocs> |
 | Brookhaven National Laboratory ([BNL](http://www.bnl.gov)) | Biological Sciences, Chemistry, High Energy Physics, Multi-Science Community, Nuclear Physics, Physics and astronomy, National Laboratory | |
@@ -65,14 +66,15 @@ The table below contains all active VOs in the OSG, their fields of science, and
 | Compact Muon Solenoid ([CMS](http://www.uscms.org)) | Physics and astronomy, High Energy Physics | <http://helpdesk.fnal.gov> |
 | Computational Chemistry ([CompChem](https://www3.compchem.unipg.it/compchem/)) | Chemistry | <http://indico.cern.ch/getFile.py/access?contribId=10&sessionId=4&resId=1&materialId=slides&confId=11905> |
 | Computational Sciences at Indiana University ([CSIU](https://twiki.grid.iu.edu/bin/view/VirtualOrganizations/CSatIU)) | Astrophysics, Biochemistry, Bioinformatics, Biophysics, Cellular Biology, Chemistry, Computer and Information Science and Engineering, Economics, Education, Medical Sciences, Microbiology, Molecular and Structural Biosciences, Physics and astronomy, Technology, Multi-Science Community | <http://osggoc.blogspot.com/> |
-| CyberInfrastructure and Geospatial Information Laboratory ([CIGI](http://www.cigi.uiuc.edu)) | Community Grid, Computer and Information Science and Engineering, Ecological and Environmental Sciences, Geographic Information Science, Earth Sciences | <http://www.cigi.uiuc.edu> |
 | D0 Experiment at Fermilab ([DZero](http://www-d0.fnal.gov/)) | Physics and astronomy, High Energy Physics | <http://www-d0.fnal.gov/VO/DZero_VO_Instructions.html> |
 | Dark Energy Survey ([DES](https://www.darkenergysurvey.org/)) | High Energy Physics, Physics and astronomy, Astrophysics | <https://www.darkenergysurvey.org/contact_us/> |
 | Darkside ([Darkside](http://darkside.lngs.infn.it/)) | Astrophysics, High Energy Physics | <http://fermigrid.fnal.gov/> |
 | Deep Underground Neutrino Experiment ([DUNE](http://www.dunescience.org)) | Astrophysics, High Energy Physics | <http://servicedesk.fnal.gov> |
 | Distributed Organization for Scientific and Academic Research ([DOSAR](http://www.dosar.org/)) | Community Grid, Computer and Information Science and Engineering, High Energy Physics, Materials Science, Multi-Science Community | <http://www.dosar.org/> |
+| DTEAM ([dteam](https://operations-portal.egi.eu/vo/view/voname/dteam)) | Infrastructure Development | <https://operations-portal.egi.eu/vo/view/voname/dteam> |
 | Dual Readout Method Calorimeter ([DREAM](https://dream.web.cern.ch/dream/)) | High Energy Physics | <http://www.hpcc.ttu.edu/php/Contacts.php> |
 | Earth System Grid Federation (ESGF) | | |
+| Exploring the Great Pyramid ([egp](http://www.fnal.gov/)) | High Energy Physics | <http://fermigrid.fnal.gov/> |
 | Fermi Gamma-Ray Space Telescope ([glast.org](http://glast.gsfc.nasa.gov/)) | Physics and astronomy, Astrophysics | |
 | Fermi National Accelerator Laboratory ([Fermilab](http://fermigrid.fnal.gov/)) | High Energy Physics, Multi-Science Community, National Laboratory | <http://fermigrid.fnal.gov/> |
 | Fermilab Experiment 906 (SeaQuest) ([SeaQuest](https://www.phy.anl.gov/mep/SeaQuest/)) | Nuclear Physics | <http://fermigrid.fnal.gov/> |
@@ -109,7 +111,6 @@ The table below contains all active VOs in the OSG, their fields of science, and
 | Holland Computing Center at the University of Nebraska. ([HCC](http://hcc.unl.edu)) | Bioinformatics, Community Grid, Computer and Information Science and Engineering, Mathematical Sciences, Multi-Science Community | <http://hcc.unl.edu/contact> |
 | IceCube Neutrino Telescope ([IceCube](https://grid-voms.desy.de:8443/voms/icecube/)) | Astrophysics, Education, Physics and astronomy, High Energy Physics | |
 | Imaging Cosmic And Rare Underground Signals ([icarus](http://sbn-nd.fnal.gov/)) | High Energy Physics | <http://fermigrid.fnal.gov> |
-| Interactions in Understanding the Universe Initiative ([i2u2](https://fermigrid2.fnal.gov:8443/vomrs/i2u2/vomrs)) | Technology, Education | <http://quarknet.fnal.gov/e-labs> |
 | International Linear Collider ([ILC](http://ilc.fnal.gov/)) | Physics and astronomy, High Energy Physics | |
 | International Virtual Data Grid Laboratory ([iVDGL](http://www.ivdgl.org)) | | <Support URL missing!> |
 | Jefferson Lab ([JLab](http://www.jlab.org/div_dept/cio/index.html)) | Multi-Science Community, Nuclear Physics, National Laboratory | |
@@ -132,6 +133,7 @@ The table below contains all active VOs in the OSG, their fields of science, and
 | Pierre Auger Observatory ([auger](http://www.auger.org)) | Astrophysics | <http://ggus.eu> |
 | Project8 ([project8](http://www.project8.org/)) | | |
 | Short-Baseline Near Detector ([SBND](http://sbn-nd.fnal.gov/)) | High Energy Physics | <http://fermigrid.fnal.gov/> |
+| Short-Baseline Neutrino Program ([SBN](http://sbn.fnal.gov/)) | High Energy Physics | <http://fermigrid.fnal.gov/> |
 | Simons Center for Data Analysis ([SCDA](http://www.simonsfoundation.org)) | Molecular and Structural Biosciences, Biological Sciences | |
 | SLAC National Accelerator Laboratory ([SLAC](http://www.slac.stanford.edu/)) | Astrophysics, Biochemistry, Bioinformatics, Biophysics, Chemistry, Computer and Information Science and Engineering, Engineering, High Energy Physics, Materials Science, Medical Sciences, Multi-Science Community, Physics and astronomy, National Laboratory | |
 | Sloan Digital Sky Survey ([SDSS](http://www.sdss.org)) | High Energy Physics, Physics and astronomy | <http://www.sdss.org> |

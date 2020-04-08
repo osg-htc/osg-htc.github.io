@@ -54,10 +54,7 @@ th, td {
   object-fit: cover;
 }
 
-/* --------------------------------------------------------------------- */
-/* For the special NSF CC* proposal banner, 2018-12-14 thru 2019-02-20   */
-/* --------------------------------------------------------------------- */
-
+/* OSG Special announcements */
 #osg-special-banner {
   margin: 2rem;
   border: 3px solid #9F4000;
@@ -69,7 +66,37 @@ th, td {
   font-size: 100%;
 }
 
+#osg-special-banner ul {
+  margin: 0;
+}
+
+#osg-special-banner li {
+  font-size: 85%;
+}
+
 #osg-special-banner p.special-banner-2 {
   font-size: 75%;
   margin-bottom: 0;
+}
+
+#covid-19-mini-banner {
+  padding: 1px;
+  background-color: #FF6600;
+  margin-bottom: 2rem;
+}
+
+#covid-19-mini-banner p {
+  text-align: center;
+  font-size: 125%;
+  font-weight: bold;
+  color: white;
+}
+
+#covid-19-mini-banner a {
+  color: white;
+  text-decoration: underline;
+}
+
+.title-head {
+  margin-bottom: 1em;
 }
