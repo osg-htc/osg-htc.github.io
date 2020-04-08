@@ -27,7 +27,7 @@ Other Activities
     a broad consortium of industry, academia, and national labs to make a diverse set of
     computing resources available for research.  The COVID-19 HPC consortium meets daily
     to review requests from researchers.
--   [Science Responds](https://science-responds.org/) a broader COVID-19 response effort
+-   [Science Responds](https://science-responds.org/) is a broad COVID-19 response effort
     from the scientific community.
 -   OSG is participating in the WLCG COVID-19 task force (and broadly with computing
     organizations in Europe) to make LHC resources available to COVID-19 research.
