@@ -6,19 +6,22 @@ title: Extra Support for COVID-19 Research
 OSG Support for COVID-19 Research
 =================================
 
-Like many others in the research computing community, OSG is helping to organize
-extra resources to be made available to COVID-19 research!
+OSG is organizing
+extra compute and data resources to advance COVID-19 research!
 
-Many COVID-19 researchers access OSG through the Open Science Pool (e.g., the "`osg` VO").
+COVID-19 researchers can access OSG through the Open Science Pool (e.g., the "`osg` VO"), whether
+via the [OSG Connect service](https://www.osgconnect.net/), or by coordinating 
+with us to route work from other submission points.
 Any computing resource provider supporting this organization is likely already providing hours
 to support COVID-19.  If you would like to provide addition resources _exclusive_ for COVID-19,
 [instructions are available](https://opensciencegrid.org/docs/compute-element/covid-19/).
 
-To see current COVID-19 activities on OSG, see our dedicated
+See our dedicated
 [COVID-19 accounting page](https://gracc.opensciencegrid.org/dashboard/db/covid-19-research?orgId=1).
 
 Please contact us at <mailto:help@opensciencegrid.org> if your research group could benefit
-from computing resources or consulting related to COVID-19.
+from computing resources or consulting related to COVID-19, or if you would like to support COVID-19
+research by sharing your own capacity.
 
 Other Activities
 ================
