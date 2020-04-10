@@ -34,7 +34,11 @@ Other Activities
     a broad consortium of industry, academia, and national labs to make a diverse set of
     computing resources available for research.  The COVID-19 HPC consortium meets daily
     to review requests from researchers.
--   [Science Responds](https://science-responds.org/) is a broad COVID-19 response effort
-    from the scientific community.
--   OSG is participating in the WLCG COVID-19 task force (and broadly with computing
-    organizations in Europe) to make LHC resources available to COVID-19 research.
+-   As part of [IRIS-HEP](https://iris-hep.org), [Science Responds](https://science-responds.org/) is a broad COVID-19
+    response effort from the scientific community.
+-   Trusted CI, NSF CoE Pilot, and the Science Gateways Community Institute are offering priority help to
+    [projects tackling COVID-19](https://sciencegateways.org/-/trusted-ci-nsf-ci-coe-pilot-and-sgci-offering-priority-help-to-projects-tackling-covid-19)
+-   OSG is participating in the [WLCG COVID-19 task force](https://twiki.cern.ch/twiki/bin/view/LCG/WLCGresourcesForCOVID-19research)
+    (and broadly with computing organizations in Europe) to make LHC resources available to COVID-19 research.
+-   OSG and EGI are joining forces to commit specialized technical support, specialized simulation tools, and compute
+    and storage resources, to accelerate progress on [COVID-19 research]((https://www.egi.eu/egi-call-for-covid-19-research-projects/))
