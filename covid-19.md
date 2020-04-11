@@ -34,8 +34,9 @@ Other Activities
     a broad consortium of industry, academia, and national labs to make a diverse set of
     computing resources available for research.  The COVID-19 HPC consortium meets daily
     to review requests from researchers.
--   As part of [IRIS-HEP](https://iris-hep.org), [Science Responds](https://science-responds.org/) is a broad COVID-19
+-   [Science Responds](https://science-responds.org/) is a broad COVID-19
     response effort from the scientific community.
+-   The IRIS-HEP software institute provides effort to the OSG through its _OSG-LHC_ area; it has been coordinating additional [COVID-19 activities](https://iris-hep.org/covid-19).
 -   Trusted CI, NSF CoE Pilot, and the Science Gateways Community Institute are offering priority help to
     [projects tackling COVID-19](https://sciencegateways.org/-/trusted-ci-nsf-ci-coe-pilot-and-sgci-offering-priority-help-to-projects-tackling-covid-19)
 -   OSG is participating in the [WLCG COVID-19 task force](https://twiki.cern.ch/twiki/bin/view/LCG/WLCGresourcesForCOVID-19research)
