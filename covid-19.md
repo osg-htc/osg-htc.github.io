@@ -56,3 +56,7 @@ Other Activities
 -   OSG and EGI are joining forces to commit specialized technical support, specialized
     simulation tools, and compute and storage resources, to accelerate progress on
     [COVID-19 research](https://www.egi.eu/egi-call-for-covid-19-research-projects/).
+
+-   OSG supports the [Molecular Sciences Software Institute](https://molssi.org) (MolSSI), which is
+    coordinating and has built the
+    [COVID-19 Molecular Structure and Therapeutics Hub](https://covid.molssi.org).
