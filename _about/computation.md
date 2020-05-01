@@ -2,9 +2,9 @@
 title: Computation on the OSG
 ---
 
-*What kind of computational problems fit well on OSG?*
+*What kind of computational tasks are likely accelerated on the Open Science Grid?*
 
-Jobs run on the OSG will be able to execute on servers at numerous remote physical clusters, making OSG an ideal environment for computational problems that can be executed as numerous, independent tasks that are individually relatively small and short (see below). The servers may differ in terms of computing environment from the submit node. Therefore it is important that the jobs are as self-contained as possible by generic binaries and data that can be either carried with the job, or staged on demand. Please consider the following guidelines:
+Jobs run on the OSG will be able to execute on servers at numerous remote physical clusters, making OSG an ideal environment for computational problems that can be executed as numerous, independent tasks that are individually relatively small and short (see below). Please consider the following guidelines:
 
 1. Independent compute tasks using up to 8 cores (ideally 1 core, each), less than 8 GB memory (RAM) per core, and 1 GPU, and running for 1-12 hours. *Additional capabilities for COVID-19 research are currently available, with up to 48 hours of runtime per job.* Please contact the support listed below for more information about these capabilities. Application-level checkpointing can be implemented for longer-running work (for example, applications writing out state and restart files). Workloads with independent jobs of 1 core and less than 1 GB RAM are ideal, with up to thousands of concurrently-running jobs and 100,000s of hours achieved daily. Jobs using several cores and/or several GB of RAM will likely experience hundreds of concurrently-running jobs.
 2. Compute sites in the OSG can be configured to use pre-emption, which means jobs can be automatically killed if higher priority jobs enter the system. Pre-empted jobs will restart on another site, but it is important that the jobs can handle multiple restarts and/or complete in less than 12 hours.
