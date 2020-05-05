@@ -17,7 +17,7 @@ concurrently-running jobs](https://gracc.opensciencegrid.org/dashboard/db/covid-
 - **Expertise** on using high throughput computing for maximizing research throughput, perhaps including 
 development effort.
 - **Access to computing capacity** through the *[OSG Connect](https://support.opensciencegrid.org/support/home)*
-  service which provides a batch system submit environment based on HTCondor (allowing up to millions of jobs submitted via a
+  service, which provides a batch system submit environment based on HTCondor (allowing up to millions of jobs submitted via a
   single submit file).  The OSG aggregates
   about 100 clusters across the US and COVID-19 research could access tens of thousands of cores
   through this mechanism.  The OSG also provides a CDN for distributing data to jobs.
@@ -29,7 +29,7 @@ COVID-19 researchers can access OSG through the Open Science Pool (e.g., the "`o
 via the [OSG Connect service](https://www.osgconnect.net/), or by coordinating 
 with us to route work from other submission points.
 Any computing resource provider supporting this organization is likely already providing hours
-to support COVID-19.  If you would like to provide addition resources _exclusive_ for COVID-19,
+to support COVID-19.  If you would like to provide additional resources _exclusive_ for COVID-19,
 [instructions are available](https://opensciencegrid.org/docs/compute-element/covid-19/).
 
 *See a summary of COVID-19 projects and their usage on different sites in our dedicated
