@@ -10,7 +10,7 @@ The following are examples of computations that are a great match for OSG:
 
 1. parameters sweeps, parameter optimizations, statistical model optimizations, etc. (as pertains to many machine learning approaches)
 2. molecular docking and other simulations with numerous starting systems and/or configurations
-3. image processing (including medical images with non-restricted data), satellite images, etc.
+3. image processing, including medical images (with non-restricted data), satellite images, Cryo-EM datasets, etc.
 4. many genomics/bioinformatics tasks where numerous reads, samples, genes, etc., might be analyzed independent of one another before bringing results together
 5. text analysis
 And many others!
