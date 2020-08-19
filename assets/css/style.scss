@@ -100,3 +100,31 @@ th, td {
 .title-head {
   margin-bottom: 1em;
 }
+
+/* OSG AHM temporary */
+
+#ahm-banner {
+  margin: 0 0 2rem 0;
+  padding: 1rem;
+  color: #303940;
+  background-color: #BFE6FF;
+  text-align: center;
+}
+
+#ahm-banner h2 {
+  font-size: 125%;
+  font-weight: 900;
+}
+
+#ahm-banner p {
+  margin: 1ex 0 0 0;
+}
+
+#ahm-banner a {
+  color: #607380;
+  text-decoration: underline;
+}
+
+.carousel {
+  margin-bottom: 2rem !important;
+}
