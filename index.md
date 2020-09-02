@@ -68,8 +68,7 @@ if it wasn't for the OSG. Sharing allows individual researchers to access larger
     <h3>Find Us!</h3>
     <p>Are you a user wanting more computing resources?</p>
     <p>Are you a resource provider wanting to join our collaboration?</p>
-    <p>If so, find us at the <a href="https://support.opensciencegrid.org">support desk</a>.</p>
+    <p>If so, get in touch: <a href="mailto:help@opensciencegrid.org">help@opensciencegrid.org</a>.</p>
     <p>To see the breadth of the OSG use, <a href="https://gracc.opensciencegrid.org">explore our accounting portal</a>.</p>
   </div>
 </div>
-
