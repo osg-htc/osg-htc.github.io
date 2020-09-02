@@ -4,6 +4,17 @@ layout: default
 
 {% include homepage_top.html %}
 
+<div id="ahm-banner">
+  <h2>OSG All-Hands Meeting: Aug. 31 to Sep. 4 &mdash; all virtual for 2020!</h2>
+  <p>
+    Quick links:
+    <a href="https://opensciencegrid.org/all-hands/2020/">Home page</a> &middot;
+    <a href="https://indico.fnal.gov/event/22127/">Conf. site</a> &middot;
+    <a href="https://indico.fnal.gov/event/22127/registrations/">Registration</a> (req&rsquo;d) &middot;
+    <a href="https://indico.fnal.gov/event/22127/timetable/">Schedule</a>
+  </p>
+</div>
+
 ## The Open Science Grid
 
 A national, distributed computing partnership for data-intensive research
