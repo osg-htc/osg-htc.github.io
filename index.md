@@ -54,6 +54,19 @@ if it wasn't for the OSG. Sharing allows individual researchers to access larger
     <p>The OSG provides an integrated software stack to enable high throughput computing; <a href="docs/">visit our technical documents website for information</a>.</p>
   </div>
   <div class="col-lg-4">
+    <h3>Coordinating CI Services</h3>
+    <p>
+      NSF’s
+      <a href="https://www.nsf.gov/cise/oac/vision/blueprint-2019/nsf-aci-blueprint-services.pdf">Blueprint
+        for National Cyberinfrastructure Coordination Services</a>
+      lays out the need for coordination services to bring together the distributed elements of a national CI ecosystem.
+      It highlights OSG as providing distributed high throughput computing services to the U.S. research community.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    
     <h3>Find Us!</h3>
     <p>Are you a resource provider wanting to join our collaboration? Contact us: <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a>.</p>
     <p>Are you a user wanting more computing resources? Check with your 'local' computing providers, or consider using <a href="https://www.osgconnect.net/">OSG Connect</a> (available to US-based academic/govt/non-profit research projects).</p>
