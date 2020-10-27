@@ -34,8 +34,7 @@ A national, distributed computing partnership for data-intensive research
   </div>
   <div class="col-lg-4">
     <h3>Submit Locally, Run Globally</h3>
-    <p>Researchers can submit batch jobs from their home institution - or OSG-provided submit points - in order to access their local resources and expand
-    elastically out to the OSG, leverage the distributed nature of our consortium.</p>
+    <p>Researchers can run jobs on OSG from their home institution or <a href="https://www.osgconnect.net/">OSG's centrally-operated submission service, OSG Connect</a> (available for US-based research and scholarship).</p>
   </div>
   <div class="col-lg-4">
     <h3>Sharing Is Key</h3>
