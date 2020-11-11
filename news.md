@@ -6,7 +6,11 @@ layout: default
 <h1>OSG News</h1>
 
 {% for post in site.posts %}
+{% if post.external_url %}
+<a href="{{ post.external_url }}">{{ post.title }}</a> ({{ post.date | date_to_long_string }})
+{% else %}
 <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_long_string }})
+{% endif %}
 {{ post.excerpt }}
 <hr/>
 {% endfor %}
