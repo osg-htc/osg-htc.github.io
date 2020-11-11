@@ -1,3 +1,6 @@
+---
+layout: default
+---
 
 {% include homepage_top.html %}
 
@@ -5,7 +8,22 @@
 
 A national, distributed computing partnership for data-intensive research
 
-<br/>
+<div id="osg-special-banner">
+  <p class="special-banner-1"><strong>Extra OSG Support for COVID-19 Research</strong></p>
+  <p class="special-banner-1" style="margin-bottom: 0.5ex;">
+    We are here to help you with your COVID-19 research! Please contact us at
+    <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a> if
+    you or your organization:
+  </p>
+  <ul>
+    <li>Have computing and/or data needs for research relevant to the COVID-19 pandemic;</li>
+    <li>
+      Already share &ndash; or want to share &ndash; research computing capacity at your local organization via OSG,
+      and want to prioritize COVID-19 research; or
+    </li>
+    <li>Have any other creative ideas for how OSG can contribute &ndash; we are all ears!</li>
+  </ul>
+</div>
 <div class="row">
   <div class="col-lg-4">
     <h3>What We Do</h3>
@@ -16,8 +34,7 @@ A national, distributed computing partnership for data-intensive research
   </div>
   <div class="col-lg-4">
     <h3>Submit Locally, Run Globally</h3>
-    <p>Researchers can submit batch jobs from their home institution - or OSG-provided submit points - in order to access their local resources and expand
-    elastically out to the OSG, leverage the distributed nature of our consortium.</p>
+    <p>Researchers can run jobs on OSG from their home institution or <a href="https://www.osgconnect.net/">OSG's centrally-operated submission service, OSG Connect</a> (available for US-based research and scholarship).</p>
   </div>
   <div class="col-lg-4">
     <h3>Sharing Is Key</h3>
@@ -36,11 +53,23 @@ if it wasn't for the OSG. Sharing allows individual researchers to access larger
     <p>The OSG provides an integrated software stack to enable high throughput computing; <a href="docs/">visit our technical documents website for information</a>.</p>
   </div>
   <div class="col-lg-4">
+    <h3>Coordinating CI Services</h3>
+    <p>
+      NSF’s
+      <a href="https://www.nsf.gov/cise/oac/vision/blueprint-2019/nsf-aci-blueprint-services.pdf">Blueprint
+        for National Cyberinfrastructure Coordination Services</a>
+      lays out the need for coordination services to bring together the distributed elements of a national CI ecosystem.
+      It highlights OSG as providing distributed high throughput computing services to the U.S. research community.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    
     <h3>Find Us!</h3>
-    <p>Are you a user wanting more computing resources?</p>
-    <p>Are you a resource provider wanting to join our collaboration?</p>
-    <p>If so, find us at the <a href="https://support.opensciencegrid.org">support desk</a>.</p>
+    <p>Are you a resource provider wanting to join our collaboration? Contact us: <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a>.</p>
+    <p>Are you a user wanting more computing resources? Check with your 'local' computing providers, or consider using <a href="https://www.osgconnect.net/">OSG Connect</a> (available to US-based academic/govt/non-profit research projects).</p>
+    <p>For any other inquiries, reach us at: <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a>.</p>
     <p>To see the breadth of the OSG use, <a href="https://gracc.opensciencegrid.org">explore our accounting portal</a>.</p>
   </div>
 </div>
-

@@ -2,7 +2,7 @@
 ---
 
 body {
-  padding-top: 6rem;
+  padding-top: 4rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
@@ -32,8 +32,105 @@ body {
   display: block;
 }
 
+/* Tweak vertical spacing of headings */
+h3 {
+  margin-top: 1.25rem;
+}
+
 /* OSG-style links */
 
 a{color:#b67b3c;text-decoration:none;}
 a:hover,a:focus{color:#7c5429;text-decoration:underline;}
 
+/* Stealing table CSS from jekyll-theme-minimal */
+
+table {
+  width: 100%;
+  border-collapse: collapse; }
+
+th, td {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid #e5e5e5; }
+
+// Card image caps
+.card-img-top {
+  height: 20vw;
+  object-fit: cover;
+}
+
+/* OSG Special announcements */
+#osg-special-banner {
+  margin: 2rem 2rem 0.75rem 2rem;
+  border: 3px solid #9F4000;
+  padding: 1rem;
+  background-color: #FFECDF;
+}
+
+#osg-special-banner p.special-banner-1 {
+  font-size: 100%;
+}
+
+#osg-special-banner ul {
+  margin: 0;
+}
+
+#osg-special-banner li {
+  font-size: 85%;
+}
+
+#osg-special-banner p.special-banner-2 {
+  font-size: 75%;
+  margin-bottom: 0;
+}
+
+#covid-19-mini-banner {
+  padding: 1px;
+  background-color: #FF6600;
+    margin-bottom: 2rem;
+}
+
+#covid-19-mini-banner p {
+  text-align: center;
+  font-size: 125%;
+  font-weight: bold;
+  color: white;
+  margin: 0.75em;
+}
+
+#covid-19-mini-banner a {
+  color: white;
+  text-decoration: underline;
+}
+
+.title-head {
+  margin-bottom: 1em;
+}
+
+/* OSG AHM temporary */
+
+#ahm-banner {
+  margin: 0 0 2rem 0;
+  padding: 1rem;
+  color: #303940;
+  background-color: #BFE6FF;
+  text-align: center;
+}
+
+#ahm-banner h2 {
+  font-size: 125%;
+  font-weight: 900;
+}
+
+#ahm-banner p {
+  margin: 1ex 0 0 0;
+}
+
+#ahm-banner a {
+  color: #607380;
+  text-decoration: underline;
+}
+
+.carousel {
+  margin-bottom: 2rem !important;
+}
