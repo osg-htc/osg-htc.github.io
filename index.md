@@ -20,12 +20,12 @@ A national, distributed computing partnership for data-intensive research
     </li>
     <li>CC*-required resource sharing for the Campus Compute category, and other options for integrating with OSG</li>
   </ul>
-  
-   <p class="special-banner-1" style="margin-bottom: 0.5ex;">
-    <a href="https://opensciencegrid.org/technology/policy/campus-cyberinfrastructure/">Learn more about PATh and OSG's collaboration<a> with CC* recipients. 
+
+  <p class="special-banner-1" style="margin-bottom: 0.5ex;">
+    <a href="https://opensciencegrid.org/technology/policy/campus-cyberinfrastructure/">Learn more about PATh and OSG's collaboration</a> with CC* recipients.
   </p>
-  
 </div>
+
 <div class="row">
   <div class="col-lg-4">
     <h3>What We Do</h3>
