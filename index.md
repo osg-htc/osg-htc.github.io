@@ -9,20 +9,22 @@ layout: default
 A national, distributed computing partnership for data-intensive research
 
 <div id="osg-special-banner">
-  <p class="special-banner-1"><strong>Extra OSG Support for COVID-19 Research</strong></p>
+  <p class="special-banner-1"><strong>We are here to help with your <a href="https://www.nsf.gov/pubs/2021/nsf21528/nsf21528.htm/">Campus Cyberinfrastructure (CC*) Proposal!</a> Please contact us at <a href="mailto:cc-star-proposals@opensciencegrid.org">cc-star-proposals@opensciencegrid.org</a></strong></p>
   <p class="special-banner-1" style="margin-bottom: 0.5ex;">
-    We are here to help you with your COVID-19 research! Please contact us at
-    <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a> if
-    you or your organization:
+    We have significant experience working with CC* applicants and awardees, offering letters of support and consulting for:
   </p>
   <ul>
-    <li>Have computing and/or data needs for research relevant to the COVID-19 pandemic;</li>
+    <li>bringing the power of the OSG to YOUR researchers</li>
     <li>
-      Already share &ndash; or want to share &ndash; research computing capacity at your local organization via OSG,
-      and want to prioritize COVID-19 research; or
+        gathering science drivers and planning local computing resources or
     </li>
-    <li>Have any other creative ideas for how OSG can contribute &ndash; we are all ears!</li>
+    <li>CC*-required resource sharing for the Campus Compute category, and other options for integrating with OSG</li>
   </ul>
+  
+   <p class="special-banner-1" style="margin-bottom: 0.5ex;">
+    <a href="https://opensciencegrid.org/technology/policy/campus-cyberinfrastructure/">Learn more about PATh and OSG's collaboration<a> with CC* recipients. 
+  </p>
+  
 </div>
 <div class="row">
   <div class="col-lg-4">
