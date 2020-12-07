@@ -28,6 +28,6 @@ jobs:
           ssh-agent -a "$SSH_AUTH_SOCK" > /dev/null
           ssh-add - <<< "${{ secrets.PREVIEW_DEPLOY_KEY }}"
           git remote add web-preview "git@github.com:opensciencegrid/web-preview.git"
-          git push -f web-preview HEAD:master
+          git push -f web-preview HEAD:gh-pages
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
