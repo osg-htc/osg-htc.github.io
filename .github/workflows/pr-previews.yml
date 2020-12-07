@@ -10,6 +10,8 @@ jobs:
     if: startsWith(github.repository, 'opensciencegrid/')
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Remove prod configurations
         run: |
