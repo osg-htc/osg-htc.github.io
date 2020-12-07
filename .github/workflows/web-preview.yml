@@ -1,4 +1,4 @@
-name: Preview web pages for pull requests
+name: Deploy preview web area
 
 on:
   push:
