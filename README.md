@@ -41,6 +41,22 @@ If so, find us at the [support desk](https://support.opensciencegrid.org).
 
 ## Internal Documentation
 
+### Making website changes
+
+This repository uses [GitHub Actions](https://github.com/opensciencegrid/opensciencegrid.github.io/tree/master/.github/worfklows)
+to deploy a website preview from the `master` branch to the [web-preview repository](https://opensciencegrid.org/web-preview/).
+The production website (https://opensciencegrid.org/) is built automatically by GitHub Pages from the `production` branch.
+
+To make changes to the website, use the following workflow:
+
+1.  Submit a pull request with website updates to the `master` branch (the default) and request a review
+1.  Upon approval and merge of the pull request, changes can be previewed at https://opensciencegrid.org/web-preview/
+1.  If additional changes are necessary, repeat steps 1 and 2.
+1.  When satisfied with the preview website, submit a
+    [pull request](https://github.com/opensciencegrid/opensciencegrid.github.io/compare/production...master?expand=1)
+    from `production` to `master`
+1.  After the pull request from step 4 has been merged, verify the changes at https://opensciencegrid.org
+
 ### Adding To the Team Page
 
 The [team page](https://opensciencegrid.org/about/team) provides an overview of those working on the OSG.  It's important to keep this updated to reflect the evolving nature of the OSG.  To add yourself to this page, [create a pull request](https://help.github.com/articles/about-pull-requests/) (using the standard GitHub workflow) with the following:
