@@ -1,13 +1,24 @@
 ---
-title: "LIGO Collaboration wins 2017 Nobel Prize in Physics"
-date: 2017-10-05 12:00:00 -0600
-categories: LIGO
----
+title: "Register Now for the February 8-9 Campus Workshop" 
+date: 2020-12-18T12:00:00+00:00
+publish: true
+--- 
+**Save the date and register now for another** <a href="https://indico.fnal.gov/event/46925/" target="_blank">Campus Workshop on distributed high-throughput computing (dHTC)</a>, **February 8-9**, offered by the <a href="https://path-cc.io/" target="_blank">Partnership to Advance Throughput computing (PATh)</a>. All campus cyberinfrastructure (CI) staff are invited to attend!
 
-On October 1, 2017, Rainer Weiss, Barry Barish, and Kip Thorne were awarded the Nobel Prize in Physics “for decisive contributions to the LIGO detector and the observation of gravitational waves.” LIGO confirmed the first direct observation of gravitational waves on September 14, 2015. Both LIGO detectors, one in Hanford, Washington, and one in Livingston, Louisiana, observed a gravitational wave from the merger of two black holes, and with that, the final piece of Einstein’s general theory of relativity fell into place.
+<ul><li><b>Feb 8 Training on <a href="https://opensciencegrid.org/dHTC-Campus-Workshop-2020/" target="_blank">Using and Facilitating the Use of dHTC and the Open Science Grid (OSG)</a></b>, 2-5pm ET.
+<i>seats limited; register ASAP!</i></li>
 
-The LIGO project, in order to estimate the statistical significance of gravitational wave candidate events, was able to leverage the high-throughput nature of OSG. In the past three years, LIGO has gained 19 Million CPU hours from the use of OSG, running 24.2 Million jobs across a large number of OSG sites. Peter Couvares, data analysis computing manager for the Advanced LIGO project, stated, “LIGO has tremendous data analysis challenges, and cutting-edge computing has been critical for our discoveries. The Open Science Grid is increasingly important to our efforts to leverage shared computing resources in the US and abroad.”
+<li><b>Feb 9 dHTC Virtual Office Hours</b> with breakout rooms for discussion on all things dHTC, including OSG services for campuses and CC* awards, 2-5pm ET.
+<i>unlimited seats</i></li></ul>
 
-Peter recently attended the OSG Council meeting as a representative for the LIGO organization, which is the newest member organization on the OSG Council, solidifying the future of collaboration between OSG and LIGO.
+While there is **no fee** for either day, <a href="https://opensciencegrid.org/dHTC-Campus-Workshop-2020/" target="_blank">**registration is required**</a> for participants to receive virtual meeting room details and instructions for training accounts via email.
 
-OSG previously ran [an article](/news/2017/10/05/osg-helps-ligo-scientists-confirm-einsteins-last-unproven-theory.html) about the initial detection of the gravitational waves.
+*This workshop is complementary to, and not redundant with our previous* <a href="https://indico.fnal.gov/event/45998/overview" target="_blank">*workshop in October.*</a>
+
+Please feel free to send any questions about the event to <a href = "mailto: events@opensciencegrid.org">events@opensciencegrid.org</a>. If you’d like to discuss appropriate OSG services for your campus, let us know via <a href = "mailto: support@opensciencegrid.org">support@opensciencegrid.org</a>. We’re excited to work with you.
+
+See you there!
+
+Lauren Michael, on behalf of the workshop team
+Research Facilitation Lead, OSG; co-PI, PATh
+
