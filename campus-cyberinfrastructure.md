@@ -2,14 +2,15 @@
 title: Campus Cyberinfrastructure (CC*)- 21528
 ---
 
-<h1>Campus Cyberinfrastructure (CC*) Award Recipients Powers the Open Science Grid</h1>
+<h1>Campus Cyberinfrastructure (CC*) Award Recipients Power the Open Science Grid</h1>
 
-Paragraph re contributions to the OSG - waiting on numbers.
+CC* award recipients provide a termendous value to the Open Science Grid. In 2020 campuses with a CC* award contributed over 292 millon core hours. This contribution supported over 186 science research projects, ranging from COVID-19 research to INSERT SOMETHING to INSERT SOMETHING. 
 
-About the Campus Cyberinfrastructue (CC*) program
 
-Upcoming Deadlines: March 1, 2021; October 11, 2021The National Science Foundation funds the Campus Cyberinfrastructure (CC*) program (NSF 21-528). (Link to https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) 
+The National Science (NSF) Foundation supports Open Science Grid 2021The National Science Foundation funds the Campus Cyberinfrastructure (CC*) program (NSF 21-528). (Link to https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) 
 This program invests in coordinated campus-level networking and cyberinfrastructure improvements, innovation, integration, and engineering for science applications and distributed research projects. Learning and workforce development (LWD) in cyberinfrastructure is explicitly addressed in the program. Science-driven requirements are the primary motivation for any proposed activity.
+
+Open Science Grid ParticipationUpcoming Deadlines: March 1, 2021; October 11, 
 
 The NSF supports awards in 5 program areas:
 1.	Data-Driven Networking Infrastructure for the Campus and Researcher awards will be supported at up to $500,000 total for up to 2 years;
