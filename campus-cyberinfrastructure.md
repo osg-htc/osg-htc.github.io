@@ -19,7 +19,7 @@ The map above shows the CC* campusus contributing to the Open Science Grid that 
 The National Science (NSF) Foundation supports the Open Science Grid and campuses that contribute resources to it. For 2021 the National Science Foundation funds the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank"> Campus Cyberinfrastructure (CC*) program (NSF 21-528).</a>
 This program invests in coordinated campus-level networking and cyberinfrastructure improvements, innovation, integration, and engineering for science applications and distributed research projects. Learning and workforce development (LWD) in cyberinfrastructure is explicitly addressed in the program. Science-driven requirements are the primary motivation for any proposed activity.
 
-***Upcoming Deadlines: March 1, 2021; October 11, 
+**Upcoming Deadlines: March 1, 2021; October 11, 2021** 
 
 The NSF supports awards in 5 program areas:
 >- 	Data-Driven Networking Infrastructure for the Campus and Researcher awards will be supported at up to $500,000 total for up to 2 years;
@@ -44,10 +44,10 @@ Proposals are required to commit to a minimum of 20% shared time on the cluster 
 >- <a href="https://sites.clarkson.edu/acres/" target="_blank">Clarkson University</a>
 >- <a href="https://computerscience.tcnj.edu/cs-programs-research/funded-projects/" target="_blank">The College of New Jersey</a>
 >-  <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1925467&HistoricalAwards=false" target="_blank">Wayne State University</a>
->- <a href="https://news.research.university/2019/10/31/the-research-university-tru-896/" target="_blank"> University of Notre Dame</a> 
->- <a href="https://www.purdue.edu/newsroom/releases/2019/Q3/nsf-supports-purdue-team-developing-online-manufacturing-education.html" target="_blank"> Purdue University</a>
+>- <a href="https://news.research.university/2019/10/31/the-research-university-tru-896/" target="_blank">University of Notre Dame</a> 
+>- <a href="https://www.purdue.edu/newsroom/releases/2019/Q3/nsf-supports-purdue-team-developing-online-manufacturing-education.html" target="_blank">Purdue University</a>
 >- <a href="https://ucsdnews.ucsd.edu/pressrelease/sdsc-awarded-nsf-grant-for-triton-shared-computing-cluster-upgrade" target="_blank">University of California San Diego</a>
->- <a href="https://news.syr.edu/blog/2020/09/03/national-science-foundation-awards-390000-to-syracuse-university-computing-initiative/ target="_blank"> Syracuse University</a>
+>- <a href="https://news.syr.edu/blog/2020/09/03/national-science-foundation-awards-390000-to-syracuse-university-computing-initiative/" target="_blank"> Syracuse University</a>
 >- <a href="https://news.engr.uconn.edu/500k-nsf-grant-awarded-to-dr-bing-wang-uconn-health-center-2.php" target="_blank">University of Connecticut</a>
 >- <a href="https://now.tufts.edu/articles/tufts-awarded-nsf-grant-expand-big-data-innovation-and-discovery" target="_blank"> Tufts University</a>
 >- <a href="https://www.lsu.edu/mediacenter/news/2020/04/22cct_brandt_nsf.php" target="_blank"> Louisiana State University</a>
