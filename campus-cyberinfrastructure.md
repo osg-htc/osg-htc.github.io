@@ -4,7 +4,12 @@ title: Campus Cyberinfrastructure (CC*)- 21528
 
 <h1>Campus Cyberinfrastructure (CC*) Award Recipients Power the Open Science Grid</h1>
 
-CC* award recipients provide a termendous value to the Open Science Grid. In 2020 campuses with a CC* award contributed over 292 millon core hours. This contribution supported over 186 science research projects, ranging from COVID-19 research to INSERT SOMETHING to INSERT SOMETHING. 
+CC* award recipients provide a termendous value to the Open Science Grid. In 2020 campuses with a CC* award contributed over https://gracc.opensciencegrid.org/d/000000074/gracc-home 292 millon core hours in the support of research. This contribution supported over 186 science research projects.These projects encompassed 
+COVID-19 research to 
+virtual screensing for pain relief compounds to l
+ight production in heavy-ion collisions 
+genomic tools to understand the evolutionary process of marine invasion
+Network Resource Abstraction and Optimization for Large-Scale Scientific Workflow
 
 
 The National Science (NSF) Foundation supports Open Science Grid 2021The National Science Foundation funds the Campus Cyberinfrastructure (CC*) program (NSF 21-528). (Link to https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) 
