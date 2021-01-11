@@ -26,7 +26,7 @@ The NSF supports awards in 5 program areas:
 >*4.	Campus Computing and the Computing Continuum awards will be supported at up to $400,000 total for up to 2 years; and
 >*5.	Planning Grants and CI-Research Alignment awards will be supported for up to $200,000 total for up to two years.
 
-<h2OSG Can Help with your CC* Proposal</h2>
+<h2>OSG Can Help with your CC* Proposal</h2>
 
 The Open Science Grid (as part of the Partnership to Advance Throughput Computing (PATh), has significant experience working with CC* applicants and awardees, offering letters of support and consulting for:
 *bringing the power of the OSG to YOUR researchers
