@@ -52,7 +52,7 @@ Proposals are required to commit to a minimum of 20% shared time on the cluster 
 >- <a href="https://now.tufts.edu/articles/tufts-awarded-nsf-grant-expand-big-data-innovation-and-discovery" target="_blank"> Tufts University</a>
 >- <a href="https://www.lsu.edu/mediacenter/news/2020/04/22cct_brandt_nsf.php" target="_blank"> Louisiana State University</a>
 >- <a href="https://newscenter.nmsu.edu/Articles/view/14445/nsf-grant-brings-high-performance-computing-to-new-mexico-students-faculty" target="_blank"> New Mexico State University</a>
->- <a href="https://www.pdx.edu/news/psu-receives-5m-federal-grant-improve-access-stem-education-underrepresented-students target="_blank"> Portland State University</a>
+>- <a href="https://www.pdx.edu/news/psu-receives-5m-federal-grant-improve-access-stem-education-underrepresented-students" target="_blank"> Portland State University</a>
 >- <a href="https://oit.siu.edu/rcc/services/grant.php" target="_blank"> Southern Illinois University</a>
 
 
