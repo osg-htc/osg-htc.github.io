@@ -4,7 +4,7 @@ title: Campus Cyberinfrastructure (CC*)- 21528
 
 <h1>Campus Cyberinfrastructure (CC*) Award Recipients Power the Open Science Grid</h1>
 
-CC* award recipients provide a termendous value to the Open Science Grid in support of scientific research. In 2020 campuses with a CC* award campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> 292 millon core hours </a> in the support of research. This campus cyberinfrastructe supported over 186 science research projects in many fields of study such as medical sciences, evolutionary sciences, bio statistics and physics. 
+CC* award recipients provide a termendous value to the Open Science Grid in support of scientific research. In 2020 campuses with a CC* award campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hoursin the support of research<b></a>. This campus cyberinfrastructe supported over 186 science research projects in many fields of study such as medical sciences, evolutionary sciences, bio statistics and physics. 
 
 These projects include:
 - COVID-19 research  
