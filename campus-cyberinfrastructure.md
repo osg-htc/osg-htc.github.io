@@ -68,7 +68,7 @@ The OSG team actively works with campuses to integrate them smoothly into the OS
 >- <a href="https://oit.siu.edu/rcc/services/grant.php" target="_blank"> Southern Illinois University</a>
 
 
-###  (for users of [OSG Connect] (https://support.opensciencegrid.org))
+
 
 
 
