@@ -71,5 +71,3 @@ The OSG team actively works with campuses to integrate them smoothly into the OS
 >- <a href="https://newscenter.nmsu.edu/Articles/view/14445/nsf-grant-brings-high-performance-computing-to-new-mexico-students-faculty" target="_blank"> New Mexico State University</a>
 >- <a href="https://www.pdx.edu/news/psu-receives-5m-federal-grant-improve-access-stem-education-underrepresented-students" target="_blank"> Portland State University</a>
 >- <a href="https://oit.siu.edu/rcc/services/grant.php" target="_blank"> Southern Illinois University</a>
-
-
