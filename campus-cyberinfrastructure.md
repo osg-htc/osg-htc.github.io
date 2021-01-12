@@ -8,12 +8,12 @@ layout: default
 <h1>Campus Cyberinfrastructure Award Recipients Power the Open Science Grid</h1>
 
 <iframe width="100%" height="500px" frameBorder="0" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
-The map above shows the CC* campuses contributing to the Open Science Grid that have their compute entry point in place with the OSG. (Additional campuses  onboarding to the OSG are not yet displayed). 
+The map above shows the CC* sites contributing to the Open Science Grid that have their compute entry point in place with the OSG. (Additional campuses  onboarding to the OSG are not yet displayed). 
 
 
 <h2>292 Million Core Hours Contributed by CC* Campuses</h2>
 
-Campus Cyberinfrastructure (CC*) award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, these campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics, physics and many more. This campus support thoughout the United States contributed to the advancement of science and to researchers both on and off their campuses.
+Campus Cyberinfrastructure (CC star) award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, these campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics, physics and many more. This campus support thoughout the United States contributed to the advancement of science and to researchers both on and off their campuses.
 
 The type of inquiry that these award winners supported ranged broadly; a small sampling includes:
 - COVID-19 research  
