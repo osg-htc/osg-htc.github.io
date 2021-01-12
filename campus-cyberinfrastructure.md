@@ -38,7 +38,7 @@ The NSF supports awards in 5 program areas:
 
 <h2>OSG Can Help with Your CC* Proposal</h2>
 
-The Open Science Grid <a href="https://path-cc.io/" target="_blank">(as part of the Partnership to Advance Throughput Computing (PATh)</a>, has significant experience working with CC* applicants and awardees, offering letters of support and consulting for:
+The Open Science Grid <a href="https://path-cc.io/" target="_blank"> (as part of the Partnership to Advance Throughput Computing (PATh)</a>, has significant experience working with CC* applicants and awardees, offering letters of support and consulting for:
 >- bringing the power of the OSG to YOUR researchers
 >- gathering science drivers and planning local computing resources or
 >- CC*-required resource sharing for the Campus Compute category, and other options for integrating with OSG
