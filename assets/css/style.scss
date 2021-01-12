@@ -2,7 +2,7 @@
 ---
 
 body {
-  padding-top: 6rem;
+  padding-top: 4rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
@@ -32,6 +32,11 @@ body {
   display: block;
 }
 
+/* Tweak vertical spacing of headings */
+h3 {
+  margin-top: 1.25rem;
+}
+
 /* OSG-style links */
 
 a{color:#b67b3c;text-decoration:none;}
@@ -56,7 +61,7 @@ th, td {
 
 /* OSG Special announcements */
 #osg-special-banner {
-  margin: 2rem;
+  margin: 2rem 2rem 0.75rem 2rem;
   border: 3px solid #9F4000;
   padding: 1rem;
   background-color: #FFECDF;
@@ -82,7 +87,7 @@ th, td {
 #covid-19-mini-banner {
   padding: 1px;
   background-color: #FF6600;
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 #covid-19-mini-banner p {
@@ -90,6 +95,7 @@ th, td {
   font-size: 125%;
   font-weight: bold;
   color: white;
+  margin: 0.75em;
 }
 
 #covid-19-mini-banner a {

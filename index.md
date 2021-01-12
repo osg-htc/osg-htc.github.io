@@ -4,37 +4,28 @@ layout: default
 
 {% include homepage_top.html %}
 
-<div id="ahm-banner">
-  <h2>OSG All-Hands Meeting: Aug. 31 to Sep. 4 &mdash; all virtual for 2020!</h2>
-  <p>
-    Quick links:
-    <a href="https://opensciencegrid.org/all-hands/2020/">Home page</a> &middot;
-    <a href="https://indico.fnal.gov/event/22127/">Conf. site</a> &middot;
-    <a href="https://indico.fnal.gov/event/22127/registrations/">Registration</a> (req&rsquo;d) &middot;
-    <a href="https://indico.fnal.gov/event/22127/timetable/">Schedule</a>
-  </p>
-</div>
-
 ## The Open Science Grid
 
 A national, distributed computing partnership for data-intensive research
 
 <div id="osg-special-banner">
-  <p class="special-banner-1"><strong>Extra OSG Support for COVID-19 Research</strong></p>
+  <p class="special-banner-1"><strong>We are here to help with your <a href="https://www.nsf.gov/pubs/2021/nsf21528/nsf21528.htm/">Campus Cyberinfrastructure (CC*) Proposal!</a> Please contact us at <a href="mailto:cc-star-proposals@opensciencegrid.org">cc-star-proposals@opensciencegrid.org</a></strong></p>
   <p class="special-banner-1" style="margin-bottom: 0.5ex;">
-    We are here to help you with your COVID-19 research! Please contact us at
-    <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a> if
-    you or your organization:
+    We have significant experience working with CC* applicants and awardees, offering letters of support and consulting for:
   </p>
   <ul>
-    <li>Have computing and/or data needs for research relevant to the COVID-19 pandemic;</li>
+    <li>bringing the power of the OSG to YOUR researchers</li>
     <li>
-      Already share &ndash; or want to share &ndash; research computing capacity at your local organization via OSG,
-      and want to prioritize COVID-19 research; or
+        gathering science drivers and planning local computing resources or
     </li>
-    <li>Have any other creative ideas for how OSG can contribute &ndash; we are all ears!</li>
+    <li>CC*-required resource sharing for the Campus Compute category, and other options for integrating with OSG</li>
   </ul>
+
+  <p class="special-banner-1" style="margin-bottom: 0.5ex;">
+    <a href="https://opensciencegrid.org/technology/policy/campus-cyberinfrastructure/">Learn more about PATh and OSG's collaboration</a> with CC* recipients.
+  </p>
 </div>
+
 <div class="row">
   <div class="col-lg-4">
     <h3>What We Do</h3>
@@ -45,8 +36,7 @@ A national, distributed computing partnership for data-intensive research
   </div>
   <div class="col-lg-4">
     <h3>Submit Locally, Run Globally</h3>
-    <p>Researchers can submit batch jobs from their home institution - or OSG-provided submit points - in order to access their local resources and expand
-    elastically out to the OSG, leverage the distributed nature of our consortium.</p>
+    <p>Researchers can run jobs on OSG from their home institution or <a href="https://www.osgconnect.net/">OSG's centrally-operated submission service, OSG Connect</a> (available for US-based research and scholarship).</p>
   </div>
   <div class="col-lg-4">
     <h3>Sharing Is Key</h3>
@@ -65,6 +55,19 @@ if it wasn't for the OSG. Sharing allows individual researchers to access larger
     <p>The OSG provides an integrated software stack to enable high throughput computing; <a href="docs/">visit our technical documents website for information</a>.</p>
   </div>
   <div class="col-lg-4">
+    <h3>Coordinating CI Services</h3>
+    <p>
+      NSF’s
+      <a href="https://www.nsf.gov/cise/oac/vision/blueprint-2019/nsf-aci-blueprint-services.pdf">Blueprint
+        for National Cyberinfrastructure Coordination Services</a>
+      lays out the need for coordination services to bring together the distributed elements of a national CI ecosystem.
+      It highlights OSG as providing distributed high throughput computing services to the U.S. research community.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    
     <h3>Find Us!</h3>
     <p>Are you a resource provider wanting to join our collaboration? Contact us: <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a>.</p>
     <p>Are you a user wanting more computing resources? Check with your 'local' computing providers, or consider using <a href="https://www.osgconnect.net/">OSG Connect</a> (available to US-based academic/govt/non-profit research projects).</p>
