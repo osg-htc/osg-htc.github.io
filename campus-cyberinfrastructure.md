@@ -4,7 +4,7 @@ title: Campus Cyberinfrastructure (CC*)- 21528
 
 <h1>Campus Cyberinfrastructure (CC*) Award Recipients Power the Open Science Grid</h1>
 
-CC* award recipients provide a termendous value to the Open Science Grid in support of scientific research. In 2020 campuses with a CC* award contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).<b></a> These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics and physics and many more. This campus support thoughout the United States contributed to the advancement of science.
+CC* award recipients provide a termendous value to the Open Science Grid in support of scientific research. In 2020 campuses with a CC* award contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).<b></a> These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics, physics and many more. This campus support thoughout the United States contributed to the advancement of science.
 
 The type of inquiry ranged broadly; a small sampling includes:
 - COVID-19 research  
@@ -13,7 +13,7 @@ The type of inquiry ranged broadly; a small sampling includes:
 - genomic tools to understand the evolutionary process of marine invasion
 - network Resource Abstraction and Optimization for Large-Scale Scientific Workflow
 
-The map above shows the CC* campusus contributing to the Open Science Grid that have their compute entry point with the OSG in place. (Additional campuses  onboarding to the OSG are not displayed). The OSG team actively works with campuses to smoothly integrate campuses into the OSG. 
+The map above shows the CC* campusus contributing to the Open Science Grid that have their compute entry point with the OSG in place. (Additional campuses  onboarding to the OSG are not displayed). The OSG team actively works with campuses to integrate smoothly campuses into the OSG. 
 
 <h2>The CC* Program</h2>
 The National Science (NSF) Foundation supports the Open Science Grid and campuses that contribute resources to it. For 2021 the National Science Foundation funds the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank"> Campus Cyberinfrastructure (CC*) program (NSF 21-528).</a>
