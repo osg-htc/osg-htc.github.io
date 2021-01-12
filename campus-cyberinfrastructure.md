@@ -13,9 +13,7 @@ OSG partners with many campuses across the US, including many [Campus Cyberinfra
 
 <h2>292 Million Core Hours Contributed by CC* Campuses</h2>
 
-CC* award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, campuses with a CC* award contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> *292 millon core hours to researchers using distributed high throughput computing (dHTC)*</a> ; these include both resources funded by CC* and other facilities on-campus.  These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics, and physics. This campus support thoughout the United States contributed to the advancement of science and to researchers both on and off their campuses.
-
-The type of inquiry that these award winners supported ranged broadly; a sampling includes:
+Campus Cyberinfrastructure (CC star) award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, these campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics, physics and many more. This campus support thoughout the United States contributed to the advancement of science and to researchers both on and off their campuses.
 
 - COVID-19 research  
 - virtual screensing for pain relief compounds
@@ -42,6 +40,7 @@ The NSF supports awards in 5 program areas:
 <h2>OSG Can Help with Your CC* Proposal</h2>
 
 The Open Science Grid, funded partly through the <a href="https://path-cc.io/" target="_blank"> Partnership to Advance Throughput Computing (PATh)</a>, has significant experience working with CC* applicants and awardees, offering letters of support and consulting for:
+
 >- bringing the power of the OSG to YOUR researchers
 >- gathering science drivers and planning local computing resources or
 >- CC*-required resource sharing for the Campus Compute category, and other options for integrating with OSG
@@ -60,7 +59,7 @@ The OSG team actively works with campuses to integrate them smoothly into the OS
 >- <a href="https://www.amnh.org/research/computational-sciences" target="_blank">American Museum of Natural History</a>
 >- <a href="https://sites.clarkson.edu/acres/" target="_blank">Clarkson University</a>
 >- <a href="https://computerscience.tcnj.edu/cs-programs-research/funded-projects/" target="_blank">The College of New Jersey</a>
->-  <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1925467&HistoricalAwards=false" target="_blank">Wayne State University</a>
+>- <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1925467&HistoricalAwards=false" target="_blank">Wayne State University</a>
 >- <a href="https://news.research.university/2019/10/31/the-research-university-tru-896/" target="_blank">University of Notre Dame</a> 
 >- <a href="https://www.purdue.edu/newsroom/releases/2019/Q3/nsf-supports-purdue-team-developing-online-manufacturing-education.html" target="_blank">Purdue University</a>
 >- <a href="https://ucsdnews.ucsd.edu/pressrelease/sdsc-awarded-nsf-grant-for-triton-shared-computing-cluster-upgrade" target="_blank">University of California San Diego</a>
