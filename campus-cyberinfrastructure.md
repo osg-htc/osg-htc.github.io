@@ -15,7 +15,7 @@ The type of inquiry ranged broadly; a small sampling includes:
 - genomic tools to understand the evolutionary process of marine invasion
 - network optimization for large-scale scientific workflow
 
-The map above shows the CC* campusus contributing to the Open Science Grid that have their compute entry point with the OSG in place. (Additional campuses  onboarding to the OSG are not displayed). The OSG team actively works with campuses to integrate smoothly campuses into the OSG. 
+The map above shows the CC* campusus contributing to the Open Science Grid that have their compute entry point with the OSG in place. (Additional campuses  onboarding to the OSG are not displayed). The OSG team actively works with campuses to integrate campuses smoothly into the OSG. 
 
 <h2>The CC* Program</h2>
 The National Science (NSF) Foundation supports the Open Science Grid and campuses that contribute resources to it. For 2021 the National Science Foundation funds the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank"> Campus Cyberinfrastructure (CC*) program (NSF 21-528).</a>
