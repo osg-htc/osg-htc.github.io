@@ -9,9 +9,9 @@ CC* award recipients provide a termendous value to the Open Science Grid in supp
 The type of inquiry ranged broadly; a small sampling includes:
 - COVID-19 research  
 - virtual screensing for pain relief compounds
--light production in heavy-ion collisions 
+- light production in heavy-ion collisions 
 - genomic tools to understand the evolutionary process of marine invasion
-- network Resource Abstraction and Optimization for Large-Scale Scientific Workflow
+- network optimization for large-scale scientific workflow
 
 The map above shows the CC* campusus contributing to the Open Science Grid that have their compute entry point with the OSG in place. (Additional campuses  onboarding to the OSG are not displayed). The OSG team actively works with campuses to integrate smoothly campuses into the OSG. 
 
