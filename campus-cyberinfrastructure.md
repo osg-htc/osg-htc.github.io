@@ -7,15 +7,16 @@ layout: default
 
 <h1>Campus Cyberinfrastructure Award Recipients Power the Open Science Grid</h1>
 
-<iframe width="100%" height="500px" frameBorder="0" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
-The map above shows the CC* campusus contributing to the Open Science Grid that have their compute entry point in place with the OSG. (Additional campuses  onboarding to the OSG are not yet displayed). 
+OSG partners with many campuses across the US, including many [Campus Cyberinfrastructure (CC*)](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) awardees, to help them share their resources at a regional and national level.  The campuses actively contributing CC*-funded resources are shown in the map below; every month, we are working to help more awardees contribute:
 
+<iframe width="100%" height="500px" frameBorder="0" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
 
 <h2>292 Million Core Hours Contributed by CC* Campuses</h2>
 
-Campus Cyberinfrastructure (CC*) award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, campuses with a CC* award contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics, physics and many more. This campus support thoughout the United States contributed to the advancement of science and to researchers both on and off their campuses.
+CC* award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, campuses with a CC* award contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> *292 millon core hours to researchers using distributed high throughput computing (dHTC)*</a> ; these include both resources funded by CC* and other facilities on-campus.  These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics, and physics. This campus support thoughout the United States contributed to the advancement of science and to researchers both on and off their campuses.
 
-The type of inquiry that these award winners supported ranged broadly; a small sampling includes:
+The type of inquiry that these award winners supported ranged broadly; a sampling includes:
+
 - COVID-19 research  
 - virtual screensing for pain relief compounds
 - light production in heavy-ion collisions 
@@ -23,7 +24,9 @@ The type of inquiry that these award winners supported ranged broadly; a small s
 - network optimization for large-scale scientific workflow
 
 
-<h2>The CC* Program</h2>
+The CC* Program
+---------------
+
 The National Science (NSF) Foundation supports the Open Science Grid and campuses that contribute resources to it. For 2021 the National Science Foundation funds the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank"> Campus Cyberinfrastructure (CC*) program (NSF 21-528).</a>
 This program invests in coordinated campus-level networking and cyberinfrastructure improvements, innovation, integration, and engineering for science applications and distributed research projects. Learning and workforce development (LWD) in cyberinfrastructure is explicitly addressed in the program. Science-driven requirements are the primary motivation for any proposed activity.
 
@@ -38,17 +41,19 @@ The NSF supports awards in 5 program areas:
 
 <h2>OSG Can Help with Your CC* Proposal</h2>
 
-The Open Science Grid <a href="https://path-cc.io/" target="_blank"> " target="_blank">(as part of the Partnership to Advance Throughput Computing (PATh)</a>, has significant experience working with CC* applicants and awardees, offering letters of support and consulting for:
+The Open Science Grid, funded partly through the <a href="https://path-cc.io/" target="_blank"> Partnership to Advance Throughput Computing (PATh)</a>, has significant experience working with CC* applicants and awardees, offering letters of support and consulting for:
 >- bringing the power of the OSG to YOUR researchers
 >- gathering science drivers and planning local computing resources or
 >- CC*-required resource sharing for the Campus Compute category, and other options for integrating with OSG
 
 In the most recent call for proposals <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 21-528)</a>, joining the OSG is mentioned as a potential path to sharing resources with the wider research community:
-Proposals are required to commit to a minimum of 20% shared time on the cluster and describe their approach to making the cluster available as a shared resource external to the campus, [...] One possible approach to implementing such a federated distributed computing solution is joining a multi-campus or national federated system such as the Open Science Grid.
 
-The OSG team actively works with campuses to integrate them smoothly into the OSG. We have an experienced and friendly team of engineers and facilitators dedicated to supporting campus computational groups and ensuring a positive onboarding with the flexibility to meet your configuration needs. To get started using OSG, contact us at
+> Proposals are required to commit to a minimum of 20% shared time on the cluster and describe their
+> approach to making the cluster available as a shared resource external to the campus, [...] One
+> possible approach to implementing such a federated distributed computing solution is joining a multi-campus
+> or national federated system such as the Open Science Grid.
 
-* OSG Connect Support: <mailto:support@osgconnect.net>
+The OSG team actively works with campuses to integrate them smoothly into the OSG. We have an experienced and friendly team of engineers and facilitators dedicated to supporting campus computational groups and ensuring a positive onboarding with the flexibility to meet your configuration needs. To get started please email [OSG Support](mailto:support@osgconnect.net).
 
 <h2>These colleges and universities are active contributors to the Open Science Grid </h2>
 
@@ -66,9 +71,5 @@ The OSG team actively works with campuses to integrate them smoothly into the OS
 >- <a href="https://newscenter.nmsu.edu/Articles/view/14445/nsf-grant-brings-high-performance-computing-to-new-mexico-students-faculty" target="_blank"> New Mexico State University</a>
 >- <a href="https://www.pdx.edu/news/psu-receives-5m-federal-grant-improve-access-stem-education-underrepresented-students" target="_blank"> Portland State University</a>
 >- <a href="https://oit.siu.edu/rcc/services/grant.php" target="_blank"> Southern Illinois University</a>
-
-
-###  (for users of [OSG Connect] (https://support.opensciencegrid.org))
-
 
 
