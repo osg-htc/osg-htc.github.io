@@ -8,19 +8,20 @@ layout: default
 <h1>Campus Cyberinfrastructure Award Recipients Power the Open Science Grid</h1>
 
 <iframe width="100%" height="500px" frameBorder="0" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
+The map above shows the CC* campusus contributing to the Open Science Grid that have their compute entry point in place with the OSG. (Additional campuses  onboarding to the OSG are not yet displayed). 
+
 
 <h2>292 Million Core Hours Contributed by CC* Campuses</h2>
 
-Campus Cyberinfrastructure (CC*) award recipients provide a termendous value to the Open Science Grid in support of scientific research. In 2020 campuses with a CC* award contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics, physics and many more. This campus support thoughout the United States contributed to the advancement of science.
+Campus Cyberinfrastructure (CC*) award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, campuses with a CC* award contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics, physics and many more. This campus support thoughout the United States contributed to the advancement of science and to researchers both on and off their campuses.
 
-The type of inquiry ranged broadly; a small sampling includes:
+The type of inquiry that these award winners supported ranged broadly; a small sampling includes:
 - COVID-19 research  
 - virtual screensing for pain relief compounds
 - light production in heavy-ion collisions 
 - genomic tools to understand the evolutionary process of marine invasion
 - network optimization for large-scale scientific workflow
 
-The map above shows the CC* campusus contributing to the Open Science Grid that have their compute entry point with the OSG in place. (Additional campuses  onboarding to the OSG are not displayed). The OSG team actively works with campuses to integrate campuses smoothly into the OSG. 
 
 <h2>The CC* Program</h2>
 The National Science (NSF) Foundation supports the Open Science Grid and campuses that contribute resources to it. For 2021 the National Science Foundation funds the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank"> Campus Cyberinfrastructure (CC*) program (NSF 21-528).</a>
@@ -45,7 +46,11 @@ The Open Science Grid <a href="https://path-cc.io/" target="_blank"> " target="_
 In the most recent call for proposals <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 21-528)</a>, joining the OSG is mentioned as a potential path to sharing resources with the wider research community:
 Proposals are required to commit to a minimum of 20% shared time on the cluster and describe their approach to making the cluster available as a shared resource external to the campus, [...] One possible approach to implementing such a federated distributed computing solution is joining a multi-campus or national federated system such as the Open Science Grid.
 
-<h2>These colleges and universities are active contributors to the Open Science Grid: </h2>
+The OSG team actively works with campuses to integrate them smoothly into the OSG. We have an experienced and friendly team of engineers and facilitators dedicated to supporting campus computational groups and ensuring a positive onboarding with the flexibility to meet your configuration needs. To get started using OSG, contact us at
+
+* OSG Connect Support: <mailto:support@osgconnect.net>
+
+<h2>These colleges and universities are active contributors to the Open Science Grid </h2>
 
 >- <a href="https://www.amnh.org/research/computational-sciences" target="_blank">American Museum of Natural History</a>
 >- <a href="https://sites.clarkson.edu/acres/" target="_blank">Clarkson University</a>
@@ -63,9 +68,7 @@ Proposals are required to commit to a minimum of 20% shared time on the cluster 
 >- <a href="https://oit.siu.edu/rcc/services/grant.php" target="_blank"> Southern Illinois University</a>
 
 
-### To get started using OSG
-
-* OSG Connect Support: <mailto:support@osgconnect.net> (for users of [OSG Connect] (https://support.opensciencegrid.org))
+###  (for users of [OSG Connect] (https://support.opensciencegrid.org))
 
 
 
