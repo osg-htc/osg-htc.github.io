@@ -1,5 +1,7 @@
 ---
 title: Campus Cyberinfrastructure (CC*)- 21528
+date: 2021-01-011 12:00:00 -0600
+categories: NSF Camput Cyberinfrastructure (CC*)
 ---
 
 <h1>Campus Cyberinfrastructure (CC*) Award Recipients Power the Open Science Grid</h1>
