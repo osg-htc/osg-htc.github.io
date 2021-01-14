@@ -53,11 +53,14 @@ In the most recent call for proposals <a href="https://www.nsf.gov/funding/pgm_s
 > possible approach to implementing such a federated distributed computing solution is joining a multi-campus
 > or national federated system such as the Open Science Grid.
 
+<h2>Contributing to the Open Science Pool</h2>
+
 The OSG team actively works with campuses to integrate them smoothly into the OSG. We have an experienced and friendly team of engineers and facilitators dedicated to supporting campus computational groups and ensuring a positive onboarding with the flexibility to meet your configuration needs. To get started please email [OSG Support](mailto:support@osgconnect.net).
 
 Many other schools, in addition to CC* awardees, contribute resources to the Open Science Pool. <a href="https://map.opensciencegrid.org/map/iframe?view=EduvsOther#29.22889,-90.08789|4|terrain" target="_blank">View them here.</a> CC* awardees are a subset of the overall contributions by educational institutions. In fact, many campuses have used their OSG Pool contributions to aid in the success of their subsequent CC* award application to NSF. 
 
-These campuses are all contributing to a <a href="https://research.cs.wisc.edu/htcondor/" target="_blank">HTCondor pool</a> that OSG users can use via the Access Points operated by the OSG. OSG is operating an HTCondor pool in support of Open Science. Any researcher in the US can can use the services of the OSG Access Points to harness the capacity of the pool. All the researcher needs to do is go to <a href="https://www.osgconnect.net/" target="_blank">OSG Connect and get an OSG Account</a>.
+<h2>Open Science is Open to You!</h2>
+These campuses are all contributing to a <a href="https://research.cs.wisc.edu/htcondor/" target="_blank">HTCondor pool</a> that OSG users access via the access points operated by the OSG. OSG is operating an HTCondor pool in support of Open Science. Any researcher in the US can can use the services of the OSG Access Points to harness the capacity of the pool. All the researcher needs to do is go to <a href="https://www.osgconnect.net/" target="_blank">OSG Connect and get an OSG Account</a>. (It is free!) The researcher does not have to belong to a collaboration (big or small) nor to a campus (big or small).  
 
 
 <h2>These colleges and universities are active contributors to the Open Science Pool via the CC* program.: </h2>
