@@ -63,7 +63,7 @@ Many other schools, in addition to CC* awardees, contribute resources to the Ope
 These campuses are all contributing to a <a href="https://research.cs.wisc.edu/htcondor/" target="_blank">HTCondor pool</a> that OSG users access via the access points operated by the OSG. OSG is operating an HTCondor pool in support of Open Science. Any researcher in the US can can use the services of the OSG Access Points to harness the capacity of the pool. All the researcher needs to do is go to <a href="https://www.osgconnect.net/" target="_blank">OSG Connect and get an OSG Account</a>. (It is free!) The researcher does not have to belong to a collaboration (big or small) nor to a campus (big or small).  
 
 
-<h2>These colleges and universities are active contributors to the Open Science Pool via the CC* program.: </h2>
+<h2>These colleges and universities are active contributors to the Open Science Pool via the CC* program: </h2>
 
 >- <a href="https://www.amnh.org/research/computational-sciences" target="_blank">American Museum of Natural History</a>
 >- <a href="https://sites.clarkson.edu/acres/" target="_blank">Clarkson University</a>
