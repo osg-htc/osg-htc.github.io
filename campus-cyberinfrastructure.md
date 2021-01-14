@@ -55,7 +55,8 @@ In the most recent call for proposals <a href="https://www.nsf.gov/funding/pgm_s
 
 The OSG team actively works with campuses to integrate them smoothly into the OSG. We have an experienced and friendly team of engineers and facilitators dedicated to supporting campus computational groups and ensuring a positive onboarding with the flexibility to meet your configuration needs. To get started please email [OSG Support](mailto:support@osgconnect.net).
 
-<h2>These colleges and universities are active contributors to the Open Science Grid </h2>
+<h2>These colleges and universities are CC* active contributors to the Open Science Grid: </h2>
+*(Many other schools contribute resources to the Open Science Grid. <a href="https://map.opensciencegrid.org/map/iframe?view=EduvsOther#29.22889,-90.08789|4|terrain" target="_blank">View them here.</a>CC* campuses are just a subset of the overall contributions by educational institutions. 
 
 >- <a href="https://www.amnh.org/research/computational-sciences" target="_blank">American Museum of Natural History</a>
 >- <a href="https://sites.clarkson.edu/acres/" target="_blank">Clarkson University</a>
@@ -67,7 +68,8 @@ The OSG team actively works with campuses to integrate them smoothly into the OS
 >- <a href="https://news.syr.edu/blog/2020/09/03/national-science-foundation-awards-390000-to-syracuse-university-computing-initiative/" target="_blank"> Syracuse University</a>
 >- <a href="https://news.engr.uconn.edu/500k-nsf-grant-awarded-to-dr-bing-wang-uconn-health-center-2.php" target="_blank">University of Connecticut</a>
 >- <a href="https://now.tufts.edu/articles/tufts-awarded-nsf-grant-expand-big-data-innovation-and-discovery" target="_blank"> Tufts University</a>
->- <a href="https://www.lsu.edu/mediacenter/news/2020/04/22cct_brandt_nsf.php" target="_blank"> Louisiana State University</a>
+>- <a href="http://www.hpc.lsu.edu/about/index.php" target="_blank"> Louisiana State University</a>
+>- <a href="https://www.lsuhsc.edu/" target="_blank"> Louisiana Health</a>
 >- <a href="https://newscenter.nmsu.edu/Articles/view/14445/nsf-grant-brings-high-performance-computing-to-new-mexico-students-faculty" target="_blank"> New Mexico State University</a>
 >- <a href="https://www.pdx.edu/news/psu-receives-5m-federal-grant-improve-access-stem-education-underrepresented-students" target="_blank"> Portland State University</a>
 >- <a href="https://oit.siu.edu/rcc/services/grant.php" target="_blank"> Southern Illinois University</a>
