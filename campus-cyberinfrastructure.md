@@ -55,8 +55,9 @@ In the most recent call for proposals <a href="https://www.nsf.gov/funding/pgm_s
 
 The OSG team actively works with campuses to integrate them smoothly into the OSG. We have an experienced and friendly team of engineers and facilitators dedicated to supporting campus computational groups and ensuring a positive onboarding with the flexibility to meet your configuration needs. To get started please email [OSG Support](mailto:support@osgconnect.net).
 
+Many other schools, in addition to CC* awardees, contribute resources to the Open Science Grid. <a href="https://map.opensciencegrid.org/map/iframe?view=EduvsOther#29.22889,-90.08789|4|terrain" target="_blank">View them here.</a> CC* awardees are a subset of the overall contributions by educational institutions. In fact, many campuses have used their OSG Pool contributions to aid in the success of their subsequent CC* award application to NSF. 
+
 <h2>These colleges and universities are CC* active contributors to the Open Science Grid: </h2>
-(Many other schools contribute resources to the Open Science Grid. <a href="https://map.opensciencegrid.org/map/iframe?view=EduvsOther#29.22889,-90.08789|4|terrain" target="_blank">View them here.</a> CC* campuses are just a subset of the overall contributions by educational institutions.) 
 
 >- <a href="https://www.amnh.org/research/computational-sciences" target="_blank">American Museum of Natural History</a>
 >- <a href="https://sites.clarkson.edu/acres/" target="_blank">Clarkson University</a>
