@@ -22,7 +22,7 @@ A national, distributed computing partnership for data-intensive research
   </ul>
 
   <p class="special-banner-1" style="margin-bottom: 0.5ex;">
-    <a href="https://opensciencegrid.org/technology/policy/campus-cyberinfrastructure/">Learn more about PATh and OSG's collaboration</a> with CC* recipients.
+    <a href="https://opensciencegrid.org/campus-cyberinfrastructure">Learn more about PATh and OSG's collaboration</a> with CC* recipients.
   </p>
 </div>
 
