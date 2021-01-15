@@ -1,5 +1,12 @@
-Dark Energy Survey File Transfer Case Study
-When Greg Daues at the National Center for Supercomputing Applications (NCSA)  needed to transfer several million files of Dark Energy Survey (DES) data from the French National Institute of Nuclear and Particle Physics (IN2P3) in Lyon, France to Illinois, he turned to the HTCondor High Throughput system, not to run computationally intensive jobs, as many do, but to manage the hundreds of thousands of I/O bound transfers.
+---
+title: "Case Study Using HTCondor and dHTC to Transfer Large files" 
+date: 2021-01-15T12:00:00+00:00
+publish: true
+--- 
+
+<h1>Dark Energy Survey File Transfer Case Study</h1>
+
+When Greg Daues at the https://resources.istcoalition.org/national-center-for-supercomputing-applications National Center for Supercomputing Applications (NCSA)  needed to transfer several million files of Dark Energy Survey (DES) data from the French National Institute of Nuclear and Particle Physics (IN2P3) in Lyon, France to Illinois, he turned to the HTCondor High Throughput system, not to run computationally intensive jobs, as many do, but to manage the hundreds of thousands of I/O bound transfers.
 The Data
 IN2P3 made the data available via https, but the number of files and their total size made the management of the transfer an engineering challenge.  There were two kinds of files to be transferred, with 3.5 million files with a median size of roughly 100 Mb, and another 3.5 million smaller files, with a median size of about 10 megabytes.  Total transfer size is roughly 385 Terabytes.
 The Requirements
