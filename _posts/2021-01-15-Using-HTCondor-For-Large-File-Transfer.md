@@ -1,5 +1,5 @@
 ---
-title: " How to Transfer 460 Terabytes? - A File Transfer Case Study" 
+title: " How to Transfer 460 Terabytes? A File Transfer Case Study" 
 date: 2021-01-15T12:00:00+00:00
 publish: true
 --- 
