@@ -4,11 +4,11 @@ date: 2021-01-15T12:00:00+00:00
 publish: true
 --- 
 
-When Greg Daues at the <a href="https://resources.istcoalition.org/national-center-for-supercomputing-applications" target="_blank">National Center for Supercomputing Applications (NCSA)</a> needed to transfer several million files of NCSA, a href="https://www.fnal.gov/" target="_blank">FNAL</a> and  <a href="https://cc.in2p3.fr/en/" target="_blank">CC-IN2P3</a> working within href="https://www.lsst.org/" target="_blank">Rubin Data Production team</a> from <a href="https://in2p3.cnrs.fr/en/node/11" target="_blank">the National Institute of Nuclear and Particle Physics (IN2P3)</a> in Lyon, France to Illinois, he turned to the <a href="https://research.cs.wisc.edu/htcondor/" target="_blank">HTCondor High Throughput system</a>, not to run computationally intensive jobs, as many do, but to manage the hundreds of thousands of I/O bound transfers.
+When Greg Daues at the <a href="https://resources.istcoalition.org/national-center-for-supercomputing-applications" target="_blank">National Center for Supercomputing Applications (NCSA)</a> needed to transfer 460 Terabytes of NCSA files from <a href="https://in2p3.cnrs.fr/en/node/11" target="_blank">the National Institute of Nuclear and Particle Physics (IN2P3)</a> in Lyon, France to Illinois, for a project they were working with a href="https://www.fnal.gov/" target="_blank">FNAL</a>, <a href="https://cc.in2p3.fr/en/" target="_blank">CC-IN2P3</a> and the href="https://www.lsst.org/" target="_blank">Rubin Data Production team</a>, he turned to the <a href="https://research.cs.wisc.edu/htcondor/" target="_blank">HTCondor High Throughput system</a>, not to run computationally intensive jobs, as many do, but to manage the hundreds of thousands of I/O bound transfers.
 
 <h2>The Data</h2>
 
-IN2P3 made the data available via https, but the number of files and their total size made the management of the transfer an engineering challenge.  There were two kinds of files to be transferred, with 3.5 million files with a median size of roughly 100 Mb, and another 3.5 million smaller files, with a median size of about 10 megabytes.  Total transfer size is roughly 385 Terabytes.
+IN2P3 made the data available via https, but the number of files and their total size made the management of the transfer an engineering challenge.  There were two kinds of files to be transferred, with 3.5 million files with a median size of roughly 100 Mb, and another 3.5 million smaller files, with a median size of about 10 megabytes.  Total transfer size is roughly 460 Terabytes.
 
 <h2>The Requirements</h2>
 
