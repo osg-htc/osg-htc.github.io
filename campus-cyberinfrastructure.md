@@ -14,7 +14,7 @@ OSG partners with many campuses across the US, including many [Campus Cyberinfra
 
 <h2>292 Million Core Hours Contributed by CC* Campuses</h2>
 
-Campus Cyberinfrastructure (CC star) award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, these campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics, physics and many more. This campus support thoughout the United States contributed to the advancement of science and to researchers both on and off their campuses. The project reseached supported by these contributions include:
+Campus Cyberinfrastructure (CC star) award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, these campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics, physics and many more. This campus support thoughout the United States contributed to the advancement of science and to researchers both on and off their campuses. The project reseach supported by these contributions include (among many others):
 
 - COVID-19 research  
 - virtual screensing for pain relief compounds
