@@ -1,10 +1,8 @@
 ---
-title: "Case Study Using HTCondor and dHTC to Transfer Large files" 
+title: "Dark Energy Survey File Transfer Case Study" 
 date: 2021-01-15T12:00:00+00:00
 publish: true
 --- 
-
-<h1>Dark Energy Survey File Transfer Case Study</h1>
 
 When Greg Daues at the <a href="https://resources.istcoalition.org/national-center-for-supercomputing-applications" target="_blank">National Center for Supercomputing Applications (NCSA)</a> needed to transfer several million files of Dark Energy Survey (DES) data from <a href="https://in2p3.cnrs.fr/en/node/11French" target="_blank">the National Institute of Nuclear and Particle Physics (IN2P3)</a> in Lyon, France to Illinois, he turned to the <a href="https://research.cs.wisc.edu/htcondor/" target="_blank">HTCondor High Throughput system</a>, not to run computationally intensive jobs, as many do, but to manage the hundreds of thousands of I/O bound transfers.
 
