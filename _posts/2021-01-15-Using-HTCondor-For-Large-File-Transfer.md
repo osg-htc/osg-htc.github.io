@@ -6,7 +6,7 @@ publish: true
 
 <h1>Dark Energy Survey File Transfer Case Study</h1>
 
-When Greg Daues at the <a href="https://resources.istcoalition.org/national-center-for-supercomputing-applications" <a href="https://resources.istcoalition.org/national-center-for-supercomputing-applications" target="_blank">National Center for Supercomputing Applications (NCSA)</a> needed to transfer several million files of Dark Energy Survey (DES) data from <a href="https://in2p3.cnrs.fr/en/node/11French" target="_blank" the National Institute of Nuclear and Particle Physics (IN2P3)</a< in Lyon, France to Illinois, he turned to the <a href="https://research.cs.wisc.edu/htcondor/" target="_blank"> HTCondor High Throughput system</a>, not to run computationally intensive jobs, as many do, but to manage the hundreds of thousands of I/O bound transfers.
+When Greg Daues at the <a href="https://resources.istcoalition.org/national-center-for-supercomputing-applications" <a href="https://resources.istcoalition.org/national-center-for-supercomputing-applications" target="_blank"National Center for Supercomputing Applications (NCSA)</a> needed to transfer several million files of Dark Energy Survey (DES) data from <a href="https://in2p3.cnrs.fr/en/node/11French" target="_blank"the National Institute of Nuclear and Particle Physics (IN2P3)</a< in Lyon, France to Illinois, he turned to the <a href="https://research.cs.wisc.edu/htcondor/" target="_blank"HTCondor High Throughput system</a>, not to run computationally intensive jobs, as many do, but to manage the hundreds of thousands of I/O bound transfers.
 
 <h2>The Data</h2>
 
@@ -24,8 +24,8 @@ The operation will not overload the sender, the receiver, or any network in betw
 
 Daues presented unrelated work at the <a href="https://research.cs.wisc.edu/htcondor/HTCondorWeek2017/" target="_blank"2017 HTCondor Week workshop</a>.  At this workshop, he heard about the work of Phillip Papodopolous at UCSD, and his international Data Placement Lab (iDPL).   iDPL used HTCondor jobs solely for transferring data between international sites.  Daues re-used and adapted some of these ideas for NCSA’s needs.
 
-<h2>The Solution<h2>
-First, Daues installed a <a href="https://hub.docker.com/r/htcondor/mini" target="_blank"  “mini-condor”<a/a>, an HTCondor pool entirely on one machine, with an access point and eight execution slots on that same machine.  Then, given a single large file containing the names of all the files to transfer, he ran the Unix split command to create separate files with either 50 of the larger files, or 200 of the smaller files.  Finally, using the HTCondor submit file command 
+<h2>The Solution</h2>
+First, Daues installed a <a href="https://hub.docker.com/r/htcondor/mini" target="_blank"  “mini-condor”</a>, an HTCondor pool entirely on one machine, with an access point and eight execution slots on that same machine.  Then, given a single large file containing the names of all the files to transfer, he ran the Unix split command to create separate files with either 50 of the larger files, or 200 of the smaller files.  Finally, using the HTCondor submit file command 
 
 Queue filename matching files *.txt
 
