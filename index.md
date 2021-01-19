@@ -9,7 +9,7 @@ layout: default
 A national, distributed computing partnership for data-intensive research
 
 <div id="osg-special-banner">
-  <p class="special-banner-1"><strong>We are here to help with your <a href="https://www.nsf.gov/pubs/2021/nsf21528/nsf21528.htm/">Campus Cyberinfrastructure (CC*) Proposal!</a> Please contact us at <a href="mailto:cc-star-proposals@opensciencegrid.org">cc-star-proposals@opensciencegrid.org</a></strong></p>
+  <p class="special-banner-1"><strong>We are here to help with your <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">Campus Cyberinfrastructure (CC*) Proposal!</a> Please contact us at <a href="mailto:cc-star-proposals@opensciencegrid.org">cc-star-proposals@opensciencegrid.org</a></strong></p>
   <p class="special-banner-1" style="margin-bottom: 0.5ex;">
     We have significant experience working with CC* applicants and awardees, offering letters of support and consulting for:
   </p>
