@@ -75,7 +75,7 @@ These campuses are contributing to a <a href="https://research.cs.wisc.edu/htcon
 >- <a href="https://news.engr.uconn.edu/500k-nsf-grant-awarded-to-dr-bing-wang-uconn-health-center-2.php" target="_blank">University of Connecticut</a>
 >- <a href="https://now.tufts.edu/articles/tufts-awarded-nsf-grant-expand-big-data-innovation-and-discovery" target="_blank"> Tufts University</a>
 >- <a href="http://www.hpc.lsu.edu/about/index.php" target="_blank"> Louisiana State University</a>
->- <a href="https://www.lsuhsc.edu/" target="_blank"> Louisiana Health</a>
+>- <a href="https://www.lsuhsc.edu/" target="_blank"> LSU Health</a>
 >- <a href="https://newscenter.nmsu.edu/Articles/view/14445/nsf-grant-brings-high-performance-computing-to-new-mexico-students-faculty" target="_blank"> New Mexico State University</a>
 >- <a href="https://www.pdx.edu/news/psu-receives-5m-federal-grant-improve-access-stem-education-underrepresented-students" target="_blank"> Portland State University</a>
 >- <a href="https://oit.siu.edu/rcc/services/grant.php" target="_blank"> Southern Illinois University</a>
