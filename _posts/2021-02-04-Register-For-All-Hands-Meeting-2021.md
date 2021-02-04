@@ -25,7 +25,7 @@ Note that Zoom connection details are emailed only to those who registered.
 * **Friday:** U.S. ATLAS and CMS Projects
 
 <figure class="figure">
-  <img src="/assets/images/All_Hands_Meeting_Group.JPG" class="figure-img img-fluid rounded" alt="All Hands Meeting Participants">
+  <img src="{{site.baseurl}}/assets/images/All_Hands_Meeting_Group.JPG" class="figure-img img-fluid rounded" alt="All Hands Meeting Participants">
   <figcaption class="figure-caption">Participants of the All Hands Meeting.</figcaption>
 </figure>
 

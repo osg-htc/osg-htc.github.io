@@ -32,7 +32,7 @@ an account on a UW–Madison HTCondor submit node and an OSG Connect account —
 are as few barriers to computing and storage resources as possible.
 
 <div class="media border border-primary rounded-left">
-   <img class="mr-3" alt="The attendees of the OSG User School" src="/assets/images/osg_summer_school_2017.png">
+   <img class="mr-3" alt="The attendees of the OSG User School" src="{{site.baseurl}}/assets/images/osg_summer_school_2017.png">
    <div class="media-body">
      The attendees of the OSG User School in 2017.
    </div>
