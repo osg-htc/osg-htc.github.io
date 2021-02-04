@@ -3,10 +3,6 @@ title: "Register Now for the March 1 -5 All Hands Meeting"
 date: 2021-02-04T12:00:00+00:00
 publish: true
 --- 
-<figure class="figure float-right" style="margin-left: 1em">
-  <img src="{{site.baseurl}}/assets/images/All_Hands_Meeting_Group.JPG" class="figure-img img-fluid rounded" alt="All Hands Meeting" width="250px">
-  <figcaption class="figure-caption">All Hands Meeting</figcaption>
-</figure>
 **Register now for the onlinee** <a href="https://indico.fnal.gov/event/47040/registrations/2899/" target="_blank">2021 All Hands Meeting</a>, **March 1-5**, offered by the <a href="https://openscience.org/" target="_blank">Open Science Grid</a>. Everyone is invited to attend!
 
 **Registration is free** but required, so
@@ -27,6 +23,11 @@ Note that Zoom connection details are emailed only to those who registered.
 * **Wednesday:** OSG Agility and Technology Advancements
 * **Thursday:** Impact on Multi-Institutional Collaborations
 * **Friday:** U.S. ATLAS and CMS Projects
+
+<figure class="figure">
+  <img src="/assets/images/All_Hands_Meeting_Group.JPG" class="figure-img img-fluid rounded" alt="All Hands Meeting Participants">
+  <figcaption class="figure-caption">Participants of the All Hands Meeting.</figcaption>
+</figure>
 
 ## Contacts
 
