@@ -4,7 +4,7 @@ date: 2021-02-04T12:00:00+00:00
 publish: true
 --- 
 <figure class="figure float-right" style="margin-left: 1em">
-  <img src="{{site.baseurl}}/assets/images/All_Hands_Meeting_Group.JPEG" class="figure-img img-fluid rounded" alt="All Hands Meeting" width="250px">
+  <img src="{{site.baseurl}}/assets/images/All_Hands_Meeting_Group.JPG" class="figure-img img-fluid rounded" alt="All Hands Meeting" width="250px">
   <figcaption class="figure-caption">All Hands Meeting</figcaption>
 </figure>
 **Register now for the onlinee** <a href="https://indico.fnal.gov/event/47040/registrations/2899/" target="_blank">2021 All Hands Meeting</a>, **March 1-5**, offered by the <a href="https://openscience.org/" target="_blank">Open Science Grid</a>. Everyone is invited to attend!
