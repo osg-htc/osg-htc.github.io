@@ -14,7 +14,7 @@ Olexandr Isayev is an assistant professor at the School of Pharmacy, University 
 For studying drug discovery, where small organic molecule binds to a protein receptor, Isayev uses machine learning to build predictive models based on historical collection of experimental data. “We want to challenge models and find a new molecule with better binding properties,” says Isayev.
 
 <div class="media border border-primary rounded-left">
-  <img class="mr-3" alt="Protein model visualization" src="/assets/images/molcryst.png">
+  <img class="mr-3" alt="Protein model visualization" src="{{site.baseurl}}/assets/images/molcryst.png">
   <div class="media-body">
     <h5 class="mt-0">Protein Model</h5>
     Example of a protein model that Isayev and his group study. Courtesy image.
