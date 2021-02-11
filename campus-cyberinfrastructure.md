@@ -8,19 +8,19 @@ layout: default
 Campus Cyberinfrastructure Award Recipients Power the Open Science Grid
 =======================================================================
 
-OSG partners with many campuses across the US, including many [Campus Cyberinfrastructure (CC\*)](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) awardees, to help them share their resources at a regional and national level.  The campuses actively contributing CC*-funded resources are shown in the map below; every month, we are working to help more awardees contribute:
+OSG partners with campuses across the US, including [Campus Cyberinfrastructure (CC\*)](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) awardees, to help them share their resources at a regional and national level.  The campuses actively contributing CC*-funded resources are shown in the map below; every month, we are working to help more awardees contribute:
 
 <iframe width="100%" height="500px" frameBorder="0" style="margin-bottom:1em; margin-top:1em" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
 
 <h2>292 Million Core Hours Contributed by CC* Campuses</h2>
 
-Campus Cyberinfrastructure (CC star) award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, these campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, bio statistics, physics and many more. This campus support thoughout the United States contributed to the advancement of science and to researchers both on and off their campuses.
+Campus Cyberinfrastructure (CC star) award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, these campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> More than 186 research projects were supported in fields of study such as neuroscience, evolutionary genomics, biostatistics, educational psychology, physics and many more. Projects supported by these contributions include (among many others):
 
-- COVID-19 research  
-- virtual screensing for pain relief compounds
+- multiple COVID-19 research projects
+- virtual screening for pain relief compounds
 - light production in heavy-ion collisions 
-- genomic tools to understand the evolutionary process of marine invasion
-- network optimization for large-scale scientific workflow
+- genomic analyses to understand the evolutionary process of marine invasion
+- computer network optimization for large-scale scientific workflows
 
 
 The CC* Program
@@ -55,7 +55,14 @@ In the most recent call for proposals <a href="https://www.nsf.gov/funding/pgm_s
 
 The OSG team actively works with campuses to integrate them smoothly into the OSG. We have an experienced and friendly team of engineers and facilitators dedicated to supporting campus computational groups and ensuring a positive onboarding with the flexibility to meet your configuration needs. To get started please email [OSG Support](mailto:support@osgconnect.net).
 
-<h2>These CC*-awarded institutions are active contributors to the Open Science Grid </h2>
+<h2>Contributing to the Open Science Pool</h2>
+
+Many other campuses and other sites, in addition to CC* awardees, contribute resources to the Open Science Pool. <a href="https://map.opensciencegrid.org/map/iframe?view=EduvsOther#29.22889,-90.08789|4|terrain" target="_blank">View them here.</a> CC* awardees are a subset of the overall contributions by educational institutions. In fact, many campuses have used their Open Science Pool contributions to aid in the success of a subsequent CC* award application to NSF. 
+
+<h2>Open Science is Open to You!</h2>
+These Open Science Pool is a <a href="https://research.cs.wisc.edu/htcondor/" target="_blank">HTCondor pool</a> that OSG users access via 'access points' operated by the OSG or by campuses supporting 'local' access to OSG. Any researcher at a US academic, government, or non-profit institution can can use the Open Science Pool via OSG-operated access points to harness the capacity of the Open Science Pool by going to <a href="https://www.osgconnect.net/" target="_blank">OSG Connect and get an OSG Account</a>. (It is free!) The researcher does not have to belong to a collaboration (big or small) nor to any particular campus (big or small).  
+
+<h2>These colleges and Universities are active contributors to the Open Science Pool via the CC* program: </h2>
 
 >- <a href="https://www.amnh.org/research/computational-sciences" target="_blank">American Museum of Natural History</a>
 >- <a href="https://sites.clarkson.edu/acres/" target="_blank">Clarkson University</a>
@@ -67,7 +74,8 @@ The OSG team actively works with campuses to integrate them smoothly into the OS
 >- <a href="https://news.syr.edu/blog/2020/09/03/national-science-foundation-awards-390000-to-syracuse-university-computing-initiative/" target="_blank"> Syracuse University</a>
 >- <a href="https://news.engr.uconn.edu/500k-nsf-grant-awarded-to-dr-bing-wang-uconn-health-center-2.php" target="_blank">University of Connecticut</a>
 >- <a href="https://now.tufts.edu/articles/tufts-awarded-nsf-grant-expand-big-data-innovation-and-discovery" target="_blank"> Tufts University</a>
->- <a href="https://www.lsu.edu/mediacenter/news/2020/04/22cct_brandt_nsf.php" target="_blank"> Louisiana State University</a>
+>- <a href="http://www.hpc.lsu.edu/about/index.php" target="_blank"> Louisiana State University</a>
+>- <a href="https://www.lsuhsc.edu/" target="_blank"> LSU Health</a>
 >- <a href="https://newscenter.nmsu.edu/Articles/view/14445/nsf-grant-brings-high-performance-computing-to-new-mexico-students-faculty" target="_blank"> New Mexico State University</a>
 >- <a href="https://www.pdx.edu/news/psu-receives-5m-federal-grant-improve-access-stem-education-underrepresented-students" target="_blank"> Portland State University</a>
 >- <a href="https://oit.siu.edu/rcc/services/grant.php" target="_blank"> Southern Illinois University</a>

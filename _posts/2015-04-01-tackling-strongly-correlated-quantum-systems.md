@@ -23,13 +23,13 @@ td {
     <tr>
       <td>
         <figure class="headshot">
-          <img src="/assets/images/Shailesh-Chandrasekharan-150x150.jpg"/>
+          <img src="{{site.baseurl}}/assets/images/Shailesh-Chandrasekharan-150x150.jpg"/>
           <figcaption>Shailesh Chandrasekharan, courtesy photo</figcaption>
         </figure>
       </td>
       <td>
         <figure class="headshot">
-          <img src="/assets/images/Venkitesh-150x150.jpg"/>
+          <img src="{{site.baseurl}}/assets/images/Venkitesh-150x150.jpg"/>
           <br/>
           <figcaption>Venkitesh Ayyar, courtesy photo</figcaption>
         </figure>
@@ -78,7 +78,7 @@ In order to understand a new mechanism for the origin of mass in the universe, A
 study an interacting theory of fermions using the fermion bag approach.
 
 <figure>
-  <img src="/assets/images/Fermion-Bag-300x300.jpg" width="300" height="300" />
+  <img src="{{site.baseurl}}/assets/images/Fermion-Bag-300x300.jpg" width="300" height="300" />
   <figcaption>Illustration of a fermion bag configuration. Image credit: Shailesh Chandrasekharan</figcaption>
 </figure>
 
