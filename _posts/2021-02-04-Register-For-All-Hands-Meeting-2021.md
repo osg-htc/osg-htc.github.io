@@ -3,14 +3,16 @@ title: "Don't Miss the OSG All Hands Meeting March 1 - 5"
 date: 2021-02-04T12:00:00+00:00
 publish: true
 --- 
-**Register now for the online** <a href="https://indico.fnal.gov/event/47040/registrations/2899/" target="_blank">2021 All Hands Meeting</a>, **March 1-5**, offered by the <a href="https://openscience.org/" target="_blank">Open Science Grid</a>. Everyone is invited to attend!
-
-**Registration is free** but required, so
+**Register now for the online** <a href="https://indico.fnal.gov/event/47040/registrations/2899/" target="_blank">2021 All Hands Meeting</a>, **March 1-5**, offered by the <a href="https://openscience.org/" target="_blank">Open Science Grid</a>. Everyone is invited to attend. Registration is free but required, so
 [please take a minute to register now](https://indico.fnal.gov/event/47040/registrations/2899/).
 
->*"These past 12 months, unlike any others, have shown the power and influence of the Open Science Grid in supporting researchers as they work to enhance science and the importance of the contributors to the pool. The All-Hands Meeting brings the open science community together to share knowledge as this democratization of science changes the world."* Frank Würthwein, OSG Executive Director and Meeting Chair 
+Frank Würthwein, OSG Executive Director and Meeting Chair, in speaking about this year's the All-Hands Meeting, noted: 
 
-## Daily Topics
+>*These past 12 months, unlike any others, have shown the power and influence of the Open Science Grid in supporting researchers as they work to enhance science and the importance of the contributors to the pool. The All-Hands Meeting brings the open science community together to share knowledge as this democratization of science changes the world.* 
+
+A wide range of speakers with diverse backgrounds from accross the world wiil be participating in the meeting. A small sampling of the speakders includes Amir Bitran, Harvard University, speaking on "Towards design of folding inhibitors against SARS-CoV-2 proteins", Kevin Thompson, National Science Foundation, discussing "CC* and campus computing" and James P. Howard, Johns Hopkins Applied Physics Laboratory, will be talking about "Modeling demand for medical resources." The full list of contributors can be found on [the Contributors page] (https://indico.fnal.gov/event/47040/contributions/).
+
+The daily meeting topics are:
 
 * **Monday:** State of OSG; David Swanson Award recipients; Impact on Research
 * **Tuesday:** Campus Services and Experiences; NSF Campus Cyberinfrastructure (CC*)
@@ -22,19 +24,9 @@ An overview of the schedule is available on [the Schedule page](schedule.md),
 and the detailed schedule (in progress) is available in
 [the Indico scheduling system](https://indico.fnal.gov/event/47040/timetable/).
 
-
-
 For meeting technology and other logistics, see
 [the Meeting Logistics page](technology.md).
 Note that Zoom connection details are emailed only to those who registered.
-
-## Daily Topics
-
-* **Monday:** State of OSG; David Swanson Award recipients; Impact on Research
-* **Tuesday:** Campus Services and Experiences; NSF Campus Cyberinfrastructure (CC*)
-* **Wednesday:** OSG Agility and Technology Advancements
-* **Thursday:** Impact on Multi-Institutional Collaborations
-* **Friday:** U.S. ATLAS and CMS Projects
 
 <figure class="figure">
   <img src="{{site.baseurl}}/assets/images/All_Hands_Meeting_Group.JPG" class="figure-img img-fluid rounded" alt="All Hands Meeting Participants">
