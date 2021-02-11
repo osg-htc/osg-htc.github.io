@@ -41,7 +41,7 @@ HTCondor submit node and an OSG Connect account&nbsp;— so that there are as fe
 barriers to computing and storage resources as possible.
 
 <figure class="figure">
-  <img src="/assets/images/osg-user-school-2019.png"
+  <img src="{{site.baseurl}}/assets/images/osg-user-school-2019.png"
        class="figure-img img-fluid rounded"
        alt="OSG User School 2019 staff and participants">
   <figcaption class="figure-caption">

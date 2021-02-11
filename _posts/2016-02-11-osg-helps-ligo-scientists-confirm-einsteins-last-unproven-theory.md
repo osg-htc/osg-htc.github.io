@@ -6,7 +6,7 @@ categories: Astronomy
 
 Albert Einstein first posed the idea of gravitational waves in his [general theory of relativity](https://en.wikipedia.org/wiki/General_relativity) just over a century ago. But until now, they had never been observed directly. For the first time, scientists with the Laser Interferometer Gravitational-Wave Observatory [(LIGO) Scientific Collaboration](http://www.ligo.org/) (LSC) [have observed ripples in the fabric of spacetime called gravitational waves](https://www.ligo.caltech.edu/news/ligo20160211).
 
-<a href="/assets/images/ligo20160211d-smaller.jpg"><img src="/assets/images/ligo20160211d-smaller-150x150.jpg" alt="ligo20160211d-smaller" width="150" height="150" /></a>
+<a href="{{site.baseurl}}/assets/images/ligo20160211d-smaller.jpg"><img src="{{site.baseurl}}/assets/images/ligo20160211d-smaller-150x150.jpg" alt="ligo20160211d-smaller" width="150" height="150" /></a>
 
 _Image Courtesy Caltech/MIT/LIGO Laboratory_
 
@@ -22,7 +22,7 @@ Peter Couvares, data analysis computing manager for the Advanced LIGO project at
     <tr>
       <td>
         <div id="attachment_223091" style="max-width: 160px">
-          <a href="/assets/images/couvares_cropped.jpeg"><img src="/assets/images/couvares_cropped-150x150.jpeg" alt="couvares_cropped" width="150" height="150" /></a>
+          <a href="{{site.baseurl}}/assets/images/couvares_cropped.jpeg"><img src="{{site.baseurl}}/assets/images/couvares_cropped-150x150.jpeg" alt="couvares_cropped" width="150" height="150" /></a>
           <br/>
           Peter Couvares, courtesy photo
         </div>
@@ -30,7 +30,7 @@ Peter Couvares, data analysis computing manager for the Advanced LIGO project at
       <td></td>
       <td>
         <div id="attachment_223081" style="max-width: 160px">
-          <a href="/assets/images/clark_cropped.jpeg"><img class="wp-image-223081 size-thumbnail" src="/assets/images/clark_cropped-150x150.jpeg" alt="clark_cropped" width="150" height="150" /></a>
+          <a href="{{site.baseurl}}/assets/images/clark_cropped.jpeg"><img class="wp-image-223081 size-thumbnail" src="{{site.baseurl}}/assets/images/clark_cropped-150x150.jpeg" alt="clark_cropped" width="150" height="150" /></a>
           <br/>
           James Clark, courtesy photo
         </div>
@@ -38,7 +38,7 @@ Peter Couvares, data analysis computing manager for the Advanced LIGO project at
       <td></td>
       <td>
         <div id="attachment_223101" style="max-width: 160px">
-          <a href="/assets/images/pekowsy.jpeg"><img class="wp-image-223101 size-thumbnail" src="/assets/images/pekowsy-150x150.jpeg" alt="pekowsy" width="150" height="150" /></a>
+          <a href="{{site.baseurl}}/assets/images/pekowsy.jpeg"><img class="wp-image-223101 size-thumbnail" src="{{site.baseurl}}/assets/images/pekowsy-150x150.jpeg" alt="pekowsy" width="150" height="150" /></a>
           <br/>
           Larne Pekowsky, courtesy photo
         </div>
@@ -71,7 +71,7 @@ Using data analysis run on the OSG, the LIGO team looked for a compact binary co
 
 Another big step has been the increase in network speed. The data was cached at the University of Nebraska and streamed to on-demand worker nodes that are able to read from a common location. This project benefited greatly from the NSF’s Campus Cyberinfrastructure &#8211; Network Infrastructure and Engineering (CC-NIE) program, which helped provide a hardware upgrade from 10Gbps to 100Gbps WAN connectivity. Receiving NSF support to upgrade to 100Gbps has enabled huge gains in workflow throughput.
 
-<a href="/assets/images/WMS-hours-by-facility-comet.png"><img src="/assets/images/WMS-hours-by-facility-comet.png" alt="WMS hours by facility-comet" width="800" height="500" /></a>
+<a href="{{site.baseurl}}/assets/images/WMS-hours-by-facility-comet.png"><img src="{{site.baseurl}}/assets/images/WMS-hours-by-facility-comet.png" alt="WMS hours by facility-comet" width="800" height="500" /></a>
 
 The LIGO analysis ran across 16 different OSG resources, for a total of 4M CPU hours:
 * 1M CPU hour (25%) XSEDE contribution<
