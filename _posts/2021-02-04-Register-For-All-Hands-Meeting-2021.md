@@ -16,6 +16,7 @@ Frank Würthwein, OSG Executive Director and Meeting Chair, in speaking about th
 
 A wide range of contributors and attendees with diverse backgrounds from across the world wiil be participating in the meeting. A small sampling of the speakers includes Amir Bitran, Harvard University, speaking on “Towards design of folding inhibitors against SARS-CoV-2 proteins”, Kevin Thompson, National Science Foundation, discussing “CC* and campus computing”, and James P. Howard, Johns Hopkins Applied Physics Laboratory, will be talking about “Modeling demand for medical resources”. The full list of contributors can be found on [the Contributors page](https://indico.fnal.gov/event/47040/contributions/).
 
+
 The daily meeting topics are:
 
 * **Monday:** State of OSG; David Swanson Award recipients; Impact on Research
