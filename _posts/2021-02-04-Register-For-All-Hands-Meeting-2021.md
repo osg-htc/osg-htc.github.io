@@ -8,9 +8,21 @@ publish: true
 **Registration is free** but required, so
 [please take a minute to register now](https://indico.fnal.gov/event/47040/registrations/2899/).
 
+>*"These past 12 months, unlike any others, have shown the power and influence of the Open Science Grid in supporting researchers as they work to enhance science and the importance of the contributors to the pool. The All-Hands Meeting brings the open science community together to share knowledge as this democratization of science changes the world."* Frank Würthwein, OSG Executive Director and Meeting Chair 
+
+## Daily Topics
+
+* **Monday:** State of OSG; David Swanson Award recipients; Impact on Research
+* **Tuesday:** Campus Services and Experiences; NSF Campus Cyberinfrastructure (CC*)
+* **Wednesday:** OSG Agility and Technology Advancements
+* **Thursday:** Impact on Multi-Institutional Collaborations
+* **Friday:** U.S. ATLAS and CMS Projects
+
 An overview of the schedule is available on [the Schedule page](schedule.md),
 and the detailed schedule (in progress) is available in
 [the Indico scheduling system](https://indico.fnal.gov/event/47040/timetable/).
+
+
 
 For meeting technology and other logistics, see
 [the Meeting Logistics page](technology.md).
