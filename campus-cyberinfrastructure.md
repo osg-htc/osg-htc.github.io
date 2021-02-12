@@ -14,6 +14,8 @@ OSG partners with campuses across the US, including [Campus Cyberinfrastructure 
 
 <h2>292 Million Core Hours Contributed by CC* Campuses</h2>
 
+The Open Science Grid consortium operates the Open Science Pool (OSPool). Any researcher at a US institute can access the OSPool that is founded on the principal of sharing. The capacity that powers this national computing resources is contributed by clusters located at academic and research institutions. [Campus Cyberinfrastructure (CC*) awardees,](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) play an important role in the value that the OSPool brings to the national S&E community. By sharing their resources, Campus Cyberinfrastructure (CC*) award recipients provide a tremendous value in support of open research. 
+
 Campus Cyberinfrastructure (CC star) award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, these campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> More than 186 research projects were supported in fields of study such as neuroscience, evolutionary genomics, biostatistics, educational psychology, physics and many more. Projects supported by these contributions include (among many others):
 
 - multiple COVID-19 research projects
