@@ -8,13 +8,15 @@ layout: default
 Campus Cyberinfrastructure Award Recipients Power the Open Science Grid
 =======================================================================
 
-OSG partners with campuses across the US, including [Campus Cyberinfrastructure (CC\*)](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) awardees, to help them share their resources at a regional and national level.  The campuses actively contributing CC*-funded resources are shown in the map below; every month, we are working to help more awardees contribute:
-
-<iframe width="100%" height="500px" frameBorder="0" style="margin-bottom:1em; margin-top:1em" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
+The Open Science Grid consortium operates the Open Science Pool (OSPool). Any researcher at a US institute can access the OSPool that is founded on the principal of sharing. The capacity that powers this national computing resources is contributed by clusters located at academic and research institutions. [Campus Cyberinfrastructure (CC*) awardees](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) play an important role in the value that the OSPool brings to the national S&E community. By sharing their resources, Campus Cyberinfrastructure (CC*) award recipients provide a tremendous value in support of open research.
 
 <h2>292 Million Core Hours Contributed by CC* Campuses</h2>
 
-Campus Cyberinfrastructure (CC star) award recipients provide a tremendous value to the Open Science Grid in support of scientific research. In 2020, these campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> More than 186 research projects were supported in fields of study such as neuroscience, evolutionary genomics, biostatistics, educational psychology, physics and many more. Projects supported by these contributions include (among many others):
+In 2020, these campuses contributed to the OSPool over [292 millon core hours to researchers using distributed high throughput computing (dHTC).](https://gracc.opensciencegrid.org/d/000000074/gracc-home) These core hours supported over 180 projects in fields of study ranging from  medical sciences to evolutionary sciences and from  bio statistics to physics. This campus support throughout the United States contributed to the advancement of science and to researchers both on and off their campuses. The campuses currently contributing CC*-funded resources are shown in the map below; every month, the OSG is working to help additional campuses to join this effort to support open science by sharing their resources:
+
+<iframe width="100%" height="500px" frameBorder="0" style="margin-bottom:1em; margin-top:1em" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
+
+Projects supported by these contributions include (among many others):
 
 - multiple COVID-19 research projects
 - virtual screening for pain relief compounds
@@ -59,8 +61,8 @@ The OSG team actively works with campuses to integrate them smoothly into the OS
 
 Many other campuses and other sites, in addition to CC* awardees, contribute resources to the Open Science Pool. <a href="https://map.opensciencegrid.org/map/iframe?view=EduvsOther#29.22889,-90.08789|4|terrain" target="_blank">View them here.</a> CC* awardees are a subset of the overall contributions by educational institutions. In fact, many campuses have used their Open Science Pool contributions to aid in the success of a subsequent CC* award application to NSF. 
 
-<h2>Open Science is Open to You!</h2>
-These Open Science Pool is a <a href="https://research.cs.wisc.edu/htcondor/" target="_blank">HTCondor pool</a> that OSG users access via 'access points' operated by the OSG or by campuses supporting 'local' access to OSG. Any researcher at a US academic, government, or non-profit institution can can use the Open Science Pool via OSG-operated access points to harness the capacity of the Open Science Pool by going to <a href="https://www.osgconnect.net/" target="_blank">OSG Connect and get an OSG Account</a>. (It is free!) The researcher does not have to belong to a collaboration (big or small) nor to any particular campus (big or small).  
+<h2>The Open Science is Open to You!</h2>
+The Open Science Pool is a <a href="https://research.cs.wisc.edu/htcondor/" target="_blank">HTCondor pool</a> that OSG users access via 'access points' operated by the OSG or by campuses supporting 'local' access to OSG. Any researcher at a US academic, government, or non-profit institution can can use the Open Science Pool via OSG-operated access points to harness the capacity of the Open Science Pool by going to <a href="https://www.osgconnect.net/" target="_blank">OSG Connect and get an OSG Account</a>. (It is free!) The researcher does not have to belong to a collaboration (big or small) nor to any particular campus (big or small).  
 
 <h2>These colleges and Universities are active contributors to the Open Science Pool via the CC* program: </h2>
 
