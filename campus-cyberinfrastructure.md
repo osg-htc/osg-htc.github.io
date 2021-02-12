@@ -8,7 +8,7 @@ layout: default
 Campus Cyberinfrastructure Award Recipients Power the Open Science Grid
 =======================================================================
 
-The Open Science Grid consortium operates the Open Science Pool (OSPool). Any researcher at a US institute can access the OSPool that is founded on the principal of sharing. The capacity that powers this national computing resources is contributed by clusters located at academic and research institutions. [Campus Cyberinfrastructure (CC*) awardees,](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) play an important role in the value that the OSPool brings to the national S&E community. By sharing their resources, Campus Cyberinfrastructure (CC*) award recipients provide a tremendous value in support of open research.
+The Open Science Grid consortium operates the Open Science Pool (OSPool). Any researcher at a US institute can access the OSPool that is founded on the principal of sharing. The capacity that powers this national computing resources is contributed by clusters located at academic and research institutions. [Campus Cyberinfrastructure (CC*) awardees](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) play an important role in the value that the OSPool brings to the national S&E community. By sharing their resources, Campus Cyberinfrastructure (CC*) award recipients provide a tremendous value in support of open research.
 
 <h2>292 Million Core Hours Contributed by CC* Campuses</h2>
 
