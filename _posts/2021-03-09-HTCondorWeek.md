@@ -1,5 +1,5 @@
 ---
-title: "Save the Date for the Upcoming HT Condor Week"
+title: "Save the Date for the Upcoming HTCondor Week"
 date: 2021-03-09T12:00:00+00:00
 publish: true
 --- 
