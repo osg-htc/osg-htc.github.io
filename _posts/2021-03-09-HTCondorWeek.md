@@ -7,7 +7,7 @@ publish: true
 
 HTCondor Week 2021 will be a free, virtual event. Please save the dates on your calendars; we'll follow up with a detailed schedule and more information soon. 
 
-(HTCondor is an open source distributed computing software and related technologies to enable scientists and engineers to increase their computing throughput via the Open Source Grid. Learn more about HTCondor https://research.cs.wisc.edu/htcondor/
+(HTCondor is an open source distributed computing software and related technologies to enable scientists and engineers to increase their computing throughput via the Open Source Grid. Learn more about HTCondor(https://research.cs.wisc.edu/htcondor/)
 
 <figure class="figure">
   <img src="{{site.baseurl}}/assets/images/team-2020.jpg" class="figure-img img-fluid rounded" alt="HTCondorTeam">
