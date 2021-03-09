@@ -8,8 +8,8 @@ HTCondor Week 2021 will be a free, virtual event taking place the week of May 24
 Please save the dates on your calendars; we'll follow up with a detailed schedule and more information soon. 
 
 <figure class="figure">
-  <img src="{{site.baseurl}}/assets/images/All_Hands_Meeting_Group.JPG" class="figure-img img-fluid rounded" alt="All Hands Meeting Participants">
-  <figcaption class="figure-caption">Participants of the All-Hands Meeting 2017.</figcaption>
+  <img src="{{site.baseurl}}/assets/images/team-2020.jpg" class="figure-img img-fluid rounded" alt="HTCondorTeam">
+  <figcaption class="figure-caption">HTCondor Team 2020.</figcaption>
 </figure>
 
 ## Contacts
