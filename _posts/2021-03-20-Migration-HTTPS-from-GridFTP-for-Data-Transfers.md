@@ -9,7 +9,7 @@ This migration started in 2017 when the Globus project moved away from releasing
 
 For researchers who access the Open Science Pool via the [OSG Connect access points](https://www.osgconnect.net/), this change is transparent and has no impact whatsoever. The environment for transferring data and conducting their research will not change.  
 
-Similarly, most campuses that use the OSG services will also be unaffected. Campuses that do use GridFTP today can migrate already now, as OSG 3.5 includes the HTTPS solution in addition to the legacy GridFTP. If a site has a GridFTP server, the campus can add the HTTPS service on the same hardware, and decommission GridFTP when no longer in use, all within the same OSG 3.5 release.
+Similarly, most campuses that use the OSG services will also be unaffected. Campuses that do use GridFTP today can migrate now, as OSG 3.5 includes the HTTPS solution in addition to the legacy GridFTP. If a site has a GridFTP server, the campus can add the HTTPS service on the same hardware, and decommission GridFTP when no longer in use, all within the same OSG 3.5 release.
 
 Notice that GridFTP and WebDAV are not compatible, and consequently, there will be a period during which campuses may be required to support both protocols until all of their science communities have transitioned. 
 
