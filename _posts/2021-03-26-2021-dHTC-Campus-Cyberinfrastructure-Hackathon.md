@@ -24,7 +24,7 @@ Areas covered during the hackathon include:
 
 - You know that you want to share resources into the OSG or are already in the process of sharing.
 
-- You have reviewed the written documentation on your area of focus. [See our documentation](https://opensciencegrid.org/docs/)
+- You have reviewed the written documentation on your area of focus. [See our documentation](https://opensciencegrid.org/docs/).
 
 - You’ve completed the registration and survey indicating areas you’d like for help.
 
