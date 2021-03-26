@@ -7,7 +7,7 @@ publish: true
 
 Due to popular demand, we are holding our first dHTC Campus Cyberinfrastructure (CI) Hackathon offered by the [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io/). **All CI staff are invited to attend.**
 
-We’ll provide live help with preparing a cluster for resource-sharing through the OSG. At the beginning of the hackathon, we have a short educational presentation.  You are welcome to come and leave any time during the hackathon. If you register and can't make it, please let us know as soon as possible so we open up the seat to others.  
+We’ll provide live help with preparing a cluster for resource-sharing through the OSG. At the beginning of the hackathon, we'll have a short presentation.  You are welcome to come and leave any time during the hackathon. If you register and can't make it, please let us know as soon as possible so we open up the seat to others.  
 
 Areas covered during the hackathon include:
 - [batch system configurations](https://opensciencegrid.org/docs/compute-element/install-htcondor-ce/) 
