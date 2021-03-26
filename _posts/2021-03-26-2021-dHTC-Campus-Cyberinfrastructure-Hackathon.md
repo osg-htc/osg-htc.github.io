@@ -35,7 +35,7 @@ When you register, we are asking you to complete a brief survey so we know your 
 - [Worker node configurations](https://opensciencegrid.org/docs/worker-node/using-wn/) (CVMFS, Singularity, HTTP transfer)
 - [Setting up a local OSG data cache](https://opensciencegrid.org/docs/data/stashcache/install-cache/) (to better handle network traffic from incoming OSG jobs)
 - [Deciding local batch system policy for OSG jobs](https://opensciencegrid.org/docs/compute-element/install-htcondor-ce/#batch-systems-other-than-htcondor) (e.g., backfill)
-- [OSG-hosted CE configuration or operation](https://opensciencegrid.org/docs/compute-element/hosted-ce/)
+- [OSG Hosted CE configuration or operation](https://opensciencegrid.org/docs/compute-element/hosted-ce/)
 - [Installation, configuration, and registration of a self-hosted CE](https://opensciencegrid.org/docs/compute-element/install-htcondor-ce/)
 - [Sharing resources organized via Kubernetes](https://opensciencegrid.org/docs/resource-sharing/os-backfill-containers/)
 - Troubleshooting a specific issue. (If applicable, please note the OSG support ticket number.)
