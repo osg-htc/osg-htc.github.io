@@ -12,11 +12,11 @@ We’ll provide live help with preparing a cluster for resource-sharing through 
 Areas covered during the hackathon include:
 - [batch system configurations](https://opensciencegrid.org/docs/compute-element/install-htcondor-ce/) 
 
-- [configuring worker nodes](https://opensciencegrid.org/docs/detailed-overview/#adding-osg-software-to-worker-nodes)
+- [configuring worker nodes](https://opensciencegrid.org/docs/worker-node/using-wn/)
 
-- [setting up a local or OSG Hosted CE,](https://opensciencegrid.org/docs/detailed-overview/#installing-and-configuring-the-compute-entrypoint) and
+- [setting up a local or OSG Hosted CE](https://opensciencegrid.org/docs/compute-element/htcondor-ce-overview/) and
 
-- [implementing OSG data caching](https://opensciencegrid.org/docs/site-planning/).
+- [implementing OSG data caching](https://opensciencegrid.org/docs/data/stashcache/overview/).
 
 **While there is no fee, registration and completion of a brief survey is required for participants to receive virtual hackathon room details via email.  Seats are limited.** 
 
@@ -35,9 +35,9 @@ When you register, we are asking you to complete a brief survey so we know your 
 - [Worker node configurations](https://opensciencegrid.org/docs/worker-node/using-wn/) (CVMFS, Singularity, HTTP transfer)
 - [Setting up a local OSG data cache](https://opensciencegrid.org/docs/data/stashcache/install-cache/) (to better handle network traffic from incoming OSG jobs)
 - [Deciding local batch system policy for OSG jobs](https://opensciencegrid.org/docs/compute-element/install-htcondor-ce/#batch-systems-other-than-htcondor) (e.g., backfill)
-- [OSG-hosted CE configuration or operation](https://opensciencegrid.org/docs/compute-element/install-htcondor-ce/)
-- [Installation, configuration, and registration of a self-hosted CE](https://opensciencegrid.org/docs/site-planning/)
-- [Sharing resources organized via Kubernetes](https://opensciencegrid.org/docs/data/stashcache/run-stash-origin-container/)
+- [OSG-hosted CE configuration or operation](https://opensciencegrid.org/docs/compute-element/hosted-ce/)
+- [Installation, configuration, and registration of a self-hosted CE](https://opensciencegrid.org/docs/compute-element/install-htcondor-ce/)
+- [Sharing resources organized via Kubernetes](https://opensciencegrid.org/docs/resource-sharing/os-backfill-containers/)
 - Troubleshooting a specific issue. (If applicable, please note the OSG support ticket number.)
 - Other (Topics not listed above such as help with local scheduler configuration for non-OSG or setting up an access point to submit jobs into OSG).
 - I’m not sure, so I might benefit from discussing ahead of time. Please contact me.
