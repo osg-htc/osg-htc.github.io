@@ -3,9 +3,11 @@ title: "May 4 dHTC Campus Cyberinfrastructure Hackathon"
 date: 2021-03-26T12:00:00+00:00
 publish: true
 --- 
-# May 4 dHTC Campus Cyberinfrastructure Hackathon, 2 - 6 pm EST
+May 4 dHTC Campus Cyberinfrastructure Hackathon, 2 - 6 pm EST
 
 Due to popular demand, we are holding our first dHTC Campus Cyberinfrastructure (CI) Hackathon offered by the [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io/). **All CI staff are invited to attend.**
+
+## [Register Here](https://docs.google.com/forms/d/1e-uMsNHOH-5p724s0ii8MSlZUVwBcNuL7XB5TyLAXUk/)
 
 We’ll provide live help with preparing a cluster for resource-sharing through the OSG. At the beginning of the hackathon, we'll have a short presentation.  You are welcome to come and leave any time during the hackathon. If you register and can't make it, please let us know as soon as possible so we can open up the seat to others.  
 
@@ -18,7 +20,7 @@ Areas covered during the hackathon include:
 
 - [implementing OSG data caching](https://opensciencegrid.org/docs/data/stashcache/overview/).
 
-**While there is no fee, registration and completion of a brief survey is required for participants to receive virtual hackathon room details via email.  Seats are limited.** 
+**While there is no fee, [registration and completion of a brief survey](https://docs.google.com/forms/d/1e-uMsNHOH-5p724s0ii8MSlZUVwBcNuL7XB5TyLAXUk/) is required for participants to receive virtual hackathon room details via email.  Seats are limited.** 
 
 ## Prerequisites for Participation
 
@@ -28,7 +30,7 @@ Areas covered during the hackathon include:
 
 - You’ve completed the registration and survey indicating areas you’d like for help.
 
-## Topics Included on Registration Survey
+## Topics Included on [Registration Survey](https://docs.google.com/forms/d/1e-uMsNHOH-5p724s0ii8MSlZUVwBcNuL7XB5TyLAXUk/)
 
 When you register, we are asking you to complete a brief survey so we know your area of interest and we have OSG experts on those topics available to provide live support.  The survey covers:
 
