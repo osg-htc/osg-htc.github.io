@@ -1,22 +1,22 @@
 ---
-title: "May 5 dHTC Campus Cyberinfrastructure Hackathon" 
+title: "May 4 dHTC Campus Cyberinfrastructure Hackathon" 
 date: 2021-03-26T12:00:00+00:00
 publish: true
 --- 
-# May 5 dHTC Campus Cyberinfrastructure Hackathon, 2 - 6 pm EST
+# May 4 dHTC Campus Cyberinfrastructure Hackathon, 2 - 6 pm EST
 
-Due to popular demand, we are holding our first dHTC Campus Cyberinfrastructure (CI) Hackathon offered by the Partnership to Advance Throughput Computing (PATh). **All CI staff are invited to attend.**
+Due to popular demand, we are holding our first dHTC Campus Cyberinfrastructure (CI) Hackathon offered by the [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io/). **All CI staff are invited to attend.**
 
 We’ll provide live help with preparing a cluster for resource-sharing through the OSG. At the beginning of the hackathon, we have a short educational presentation.  You are welcome to come and leave any time during the Hackathon. If you register and can't make it, please let us know as soon as possible so we open up the seat to others.  
 
 Areas covered during the hackathon include:
-- batch system configurations 
+- [batch system configurations](https://opensciencegrid.org/docs/compute-element/install-htcondor-ce/) 
 
-- configuring worker nodes
+- [configuring worker nodes](https://opensciencegrid.org/docs/detailed-overview/#adding-osg-software-to-worker-nodes)
 
-- setting up a local or OSG Hosted CE, and
+- [setting up a local or OSG Hosted CE,](https://opensciencegrid.org/docs/detailed-overview/#installing-and-configuring-the-compute-entrypoint) and
 
-- implementing OSG data caching.
+- implementing [OSG data caching](https://opensciencegrid.org/docs/site-planning/).
 
 **While there is no fee, registration and completion of a brief survey is required for participants to receive virtual hackathon room details via email.  Seats are limited.** 
 
@@ -32,12 +32,12 @@ Areas covered during the hackathon include:
 
 When you register, we are asking you to complete a brief survey so we know your area of interest and we have OSG experts on those topics available to provide live support.  The survey covers:
 
-- Worker node configurations (CVMFS, Singularity, HTTP transfer)
-- Setting up a local OSG data cache (to better handle network traffic from incoming OSG jobs)
-- Deciding local batch system policy for OSG jobs (e.g., backfill)
-- OSG-hosted CE configuration or operation
-- Installation, configuration, and registration of a self-hosted CE
-- Sharing resources organized via Kubernetes
+- [Worker node configurations](https://opensciencegrid.org/docs/worker-node/using-wn/) (CVMFS, Singularity, HTTP transfer)
+- [Setting up a local OSG data cache](https://opensciencegrid.org/docs/data/stashcache/install-cache/) (to better handle network traffic from incoming OSG jobs)
+- [Deciding local batch system policy for OSG jobs](https://opensciencegrid.org/docs/compute-element/install-htcondor-ce/#batch-systems-other-than-htcondor) (e.g., backfill)
+- [OSG-hosted CE configuration or operation](https://opensciencegrid.org/docs/compute-element/install-htcondor-ce/)
+- [Installation, configuration, and registration of a self-hosted CE](https://opensciencegrid.org/docs/site-planning/)
+- [Sharing resources organized via Kubernetes](https://opensciencegrid.org/docs/data/stashcache/run-stash-origin-container/)
 - Troubleshooting a specific issue. (If applicable, please note the OSG support ticket number.)
 - Other (Topics not listed above such as help with local scheduler configuration for non-OSG or setting up an access point to submit jobs into OSG).
 - I’m not sure, so I might benefit from discussing ahead of time. Please contact me.
