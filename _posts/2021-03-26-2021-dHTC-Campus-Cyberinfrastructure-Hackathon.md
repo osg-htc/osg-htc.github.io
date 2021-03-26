@@ -43,6 +43,6 @@ When you register, we are asking you to complete a brief survey so we know your 
 - I’m not sure, so I might benefit from discussing ahead of time. Please contact me.
 
 
-Contact us at events@opensciencegrid.org with any questions.
+Contact us at <events@opensciencegrid.org> with any questions.
 
 *This material is based upon work supported by the National Science Foundation under Grant No. 100359. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.*
