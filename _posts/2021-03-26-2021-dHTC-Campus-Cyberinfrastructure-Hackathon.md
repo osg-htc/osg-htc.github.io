@@ -3,9 +3,7 @@ title: "May 4 dHTC Campus Cyberinfrastructure Hackathon"
 date: 2021-03-26T12:00:00+00:00
 publish: true
 --- 
-May 4 dHTC Campus Cyberinfrastructure Hackathon, 2 - 6 pm EST
-
-Due to popular demand, we are holding our first dHTC Campus Cyberinfrastructure (CI) Hackathon offered by the [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io/). **All CI staff are invited to attend.**
+ Due to popular demand, we are holding our first dHTC Campus Cyberinfrastructure (CI) Hackathon offered by the [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io/). Register is now open for the May 4 Hackathon, 2 - 6 pm EST. **All CI staff are invited to attend.**
 
 ## [Register Here](https://docs.google.com/forms/d/1e-uMsNHOH-5p724s0ii8MSlZUVwBcNuL7XB5TyLAXUk/)
 
