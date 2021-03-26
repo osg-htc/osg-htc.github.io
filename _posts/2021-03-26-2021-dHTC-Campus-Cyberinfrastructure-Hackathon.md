@@ -16,7 +16,7 @@ Areas covered during the hackathon include:
 
 - [setting up a local or OSG Hosted CE,](https://opensciencegrid.org/docs/detailed-overview/#installing-and-configuring-the-compute-entrypoint) and
 
-- implementing [OSG data caching](https://opensciencegrid.org/docs/site-planning/).
+- [implementing OSG data caching](https://opensciencegrid.org/docs/site-planning/).
 
 **While there is no fee, registration and completion of a brief survey is required for participants to receive virtual hackathon room details via email.  Seats are limited.** 
 
