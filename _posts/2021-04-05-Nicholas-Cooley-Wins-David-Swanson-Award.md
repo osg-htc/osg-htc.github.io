@@ -5,7 +5,7 @@ external_url: "https://opensciencegrid.org/outreach/swanson-award/"
 excerpt: Nicholas Cooley was awarded the 2021 David Swanson Memorial Award at the March 0SG All-Hands Meeting. The memorial was established to honor our late colleage David Swanson who contributed to campus research across the country.
 ---
   <figure class="figure">
-  <img src="{{site.baseurl}}/assets/images/NicholasCooleyp.JPG" class="figure-img img-fluid rounded" alt="NicholasCooley">
+  <img src="{{site.baseurl}}/assets/images/nickcooley.png" class="figure-img img-fluid rounded" alt="NicholasCooley">
   <figcaption class="figure-caption">David Swanson Memorial Winner Nicholas Cooley</figcaption>
 </figure>
 
