@@ -1,4 +1,3 @@
-
 ---
 title: "Global Infrastructure Laboratory: Options for Jupyter Support in OSG"
 date: 2021-04-05 12:00:00 -0600
