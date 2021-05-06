@@ -3,7 +3,7 @@ title: The Facts on the OSG Pool
 ---
 
 <figure class="figure">
-  <img src="{{site.baseurl}}/assets/images/utilizing_osg_pools.png" class="figure-img img-fluid rounded" alt="Open Science Pools on the OSG">
+  <img src="{{site.baseurl}}/assets/images/utilizing_osg_pools.png" class="figure-img img-fluid rounded" alt="Open Science Pool on the OSG">
 </figure>
 
 ## What is the Open Science Pool?
