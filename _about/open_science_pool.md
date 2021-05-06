@@ -11,9 +11,10 @@ title: The Facts on the OSG Pool
 > The OSG is organized around multiple ‘pools’ of computing and data resources (like virtual clusters), each operated by and for a different research community. In addition to pools operated by some institutions and large collaborations, the Open Science Pool is operated by OSG staff for broad use by the open science community, including campus researchers who are not part of an institution or collaboration with its own pool. 
 
 > The OSPool aggregates computing resources from across the nation, making this capacity available as a single virtual cluster available large-scale, distributed High Throughput Computing (dHTC).. Researchers can submit computational work to the  OSPool via access points operated locally to their campuses, or via OSG Connect access points, which serve researchers affiliated with projects at UW-based academic, non-profit, and government institutions.
-Who can use the OS Pool?
 
-## Access is free and open to:
+## Who can use the OS Pool?
+
+> Access is free and open to:
 
 >- Any researcher affiliated with a project at a US-based academic, government, or non-profit institution (via the OSG Connect service).
 >- Any researcher affiliated with an organization that has its own access point (not limited to US affiliation)s 
