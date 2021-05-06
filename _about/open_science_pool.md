@@ -352,7 +352,7 @@ pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-fo
 
  ## What about Campuses that want to Support Researchers and dHTC locally?
 
-> Campuses can:
+> Campuses can
 
 - Build ‘Local’ dHTC capacity with HTCondor, which provides service orchestration services
 - Share local resources and excess capacity via OSG 
