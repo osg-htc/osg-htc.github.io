@@ -70,7 +70,7 @@ Who can use the OS Pool?
    <w:SplitPgBreakAndParaMark/>
    <w:EnableOpenTypeKerning/>
    <w:DontFlipMirrorIndents/>
-   <w:OverrideTableStyleHps/>
+   <w:OverrideTableHps/>
   </w:Compatibility>
   <m:mathPr>
    <m:mathFont m:val="Cambria Math"/>
@@ -1031,14 +1031,6 @@ pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-fo
 
 <p class=MsoNormal><span style='font-family:"Times New Roman",serif;mso-fareast-font-family:
 "Times New Roman"'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal><o:p>&nbsp;</o:p></p>
-
-</div>
-
-</body>
-
-![image](https://user-images.githubusercontent.com/73258418/117350422-28dcdd00-ae72-11eb-9a42-fcb70d99387d.png)
 
 
 ## Some examples of work that has been a good fit for the OSG and benefited from using its resources include:
