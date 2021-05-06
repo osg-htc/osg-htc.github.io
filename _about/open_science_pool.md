@@ -330,10 +330,6 @@ mso-fareast-font-family:"Times New Roman";color:black'>or <span class=SpellE>che
 pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-font-family:
 "Times New Roman"'><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-family:"Times New Roman",serif;mso-fareast-font-family:
-"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal><o:p>&nbsp;</o:p></p>
 ## Some examples of work that has been a good fit for the OSG and benefited from using its resources include:
 - image analysis (including MRI, GIS, etc.)
 - text-based analysis, including DNA read mapping and other bioinformatics
