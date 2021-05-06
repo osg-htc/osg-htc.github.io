@@ -350,11 +350,9 @@ pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-fo
 
 > We have complete knowledge base materials here and an active and supportive facilitation team.
 
- 
-## What about Campuses that want to Support Researchers and dHTC locally?
+ ## What about Campuses that want to Support Researchers and dHTC locally?
 
 > Campuses can:
-
 
 - Build ‘Local’ dHTC capacity with HTCondor, which provides service orchestration services
 - Share local resources and excess capacity via OSG 
@@ -362,7 +360,6 @@ pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-fo
 - Provide Local submission points into OSPools 
 - These Services are all Free and Open with Facilitation for Campuses 
 
- 
 > Most campuses prefer the hosted Compute Entry (CE) option wherein the OSG team will host and operate the HTCondor Compute Entrypoint, and configure it for the communities the campus chooses to support. 
 
 > Other campuses choose to set up their compute entry point locally and use an OSG hosted Compute CE that provides the entry point for resource requests coming from the OSG; it handles authorization and delegation of resource requests to campus’ existing HPC/HTC cluster. 
