@@ -10,7 +10,7 @@ title: The Facts on the OSG Pool
 
 > The OSG is organized around multiple ‘pools’ of computing and data resources (like virtual clusters), each operated by and for a different research community. In addition to pools operated by some institutions and large collaborations, the Open Science Pool is operated by OSG staff for broad use by the open science community, including campus researchers who are not part of an institution or collaboration with its own pool. 
 
-> The OSPool aggregates computing resources from across the nation, making this capacity available as a single virtual cluster available large-scale, distributed High Throughput Computing (dHTC).. Researchers can submit computational work to the  OSPool via access points operated locally to their campuses, or via OSG Connect access points, which serve researchers affiliated with projects at UW-based academic, non-profit, and government institutions.
+> The OSPool aggregates computing resources from across the nation, making this capacity available as a single virtual cluster available large-scale, distributed High Throughput Computing (dHTC). Researchers can submit computational work to the  OSPool via access points operated locally to their campuses, or via OSG Connect access points, which serve researchers affiliated with projects at UW-based academic, non-profit, and government institutions.
 
 ## Who can use the OS Pool?
 
@@ -332,6 +332,12 @@ pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-fo
 "Times New Roman"'><o:p></o:p></span></p>
 </div>
 
+## Some examples of work that has been a good fit for the OSG and benefited from using its resources include:
+- image analysis (including MRI, GIS, etc.)
+- text-based analysis, including DNA read mapping and other bioinformatics
+- parameter sweeps
+- Monte Carlo methods and other model optimization
+
 [Learn more and chat with a Research Computing Facilitator](https://www.osgconnect.net/) by requesting an account.
 
 ## Running jobs on the OSPool
@@ -344,8 +350,7 @@ pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-fo
 
 > We have complete knowledge base materials here and an active and supportive facilitation team.
 
- 
-## What about Campuses that want to Support Researchers and dHTC locally?
+ ## What about Campuses that want to Support Researchers and dHTC locally?
 
 > Campuses can:
 
