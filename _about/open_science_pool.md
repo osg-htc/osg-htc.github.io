@@ -1,5 +1,5 @@
 ---
-title: The Facts on the OSG Pool
+title: The Facts on the OSG Pools
 ---
 
 <figure class="figure">
