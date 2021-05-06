@@ -45,34 +45,7 @@ Who can use the OS Pool?
 
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=ProgId content=Word.Document>
-<meta name=Generator content="Microsoft Word 15">
-<meta name=Originator content="Microsoft Word 15">
-<link rel=File-List href="Ideal%20jobs.fld/filelist.xml">
-<!--[if gte mso 9]><xml>
- <o:DocumentProperties>
-  <o:Author>Janet Stathas</o:Author>
-  <o:LastAuthor>Janet Stathas</o:LastAuthor>
-  <o:Revision>1</o:Revision>
-  <o:TotalTime>1</o:TotalTime>
-  <o:Created>2021-05-06T18:46:00Z</o:Created>
-  <o:LastSaved>2021-05-06T18:47:00Z</o:LastSaved>
-  <o:Pages>1</o:Pages>
-  <o:Words>78</o:Words>
-  <o:Characters>451</o:Characters>
-  <o:Lines>3</o:Lines>
-  <o:Paragraphs>1</o:Paragraphs>
-  <o:CharactersWithSpaces>528</o:CharactersWithSpaces>
-  <o:Version>16.00</o:Version>
- </o:DocumentProperties>
- <o:OfficeDocumentSettings>
-  <o:AllowPNG/>
- </o:OfficeDocumentSettings>
-</xml><![endif]-->
-<link rel=themeData href="Ideal%20jobs.fld/themedata.thmx">
-<link rel=colorSchemeMapping href="Ideal%20jobs.fld/colorschememapping.xml">
-<!--[if gte mso 9]><xml>
+
  <w:WordDocument>
   <w:SpellingState>Clean</w:SpellingState>
   <w:GrammarState>Clean</w:GrammarState>
@@ -691,79 +664,7 @@ Who can use the OS Pool?
    Name="Smart Link"/>
  </w:LatentStyles>
 </xml><![endif]-->
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:roman;
-	mso-font-pitch:variable;
-	mso-font-signature:-536870145 1107305727 0 0 415 0;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:swiss;
-	mso-font-pitch:variable;
-	mso-font-signature:-469750017 -1073732485 9 0 511 0;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:"";
-	margin:0in;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
-p
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-margin-top-alt:auto;
-	margin-right:0in;
-	mso-margin-bottom-alt:auto;
-	margin-left:0in;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";}
-span.SpellE
-	{mso-style-name:"";
-	mso-spl-e:yes;}
-span.GramE
-	{mso-style-name:"";
-	mso-gram-e:yes;}
-.MsoChpDefault
-	{mso-style-type:export-only;
-	mso-default-props:yes;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;
-	mso-header-margin:.5in;
-	mso-footer-margin:.5in;
-	mso-paper-source:0;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
+
 
 <![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext="edit" spidmax="1026"/>
