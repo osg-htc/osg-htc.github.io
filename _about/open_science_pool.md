@@ -45,9 +45,6 @@ Who can use the OS Pool?
 
  
 
-<body lang=EN-US style='tab-interval:.5in;
--wrap:break-word'>
-
 <div class=WordSection1>
 
 <p class=MsoNormal><span style='font-family:"Times New Roman",serif;mso-fareast-font-family:
@@ -337,13 +334,6 @@ pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-fo
 "Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
-
-</div>
-
-
-
-
-
 ## Some examples of work that has been a good fit for the OSG and benefited from using its resources include:
 - image analysis (including MRI, GIS, etc.)
 - text-based analysis, including DNA read mapping and other bioinformatics
