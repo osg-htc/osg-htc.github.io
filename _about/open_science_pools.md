@@ -1,6 +1,12 @@
 ---
 title: Open Science Pool on the OSG
 ---
+
+<figure class="figure">
+  <img src="{{site.baseurl}}/assets/images/All_Hands_Meeting_Group.JPG" class="figure-img img-fluid rounded" alt="Open Science Pools on the OSG">
+  <figcaption class="figure-caption">Open Science Pools on the OSG.</figcaption>
+</figure>
+
 What is the Open Science Pool?
 
 The OSG is organized around multiple ‘pools’ of computing and data resources (like virtual clusters), each operated by and for a different research community. In addition to pools operated by some institutions and large collaborations, the Open Science Pool is operated by OSG staff for broad use by the open science community, including campus researchers who are not part of an institution or collaboration with its own pool. 
