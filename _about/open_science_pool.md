@@ -42,8 +42,34 @@ Who can use the OS Pool?
 
 > For problems that can be run as many independent jobs, as in the first two columns of the table below, the OSPool provides computing capacity that can transform the types of questions that researchers are able to tackle. Importantly, many compute tasks that may appear to not be a good fit can be modified in simple ways to take advantage, and we'd love to discuss options with you!
 
-<head>
 
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List href="Ideal%20jobs.fld/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Janet Stathas</o:Author>
+  <o:LastAuthor>Janet Stathas</o:LastAuthor>
+  <o:Revision>1</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2021-05-06T18:46:00Z</o:Created>
+  <o:LastSaved>2021-05-06T18:47:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>78</o:Words>
+  <o:Characters>451</o:Characters>
+  <o:Lines>3</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>528</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
 <link rel=themeData href="Ideal%20jobs.fld/themedata.thmx">
 <link rel=colorSchemeMapping href="Ideal%20jobs.fld/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
@@ -70,7 +96,7 @@ Who can use the OS Pool?
    <w:SplitPgBreakAndParaMark/>
    <w:EnableOpenTypeKerning/>
    <w:DontFlipMirrorIndents/>
-   <w:OverrideTableHps/>
+   <w:OverrideTableStyleHps/>
   </w:Compatibility>
   <m:mathPr>
    <m:mathFont m:val="Cambria Math"/>
@@ -739,7 +765,33 @@ div.WordSection1
 -->
 </style>
 <!--[if gte mso 10]>
-
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
 </head>
 
 <body lang=EN-US style='tab-interval:.5in;word-wrap:break-word'>
@@ -1031,6 +1083,15 @@ pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-fo
 
 <p class=MsoNormal><span style='font-family:"Times New Roman",serif;mso-fareast-font-family:
 "Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>
+![image](https://user-images.githubusercontent.com/73258418/117351457-5d9d6400-ae73-11eb-9542-c83f32e4493e.png)
 
 
 ## Some examples of work that has been a good fit for the OSG and benefited from using its resources include:
