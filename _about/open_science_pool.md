@@ -329,6 +329,7 @@ mso-fareast-font-family:"Times New Roman";color:black'>or <span class=SpellE>che
 *per job; you can work with a large dataset on OSG if it can be split into
 pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-font-family:
 "Times New Roman"'><o:p></o:p></span></p>
+</div>
 
 ## Some examples of work that has been a good fit for the OSG and benefited from using its resources include:
 - image analysis (including MRI, GIS, etc.)
