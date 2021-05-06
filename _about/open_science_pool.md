@@ -764,28 +764,7 @@ div.WordSection1
 	{page:WordSection1;}
 -->
 </style>
-<!--[if gte mso 10]>
-<style>
- /* Style Definitions */
- table.MsoNormalTable
-	{mso-style-name:"Table Normal";
-	mso-tstyle-rowband-size:0;
-	mso-tstyle-colband-size:0;
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-parent:"";
-	mso-padding-alt:0in 5.4pt 0in 5.4pt;
-	mso-para-margin:0in;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
-</style>
+
 <![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext="edit" spidmax="1026"/>
 </xml><![endif]--><!--[if gte mso 9]><xml>
@@ -1091,7 +1070,7 @@ pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-fo
 </body>
 
 </html>
-![image](https://user-images.githubusercontent.com/73258418/117351457-5d9d6400-ae73-11eb-9542-c83f32e4493e.png)
+
 
 
 ## Some examples of work that has been a good fit for the OSG and benefited from using its resources include:
