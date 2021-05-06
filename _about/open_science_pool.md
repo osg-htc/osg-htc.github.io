@@ -349,7 +349,7 @@ pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-fo
 
 > We have complete knowledge base materials here and an active and supportive facilitation team.
 
- ## What about Campuses that want to Support Researchers and dHTC locally?
+## What about Campuses that want to Support Researchers and dHTC locally?
 
 > Campuses can
 
