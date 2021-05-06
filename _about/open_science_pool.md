@@ -34,9 +34,9 @@ Who can use the OS Pool?
 ## Who contributes capacity to the OSPool?
 
 > The computing resources for the OSPool are contributed by members of the OSG Compute Federation, typically campuses, government supported supercomputing centers or research collaborations. The members individually determine their policies for providing resources. The member determines the amount of resources it contributes and when these resources are available. In addition, some resource providers decide to share their resources with a specific research project,or they may choose to contribute resources to all in the OSPool.
-
-
-IMAGE VISUAL SEPARATOR GOES HERE>
+<figure class="figure">
+  <img src="{{site.baseurl}}/assets/images/.png" class="figure-img img-fluid rounded" alt="Open Science Pool Users">
+</figure>
 
 ## What size of computations are ideal for the OSPool?
 
