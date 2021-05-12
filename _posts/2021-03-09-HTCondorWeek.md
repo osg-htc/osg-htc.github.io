@@ -1,5 +1,5 @@
 ---
-title: "Save the Date for the Upcoming HTCondor Week"
+title: "HTCondor Week May 24-28. Registration is Open."
 date: 2021-05-12T12:00:00+00:00
 publish: true
 --- 
