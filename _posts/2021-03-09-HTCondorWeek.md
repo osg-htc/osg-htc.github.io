@@ -1,11 +1,19 @@
 ---
 title: "Save the Date for the Upcoming HTCondor Week"
-date: 2021-03-09T12:00:00+00:00
+date: 2021-05-12T12:00:00+00:00
 publish: true
 --- 
 **HTCondor Week May 24-28, 2021**
 
-HTCondor Week 2021 will be a free, virtual event. Please save the dates on your calendars; we'll follow up with a detailed schedule and more information soon. 
+HTCondor Week 2021 will be a free, virtual event. [Registration is open.](https://agenda.hep.wisc.edu/event/1579/). You can view the detailed schedule here: {https://agenda.hep.wisc.edu/event/1579/timetable/#20210524.detailed]
+
+Among the many interesting speakers are:
+
+> [David O'Connor](https://dho.pathology.wisc.edu/) speaking about "Accelerating SARS-CoV-2 variant sequencing with HTCondor"
+
+> Pedro Mendes discussing ["Running COPASI biochemical simulations with HTCondor"](https://agenda.hep.wisc.edu/event/1579/contributions/23045/),  
+
+> David Lamarche talking on ["HTCondor in a Digitization Workflow : Helping Preserve Cultural Heritage](https://agenda.hep.wisc.edu/event/1579/contributions/23044/)
 
 HTCondor is an open source distributed computing software and related technologies to enable scientists and engineers to increase their computing throughput via the Open Source Grid. [Learn more about HTCondor](https://research.cs.wisc.edu/htcondor/)
 
