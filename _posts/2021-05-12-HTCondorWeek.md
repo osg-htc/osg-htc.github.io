@@ -11,7 +11,7 @@ Among the many interesting speakers are:
 
 - [David O'Connor](https://dho.pathology.wisc.edu/) speaking about "Accelerating SARS-CoV-2 variant sequencing with HTCondor"
 
-- Pedro Mendes discussing ["Running COPASI biochemical simulations with HTCondor"](https://agenda.hep.wisc.edu/event/1579/contributions/23045/),  
+- Pedro Mendes discussing ["Running COPASI biochemical simulations with HTCondor"](https://agenda.hep.wisc.edu/event/1579/contributions/23045/), and  
 
 - David Lamarche talking on ["HTCondor in a Digitization Workflow : Helping Preserve Cultural Heritage](https://agenda.hep.wisc.edu/event/1579/contributions/23044/)
 
