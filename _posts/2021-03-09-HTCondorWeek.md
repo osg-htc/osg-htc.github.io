@@ -9,11 +9,11 @@ HTCondor Week 2021 will be a free, virtual event. [Registration is open.](https:
 
 Among the many interesting speakers are:
 
-> [David O'Connor](https://dho.pathology.wisc.edu/) speaking about "Accelerating SARS-CoV-2 variant sequencing with HTCondor"
+- [David O'Connor](https://dho.pathology.wisc.edu/) speaking about "Accelerating SARS-CoV-2 variant sequencing with HTCondor"
 
-> Pedro Mendes discussing ["Running COPASI biochemical simulations with HTCondor"](https://agenda.hep.wisc.edu/event/1579/contributions/23045/),  
+- Pedro Mendes discussing ["Running COPASI biochemical simulations with HTCondor"](https://agenda.hep.wisc.edu/event/1579/contributions/23045/),  
 
-> David Lamarche talking on ["HTCondor in a Digitization Workflow : Helping Preserve Cultural Heritage](https://agenda.hep.wisc.edu/event/1579/contributions/23044/)
+- David Lamarche talking on ["HTCondor in a Digitization Workflow : Helping Preserve Cultural Heritage](https://agenda.hep.wisc.edu/event/1579/contributions/23044/)
 
 HTCondor is an open source distributed computing software and related technologies to enable scientists and engineers to increase their computing throughput via the Open Source Grid. [Learn more about HTCondor](https://research.cs.wisc.edu/htcondor/)
 
