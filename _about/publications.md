@@ -10,9 +10,11 @@ and that acknowledged the NSF “OSG: Next 5 Years” award (MPS-1148698).
 
 ### 2020
 
-*   Babik, M., McKee, S., Andrade, P., Bockelman, B. P., Gardner, R., Hernandez, E. M. F., ... & Zvada, M. 
-    "WLCG Networks: Update on Monitoring and Analytics."
-    EPJ Web of Conferences (Vol. 245, p. 07053).
+*   Babik, M., McKee, S., Andrade, P., Bockelman, B. P., Gardner, R., Fajardo Hernandez, E. M.,
+    Martelli, E., Vukotic, I., Weitzel, D., & Zvada, M.
+    (2020).
+    WLCG networks: Update on monitoring and analytics.
+    _EPJ Web of Conferences, 245,_ 07053.
     <https://doi.org/10.1051/epjconf/202024507053>
 
 *   Dost, J., Mascheroni, M., Bockelman, B., Bryant, L., Cartwright, T., Fajardo, E., ... & Zhu, H.,
