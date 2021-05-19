@@ -1,15 +1,14 @@
 ---
-title: Publications and Presentations
+title: Publications
 
 ---
 
-This page lists publications and presentations to which OSG staff contributed.
+This page lists publications and presentations to which OSG staff contributed
+and that acknowledged the NSF “OSG: Next 5 Years” award (MPS-1148698).
 
-# Publications
+## Publications
 
-## 2021
-
-## 2020
+### 2020
 
 *   Babik, M., McKee, S., Andrade, P., Bockelman, B. P., Gardner, R., Hernandez, E. M. F., ... & Zvada, M. 
     "WLCG Networks: Update on Monitoring and Analytics."
@@ -66,7 +65,7 @@ This page lists publications and presentations to which OSG staff contributed.
     In 2020 20th IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing (CCGRID) (pp. 360-369). IEEE.
     <https://doi.org/10.1109/CCGrid49817.2020.00-57>
 
-## 2019
+### 2019
 
 *   Babik, M., McKee, S., Bockelman, B. P., Hernandez, E. M. F., Martelli, E., Vukotic, I., ... & Zvada, M. 
     "Improving WLCG Networks Through Monitoring and Analytics,"
@@ -83,14 +82,14 @@ This page lists publications and presentations to which OSG staff contributed.
     In Proceedings of the Practice and Experience in Advanced Research Computing on Rise of the Machines (learning) (pp. 1-7).
     <https://doi.org/10.1145/3332186.3332212>
 
-## 2018
+### 2018
 
 *   Zhang, Z., Bockelman, B., Weitzel, D., & Swanson, D.
     "Discovering job preemptions in the open science grid."
     In Proceedings of the Practice and Experience on Advanced Research Computing (pp. 1-8).
     <https://doi.org/10.1145/3219104.3229282>
 
-## 2017
+### 2017
 
 *   Weitzel, D., & Bockelman, B. 
     "Contributing opportunistic resources to the grid with HTCondor-CE-Bosco."
@@ -107,7 +106,7 @@ This page lists publications and presentations to which OSG staff contributed.
     In Proceedings of the Practice and Experience in Advanced Research Computing 2017 on Sustainability, Success and Impact (pp. 1-6).
     <https://doi.org/10.1145/3093338.3093363>
 
-## 2014
+### 2014
 
 *   L A T Bauerdick et al,
     “XRootd, disk-based, caching proxy for optimization of data access, data placement and data replication,”
@@ -134,11 +133,18 @@ This page lists publications and presentations to which OSG staff contributed.
     J. Phys.: Conf. Ser. 513 032089 (2014).
     <https://iopscience.iop.org/article/10.1088/1742-6596/513/3/032089/meta>
 
-## 2012
+### 2012
 
 *   He, C., Weitzel, D., Swanson, D., & Lu, Y. 
     Hog: Distributed hadoop mapreduce on the grid.
     In 2012 SC Companion: High Performance Computing, Networking Storage and Analysis (pp. 1276-1283). IEEE.
     <https://doi.org/10.1109/SC.Companion.2012.154>
 
-# Presentations
+## Presentations
+
+### 2021
+
+*   Cartwright, T. (2021, May 5).
+    _OSG virtual meetings_ [Presentation].
+    Virtual Meeting on Virtual Meetings: An IRIS-HEP Blueprint Workshop, Online.
+    <https://indico.cern.ch/event/1026363/contributions/4309498/>
