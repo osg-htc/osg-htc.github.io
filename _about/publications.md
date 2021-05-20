@@ -150,11 +150,26 @@ and that acknowledged the NSF “OSG: Next 5 Years” award (MPS-1148698).
     _OSG virtual meetings_ [Presentation].
     Virtual Meeting on Virtual Meetings: An IRIS-HEP Blueprint Workshop, Online.
     <https://indico.cern.ch/event/1026363/contributions/4309498/>
-    
+
+*   Michael, L. (2021, March 1).
+    _The state of OSG impact on research_ [Presentation].
+    OSG All-Hands Meeting, Online.
+    <https://indico.fnal.gov/event/47040/contributions/208066/>
+
+*   Michael, L. (2021, March 2).
+    _OSG services for campuses: Partnering to advance research_ [Presentation].
+    OSG All-Hands Meeting, Online.
+    <https://indico.fnal.gov/event/47040/contributions/208132/>
+
 *   Weitzel, D (2021, Feb 2).
     _OSG Storage Repositories-Serving more than software!_
     CernVM Virtual Workshop 2021
     <https://indico.cern.ch/event/885212/contributions/4120589/>
+
+*   Würthwein, F. (2021, March 1).
+    _State of OSG_ [Presentation].
+    OSG All-Hands Meeting, Online.
+    <https://indico.fnal.gov/event/47040/contributions/208345/>
     
 ### 2019
 
@@ -168,3 +183,4 @@ and that acknowledged the NSF “OSG: Next 5 Years” award (MPS-1148698).
     24th International Conference on Computing in High-Energy and Nuclear Physics
     <https://indico.cern.ch/event/773049/contributions/3474435/>
    
+
