@@ -150,3 +150,21 @@ and that acknowledged the NSF “OSG: Next 5 Years” award (MPS-1148698).
     _OSG virtual meetings_ [Presentation].
     Virtual Meeting on Virtual Meetings: An IRIS-HEP Blueprint Workshop, Online.
     <https://indico.cern.ch/event/1026363/contributions/4309498/>
+    
+*   Weitzel, D (2021, Feb 2).
+    _OSG Storage Repositories-Serving more than software!_
+    CernVM Virtual Workshop 2021
+    <https://indico.cern.ch/event/885212/contributions/4120589/>
+    
+### 2019
+
+*   McKee S., Bockelman, B., Gardner, R., Vukotic, I., Babik, M., Weitzel, D., Zvada, M., Hernandez, E., (2019)
+    _WLCG Networks: Update on Monitoring and Analytics_
+    24th International Conference on Computing in High-Energy and Nuclear Physics
+    <https://indico.cern.ch/event/773049/contributions/3473823/>
+
+*   Lin, B., Hicks, J., Zvada, M., Weitzel, D.,Selmeci, M., Paschos, P. (2019)
+    _Creating a content delivery network for general science on the backbone of the Internet using XCache(s)._
+    24th International Conference on Computing in High-Energy and Nuclear Physics
+    <https://indico.cern.ch/event/773049/contributions/3474435/>
+   
