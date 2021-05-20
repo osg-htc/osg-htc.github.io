@@ -17,9 +17,11 @@ and that acknowledged the NSF “OSG: Next 5 Years” award (MPS-1148698).
     _EPJ Web of Conferences, 245,_ 07053.
     <https://doi.org/10.1051/epjconf/202024507053>
 
-*   Dost, J., Mascheroni, M., Bockelman, B., Bryant, L., Cartwright, T., Fajardo, E., ... & Zhu, H.,
-    “A Lightweight Door into Non-Grid Sites,”
-    EPJ Web of Conferences 245, 07005 (2020).
+*   Dost, J., Mascheroni, M., Bockelman, B., Bryant, L., Cartwright, T., Fajardo, E., Gardner, R.,
+    Letts, J., Lin, B., Selmeci, M., Sfiligoi, I., Stephen, J., Weitzel, D., Würthwein, F., & Zhu, H.
+    (2020).
+    A lightweight door into non-grid sites.
+    _EPJ Web of Conferences, 245,_ 07005.
     <https://doi.org/10.1051/epjconf/202024507005>
 
 *   Fajardo, E., Weitzel, D., Rynge, M., Zvada, M., Hicks, J., Selmeci, M., ... & Sfiligoi, I.,
@@ -170,6 +172,11 @@ and that acknowledged the NSF “OSG: Next 5 Years” award (MPS-1148698).
     _State of OSG_ [Presentation].
     OSG All-Hands Meeting, Online.
     <https://indico.fnal.gov/event/47040/contributions/208345/>
+
+*   Würthwein, F. (2021, March 3).
+    _OSG as an agile computing environment_ [Presentation].
+    OSG All-Hands Meeting, Online.
+    <https://indico.fnal.gov/event/47040/contributions/208665/>
     
 ### 2019
 
