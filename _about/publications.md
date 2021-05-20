@@ -1,6 +1,5 @@
 ---
 title: Publications and Presentations
-
 ---
 
 This page lists publications and presentations to which OSG staff contributed.
