@@ -17,9 +17,11 @@ and that acknowledged the NSF “OSG: Next 5 Years” award (MPS-1148698).
     _EPJ Web of Conferences, 245,_ 07053.
     <https://doi.org/10.1051/epjconf/202024507053>
 
-*   Dost, J., Mascheroni, M., Bockelman, B., Bryant, L., Cartwright, T., Fajardo, E., ... & Zhu, H.,
-    “A Lightweight Door into Non-Grid Sites,”
-    EPJ Web of Conferences 245, 07005 (2020).
+*   Dost, J., Mascheroni, M., Bockelman, B., Bryant, L., Cartwright, T., Fajardo, E., Gardner, R.,
+    Letts, J., Lin, B., Selmeci, M., Sfiligoi, I., Stephen, J., Weitzel, D., Würthwein, F., & Zhu, H.
+    (2020).
+    A lightweight door into non-grid sites.
+    _EPJ Web of Conferences, 245,_ 07005.
     <https://doi.org/10.1051/epjconf/202024507005>
 
 *   Fajardo, E., Weitzel, D., Rynge, M., Zvada, M., Hicks, J., Selmeci, M., ... & Sfiligoi, I.,
@@ -150,3 +152,40 @@ and that acknowledged the NSF “OSG: Next 5 Years” award (MPS-1148698).
     _OSG virtual meetings_ [Presentation].
     Virtual Meeting on Virtual Meetings: An IRIS-HEP Blueprint Workshop, Online.
     <https://indico.cern.ch/event/1026363/contributions/4309498/>
+
+*   Michael, L. (2021, March 1).
+    _The state of OSG impact on research_ [Presentation].
+    OSG All-Hands Meeting, Online.
+    <https://indico.fnal.gov/event/47040/contributions/208066/>
+
+*   Michael, L. (2021, March 2).
+    _OSG services for campuses: Partnering to advance research_ [Presentation].
+    OSG All-Hands Meeting, Online.
+    <https://indico.fnal.gov/event/47040/contributions/208132/>
+
+*   Weitzel, D. (2021, Feb 2).
+    _OSG storage repositories - Serving more than software!_ [Presentation].
+    CernVM Virtual Workshop 2021, Online.
+    <https://indico.cern.ch/event/885212/contributions/4120589/>
+
+*   Würthwein, F. (2021, March 1).
+    _State of OSG_ [Presentation].
+    OSG All-Hands Meeting, Online.
+    <https://indico.fnal.gov/event/47040/contributions/208345/>
+
+*   Würthwein, F. (2021, March 3).
+    _OSG as an agile computing environment_ [Presentation].
+    OSG All-Hands Meeting, Online.
+    <https://indico.fnal.gov/event/47040/contributions/208665/>
+    
+### 2019
+
+*   Lin, B., Hicks, J., Zvada, M., Weitzel, D., Selmeci, M., & Paschos, P. (2019, November 5).
+    _Creating a content delivery network for general science on the backbone of the Internet using XCache(s)_ [Presentation].
+    24th International Conference on Computing in High Energy & Nuclear Physics, Adelaide, Australia.
+    <https://indico.cern.ch/event/773049/contributions/3474435/>
+
+*   McKee, S., Bockelman, B., Gardner, R., Vukotic, I., Babik, M., Weitzel, D., Zvada, M., & Fajardo Hernandez, E. (2019, November 4).
+    _WLCG networks: Update on monitoring and analytics_ [Presentation].
+    24th International Conference on Computing in High Energy & Nuclear Physics, Adelaide, Australia.
+    <https://indico.cern.ch/event/773049/contributions/3473823/>
