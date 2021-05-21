@@ -5,6 +5,8 @@ title: Publications
 
 This page lists publications and presentations to which OSG staff contributed
 and that acknowledged the NSF “OSG: Next 5 Years” award (MPS-1148698).
+Also, OSG staff contributed to some of the publications and presentations listed on the
+[IRIS-HEP project website](https://iris-hep.org/).
 
 ## Publications
 
@@ -16,6 +18,12 @@ and that acknowledged the NSF “OSG: Next 5 Years” award (MPS-1148698).
     WLCG networks: Update on monitoring and analytics.
     _EPJ Web of Conferences, 245,_ 07053.
     <https://doi.org/10.1051/epjconf/202024507053>
+
+*   Bockelman, B., Livny, M., Lin, B., & Prelz, F.
+    (2020).
+    Principles, technologies, and time: The translational journey of the HTCondor-CE.
+    _Journal of Computational Science,_ 101213.
+    <https://doi.org/10.1016/j.jocs.2020.101213>
 
 *   Dost, J., Mascheroni, M., Bockelman, B., Bryant, L., Cartwright, T., Fajardo, E., Gardner, R.,
     Letts, J., Lin, B., Selmeci, M., Sfiligoi, I., Stephen, J., Weitzel, D., Würthwein, F., & Zhu, H.
