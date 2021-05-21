@@ -10,7 +10,7 @@ Steve Groom serves as task manager for the NASA/IPAC Infrared Science Archive (I
 
 
 <div class="media border border-primary rounded-left">
-  <img class="mr-3" alt="TRAPPIST-1 system" src="/assets/images/groom-title.jpg">
+  <img class="mr-3" alt="TRAPPIST-1 system" src="{{site.baseurl}}/assets/images/groom-title.jpg">
   <div class="media-body">
     <h5 class="mt-0">The TRAPPIST-1 System</h5>
     The TRAPPIST-1 system contains a total of seven planets, all around the size of Earth. Three of them — TRAPPIST-1e, f and g — dwell in their star’s so-called “habitable zone.” The habitable zone, or Goldilocks zone, is a band around every star (shown here in green) where astronomers have calculated that temperatures are just right — not too hot, not too cold — for liquid water to pool on the surface of an Earth-like world. Courtesy NASA/JPL-Caltech.
@@ -20,7 +20,7 @@ Steve Groom serves as task manager for the NASA/IPAC Infrared Science Archive (I
 “For example, we are learning how galaxies form by looking at patterns,” says Groom. A partner, the NASA Extra-Galactic Database (NED), compiles measurements of galaxies into a coherent database. Researchers discovered a whole new, previously unknown, class of galaxy (a superluminous spiral). “Theories said it shouldn’t exist, but the data was there, and someone mined the data. These huge data points need to be put to use, so new science can be done. That can only be achieved through computing.”
 
 <div class="media border border-primary rounded-left">
-   <img class="mr-3" alt="The Spitzer Space Telescope CTA" src="/assets/images/groom-2.jpg">
+   <img class="mr-3" alt="The Spitzer Space Telescope CTA" src="{{site.baseurl}}/assets/images/groom-2.jpg">
    <div class="media-body">
      Figure 2: The Spitzer Space Telescope cryogenic telescope assembly (CTA) being prepared for vibration testing. Courtesy NASA/JPL-Caltech.
    </div>

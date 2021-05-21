@@ -33,7 +33,7 @@ and storage resources as possible.
 
 
 <figure class="figure">
-  <img src="/assets/images/osg-user-school-2018.png" class="figure-img img-fluid rounded" alt="Participants of the OSG User School 2018">
+  <img src="{{site.baseurl}}/assets/images/osg-user-school-2018.png" class="figure-img img-fluid rounded" alt="Participants of the OSG User School 2018">
   <figcaption class="figure-caption">Participants of the OSG User School 2018.</figcaption>
 </figure>
 

@@ -49,10 +49,10 @@ Earth from some of the most extreme environments in the universe.
 <div class="container">
     <div class="row">
         <div class="col-md">
-            <img src="/assets/images/2019-11-22-gpu-cloudburst/numgpus.png" class="img-fluid figure-img">
+            <img src="{{site.baseurl}}/assets/images/2019-11-22-gpu-cloudburst/numgpus.png" class="img-fluid figure-img">
         </div>
         <div class="col-md">
-            <img src="/assets/images/2019-11-22-gpu-cloudburst/gpupflops.png" class="img-fluid figure-img">
+            <img src="{{site.baseurl}}/assets/images/2019-11-22-gpu-cloudburst/gpupflops.png" class="img-fluid figure-img">
         </div>
     </div>
 </div>
@@ -93,7 +93,7 @@ specifications), according to Sfiligoi.
 
 
 <figure class="figure ">
-<table class="table">
+<table class="table table-responsive">
     <thead>
     <tr>
       <td><strong>GPU Specs</strong></td>
@@ -138,7 +138,7 @@ specifications), according to Sfiligoi.
 “For comparison, the Number 1 TOP100 HPC system, [*Summit*, (based at Oak Ridge National
 Laboratory)](https://www.olcf.ornl.gov/summit/) has a nominal
 performance of about 400 PFLOP32s. So, at peak, our cloud-based cluster
-provided almost 90% of the performance of *Summit*, at least for the
+provided almost 95% of the performance of *Summit*, at least for the
 purpose of IceCube simulations.
 
 The relatively short time span of the experiment showed
@@ -177,7 +177,7 @@ elasticity is there, we believe that this can be applied across all of
 scientific research to get results quickly.”
 
 <figure class="figure float-left">
-<img src="/assets/images/2019-11-22-gpu-cloudburst/byregion.png" class="img-fluid figure-img" width="525">
+<img src="{{site.baseurl}}/assets/images/2019-11-22-gpu-cloudburst/byregion.png" class="img-fluid figure-img" width="525">
 <figcaption class="figure-caption">Regions used in the GPU experiment across AWS, GCP, and Azure</figcaption>
 </figure>
 
