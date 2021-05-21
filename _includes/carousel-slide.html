@@ -1,0 +1,13 @@
+{% assign slide = includes.slide %}
+{% assign position =
+
+<div class="carousel-item">
+    <img class="{{ slide.position }}" src="{{ slide.image }}" alt="{{ slide.alt }}">
+    <div class="container">
+        <div class="carousel-caption text-right">
+            <h1>{{ slide.title }}</h1>
+            <p>{{ slide.description }}</p>
+            <p><a class="btn btn-lg btn-primary" href="{{ slide.link }}" role="button">Read more</a></p>
+        </div>
+    </div>
+</div>
