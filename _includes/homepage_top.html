@@ -13,10 +13,11 @@
           <li data-target="#myCarousel" data-slide-to="8"></li>
         </ol>
         <div class="carousel-inner">
-            {% assign slides = site.data.carousel | values | sort: "date" | reverse %}
+            {% assign slides = site.data.carousel | sort: "date" | reverse %}
+            {% assign slides_size = slides.size %}
             {% assign pos_str = "first,second,third,fourth,fifth,sixth,seventh,eighth" | split: "," %}
             {% assign active = "active" %}
-            {% for slide_number in (0..7) %}
+            {% for slide_number in (0..slides_size) limit:8 %}
 
                 {% assign slide = slides[slide_number] %}
                 {% assign position = pos_str[slide_number] %}

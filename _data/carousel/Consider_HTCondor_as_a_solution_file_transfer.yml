@@ -1,7 +1,0 @@
-image: "/assets/images/RubinCamera.png"
-alt: "Vera C. Rubins Observatory Camera"
-title: "Consider HTCondor as a solution for your file transfer problem?"
-description: "A team at NCSA did! They used HTCondor to move files from Lyon France to Urbana Illinois (Photo credit: Vera C. Rubins Observatory)"
-link: "/news/2021/01/15/Using-HTCondor-For-Large-File-Transfer.html"
-link_label: "Read more"
-date: 2021-01-15

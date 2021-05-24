@@ -1,8 +1,0 @@
-# All "" must be filled, if not using other spaces leave blank
-image: ""
-alt: ""
-title: ""
-description:               #Slide description
-link:                      #This is the link the button leads to
-link_label:                #This is the label on the button
-date:                      #Date in format YYYY-MM-DD, carousel uses 8 most recent slides

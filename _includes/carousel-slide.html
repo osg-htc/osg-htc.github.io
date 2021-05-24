@@ -1,7 +1,7 @@
 <div class="carousel-item {{ active }}">
     <img class="{{ position }}-slide" src="{{site.baseurl}}{{ slide.image }}" alt="{{ slide.alt }}">
     <div class="container">
-        <div class="carousel-caption text-right">
+        <div class="carousel-caption text-right text-{{ slide.title_color }}">
             <h1>{{ slide.title }}</h1>
             {% if slide.description %}
                 <p>{{ slide.description }}</p>
