@@ -1,0 +1,74 @@
+# Copy and Paste
+# image: Necessary
+# alt: Necessary
+# title: Necessary
+# title_color: Options are "light" and "dark"
+# description: Un-Necessary
+# link: Un-Necessary
+# link_label: Necessary with link
+# date: Necessary, used to assign order
+
+- image: "/assets/images/nickcooley.png"
+  alt: "Nicholas Cooley"
+  title: "2021 David Swanson Memorial Award Recipient"
+  title_color : "light"
+  description: "Congratulations researcher Nicholas Cooley!"
+  link: "https://opensciencegrid.org/outreach/swanson-award/"
+  link_label: "Read more"
+  date: 2021-05-23
+- image: "/assets/images/groom-title.jpg"
+  alt: "TRAPPIST-1 System"
+  title: "Astronomy archives are creating new science every day"
+  title_color: "light"
+  description: "Accumulated data sets from past and current astronomy research are not dead. Researchers are still doing new science with old data and still making new discoveries."
+  link: "/news/2017/08/29/astronomy-archives.html"
+  link_label: "Learn more"
+  date: 2017-08-29
+- image: "/assets/images/RubinCamera.png"
+  alt: "Vera C. Rubins Observatory Camera"
+  title: "Consider HTCondor as a solution for your file transfer problem?"
+  title_color: "light"
+  description: "A team at NCSA did! They used HTCondor to move files from Lyon France to Urbana Illinois (Photo credit: Vera C. Rubins Observatory)"
+  link: "/news/2021/01/15/Using-HTCondor-For-Large-File-Transfer.html"
+  link_label: "Read more"
+  date: 2021-01-15
+- image: "/assets/images/htcondorweek.png"
+  alt: "HTCondor Week"
+  title: "HTCondor Week May 24-28, 2021"
+  title_color: "light"
+  description: "Learn about HTCondor - the Software the Powers the OSG"
+  link: "https://agenda.hep.wisc.edu/event/1579/"
+  link_label: "Register Here"
+  date: 2021-05-24
+- image: "/assets/images/isayev.jpg"
+  alt: "Olexandr Isayev profile"
+  title: "Machine Learning for Molecular Science."
+  title_color: "light"
+  description: "Olexandr Isayev gives machine learning insights into molecular science using the Open Science Grid."
+  link: "/news/2017/06/29/machine-learning.html"
+  link_label: "Read more"
+  date: 2017-06-29
+- image: "/assets/images/IMG_8632.jpg"
+  alt: "GridFTP Migration"
+  title: "Migration to HTTPS from GridFTP Nearing Completion"
+  title_color: "light"
+  description: ""
+  link: "/news/2021/03/20/Migration-HTTPS-from-GridFTP-for-Data-Transfers.html"
+  link_label: "Read More"
+  date: 2021-03-20
+- image: "/assets/images/GW170817-rendition-e1510060379231.jpg"
+  alt: "Artist rendition of a neutron star merger."
+  title: "OSG Supports Multi-Messenger Astronomy."
+  title_color: "light"
+  description: "OSG integrates global computing to support detection of colliding neutron stars by LIGO, VIRGO, and DECam."
+  link: "/news/2017/11/07/ligo-virgo.html"
+  link_label: "Read more"
+  date: 2017-11-07
+- image: "/assets/images/osguserschool.png"
+  alt: "OSG Virtual School 2021"
+  title: "OSG Virtual School August 2-13, 2021"
+  title_color: "light"
+  description: "Researchers, expand the capabilities of your research with OSG"
+  link: "https://opensciencegrid.org/virtual-school-2021/"
+  link_label: "Register Now"
+  date: 2021-08-02
