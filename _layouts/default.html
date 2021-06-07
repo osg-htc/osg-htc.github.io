@@ -34,12 +34,13 @@
                   About
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/about/introduction">Introduction</a>
-                  <a class="dropdown-item" href="/about/open_science_pool/">Open Science Pool</a>
-                  <a class="dropdown-item" href="/about/computation/">Computation on the OSG</a>
-                  <a class="dropdown-item" href="/about/organization/">Organization</a>
-                  <a class="dropdown-item" href="/about/team">Team</a>
-                  <a class="dropdown-item" href="/about/publications">Publications</a>
+                  {% for section in site.data.about %}
+                    {% for item in section.docs %}
+                      {% assign item_url = item | prepend:"/about/" | append:"/" %}
+                      {% assign p = site.about | where:"url", item_url | first %}
+                      <a class="dropdown-item" href="{{ p.url }}">{{ p.title }}</a>
+                    {% endfor %}
+                  {% endfor %}
                 </div>
               </li>
               <li class="nav-item active">

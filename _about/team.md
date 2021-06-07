@@ -1,5 +1,4 @@
 ---
-permalink: /about/team.html
 layout: default
 title: The Open Science Grid Team
 ---
