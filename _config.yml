@@ -1,3 +1,4 @@
+baseurl: ''
 theme: jekyll-theme-minimal
 title: Open Science Grid
 description: A national, distributed computing partnership for data-intensive research

@@ -7,7 +7,7 @@
                 <p>{{ slide.description }}</p>
             {% endif %}
             {% if slide.link %}
-                <p><a class="btn btn-lg btn-primary" href="{{ slide.link }}" role="button">Read more</a></p>
+                <p><a class="btn btn-lg btn-primary" href="{{ slide.link | relative_url }}" role="button">Read more</a></p>
             {% endif %}
         </div>
     </div>

@@ -9,7 +9,7 @@ layout: default
 {% if post.external_url %}
 <a href="{{ post.external_url }}">{{ post.title }}</a> ({{ post.date | date_to_long_string }})
 {% else %}
-<a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_long_string }})
+<a href="{{ post.url | relative_url }}">{{ post.title }}</a> ({{ post.date | date_to_long_string }})
 {% endif %}
 {{ post.excerpt }}
 <hr/>
