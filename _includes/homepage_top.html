@@ -16,8 +16,8 @@
             {% assign slides = site.data.carousel | sort: "date" | reverse %}
             {% assign pos_str = "first,second,third,fourth,fifth,sixth,seventh,eighth" | split: "," %}
             {% assign active = "active" %}
-            {% assign num_slide_0_index = slides.size | minus: 1 %}
-            {% for slide_number in (0..num_slides_0_index) limit:8 %}
+            {% assign num_slide = slides.size | minus: 1 %}
+            {% for slide_number in (0..num_slide) limit:8 %}
 
                 {% assign slide = slides[slide_number] %}
                 {% assign position = pos_str[slide_number] %}
