@@ -64,12 +64,12 @@
   link: "https://opensciencegrid.org/virtual-school-2021/"
   link_label: "Learn More"
   date: 2021-08-02
-- image: "/assets/images/- image: "/assets/images/OSPool-Million-Core-Hours.png"
+- image: "/assets/images/OSPool-Million-Core-Hours.png"
   alt: "OSPool Usage Hits Daily Record"
   title: "OSPool Usage Hits Daily Record"
   title_color: "dark"
   description: "OSPool hits daily record and goes over 1.1 million core hours"
   link: "https://opensciencegrid.org/news/2021/06/10/OSPool-Hits-Record-Utilization.html"
   link_label: "Read More"
-  date: 2021-06-08"
+  date: 2021-06-08
   
