@@ -64,18 +64,12 @@
   link: "https://opensciencegrid.org/virtual-school-2021/"
   link_label: "Learn More"
   date: 2021-08-02
-- image: "/assets/images/- image: "/assets/images/osguserschool.png"
+- image: "/assets/images/- image: "/assets/images/OSPool-Million-Core-Hours.png"
   alt: "OSPool Usage Hits Daily Record"
   title: "OSPool Usage Hits Daily Record"
   title_color: "light"
-  description: "On June 8, the OSPool, which provides computing resources to researchers across the country, went over 1.1 million core hours –– a daily record number. "
+  description: "On June 8, the OSPool went over 1.1 million core hours –– a daily record number. "
   link: "https://opensciencegrid.org/news/2021/06/10/OSPool-Hits-Record-Utilization.html"
   link_label: "Read More"
-  date: 2021-08-02"
-  alt: "OSG Virtual School 2021"
-  title: "OSG Virtual School August 2-13, 2021"
-  title_color: "light"
-  description: "Researchers, expand the capabilities of your research with OSG"
-  link: "https://opensciencegrid.org/virtual-school-2021/"
-  link_label: "Learn More"
-  date: 2021-08-02
+  date: 2021-06-08"
+  
