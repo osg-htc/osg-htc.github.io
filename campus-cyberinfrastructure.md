@@ -81,3 +81,7 @@ The Open Science Pool is a <a href="https://research.cs.wisc.edu/htcondor/" targ
 >- <a href="https://newscenter.nmsu.edu/Articles/view/14445/nsf-grant-brings-high-performance-computing-to-new-mexico-students-faculty" target="_blank"> New Mexico State University</a>
 >- <a href="https://www.pdx.edu/news/psu-receives-5m-federal-grant-improve-access-stem-education-underrepresented-students" target="_blank"> Portland State University</a>
 >- <a href="https://www.siue.edu/its/cyberinfrastructure/" target="_blank"> Southern Illinois University Edwardsville</a>
+>- <a href="https://pace.gatech.edu/" target"=_blank"> Georgia Institute of Technology</a>
+>- <a href="https://www.colorado.edu/rc/" target="_blank"> University of Colorado Boulder</a>
+>- <a href="https://crc.nd.edu/" target="_blank"> University of Notre Dame</a>
+>- <a href="https://www.utc.edu/research/simcenter/research-thrusts/high-performance-computing-and-algorithms" target="_blank"> University of Tennessee Chattanooga</a>
