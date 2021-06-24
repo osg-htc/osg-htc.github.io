@@ -84,5 +84,4 @@ The Open Science Pool is a <a href="https://research.cs.wisc.edu/htcondor/" targ
 >- <a href="https://pace.gatech.edu/" target"_blank"> Georgia Institute of Technology</a>
 >- <a href="https://www.colorado.edu/rc/" target"_blank"> University of Colorado Boulder</a>
 >- <a href="https://crc.nd.edu/" target"_blank"> University of Notre Dame</a>
->- <a href="https://www.utc.edu/research/simcenter/research-thrusts/high-performance-computing-and-algorithms" target"_blank"> University of Tennessee Chattanooga</a>
-
+>- <a href="https://www.utc.edu/research/simcenter/research-thrusts/high-performance-computing-and-algorithms" target="_blank"> University of Tennessee Chattanooga</a>
