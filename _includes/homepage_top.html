@@ -13,87 +13,18 @@
           <li data-target="#myCarousel" data-slide-to="8"></li>
         </ol>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="first-slide" src="{{site.baseurl}}/assets/images/htcondor2019.png" alt="HTCondor Team">
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>HTCondor Week May 24-28, 2021</h1>
-                <p>Learn about HtCondor - the Software the Powers the OSG</p>
-                <p><a class="btn btn-lg btn-primary" href="news/2021/03/09/HTCondorWeek.html" role="button">Read more</a></p>
-              </div>
-            </div>
-          </div>
-                
-          <div class="carousel-item">
-            <img class="second-slide" src="{{site.baseurl}}/assets/images/RubinCamera.png" alt="Vera C. Rubins Observatory Camera">
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Consider HTCondor as a solution for your file transfer problem?</h1>
-                <p> A team at NCSA did! They used HTCondor to move files from Lyon France to Urbana Illinois (Photo credit: Vera C. Rubins Observatory)</p>
-                <p><a class="btn btn-lg btn-primary" href="/news/2021/01/15/Using-HTCondor-For-Large-File-Transfer.html" role="button">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="third-slide" src="{{site.baseurl}}/assets/images/des-e1521045151195.jpg" alt="Expanding universe">
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Our Expanding Universe</h1>
-                <p>What's causing the universe to expand? The Dark Energy Survey is looking for answers. (Photo credit: DES)</p>
-                <p><a class="btn btn-lg btn-primary" href="/news/2018/03/01/des-expanding-universe.html" role="button">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="fourth-slide" src="{{site.baseurl}}/assets/images/john-torcasio-441531-e1518639575538.jpg" alt="OSG helps study traumatic brain injuries.">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Studying Traumatic Brain Injuries on the OSG.</h1>
-                <p>ScienceNode did an article about Don Krieger and University of Pittsburgh using OSG to study traumatic brain injury! (Photo Courtesy Unsplash/John Torcasio)</p>
-                <p><a class="btn btn-lg btn-primary" href="https://sciencenode.org/feature/imaging-the-injured-brain.php" role="button">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="fifth-slide" src="{{site.baseurl}}/assets/images/GW170817-rendition-e1510060379231.jpg" alt="Artist rendition of a neutron star merger.">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>OSG Supports Multi-Messenger Astronomy.</h1>
-                <p>OSG integrates global computing to support detection of colliding neutron stars by LIGO, VIRGO, and DECam.</p>
-                <p><a class="btn btn-lg btn-primary" href="/news/2017/11/07/ligo-virgo.html" role="button">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="sixth-slide" src="{{site.baseurl}}/assets/images/ligo20160211d.jpg" alt="A binary black hole merger">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>LIGO wins Nobel Prize.</h1>
-                <p>LIGO Collaborators win 2017 Nobel Prize in Physics.</p>
-                <p><a class="btn btn-lg btn-primary" href="/news/2017/10/05/ligo-wins-nobel-prize.html" role="button">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="seventh-slide" src="{{site.baseurl}}/assets/images/groom-title.jpg" alt="TRAPPIST-1 System">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Astronomy archives are creating new science every day</h1>
-                <p>Accumulated data sets from past and current astronomy research are not dead. Researchers are still doing new science with old data and still making new discoveries.</p>
-                <p><a class="btn btn-lg btn-primary" href="/news/2017/08/29/astronomy-archives.html" role="button">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="eigth-slide" src="{{site.baseurl}}/assets/images/isayev.jpg" alt="Olexandr Isayev profile">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Machine Learning for Molecular Science.</h1>
-                <p>Olexandr Isayev gives machine learning insights into molecular science using the Open Science Grid.</p>
-                <p><a class="btn btn-lg btn-primary" href="/news/2017/06/29/machine-learning.html" role="button">Read more</a></p>
-              </div>
-            </div>
-          </div>
+            {% assign slides = site.data.carousel | sort: "date" | reverse %}
+            {% assign pos_str = "first,second,third,fourth,fifth,sixth,seventh,eighth" | split: "," %}
+            {% assign active = "active" %}
+            {% assign num_slide = slides.size | minus: 1 %}
+            {% for slide_number in (0..num_slide) limit:8 %}
+
+                {% assign slide = slides[slide_number] %}
+                {% assign position = pos_str[slide_number] %}
+                {% include carousel-slide.html %}
+
+                {% assign active = "" %}
+            {% endfor %}
         </div>
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
