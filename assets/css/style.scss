@@ -1,6 +1,11 @@
 ---
 ---
 
+$primary: #b67b3c;
+$secondary: #f4b627;
+
+@import 'bootstrap/bootstrap';
+
 body {
   padding-top: 4rem;
   padding-bottom: 3rem;
@@ -69,23 +74,19 @@ th, td {
   border: 3px solid #9F4000;
   padding: 1rem;
   background-color: #FFECDF;
-}
-
-#osg-special-banner p.special-banner-1 {
-  font-size: 100%;
-}
-
-#osg-special-banner ul {
-  margin: 0;
-}
-
-#osg-special-banner li {
-  font-size: 85%;
-}
-
-#osg-special-banner p.special-banner-2 {
-  font-size: 75%;
-  margin-bottom: 0;
+  p.special-banner-1 {
+    font-size: 100%;
+  }
+  p.special-banner-2 {
+    font-size: 75%;
+    margin-bottom: 0;
+  }
+  ul {
+    margin: 0;
+  }
+  li {
+    font-size: 85%;
+  }
 }
 
 #covid-19-mini-banner {
