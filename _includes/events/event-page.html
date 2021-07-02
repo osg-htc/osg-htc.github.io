@@ -4,7 +4,7 @@
 <div class="col-auto">
 <div class="icons border-top border-bottom">
 {% if page.calendar_event %}
-<a href="{{ page.calendar_event | prepend: '/assets/calendar_event/' | append: '.ics' | relative_url}}">
+<a href="{{ page.calendar_event | prepend: '/assets/calendar_event/' | relative_url}}">
 <img src="{{ '/assets/images/icons/calendar-plus.svg' | relative_url }}"/>
 </a>
 {% endif %}

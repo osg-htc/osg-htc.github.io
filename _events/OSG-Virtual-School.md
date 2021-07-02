@@ -2,7 +2,6 @@
 short_title: OSG Virtual School 2021
 title: "OSG Virtual School 2021"
 published: true
-calendar_event: OSG_Virtual_School_2021
 
 excerpt: |
     The OSG Virtual School 2021 prepares attendees to use high throughput computing (HTC)&nbsp;&mdash;
