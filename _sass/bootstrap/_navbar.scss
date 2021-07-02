@@ -65,6 +65,9 @@
   &:focus {
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
+  img {
+    height: $navbar-brand-height;
+  }
 }
 
 
