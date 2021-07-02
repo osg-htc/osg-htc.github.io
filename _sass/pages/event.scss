@@ -1,7 +1,17 @@
 
 .event-card {
+  .card {
+    background-color: inherit;
+    border: 0px;
+  }
   .card-header {
-    background-color: $white-offset;
+    color: $gray-600;
+    background-color: inherit;
+    padding: 0px;
+  }
+  .card-body {
+    padding: 0px;
+    background-color: rgba(0,0,0,0.05);
   }
 }
 
