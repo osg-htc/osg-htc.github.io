@@ -20,11 +20,19 @@ defaults:
     values:
       layout: posts
       permalink: /news/:year/:month/:day/:title.html
+  - scope:
+      path: "_events"
+    values:
+      layout: event
 
 collections:
   about:
     permalink: /:collection/:path/
     output: true
+  events:
+    permalink: /events/:path/
+    output: true
+
 
 sass:
   style: compressed
