@@ -5,6 +5,8 @@ $primary: #b67b3c;
 $secondary: #f4b627;
 $white-offset: lighten($secondary, 40%);
 
+$navbar-brand-height: 2.8rem;
+
 @import 'bootstrap/bootstrap';
 @import 'pages/event';
 
