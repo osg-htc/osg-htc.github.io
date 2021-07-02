@@ -4,13 +4,12 @@ layout: default
 
 {% include homepage_top.html %}
 
-<h2>The Open Science Grid</h2>
-
-A national, distributed computing partnership for data-intensive research
-
-
 <div class="row">
   <div class="col-lg-8">
+    <h1>The Open Science Grid</h1>
+
+    A national, distributed computing partnership for data-intensive research
+
     <div id="osg-special-banner">
       <p class="special-banner-1"><strong>We are here to help with your <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">Campus Cyberinfrastructure (CC*) Proposal!</a> Please contact us at <a href="mailto:cc-star-proposals@opensciencegrid.org">cc-star-proposals@opensciencegrid.org</a></strong></p>
       <p class="special-banner-1" style="margin-bottom: 0.5ex;">
@@ -69,8 +68,8 @@ A national, distributed computing partnership for data-intensive research
   <div class="col-lg-4">
     <div class="col">
       <div class="row d-sm-none d-md-block">
-        <h1 class="m-0">Events</h1>
-        <div class="container pr-0 pl-0 pb-2  border-top border-dark border-2">
+        <h2 class="m-0">Events</h2>
+        <div class="container pr-0 pl-0 pb-2 pt-3 border-top border-dark border-2">
           {% assign events = site.events | sort: "start_date" %}
           {% if events.size > 0 %}
           {% for event in events %}
