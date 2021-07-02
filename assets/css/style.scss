@@ -3,8 +3,10 @@
 
 $primary: #b67b3c;
 $secondary: #f4b627;
+$white-offset: lighten($secondary, 40%);
 
 @import 'bootstrap/bootstrap';
+@import 'pages/event';
 
 body {
   padding-top: 4rem;
@@ -92,7 +94,7 @@ th, td {
 #covid-19-mini-banner {
   padding: 1px;
   background-color: #FF6600;
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 #covid-19-mini-banner p {
