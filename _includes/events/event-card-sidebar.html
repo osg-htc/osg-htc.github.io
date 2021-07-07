@@ -8,8 +8,8 @@
     {% endif %}
         <div class="card">
             {% if event.start_date %}
-                <div class="card-header">
-                    <h2 class="m-0 text-dark">
+                <div class="card-header text-primary">
+                    <h2 class="m-0">
                         {% assign end = event.end_date | date: "-%e" %}
                         {{ event.start_date | date: "%b %e" | upcase | append : end }}
                         |
@@ -21,7 +21,7 @@
                 <img alt="" class="card-img" src="{{ event.image | relative_url }}" \>
             {% endif %}
             <div class="card-body">
-                <h2 class="card-title text-dark m-0">
+                <h2 class="card-title text-primary m-0">
                     {{ event.short_title }}
                 </h2>
             </div>
