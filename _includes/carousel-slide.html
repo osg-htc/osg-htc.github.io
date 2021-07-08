@@ -1,13 +1,13 @@
-<div class="carousel-item {{ active }}">
+<div class="carousel-item {{ active }}" data-bs-interval="10000">
     <img class="{{ position }}-slide" src="{{site.baseurl}}{{ slide.image }}" alt="{{ slide.alt }}">
     <div class="container">
-        <div class="carousel-caption text-right text-{{ slide.title_color }}">
+        <div class="carousel-caption text-end text-{{ slide.title_color }}">
             <h1>{{ slide.title }}</h1>
             {% if slide.description %}
                 <p>{{ slide.description }}</p>
             {% endif %}
             {% if slide.link %}
-                <p><a class="btn btn-lg btn-primary" href="{{ slide.link | relative_url }}" role="button">Read more</a></p>
+                <p><a class="btn btn-lg btn-secondary" href="{{ slide.link | relative_url }}" role="button">Read more</a></p>
             {% endif %}
         </div>
     </div>

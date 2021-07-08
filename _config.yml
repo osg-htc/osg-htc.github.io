@@ -6,6 +6,10 @@ google_analytics: UA-69012-28
 
 defaults:
   - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
       path: "_about"
       type: about
     values:
@@ -16,12 +20,22 @@ defaults:
     values:
       layout: posts
       permalink: /news/:year/:month/:day/:title.html
+  - scope:
+      path: "_events"
+    values:
+      layout: event
 
 collections:
   about:
     permalink: /:collection/:path/
     output: true
+  events:
+    permalink: /events/:path/
+    output: true
 
+
+sass:
+  style: compressed
 
 plugins:
   - jekyll-redirect-from

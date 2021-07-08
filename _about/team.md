@@ -10,7 +10,7 @@ title: The Open Science Grid Team
      {% for person_hash in site.data.people %}
        {% assign person = person_hash[1] %}
        {% if person.shortname == member %}
-         <div class="card" style="width: 12rem;">
+         <div class="card p-0" style="width: 12rem;">
            <img class="card-img-top" src="{{person.photo | relative_url}}" alt="Card image cap">
            <div class="card-body d-flex flex-column">
            <div class="card-text">
@@ -34,7 +34,7 @@ title: The Open Science Grid Team
   {% assign people = site.data.people | sort %}
   {% for person_hash in people %}
      {% assign person = person_hash[1] %}
-     <div class="card" style="width: 12rem;">
+     <div class="card p-0" style="width: 12rem;">
        <img class="card-img-top" src="{{person.photo}}" alt="Card image cap">
        <div class="card-body d-flex flex-column">
          <div class="card-text">
