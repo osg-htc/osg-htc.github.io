@@ -44,291 +44,60 @@ title: OSG Pool
 
 > For problems that can be run as many independent jobs, as in the first two columns of the table below, the OSPool provides computing capacity that can transform the types of questions that researchers are able to tackle. Importantly, many compute tasks that may appear to not be a good fit can be modified in simple ways to take advantage, and we'd love to discuss options with you!
 
- <div class=WordSection1>
-
-<p class=MsoNormal><span style='font-family:"Times New Roman",serif;mso-fareast-font-family:
-"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;mso-yfti-tbllook:1184'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:29.25pt'>
-  <td valign=top style='border:solid #AFAFAF 1.0pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:29.25pt'></td>
-  <td valign=top style='border:solid #AFAFAF 1.0pt;border-left:none;mso-border-left-alt:
-  solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;background:white;
-  padding:3.0pt 3.0pt 3.0pt 3.0pt;height:29.25pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><u><span
-  style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-  "Times New Roman";color:#555555'>Ideal jobs!</span></u></b><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border:solid #AFAFAF 1.0pt;border-left:none;mso-border-left-alt:
-  solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;background:white;
-  padding:3.0pt 3.0pt 3.0pt 3.0pt;height:29.25pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><u><span
-  style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-  "Times New Roman";color:#555555'>Still very advantageous</span></u></b><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border:solid #AFAFAF 1.0pt;border-left:none;mso-border-left-alt:
-  solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;background:white;
-  padding:3.0pt 3.0pt 3.0pt 3.0pt;height:29.25pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><u><span
-  style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-  "Times New Roman";color:#555555'>Maybe <span class=GramE>not, but</span> get
-  in touch!</span></u></b><span style='font-family:"Times New Roman",serif;
-  mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:1;height:29.25pt'>
-  <td valign=top style='border:solid #AFAFAF 1.0pt;border-top:none;mso-border-top-alt:
-  solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;background:white;
-  padding:3.0pt 3.0pt 3.0pt 3.0pt;height:29.25pt'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>Expected Throughput,
-  per user</span></u><span style='font-family:"Times New Roman",serif;
-  mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:29.25pt'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>1000s concurrent
-  cores</span></u><span style='font-family:"Times New Roman",serif;mso-fareast-font-family:
-  "Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:29.25pt'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>100s concurrent
-  cores</span></u><span style='font-family:"Times New Roman",serif;mso-fareast-font-family:
-  "Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:29.25pt'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>let's discuss!</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:2;height:.25in'>
-  <td valign=top style='border:solid #AFAFAF 1.0pt;border-top:none;mso-border-top-alt:
-  solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;background:white;
-  padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>CPU</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>1</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&lt; 8</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&gt; 8 (or MPI)</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:3;height:.25in'>
-  <td valign=top style='border:solid #AFAFAF 1.0pt;border-top:none;mso-border-top-alt:
-  solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;background:white;
-  padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><span class=SpellE><u><span style='font-size:10.0pt;
-  font-family:"Arial",sans-serif;mso-fareast-font-family:"Times New Roman";
-  color:#555555'>Walltime</span></u></span><span style='font-family:"Times New Roman",serif;
-  mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&lt; 10 <span
-  class=SpellE>hrs</span>*</span></u><span style='font-family:"Times New Roman",serif;
-  mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&lt; 20 <span
-  class=SpellE>hrs</span>*</span></u><span style='font-family:"Times New Roman",serif;
-  mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&gt; 20 <span
-  class=SpellE>hrs</span> (not a good fit)</span></u><span style='font-family:
-  "Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:4;height:.25in'>
-  <td valign=top style='border:solid #AFAFAF 1.0pt;border-top:none;mso-border-top-alt:
-  solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;background:white;
-  padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>RAM</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&lt; few GB</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&lt; 40 GB</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&gt; 40 GB</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:5;height:.25in'>
-  <td valign=top style='border:solid #AFAFAF 1.0pt;border-top:none;mso-border-top-alt:
-  solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;background:white;
-  padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>Input</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&lt; 500 MB</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&lt; 10 GB</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&gt; 10 GB**</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:6;height:.25in'>
-  <td valign=top style='border:solid #AFAFAF 1.0pt;border-top:none;mso-border-top-alt:
-  solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;background:white;
-  padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>Output</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&lt; 1GB</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&lt; 10 GB</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:.25in'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>&gt; 10 GB**</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:7;mso-yfti-lastrow:yes;height:29.25pt'>
-  <td valign=top style='border:solid #AFAFAF 1.0pt;border-top:none;mso-border-top-alt:
-  solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;background:white;
-  padding:3.0pt 3.0pt 3.0pt 3.0pt;height:29.25pt'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>Software</span></u><span
-  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:29.25pt'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>pre-compiled
-  binaries, containers</span></u><span style='font-family:"Times New Roman",serif;
-  mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:29.25pt'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>Most other than
-  -&gt;</span></u><span style='font-family:"Times New Roman",serif;mso-fareast-font-family:
-  "Times New Roman"'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #AFAFAF 1.0pt;
-  border-right:solid #AFAFAF 1.0pt;mso-border-top-alt:solid #AFAFAF .75pt;
-  mso-border-left-alt:solid #AFAFAF .75pt;mso-border-alt:solid #AFAFAF .75pt;
-  background:white;padding:3.0pt 3.0pt 3.0pt 3.0pt;height:29.25pt'>
-  <p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:"Times New Roman";color:#555555'>Licensed software,
-  non-Linux</span></u><span style='font-family:"Times New Roman",serif;
-  mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
-  </td>
- </tr>
+<table class="table table-bordered table-striped">
+<tbody>
+<tr>
+<th></th>
+<th>Ideal Jobs!</th>
+<th>Still very advantageous</th>
+<th>Maybe not, but get in touch!</th>
+</tr>
+<tr>
+<th>Expected Throughput, per user</th>
+<td>1000s concurrent cores</td>
+<td>100s concurrent cores</td>
+<td>Let's discuss!</td>
+</tr>
+<tr>
+<th>CPU</th>
+<td>1</td>
+<td>< 8</td>
+<td>> 8 (or MPI)</td>
+</tr>
+<tr>
+<th>Walltime</th>
+<td>< 10 hrs*</td>
+<td>< 20 hrs*</td>
+<td>> 20 hrs (Not a good fit)</td>
+</tr>
+<tr>
+<th>RAM</th>
+<td>< few GB</td>
+<td>< 40 GB</td>
+<td>> 40 GB</td>
+</tr>
+<tr>
+<th>Input</th>
+<td>< 500 MB</td>
+<td>< 10 GB</td>
+<td>> 10 GB**</td>
+</tr>
+<tr>
+<th>Output</th>
+<td>< 1 GB</td>
+<td>< 10 GB</td>
+<td>> 10 GB**</td>
+</tr>
+<tr>
+<th>Software</th>
+<td>pre-compiled binaries, containers</td>
+<td>Most other than -></td>
+<td>Licensed Software, non-Linux</td>
+</tr>
+</tbody>
 </table>
 
-<p class=MsoNormal><i><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-mso-fareast-font-family:"Times New Roman";color:black'>or <span class=SpellE>checkpointable</span>
-*per job; you can work with a large dataset on OSG if it can be split into
-pieces</span></i><span style='font-family:"Times New Roman",serif;mso-fareast-font-family:
-"Times New Roman"'><o:p></o:p></span></p>
-</div>
+<span class="text-muted">or checkpointable *per job; you can work with a large dataset on OSG if it can be split into pieces</span>
 
 ## Some examples of work that has been a good fit for the OSG and benefited from using its resources include
 
