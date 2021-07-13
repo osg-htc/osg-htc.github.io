@@ -4,15 +4,15 @@ layout: default
 
 {% include homepage_top.html %}
 
-<div class="row border-top border-4 border-primary pt-4">
-  <div class="col-md-8 mt-2 mb-4">
+<div class="row pt-4">
+  <div class="col-lg-8 mt-2 mb-4">
     <h2>The Open Science Grid</h2>
     <p>
       A national, distributed computing partnership for data-intensive research
     </p>
-    <div>
-      <p class="special-banner-1"><strong>We are here to help with your <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">Campus Cyberinfrastructure (CC*) Proposal!</a> Please contact us at <a href="mailto:cc-star-proposals@opensciencegrid.org">cc-star-proposals@opensciencegrid.org</a></strong></p>
-      <p class="special-banner-1" style="margin-bottom: 0.5ex;">
+    <div class="mb-3">
+      <p><strong>We are here to help with your <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">Campus Cyberinfrastructure (CC*) Proposal!</a> Please contact us at <a href="mailto:cc-star-proposals@opensciencegrid.org">cc-star-proposals@opensciencegrid.org</a></strong></p>
+      <p class="mb-1" >
         We have significant experience working with CC* applicants and awardees, offering letters of support and consulting for:
       </p>
       <ul>
@@ -23,29 +23,12 @@ layout: default
         <li>CC*-required resource sharing for the Campus Compute category, and other options for integrating with OSG</li>
       </ul>
 
-      <p class="special-banner-1" style="margin-bottom: 0.5ex;">
+      <p class="mb-1">
         <a href="https://opensciencegrid.org/campus-cyberinfrastructure">Learn more about PATh and OSG's collaboration</a> with CC* recipients.
       </p>
     </div>
-  </div>
-  <div class="col-md-4 mb-4 bg-white-offset">
-    <div class="m-2">
-      <h2 class="m-0">Events</h2>
-      <div class="pr-0 pl-0 pb-2 pt-3 border-top border-dark border-2">
-        {% assign events = site.events | sort: "start_date" %}
-        {% if events.size > 0 %}
-        {% for event in events %}
-        {% include events/event-card-sidebar.html event=event %}
-        {% endfor %}
-        {% else %}
-        <h2>No Upcoming Events</h2>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-  <div class="col-12 border-top border-4 border-primary pt-4">
-    <div class="row">
-      <div class="col-lg-6">
+    <div class="row border-top border-4 border-primary ">
+      <div class="col-12 col-lg-6">
         <h3>What We Do</h3>
         <p>The OSG facilitates access to distributed high throughput computing for research in the US.
           The resources accessible through the OSG are contributed by the community, organized by the OSG, and governed by the OSG consortium.
@@ -80,6 +63,26 @@ layout: default
           It highlights OSG as providing distributed high throughput computing services to the U.S. research community.
         </p>
       </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="bg-white-offset">
+      <div class="row m-0">
+        <h2 class="m-0 mt-2">Events</h2>
+        <div class="col-12">
+          <div class="border-top border-2 border-dark pt-2">
+            {% assign events = site.events | sort: "start_date" %}
+            {% if events.size > 0 %}
+            {% for event in events %}
+            {% include events/event-card-sidebar.html event=event %}
+            {% endfor %}
+            {% else %}
+            <h2>No Upcoming Events</h2>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
