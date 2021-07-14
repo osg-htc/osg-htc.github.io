@@ -4,6 +4,9 @@
     background-color: inherit;
     border: 0px;
   }
+  .card:hover {
+    background-color: rgba(0,0,0,0.1);
+  }
   .card-header {
     color: $gray-600;
     background-color: inherit;
