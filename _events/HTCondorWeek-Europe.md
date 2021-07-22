@@ -1,7 +1,6 @@
 ---
 short_title: European HTCondor Workshop 
 title: "European HTCondor Workshop Sept 20 - 24"
-layout: events
 published: true
 
 excerpt: |
