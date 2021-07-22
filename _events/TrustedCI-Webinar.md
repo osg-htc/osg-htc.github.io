@@ -34,6 +34,8 @@ functioning infrastructure.
 
 **About the speaker** 
 
+image: "/assets/images/events/bockelman-smaller.jpeg"
+
 Brian Bockelman is a Principal Investigator at the Morgridge Institute for Research and co-PI on the Partnership to Advance Throughput Computing (PATh) 
 and Institute for Research and Innovation in Software for High Energy Physics (IRIS-HEP).  Within the OSG, he leads the Technology Area, which provides the 
 software and technologies that underpin the OSG fabric of services.  He is also a co-PI on the new SciAuth project, led by Jim Basney, which aims to coordinate 
