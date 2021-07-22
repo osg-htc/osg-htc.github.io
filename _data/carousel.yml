@@ -56,7 +56,7 @@
   link: "/news/2017/11/07/ligo-virgo.html"
   link_label: "Read more"
   date: 2017-11-07
-- image: "/assets/images/osguserschool.png"
+- image: "/assets/images/events/Madison-Header.jpg"
   alt: "OSG Virtual School 2021"
   title: "OSG Virtual School August 2-13, 2021"
   title_color: "light"
@@ -64,12 +64,4 @@
   link: "https://opensciencegrid.org/virtual-school-2021/"
   link_label: "Learn More"
   date: 2021-05-02
-- image: "/assets/images/OSPool-Million-Core-Hours-wide.png"
-  alt: "OSPool Usage Hits Daily Record"
-  title: "OSPool Usage Hits Daily Record"
-  title_color: "dark"
-  description: "OSPool goes over 1.1 million core hours"
-  link: "https://opensciencegrid.org/news/2021/06/10/OSPool-Hits-Record-Utilization.html"
-  link_label: "Read More"
-  date: 2021-06-08
   
