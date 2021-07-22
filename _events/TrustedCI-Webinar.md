@@ -34,9 +34,12 @@ functioning infrastructure.
 
 **About the speaker** 
 
-  <figure class="figure">
-  <img src="/assets/images/events/bockelman-smaller.jpeg" class="figure-img img-fluid rounded" alt="BrianBockelman">
-  <figcaption class="figure-caption">Brian Bockelman</figcaption>
+<figure class="figure" style="
+    float: right;
+    margin-left: 20px;
+">
+<img src="/assets/images/events/bockelman-smaller.jpeg" class="figure-img img-fluid rounded" alt="BrianBockelman">
+<figcaption class="figure-caption">Brian Bockelman</figcaption>
 </figure>
 
 Brian Bockelman is a Principal Investigator at the Morgridge Institute for Research and co-PI on the Partnership to Advance Throughput Computing (PATh) 
