@@ -1,6 +1,6 @@
 ---
 short_title: Trusted CI Webinar
-title: "Trusted CI webinar"
+title: "Trusted CI Webinar"
 published: true
 
 excerpt:
