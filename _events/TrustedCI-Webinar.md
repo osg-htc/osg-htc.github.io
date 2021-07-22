@@ -11,6 +11,7 @@ start_date: 2021-07-26
 end_date: 2021-07-26
 location: "Virtual"
 link: "https://iu.zoom.us/webinar/register/WN_gBLnpC-yS_-en3vKAbeFzQ"
+image: "assets/images/events/trust-webinar-preview.png"
 header_image: "assets/images/events/trust-banner.png"
 ---
 
