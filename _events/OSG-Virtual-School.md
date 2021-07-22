@@ -17,7 +17,7 @@ start_date: 2021-08-02
 end_date: 2021-08-13
 location: "Virtual"
 link: "https://opensciencegrid.org/virtual-school-2021/"
-image: "assets/images/events/osguserschool.png"
+image: "assets/images/events/code-graphic.png"
 header_image: "assets/images/events/Madison-Header.jpg"
 ---
 

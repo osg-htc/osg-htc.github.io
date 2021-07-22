@@ -12,7 +12,7 @@ layout: default
 {% for event_index in (0..num_events_sub_one) %}
 
 {% assign date = events[event_index].start_date | date: "%e" %}
-{% if events[event_index].end_date %}
+{% if events[event_index].end_date != events[event_index].start_date %}
 {% assign date = events[event_index].end_date | date: "-%e %B %Y" | prepend: date %}
 {% else %}
 {% assign date = events[event_index].start_date | date: " %B %Y" | prepend: date %}

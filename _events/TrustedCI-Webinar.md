@@ -1,6 +1,6 @@
 ---
 short_title: Trusted CI Webinar
-title: "Trusted CI webinar"
+title: "Trusted CI Webinar"
 published: true
 
 excerpt:
@@ -11,6 +11,7 @@ start_date: 2021-07-26
 end_date: 2021-07-26
 location: "Virtual"
 link: "https://iu.zoom.us/webinar/register/WN_gBLnpC-yS_-en3vKAbeFzQ"
+image: "assets/images/events/trust-webinar-preview.png"
 header_image: "assets/images/events/trust-banner.png"
 ---
 
@@ -32,6 +33,14 @@ In this talk, we’ll cover the journey of the OSG to a capability-based authori
 functioning infrastructure.
 
 **About the speaker** 
+
+<figure class="figure" style="
+    float: right;
+    margin-left: 20px;
+">
+<img src="/assets/images/events/bockelman-smaller.jpeg" class="figure-img img-fluid rounded" alt="BrianBockelman">
+<figcaption class="figure-caption">Brian Bockelman</figcaption>
+</figure>
 
 Brian Bockelman is a Principal Investigator at the Morgridge Institute for Research and co-PI on the Partnership to Advance Throughput Computing (PATh) 
 and Institute for Research and Innovation in Software for High Energy Physics (IRIS-HEP).  Within the OSG, he leads the Technology Area, which provides the 
