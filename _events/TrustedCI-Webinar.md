@@ -6,7 +6,8 @@ published: true
 excerpt:
     Join OSG’s own Brian Bockelman for a talk on the journey to a capability-based authorization, and the challenges and opportunities of changing trust 
     models for a functioning infrastructure. 
-  
+
+start_date: 2021-07-26
 end_date: 2021-07-26
 location: "Virtual"
 link: "https://iu.zoom.us/webinar/register/WN_gBLnpC-yS_-en3vKAbeFzQ"
