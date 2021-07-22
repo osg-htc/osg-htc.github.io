@@ -16,8 +16,8 @@ start_date: 2021-09-20
 end_date: 2021-09-24
 location: "Virtual"
 link: "Coming Soon"
-image: "/images/events/HTCondorEurope.jpeg"
-header_image: "/images/events/HTCondorEurope.jpeg"
+image: "/images/events/HTCondor-Europe.jpeg"
+header_image: "/images/events/HTCondor-Europe.jpeg"
 ---
 
 {% capture main %}
