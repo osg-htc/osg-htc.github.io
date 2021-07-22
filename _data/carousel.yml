@@ -56,7 +56,7 @@
   link: "/news/2017/11/07/ligo-virgo.html"
   link_label: "Read more"
   date: 2017-11-07
-- image: "assets/images/events/UserSchool-Carousel.png"
+- image: "/assets/images/events/UserSchool-Carousel.png"
   alt: "OSG Virtual School 2021"
   title: "OSG Virtual School August 2-13, 2021"
   title_color: "light"
