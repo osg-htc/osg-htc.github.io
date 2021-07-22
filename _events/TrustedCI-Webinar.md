@@ -34,7 +34,7 @@ functioning infrastructure.
 
 **About the speaker** 
 
-image: "/assets/images/events/bockelman-smaller.jpeg"
+![Headshot of Brian Bockelman](/assets/images/events/bockelman-smaller.jpeg)
 
 Brian Bockelman is a Principal Investigator at the Morgridge Institute for Research and co-PI on the Partnership to Advance Throughput Computing (PATh) 
 and Institute for Research and Innovation in Software for High Energy Physics (IRIS-HEP).  Within the OSG, he leads the Technology Area, which provides the 
