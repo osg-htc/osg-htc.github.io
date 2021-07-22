@@ -11,7 +11,7 @@ start_date: 2021-07-26
 end_date: 2021-07-27
 location: "Virtual"
 link: "https://iu.zoom.us/webinar/register/WN_gBLnpC-yS_-en3vKAbeFzQ"
-image: "assets/images/team/Brian-Bockelman.jpg"
+image: "assets/images/events/trust-banner.jpg"
 header_image: "assets/images/events/trust-banner.jpg"
 ---
 
