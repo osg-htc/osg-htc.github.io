@@ -1,6 +1,6 @@
 ---
 short_title: Trusted CI Webinar
-title: "Trusted CI webinar: A capability-based authorization infrastructure for distributed High Throughput Computing"
+title: "Trusted CI webinar"
 published: true
 
 excerpt:
@@ -17,7 +17,7 @@ header_image: "assets/images/events/Madison-Header.jpg"
 
 {% capture main %}
 
-<p style="font-size: larger; font-weight: bold;">Join OSG’s own Brian Bockelman for a talk on the journey to a capability-based authorization, and the challenges and opportunities of changing trust models for a functioning infrastructure.</p>
+<p style="font-size: larger; font-weight: bold;">A capability-based authorization infrastructure for distributed High Throughput Computing</p>
 
 The OSG Consortium provides researchers with the ability to bring their distributed high throughput computing (dHTC) workloads to a pool of resources consisting 
 of hardware across approximately 100 different sites. Using this “Open Science Pool” resource, projects can leverage the opportunistic access (nodes that would be 
@@ -62,7 +62,7 @@ Monday, July 26th at 11:00am ET
 Virtual webinar on zoom
 
 # Registration
-Register [here] (https://iu.zoom.us/webinar/register/WN_gBLnpC-yS_-en3vKAbeFzQ).
+Register [here](https://iu.zoom.us/webinar/register/WN_gBLnpC-yS_-en3vKAbeFzQ).
 
 {% endcapture %}
 
