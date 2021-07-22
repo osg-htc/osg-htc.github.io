@@ -56,12 +56,12 @@
   link: "/news/2017/11/07/ligo-virgo.html"
   link_label: "Read more"
   date: 2017-11-07
-- image: "/assets/images/events/Madison-Header.jpg"
+- image: "/assets/images/events/Madison-Carousel.png"
   alt: "OSG Virtual School 2021"
   title: "OSG Virtual School August 2-13, 2021"
   title_color: "light"
-  description: "Researchers, expand the capabilities of your research with OSG"
-  link: "https://opensciencegrid.org/virtual-school-2021/"
+  description: "For the first time, the OSG Virtual School 2021 will open lectures live to the public!"
+  link: "https://opensciencegrid.org/events/OSG-Virtual-School/"
   link_label: "Learn More"
   date: 2021-05-02
   
