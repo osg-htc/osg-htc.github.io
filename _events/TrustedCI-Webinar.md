@@ -34,8 +34,6 @@ functioning infrastructure.
 
 **About the speaker** 
 
-![Headshot of Brian Bockelman](/assets/images/events/bockelman-smaller.jpeg)
-
   <figure class="figure">
   <img src="{{site.baseurl}}/assets/images/events/bockelman-smaller.jpeg" class="figure-img img-fluid rounded" alt="BrianBockelman">
   <figcaption class="figure-caption">Brian Bockelman</figcaption>
