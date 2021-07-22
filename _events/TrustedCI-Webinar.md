@@ -35,7 +35,7 @@ functioning infrastructure.
 **About the speaker** 
 
   <figure class="figure">
-  <img src="{{site.baseurl}}/assets/images/events/bockelman-smaller.jpeg" class="figure-img img-fluid rounded" alt="BrianBockelman">
+  <img src="/assets/images/events/bockelman-smaller.jpeg" class="figure-img img-fluid rounded" alt="BrianBockelman">
   <figcaption class="figure-caption">Brian Bockelman</figcaption>
 </figure>
 
