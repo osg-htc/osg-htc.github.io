@@ -5,7 +5,7 @@ layout: default
 
 <h1>OSG Events</h1>
 
-{% assign events = site.events %}
+{% assign events = site.events | sort: "end_date" %}
 {% assign num_events = events.size %}
 {% assign num_events_sub_one = num_events | minus: 1 %}
 
