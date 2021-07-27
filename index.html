@@ -69,13 +69,13 @@ layout: default
     <div class="bg-white-offset overflow-auto ms-lg-2 pb-0 p-2">
       <h2 class="m-0">Events</h2>
       <div class="border-top border-2 border-dark pt-2">
-        {% assign events = site.events | sort: "start_date" %}
-        {% if events.size > 0 %}
-        {% for event in events %}
-        {% include events/event-card-sidebar.html event=event %}
-        {% endfor %}
+        {% include get/future_events.html %}
+        {% if future_events.size > 0 %}
+          {% for event in future_events %}
+            {% include events/event-card-sidebar.html event=event %}
+          {% endfor %}
         {% else %}
-        <h2>No Upcoming Events </h2>
+          <h2>No Upcoming Events </h2>
         {% endif %}
       </div>
     </div>
