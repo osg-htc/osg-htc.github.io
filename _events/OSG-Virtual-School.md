@@ -4,13 +4,21 @@ title: "OSG Virtual School 2021"
 published: true
 
 excerpt: |
-    The OSG Virtual School 2021 prepares attendees to use high throughput computing (HTC)&nbsp;&mdash;
-    whether on a local system or using
-    [OSG](https://www.youtube.com/watch?v=t2PzIy-vvaE&list=PLBWb4iScSWcPy7LQ4BuXmm8Z2xO4ZW1J_)&nbsp;&mdash;
-    to run large-scale research simulation, analysis, and other applications for cutting-edge science. 
-    
-    
-    - We plan to make one instance of each lecture this year available to anyone who registered. Please watch the [OSG Virtual School 2021 website] (opensciencegrid.org/virtual-school-2021) for more details to be added in August. Also, all the written materials will be available publicly online for everyone, regardless of whether you applied to attend this year. We will be posting these materials immediately following the conclustion of the school this year.
+    <p style="font-size: larger; font-weight: bold;">For the first time, the OSG Virtual School 2021 will open its core lectures live to the public!</p>
+
+- The OSG User School is a premier training program for researchers, facilitators, and others who are interested in learning more about how to use High Throughput Computing to advance research. The application deadline to participate fully has passed, but this year the OSG is inviting the public to attend daily lectures and demonstrations during the School’s first week.  
+
+- The public lectures are excellent learning opportunities for students and researchers who could not be full participants of the School. The sessions are also well suited for those interested in learning more about High Throughput Computing, OSG, HTCondor, or leveraging any of these in their computing research.  
+
+- Topics include:
+
+* The main concepts of High Throughput Computing (HTC)
+* The basics of using HTCondor
+* Getting started on OSG, a national distributed HTC infrastructure for Open Science
+* How to prepare software for use in HTC systems
+* Handling data (input and output) in HTC systems
+
+- The Public lectures are held daily, August 2–6 from 2:30–4:00 pm CST. Browse the [timetable](https://indico.fnal.gov/event/49686/timetable/#20210802) for a detailed schedule. [Registration](https://indico.fnal.gov/event/49686/registrations/3094/) is open through August 6 and is free, but required. 
     
     - We plan to continue running the OSG User School every year! In a typical (non-pandemic) year, we accept applications during the month of March. So please keep an eye out for future offerings. (Applications for 2021 are closed.)
 start_date: 2021-08-02
