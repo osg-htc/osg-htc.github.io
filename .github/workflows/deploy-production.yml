@@ -1,7 +1,5 @@
 name: Deploy Production Site
 
-domain: osg-htc.org
-
 on:
   push:
     branches: [production]
@@ -17,6 +15,7 @@ jobs:
 
       - name: Remove prod configurations
         run: |
+          sed -i "s|opensciencegrid.org|osg-htc.org|" CNAME
           git config user.name "Automatic Production Deploy"
           git config user.email "help@opensciencegrid.org"
           git commit -am "GHA: $GITHUB_REPOSITORY #$GITHUB_RUN_NUMBER)"
