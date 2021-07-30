@@ -4,7 +4,7 @@ title: "OSG Virtual School 2021"
 published: true
 
 excerpt: |
-    <p style="font-size: larger; font-weight: bold;">For the first time, the OSG Virtual School 2021 will open its core lectures live to the public!</p>
+- For the first time, the OSG Virtual School 2021 will open its core lectures live to the public!</p>
 
 - The OSG User School is a premier training program for researchers, facilitators, and others who are interested in learning more about how to use High Throughput Computing to advance research. The application deadline to participate fully has passed, but this year the OSG is inviting the public to attend daily lectures and demonstrations during the School’s first week.  
 
