@@ -5,6 +5,8 @@ publish: true
 --- 
 ***How undergraduates at the University of Nebraska-Lincoln developed a science gateway that enables researchers to build RNA nanomachines for therapeutic, engineering, and basic science applications.***
 
+By Josie Watkins
+
 <img src="{{ '/assets/images/Science-Gateway-Students.jpeg' | relative_url }}" alt="UNL students on graduation"/>
 
 *The UNL students involved in the capstone project, on graduation day. Order from left to right: Evan, Josh, Dan, Daniel, and Conner.*
