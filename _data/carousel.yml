@@ -64,4 +64,11 @@
   link: "https://opensciencegrid.org/events/OSG-Virtual-School/"
   link_label: "Learn More"
   date: 2021-07-22
-  
+- image: "/assets/images/Science-Gateway-Carousel.png"
+  alt: "UNL Students on graduation day"
+  title: "OSG fuels a student-developed computing platform to advance RNA nanomachines"
+  title_color: "dark"
+  description: "How undergraduates at the University of Nebraska-Lincoln developed a science gateway that enables researchers to build RNA nanomachines for therapeutic, engineering, and basic science applications."
+  link: "https://opensciencegrid.org/news/2021/08/10/Science-Gateway.html"
+  link_label: "Learn More"
+  date: 2021-08-11
