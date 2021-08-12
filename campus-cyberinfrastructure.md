@@ -31,7 +31,7 @@ The CC* Program
 The National Science Foundation (NSF) supports the Open Science Grid and campuses that contribute resources to it. For 2021 the National Science Foundation funds the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank"> Campus Cyberinfrastructure (CC*) program (NSF 21-528).</a>
 This program invests in coordinated campus-level networking and cyberinfrastructure improvements, innovation, integration, and engineering for science applications and distributed research projects. Learning and workforce development (LWD) in cyberinfrastructure is explicitly addressed in the program. Science-driven requirements are the primary motivation for any proposed activity.
 
-**Upcoming Deadlines: March 1, 2021; October 11, 2021** 
+**Upcoming Deadline: October 11, 2021** 
 
 The NSF supports awards in 5 program areas:
 >- 	Data-Driven Networking Infrastructure for the Campus and Researcher awards will be supported at up to $500,000 total for up to 2 years
