@@ -1,5 +1,6 @@
 ---
 title: OSG Pool
+hide_title: True
 ---
 
 <figure class="figure">
