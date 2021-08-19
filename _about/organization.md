@@ -14,24 +14,13 @@ team areas.
 The OSG is made up of Member Organizations who register with the OSG Operations Center and works with many Partner
 Organizations.
 
-Virtual Organizations
+Organizations Contributing to or Utilizaing the OSG
 =====================
 
-A Virtual Organization (VO) is a set of groups or individuals defined by some common cyber-infrastructure need.
-This can be a scientific experiment, a university campus or a distributed research effort.
-A VO represents all its members and their common needs in a grid environment.
-A VO also includes the group’s computing/storage resources and services.
-We typically use the terms site, computing element (CE), and/or storage element (SE) to refer to the resources owned and
-operated by a VO.
+OSG brings together many organizations for contracted or opportunistic sharing of resources, allowing
+for more effective use of their collective resources. Use of resources at a site is determined by a combination of the site’s local policies and the user site policies.
 
-OSG brings together many VOs for contracted and/or opportunistic sharing of resources in a grid environment, allowing
-for more effective use of their collective resources.
-Use of resources at a site is determined by a combination of the site’s local policies and the user VO’s policies.
-VOs are responsible for contracting individually with each other for guaranteed access to resources.
-
-Many VOs in the OSG address the specific requirements of their users with their own user support that provides more
-in-depth help than the OSG does.
-Additionally some VOs provide dedicated resources to the OSG that provide preferred access to their members.
+Many organizations in the OSG address the specific requirements of their users with their own user support. Additionally, some provide dedicated resources to the OSG that provide preferred access to their members.
 Some VOs provide a problem specific user interface to their members.
 
 The OSG assumes that each user is preferably supported by their membership VO.
@@ -44,12 +33,12 @@ OSGConnect welcomes any researcher affiliated with U.S. institutions and funded 
 If you don’t know what VO you belong to or should belong to, please contact [OSG Support](mailto:help@opensciencegrid.org)
 for help.
 
-List of Virtual Organizations
+List of \Organizations
 -----------------------------
 
-The table below contains all active VOs in the OSG, their fields of science, and support information.
+The table below contains all organizations in the OSG, their fields of science, and support information.
 
-| Virtual Organization | Fields of Science | Support |
+| Organization | Fields of Science | Support |
 |----------------------|-------------------|---------|
 | A Large Ion Collider Experiment ([ALICE](http://aliceinfo.cern.ch)) | Physics and astronomy, High Energy Physics | <http://aliceinfo.cern.ch> |
 | A worldwide e-Infrastructure for NMR and structural biology ([ENMR](http://www.wenmr.eu)) | Biochemistry, Bioinformatics, Medical Sciences, Microbiology, Molecular and Structural Biosciences, Biological Sciences | <http://www.wenmr.eu> |
