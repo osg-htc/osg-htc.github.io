@@ -17,30 +17,29 @@ Organizations.
 Joining the OSG 
 =====================
 
-OSG brings together many organizations for contracted or opportunistic sharing of resources, allowing
-for more effective use of collective resources. If you are not already part of a organization utiziing the OSG, you can join the OSG via [OSGConnect](http://osgconnect.net/). OSGConnect welcomes any researcher affiliated with U.S. institutions and funded by U.S. funding agencies!
+OSG brings together many organizations for contracted or opportunistic sharing of resources. If you are not already part of a organization utiziing the OSG, you can join the OSG via [OSGConnect](http://osgconnect.net/). 
 
-If you don’t know what organization you belong to or should belong to, please contact [OSG Support](mailto:help@opensciencegrid.org)
+OSGConnect also welcomes any researcher affiliated with U.S. institutions and funded by U.S. funding agencies! If you don’t know what organization you belong to or should belong to, please contact [OSG Support](mailto:help@opensciencegrid.org)
 for help.
 
 Use of Resources and User Support 
 =====================
 
-Use of resources at a site is determined by a combination of the site’s local policies and the user's policies.
-Many organizations in the OSG address the specific requirements of their users with their own user support. Additionally, some provide dedicated resources to the OSG that provide preferred access to their members. Some organizations provide a problem specific user interface to their members.
+Use of resources at a member site is determined by a combination of the site’s local policies and the user's policies.
+Many organizations in the OSG support the specific requirements of their users with their own facilitation and support team. Additionally, some provide dedicated resources to the OSG that provide preferred access to their members. Some organizations provide a problem specific user interface to their members.
 
 The OSG assumes that each user is preferably supported by their membership organization.
 Each group is expected to register with the OSG and provide support for their members.
 OSG support is maintained through an organization representative.
 
 
-List of \Organizations
+List of Organizations
 -----------------------------
 
-The table below contains a subset of the organizations in the OSG, their fields of science, and support information.
+The list below contains a subset of the organizations in the OSG, their fields of science, and support information.
 
 | Organization | Fields of Science | Support |
-|----------------------|-------------------|---------|
+
 
 | Brookhaven National Laboratory ([BNL](http://www.bnl.gov)) | Biological Sciences, Chemistry, High Energy Physics, Multi-Science Community, Nuclear Physics, Physics and astronomy, National Laboratory | |
 | Chicagoland Observatory for Underground Particle Physics ([COUPP](http://www-coupp.fnal.gov)) | Astrophysics, High Energy Physics | <http://fermigrid.fnal.gov/> 
