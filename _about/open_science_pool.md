@@ -1,6 +1,5 @@
 ---
-title: OSG Pool
-hide_title: True
+title: Open Science Pool
 ---
 
 <figure class="figure">
