@@ -14,23 +14,23 @@ team areas.
 The OSG is made up of Member Organizations who register with the OSG Operations Center and works with many Partner
 Organizations.
 
-Organizations Contributing to or Utilizaing the OSG
+Organizations Contributing to or Utilizing the OSG
 =====================
 
 OSG brings together many organizations for contracted or opportunistic sharing of resources, allowing
-for more effective use of their collective resources. Use of resources at a site is determined by a combination of the site’s local policies and the user site policies.
+for more effective use of their collective resources. Use of resources at a site is determined by a combination of the site’s local policies and the user  policies.
 
 Many organizations in the OSG address the specific requirements of their users with their own user support. Additionally, some provide dedicated resources to the OSG that provide preferred access to their members.
-Some VOs provide a problem specific user interface to their members.
+Some organizations provide a problem specific user interface to their members.
 
-The OSG assumes that each user is preferably supported by their membership VO.
-Each VO is expected to register with the OSG and provide support for their members.
-OSG support is maintained through a VO representative for each VO rather than a member of a VO.
+The OSG assumes that each user is preferably supported by their membership organization.
+Each group is expected to register with the OSG and provide support for their members.
+OSG support is maintained through an organization representative.
 
-If you are not already part of a VO, you can join OSG via [OSGConnect](http://osgconnect.net/).
+If you are not already part of a organization utiziing the OSG, you can join OSG via [OSGConnect](http://osgconnect.net/).
 OSGConnect welcomes any researcher affiliated with U.S. institutions and funded by U.S. funding agencies!
 
-If you don’t know what VO you belong to or should belong to, please contact [OSG Support](mailto:help@opensciencegrid.org)
+If you don’t know what organization you belong to or should belong to, please contact [OSG Support](mailto:help@opensciencegrid.org)
 for help.
 
 List of \Organizations
