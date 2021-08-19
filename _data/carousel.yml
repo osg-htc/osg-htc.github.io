@@ -58,9 +58,9 @@
   date: 2017-11-07
   image: "/assets/images/osgvs_carousel.png"
   alt: "OSG Virtual School Showcase Speakers"
-  title: "HTC makes lasting impacts on Researchers Work"
-  title_color: "light"
-  description: "During the OSG School Showcase, three different researchers shared how high throughput computing has made lasting impacts on their work."
+  title: "OSG School Showcase"
+  title_color: "dark"
+  description: "Three different researchers shared how high throughput computing has made lasting impacts on their work."
   link: "https://opensciencegrid.org/news/2021/08/19/Showcase.html"
   link_label: "Learn More"
   date: 2021-08-18
