@@ -15,7 +15,6 @@ The OSG is made up of Member Organizations who register with the OSG Operations 
 Organizations.
 
 ## Joining the OSG 
-=====================
 
 OSG brings together many organizations for contracted or opportunistic sharing of resources. If you are not already part of a organization utiziing the OSG, you can join the OSG via [OSGConnect](http://osgconnect.net/). 
 
@@ -23,7 +22,6 @@ OSGConnect also welcomes any researcher affiliated with U.S. institutions and fu
 for help.
 
 ## Use of Resources and User Support 
-=====================
 
 Use of resources at a member site is determined by a combination of the site’s local policies and the user's policies.
 Many organizations in the OSG support the specific requirements of their users with their own facilitation and support team. Additionally, some provide dedicated resources to the OSG that provide preferred access to their members. Some organizations provide a problem specific user interface to their members.
