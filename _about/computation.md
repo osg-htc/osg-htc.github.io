@@ -1,5 +1,6 @@
 ---
 title: Computation on the OSG
+published: false
 ---
 
 *What kind of computational tasks are likely accelerated on the Open Science Grid?*
