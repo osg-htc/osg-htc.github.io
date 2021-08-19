@@ -28,7 +28,7 @@ Steve Groom serves as task manager for the NASA/IPAC Infrared Science Archive (I
 
 “We are data recyclers,” says Groom. “We exist to support research that the original mission did not envision or could not do. We are now looking at computing because the data volumes are getting really large.”
 
-Groom presented his work at the Open Science Grid (OSG) All Hands Meeting in March 2017, including research highlights of science that has been done using the archive’s data. Because of this data tsunami, Groom is exploring the use of the OSG.
+Groom presented his work at the OSG All Hands Meeting in March 2017, including research highlights of science that has been done using the archive’s data. Because of this data tsunami, Groom is exploring the use of the Open Science Pool.
 
 “New science is being done not by retrieving a single observation but by looking at large numbers of observations and looking for patterns,” says Groom. To see those patterns, researchers must process all the data or large amounts of it at once. But the data are becoming so large that they are becoming difficult to move.
 

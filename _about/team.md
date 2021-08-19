@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The Open Science Grid Team
+title: The OSG Team
 ---
 
 <div class="container-fluid">

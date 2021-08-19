@@ -16,7 +16,7 @@ excerpt: >
 
 <div class="alert alert-primary" role="alert">
 If you need <strong>GPU</strong>, Data, or Computational resources to
-complete your science, contact the Open Science Grid (OSG) facilitation
+complete your science, contact the OSG facilitation
 team at <a href="mailto:help@opensciencegrid.org">help@opensciencegrid.org</a>
 to arrange a meeting. OSG provides free, opportunistic high throughput
 computing resources to the U.S. research community.
@@ -73,8 +73,7 @@ manager with IceCube, conducted the actual run.
 “We focused this GPU cloud burst in the area of multi-messenger astrophysics, which is based on the
 observation and analysis of what we call ‘messenger’ signals, in this
 case neutrinos,” said Würthwein, also a physics professor at the
-University of California San Diego and Executive Director of the [Open Science Grid
-(OSG)](https://opensciencegrid.org/), a multi-disciplinary
+University of California San Diego and Executive Director of the [OSG](https://opensciencegrid.org/), a multi-disciplinary
 research partnership specializing in high-throughput computational
 services funded by the NSF.
 

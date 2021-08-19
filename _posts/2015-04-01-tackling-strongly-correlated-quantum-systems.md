@@ -1,11 +1,11 @@
 ---
-title: "Tackling Strongly Correlated Quantum Systems on the Open Science Grid"
+title: "Tackling Strongly Correlated Quantum Systems on OS Pool"
 date: 2015-04-01 12:00:00 -0600
 categories: Particle Physics
 ---
 
 Duke University Associate Professor of Physics Shailesh Chandrasekharan and his graduate student Venkitesh Ayyar are
-using the Open Science Grid (OSG) to tackle notoriously difficult problems in quantum systems.
+using the OS pool to tackle notoriously difficult problems in quantum systems.
 
 <style>
 figure.headshot {
