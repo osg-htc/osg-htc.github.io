@@ -8,7 +8,7 @@ publish: true
 By Josephine Watkins
 
 <figure>
-  <img src="{{ '/assets/images/Hannah-Showcase.jpg' | relative_url }}" alt="Brain Model"/ width="600px">
+  <img src="{{ '/assets/images/Hannah-Showcase.jpg' | relative_url }}" alt="Brain Model" width="600px">
   <figcaption class="figure-caption">Image by Robina Weermeijer on Unsplash<br/></figcaption>
 </figure>
 
