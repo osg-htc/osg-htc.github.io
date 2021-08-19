@@ -5,8 +5,8 @@ publish: true
 --- 
 
  <figure class="figure">
-  <img src="{{site.baseurl}}/assets/images/nickcooley.png" class="figure-img img-fluid rounded" alt="NicholasCooley">
-  <figcaption class="figure-caption">David Swanson Memorial Winner Nicholas Cooley</figcaption>
+  <img src="{{site.baseurl}}/assets/images/OSPool-Million-Core-Hours-wide.png" class="figure-img img-fluid rounded" alt="NicholasCooley">
+  <figcaption class="figure-caption"OSPool Core Hours</figcaption>
 </figure>
 
 
