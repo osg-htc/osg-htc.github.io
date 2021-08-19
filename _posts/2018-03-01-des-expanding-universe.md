@@ -36,7 +36,7 @@ analysis.
   </div>
 </div>
 
-To help in these efforts, DES looks to Open Science Grid (OSG) to provide a portion of their computing power.
+To help in these efforts, DES looks to the Open Science Pool to provide a portion of their computing power.
 Over the last year, DES has gained roughly 4.58 million hours (522 years) of computing
 from OSG. "The main areas OSG has provided resources have been to the TNO/dwarf planet work,
 and the LIGO follow-up efforts," says Herner.

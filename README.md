@@ -1,6 +1,6 @@
-## Welcome to the Open Science Grid
+## Welcome to the OSG
 
-This repository contains the source code of the Open Science Grid website; it is not the public facing site.
+This repository contains the source code of the OSG website; it is not the public facing site.
 
 The real webpage for the OSG is <https://www.opensciencegrid.org>.
 
@@ -24,7 +24,7 @@ if it wasn't for the OSG. Sharing allows individual researchers to access larger
 
 ### Resource Providers
 
-The Open Science Grid consists of computing and storage elements at over 100 individual sites spanning the United States.
+The OSG consists of computing and storage elements at over 100 individual sites spanning the United States.
 These sites, primarily at universities and national labs, range in size from a few hundred to tens of thousands of CPU cores.
 
 ### The OSG Software Stack
