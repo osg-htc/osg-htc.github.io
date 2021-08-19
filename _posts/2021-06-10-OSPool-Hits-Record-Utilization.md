@@ -5,7 +5,7 @@ publish: true
 --- 
 
  <figure class="figure">
-  <img src="{{site.baseurl}}/assets/images/OSPool-Million-Core-Hours-wide.png" class="figure-img img-fluid rounded" alt="NicholasCooley">
+  <img src="{{site.baseurl}}/assets/images/OSPool-Million-Core-Hours-wide.png" class="figure-img img-fluid rounded" alt="OSPool">
   <figcaption class="figure-caption"OSPool Core Hours</figcaption>
 </figure>
 
