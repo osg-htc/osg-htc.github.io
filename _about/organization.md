@@ -36,7 +36,7 @@ for help.
 List of \Organizations
 -----------------------------
 
-The table below contains all organizations in the OSG, their fields of science, and support information.
+The table below contains organizations in the OSG, their fields of science, and support information.
 
 | Organization | Fields of Science | Support |
 |----------------------|-------------------|---------|
