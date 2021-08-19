@@ -21,7 +21,7 @@ waves. With observations based on both gravitational waves and the electromagnet
 of a new era: multi-messenger astronomy.
 
 Researchers from LIGO and Virgo use OSG to aggregate computing resources worldwide to analyze the data recorded with
-their instruments. The Open Science Grid (OSG) is a platform that allows researchers to use computing resources around
+their instruments. The Open Science Pool is a platform that allows researchers to use computing resources around
 the world. In the past year, LIGO performed approximately 8.4 million hours of computing on resources contributed by a
 few dozen institutions in half a dozen countries across Europe and North America.
 

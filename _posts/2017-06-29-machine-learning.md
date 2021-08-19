@@ -1,10 +1,10 @@
 ---
-title: Machine learning insights into molecular science using the Open Science Grid
+title: Machine learning insights into molecular science using the Open Science Pool
 date: 2017-06-29 12:00:00 -0600
 categories: Machine Learning
 ---
 
-Machine learning insights into molecular science using the Open Science Grid
+Machine learning insights into molecular science using the Open Science Pool
 Computation has extended what researchers can investigate in chemistry, biology, and material science. Studying complex systems like proteins or nanocomposites can use similar techniques for common challenges. For example, computational power is expanding the horizons of protein research and opening up vast new possibilities for drug discovery and disease treatment.
 
 Olexandr Isayev is an assistant professor at the School of Pharmacy, University of North Carolina (UNC) at Chapel Hill. Isayev is part of a group at UNC using machine learning for chemical problems and material science.
@@ -25,7 +25,7 @@ Similar to the human genome project, five years ago President Obama created a ne
 
 “Looking at a molecule or material based on geometry and topology, we can get the energy, and predict critical physical properties,” says Isayev. “This machine learning allows us to avoid many expensive uses of numeric simulation to understand the material.”
 
-The challenge for Isayev’s group is that initial data accumulation is extremely numerically time consuming. So, they use the Open Science Grid (OSG) to run simulations. Based on the data, they train their machine learning model, so the next time, instead of a time-consuming simulation model, they can use the machine learning model on a desktop PC.
+The challenge for Isayev’s group is that initial data accumulation is extremely numerically time consuming. So, they use the Open Science Pool to run simulations. Based on the data, they train their machine learning model, so the next time, instead of a time-consuming simulation model, they can use the machine learning model on a desktop PC.
 
 “Using machine learning to do the preliminary screening saves a lot of computing time,” says Isayev. “Since we performed the hard work, scientists can save a lot of time by prioritizing a few promising candidate materials instead of running everything.”
 

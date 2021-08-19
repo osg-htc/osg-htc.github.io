@@ -127,7 +127,7 @@ The table below contains all active VOs in the OSG, their fields of science, and
 | National Energy Research Scientific Computing (NERSC) | | |
 | Neutrino Experiment with a Xenon TPC ([next](http://next.ific.uv.es/next/experiment.html)) | High Energy Physics | <http://fermigrid.fnal.gov/> |
 | Oak Ridge National Laboratory ([ORNL](http://www.ornl.gov)) | Astrophysics, Biochemistry, Chemistry, Computer and Information Science and Engineering, Earth Sciences, Ecological and Environmental Sciences, Geographic Information Science, Gravitational Physics, High Energy Physics, Information Theory, Materials Science, Mathematical Sciences, Medical Sciences, Multi-Science Community, Nanoelectronics, Network Science, Nuclear Physics, Physics and astronomy, Statistics, National Laboratory | |
-| Open Science Grid ([OSG](http://www.opensciencegrid.org)) | Multi-Science Community | <http://www.opensciencegrid.org> |
+| OSG ([OSG](http://www.opensciencegrid.org)) | Multi-Science Community | <http://www.opensciencegrid.org> |
 | OSG Monitoring Information System ([MIS](https://twiki.grid.iu.edu/bin/view/VirtualOrganizations/VOInfo/MIS)) | Technology, Computer and Information Science and Engineering | <https://ticket.grid.iu.edu> |
 | Pacific Northwest National Laboratory ([PNNL](http://www.pnnl.gov/)) | Nuclear Physics, High Energy Physics | |
 | Pierre Auger Observatory ([auger](http://www.auger.org)) | Astrophysics | <http://ggus.eu> |

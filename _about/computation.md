@@ -1,8 +1,9 @@
 ---
 title: Computation on the OSG
+published: false
 ---
 
-*What kind of computational tasks are likely accelerated on the Open Science Grid?*
+*What kind of computational tasks are likely accelerated on the Open Science Pool?*
 
 Jobs run on the OSG will be able to execute on servers at up to 100 remote physical clusters, making OSG an ideal environment for computational problems that can be executed as numerous, independent, and relatively small/short tasks. 
 

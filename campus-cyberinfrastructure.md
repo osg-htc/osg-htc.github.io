@@ -5,7 +5,7 @@ categories: NSF Camput Cyberinfrastructure (CC*)
 layout: default
 ---
 
-Campus Cyberinfrastructure Award Recipients Power the OSG
+Campus Cyberinfrastructure Award Recipients Power the Open Science Pool
 =======================================================================
 
 The OSG consortium operates the Open Science Pool (OSPool). The OSPool is founded on the principle of sharing, and any researcher at a US institution can access it. The capacity that powers this national computing resources is contributed by clusters located at academic and research institutions. [Campus Cyberinfrastructure awardees](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) play an important role in the value that the OSPool brings to the national S&E community. By sharing their resources, Campus Cyberinfrastructure (CC*) award recipients provide tremendous support for open research.
@@ -28,7 +28,8 @@ Projects supported by these contributions include (among many others):
 The CC* Program
 ---------------
 
-The National Science Foundation (NSF) supports the OSG and campuses that contribute resources to it. For 2021 the National Science Foundation funds the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank"> Campus Cyberinfrastructure (CC*) program (NSF 21-528).</a>
+
+The National Science Foundation (NSF) supports the Open Science Pool and campuses that contribute resources to it. For 2021 the National Science Foundation funds the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank"> Campus Cyberinfrastructure (CC*) program (NSF 21-528).</a>
 This program invests in coordinated campus-level networking and cyberinfrastructure improvements, innovation, integration, and engineering for science applications and distributed research projects. Learning and workforce development (LWD) in cyberinfrastructure is explicitly addressed in the program. Science-driven requirements are the primary motivation for any proposed activity.
 
 **Upcoming Deadline: October 11, 2021** 
@@ -53,7 +54,7 @@ In the most recent call for proposals <a href="https://www.nsf.gov/funding/pgm_s
 > Proposals are required to commit to a minimum of 20% shared time on the cluster and describe their
 > approach to making the cluster available as a shared resource external to the campus, [...] One
 > possible approach to implementing such a federated distributed computing solution is joining a multi-campus
-> or national federated system such as the Open Science Grid.
+> or national federated system such as the Open Science Pool.
 
 The OSG team actively works with campuses to integrate them smoothly into the OSG. We have an experienced and friendly team of engineers and facilitators dedicated to supporting campus computational groups and ensuring a positive onboarding with the flexibility to meet your configuration needs. To get started please email [OSG Support](mailto:support@osgconnect.net).
 

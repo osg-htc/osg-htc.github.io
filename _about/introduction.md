@@ -5,7 +5,7 @@ redirect_from: /about/index.html
 
 ### What We Do
 
-The Open Science Grid (OSG) provides common service and support for resource providers and scientific institutions using
+The OSG provides common service and support for resource providers and scientific institutions using
 a distributed fabric of high throughput computational services.  The OSG does not own resources but provides software
 and services to users and resource providers alike to enable the opportunistic usage and sharing of resources.  The OSG
 is funded through a diverse portfolio of awards from the National Science Foundation and the Department of
