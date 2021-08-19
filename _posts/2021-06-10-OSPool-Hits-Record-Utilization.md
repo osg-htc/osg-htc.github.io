@@ -7,7 +7,6 @@ Researchers harnassing the capacity of the OSPool are racking up record-breaking
 
 <figure class="figure">
   <img src="{{site.baseurl}}/assets/images/OSPool-Million-Core-Hours-wide.png" class="figure-img img-fluid rounded" alt="OSPool">
-  <figcaption class="figure-caption"OSPool Core Hours</figcaption>
 </figure>
 
 The people behind these big numbers deserve some recognition. Researchers responsible for piling up these hours include: 
