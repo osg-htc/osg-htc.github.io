@@ -14,7 +14,7 @@ team areas.
 The OSG is made up of Member Organizations who register with the OSG Operations Center and works with many Partner
 Organizations.
 
-Joining the OSG 
+## Joining the OSG 
 =====================
 
 OSG brings together many organizations for contracted or opportunistic sharing of resources. If you are not already part of a organization utiziing the OSG, you can join the OSG via [OSGConnect](http://osgconnect.net/). 
@@ -22,7 +22,7 @@ OSG brings together many organizations for contracted or opportunistic sharing o
 OSGConnect also welcomes any researcher affiliated with U.S. institutions and funded by U.S. funding agencies! If you don’t know what organization you belong to or should belong to, please contact [OSG Support](mailto:help@opensciencegrid.org)
 for help.
 
-Use of Resources and User Support 
+## Use of Resources and User Support 
 =====================
 
 Use of resources at a member site is determined by a combination of the site’s local policies and the user's policies.
@@ -33,13 +33,10 @@ Each group is expected to register with the OSG and provide support for their me
 OSG support is maintained through an organization representative.
 
 
-List of Organizations
+## List of Organizations
 -----------------------------
 
 The list below contains a subset of the organizations in the OSG, their fields of science, and support information.
-
-| Organization | Fields of Science | Support |
-
 
 | Brookhaven National Laboratory ([BNL](http://www.bnl.gov)) | Biological Sciences, Chemistry, High Energy Physics, Multi-Science Community, Nuclear Physics, Physics and astronomy, National Laboratory | |
 | Chicagoland Observatory for Underground Particle Physics ([COUPP](http://www-coupp.fnal.gov)) | Astrophysics, High Energy Physics | <http://fermigrid.fnal.gov/> 
@@ -49,7 +46,6 @@ The list below contains a subset of the organizations in the OSG, their fields o
 | Fermi National Accelerator Laboratory ([Fermilab](http://fermigrid.fnal.gov/)) | High Energy Physics, Multi-Science Community, National Laboratory | <http://fermigrid.fnal.gov/> |
 | Gluex experiment at Jefferson Lab ([Gluex](http://www.gluex.org)) | High Energy Physics, Nuclear Physics | <http://gryphn.phys.uconn.edu/UConn-OSG/support.html> 
 | Great Plains Network ([GPN](http://www.greatplains.net/)) | Community Grid | <http://t2.unl.edu/documentation/gpn> |
-| Grid Colombia Education ([GCEDU](http://www.gridcolombia.org)) | Education | <http://wiki.gridcolombia.org> |
 | Grid Laboratory of Wisconsin ([GLOW](http://www.chtc.cs.wisc.edu)) | Community Grid, Multi-Science Community | <http://www.cs.wisc.edu/condor/glow/> |
 | Holland Computing Center at the University of Nebraska. ([HCC](http://hcc.unl.edu)) | Bioinformatics, Community Grid, Computer and Information Science and Engineering, Mathematical Sciences, Multi-Science Community | <http://hcc.unl.edu/contact> |
 | IceCube Neutrino Telescope ([IceCube](https://grid-voms.desy.de:8443/voms/icecube/)) | Astrophysics, Education, Physics and astronomy, High Energy Physics | |
