@@ -1,7 +1,7 @@
 <div class="row mt-4 mb-4 {{ include.class }}">
     <div class="col-4 col-md-3 col-xxl-2 d-flex">
         <a class="d-flex w-100" href="{{ include.url }}">
-            <img class="w-100 mt-auto mb-auto" src="{{ include.img_src }}" alt="{{ include.img_alt}}" />
+            <img class="w-100 mt-auto mb-auto" src="{{ include.img_src | relative_url }}" alt="{{ include.img_alt}}" />
         </a>
     </div>
     <div class="col">
