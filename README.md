@@ -10,7 +10,7 @@ The OSG facilitates access to distributed high throughput computing for research
 The resources accessible through the OSG are contributed by the community, organized by the OSG, and governed by the OSG consortium.
 In the last 12 months, we have provided more than 1.2 billion CPU hours to researchers across a wide variety of projects.
 
-To see the breadth of the OSG use, [explore our accounting portal](https://gracc.opensciencegrid.org).
+To see the breadth of the OSG impact, [explore our accounting portal](https://gracc.opensciencegrid.org).
 
 ### Submit Locally, Run Globally
 
