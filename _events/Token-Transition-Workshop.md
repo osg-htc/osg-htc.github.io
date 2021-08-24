@@ -1,7 +1,7 @@
 ---
 short_title: Token Transition Workshop 
 title: "Token Transition Workshop"
-published: false
+published: true
 
 excerpt: |
     Join us and the broader physics and collaboration communities to learn about making the transition from certificates to tokens for resource access within your organization.
