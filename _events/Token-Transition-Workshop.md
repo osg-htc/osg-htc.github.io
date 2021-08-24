@@ -65,4 +65,4 @@ If you have any questions about the event, feel free to email us:
 <events@opensciencegrid.org>
 {% endcapture %}
 
-{% include event/event-page.html %}
+{% include events/event-page.html %}
