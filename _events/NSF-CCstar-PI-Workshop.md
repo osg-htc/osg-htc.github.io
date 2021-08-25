@@ -18,7 +18,7 @@ header_image: "/assets/images/events/CC_Workshop2021.png"
 
 {% capture main %}
 
-<p style="font-size: larger; font-weight: bold;">Register Now for NSF Campus Cyberinfrastructure (CC*) Workshop Events, Sept 1, Sept 14 - 15 and 21 - 22 </p>
+__[Register Now](https://docs.google.com/forms/d/e/1FAIpQLSeD0PnPEyfn_h-TPlaV4PyqUate9M-fI_ykxBaLCNISo6Kcaw/viewform) for NSF Campus Cyberinfrastructure (CC*) Workshop Events, Sept 1, Sept 14 - 15 and 21 - 22__
 
 September 1, 10:30 am – 12:00 pm ET __Pre-Workshop Session – “Tips for Submitting a Compelling CC* Proposal”__
 
@@ -34,11 +34,11 @@ The PI Workshop will promote dialogue across a range of important and timely top
 
 The Sept 14-15 and September 21-22 sessions cover the following topics:
 
-__Sept 14:  Campus CI Plan as a Strategic Vision__  
+__Sept 14: Campus CI Plan as a Strategic Vision__  
 __Sept 15: Science DMZs and Data Mobility__
 
-__Sept 21 Science Drivers and Research IT and Researcher Engagement__  
-__Sept 22 Campus Compute__
+__Sept 21: Science Drivers and Research IT and Researcher Engagement__  
+__Sept 22: Campus Compute__
   
 Browse the [complete schedule](https://www.thequilt.net/public-event/2021-nsf-virtual-cc-pi-workshop/).
 Attendance is free of charge, but requires [registration](https://docs.google.com/forms/d/e/1FAIpQLSeD0PnPEyfn_h-TPlaV4PyqUate9M-fI_ykxBaLCNISo6Kcaw/viewform).
@@ -50,35 +50,35 @@ For questions about the 2021 CC* Virtual PI Workshop, please use the following c
 {% endcapture %}
 
 {% capture subsection %}
-# Dates
+### Dates
 
 September 1, 14-15, & 21-22, 2021
 
-# Time
+### Time
 
 [See a detailed schedule](https://www.thequilt.net/public-event/2021-nsf-virtual-cc-pi-workshop/)
 
-# Who 
+### Who 
 
 PIs and project teams of current or planned CC* Planning Grant awards.
 
  
-# Where
+### Where
 
 Virtual 
 
 
-# Fees
+### Fees
 
 No fees, but registration is required.
 
 
-# Registration
+### Registration
 
 [Registration form](https://docs.google.com/forms/d/e/1FAIpQLSeD0PnPEyfn_h-TPlaV4PyqUate9M-fI_ykxBaLCNISo6Kcaw/viewform) 
 
 
-# Questions?
+### Questions?
 
 For PI Workshop agenda questions, contact Jen Leasure (<jen@thequilt.net>)  
 For individual project questions for CC*, contact Kevin Thompson (<kthompso@nsf.gov>)
@@ -86,17 +86,6 @@ For individual project questions for CC*, contact Kevin Thompson (<kthompso@nsf.
 {% endcapture %}
 
 {% capture endblock %}
-
-## Contact PATh
-
-We are here to help with your NSF (CC*) Proposal!
-
-As part of the PATh project we have accumulated significant experience working with campuses that apply to the CC* Program applicants letters of support and consulting for:
-- CC*-required resource sharing via the OSPool for the Campus Compute category
-- Gathering science drivers and planning local computing resources
-
-__Please contact us at <cc-star-proposals@opensciencegrid.org> with any questions you may have about OSG and the CC* Program!__
-
 {% endcapture %}
 
 {% include events/event-page.html %}
