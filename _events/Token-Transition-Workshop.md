@@ -9,7 +9,7 @@ excerpt: |
 start_date: 2021-10-14
 end_date: 2021-10-15
 location: "Virtual"
-link: "Coming Soon"
+link: "https://indico.fnal.gov/event/50597/registrations/3133/"
 image: "/assets/images/events/key-preview.png"
 header_image: "/assets/images/events/key-banner.png"
 ---
