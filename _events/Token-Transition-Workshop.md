@@ -48,7 +48,7 @@ Virtual
 No fees, attendance is free!
 
 # Registration
-Registration will be open soon.
+[Registration is open](https://indico.fnal.gov/event/50597/registrations/3133/)
 
 # Questions?
 
