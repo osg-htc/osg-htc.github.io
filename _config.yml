@@ -5,7 +5,8 @@ description: A national, distributed computing partnership for data-intensive re
 google_analytics: UA-69012-28
 
 # Jekyll does not build hidden directories by default.
-include: ["ospool/.well-known"]
+include:
+  - .well-known
 
 defaults:
   - scope:
