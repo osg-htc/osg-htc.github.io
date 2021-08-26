@@ -1,0 +1,5 @@
+{  
+   "issuer":"https://opensciencegrid.org/ospool",
+   "jwks_uri":"https://opensciencegrid.org/ospool/oauth2/certs",
+   "token_endpoint":"https://ospool.opensciencegrid.org/token"
+}

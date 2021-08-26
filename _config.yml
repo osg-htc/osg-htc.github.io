@@ -4,6 +4,9 @@ title: OSG
 description: A national, distributed computing partnership for data-intensive research
 google_analytics: UA-69012-28
 
+# Jekyll does not build hidden directories by default.
+include: ["ospool/.well-known"]
+
 defaults:
   - scope:
       path: ""
@@ -32,6 +35,7 @@ collections:
   events:
     permalink: /events/:path/
     output: true
+
 
 
 sass:
