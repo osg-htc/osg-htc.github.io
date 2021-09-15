@@ -1,0 +1,55 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand pt-1 pb-1" href="/"><img src="{{ '/assets/images/OSG_logo.png' | relative_url }}" alt="OSG logo"> OSG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% for section in site.data.about %}
+                            {% for item in section.docs %}
+                            {% assign item_url = item | prepend:"/about/" | append:"/" %}
+                            {% assign p = site.about | where:"url", item_url | first %}
+                            <a class="dropdown-item" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ '/campus-cyberinfrastructure' | relative_url }}">CC*</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ '/news' | relative_url }}">News</a>
+                    </li>
+                    <li class="nav-item active">
+                        {% assign num_events = site.events | size %}
+                        {% if num_events == 1 %}
+                            <a class="nav-link" href="{{ site.events[0].url | relative_url }}">Events</a>
+                        {% else %}
+                            <a class="nav-link" href="{{ '/events' | relative_url }}">Events</a>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ '/contact' | relative_url }}">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Docs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a class="dropdown-item" href="https://support.opensciencegrid.org/support/home">For Users</a>
+                            <a class="dropdown-item" href="https://opensciencegrid.org/docs/">For Sysadmins</a>
+                            <a class="dropdown-item" href="https://opensciencegrid.org/security/">Security</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- End Container -->
+    </nav>
+</header>

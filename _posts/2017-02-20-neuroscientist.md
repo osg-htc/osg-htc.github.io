@@ -2,7 +2,7 @@
 title: For neuroscientist Chris Cox, the OSG helps process mountains of data
 date: 2017-02-20 12:00:00 -0600
 ---
-Whether exploring how the brain is fooled by fake news or explaining the decline of knowledge in dementia, cognitive neuroscientists like Chris Cox are relying more on high-throughput computing resources like the Open Science Grid (OSG) to understand how the brain makes sense of information.
+Whether exploring how the brain is fooled by fake news or explaining the decline of knowledge in dementia, cognitive neuroscientists like Chris Cox are relying more on high-throughput computing resources like the Open Science Pool to understand how the brain makes sense of information.
 
 Cognitive neuroscientist Chris Cox recently defended his dissertation at the University of Wisconsin Madison (UW-Madison). Unlike molecular or cellular study of neuroscience, cognitive neuroscience seeks a larger view of neural systems—of “how the brain supports cognition,” said Cox.
 
@@ -10,7 +10,7 @@ Cox and other neuroscience researchers seek to understand which parts of the bra
 
 “Our research gets into the transformations that take place in the brain. We ask questions like ‘how is information from our senses combined to support abstract knowledge that seems to transcend our senses,’” said Cox. “For example, we can recognize a single object from different perspectives and scales as being the same thing, and when we read a word we can call to mind all kinds of meaning that have little if anything to do with the letters on the page.”
 
-The brain is highly complex, so neural imaging methods like functional MRI yield thousands of individual data points for every two seconds of imaging. Cox first turned to high performance computing and finally to the Open Science Grid (OSG) for high-throughput computing (HTC) to deal with the massive amounts of data. Because computing support at UW-Madison is so seamless, when he first started out on HTC, Cox wasn’t even aware that the OSG was powering the vast improvement in his research.
+The brain is highly complex, so neural imaging methods like functional MRI yield thousands of individual data points for every two seconds of imaging. Cox first turned to high performance computing and finally to the Open Science Pool for high-throughput computing (HTC) to deal with the massive amounts of data. Because computing support at UW-Madison is so seamless, when he first started out on HTC, Cox wasn’t even aware that the OSG was powering the vast improvement in his research.
 
 “The OSG at UW-Madison is like flipping a switch,” said Cox. “It cut my computing time in half and was totally painless. Our research was a good candidate for the OSG and the advantages of HTC. The OSG and the Center for High Throughput Computing at UW-Madison have empowered us to get results quickly that inform our next steps. This would be impossible without the extensive and robust HTC infrastructure provided by the OSG.”
 

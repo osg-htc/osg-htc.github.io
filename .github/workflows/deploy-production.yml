@@ -1,0 +1,35 @@
+name: Deploy Production Site
+
+on:
+  push:
+    branches: [production]
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    if: startsWith(github.repository, 'opensciencegrid/')
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Remove prod configurations
+        run: |
+          sed -i "s|opensciencegrid.org|osg-htc.org|" CNAME
+          git config user.name "Automatic Production Deploy"
+          git config user.email "help@opensciencegrid.org"
+          git commit -am "GHA: $GITHUB_REPOSITORY #$GITHUB_RUN_NUMBER)"
+
+      # SSH key recipe from https://www.webfactory.de/blog/use-ssh-key-for-private-repositories-in-github-actions
+      - name: Deploy Production Page
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          ssh-agent -a "$SSH_AUTH_SOCK" > /dev/null
+          ssh-add - <<< "${{ secrets.OSG_HTC_DEPLOY }}"
+          git remote add production "git@github.com:opensciencegrid/osg-htc.git"
+          git push -f production HEAD:gh-pages
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock

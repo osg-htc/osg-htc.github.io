@@ -1,6 +1,6 @@
-## Welcome to the Open Science Grid
+## Welcome to the OSG
 
-This repository contains the source code of the Open Science Grid website; it is not the public facing site.
+This repository contains the source code of the OSG website; it is not the public facing site.
 
 The real webpage for the OSG is <https://www.opensciencegrid.org>.
 
@@ -10,7 +10,7 @@ The OSG facilitates access to distributed high throughput computing for research
 The resources accessible through the OSG are contributed by the community, organized by the OSG, and governed by the OSG consortium.
 In the last 12 months, we have provided more than 1.2 billion CPU hours to researchers across a wide variety of projects.
 
-To see the breadth of the OSG use, [explore our accounting portal](https://gracc.opensciencegrid.org).
+To see the breadth of the OSG impact, [explore our accounting portal](https://gracc.opensciencegrid.org).
 
 ### Submit Locally, Run Globally
 
@@ -24,7 +24,7 @@ if it wasn't for the OSG. Sharing allows individual researchers to access larger
 
 ### Resource Providers
 
-The Open Science Grid consists of computing and storage elements at over 100 individual sites spanning the United States.
+The OSG consists of computing and storage elements at over 100 individual sites spanning the United States.
 These sites, primarily at universities and national labs, range in size from a few hundred to tens of thousands of CPU cores.
 
 ### The OSG Software Stack
@@ -42,6 +42,16 @@ If so, find us at the [support desk](https://support.opensciencegrid.org).
 ## Internal Documentation
 
 ### Making website changes
+
+To make changes to the website clone the files and run the below line to run the container. 
+```
+docker run --name OSG-website -p 8000:8000 --rm --volume $PWD:/srv/jekyll -it jekyll/jekyll:latest /bin/sh
+```
+In the container run the below line to build the website. 
+```
+jekyll serve --watch _config.yml -H 0.0.0.0 -P 8000
+```
+After the build is complete the website will be available at [http://0.0.0.0:8000/](http://0.0.0.0:8000/)
 
 This repository uses [GitHub Actions](https://github.com/opensciencegrid/opensciencegrid.github.io/tree/master/.github/worfklows)
 to deploy a website preview from the `master` branch to the [web-preview repository](https://opensciencegrid.org/web-preview/).

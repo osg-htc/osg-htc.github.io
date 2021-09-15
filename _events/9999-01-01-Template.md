@@ -1,0 +1,37 @@
+---
+title: 
+published: false
+excerpt:
+start_date: 
+end_date: 
+location: 
+link: 
+image: 
+header_image: 
+calendar_event: the ics file held at /assets/calendar_event/
+---
+
+# This is here to please Jekyll -- Delete before release
+
+{% comment %}
+You want to put the content that you want in the first 2/3 in this capture
+{% endcomment %}
+{% capture main %}
+
+{% endcapture %}
+
+{% comment %}
+You want to put the content that you want in the subsection in this capture
+{% endcomment %}
+{% capture subsection %}
+
+{% endcapture %}
+
+{% comment %}
+The content in this section spans the entire page on the bottom
+{% endcomment %}
+{% capture endblock %}
+
+{% endcapture %}
+
+{% include /events/event-page.html %}

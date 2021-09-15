@@ -1,10 +1,18 @@
 baseurl: ''
 theme: jekyll-theme-minimal
-title: Open Science Grid
+title: OSG
 description: A national, distributed computing partnership for data-intensive research
 google_analytics: UA-69012-28
 
+# Jekyll does not build hidden directories by default.
+include:
+  - .well-known
+
 defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
   - scope:
       path: "_about"
       type: about
@@ -16,12 +24,22 @@ defaults:
     values:
       layout: posts
       permalink: /news/:year/:month/:day/:title.html
+  - scope:
+      path: "_events"
+    values:
+      layout: event
 
 collections:
   about:
     permalink: /:collection/:path/
     output: true
+  events:
+    permalink: /events/:path/
+    output: true
 
+
+sass:
+  style: compressed
 
 plugins:
   - jekyll-redirect-from
