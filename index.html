@@ -91,7 +91,7 @@ layout: default
       <div class="border-top border-2 border-dark pt-2">
         {% include get/future_events.html %}
         {% if future_events.size > 0 %}
-          {% for event in future_events %}
+          {% for event in future_events limit:2 %}
             {% include events/event-card-sidebar.html event=event %}
           {% endfor %}
         {% else %}
