@@ -37,7 +37,7 @@ jobs:
           # Commit the build then use 'git subtree' to create a branch with just the _site contents
           git add _site -f
           git commit -m "Build Production Website"
-          git checkout -b split-branch `git subtree split --prefix temp-dir production`
+          git checkout -b split-branch `git subtree split --prefix _site master`
 
           # Push to Production
           git push ${{ env.production_url }} HEAD:gh-pages --force
