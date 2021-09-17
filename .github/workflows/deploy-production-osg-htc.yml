@@ -11,9 +11,15 @@ jobs:
   Build-And-Deploy-Preview:
     runs-on: ubuntu-18.04
     env:
-      CNAME: opensciencegrid.org
+      CNAME: osg-htc.org
+      production_url: https://github.com/htcondor/osg-htc.git
     steps:
       - uses: actions/checkout@v2
+
+      - name: Setup SSH Keys and known_hosts
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.OSG_HTC_DEPLOY }}
 
       - name: Initialize GH User
         run: |
@@ -39,4 +45,4 @@ jobs:
           git checkout -b split-branch `git subtree split --prefix temp-dir production`
 
           # Push to Production
-          git push ${{ env.production_url }} HEAD:gh-pages --force
+          git push ${{ env.production_url }} HEAD:main --force
