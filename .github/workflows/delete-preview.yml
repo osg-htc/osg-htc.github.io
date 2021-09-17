@@ -27,6 +27,8 @@ jobs:
           git remote add web-preview ${{ env.preview_url }}
           git fetch --all
           git checkout -b preview web-preview/main
+          ls
+          echo "${{ env.BRANCH_NAME }}"
           git rm -rf ${{ env.BRANCH_NAME }}
           git add .
           git commit -m "Remove the Deleted Branch"
