@@ -40,4 +40,4 @@ jobs:
           git checkout -b gh-pages `git subtree split --prefix _site master`
 
           # Push to Production
-          git push --force
+          git push --set-upstream origin gh-pages --force
