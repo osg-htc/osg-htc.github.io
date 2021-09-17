@@ -1,4 +1,4 @@
-name: Deploy production version of the Website
+name: Deploy production version of the Website on Current Repo
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  Build-And-Deploy-Preview:
+  Build-And-Deploy-Production:
     if: ${{ github.repository_owner == 'opensciencegrid' }}
     runs-on: ubuntu-18.04
     env:

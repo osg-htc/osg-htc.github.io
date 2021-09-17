@@ -35,7 +35,7 @@ jobs:
       - name: Setup SSH Keys and known_hosts
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.PREVIEW_DEPLOY_KEY }}
+          ssh-private-key: ${{ secrets.WEB_PREVIEW_DEPLOY_KEY }}
 
       - name: Build and Deploy
         run: |
