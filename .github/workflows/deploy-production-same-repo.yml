@@ -40,4 +40,4 @@ jobs:
           git checkout -b split-branch `git subtree split --prefix _site master`
 
           # Push to Production
-          git push ${{ env.production_url }} HEAD:gh-pages --force
+          git push gh-pages --force
