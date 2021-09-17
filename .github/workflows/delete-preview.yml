@@ -1,11 +1,11 @@
-name: Deploy Web Previews
+name: Delete Web Preview
 on:
   delete:
     branches:
       - preview-**
 
 jobs:
-  Delete Preview Page:
+  Delete Preview Branch:
     if: ${{ github.repository_owner == 'opensciencegrid' }}
     runs-on: ubuntu-18.04
     env:
