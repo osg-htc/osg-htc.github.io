@@ -16,7 +16,7 @@ jobs:
 
       - name: Get branch name
         run: |
-          echo "Clean up for branch ${{ github.event.ref }}"
+          echo "BRANCH_NAME=${{ github.event.ref }}" >> $GITHUB_ENV
 
       - name: Setup SSH Keys and known_hosts
         uses: webfactory/ssh-agent@v0.5.3
