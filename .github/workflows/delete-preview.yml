@@ -23,13 +23,16 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.WEB_PREVIEW_DEPLOY_KEY }}
 
+      - name: Setup Github User
+        run: |
+          git config user.name "Automatic preview publish"
+          git config user.email "help@opensciencegrid.org"
+
       - name: Build and Deploy
         run: |
           git remote add web-preview ${{ env.preview_url }}
           git fetch --all
           git checkout -b preview web-preview/main
-          ls
-          echo "${{ env.BRANCH_NAME }}"
           git rm -rf ${{ env.BRANCH_NAME }}
           git add .
           git commit -m "Remove the Deleted Branch"
