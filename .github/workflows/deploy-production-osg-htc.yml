@@ -9,6 +9,7 @@ on:
 
 jobs:
   Build-And-Deploy-Preview:
+    if: ${{ github.repository_owner == 'opensciencegrid.github.io' }}
     runs-on: ubuntu-18.04
     env:
       CNAME: osg-htc.org

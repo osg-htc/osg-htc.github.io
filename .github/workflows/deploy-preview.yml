@@ -9,6 +9,7 @@ on:
 
 jobs:
   Deploy-Web-Preview:
+    if: ${{ github.repository_owner == 'opensciencegrid.github.io' }}
     runs-on: ubuntu-18.04
     env:
       preview_url: https://github.com/opensciencegrid/web-preview.git
