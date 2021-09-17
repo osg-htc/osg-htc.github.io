@@ -5,7 +5,7 @@ on:
       - preview-**
 
 jobs:
-  Delete Preview Branch:
+  Delete-Preview-Branch:
     if: ${{ github.repository_owner == 'opensciencegrid' }}
     runs-on: ubuntu-18.04
     env:
