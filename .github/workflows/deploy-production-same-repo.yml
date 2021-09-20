@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-18.04
     env:
       CNAME: opensciencegrid.org
+      OVERRIDE_CONFIG: _config_opensciencegrid_org.yml
+
     steps:
       - uses: actions/checkout@v2
 
@@ -29,7 +31,7 @@ jobs:
       - name: Build and Deploy
         run: |
           # Build the production version of website
-          JEKYLL_ENV=production bundle exec jekyll build
+          JEKYLL_ENV=production bundle exec jekyll build _config.yml,${{ env.OVERRIDE_CONFIG }}
 
           # Add in the appropriate CNAME file
           echo "${{ env.CNAME }}" > _site/CNAME
