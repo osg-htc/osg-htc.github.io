@@ -37,9 +37,9 @@ collections:
     permalink: /events/:path/
     output: true
 
-
 sass:
   style: compressed
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-sitemap
