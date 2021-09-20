@@ -3,13 +3,10 @@ on:
   push:
     branches:
       - preview-**
-  pull_request:
-    branches:
-      - master
 
 jobs:
   Deploy-Web-Preview:
-    if: ${{ github.repository_owner == 'opensciencegrid' }} && ${{ contains( github.ref, 'preview-' ) }}
+    if: ${{ github.repository_owner == 'opensciencegrid' }}
     runs-on: ubuntu-18.04
     env:
       preview_url: https://github.com/opensciencegrid/web-preview.git
