@@ -31,7 +31,7 @@ jobs:
       - name: Build and Deploy
         run: |
           # Build the production version of website
-          JEKYLL_ENV=production bundle exec jekyll build _config.yml,${{ env.OVERRIDE_CONFIG }}
+          JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,${{ env.OVERRIDE_CONFIG }}
 
           # Add in the appropriate CNAME file
           echo "${{ env.CNAME }}" > _site/CNAME
