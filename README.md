@@ -1,7 +1,7 @@
 ## Welcome to the OSG
 
 ❗Recent Changes❗ 
-- [Using Github for Developement](#using-github-for-development)
+- [Using Github for Development](#using-github-for-development)
 - [Pushing Changes to Production](#pushing-changes-to-production)
 
 This repository contains the source code of the OSG website; it is not the public facing site.
