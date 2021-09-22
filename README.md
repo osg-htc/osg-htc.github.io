@@ -1,5 +1,9 @@
 ## Welcome to the OSG
 
+❗Recent Changes❗ 
+- [Using Github for Developement](#using-github-for-development)
+- [Pushing Changes to Production](#pushing-changes-to-production)
+
 This repository contains the source code of the OSG website; it is not the public facing site.
 
 The real webpage for the OSG is <https://www.opensciencegrid.org>.
@@ -41,7 +45,18 @@ If so, find us at the [support desk](https://support.opensciencegrid.org).
 
 ## Internal Documentation
 
-### Making website changes
+### Using Github for Development
+
+1. Create a Branch from master with 'preview-' at the start of the branch name
+  - For instance 'preview-helloworld'
+2. Push this branch to the repo at https://github.com/path-cc/path-cc.github.io.git
+  - If you created the branch on github it is already there!
+4. Populate the changes that you want to see
+5. Preview the changes that you have made at https://path-cc.io/web-preview/<branch-name>/ 
+  - For this instance https://path-cc.io/web-preview/preview-helloworld/
+6. When you are happy with the changes create a PR into master
+
+### Using Local Computer for Developement
 
 To make changes to the website clone the files and run the below line to run the container. 
 ```
@@ -52,20 +67,16 @@ In the container run the below line to build the website.
 jekyll serve --watch _config.yml -H 0.0.0.0 -P 8000
 ```
 After the build is complete the website will be available at [http://0.0.0.0:8000/](http://0.0.0.0:8000/)
+    
+### Pushing Changes to Production
 
-This repository uses [GitHub Actions](https://github.com/opensciencegrid/opensciencegrid.github.io/tree/master/.github/worfklows)
-to deploy a website preview from the `master` branch to the [web-preview repository](https://opensciencegrid.org/web-preview/).
-The production website (https://opensciencegrid.org/) is built automatically by GitHub Pages from the `production` branch.
+The production websites (https://opensciencegrid.org/, https://osg-htc.org) are built automatically by GitHub Pages from the `__master__` branch.
 
 To make changes to the website, use the following workflow:
 
-1.  Submit a pull request with website updates to the `master` branch (the default) and request a review
-1.  Upon approval and merge of the pull request, changes can be previewed at https://opensciencegrid.org/web-preview/
-1.  If additional changes are necessary, repeat steps 1 and 2.
-1.  When satisfied with the preview website, submit a
-    [pull request](https://github.com/opensciencegrid/opensciencegrid.github.io/compare/production...master?expand=1)
-    from `production` to `master`
-1.  After the pull request from step 4 has been merged, verify the changes at https://opensciencegrid.org
+1.  Submit a pull request with website updates to the `master` branch (the default) and request a review.
+    - Any reviews with visual changes can be handled more quickly if you provide a [preview instance](#using-github-for-development)
+1.  Upon approval you can view the changes at https://opensciencegrid.org/ and https://osg-htc.org
 
 ### Adding To the Team Page
 
