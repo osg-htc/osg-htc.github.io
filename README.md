@@ -70,7 +70,7 @@ After the build is complete the website will be available at [http://0.0.0.0:800
     
 ### Pushing Changes to Production
 
-The production websites (https://opensciencegrid.org/, https://osg-htc.org) are built automatically by GitHub Pages from the `__master__` branch.
+The production websites (https://opensciencegrid.org/, https://osg-htc.org) are built automatically by GitHub Pages from the **master** branch.
 
 To make changes to the website, use the following workflow:
 
