@@ -9,9 +9,14 @@ publish: true
 
 By Josephine Watkins
 
-  <figure class="figure">
-  <img src="{{site.baseurl}}/images/news/bat-genomics-Ariadna.jpeg" class="figure-img img-fluid rounded" alt="Ariadna Morales">
-  <figcaption class="figure-caption">Ariadna Morales (Credit: AMNH)</figcaption>
+<figure class="figure float-right" style="margin-left: 1em">
+  <img src="{{ '/images/news/bat-genomics-Ariadna.jpeg' | relative_url }}" class="figure-img img-fluid rounded" alt="Ariadna Morales" width="250px">
+  <figcaption class="figure-caption">Ariadna Morales (Credit: AMNH)<br/></figcaption>
+</figure>
+
+<figure>
+  <img src="{{ '/images/news/bat-genomics-Ariadna.jpeg' | relative_url }}" alt="Ariadna Morales"/>
+  <figcaption class="figure-caption">Ariadna Morales (Credit: AMNH)<br/></figcaption>
 </figure>
 
 Ariadna Morales, a Gerstner postdoctoral fellow at the American Museum of Natural History (AMNH) from 2018 to 2020, used the fabric of services provided by the OSG 
