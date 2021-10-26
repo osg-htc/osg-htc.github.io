@@ -9,7 +9,7 @@ publish: true
 
 By Josephine Watkins
 
-<figure class="figure float-right" style="margin-left: 1em">
+<figure class="figure float-end" style="margin-left: 1em">
   <img src="{{ '/assets/images/bat-genomics-Ariadna.png' | relative_url }}" class="figure-img img-fluid rounded" alt="Ariadna Morales" width="250px">
   <figcaption class="figure-caption">Ariadna Morales (Credit: AMNH)<br/></figcaption>
 </figure>
