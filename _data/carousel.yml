@@ -75,7 +75,7 @@
 - image: "/assets/images/bat-carousel.png"
   alt: "Sillouete of bat flying"
   title: "80,000 jobs, 40 billion base pairs, and 20 bats –– all in 4 weeks"
-  title_color: "dark"
+  title_color: "light"
   description: "An evolutionary biologist at the AMNH used HTC services provided by the OSG to unlock a genomic basis for convergent evolution in bats."
   link: "https://opensciencegrid.org/news/2021/10/26/bat-genomics.html"
   link_label: "Learn More"
