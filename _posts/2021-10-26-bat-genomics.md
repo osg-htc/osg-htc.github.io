@@ -10,12 +10,7 @@ publish: true
 By Josephine Watkins
 
 <figure class="figure float-right" style="margin-left: 1em">
-  <img src="{{ '/images/news/bat-genomics-Ariadna.jpeg' | relative_url }}" class="figure-img img-fluid rounded" alt="Ariadna Morales" width="250px">
-  <figcaption class="figure-caption">Ariadna Morales (Credit: AMNH)<br/></figcaption>
-</figure>
-
-<figure>
-  <img src="{{ '/images/news/bat-genomics-Ariadna.jpeg' | relative_url }}" alt="Ariadna Morales"/>
+  <img src="{{ '/assets/images/bat-genomics-Ariadna.png' | relative_url }}" class="figure-img img-fluid rounded" alt="Ariadna Morales" width="250px">
   <figcaption class="figure-caption">Ariadna Morales (Credit: AMNH)<br/></figcaption>
 </figure>
 
