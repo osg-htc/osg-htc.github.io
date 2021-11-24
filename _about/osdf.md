@@ -22,7 +22,7 @@ of data access.
 ### Who can use the OSDF?
 
 Any US-based academic, government, or non-profit institution may operate a data origin to export their
-users' data.  Researchers with an OSG-Connect account may also use the origin at the [OSG-Connect](osgconnect.net)
+users' data.  Researchers with an OSG-Connect account may also use the origin at the [OSG-Connect](https://osgconnect.net)
 access point.
 
 To learn how to access your data through the OSDF, please reach out to our team of Research Computing Facilitators
