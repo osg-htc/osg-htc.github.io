@@ -3,40 +3,41 @@ title: Open Science Data Federation
 ---
 
 <figure class="figure">
-  <img src="{{site.baseurl}}/assets/images/osdf.png" class="figure-img img-fluid rounded" alt="Map of the Open Science Data Federation">
+    <img src="{{site.baseurl}}/assets/images/osdf.png" class="figure-img img-fluid rounded" alt="Map of the Open Science Data Federation">
+    <figcaption>US Map featuring the locations of current OSDF <a href="https://opensciencegrid.org/docs/data/stashcache/overview/#architecture">architectural components</a>.</figcaption>
 </figure>
 
-## What is the Open Science Data Federation?
+### What is the Open Science Data Federation?
 
 The Open Science Data Federation (OSDF) is an OSG service that enables users and institutions to
 make datasets available to distributed high-throughput computing (dHTC) environments such as the
 [Open Science Pool](open_science_pool) (OSPool). The OSDF provides execution points with remote
-access to data via a global namespace and a set of *data caches* which can access data stored in
-*data origins*.
+access to data via a global namespace and a set of [*data caches*](https://opensciencegrid.org/docs/data/stashcache/overview/#architecture) which can access data stored in
+[*data origins*](https://opensciencegrid.org/docs/data/stashcache/overview/#architecture).
 
 By providing the distributed data access layer via the caches, jobs running in the OSPool (or any
 other resource pool) can reduce wide-area network consumption, load on the data origins, and latency
 of data access.
 
-## Who can use the OSDF?
+### Who can use the OSDF?
 
 Any US-based academic, government, or non-profit institution may operate a data origin to export their
-users' data.  Researchers with an OSG-Connect account may also use the origin at the [OSG-Connect](osgconnect.net)
+users' data.  Researchers with an OSG-Connect account may also use the origin at the [OSG-Connect](https://osgconnect.net)
 access point.
 
 To learn how to access your data through the OSDF, please reach out to our team of Research Computing Facilitators
 through <support@opensciencegrid.org>.
 
-## Who can access my data?
+### Who can access my data?
 
-Access control for the OSDF is managed by the *origin* service.  The origin can be configured to make data public
+Access control for the OSDF is managed by the [*origin*](https://opensciencegrid.org/docs/data/stashcache/overview/#architecture) service.  The origin can be configured to make data public
 or private and can control the rules for sharing.  For example, the OSG-Connect service allows users to
 make their data accessible to all (public) or only accessible to their own jobs.
 
-The data may additionally be visible to the administrators of the *cache* services and the execution point where
+The data may additionally be visible to the administrators of the [*cache*](https://opensciencegrid.org/docs/data/stashcache/overview/#architecture) services, and the execution point where
 the job runs.  Non-public data is encrypted when sent over the network but not on disk.
 
-## Who manages the OSDF?
+### Who manages the OSDF?
 
 The origins on the OSDF are managed by the projects or institutions which own the underlying storage.  The caches
 are largely managed by OSG staff, who remotely operate the services.  Some caches are dedicated to a specific
