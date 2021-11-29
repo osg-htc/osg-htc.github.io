@@ -1,0 +1,86 @@
+---
+title: Open Science Data Federation
+---
+
+
+<figure class="figure">
+    <img src="/assets/images/osdf.png" class="figure-img img-fluid rounded" alt="Map of the Open Science Data Federation">
+    <figcaption>US Map featuring the locations of current OSDF <a href="https://opensciencegrid.org/docs/data/stashcache/overview/#architecture">architectural components</a>.</figcaption>
+</figure>
+
+<h3 id="what-is-the-open-science-data-federation">What is the Open Science Data Federation?</h3>
+
+<div  class="p-2 bg-light">
+    <div class="row">
+        <div class="col-12 col-md-7">
+            <p>
+                The Open Science Data Federation (OSDF) is an OSG service that enables users and institutions to
+                make datasets available to distributed high-throughput computing (dHTC) environments such as the
+                <a href="open_science_pool">Open Science Pool</a> (OSPool). The OSDF provides execution points with remote
+                access to data via a global namespace and a set of <a href="https://opensciencegrid.org/docs/data/stashcache/overview/#architecture"><em>data caches</em></a> which can access data stored in
+                <a href="https://opensciencegrid.org/docs/data/stashcache/overview/#architecture"><em>data origins</em></a>.
+            </p>
+
+            <p>
+                By providing the distributed data access layer via the caches, jobs running in the OSPool (or any
+                other resource pool) can reduce wide-area network consumption, load on the data origins, and latency
+                of data access.
+            </p>
+        </div>
+        <div class="col-12 col-md-5 d-flex">
+            <img class="my-auto img-fluid" src="/assets/images/OSDF-diagram.jpg" alt="Diagram of the OSDF"/>
+        </div>
+    </div>
+</div>
+
+
+
+<h3 id="who-can-use-the-osdf">Who can use the OSDF?</h3>
+
+<div  class="p-2 bg-light">
+    <p>
+        Any US-based academic, government, or non-profit institution may operate a data origin to export their
+        users’ data.  Researchers with an OSG-Connect account may also use the origin at the <a href="https://osgconnect.net">OSG-Connect</a>
+        access point.
+    </p>
+
+    <p>
+        To learn how to access your data through the OSDF, please reach out to our team of Research Computing Facilitators
+        through <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a>.
+    </p>
+</div>
+
+<h3 id="who-can-access-my-data">Who can access my data?</h3>
+
+<div  class="p-2 bg-light">
+    <p>
+        Access control for the OSDF is managed by the <a href="https://opensciencegrid.org/docs/data/stashcache/overview/#architecture"><em>origin</em></a> service.  The origin can be configured to make data public
+        or private and can control the rules for sharing.  For example, the OSG-Connect service allows users to
+        make their data accessible to all (public) or only accessible to their own jobs.
+    </p>
+
+    <p>
+        The data may additionally be visible to the administrators of the <a href="https://opensciencegrid.org/docs/data/stashcache/overview/#architecture"><em>cache</em></a> services, and the execution point where
+        the job runs.  Non-public data is encrypted when sent over the network but not on disk.
+    </p>
+</div>
+
+
+<h3 id="who-manages-the-osdf">Who manages the OSDF?</h3>
+<div  class="p-2 bg-light">
+    <p>
+        The origins on the OSDF are managed by the projects or institutions which own the underlying storage.  The caches
+        are largely managed by OSG staff, who remotely operate the services.  Some caches are dedicated to a specific
+        experiment; a number of caches are specific to the <a href="https://www.ligo.caltech.edu/">LIGO</a> experiment.
+    </p>
+
+    <p>
+        The cache hardware is distributed throughout the US, including points of presence in the <a href="https://internet2.edu/">Internet2</a>
+        and <a href="https://www.es.net/">ESNet</a> networks and universities facilities such as UW-Madison,
+        Chicago, Syracuse, UCSD, and Nebraska.
+    </p>
+</div>
+
+
+
+
