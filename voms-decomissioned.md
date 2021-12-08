@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: container
 title: VOMS Decomissioned
 redirect_from: /voms-retirement/index.html
 ---

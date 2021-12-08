@@ -1,19 +1,19 @@
 ---
 title: "Latest News from the OSG"
-layout: default
+layout: container
 ---
 
 <h1>OSG News</h1>
 
-{% for post in site.posts %}
-{% if post.external_url %}
-<a href="{{ post.external_url }}">{{ post.title }}</a> ({{ post.date | date_to_long_string }})
-{% else %}
-<a href="{{ post.url | relative_url }}">{{ post.title }}</a> ({{ post.date | date_to_long_string }})
-{% endif %}
-{{ post.excerpt }}
-<hr/>
-{% endfor %}
+<div class="row">
+    {% for news in site.posts %}
+        <div class="col-12 col-lg-6 col-xl-4 pb-4">
+            {% include /cards/news-card.html %}
+        </div>
+    {% endfor %}
+</div>
+
+<hr>
 
 The OSG Consortium is pleased to see OSG stories reposted on the websites of other organizations.
 

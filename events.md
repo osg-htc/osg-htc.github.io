@@ -1,6 +1,6 @@
 ---
 title: Event Page
-layout: default
+layout: container
 ---
 
 <h1>Events</h1>

@@ -16,35 +16,6 @@ body {
   color: #5a5a5a;
 }
 
-main {
-  padding-top: 15px;
-}
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
-  background-color: black;
-}
-.carousel-item > img {
-  height: 32rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
 /* Tweak vertical spacing of headings */
 h3 {
   margin-top: 1.25rem;
@@ -91,29 +62,6 @@ th, td {
   li {
     font-size: 85%;
   }
-}
-
-#covid-19-mini-banner {
-  padding: 1px;
-  background-color: #FF6600;
-  margin-bottom: 2rem;
-}
-
-#covid-19-mini-banner p {
-  text-align: center;
-  font-size: 125%;
-  font-weight: bold;
-  color: white;
-  margin: 0.75em;
-}
-
-#covid-19-mini-banner a {
-  color: white;
-  text-decoration: underline;
-}
-
-.title-head {
-  margin-bottom: 1em;
 }
 
 /* OSG AHM temporary */

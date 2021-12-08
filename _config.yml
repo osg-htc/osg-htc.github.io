@@ -13,7 +13,7 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: default
+      layout: container
   - scope:
       path: "_about"
       type: about
