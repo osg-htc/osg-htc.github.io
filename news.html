@@ -1,25 +1,33 @@
 ---
 title: "Latest News from the OSG"
-layout: container
+layout: padded-default
 ---
 
-<h1>OSG News</h1>
-<hr>
 
-<div class="row pt-4">
-    {% for news in site.posts %}
-        <div class="col-12 col-lg-6 col-xl-4 pb-4">
-            {% include /cards/news-card.html %}
-        </div>
-    {% endfor %}
+<div class="container-xxl">
+    <h1>OSG News</h1>
+    <hr class="m-0">
 </div>
+<div class="bg-light">
+    <div class="container-xxl">
+        <div class="row pt-4">
+            {% for news in site.posts %}
+            <div class="col-12 col-lg-6 col-xl-4 pb-4">
+                {% include /cards/news-card.html %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="container-xxl">
+    <hr>
+    <p>
+        The OSG Consortium is pleased to see OSG stories reposted on the websites of other organizations.
 
-<hr>
+        The stories should be reposted with credits to the OSG website and the original authors, as well as a link to the original posting.
 
-The OSG Consortium is pleased to see OSG stories reposted on the websites of other organizations.
-
-The stories should be reposted with credits to the OSG website and the original authors, as well as a link to the original posting.
-
-Any alterations to the text or images for the reposting should be agreed by the OSG Communications team.  Please email <mailto:osg-contact@opensciencegrid.org>.
+        Any alterations to the text or images for the reposting should be agreed by the OSG Communications team.  Please email <a href="osg-contact@opensciencegrid.org">osg-contact@opensciencegrid.org</a>.
+    </p>
+</div>
 
 

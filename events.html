@@ -1,0 +1,36 @@
+---
+title: Event Page
+layout: padded-default
+---
+
+
+<div class="container-xxl">
+    <h1>Events</h1>
+</div>
+<div class="bg-light">
+    <div class="container-xxl">
+        {% include get/future_events.html %}
+        {% if future_events.size != 0 %}
+        <div class="row my-4">
+            {% for event in future_events %}
+
+            <div class="col-12 col-md-6 col-xl-4 mb-4">
+                {% include /cards/news-card.html news=event card_image=event.header_image height='150' %}
+            </div>
+
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% include get/past_events.html %}
+        <h3 class="text-muted pt-3">Past Events</h3>
+        <div class="row">
+            {% for event in past_events %}
+
+            <div class="col-12 col-md-6 col-xl-4 mb-4">
+                {% include /cards/news-card.html news=event card_image=event.header_image height='150' %}
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
