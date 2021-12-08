@@ -2,7 +2,7 @@
     {% assign news = include.news %}
 {% endif %}
 
-<div class="card h-100">
+<div class="card hover-shadow border-0 h-100">
     {% if news.card_image %}
     <img height="{{ include.height | default: '200' }}" src="{{ news.card_image | relative_url }}" class="card-img-top" alt="News">
     {% endif %}
@@ -12,15 +12,12 @@
             <span class="text-muted">{{ news.date | date: "%B %e, %Y"}}</span>
         </div>
         <hr/>
-        <p>
+        <span>
             {% if include.content | markdownify | strip_html  %}
                 {{ new.content }}
             {% else %}
                 {{ news.excerpt | markdownify | strip_html }}
             {% endif %}
-        </p>
-        <p class="mt-auto">
-            <a class="text-secondary" href="{{ news.url }}">Read More...</a>
-        </p>
+        </span>
     </div>
 </div>

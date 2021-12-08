@@ -22,10 +22,11 @@ css_extension:
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row pt-4">
-    <div class="col-lg-8 mt-2 mb-4">
+<div class="container-xxl mt-4">
+  <div class="row mb-4">
+    <div class="col-lg-8">
       <h2>The OSG Consortium</h2>
+      <hr>
       <p>
         The OSG is a consortium of research collaborations, campuses, national
         laboratories and software providers dedicated to the advancement of all
@@ -33,7 +34,13 @@ css_extension:
         (dHTC), and the advancement of its state of the art. Established in 2005,
         the OSG operates a fabric of dHTC services for the National S&E community.
       </p>
-      <div class="mb-3">
+      <div class="p-3 bg-white-offset">
+        <p>
+          <b>
+            We are here to help with your NSF
+            <a href="https://www.nsf.gov/pubs/2021/nsf21528/nsf21528.htm">(CC*) Proposal!</a>
+          </b>
+        </p>
         <p>
           Campuses with awards from the
           <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a> Program
@@ -42,12 +49,6 @@ css_extension:
           of Syracuse University. To date, 19 CC* campuses contribute to the more than
           5M core hours delivered weekly by the
           <a href="https://opensciencegrid.org/about/open_science_pool/">Open Science Pool (OSPool)</a>.
-        </p>
-        <p>
-          <b>
-            We are here to help with your NSF
-            <a href="https://www.nsf.gov/pubs/2021/nsf21528/nsf21528.htm">(CC*) Proposal!</a>
-          </b>
         </p>
         <p>
           As part of the <a href="https://path-cc.io/">PATh</a> project we have accumulated
@@ -67,24 +68,28 @@ css_extension:
         </p>
       </div>
     </div>
-    <div class="col-sm-12 col-md-8 col-lg-4 ms-md-auto me-md-auto mb-4">
+    <div class="col-sm-12 col-md-8 col-lg-4 mx-md-auto">
       {% include get/future_events.html %}
-      <div class="{% if future_events.size == 0 %}d-none{% endif %} bg-white-offset overflow-auto ms-lg-2 pb-0 p-2">
-        <h2 class="m-0">Events</h2>
-        <div class="border-top border-2 border-dark pt-2">
-          {% for event in future_events limit:2 %}
-          {% include events/event-card-sidebar.html event=event %}
-          {% endfor %}
+      {% if future_events.size != 0 %}
+        <div class="bg-white-offset overflow-auto ms-lg-2 pb-0 mb-4 p-2">
+          <h2 class="m-0">Events</h2>
+          <div class="border-top border-2 border-dark pt-2">
+            {% for event in future_events limit:2 %}
+            {% include events/event-card-sidebar.html event=event %}
+            {% endfor %}
+          </div>
         </div>
-      </div>
-      <div class="mt-4">
-        <a class="twitter-timeline" data-height="500" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      {% endif %}
+      <div class="card bg-white">
+        <div class="card-body">
+          <a class="twitter-timeline" data-height="500" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div class="bg-light py-4">
-  <div class="container">
+<div class="bg-light py-4 mb-4">
+  <div class="container-xxl">
     <div class="row justify-content-center">
       {% for news in site.posts limit:3 %}
         <div class="col-12 col-md-6 col-xl-4 {% cycle: 'd-block', 'd-none d-md-block', 'd-none d-xl-block' %}">
@@ -94,85 +99,126 @@ css_extension:
     </div>
   </div>
 </div>
-<div class="container">
+<div class="container-xxl">
   <div class="row border-4 border-primary ">
-    <div class="col-12 col-md-6 col-lg-4">
-      <h3>What We Do</h3>
-      <p>The OSG facilitates access to distributed high throughput computing for research in the US.
-        The resources accessible through the OSG are contributed by the community, organized by the OSG, and governed by the OSG consortium.
-        In the last 12 months, we have provided more than 1.2 billion CPU hours to researchers across a wide variety of projects.
-      </p>
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3>What We Do</h3>
+          <hr>
+          <p>The OSG facilitates access to distributed high throughput computing for research in the US.
+            The resources accessible through the OSG are contributed by the community, organized by the OSG, and governed by the OSG consortium.
+            In the last 12 months, we have provided more than 1.2 billion CPU hours to researchers across a wide variety of projects.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <h3>Submit Locally, Run Globally</h3>
-      <p>Researchers can run jobs on OSG from their home institution or <a href="https://www.osgconnect.net/">OSG's centrally-operated submission service, OSG Connect</a> (available for US-based research and scholarship).</p>
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3>Submit Locally, Run Globally</h3>
+          <hr>
+          <p>Researchers can run jobs on OSG from their home institution or <a href="https://www.osgconnect.net/">OSG's centrally-operated submission service, OSG Connect</a> (available for US-based research and scholarship).</p>
+        </div>
+      </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <h3>Sharing Is Key</h3>
-      <p><em>Sharing is a core principle of the OSG.</em>  Over 100 million CPU hours delivered on the OSG in the past year were opportunistic: they would have remained on but idle
-        if it wasn't for the OSG. Sharing allows individual researchers to access larger computing resources and large organizations to keep their utilization high.</p>
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3>Sharing Is Key</h3>
+          <hr>
+          <p><em>Sharing is a core principle of the OSG.</em>  Over 100 million CPU hours delivered on the OSG in the past year were opportunistic: they would have remained on but idle
+            if it wasn't for the OSG. Sharing allows individual researchers to access larger computing resources and large organizations to keep their utilization high.</p>
+        </div>
+      </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <h3>Resource Providers</h3>
-      <p>The OSG consists of computing and storage elements at over 100 individual sites spanning the United States.
-        These sites, primarily at universities and national labs, range in size from a few hundred to tens of thousands of CPU cores.</p>
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3>Resource Providers</h3>
+          <hr>
+          <p>The OSG consists of computing and storage elements at over 100 individual sites spanning the United States.
+            These sites, primarily at universities and national labs, range in size from a few hundred to tens of thousands of CPU cores.</p>
+        </div>
+      </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <h3>The OSG Software Stack</h3>
-      <p>The OSG provides an integrated software stack to enable high throughput computing; <a href="https://support.opensciencegrid.org/support/home">visit our technical documents website for information</a>.</p>
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3>The OSG Software Stack</h3>
+          <hr>
+          <p>The OSG provides an integrated software stack to enable high throughput computing; <a href="https://support.opensciencegrid.org/support/home">visit our technical documents website for information</a>.</p>
+        </div>
+      </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <h3>Coordinating CI Services</h3>
-      <p>
-        NSF’s
-        <a href="https://www.nsf.gov/cise/oac/vision/blueprint-2019/">Blueprint
-          for National Cyberinfrastructure Coordination Services</a>
-        lays out the need for coordination services to bring together the distributed elements of a national CI ecosystem.
-        It highlights OSG as providing distributed high throughput computing services to the U.S. research community.
-      </p>
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3>Coordinating CI Services</h3>
+          <hr>
+          <p>
+            NSF’s
+            <a href="https://www.nsf.gov/cise/oac/vision/blueprint-2019/">Blueprint
+              for National Cyberinfrastructure Coordination Services</a>
+            lays out the need for coordination services to bring together the distributed elements of a national CI ecosystem.
+            It highlights OSG as providing distributed high throughput computing services to the U.S. research community.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <h3>Find Us!</h3>
-      <p>Are you a resource provider wanting to join our collaboration? Contact us: <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a>.</p>
-      <p>Are you a user wanting more computing resources? Check with your 'local' computing providers, or consider using <a href="https://www.osgconnect.net/">OSG Connect</a> (available to US-based academic/govt/non-profit research projects).</p>
-      <p>For any other inquiries, reach us at: <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a>.</p>
-      <p>To see the breadth of the OSG impact, <a href="https://gracc.opensciencegrid.org">explore our accounting portal</a>.</p>
+</div>
+<div class="bg-light my-4">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>Find Us!</h3>
+        <p>Are you a resource provider wanting to join our collaboration? Contact us: <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a>.</p>
+        <p>Are you a user wanting more computing resources? Check with your 'local' computing providers, or consider using <a href="https://www.osgconnect.net/">OSG Connect</a> (available to US-based academic/govt/non-profit research projects).</p>
+        <p>For any other inquiries, reach us at: <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a>.</p>
+        <p>To see the breadth of the OSG impact, <a href="https://gracc.opensciencegrid.org">explore our accounting portal</a>.</p>
+      </div>
     </div>
   </div>
-  <h3>Support</h3>
-  <p>
-    The activities of the OSG Consortium are supported by multiple projects and in-kind contributions from members.
-    Significant funding is provided through:
-  </p>
-  <div class="row justify-content-evenly">
-    <div class="col-md-10 col-lg-8">
-      {% include image-title-desc-card.html
-      img_src="../assets/images/logos/Logo_Round_Med.png"
-      img_alt="PATh Logo"
-      title="Path"
-      description="
-      The Partnership to Advance Throughput Computing (PATh) is an NSF-funded (#2030508) project to address the
-      needs of the rapidly growing community embracing Distributed High Throughput Computing (dHTC) technologies
-      and services to advance their research.
-      "
-      url="https://path-cc.io/"
-      %}
-    </div>
-    <div class="col-md-10 col-lg-8">
-      {% include image-title-desc-card.html
-      img_src="../assets/images/logos/IRIS_HEP.png"
-      img_alt="Iris-Hep Logo"
-      title="IRIS-HEP"
-      description="
-      The Institute for Research and Innovation in Software for High Energy Physics (IRIS-HEP) is an
-      NSF-funded (#1836650) software institute established to meet the software and computing challenges
-      of the HL-LHC, through R&D for the software for acquiring, managing, processing and analyzing HL-LHC data.
-      "
-      url="https://iris-hep.org/"
-      class="flex-row-reverse"
-      %}
+</div>
+<div class="container-xxl">
+  <div class="card">
+    <div class="card-body">
+      <h3>Support</h3>
+      <p class="text-muted">
+        The activities of the OSG Consortium are supported by multiple projects and in-kind contributions from members.
+        Significant funding is provided through:
+      </p>
+      <hr>
+      <div class="row justify-content-evenly">
+        <div class="col-md-10 col-lg-8">
+          {% include image-title-desc-card.html
+          img_src="../assets/images/logos/Logo_Round_Med.png"
+          img_alt="PATh Logo"
+          title="Path"
+          description="
+          The Partnership to Advance Throughput Computing (PATh) is an NSF-funded (#2030508) project to address the
+          needs of the rapidly growing community embracing Distributed High Throughput Computing (dHTC) technologies
+          and services to advance their research.
+          "
+          url="https://path-cc.io/"
+          %}
+        </div>
+        <div class="col-md-10 col-lg-8">
+          {% include image-title-desc-card.html
+          img_src="../assets/images/logos/IRIS_HEP.png"
+          img_alt="Iris-Hep Logo"
+          title="IRIS-HEP"
+          description="
+          The Institute for Research and Innovation in Software for High Energy Physics (IRIS-HEP) is an
+          NSF-funded (#1836650) software institute established to meet the software and computing challenges
+          of the HL-LHC, through R&D for the software for acquiring, managing, processing and analyzing HL-LHC data.
+          "
+          url="https://iris-hep.org/"
+          class="flex-row-reverse"
+          %}
+        </div>
+      </div>
     </div>
   </div>
 </div>
