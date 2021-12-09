@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: container
 title: MyOSG and OIM Decomissioned
 redirect_from: /myosg-decommissioned/index.html
 ---

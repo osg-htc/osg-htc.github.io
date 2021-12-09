@@ -1,48 +1,39 @@
 ---
 ---
 
+
+// Overwrite Bootstrap 5 Defaults
+
 $primary: #b67b3c;
 $secondary: #f4b627;
 $white-offset: #fff7ea;
 
-$navbar-brand-height: 2.8rem;
+$navbar-brand-height: 3.5rem;
+
+$card-border-color: black;
+
+.hover-shadow {
+  box-shadow: 0px 0px 0px #FFFFFF;
+  transition-property: box-shadow;
+  transition-duration: .1s;
+  transition-timing-function: linear;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0px 0px 5px #9d9d9d
+}
+
+.shadow {
+  box-shadow: 0px 0px 5px #9d9d9d
+}
 
 @import 'bootstrap/bootstrap';
 @import 'pages/event';
 
+// Need for the Fixed Navbar
 body {
-  padding-top: 4rem;
-  padding-bottom: 3rem;
   color: #5a5a5a;
-}
-
-main {
-  padding-top: 15px;
-}
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
-  background-color: black;
-}
-.carousel-item > img {
-  height: 32rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  margin-top: 69px;
 }
 
 /* Tweak vertical spacing of headings */
@@ -70,74 +61,6 @@ th, td {
 .card-img-top {
   height: 20vw;
   object-fit: cover;
-}
-
-/* OSG Special announcements */
-#osg-special-banner {
-  margin: 2rem 2rem 0.75rem 2rem;
-  border: 3px solid #9F4000;
-  padding: 1rem;
-  background-color: #FFECDF;
-  p.special-banner-1 {
-    font-size: 100%;
-  }
-  p.special-banner-2 {
-    font-size: 75%;
-    margin-bottom: 0;
-  }
-  ul {
-    margin: 0;
-  }
-  li {
-    font-size: 85%;
-  }
-}
-
-#covid-19-mini-banner {
-  padding: 1px;
-  background-color: #FF6600;
-  margin-bottom: 2rem;
-}
-
-#covid-19-mini-banner p {
-  text-align: center;
-  font-size: 125%;
-  font-weight: bold;
-  color: white;
-  margin: 0.75em;
-}
-
-#covid-19-mini-banner a {
-  color: white;
-  text-decoration: underline;
-}
-
-.title-head {
-  margin-bottom: 1em;
-}
-
-/* OSG AHM temporary */
-
-#ahm-banner {
-  margin: 0 0 2rem 0;
-  padding: 1rem;
-  color: #303940;
-  background-color: #BFE6FF;
-  text-align: center;
-}
-
-#ahm-banner h2 {
-  font-size: 125%;
-  font-weight: 900;
-}
-
-#ahm-banner p {
-  margin: 1ex 0 0 0;
-}
-
-#ahm-banner a {
-  color: #607380;
-  text-decoration: underline;
 }
 
 .carousel {
