@@ -14,8 +14,8 @@ layout: padded-default
         <div class="row my-4">
             {% for event in future_events %}
 
-            <div class="col-12 col-md-6 col-xl-4 mb-4">
-                {% include /cards/news-card.html news=event card_image=event.header_image height='150' %}
+            <div class="col-12 col-lg-6 mb-4">
+                {% include /cards/event-card.html news=event card_image=event.header_image height='150' %}
             </div>
 
             {% endfor %}
@@ -26,8 +26,8 @@ layout: padded-default
         <div class="row">
             {% for event in past_events %}
 
-            <div class="col-12 col-md-6 col-xl-4 mb-4">
-                {% include /cards/news-card.html news=event card_image=event.header_image height='150' %}
+            <div class="col-12 col-lg-6 mb-4">
+                {% include /cards/event-card.html news=event card_image=event.header_image height='150' %}
             </div>
 
             {% endfor %}

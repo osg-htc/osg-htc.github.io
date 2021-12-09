@@ -14,7 +14,7 @@
             <hr/>
             <span class="text-decoration-none text-dark">
                 {% if include.content | markdownify | strip_html  %}
-                    {{ new.content }}
+                    {{ news.content }}
                 {% else %}
                     {{ news.excerpt | markdownify | strip_html }}
                 {% endif %}
