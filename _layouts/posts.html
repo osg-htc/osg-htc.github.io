@@ -2,7 +2,7 @@
 layout: container
 ---
 
-<div class="row">
+<div class="row justify-content-center">
   <div class="col-12 col-xl-7 col-lg-8 col-md-10">
     <section class="news-article">
       {% if page.title %}
@@ -14,9 +14,9 @@ layout: container
       </div> <!-- title-head -->
       {% endif %}
 
-
-      {{ content }}
-
+      <div class="fs-5">
+        {{ content }}
+      </div>
     </section>
   </div>
 </div>
