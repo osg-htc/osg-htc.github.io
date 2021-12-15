@@ -2,6 +2,7 @@
 title: "OSPool Usage Hits Daily Record" 
 date: 2021-06-10T12:00:00+00:00
 publish: true
+card_image: /assets/images/OSPool-Million-Core-Hours-wide.png
 --- 
 Researchers harnassing the capacity of the OSPool are racking up record-breaking numbers. On June 8, the OSPool, which provides computing resources to researchers across the country, went over 1.1 million core hours –– a daily record number. To put this in perspective, one million core hours is equivalent to using 42 thousand cores in just one day. That is close to half the size of some large supercomputing centers. In short, an increasing number of researchers are utilizing the OSG to carry out an incredible amount of computing.  
 

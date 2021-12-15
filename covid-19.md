@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: container
 title: Extra Support for COVID-19 Research
 ---
 
