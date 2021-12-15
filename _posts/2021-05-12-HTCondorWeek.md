@@ -2,6 +2,7 @@
 title: "Registration is Open for HTCondor Week."
 date: 2021-05-12T12:00:00+00:00
 publish: true
+card_image: /assets/images/team-2020.jpg
 --- 
 **HTCondor Week May 24-28, 2021**
 

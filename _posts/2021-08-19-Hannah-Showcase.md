@@ -3,6 +3,7 @@ title: "Using HTC for a simulation study on cross-validation for model evaluatio
 date: 2021-08-19T12:00:00+00:00
 excerpt: During the OSG School Showcase, Hannah Moshontz, a postdoctoral fellow at UW-Madison’s Department of Psychology, described her experience of using high throughput computing (HTC) for the very first time, when taking on an entirely new project within the field of psychology.
 publish: true
+card_image: /assets/images/Hannah-Showcase.jpg
 --- 
 
 By Josephine Watkins

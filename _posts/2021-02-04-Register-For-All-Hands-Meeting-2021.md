@@ -2,6 +2,7 @@
 title: "Upcoming OSG All-Hands Meeting, March 1&ndash;5"
 date: 2021-02-04T12:00:00+00:00
 publish: true
+card_image: 
 --- 
 **Register now for the online** <a href="https://indico.fnal.gov/event/47040/registrations/2899/" target="_blank">All-Hands Meeting 2021</a>, **March 1&ndash;5**, offered by the <a href="https://opensciencegrid.org/" target="_blank">OSG</a>. Everyone is invited to attend. Registration is free but required, so
 [please take a minute to register now](https://indico.fnal.gov/event/47040/registrations/2899/).

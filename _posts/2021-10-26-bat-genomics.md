@@ -3,6 +3,8 @@ title: "80,000 jobs, 40 billion base pairs, and 20 bats –– all in 4 weeks"
 date: 2021-10-26T12:00:00+00:00
 excerpt: An evolutionary biologist at the AMNH used HTC services provided by the OSG to unlock a genomic basis for convergent evolution in bats.
 publish: true
+hero_image: /assets/images/bat-carousel.jpg
+card_image: /assets/images/bat-genomics-Ariadna.png
 --- 
 
 ***An evolutionary biologist at the AMNH used HTC services provided by the OSG to unlock a genomic basis for convergent evolution in bats.***

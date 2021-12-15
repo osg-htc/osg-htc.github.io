@@ -3,6 +3,7 @@ title: "Antimatter: Using HTC to study very rare processes"
 date: 2021-08-19T12:00:00+00:00
 excerpt: Anirvan Shukla, a User School participant in 2016, spoke at this year's Showcase about how high throughput computing has transformed his research of antimatter in the last five years.
 publish: true
+card_image: /assets/images/Anirvan-Showcase-1.png
 --- 
 
 By Josephine Watkins

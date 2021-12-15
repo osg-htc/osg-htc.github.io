@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: container
 title: Ticket Decommissioned
 redirect_from: /ticket-decommissioned/index.html
 ---

@@ -30,3 +30,15 @@
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}" ></script>
+
+{% for head in include.head %}
+    {{ head }}
+{% endfor %}
+
+{% for js in include.js %}
+<script src="{{ js.src | relative_url }}" type="text/javascript" {{ js.loading}}></script>
+{% endfor %}
+
+{% for css in include.css %}
+<link href="{{ css.href | relative_url }}" media="screen, tv, projection" title="Default" rel="stylesheet">
+{% endfor %}
