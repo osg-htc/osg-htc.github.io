@@ -2,6 +2,7 @@
 title: VERITAS and OSG explore extreme window into the universe
 date: 2017-06-02 12:00:00 -0600
 categories: Veritas
+card_image: /assets/images/veritas_1.png
 ---
 
 Understanding the universe has always fascinated mankind. The VERITAS Cherenkov telescope array unravels its secrets by detecting very-high-energy gamma rays from astrophysics sources.

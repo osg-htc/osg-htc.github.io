@@ -1,0 +1,8 @@
+{% if include.data %}
+{% assign data = include.data %}
+{% endif %}
+<div class="{{ include.class }}">
+    <img height="100px" src="data.img" />
+    <b><a href="{{ data.url }}">{{ data.title }}</a></b>
+    <div><span class="text-muted">{{ data.date | date: "%B %e, %Y"}}</span></div>
+</div>

@@ -2,6 +2,7 @@
 title: Machine learning insights into molecular science using the Open Science Pool
 date: 2017-06-29 12:00:00 -0600
 categories: Machine Learning
+card_image: /assets/images/molcryst.png
 ---
 
 Machine learning insights into molecular science using the Open Science Pool
@@ -13,11 +14,13 @@ Olexandr Isayev is an assistant professor at the School of Pharmacy, University 
 
 For studying drug discovery, where small organic molecule binds to a protein receptor, Isayev uses machine learning to build predictive models based on historical collection of experimental data. “We want to challenge models and find a new molecule with better binding properties,” says Isayev.
 
-<div class="media border border-primary rounded-left">
-  <img class="mr-3" alt="Protein model visualization" src="{{site.baseurl}}/assets/images/molcryst.png">
-  <div class="media-body">
+<div class="row my-4">
+  <div class="col-md-6">
+    <img class="mr-3" alt="Protein model visualization" src="{{site.baseurl}}/assets/images/molcryst.png">
+  </div>
+  <div class="col-md-6">
     <h5 class="mt-0">Protein Model</h5>
-    Example of a protein model that Isayev and his group study. Courtesy image.
+    <p>Example of a protein model that Isayev and his group study. Courtesy image.</p>
   </div>
 </div>
 

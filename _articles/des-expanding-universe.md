@@ -1,4 +1,8 @@
 ---
+title: Des Expanding Universe
+date: 2018-03-01T12:00:00+00:00
+publish: true
+card_image: /assets/images/Dark-Matter-Map-II-e1521045294690.jpg
 ---
 
 Since its beginning, our universe has been expanding. The early work of scientists

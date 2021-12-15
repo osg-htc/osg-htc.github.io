@@ -28,12 +28,10 @@
                         <a class="nav-link" href="{{ '/news' | relative_url }}">News</a>
                     </li>
                     <li class="nav-item active">
-                        {% assign num_events = site.events | size %}
-                        {% if num_events == 1 %}
-                            <a class="nav-link" href="{{ site.events[0].url | relative_url }}">Events</a>
-                        {% else %}
-                            <a class="nav-link" href="{{ '/events' | relative_url }}">Events</a>
-                        {% endif %}
+                        <a class="nav-link" href="{{ '/articles' | relative_url }}">Articles</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ '/events' | relative_url }}">Events</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ '/contact' | relative_url }}">Contact</a>

@@ -2,6 +2,7 @@
 title: "OSG helps LIGO scientists confirm Einstein's unproven theory"
 date: 2016-02-11 12:00:00 -0600
 categories: Astronomy
+card_image: /assets/images/ligo20160211d-smaller-150x150.jpg
 ---
 
 Albert Einstein first posed the idea of gravitational waves in his [general theory of relativity](https://en.wikipedia.org/wiki/General_relativity) just over a century ago. But until now, they had never been observed directly. For the first time, scientists with the Laser Interferometer Gravitational-Wave Observatory [(LIGO) Scientific Collaboration](http://www.ligo.org/) (LSC) [have observed ripples in the fabric of spacetime called gravitational waves](https://www.ligo.caltech.edu/news/ligo20160211).

@@ -20,17 +20,15 @@ defaults:
     values:
       layout: about
   - scope:
-      path: ""
-      type: "no-date-posts"
-    values:
-      layout: no-date-posts
-      permalink: /news/:title.html
-  - scope:
-      path: ""
-      type: "posts"
+      path: "_news"
+      type: news
     values:
       layout: posts
-      permalink: /news/:year/:month/:day/:title.html
+  - scope:
+      path: "_articles"
+      type: articles
+    values:
+      layout: posts
   - scope:
       path: "_events"
     values:
@@ -43,8 +41,11 @@ collections:
   events:
     permalink: /events/:path/
     output: true
-  no-date-posts:
-    permalink: /news/:title.html
+  news:
+    permalink: /news/:year/:month/:day/:title.html
+    output: true
+  articles:
+    permalink: /articles/:title.html
     output: true
 
 sass:
