@@ -19,6 +19,6 @@ The OSG Consortium is pleased to see OSG stories reposted on the websites of oth
 
 The stories should be reposted with credits to the OSG website and the original authors, as well as a link to the original posting.
 
-Any alterations to the text or images for the reposting should be agreed by the OSG Communications team.  Please email <mailto:osg-contact@opensciencegrid.org>.
+Any alterations to the text or images for the reposting should be agreed by the OSG Communications team.  Please email [osg-contact@opensciencegrid.org](mailto:osg-contact@opensciencegrid.org).
 
 
