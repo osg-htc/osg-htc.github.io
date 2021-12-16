@@ -130,4 +130,4 @@ If you have any questions about the event, feel free to email us:
 <user-school@opensciencegrid.org>
 {% endcapture %}
 
-{% include events/event-page.html %}
+{% include event/event-page.html %}

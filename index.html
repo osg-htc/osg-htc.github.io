@@ -75,7 +75,7 @@ css_extension:
           <h2 class="m-0">Events</h2>
           <div class="border-top border-2 border-dark pt-2">
             {% for event in future_events limit:2 %}
-            {% include events/event-card-sidebar.html event=event %}
+            {% include event/event-card-sidebar.html event=event %}
             {% endfor %}
           </div>
         </div>
