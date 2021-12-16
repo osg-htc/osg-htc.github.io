@@ -32,7 +32,7 @@ defaults:
   - scope:
       path: "_events"
     values:
-      layout: event
+      layout: events
 
 collections:
   about:

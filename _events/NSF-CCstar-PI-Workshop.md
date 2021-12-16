@@ -81,4 +81,4 @@ For individual project questions for CC*, contact Kevin Thompson (<kthompso@nsf.
 {% capture endblock %}
 {% endcapture %}
 
-{% include events/event-page.html %}
+{% include event/event-page.html %}

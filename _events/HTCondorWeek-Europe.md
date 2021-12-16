@@ -94,4 +94,4 @@ If you have any questions about the event, feel free to email us:
 <hepix-2021condorworkshop-support@hepix.org>
 {% endcapture %}
 
-{% include events/event-page.html %}
+{% include event/event-page.html %}

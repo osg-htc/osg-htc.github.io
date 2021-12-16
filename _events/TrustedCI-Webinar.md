@@ -70,8 +70,8 @@ Monday, July 26th at 11:00am ET
 Virtual webinar on zoom
 
 # Registration
-Register [here](https://iu.zoom.us/webinar/register/WN_gBLnpC-yS_-en3vKAbeFzQ).
+Register Over.
 
 {% endcapture %}
 
-{% include events/event-page.html %}
+{% include event/event-page.html %}

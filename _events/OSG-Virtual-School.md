@@ -70,13 +70,13 @@ and is not merely a translation of the in-person program
 The event is free and materials will be posted publicly.
 A selective application process was required for full participation,
 which includes access to HTC experts and to HTC systems via the
-[Center for High Throughput Computing](https://chtc.cs.wisc.edu/approach.shtml) and
+[Center for High Throughput Computing](https://chtc.cs.wisc.edu/approach.html) and
 [OSG Connect](https://www.osgconnect.net/) service
 (otherwise available to researchers working on a U.S.-based academic, government, or non-profit research project).
 
 While no travel is involved and the schedule allows for some flexibility,
 accepted applicants were asked to commit at least 20 hours each week.
-You can view [the high-level schedule for 2021](schedule.md),
+You can view [the high-level schedule for 2021](https://opensciencegrid.org/virtual-school-2021/schedule/),
 and we expect the detailed schedule and materials to be similar to the
 [OSG Virtual School Pilot 2020](https://opensciencegrid.org/virtual-school-pilot-2020/).
 
@@ -130,4 +130,4 @@ If you have any questions about the event, feel free to email us:
 <user-school@opensciencegrid.org>
 {% endcapture %}
 
-{% include events/event-page.html %}
+{% include event/event-page.html %}

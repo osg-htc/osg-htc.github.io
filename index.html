@@ -87,6 +87,11 @@ css_extension:
             <hr class="m-2">
             {% for data in sorted_events limit: 2 %}
             {% include /cards/title-date.html class="my-2" %}
+        <div class="bg-white-offset overflow-auto ms-lg-2 pb-0 mb-4 p-2">
+          <h2 class="m-0">Events</h2>
+          <div class="border-top border-2 border-dark pt-2">
+            {% for event in future_events limit:2 %}
+            {% include event/event-card-sidebar.html event=event %}
             {% endfor %}
           </div>
         </div>
