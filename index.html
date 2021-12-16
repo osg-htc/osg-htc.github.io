@@ -71,7 +71,7 @@ css_extension:
     <div class="col-sm-12 col-md-8 col-lg-4 mt-3 mt-lg-3 mx-md-auto">
       <div class="card">
         <div class="card-body mb-auto">
-          <h3 class="m-0">News</h3>
+          <h3 class="m-0"><a href="/news.html">News</a></h3>
           <hr class="m-2">
           {% assign sorted_news = site.news | sort: "date" | reverse %}
           {% for data in sorted_news limit: 3 %}
@@ -83,7 +83,7 @@ css_extension:
       {% if future_events.size != 0 %}
         <div class="card my-2">
           <div class="card-body mb-auto">
-            <h3 class="m-0">Events</h3>
+            <h3 class="m-0"><a href="/events.html">Events</a></h3>
             <hr class="m-2">
             {% for data in future_events limit: 2 %}
               {% include /cards/img-title-date.html class="mt-2" src=data.header_image %}

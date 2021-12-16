@@ -32,11 +32,15 @@ Fermilab (working on DES Computing), tells us that analyzing this data is very m
 intensive, as it includes massive amounts of cosmology simulation, among other types of
 analysis.
 
-<div class="media border border-primary rounded-left">
-  <img class="mr-3" alt="Dark matter map" src="{{site.baseurl}}/assets/images/Dark-Matter-Map-II-e1521045294690.jpg">
-  <div class="media-body">
+<div class="row my-4">
+  <div class="col-md-6">
     <h5 class="mt-0">Dark Matter map</h5>
-    Map of dark matter, measured through weak lensing with Science Verification Data (Image Credit: DES Collaboration)
+    <p>
+      Map of dark matter, measured through weak lensing with Science Verification Data (Image Credit: DES Collaboration)
+    </p>
+  </div>
+  <div class="col-md-6">
+    <img class="mr-3" alt="Dark matter map" src="{{site.baseurl}}/assets/images/Dark-Matter-Map-II-e1521045294690.jpg">
   </div>
 </div>
 
@@ -65,4 +69,4 @@ As stated before, by receiving more workflows in the future, OSG will become an 
 part of the discoveries to come.  We look forward to helping DES further understand the
 nature of dark energy in our ever-expanding universe.
 
-For more info, please visit: <https://www.darkenergysurvey.org>
+For more info, please visit: [https://www.darkenergysurvey.org](https://www.darkenergysurvey.org)

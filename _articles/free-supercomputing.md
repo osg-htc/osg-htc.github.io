@@ -9,7 +9,7 @@ While at the OSG User School, Cole was able to use the tutorials in the curricul
 
 Of his research, Cole says, “My lab studies neural oscillations, or brain rhythms. When we record electrical activity from almost any brain region, we see a diverse set of rhythms, which reflect the brain’s computation in that region. We are interested in the biological mechanisms that generate these rhythms, and how they influence the brain’s information processing.”
 
-See Cole’s article here: https://srcole.github.io/2017/01/03/osg_python/
+See Cole’s article here: <https://srcole.github.io/2017/01/03/osg_python/>
 
-For further information on Cole’s research, please visit his main webpage: https://srcole.github.io/
+For further information on Cole’s research, please visit his main webpage: <https://srcole.github.io/>
 
