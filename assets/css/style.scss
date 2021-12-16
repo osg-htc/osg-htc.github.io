@@ -12,6 +12,14 @@ $navbar-brand-height: 3.5rem;
 
 $card-border-color: black;
 
+.h-100px {
+  height: 100px !important;
+}
+
+.h-150px {
+  height: 150px !important;
+}
+
 .hover-shadow {
   box-shadow: 0px 0px 0px #FFFFFF;
   transition-property: box-shadow;
