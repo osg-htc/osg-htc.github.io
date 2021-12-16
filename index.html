@@ -24,7 +24,7 @@ css_extension:
 </div>
 <div class="container-xxl mt-4">
   <div class="row mb-4">
-    <div class="col-lg-8">
+    <div class="col-md-8">
       <h2>The OSG Consortium</h2>
       <hr>
       <p>
@@ -68,29 +68,29 @@ css_extension:
         </p>
       </div>
     </div>
-    <div class="col-sm-12 col-md-8 col-lg-4 mt-3 mt-lg-3 mx-md-auto">
+    <div class="col-sm-12 col-md-4 mx-md-auto">
+      {% include /get/future_events.html %}
+      {% if future_events.size != 0 %}
+      <div class="card my-2">
+        <div class="card-body mb-auto">
+          <h3 class="m-0"><a href="/events.html">Events</a></h3>
+          <hr class="my-2">
+          {% for data in future_events limit: 2 %}
+          {% include /cards/img-title-date.html class="mt-2" src=data.header_image %}
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
       <div class="card">
         <div class="card-body mb-auto">
           <h3 class="m-0"><a href="/news.html">News</a></h3>
-          <hr class="m-2">
+          <hr class="my-2">
           {% assign sorted_news = site.news | sort: "date" | reverse %}
           {% for data in sorted_news limit: 3 %}
             {% include /cards/title-date.html class="my-2" %}
           {% endfor %}
         </div>
       </div>
-      {% include /get/future_events.html %}
-      {% if future_events.size != 0 %}
-        <div class="card my-2">
-          <div class="card-body mb-auto">
-            <h3 class="m-0"><a href="/events.html">Events</a></h3>
-            <hr class="m-2">
-            {% for data in future_events limit: 2 %}
-              {% include /cards/img-title-date.html class="mt-2" src=data.header_image %}
-            {% endfor %}
-          </div>
-        </div>
-      {% endif %}
     </div>
   </div>
 </div>
