@@ -71,14 +71,26 @@ css_extension:
     <div class="col-sm-12 col-md-8 col-lg-4 mt-3 mt-lg-3 mx-md-auto">
       <div class="card">
         <div class="card-body mb-auto">
-          <h2>News</h2>
-          <hr>
+          <h2 class="m-0">News</h2>
+          <hr class="m-2">
           {% assign sorted_news = site.news | sort: "date" | reverse %}
-          {% for data in sorted_news limit: 4 %}
-            {% include /cards/title-date.html class="my-3" %}
+          {% for data in sorted_news limit: 3 %}
+            {% include /cards/title-date.html class="my-2" %}
           {% endfor %}
         </div>
       </div>
+      {% include /get/future_events.html %}
+      {% if future_events.size != 0 %}
+        <div class="card">
+          <div class="card-body mb-auto">
+            <h2 class="m-0">Events</h2>
+            <hr class="m-2">
+            {% for data in sorted_events limit: 2 %}
+            {% include /cards/title-date.html class="my-2" %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>

@@ -1,7 +1,10 @@
 {% if include.data %}
 {% assign data = include.data %}
 {% endif %}
-<div class="{{ include.class }}">
-    <b><a href="{{ data.url }}">{{ data.title }}</a></b>
-    <div><span class="text-muted">{{ data.date | date: "%B %e, %Y"}}</span></div>
-</div>
+
+<a class="text-decoration-none" href="{{ data.url }}" class="d-block">
+    <div class="card border-0 hover-shadow p-1 {{ include.class }}">
+        <b class="text-decoration-none">{{ data.title }}</b>
+        <div><span class="text-muted text-decoration-none">{{ data.date | date: "%B %e, %Y"}}</span></div>
+    </div>
+</a>
