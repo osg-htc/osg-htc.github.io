@@ -74,4 +74,4 @@ Register Over.
 
 {% endcapture %}
 
-{% include events/event-page.html %}
+{% include event/event-page.html %}

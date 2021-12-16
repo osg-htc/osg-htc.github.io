@@ -144,4 +144,4 @@ The images used in this article were provided by [trustedci.org](https://www.tru
 and their [article on the summit](https://www.trustedci.org/2021-cybersecurity-summit).
 {% endcapture %}
 
-{% include events/event-page.html %}
+{% include event/event-page.html %}
