@@ -9,8 +9,8 @@ start_date: 2022-01-25
 end_date: 2022-01-25
 location: "Virtual"
 link: https://docs.google.com/forms/d/e/1FAIpQLSdnvnv3uFdKN5MiVFmpFfsIYaZVZDLbpJUvTBprBsGpsSgKxQ/viewform
-image: "/assets/images/events/siteadmin1.png"
-header_image: "/assets/images/events/siteadmin1.png"
+image: "/assets/images/events/siteadmin1.jpg"
+header_image: "/assets/images/events/siteadmin1.jpg"
 ---
 
 {% capture main %}
