@@ -33,7 +33,7 @@ title: Computation on the OSPool
 <th>Walltime</th>
 <td>< 10 hrs*</td>
 <td>< 20 hrs*</td>
-<td>> 20 hrs (Not a good fit)</td>
+<td>> 20 hrs</td>
 </tr>
 <tr>
 <th>RAM</th>
