@@ -1,5 +1,5 @@
 ---
-title: Computation on the OSG
+title: Computation on the OSPool
 published: false
 ---
 
