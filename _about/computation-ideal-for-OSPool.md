@@ -1,5 +1,5 @@
 ---
-title: Computation Ideal for OSPool
+title: Computation on the OSPool
 ---
 <figure class="figure">
   <img src="{{site.baseurl}}/assets/images/osg_pool_lab.png" class="figure-img img-fluid rounded" alt="Open Science Pool Users">
@@ -33,7 +33,7 @@ title: Computation Ideal for OSPool
 <th>Walltime</th>
 <td>< 10 hrs*</td>
 <td>< 20 hrs*</td>
-<td>> 20 hrs (Not a good fit)</td>
+<td>> 20 hrs</td>
 </tr>
 <tr>
 <th>RAM</th>

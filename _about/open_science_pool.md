@@ -8,21 +8,21 @@ title: Open Science Pool
 
 ## What is the Open Science Pool?
 
-> The Open Science Pool (OSPool) is an OSG service that provides access to shared computing and data resources using distributed high-throughput computing (dHTC). The pool aggregates computing resources from across the nation together to make them usable for broad use by the open science community, from researcher-driven groups to scientific collaborations. 
+> The Open Science Pool (OSPool) is a virtual cluster operated by the OSG, with shared computing and data resources using distributed high-throughput computing (dHTC). The pool aggregates computing resources contributed by clusters across and beyond the US, making them usable by the US-based open science community, from individual researchers and research groups at campuses, to multi-institutional collaborations with a US constituency. 
 
-> The OSPool aggregates computing resources from across the nation, making this capacity available as a single virtual cluster available for large-scale, distributed High Throughput Computing (dHTC). Researchers can submit computational work to the OSPool via access points operated locally to their campuses, or via OSG Connect access points, which serve researchers affiliated with projects at UW-based academic, non-profit, and government institutions.
+Researchers can submit computational work to the OSPool via access points operated locally to their campuses, or via access points operated as part of the [OSG Connect](https://www.osgconnect.net/) service, which serves researchers affiliated with projects at US-based academic, non-profit, and government institutions.
 
 ## Who can use the OS Pool?
 
 > Access is free and open to
 
->- Any researcher affiliated with a project at a US-based academic, government, or non-profit institution (via the OSG Connect service).
->- Any researcher affiliated with an organization that has its own access point (not limited to US affiliation)s 
->- All areas of research including social sciences, humanities, life sciences, engineering, medicine, chemistry and physics. 
+>- any researcher affiliated with a project at a US-based academic, government, or non-profit institution (via the OSG Connect service).
+>- any researcher affiliated with an organization that has its own access point (not limited to US affiliation). 
+>- all areas of research including social sciences, humanities, life sciences, engineering, medicine, chemistry and physics. 
 
 ## What types of work run well on the OSPool?
 
-> Work that can be executed as numerous laptop-sized computations and individually complete in less than 20 hours run well in the OSPool. A wide range of research problems and computational methods can be broken up or otherwise executed this way, including:
+> Work that can be executed as independent laptop-sized computations and individually complete in less than 20 hours run well in the OSPool. A wide range of research problems and computational methods can be broken up or otherwise executed this way, including:
 
 - image analysis (including MRI, GIS, etc.)
 - text-based analysis, including DNA read mapping and other bioinformatics
@@ -34,6 +34,4 @@ title: Open Science Pool
 
 ## Who contributes capacity to the OSPool?
 
-> The computing resources for the OSPool are contributed by members of the OSG Compute Federation, typically campuses, government supported supercomputing centers or research collaborations. The members individually determine their policies for providing resources. The member determines the amount of resources it contributes and when these resources are available. In addition, some resource providers decide to share their resources with a specific research project,or they may choose to contribute resources to all in the OSPool.
-
-
+> The computing resources for the OSPool are contributed by members of the OSG Compute Federation, typically campuses, government supported supercomputing centers or research collaborations. The members individually determine their policies for contributing resources, including the amount of resources it contributes and when these resources are available. In addition, some resource providers decide to share their resources with a specific research project, or they may choose to contribute resources to all in the OSPool.
