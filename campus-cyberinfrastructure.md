@@ -82,7 +82,7 @@ The Open Science Pool is an <a href="https://research.cs.wisc.edu/htcondor/" tar
 >- <a href="https://ucsdnews.ucsd.edu/pressrelease/sdsc-awarded-nsf-grant-for-triton-shared-computing-cluster-upgrade" target="_blank">University of California San Diego</a>
 >- <a href="https://news.engr.uconn.edu/500k-nsf-grant-awarded-to-dr-bing-wang-uconn-health-center-2.php" target="_blank">University of Connecticut</a>
 >- <a href="https://www.colorado.edu/rc/" target="_blank"> University of Colorado Boulder</a>
->- <a href="https://news.research.university/2019/10/31/the-research-university-tru-896/" target="_blank">University of Notre Dame</a>
+>- <a href="https://www.nd.edu/" target="_blank">University of Notre Dame</a>
 >- <a href="https://www.utc.edu/" target="_blank">University of Tennessee at Chattanooga</a>
 >- <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1925467&HistoricalAwards=false" target="_blank">Wayne State University</a>
 >- <a href="https://www.wtamu.edu/" target="_blank">West Texas A&M University</a>

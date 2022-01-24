@@ -56,7 +56,7 @@ css_extension:
         including DOE national laboratories.
       </p>
       <p>
-        More information on OSG and the OSG Consortium can be found on the <a href="{{ '/about/introduction.html' | relative_url }}">Introduction Page</a>.
+        More information on OSG and the OSG Consortium can be found on the <a href="{{ '/about/introduction/index.html' | relative_url }}">Introduction Page</a>.
       </p>
     </div>
     <div class="col-sm-12 col-md-4 mx-md-auto">
@@ -67,7 +67,7 @@ css_extension:
           <h3 class="m-0"><a href="/events.html">Events</a></h3>
           <hr class="my-2">
           {% for data in future_events limit: 2 %}
-          {% include /cards/img-title-date.html class="mt-2" src=data.header_image %}
+            {% include /cards/img-title-date.html class="mt-2" src=data.header_image %}
           {% endfor %}
         </div>
       </div>
