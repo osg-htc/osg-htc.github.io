@@ -3,6 +3,8 @@ title: "Transforming research with high throughput computing"
 date: 2021-08-19T12:01:00+00:00
 publish: true
 card_image: /assets/images/OSGVS21-Logo.png
+excerpt: |
+    During the OSG Virtual School Showcase, three different researchers shared how high throughput computing has made lasting impacts on their work.
 --- 
 ***During the OSG Virtual School Showcase, three different researchers shared how high throughput computing has made lasting impacts on their work.***
 
@@ -10,7 +12,7 @@ By Josephine Watkins
 
 <img src="{{ '/assets/images/OSGVS21-Logo.png' | relative_url }}" alt="OSG Virtual School Logo"/>
 
-Over 40 researchers and campus research computing staff were selected to attend this year’s OSG Virtual School, all united by a shared desire to learn how high throughput computing can advance their work. During the first two weeks of August, school participants were busy attending lectures, watching demonstrations, and completing hands-on exercises; but on Wednesday, August 11, participants had the chance to hear from researchers who have successfully used high throughput computing (HTC) to transform their work. Year after year, this event –– the HTC Showcase –– is one highlight of the experience for many User School participants. This year, three different researchers in the fields of structural biology, psychology, and particle physics shared how HTC impacted their work. Read the articles below to learn about their stories.
+Over 40 researchers and campus research computing staff were selected to attend this year’s OSG Virtual School, all united by a shared desire to learn how high throughput computing can advance their work. During the first two weeks of August, school participants were busy attending lectures, watching demonstrations, and completing hands-on exercises; but on Wednesday, August 11, participants had the chance to hear from researchers who have successfully used high throughput computing (HTC) to transform their work. Year after year, this event –– the HTC Showcase –– is one highlight of the experience for many User School participants. This year, three different researchers in the fields of structural biology, psychology, and particle physics shared how HTC impacted their work. Read the spotlights below to learn about their stories.
 
 **[Scaling virtual screening to ultra-large virtual chemical libraries](https://osg-htc.org/news/2021/08/19/Spencer-Showcase.html)** – Spencer Ericksen, Carbone Cancer Center, University of Wisconsin-Madison
 

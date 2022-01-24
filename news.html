@@ -8,27 +8,24 @@ layout: padded-default
     <h1>OSG News</h1>
     <hr class="m-0">
 </div>
-<div class="bg-light">
+<div class="bg-light pb-4">
     <div class="container-xxl">
         <div class="row pt-4">
-            {% assign sorted_news = site.news | sort: "date" | reverse %}
-            {% for news in sorted_news %}
+            {% include /get/news.liquid %}
+            {% for news in news %}
             <div class="col-12 col-lg-6 col-xl-4 pb-4">
-                {% include /cards/article-card.html article=news %}
+                {% include /cards/spotlight-card.html article=news %}
             </div>
             {% endfor %}
         </div>
+        <p class="pt-4">
+            The OSG Consortium is pleased to see OSG stories reposted on the websites of other organizations.
+
+            The stories should be reposted with credits to the OSG website and the original authors, as well as a link to the original posting.
+
+            Any alterations to the text or images for the reposting should be agreed by the OSG Communications team.  Please email <a href="mailto:osg-contact@opensciencegrid.org">osg-contact@opensciencegrid.org</a>.
+        </p>
     </div>
-</div>
-<div class="container-xxl">
-    <hr>
-    <p>
-        The OSG Consortium is pleased to see OSG stories reposted on the websites of other organizations.
-
-        The stories should be reposted with credits to the OSG website and the original authors, as well as a link to the original posting.
-
-        Any alterations to the text or images for the reposting should be agreed by the OSG Communications team.  Please email <a href="mailto:osg-contact@opensciencegrid.org">osg-contact@opensciencegrid.org</a>.
-    </p>
 </div>
 
 

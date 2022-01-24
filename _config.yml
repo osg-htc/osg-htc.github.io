@@ -25,8 +25,8 @@ defaults:
     values:
       layout: posts
   - scope:
-      path: "_articles"
-      type: articles
+      path: "_spotlights"
+      type: spotlights
     values:
       layout: posts
   - scope:
@@ -44,8 +44,8 @@ collections:
   news:
     permalink: /news/:year/:month/:day/:title.html
     output: true
-  articles:
-    permalink: /articles/:title.html
+  spotlights:
+    permalink: /spotlights/:title.html
     output: true
 
 sass:
