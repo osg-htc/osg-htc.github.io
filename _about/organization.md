@@ -1,5 +1,6 @@
 ---
 title: Members of the OSG Consortium
+nav: Consortium Members
 ---
 
 _We consider the consortium to be the totality of all researchers, resources, individuals and institutions that benefit from or contribute to any of the OSG fabric of services._
