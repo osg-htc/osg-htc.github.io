@@ -10,7 +10,7 @@ css_extension:
     <div class="row justify-content-end">
       <div class="col-12 col-md-5 col-xxl-5">
         {% include /get/hero_data.liquid %}
-        <div class="p-3 my-5 d-flex flex-column" id="hero-content-container">
+        <div class="p-3 mb-3 mt-4 d-flex flex-column" id="hero-content-container">
           <h3 class="text-white">{{ hero_data.title }}</h3>
           <hr>
           <p class="text-white">
@@ -27,37 +27,9 @@ css_extension:
     <div class="col-md-8">
       <h1>The OSG and OSG Consortium</h1>
       <p class="fst-italic">
-        OSG is a consortium dedicated to the advancement of open science via the
-        practice of distributed High Throughput Computing, and the advancement of
-        its state of the art.
+        The OSG is a consortium of research collaborations, campuses, national laboratories and software providers dedicated to the advancement of all open science via the practice of distributed High Throughput Computing (dHTC), and the advancement of its state of the art. Established in 2005, the OSG operates a fabric of dHTC services for the National S&E community.
       </p>
-      <p>
-        <b>The OSG Consortium</b> builds and operates a set of <b>pools of shared computing and
-        data capacity for distributed high-throughput computing (dHTC)</b>. Each pool is
-        organized and operated to serve a particular research community (e.g. a campus,
-        multi-institutional collaboration, etc.), using technologies and
-        services provided by the core OSG Team. One of these pools, known as the
-        <a href="{{ '/about/open_science_pool' | relative_url }}"><b>Open Science Pool</b></a>
-        is operated for all of US-associated
-        open science. The Consortium, thus, represents the totality of all researchers,
-        resources, individuals and institutions that benefit from or contribute to any
-        of the OSG Fabric of Services.
-      </p>
-      <p>
-        <a href="https://opensciencegrid.org/council/"><b>The OSG Council</b></a> governs the consortium ensuring that the OSG benefits
-        the scientific mission of its stakeholders: the research communities, organizations
-        that provide resources and services for them, including funding resources.
-      </p>
-      <p>
-        <a href="https://opensciencegrid.org/management/"><b>The Executive Team</b></a> manages the core <a href="{{ '/about/team/' | relative_url }}"><b>OSG Team</b></a>, with
-        team members from various institutions organized into Areas that provide core OSG
-        technologies and services required to operate pools in support of research communities.
-        As of January 2022, the OSG Team is funded primarily via the <a href="https://path-cc.io/">PATh</a> (NSF #2030508), <a href="https://iris-hep.org/">IRIS-HEP</a> (NSF #1836650) projects, and in kind contributions from multiple entities,
-        including DOE national laboratories.
-      </p>
-      <p>
-        More information on OSG and the OSG Consortium can be found on the <a href="{{ '/about/introduction/index.html' | relative_url }}">Introduction Page</a>.
-      </p>
+
     </div>
     <div class="col-sm-12 col-md-4 mx-md-auto">
       {% include /get/future_events.html %}
