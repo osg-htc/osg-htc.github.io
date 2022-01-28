@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-xxl">
-            <a class="navbar-brand pt-1 pb-1" href="/"><img height="55" src="{{ '/assets/images/logos/OSG-logo.svg' | relative_url }}" alt="OSG logo"></a>
+            <a class="navbar-brand pt-1 pb-1" href="{{ '/' | relative_url }}"><img height="55" src="{{ '/assets/images/logos/OSG-logo.svg' | relative_url }}" alt="OSG logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -16,7 +16,7 @@
                             {% for item in section.docs %}
                             {% assign item_url = item | prepend:"/about/" | append:"/" %}
                             {% assign p = site.about | where:"url", item_url | first %}
-                            <a class="dropdown-item" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+                            <a class="dropdown-item" href="{{ p.url | relative_url }}">{{ p.nav | default: p.title }}</a>
                             {% endfor %}
                             {% endfor %}
                         </div>
@@ -26,6 +26,9 @@
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ '/news.html' | relative_url }}">News</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ '/spotlights.html' | relative_url }}">Spotlights</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ '/events.html' | relative_url }}">Events</a>

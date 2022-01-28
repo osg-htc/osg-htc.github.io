@@ -2,14 +2,19 @@
 title: "OSG helps LIGO scientists confirm Einstein's unproven theory"
 date: 2016-02-11 12:00:00 -0600
 categories: Astronomy
+card_image: /assets/images/ligo20160211d-smaller-150x150.jpg
 ---
 
 Albert Einstein first posed the idea of gravitational waves in his [general theory of relativity](https://en.wikipedia.org/wiki/General_relativity) just over a century ago. But until now, they had never been observed directly. For the first time, scientists with the Laser Interferometer Gravitational-Wave Observatory [(LIGO) Scientific Collaboration](http://www.ligo.org/) (LSC) [have observed ripples in the fabric of spacetime called gravitational waves](https://www.ligo.caltech.edu/news/ligo20160211).
 
-<a href="{{site.baseurl}}/assets/images/ligo20160211d-smaller.jpg"><img src="{{site.baseurl}}/assets/images/ligo20160211d-smaller-150x150.jpg" alt="ligo20160211d-smaller" width="150" height="150" /></a>
-
-_Image Courtesy Caltech/MIT/LIGO Laboratory_
-
+<div class="row my-4 justify-content-center">
+    <div class="col-sm-6">
+        <div>
+            <img class="w-100" src="{{site.baseurl}}/assets/images/ligo20160211d-smaller-150x150.jpg" alt="ligo20160211d-smaller" />
+        </div>
+        <small class="text-muted">Image Courtesy Caltech/MIT/LIGO Laboratory</small>
+    </div>
+</div>
 
 LIGO consists of two observatories within the United States—one in Hanford, Washington and the other in Livingston, Louisiana—separated by 1,865 miles. LIGO’s detectors search for gravitational waves from deep space. With two detectors, researchers can use differences in the wave’s arrival times to constrain the source location in the sky. LIGO’s first data run of its advanced gravitational wave detectors began in September 2015 and ran through January 12, 2016. The first gravitational waves were detected on September 14, 2015 by both detectors.
 
@@ -17,35 +22,27 @@ The LIGO project employs many concepts that the OSG promotes—resource sharing,
 
 Peter Couvares, data analysis computing manager for the Advanced LIGO project at Caltech, specializes in distributed computing problems. He and colleagues James Clark (Georgia Tech) and Larne Pekowsky (Syracuse University) explained LIGO’s computing needs and environment: The main focus is on optimization of data analysis codes, where optimization is broadly defined to encompass the overall performance and efficiency of their computing. While they use traditional optimization techniques to make things run faster, they also pursue more efficient resource management, and opportunistic resources—if there are computers available, they try to use them—thus the collaboration with OSG.
 
-<table>
-  <tbody>
-    <tr>
-      <td>
-        <div id="attachment_223091" style="max-width: 160px">
-          <a href="{{site.baseurl}}/assets/images/couvares_cropped.jpeg"><img src="{{site.baseurl}}/assets/images/couvares_cropped-150x150.jpeg" alt="couvares_cropped" width="150" height="150" /></a>
-          <br/>
-          Peter Couvares, courtesy photo
-        </div>
-      </td>
-      <td></td>
-      <td>
-        <div id="attachment_223081" style="max-width: 160px">
-          <a href="{{site.baseurl}}/assets/images/clark_cropped.jpeg"><img class="wp-image-223081 size-thumbnail" src="{{site.baseurl}}/assets/images/clark_cropped-150x150.jpeg" alt="clark_cropped" width="150" height="150" /></a>
-          <br/>
-          James Clark, courtesy photo
-        </div>
-      </td>
-      <td></td>
-      <td>
-        <div id="attachment_223101" style="max-width: 160px">
-          <a href="{{site.baseurl}}/assets/images/pekowsy.jpeg"><img class="wp-image-223101 size-thumbnail" src="{{site.baseurl}}/assets/images/pekowsy-150x150.jpeg" alt="pekowsy" width="150" height="150" /></a>
-          <br/>
-          Larne Pekowsky, courtesy photo
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="row my-4">
+  <div class="col-4">
+    <div>
+      <img class="img-fluid w-100" src="{{site.baseurl}}/assets/images/couvares_cropped-150x150.jpeg" alt="couvares_cropped" />
+    </div>
+    <small class="muted">Peter Couvares, courtesy photo</small>
+  </div>
+  <div class="col-4">
+    <div>
+      <img class="img-fluid w-100" src="{{site.baseurl}}/assets/images/clark_cropped-150x150.jpeg" alt="clark_cropped" />
+    </div>
+    <small class="muted">James Clark, courtesy photo</small>
+  </div>
+  <div class="col-4">
+    <div>
+      <img class="img-fluid w-100" src="{{site.baseurl}}/assets/images/pekowsy-150x150.jpeg" alt="pekowsy" />
+    </div>
+    <small class="muted">Larne Pekowsky, courtesy photo</small>
+  </div>
+</div>
+
 
 “When a workflow might consist of 600,000 jobs, we don&#8217;t want to rerun them if we make a mistake. So we use [DAGMan](http://research.cs.wisc.edu/htcondor/dagman/dagman.html) (Directed Acyclic Graph Manager, a meta-scheduler for [HTCondor](http://research.cs.wisc.edu/htcondor/)) and Pegasus workflow manager to optimize changes,” added Couvares. “The combination of Pegasus, Condor, and OSG work great together.” Keeping track of what has run and how the workflow progresses, Pegasus translates the abstract layer of what needs to be done into actual jobs for Condor, which then puts them out on OSG.
 

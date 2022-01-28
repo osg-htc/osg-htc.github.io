@@ -11,6 +11,7 @@ excerpt: >
     globally available for sale GPUs (graphics processing units) across
     Amazon Web Services, Microsoft Azure, and the Google Cloud
     Platform.
+card_image: /assets/images/2019-11-22-gpu-cloudburst/byregion.png
 ---
 
 

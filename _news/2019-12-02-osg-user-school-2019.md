@@ -2,6 +2,7 @@
 title: "OSG User School 2019"
 date: 2019-12-02 12:00:00 -0600
 categories: School
+card_image: /assets/images/osg-user-school-2019.png
 ---
 
 The OSG User School 2019 was held at the University of Wisconsin–Madison on July

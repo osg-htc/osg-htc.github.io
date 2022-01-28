@@ -10,7 +10,7 @@ css_extension:
     <div class="row justify-content-end">
       <div class="col-12 col-md-5 col-xxl-5">
         {% include /get/hero_data.liquid %}
-        <div class="p-3 my-5 d-flex flex-column" id="hero-content-container">
+        <div class="p-3 mb-3 mt-4 d-flex flex-column" id="hero-content-container">
           <h3 class="text-white">{{ hero_data.title }}</h3>
           <hr>
           <p class="text-white">
@@ -24,65 +24,49 @@ css_extension:
 </div>
 <div class="container-xxl mt-4">
   <div class="row mb-4">
-    <div class="col-lg-8">
-      <h2>The OSG Consortium</h2>
-      <hr>
-      <p>
-        The OSG is a consortium of research collaborations, campuses, national
-        laboratories and software providers dedicated to the advancement of all
-        open science via the practice of distributed High Throughput Computing
-        (dHTC), and the advancement of its state of the art. Established in 2005,
-        the OSG operates a fabric of dHTC services for the National S&E community.
+    <div class="col-md-8">
+      <h1>The OSG and OSG Consortium</h1>
+      <p class="fst-italic">
+        The OSG is a consortium of research collaborations, campuses, national laboratories and software providers dedicated to the advancement of all open science via the practice of distributed High Throughput Computing (dHTC), and the advancement of its state of the art. Established in 2005, the OSG operates a fabric of dHTC services for the National S&E community.
       </p>
-      <div class="p-3 bg-white-offset">
-        <p>
-          <b>
-            We are here to help with your NSF
-            <a href="https://www.nsf.gov/pubs/2021/nsf21528/nsf21528.htm">(CC*) Proposal!</a>
-          </b>
-        </p>
-        <p>
-          Campuses with awards from the
-          <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a> Program
-          play an important role in the OSG Consortium. The current chair-elect of the OSG council is
-          <a href="https://researchcomputing.syr.edu/about-us/team/sedore/">Eric Sedore</a>
-          of Syracuse University. To date, 19 CC* campuses contribute to the more than
-          5M core hours delivered weekly by the
-          <a href="https://opensciencegrid.org/about/open_science_pool/">Open Science Pool (OSPool)</a>.
-        </p>
-        <p>
-          As part of the <a href="https://path-cc.io/">PATh</a> project we have accumulated
-          <a href="https://opensciencegrid.org/campus-cyberinfrastructure">significant experience</a>
-          working with campuses that apply to the CC* Program, providing letters of support
-          and consulting for:
-        </p>
-        <ul>
-          <li>CC*-required resource sharing via the OSPool for the Campus Compute category</li>
-          <li>Gathering science drivers and planning local computing services</li>
-        </ul>
-        <p>
-          <b>
-            Please contact us at <a href="mailto:cc-star-proposals@opensciencegrid.org">cc-star-proposals@opensciencegrid.org</a>
-            with any questions you may have about OSG and the CC* Program!
-          </b>
-        </p>
-      </div>
+      <h5 id="open-science-pool-ospool"><a href="{{ '/about/open_science_pool/' | relative_url }}">Open Science Pool (OS Pool)</a></h5>
+      <p>The OSPool is an OSG operated virtual cluster with shared computing and data resources using distributed high-throughput computing (dHTC).</p>
+      <ul>
+        <li>Free and open for any scientist or group, of all disciplines, doing open science in the US.</li>
+        <li>Built to run <a href="/about/open_science_pool/index.html#what-types-of-work-run-well-on-the-ospool">independent computations</a> on a massive scale.</li>
+        <li>Contributed to by campuses, government supported supercomputing facilities and research collaborations.</li>
+      </ul>
+      <h5 id="open-science-data-federation"><a href="{{ '/about/osdf/' | relative_url }}">Open Science Data Federation (OSDF)</a></h5>
+      <p>The OSDF is an OSG service that enables users and institutions to make datasets available to distributed high-throughput computing (dHTC) environments, such as the OSPool.</p>
+      <ul>
+        <li>Provides campuses and researchers with the ability to manage their data in support of running their high throughput computing workloads.</li>
+        <li>Improves data access performance, resource consumption and reliability.</li>
+        <li><a href="https://support.opensciencegrid.org/support/solutions/articles/12000002985-overview-data-staging-and-transfer-to-jobs#data-locations-and-quotas">The OSG Connect</a> access points provide 50GB of default quota in /home, local to the access point, and also a mount of the OSG Connect data origin, with a default quota of 500GB.</li>
+      </ul>
+
+
     </div>
-    <div class="col-sm-12 col-md-8 col-lg-4 mx-md-auto">
-      {% include get/future_events.html %}
+    <div class="col-sm-12 col-md-4 mx-md-auto">
+      {% include /get/future_events.html %}
       {% if future_events.size != 0 %}
-        <div class="bg-white-offset overflow-auto ms-lg-2 pb-0 mb-4 p-2">
-          <h2 class="m-0">Events</h2>
-          <div class="border-top border-2 border-dark pt-2">
-            {% for event in future_events limit:2 %}
-            {% include event/event-card-sidebar.html event=event %}
-            {% endfor %}
-          </div>
+      <div class="card my-2">
+        <div class="card-body mb-auto">
+          <h3 class="m-0"><a href="/events.html">Events</a></h3>
+          <hr class="my-2">
+          {% for data in future_events limit: 2 %}
+            {% include /cards/img-title-date.html class="mt-2" src=data.header_image %}
+          {% endfor %}
         </div>
+      </div>
       {% endif %}
-      <div class="card bg-white">
-        <div class="card-body">
-          <a class="twitter-timeline" data-height="500" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <div class="card">
+        <div class="card-body mb-auto">
+          <h3 class="m-0"><a href="/news.html">News</a></h3>
+          <hr class="my-2">
+          {% include /get/news.liquid %}
+          {% for data in news limit: 3 %}
+            {% include /cards/title-date.html class="my-2" %}
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -91,9 +75,15 @@ css_extension:
 <div class="bg-light py-4 mb-4">
   <div class="container-xxl">
     <div class="row justify-content-center">
-      {% for news in site.posts limit:3 %}
-        <div class="col-12 col-md-6 col-xl-4 {% cycle: 'd-block', 'd-none d-md-block', 'd-none d-xl-block' %}">
-          {% include /cards/news-card.html height='150' %}
+      <div class="col-12 col-sm-8 col-md-6 col-xl-4 order-2 order-md-1 mt-3 mt-md-0">
+        <div class="card hover-shadow p-3 bg-white">
+          <a class="twitter-timeline" data-height="550" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+      {% assign sorted_spotlights = site.spotlights | reverse %}
+      {% for article in sorted_spotlights limit:2 %}
+        <div class="col-12 col-md-6 col-xl-4 {% cycle 'order-1 order-md-2', 'd-none d-xl-block order-3' %}">
+          {% include /cards/spotlight-card.html height='150' no_date="true" %}
         </div>
       {% endfor %}
     </div>

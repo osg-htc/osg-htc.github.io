@@ -2,6 +2,6 @@
   {% for item in include.items %}
     {% assign item_url = item | prepend:"/about/" | append:"/" %}
     {% assign p = site.about | where:"url", item_url | first %}
-    <li class="nav-item {% if item_url == page.url %}active{% endif %}"><a class="nav-link" href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+    <li class="nav-item {% if item_url == page.url %}active{% endif %}"><a class="nav-link" href="{{ p.url | relative_url }}">{{ p.nav | default: p.title }}</a></li>
   {% endfor %}
   </ul>

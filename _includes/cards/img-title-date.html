@@ -1,0 +1,22 @@
+{% if include.data %}
+{% assign data = include.data %}
+{% endif %}
+
+<a class="text-decoration-none d-block" href="{{ data.url }}">
+    <div class="card border-0 hover-shadow {{ include.class }}">
+        <img class="card-img-top h-100px" src="{{ data.src | default: include.src }}" alt="{{ data.alt | default: include.alt }}">
+        <div class="p-1">
+            <b class="text-decoration-none">{{ data.title | default: include.title }}</b>
+            <div><span class="text-muted text-decoration-none">
+            {% if data.start_date != data.end_date %}
+                {% assign date = data.start_date | date: "%B %e" %}
+                {% assign date = data.end_date | date: "-%e, %Y" | prepend: date %}
+            {% else %}
+                {% assign date = data.start_date | date: "%B %e, %Y" %}
+            {% endif %}
+
+            {{ date }}
+        </span></div>
+        </div>
+    </div>
+</a>

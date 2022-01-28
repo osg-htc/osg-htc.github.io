@@ -1,0 +1,4 @@
+{% comment %}
+    Use this to filter out the redirects
+{% endcomment %}
+{% assign news = site.news |  where_exp: "news", "news.layout != 'blank'" | sort: "date" | reverse %}

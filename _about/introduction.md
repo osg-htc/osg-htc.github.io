@@ -1,5 +1,6 @@
 ---
 title: The OSG and OSG Consortium
+nav: Introduction
 redirect_from: /about/index.html
 ---
 
