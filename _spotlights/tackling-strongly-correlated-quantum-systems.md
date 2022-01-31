@@ -1,12 +1,12 @@
 ---
-title: "Tackling Strongly Correlated Quantum Systems on OS Pool"
+title: "Tackling Strongly Correlated Quantum Systems on OSPool"
 date: 2015-04-01 12:00:00 -0600
 categories: Particle Physics
 card_image: /assets/images/Fermion-Bag-300x300.jpg
 ---
 
 Duke University Associate Professor of Physics Shailesh Chandrasekharan and his graduate student Venkitesh Ayyar are
-using the OS pool to tackle notoriously difficult problems in quantum systems.
+using the OSpool to tackle notoriously difficult problems in quantum systems.
 
 <div class="row my-5">
   <div class="col-sm-6">
