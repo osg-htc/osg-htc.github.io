@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: container
 title: Extra Support for COVID-19 Research
 ---
 
@@ -12,7 +12,7 @@ research by sharing your own capacity.
 
 OSG is helping to organize extra resources to be made available to COVID-19 research!  These resources include:
 
-- **Capabilities for a variety of computational research tasks.** See [Computation on the OSG](https://opensciencegrid.org/about/computation/).
+- **Capabilities for a variety of computational research tasks.** See [Computation on the OSPool](/about/open_science_pool).
 - **Proactive consultation and facilitation** for quickly scaling up and automating workloads with up to [thousands of 
 concurrently-running jobs](https://gracc.opensciencegrid.org/dashboard/db/covid-19-research?orgId=1).
 - **Access to significant computing capacity** through the *[OSG Connect](https://support.opensciencegrid.org/support/home)*
@@ -48,11 +48,7 @@ Other Activities
 
 -   The IRIS-HEP software institute provides effort to the OSG through its _OSG-LHC_ area; it
     has been coordinating additional [COVID-19 activities](https://iris-hep.org/covid-19).
-
--   Trusted CI, NSF CoE Pilot, and the Science Gateways Community Institute are offering
-    priority help to
-    [projects tackling COVID-19](https://sciencegateways.org/-/trusted-ci-nsf-ci-coe-pilot-and-sgci-offering-priority-help-to-projects-tackling-covid-19).
-
+    
 -   OSG is participating in the
     [WLCG COVID-19 task force](https://twiki.cern.ch/twiki/bin/view/LCG/WLCGresourcesForCOVID-19research)
     (and broadly with computing organizations in Europe) to make LHC resources available to

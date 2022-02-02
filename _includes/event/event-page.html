@@ -1,0 +1,45 @@
+
+<div class="event">
+<div class="row">
+<div class="col-auto">
+<div class="icons border-top border-bottom">
+{% if page.calendar_event %}
+<a href="{{ page.calendar_event | prepend: '/assets/calendar_event/' | relative_url}}">
+<img src="{{ '/assets/images/icons/calendar-plus.svg' | relative_url }}"/>
+</a>
+{% endif %}
+</div>
+</div>
+</div>
+<div class="row">
+<div class="main col-12 col-md-8" markdown="1">
+{{ main }}
+</div>
+<div class="subsection col-12  col-md-4" markdown="1">
+{{ subsection }}
+</div>
+</div>
+<div class="row">
+<div class="col-12" markdown="1">
+{{ endblock }}
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

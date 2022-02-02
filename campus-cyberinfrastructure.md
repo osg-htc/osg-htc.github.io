@@ -2,7 +2,7 @@
 title: Campus Cyberinfrastructure (CC*)- 21528
 date: 2021-08-12 12:00:00 -0600
 categories: NSF Camput Cyberinfrastructure (CC*)
-layout: default
+layout: container
 ---
 
 Campus Cyberinfrastructure Award Recipients Power the Open Science Pool
@@ -74,7 +74,7 @@ The Open Science Pool is an <a href="https://research.cs.wisc.edu/htcondor/" tar
 >- <a href="https://www1.lehigh.edu/" target="_blank">Lehigh University</a>
 >- <a href="http://www.hpc.lsu.edu/about/index.php" target="_blank"> Louisiana State University</a>
 >- <a href="https://www.lsuhsc.edu/" target="_blank"> LSU Health</a>
->- <a href="https://newscenter.nmsu.edu/Articles/view/14445/nsf-grant-brings-high-performance-computing-to-new-mexico-students-faculty" target="_blank"> New Mexico State University</a>
+>- <a href="https://www.nmsu.edu/" target="_blank"> New Mexico State University</a>
 >- <a href="https://www.purdue.edu/newsroom/releases/2019/Q3/nsf-supports-purdue-team-developing-online-manufacturing-education.html" target="_blank">Purdue University</a>
 >- <a href="https://news.syr.edu/blog/2020/09/03/national-science-foundation-awards-390000-to-syracuse-university-computing-initiative/" target="_blank"> Syracuse University</a>
 >- <a href="https://www.siue.edu/its/cyberinfrastructure/" target="_blank"> Southern Illinois University Edwardsville</a>
@@ -82,7 +82,7 @@ The Open Science Pool is an <a href="https://research.cs.wisc.edu/htcondor/" tar
 >- <a href="https://ucsdnews.ucsd.edu/pressrelease/sdsc-awarded-nsf-grant-for-triton-shared-computing-cluster-upgrade" target="_blank">University of California San Diego</a>
 >- <a href="https://news.engr.uconn.edu/500k-nsf-grant-awarded-to-dr-bing-wang-uconn-health-center-2.php" target="_blank">University of Connecticut</a>
 >- <a href="https://www.colorado.edu/rc/" target="_blank"> University of Colorado Boulder</a>
->- <a href="https://news.research.university/2019/10/31/the-research-university-tru-896/" target="_blank">University of Notre Dame</a>
+>- <a href="https://www.nd.edu/" target="_blank">University of Notre Dame</a>
 >- <a href="https://www.utc.edu/" target="_blank">University of Tennessee at Chattanooga</a>
 >- <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1925467&HistoricalAwards=false" target="_blank">Wayne State University</a>
 >- <a href="https://www.wtamu.edu/" target="_blank">West Texas A&M University</a>

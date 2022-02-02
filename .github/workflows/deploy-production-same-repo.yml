@@ -1,20 +1,45 @@
-name: Deploy Producion to Repo GitHub-Pages
+name: Deploy production version of the Website on Current Repo
 
 on:
   push:
     branches:
-      - production
+      - master
   schedule:
     - cron: '0 0 * * *'
 
 jobs:
-  github-pages:
-    runs-on: ubuntu-latest
+  Build-And-Deploy-Production:
+    if: ${{ github.repository_owner == 'opensciencegrid' }}
+    runs-on: ubuntu-18.04
+    env:
+      CNAME: opensciencegrid.org
+      OVERRIDE_CONFIG: _config_opensciencegrid_org.yml
+
     steps:
       - uses: actions/checkout@v2
+
+      - name: Initialize GH User
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - uses: ruby/setup-ruby@v1
         with:
-          ref: production
-      - uses: helaili/jekyll-action@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          target_branch: 'gh-pages'
+          ruby-version: 2.6
+          bundler-cache: true
+
+      - name: Build and Deploy
+        run: |
+          # Build the production version of website
+          JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,${{ env.OVERRIDE_CONFIG }}
+
+          # Add in the appropriate CNAME file
+          echo "${{ env.CNAME }}" > _site/CNAME
+
+          # Commit the build then use 'git subtree' to create a branch with just the _site contents
+          git add _site -f
+          git commit -m "Build Production Website"
+          git checkout -b gh-pages `git subtree split --prefix _site master`
+
+          # Push to Production
+          git push --set-upstream origin gh-pages --force

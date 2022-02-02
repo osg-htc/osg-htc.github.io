@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: container
 title: OSG Twiki Decommisssioned
 redirect_from: /osg-twiki-decommissioned/index.html
 ---

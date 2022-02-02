@@ -7,27 +7,32 @@ google_analytics: UA-69012-28
 # Jekyll does not build hidden directories by default.
 include:
   - .well-known
+  - .nojekyll
 
 defaults:
   - scope:
       path: ""
     values:
-      layout: default
+      layout: container
   - scope:
       path: "_about"
       type: about
     values:
       layout: about
   - scope:
-      path: ""
-      type: "posts"
+      path: "_news"
+      type: news
     values:
       layout: posts
-      permalink: /news/:year/:month/:day/:title.html
+  - scope:
+      path: "_spotlights"
+      type: spotlights
+    values:
+      layout: posts
   - scope:
       path: "_events"
     values:
-      layout: event
+      layout: events
 
 collections:
   about:
@@ -36,10 +41,16 @@ collections:
   events:
     permalink: /events/:path/
     output: true
-
+  news:
+    permalink: /news/:year/:month/:day/:title.html
+    output: true
+  spotlights:
+    permalink: /spotlights/:title.html
+    output: true
 
 sass:
   style: compressed
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-sitemap

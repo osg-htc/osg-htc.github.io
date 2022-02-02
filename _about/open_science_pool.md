@@ -12,7 +12,7 @@ title: Open Science Pool
 
 Researchers can submit computational work to the OSPool via access points operated locally to their campuses, or via access points operated as part of the [OSG Connect](https://www.osgconnect.net/) service, which serves researchers affiliated with projects at US-based academic, non-profit, and government institutions.
 
-## Who can use the OS Pool?
+## Who can use the OSPool?
 
 > Access is free and open to
 
