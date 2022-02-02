@@ -54,7 +54,7 @@ These can be deployed by a research organization to create their own dHTC pool
 across participating compute and data components, making their federated capacity 
 available to the researchers they serve.
 
-## OSG Technologies and Services
+### OSG Technologies and Services
 
 The OSG’s **[Global Research Accounting (GRACC)](https://gracc.opensciencegrid.org/d/000000074/gracc-home?orgId=1&search=open&folder=current)** system provides metrics of capacity 
 contributions and usage across reporting OSG pools, including specific metrics 
