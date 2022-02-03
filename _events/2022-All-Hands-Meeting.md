@@ -15,7 +15,7 @@ header_credit: '"Field House w/ Water Tower" by Majdan is licensed under CC BY-N
 
 {% capture main %}
 
-Registration is now open for the OSG All-Hands Meeting 2022 will be 14–18 March 2022. Complete registration details are [here](https://opensciencegrid.org/all-hands/2022/registration/).  We are planning a hybrid event:
+Registration is now open for the OSG All-Hands Meeting 2022, which will be held 14–18 March 2022. Complete registration details are [here](https://opensciencegrid.org/all-hands/2022/registration/).  We are planning a hybrid event:
 
 >If you register for and travel to the University of Oklahoma (OU) in Norman for the in-person components, you can mingle with colleagues, have planned or ad hoc meetings, attend workshops or training events, and join hack-a-thons.
 
