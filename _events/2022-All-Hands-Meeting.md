@@ -28,7 +28,7 @@ Focus areas for 2022 will include:
 - Campus services and experiences, and NSF Campus Cyberinfrastructure (CC*)
 - Impact on multi-institutional collaborations, including U.S. LHC Projects
 
-In-person participation will include a $70 registration fee; online-only participation will continue to be free. 
+The in-person registration fee is $70; online-only participation will continue to be free. 
 
 Note that there will be an initial registration deadline of February 17. If at least 30 people register for the in-person components by that date, we can proceed with the hybrid event; otherwise, we will have to cancel the in-person components and have just the online components.
 
