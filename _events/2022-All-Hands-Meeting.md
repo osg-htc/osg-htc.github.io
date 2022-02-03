@@ -32,7 +32,7 @@ The in-person registration fee is $70; online-only participation will continue t
 
 Note that there will be an initial registration deadline of February 17. If at least 30 people register for the in-person components by that date, we can proceed with the hybrid event; otherwise, we will have to cancel the in-person components and have just the online components.
 
-To register, visit: [https://opensciencegrid.org/all-hands/2022/](https://opensciencegrid.org/all-hands/2022/)
+To register, visit: [https://opensciencegrid.org/all-hands/2022/registration/](https://opensciencegrid.org/all-hands/2022/registration/)
 
 For questions, please see the contacts on the page linked above or, as always, write to <events@opensciencegrid.org>.
 
@@ -56,7 +56,7 @@ Hybrid event both at the University of Oklahoma (OU) in Norman and virtual.
 
 ### Fees
 
-In-person participation will include a $70 registration fee; online-only participation will continue to be free. 
+In-person participation requires a $70 registration fee; online-only participation will continue to be free. 
 
 
 ### Registration
