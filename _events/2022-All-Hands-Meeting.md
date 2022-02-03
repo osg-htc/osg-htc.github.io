@@ -61,7 +61,7 @@ In-person participation requires a $70 registration fee; online-only participati
 
 ### Registration
 
-Required registration for both components. Visit [here](https://opensciencegrid.org/all-hands/2022/registration/) for complete event and registration information. Note: the in-person registration has a deadline of February 17. 
+Required registration for both components. Visit [here](https://opensciencegrid.org/all-hands/2022/) for complete event and registration information. Note: The in-person registration has a deadline of February 17. 
 
 ### Questions?
 
