@@ -15,7 +15,7 @@ header_credit: '"Field House w/ Water Tower" by Majdan is licensed under CC BY-N
 
 {% capture main %}
 
-Registration is now open for the OSG All-Hands Meeting 2022, which will be held 14–18 March 2022. Complete registration details are [here](https://opensciencegrid.org/all-hands/2022/registration/).  We are planning a hybrid event:
+Registration is now open for the OSG All-Hands Meeting 2022, which will be held 14–18 March 2022. Complete registration details are [on the AHM website](https://opensciencegrid.org/all-hands/2022/registration/).  We are planning a hybrid event:
 
 >If you register for and travel to the University of Oklahoma (OU) in Norman for the in-person components, you can mingle with colleagues, have planned or ad hoc meetings, attend chalk board discussions or training events, and join office hours.
 
@@ -32,7 +32,7 @@ The in-person registration fee is $70; online-only participation will continue t
 
 Note that there will be an initial registration deadline of February 17. If at least 30 people register for the in-person components by that date, we can proceed with the hybrid event; otherwise, we will have to cancel the in-person components and have just the online components.
 
-To register, visit: [https://opensciencegrid.org/all-hands/2022/registration/](https://opensciencegrid.org/all-hands/2022/registration/)
+To register, visit the [AHM registration page](https://opensciencegrid.org/all-hands/2022/registration/).
 
 For questions, please see the contacts on the page linked above or, as always, write to <events@opensciencegrid.org>.
 
