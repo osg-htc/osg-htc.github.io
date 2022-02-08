@@ -1,6 +1,7 @@
 ---
 title: Acknowledging the OSG
 layout: container
+permalink: /acknowledging_osg.html
 ---
 
 ## Acknowledging the OSG
