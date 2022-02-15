@@ -80,7 +80,8 @@ css_extension:
           <a class="twitter-timeline" data-height="550" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
-      {% assign sorted_spotlights = site.spotlights | reverse %}
+      {% include get/spotlights.liquid %}
+      {% assign sorted_spotlights = spotlights | reverse %}
       {% for article in sorted_spotlights limit:2 %}
         <div class="col-12 col-md-6 col-xl-4 {% cycle 'order-1 order-md-2', 'd-none d-xl-block order-3' %}">
           {% include /cards/spotlight-card.html height='150' no_date="true" %}
