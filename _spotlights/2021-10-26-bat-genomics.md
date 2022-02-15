@@ -1,10 +1,16 @@
 ---
 title: "80,000 jobs, 40 billion base pairs, and 20 bats –– all in 4 weeks" 
-date: 2021-10-26T12:00:00+00:00
+canonical_url: https://osg-htc.org/spotlights/bat-genomics.html
+image:
+    path: https://raw.githubusercontent.com/CHTC/Articles/main/images/bat-genomics-Ariadna.png
+    alt: Ariadna looking over bats in a case
+description: An evolutionary biologist at the AMNH used HTC services provided by the OSG to unlock a genomic basis for convergent evolution in bats.
 excerpt: An evolutionary biologist at the AMNH used HTC services provided by the OSG to unlock a genomic basis for convergent evolution in bats.
 publish: true
-hero_image: /assets/images/bat-carousel.jpg
-card_image: /assets/images/bat-genomics-Ariadna.png
+hero_image: https://raw.githubusercontent.com/CHTC/Articles/main/images/bat-carousel.jpg
+card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/bat-genomics-Ariadna.png
+publish_on:
+    - osg
 --- 
 
 ***An evolutionary biologist at the AMNH used HTC services provided by the OSG to unlock a genomic basis for convergent evolution in bats.***
@@ -12,7 +18,7 @@ card_image: /assets/images/bat-genomics-Ariadna.png
 By Josephine Watkins
 
 <figure class="figure float-end" style="margin-left: 1em">
-  <img src="{{ '/assets/images/bat-genomics-Ariadna.png' | relative_url }}" class="figure-img img-fluid rounded" alt="Ariadna Morales" width="250px">
+  <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/bat-genomics-Ariadna.png" class="figure-img img-fluid rounded" alt="Ariadna Morales" width="250px">
   <figcaption class="figure-caption">Ariadna Morales (Credit: AMNH)<br/></figcaption>
 </figure>
 

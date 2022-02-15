@@ -1,21 +1,28 @@
 ---
-title: "Using HTC for a simulation study on cross-validation for model evaluation in psychological science" 
-date: 2021-08-19T12:00:00+00:00
+title: "Using HTC for a simulation study on cross-validation for model evaluation in psychological science"
+canonical_url: https://osg-htc.org/spotlights/Hannah-Showcase.html
+image:
+    path: https://raw.githubusercontent.com/CHTC/Articles/main/images/Hannah-Showcase.jpg
+    alt: Brain Model
+description: During the OSG School Showcase, Hannah Moshontz, a postdoctoral fellow at UW-Madison’s Department of Psychology, described her experience of using high throughput computing (HTC) for the very first time, when taking on an entirely new project within the field of psychology.
 excerpt: During the OSG School Showcase, Hannah Moshontz, a postdoctoral fellow at UW-Madison’s Department of Psychology, described her experience of using high throughput computing (HTC) for the very first time, when taking on an entirely new project within the field of psychology.
 publish: true
-card_image: /assets/images/Hannah-Showcase.jpg
+card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/Hannah-Showcase.jpg
+card_alt: Brain Model
+author: Josephine Watkins
+publish_on:
+    - osg
 --- 
 
 By Josephine Watkins
 
 <figure>
-  <img src="{{ '/assets/images/Hannah-Showcase.jpg' | relative_url }}" alt="Brain Model" width="600px">
+  <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Hannah-Showcase.jpg" alt="Brain Model"/>
   <figcaption class="figure-caption">Image by Robina Weermeijer on Unsplash<br/></figcaption>
 </figure>
 
 
-
-During the [OSG School Showcase](https://opensciencegrid.org/news/2021/08/19/Showcase.html), Hannah Moshontz, a postdoctoral fellow at UW-Madison’s Department of Psychology, described her experience of using high throughput computing (HTC) for the very first time, when taking on an entirely new project within the field of psychology. While Hannah’s research generally focuses on understanding goal pursuit in everyday life, she and her colleagues had noticed that  there seemed to be a lack of “best practices” for evaluating the quality of results from the field's recent integration of machine learning approaches.
+During the [OSG School Showcase](https://path-cc.io/news/2021-08-19-Showcase/), Hannah Moshontz, a postdoctoral fellow at UW-Madison’s Department of Psychology, described her experience of using high throughput computing (HTC) for the very first time, when taking on an entirely new project within the field of psychology. While Hannah’s research generally focuses on understanding goal pursuit in everyday life, she and her colleagues had noticed that  there seemed to be a lack of “best practices” for evaluating the quality of results from the field's recent integration of machine learning approaches.
 
 Describing the motivation behind the project, Hannah explains: “We were seeing a lot of published papers in top outlets that were incorrectly understanding and interpreting cross-validated model performance estimates. These models were described as usable for making diagnoses and clinical decisions.” This project, a simulation study, aimed to understand cross-validated performance estimates in psychology, and give guidance on how future psychological science researchers should use cross validation in their data.
 
@@ -27,5 +34,5 @@ Reflecting on the impact of HTC on the study as a whole, she reasons, “without
 
 ...
 
-*This article is part of a [series of articles](https://opensciencegrid.org/news/2021/08/19/Showcase.html) from the 2021 OSG Virtual School Showcase. [OSG School](https://opensciencegrid.org/virtual-school-2021/) is an annual education event for researchers who want to learn how to use distributed high throughput computing methods and tools. The Showcase, which features researchers sharing how HTC has impacted their work, is a highlight of the school each year.*
+*This article is part of a [series of articles](https://path-cc.io/news/2021-08-19-Showcase/) from the 2021 OSG Virtual School Showcase. [OSG School](https://opensciencegrid.org/virtual-school-2021/) is an annual education event for researchers who want to learn how to use distributed high throughput computing methods and tools. The Showcase, which features researchers sharing how HTC has impacted their work, is a highlight of the school each year.*
 

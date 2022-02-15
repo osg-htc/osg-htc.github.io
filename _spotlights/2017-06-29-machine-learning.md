@@ -1,8 +1,22 @@
 ---
 title: Machine learning insights into molecular science using the Open Science Pool
-date: 2017-06-29 12:00:00 -0600
+canonical_url: https://osg-htc.org/spotlights/machine-learning.html  
+image:
+    path: https://raw.githubusercontent.com/CHTC/Articles/main/images/molcryst.png
+    alt: Example of a protein model that Isayev and his group study. Courtesy image.
+description: |
+    Machine learning insights into molecular science using the Open Science Pool
+    Computation has extended what researchers can investigate in chemistry, biology, 
+    and material science. Studying complex systems like proteins or nanocomposites can use similar techniques for common challenges.
+excerpt: |
+    Machine learning insights into molecular science using the Open Science Pool
+    Computation has extended what researchers can investigate in chemistry, biology, 
+    and material science. Studying complex systems like proteins or nanocomposites can use similar techniques for common challenges.
 categories: Machine Learning
-card_image: /assets/images/molcryst.png
+card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/molcryst.png
+card_alt: Example of a protein model that Isayev and his group study. Courtesy image.
+publish_on:
+    - osg
 ---
 
 Machine learning insights into molecular science using the Open Science Pool
@@ -16,7 +30,7 @@ For studying drug discovery, where small organic molecule binds to a protein rec
 
 <div class="row my-4">
   <div class="col-md-6">
-    <img class="mr-3" alt="Protein model visualization" src="{{site.baseurl}}/assets/images/molcryst.png">
+    <img class="mr-3" alt="Protein model visualization" src="https://raw.githubusercontent.com/CHTC/Articles/main/images/molcryst.png">
   </div>
   <div class="col-md-6">
     <h5 class="mt-0">Protein Model</h5>

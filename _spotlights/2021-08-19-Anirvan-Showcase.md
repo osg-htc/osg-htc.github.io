@@ -1,19 +1,28 @@
 ---
-title: "Antimatter: Using HTC to study very rare processes" 
-date: 2021-08-19T12:00:00+00:00
+title: "Antimatter: Using HTC to study very rare processes"
+canonical_url: https://osg-htc.org/spotlights/Anirvan-Showcase.html
+image:
+    path: https://raw.githubusercontent.com/CHTC/Articles/main/images/Anirvan-Showcase-1.png
+    alt: Proton-proton collision
+description: Anirvan Shukla, a User School participant in 2016, spoke at this year's Showcase about how high throughput computing has transformed his research of antimatter in the last five years.
 excerpt: Anirvan Shukla, a User School participant in 2016, spoke at this year's Showcase about how high throughput computing has transformed his research of antimatter in the last five years.
 publish: true
-card_image: /assets/images/Anirvan-Showcase-1.png
+card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/Anirvan-Showcase-1.png
+card_alt: Proton-proton collision
+author: Josephine Watkins
+publish_on:
+    - osg
 --- 
 
 By Josephine Watkins
 
 <figure>
-  <img src="{{ '/assets/images/Anirvan-Showcase-1.png' | relative_url }}" alt="Proton-proton collision"/>
+  <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Anirvan-Showcase-1.png" alt="Proton-proton collision"/>
   <figcaption class="figure-caption">Two protons colliding. (Image credit: NA61/SHINE collaboration)<br/></figcaption>
 </figure>
 
-The final speaker at the [OSG User School Showcase](https://opensciencegrid.org/news/2021/08/19/Showcase.html) was Anirvan Shukla, a graduate student at the University of Hawai’i Mānoa, and this wasn’t his first school event. In 2016, Anirvan attended as a participant, but today he assumed the role of presenter and had the opportunity to explain how high throughput computing (HTC) has transformed his research in the last five years.
+
+The final speaker at the [OSG User School Showcase](https://path-cc.io/news/2021-08-19-Showcase/) was Anirvan Shukla, a graduate student at the University of Hawai’i Mānoa, and this wasn’t his first school event. In 2016, Anirvan attended as a participant, but today he assumed the role of presenter and had the opportunity to explain how high throughput computing (HTC) has transformed his research in the last five years.
 
 Anirvan studies antimatter and the extremely rare processes that produce it. Hypothetical dark matter decays into different matter and antimatter particles, like protons, antiprotons, deuterons, and anti-deuterons. When these particles are detected, they suggest that there may be dark matter inside or outside our galaxy. However, these matter and antimatter particles are also produced by the regular collisions of cosmic rays with the particles that make up the interstellar medium. 
 
@@ -26,13 +35,12 @@ For instance, to observe antihelium particles, a researcher must simulate approx
 In his presentation at the OSG School, Anirvan noted that over the last two years, he submitted more than 8 million jobs to the OSPool and used nearly 50 million core hours. [The results](https://doi.org/10.1103/PhysRevD.102.063004) from his simulations generated a spectra that had never been produced before, shown below.
 
 <figure>
-  <img src="{{ '/assets/images/Anirvan-Showcase-2.png' | relative_url }}" alt="Chart" width="500px" >
+  <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Anirvan-Showcase-2.png" alt="Chart" width="500px" >
   <figcaption class="figure-caption">Image credit: Shukla, A. Datta, A. Doetinchem, P. Gomez-Coral, D. Kanitz, C. (2020). Large-scale simulations of antihelium production in cosmic-ray interactions. Phys. Rev. D. <a href="https://doi.org/10.1103/PhysRevD.102.063004">https://doi.org/10.1103/PhysRevD.102.063004</a><br/></figcaption>
-</figure> 
-
+</figure>
 
 If Anirvan had tried to run these simulations on his own laptop, he would still be searching for dark matter in the year 14,021. Even the available computing resources at [CERN](https://home.cern/) and the [University of Hawai’i](https://manoa.hawaii.edu/) weren’t enough for this colossal project –– the OSPool was necessary. 
 
 ...
 
-*This article is part of a [series of articles](https://opensciencegrid.org/news/2021/08/19/Showcase.html) from the 2021 OSG Virtual School Showcase. [OSG School](https://opensciencegrid.org/virtual-school-2021/) is an annual education event for researchers who want to learn how to use distributed high throughput computing methods and tools. The Showcase, which features researchers sharing how HTC has impacted their work, is a highlight of the school each year.*
+*This article is part of a [series of articles](https://path-cc.io/news/2021-08-19-Showcase/) from the 2021 OSG Virtual School Showcase. [OSG School](https://opensciencegrid.org/virtual-school-2021/) is an annual education event for researchers who want to learn how to use distributed high throughput computing methods and tools. The Showcase, which features researchers sharing how HTC has impacted their work, is a highlight of the school each year.*
