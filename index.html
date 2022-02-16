@@ -81,8 +81,7 @@ css_extension:
         </div>
       </div>
       {% include get/spotlights.liquid %}
-      {% assign sorted_spotlights = spotlights | reverse %}
-      {% for article in sorted_spotlights limit:2 %}
+      {% for article in spotlights limit:2 %}
         <div class="col-12 col-md-6 col-xl-4 {% cycle 'order-1 order-md-2', 'd-none d-xl-block order-3' %}">
           {% include /cards/spotlight-card.html height='150' no_date="true" %}
         </div>

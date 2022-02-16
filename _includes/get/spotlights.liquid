@@ -1,1 +1,1 @@
-{% assign spotlights = site.spotlights | where_exp: "spotlight", "spotlight.publish_on contains 'osg'" | sort: "date" |  reverse %}
+{% assign spotlights = site.spotlights | where_exp: "spotlight", "spotlight.publish_on contains site.key" | sort: "date" |  reverse %}
