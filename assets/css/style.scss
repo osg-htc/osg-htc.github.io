@@ -1,17 +1,37 @@
 ---
 ---
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 // Overwrite Bootstrap 5 Defaults
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 6
+);
 
+$text: #3a3a3a;
 $primary: #b67b3c;
-$secondary: #f4b627;
+$secondary: #F1A52C;
+$info: #FFC364;
+$warning: #fff1c7;
 $white-offset: #fff7ea;
+$nav-link-color: $text;
 
-$navbar-brand-height: 3.5rem;
+$navbar-brand-height: 3rem;
 
 $card-border-color: black;
+$card-border-radius: 1rem;
 
+$font-family-base: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$headings-font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$headings-font-weight: 600;
 .h-100px {
   height: 100px !important;
 }
@@ -38,10 +58,26 @@ $card-border-color: black;
 @import 'bootstrap/bootstrap';
 @import 'pages/event';
 
-// Need for the Fixed Navbar
+// Responsive Font Size
+html {
+  font-size: 14px;
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  html {
+    font-size: 18px;
+  }
+}
+
 body {
-  color: #5a5a5a;
-  margin-top: 69px;
+  color: #3a3a3a;
+  position: relative;
 }
 
 /* Tweak vertical spacing of headings */
@@ -51,19 +87,11 @@ h3 {
 
 /* OSG-style links */
 
-a{color:#b67b3c;text-decoration:none;}
-a:hover,a:focus{color:#7c5429;text-decoration:underline;}
+a{color:$text;text-decoration:none;}
+a:hover,a:focus{color:$secondary;text-decoration:underline;}
 
 /* Stealing table CSS from jekyll-theme-minimal */
 
-table {
-  width: 100%;
-  border-collapse: collapse; }
-
-th, td {
-  text-align: left;
-  padding: 5px 10px;
-  border-bottom: 1px solid #e5e5e5; }
 
 // Card image caps
 .card-img-top {
@@ -79,5 +107,27 @@ th, td {
 .news-article {
   img {
     max-width: 100%;
+  }
+}
+
+hr {
+  opacity: 1;
+  background-color: $gray-700;
+}
+
+.absolutely-centered {
+  top: 50%;  /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+
+  transform: translate(-50%, -50%);
+}
+
+$viewHeights: 10,15,20;
+@each $viewHeight in $viewHeights {
+  .pt-vh-#{$viewHeight} {
+    padding-top: #{$viewHeight}vh;
+  }
+  .pb-vh-#{$viewHeight} {
+    padding-bottom: #{$viewHeight}vh;
   }
 }

@@ -2,10 +2,17 @@
 layout: blank
 ---
 
-{% include /get/hero_data.liquid %}
+#homepage-heading {
+  height: 115vh;
+}
 
 #hero-image {
-  background: url({{ hero_data.hero_image | relative_url }}) no-repeat center;
+  position: absolute;
+  height: 115vh;
+  width: 100%;
+  top: 0px;
+  z-index: -1;
+  background: url("/assets/images/OSG_Hero.svg") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -22,9 +29,6 @@ layout: blank
   }
 }
 
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-  #hero-content-container {
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
-  }
+#hero-quote{
+
 }
