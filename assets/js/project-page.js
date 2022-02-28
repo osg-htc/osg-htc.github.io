@@ -1,3 +1,6 @@
+---
+    layout: blank
+---
 
 const ProjectPage = () => {
 
@@ -105,12 +108,12 @@ const ProjectPage = () => {
         let response;
 
         try{
-            response = await fetch("http://127.0.0.1:5000/miscproject/json") // Todo
+            response = await fetch("https://topology.opensciencegrid.org/miscproject/json")
         } catch(error) {
             try{
-                response = await fetch("TODO: Backup") // Todo
+                response = await fetch("{{ '/assets/data/project.json' | relative_url }}")
             } catch(error){
-                console.error("Double Failure :/")
+                console.error("Topology and Back Up data fetch failed: " + error)
             }
         }
 
