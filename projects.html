@@ -1,20 +1,63 @@
 ---
     title: Projects Active on OSG Pools
-    layout: posts
+    layout: padded-default
     js_extension:
     -   src: "https://unpkg.com/gridjs/dist/gridjs.umd.js"
         loading:
+    -   src: "https://unpkg.com/lunr/lunr.js"
+        loading:
     -   src: "/assets/js/project-page.js"
         loading: "defer"
+
     description: |
         The below projects were active in the last year across reporting pools in the OSG Consortium. Some represent a small research group, while others represent a large collaboration or campus with numerous researchers using resources in OSG pools.
 ---
 
-<p>
-    The below projects were active in the last year across reporting
-    pools in the OSG Consortium. Some represent a small research group,
-    while others represent a large collaboration or campus with numerous
-    researchers using resources in OSG pools.
-</p>
 
-<div id="wrapper"></div>
+<div class="container-xxl">
+    {% include layout/title.html %}
+    <div class="row">
+        <div class="col-12 col-xl-7 col-lg-8 col-md-10">
+            <p>
+                The below projects were active in the last year across reporting
+                pools in the OSG Consortium. Some represent a small research group,
+                while others represent a large collaboration or campus with numerous
+                researchers using resources in OSG pools.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container-xxl py-2">
+    <input id="project-search" type="search"/>
+</div>
+<div id="project-display"  class="bg-light py-2"  hidden>
+    <div class="container-xxl">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <h2 class="project-Name"></h2>
+                    <div class="col-12 col-md-6">
+                        <div>
+                            <h5 class="mb-1">PI</h5><p class="project-PIName"></p>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Field of Research</h5><p class="project-FieldOfScience"></p>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Organization </h5><p class="project-Organization"></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h5 class="mb-1">Description</h5>
+                        <p class="project-Description">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-xxl">
+    <div id="wrapper"></div>
+</div>
