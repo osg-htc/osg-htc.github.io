@@ -51,6 +51,99 @@ css_extension:
   <div class="container-xxl py-4">
     <div class="row justify-content-between">
       <div class="col-6">
+
+        <!-- By CSS the container element will fill half the height and half the width of the window. -->
+        <div id="container" style="position: relative; width: 100vw; height: 80vh;">
+          <div id="chart" style="position: absolute; width: 100%; height: 100%;"></div>
+        </div>
+        <script type="module">
+
+          import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+          import notebook from "https://api.observablehq.com/@30a0071364a81d5c/osg-job-transfers@645.js?v=3";
+
+          // To avoid the chart itself affecting the size of its container, the chart is
+          // absolutely-positioned within the container element that determines the size.
+          const chart = document.querySelector("#chart");
+          const container = chart.parentNode;
+
+          // Embed the chart cell from the notebook into the chart element.
+          const library = new Library();
+          const runtime = new Runtime(library);
+          const main = runtime.module(notebook, name => {
+            if (name === "chart") {
+              return new Inspector(chart);
+            }
+          });
+
+          // Redefine width and height to be a generator created by the resizer function
+          // below to observe the size of the container.
+          main.redefine("width", resizer(container, "width"));
+          main.redefine("height", resizer(container, "height"));
+
+          // Rather making separate generators for width and height, here’s a generalized
+          // generator “factory” that watches the given dimension of the given element.
+          // (Note: depends on browser ResizeObserver support.)
+          function resizer(element, dimension) {
+            return library.Generators.observe(notify => {
+              let value = notify(element.getBoundingClientRect()[dimension]); // initial value
+              const observer = new ResizeObserver(([entry]) => {
+                const newValue = entry.contentRect[dimension];
+                if (newValue !== value) {
+                  notify(value = newValue);
+                }
+              });
+              observer.observe(element);
+              return () => observer.disconnect();
+            });
+          }
+
+        </script>
+      </div>
+      <div class="col-5 d-flex">
+        <div class="my-auto">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <h3 class="mt-0">Submit Locally, Run Globally</h3>
+              <ul class="fs-5 ps-3">
+                <li class="pt-1">International scope of OSG makes it likely an OSG member is in your region.</li>
+                <li class="pt-1">National Caches and Pools made to improve your network experience.</li>
+                <li class="pt-1">More members means better performance, contact us if you are interested in contributing.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="my-3 d-flex">
+            <a class="mx-auto btn btn-secondary shadow" href="/about/open_science_pool.html">Learn About Operating on OSPool</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="position-relative">
+  <div class="position-absolute w-100 absolutely-centered">
+    <div class="container-xxl">
+      <div class="row">
+        {% assign sorted_spotlights = site.spotlights | reverse %}
+        {% for article in sorted_spotlights limit:3 %}
+        <div class="col-12 col-md-6 col-xl-4 {% cycle 'order-1 order-md-2', 'd-none d-xl-block order-3' %}">
+          {% include /cards/spotlight-card.html height='150' no_date="true" %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-column vh-100">
+    <div class="bg-warning flex-grow-1"></div>
+    <div class="bg-secondary flex-grow-1"></div>
+    <div class="flex-grow-1"></div>
+  </div>
+</div>
+
+<div class="bg-warning pt-vh-10">
+  <div class="container-xxl py-4">
+    <div class="row justify-content-between">
+      <div class="col-6">
         <img class="vh-100" src="/assets/images/chart.svg">
       </div>
       <div class="col-5 d-flex">
@@ -73,25 +166,7 @@ css_extension:
     </div>
   </div>
 </div>
-<div class="position-relative">
-  <div class="position-absolute w-100 absolutely-centered">
-    <div class="container-xxl">
-      <div class="row">
-        {% assign sorted_spotlights = site.spotlights | reverse %}
-        {% for article in sorted_spotlights limit:3 %}
-          <div class="col-12 col-md-6 col-xl-4 {% cycle 'order-1 order-md-2', 'd-none d-xl-block order-3' %}">
-            {% include /cards/spotlight-card.html height='150' no_date="true" %}
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-  <div class="d-flex flex-column vh-100">
-      <div class="bg-warning flex-grow-1"></div>
-      <div class="bg-secondary flex-grow-1"></div>
-      <div class="flex-grow-1"></div>
-  </div>
-</div>
+
 <div class="container-xxl mt-5">
   <h1>Support</h1>
   <div class="row">
