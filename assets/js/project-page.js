@@ -8,7 +8,6 @@ const ProjectPage = () => {
     this.grid = undefined
     this.active_row = undefined
     this.display_card = document.getElementById("project-display")
-    this.search_input = document.getElementById("project-search")
     this.columns = [
         {
             id: 'Name',
@@ -31,13 +30,15 @@ const ProjectPage = () => {
             search: true,
             className: {
                 container: "table-responsive",
-                table: "table-hover table table-responsive",
-                td: "pointer"
+                table: "table",
+                td: "pointer",
+                paginationButton: "mt-2 mt-sm-0"
             },
             data: this.load_projects,
             pagination: {
                 enabled: true,
                 limit: 50,
+                buttonsCount: 1
             }
         }).render(document.getElementById("wrapper"));
 
