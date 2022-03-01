@@ -5,7 +5,6 @@
 const ProjectPage = () => {
 
     this.projects = undefined
-    this.lunr_idx = undefined
     this.grid = undefined
     this.active_row = undefined
     this.display_card = document.getElementById("project-display")
@@ -25,49 +24,24 @@ const ProjectPage = () => {
             name: 'Field Of Science'
         }
     ]
-    this.build_lunr_idx = async (data) => {
-
-        this.lunr_idx = lunr(function () {
-            this.ref('Name')
-            this.field('Department')
-            this.field('Description')
-            this.field('FieldOfScience')
-            this.field('ID')
-            this.field('Name')
-            this.field('Organization')
-            this.field('PIName')
-            this.field('ResourceAllocations')
-
-            data.forEach(function (doc) {
-                this.add(doc)
-            }, this)
-        })
-    }
-    this.search = (input) => {
-        let table_keys = this.lunr_idx.search(input).map(r => r.ref)
-
-        this.filter_table_by_keys(table_keys)
-    }
     this.build_table = (data) => {
         this.grid =  new gridjs.Grid({
             columns: columns,
+            sort: true,
+            search: true,
             className: {
                 container: "table-responsive",
                 table: "table-hover table table-responsive",
                 td: "pointer"
             },
-            data: data
+            data: data,
+            pagination: {
+                enabled: true,
+                limit: 50,
+            }
         }).render(document.getElementById("wrapper"));
 
         this.grid.on('rowClick', this.row_click);
-    }
-    this.filter_table_by_keys = (keys) => {
-
-        let data = keys.map(key => this.projects[key])
-
-        this.grid.updateConfig({
-            data: data
-        }).forceRender();
     }
     this.toggle_row = (toggled_row, project) => {
         let previously_active_row = this.active_row
@@ -77,12 +51,14 @@ const ProjectPage = () => {
             this.active_row = toggled_row
         }
     }
-    this.show_row = (row, project) => {
+    this.show_row = async (row, project) => {
         row.classList.add("table-active")
 
         this.populate_card(project)
 
         this.display_card.hidden = false
+        await this.display_card.scrollIntoView();
+        window.scrollTo(0, 0);
     }
     this.hide_row = (row) => {
         if(this.active_row){
@@ -125,11 +101,9 @@ const ProjectPage = () => {
 
 
         this.build_table(data)
-        this.build_lunr_idx(data)
     }
     this.initialize = () => {
         this.load_projects()
-        this.search_input.addEventListener("input", e => this.search(e.currentTarget.value))
     }
 
     this.initialize()
