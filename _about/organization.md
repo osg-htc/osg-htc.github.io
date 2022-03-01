@@ -32,6 +32,9 @@ and organizations can contribute resources to more than one pool. If you’re in
 in supporting the Open Science Pool, specific projects, or any pool/research 
 community, contact us at <support@opensciencegrid.org>.
 
+## Research Projects
+[View all research projects](/projects.html)
+
 ## Research Projects with Accounted Usage Across OSG Pools
 [View OSG Project and usage here](https://gracc.opensciencegrid.org/d/000000037/payload-jobs-summary).
 
