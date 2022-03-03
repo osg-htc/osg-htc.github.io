@@ -4,6 +4,8 @@
     js_extension:
     -   src: "https://unpkg.com/gridjs/dist/gridjs.umd.js"
         loading:
+    -   src: "https://unpkg.com/lunr/lunr.js"
+        loading:
     -   src: "/assets/js/project-page.js"
         loading: "defer"
     css_extension:
@@ -24,15 +26,35 @@
                 while others represent a large collaboration or campus with numerous
                 researchers using resources in OSG pools.
             </p>
+            <p class="d-none d-sm-block">
+                <b>You can search for project details with the search bar or click on a row to view project details.</b>
+            </p>
         </div>
     </div>
 </div>
-<div id="project-display"  class="bg-light py-2 my-2"  hidden>
-    <div class="container-xxl">
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title project-Name"></h2>
-                <hr>
+<div class="container-xxl py-2">
+    <div class="row">
+        <div class="col-12 col-xl-7 col-lg-8 col-md-10">
+            <input class="form-control" id="project-search" placeholder="Search Project Details" type="search"/>
+        </div>
+    </div>
+</div>
+<div class="container-xxl">
+    <div id="wrapper"></div>
+</div>
+
+<div id="template-card">
+
+</div>
+
+<div class="modal fade" id="project-display" tabindex="-1" aria-labelledby="project-Name" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="project-Name" class="card-title project-Name"></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div>
@@ -52,9 +74,9 @@
                     </div>
                 </div>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
         </div>
     </div>
-</div>
-<div class="container-xxl">
-    <div id="wrapper"></div>
 </div>
