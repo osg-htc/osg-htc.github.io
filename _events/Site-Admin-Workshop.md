@@ -17,7 +17,7 @@ header_image: "/assets/images/events/siteadmin1.jpg"
 
 <p style="font-size: larger; font-weight: bold;">Join us March 15 for our Site Admin Office Hours!</p>
 
-We will be hosting our second Site Admin Office Hours, Tuesday. March 15 from 3:30 - 5:30 PM CT offered by the Partnership to Advance Throughput Computing (PATh). The Office Hours are being held in conjunction with the [All-Hands Meeting 2022](https://indico.fnal.gov/event/53029/registrations/3257/)
+We will be hosting our second Site Admin Office Hours, Tuesday. March 15 from 3:30 - 5:30 PM CT offered by the Partnership to Advance Throughput Computing (PATh). The Office Hours are being held in conjunction with the [All-Hands Meeting 2022](https://indico.fnal.gov/event/53029/registrations/3257/).
 The office hours provide an opportunity for any system administrator to work with the OSG Software and Operations teams on pressing site configuration or troubleshooting issues. All site admins or site representatives sharing resources, using OSG services or running an Access Point are encouraged to attend.
 
 You do not need to register for the All-Hand Meeting to attend the Site Admin office hours, but we encourage you to do so. If you have already registered for the All-Hands Meeting, then you do not also need to register for the Office Hours. However, if you are ONLY attending the Office Hours, then you do need to register and complete a brief survey to attend the Office Hours.
