@@ -3,17 +3,18 @@
 ---
 
 const ProjectPage = () => {
-
-    this.projects = undefined
+    this.mode = undefined
     this.lunr_idx = undefined
     this.grid = undefined
     this.active_row = undefined
     this.data = undefined
+    this.wrapper = document.getElementById("wrapper")
     this.search_input = document.getElementById("project-search")
     this.display_card = document.getElementById("project-display")
     this.display_modal = new bootstrap.Modal(document.getElementById("project-display"), {
         keyboard: false
     })
+    this.template_card = document.getElementById("template-card")
     this.columns = [
         {
             id: 'Name',
@@ -58,27 +59,51 @@ const ProjectPage = () => {
             sort: true,
             className: {
                 container: "table-responsive",
-                table: "table",
+                table: "table table-hover",
                 td: "pointer",
                 paginationButton: "mt-2 mt-sm-0"
             },
             data: async () => {
-                let projects = await project_page_save.get_projects()
+                let projects = await project_page_save.get_searched_project_array()
                 project_page_save.build_lunr_idx()
-                return Object.values(projects)
+                return projects
             },
             pagination: {
                 enabled: true,
                 limit: 50,
                 buttonsCount: 1
             }
-        }).render(document.getElementById("wrapper"));
+        }).render(project_page_save.wrapper);
 
         this.grid.on('rowClick', this.row_click);
     }
+    this.build_cards = async () => {
+        this.remove_wrapper_children()
+
+        let projects = await this.get_searched_project_array()
+        for(const project of projects){
+            let clone = this.template_card.cloneNode(true)
+            clone.removeAttribute('id')
+
+            this.populate_node(project, clone)
+
+            let card_key = project['Name'].replace(/\s|\./g, '')
+
+            clone.setAttribute("href", "#" + card_key)
+            clone.setAttribute("aria-controsl", card_key)
+            clone.getElementsByClassName("project-Description-container")[0].setAttribute("id", card_key)
+
+            this.wrapper.appendChild(clone)
+
+            clone.hidden = false
+        }
+        this.build_lunr_idx()
+    }
     this.build_lunr_idx = async () => {
 
-        let data = Object.values(this.projects)
+        if(this.lunr_idx){return}
+
+        let data = await this.get_searched_project_array()
 
         this.lunr_idx = lunr(function () {
             this.ref('Name')
@@ -96,18 +121,25 @@ const ProjectPage = () => {
             }, this)
         })
     }
-    this.search = (input) => {
-        let table_keys = this.lunr_idx.search(input).map(r => r.ref)
-
-        this.filter_table_by_keys(table_keys)
+    this.search = () => {
+        if(this.mode == "mobile"){
+            this.build_cards()
+        } else {
+            this.update_table_data()
+        }
     }
-    this.filter_table_by_keys = (keys) => {
+    this.update_table_data = () => {
 
-        let data = keys.map(key => this.projects[key])
+        let data = this.get_searched_project_array
 
         this.grid.updateConfig({
             data: data
         }).forceRender();
+    }
+    this.remove_wrapper_children = () => {
+        while(this.wrapper.hasChildNodes()){
+            this.wrapper.removeChild(this.wrapper.firstChild)
+        }
     }
     this.toggle_row = (toggled_row, project) => {
         let previously_active_row = this.active_row
@@ -120,7 +152,7 @@ const ProjectPage = () => {
     this.show_row = async (row, project) => {
         row.classList.add("table-active")
 
-        this.populate_card(project)
+        this.populate_node(project, this.display_card)
 
         this.display_modal.show()
     }
@@ -131,26 +163,32 @@ const ProjectPage = () => {
         }
         this.active_row = undefined
     }
-    this.populate_card = (project) => {
-        this.display_card.getElementsByClassName("project-Name")[0].textContent = project["Name"]
-        this.display_card.getElementsByClassName("project-PIName")[0].textContent = project["PIName"]
-        this.display_card.getElementsByClassName("project-FieldOfScience")[0].textContent = project["FieldOfScience"]
-        this.display_card.getElementsByClassName("project-Organization")[0].textContent = project["Organization"]
-        this.display_card.getElementsByClassName("project-Description")[0].textContent = project["Description"]
+    this.populate_node = (project, node) => {
+        node.getElementsByClassName("project-Name")[0].textContent = project["Name"]
+        node.getElementsByClassName("project-PIName")[0].textContent = project["PIName"]
+        node.getElementsByClassName("project-FieldOfScience")[0].textContent = project["FieldOfScience"]
+        node.getElementsByClassName("project-Organization")[0].textContent = project["Organization"]
+        node.getElementsByClassName("project-Description")[0].textContent = project["Description"]
+
     }
     this.row_click = async (PointerEvent, e) => {
         let row_name = e["cells"][0].data
         let project = this.projects[row_name]
         this.toggle_row(PointerEvent.currentTarget, project)
     }
-    this.get_projects = async () => {
-        if( this.projects ){ return this.projects }
-        await this.load_projects()
-        return this.projects
-    }
-    this.load_projects = async () => {
+    this.get_searched_project_array = async () => {
 
-        if( this.projects ){ return }
+        if(this.search_input.value == ""){
+            return Object.values(await this.get_projects())
+        }
+
+        let table_keys = this.lunr_idx.search(this.search_input.value).map(r => r.ref)
+
+        return table_keys.map(key => this.projects[key])
+    }
+    this.get_projects = async () => {
+
+        if( this.projects ){ return this.projects }
 
         let response;
 
@@ -164,14 +202,29 @@ const ProjectPage = () => {
             }
         }
 
-        let json = await response.json()
+        this.projects = await response.json()
 
-        this.projects = json
+        return this.projects
+    }
+    this.populate_wrapper = () => {
+        let new_mode = window.innerWidth < 576 ? "mobile" : "desktop";
+        if( new_mode != this.mode){
+            this.mode = new_mode
+
+            this.remove_wrapper_children()
+
+            if(this.mode == "mobile"){
+                this.build_cards()
+            } else {
+                this.build_table()
+            }
+        }
     }
     this.initialize = async () => {
-        this.build_table()
-        this.search_input.addEventListener("input", e => this.search(e.currentTarget.value))
+        this.populate_wrapper()
+        this.search_input.addEventListener("input", this.search)
         this.display_card.addEventListener('hidden.bs.modal', () => this.hide_row())
+        this.window.addEventListener("resize", () => this.populate_wrapper())
     }
 
     this.initialize()
