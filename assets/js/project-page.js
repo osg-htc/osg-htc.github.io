@@ -2,108 +2,41 @@
     layout: blank
 ---
 
-const ProjectPage = () => {
-    this.mode = undefined
-    this.lunr_idx = undefined
-    this.grid = undefined
-    this.active_row = undefined
-    this.data = undefined
-    this.wrapper = document.getElementById("wrapper")
-    this.search_input = document.getElementById("project-search")
-    this.display_card = document.getElementById("project-display")
-    this.display_modal = new bootstrap.Modal(document.getElementById("project-display"), {
-        keyboard: false
-    })
-    this.template_card = document.getElementById("template-card")
-    this.columns = [
-        {
-            id: 'Name',
-            name: 'Name'
-        }, {
-            id: 'PIName',
-            name: 'PI Name'
-        }, {
-            id: 'Organization',
-            name: 'Organization'
-        }, {
-            id: 'FieldOfScience',
-            name: 'Field Of Science'
-        }, {
-            id: "Department",
-            name: "Department",
-            hidden: true
-        }, {
-            id: "Description",
-            name: "Description",
-            hidden: true
-        }, {
-            id: "ID",
-            name: "ID",
-            hidden: true
-        }, {
-            id:  "Organization",
-            name: "Organization",
-            hidden: true
-        }, {
-            id: "ResourceAllocations",
-            name: "Resource Allocations",
-            hidden: true
-        }
-    ]
-    this.build_table = async () => {
 
-        let project_page_save = this
+function makeDelay(ms) {
+    let timer = 0;
+    return function(callback){
+        clearTimeout (timer);
+        timer = setTimeout(callback, ms);
+    };
+};
 
-        this.grid =  new gridjs.Grid({
-            columns: columns,
-            sort: true,
-            className: {
-                container: "table-responsive",
-                table: "table table-hover",
-                td: "pointer",
-                paginationButton: "mt-2 mt-sm-0"
-            },
-            data: async () => {
-                let projects = await project_page_save.get_searched_project_array()
-                project_page_save.build_lunr_idx()
-                return projects
-            },
-            pagination: {
-                enabled: true,
-                limit: 50,
-                buttonsCount: 1
-            }
-        }).render(project_page_save.wrapper);
+function populate_project_node(project, node){
+    node.getElementsByClassName("project-Name")[0].textContent = project["Name"]
+    node.getElementsByClassName("project-PIName")[0].textContent = project["PIName"]
+    node.getElementsByClassName("project-FieldOfScience")[0].textContent = project["FieldOfScience"]
+    node.getElementsByClassName("project-Organization")[0].textContent = project["Organization"]
+    node.getElementsByClassName("project-Description")[0].textContent = project["Description"]
+}
 
-        this.grid.on('rowClick', this.row_click);
+class Search {
+    constructor(data_function, listener) {
+        this.node = document.getElementById("project-search")
+        this.lunr_idx = undefined
+        this.data_function = data_function
+        this.listener = listener
+        this.timer = undefined
+        this.node.addEventListener("input", this.search)
     }
-    this.build_cards = async () => {
-        this.remove_wrapper_children()
-
-        let projects = await this.get_searched_project_array()
-        for(const project of projects){
-            let clone = this.template_card.cloneNode(true)
-            clone.removeAttribute('id')
-
-            this.populate_node(project, clone)
-
-            let card_key = project['Name'].replace(/\s|\./g, '')
-
-            clone.setAttribute("href", "#" + card_key)
-            clone.setAttribute("aria-controsl", card_key)
-            clone.getElementsByClassName("project-Description-container")[0].setAttribute("id", card_key)
-
-            this.wrapper.appendChild(clone)
-
-            clone.hidden = false
-        }
-        this.build_lunr_idx()
+    search = () => {
+        clearTimeout(this.timer)
+        this.timer = setTimeout(this.listener, 250)
     }
-    this.build_lunr_idx = async () => {
+    initialize = async () => {
 
         if(this.lunr_idx){return}
 
-        let data = await this.get_searched_project_array()
+        let data = Object.values(await this.data_function())
 
         this.lunr_idx = lunr(function () {
             this.ref('Name')
@@ -121,74 +54,163 @@ const ProjectPage = () => {
             }, this)
         })
     }
-    this.search = () => {
-        if(this.mode == "mobile"){
-            this.build_cards()
+    filter_data = (data) => {
+        if(this.node.value == ""){
+            return data
         } else {
-            this.update_table_data()
+            let table_keys = this.lunr_idx.search("*" + this.node.value + "*").map(r => r.ref)
+            return table_keys.map(key => data[key])
         }
     }
-    this.update_table_data = () => {
+}
 
-        let data = this.get_searched_project_array
-
+class Table {
+    constructor(wrapper, data_function){
+        this.grid = undefined
+        this.data_function = data_function
+        this.wrapper = wrapper
+        this.display_node = document.getElementById("project-display")
+        this.display_modal = new bootstrap.Modal(document.getElementById("project-display"), {
+            keyboard: true
+        })
+        this.columns = [
+            {
+                id: 'Name',
+                name: 'Name'
+            }, {
+                id: 'PIName',
+                name: 'PI Name'
+            }, {
+                id: 'Organization',
+                name: 'Organization'
+            }, {
+                id: 'FieldOfScience',
+                name: 'Field Of Science'
+            }, {
+                id: "Department",
+                name: "Department",
+                hidden: true
+            }, {
+                id: "Description",
+                name: "Description",
+                hidden: true
+            }, {
+                id: "ID",
+                name: "ID",
+                hidden: true
+            }, {
+                id:  "Organization",
+                name: "Organization",
+                hidden: true
+            }, {
+                id: "ResourceAllocations",
+                name: "Resource Allocations",
+                hidden: true
+            }
+        ]
+    }
+    initialize = async () => {
+        let table = this;
+        this.grid =  new gridjs.Grid({
+            columns: table.columns,
+            sort: true,
+            className: {
+                container: "table-responsive",
+                table: "table table-hover",
+                td: "pointer",
+                paginationButton: "mt-2 mt-sm-0"
+            },
+            data: async () => Object.values(await table.data_function()),
+            pagination: {
+                enabled: true,
+                limit: 50,
+                buttonsCount: 1
+            }
+        }).render(table.wrapper.node);
+        this.grid.on('rowClick', this.row_click);
+    }
+    update = (data) => {
         this.grid.updateConfig({
             data: data
         }).forceRender();
     }
-    this.remove_wrapper_children = () => {
-        while(this.wrapper.hasChildNodes()){
-            this.wrapper.removeChild(this.wrapper.firstChild)
-        }
-    }
-    this.toggle_row = (toggled_row, project) => {
-        let previously_active_row = this.active_row
-        this.hide_row(this.active_row)
-        if(!toggled_row.isEqualNode(previously_active_row)){
-            this.show_row(toggled_row, project)
-            this.active_row = toggled_row
-        }
-    }
-    this.show_row = async (row, project) => {
-        row.classList.add("table-active")
-
-        this.populate_node(project, this.display_card)
-
+    toggle_row = (toggled_row, project) => {
+        populate_project_node(project, this.display_node)
         this.display_modal.show()
     }
-    this.hide_row = () => {
-        if(this.active_row){
-            this.active_row.classList.remove("table-active")
-            this.display_modal.hide()
-        }
-        this.active_row = undefined
-    }
-    this.populate_node = (project, node) => {
-        node.getElementsByClassName("project-Name")[0].textContent = project["Name"]
-        node.getElementsByClassName("project-PIName")[0].textContent = project["PIName"]
-        node.getElementsByClassName("project-FieldOfScience")[0].textContent = project["FieldOfScience"]
-        node.getElementsByClassName("project-Organization")[0].textContent = project["Organization"]
-        node.getElementsByClassName("project-Description")[0].textContent = project["Description"]
-
-    }
-    this.row_click = async (PointerEvent, e) => {
+    row_click = async (PointerEvent, e) => {
+        let data = await this.data_function()
         let row_name = e["cells"][0].data
-        let project = this.projects[row_name]
+        let project = data[row_name]
         this.toggle_row(PointerEvent.currentTarget, project)
     }
-    this.get_searched_project_array = async () => {
+}
 
-        if(this.search_input.value == ""){
-            return Object.values(await this.get_projects())
-        }
-
-        let table_keys = this.lunr_idx.search(this.search_input.value).map(r => r.ref)
-
-        return table_keys.map(key => this.projects[key])
+class CardDisplay{
+    constructor(wrapper, data_function) {
+        this.wrapper = wrapper
+        this.data_function = data_function
+        this.template_card = document.getElementById("template-card")
     }
-    this.get_projects = async () => {
+    initialize = async () => {
+        let data = await this.data_function()
 
-        if( this.projects ){ return this.projects }
+        let projects = Object.values(data)
+
+        this.update(projects)
+    }
+    update = async (data) => {
+        this.wrapper.remove_children()
+
+        for(const project of data){
+            let clone = this.template_card.cloneNode(true)
+            clone.removeAttribute('id')
+
+            populate_project_node(project, clone)
+
+            let card_key = project['Name'].replace(/\s|\./g, '')
+
+            clone.setAttribute("href", "#" + card_key)
+            clone.setAttribute("aria-controsl", card_key)
+            clone.getElementsByClassName("project-Description-container")[0].setAttribute("id", card_key)
+
+            this.wrapper.node.appendChild(clone)
+
+            clone.hidden = false
+        }
+    }
+}
+
+class Wrapper {
+    constructor() {
+        this.node = document.getElementById("wrapper")
+    }
+    remove_children = () => {
+        while(this.node.hasChildNodes()){
+            this.node.removeChild(this.node.firstChild)
+        }
+    }
+}
+
+class ProjectPage{
+    constructor(props) {
+        this.mode = undefined
+        this.data = undefined
+        this.filtered_data = undefined
+        this.wrapper = new Wrapper()
+        this.search = new Search(this.get_data, this.update_data)
+        this.table = new Table(this.wrapper, this.get_data)
+        this.card_display = new CardDisplay(this.wrapper, this.get_data)
+        window.addEventListener("resize", this.update_width)
+
+        this.initialize()
+    }
+    initialize = async () => {
+        await this.update_width()
+    }
+    get_data = async () => {
+
+        if( this.data ){ return this.data }
 
         let response;
 
@@ -202,32 +224,41 @@ const ProjectPage = () => {
             }
         }
 
-        this.projects = await response.json()
+        this.data = await response.json()
 
-        return this.projects
+        this.search.initialize()
+
+        return this.data
     }
-    this.populate_wrapper = () => {
+    update_data = () => {
+
+        let new_filtered_data = this.search.filter_data(this.data)
+
+        if(JSON.stringify(this.filtered_data) != JSON.stringify(new_filtered_data)){
+            this.filtered_data = new_filtered_data
+            this.update_page_data()
+        }
+    }
+    update_page_data = () => {
+        if(this.mode == "mobile"){
+            this.card_display.update(Object.values(this.filtered_data))
+        } else {
+            this.table.update(Object.values(this.filtered_data))
+        }
+    }
+    update_width = async () => {
         let new_mode = window.innerWidth < 576 ? "mobile" : "desktop";
         if( new_mode != this.mode){
             this.mode = new_mode
-
-            this.remove_wrapper_children()
-
+            this.wrapper.remove_children()
             if(this.mode == "mobile"){
-                this.build_cards()
+                await this.card_display.initialize()
             } else {
-                this.build_table()
+                await this.table.initialize()
             }
+            this.update_data()
         }
     }
-    this.initialize = async () => {
-        this.populate_wrapper()
-        this.search_input.addEventListener("input", this.search)
-        this.display_card.addEventListener('hidden.bs.modal', () => this.hide_row())
-        this.window.addEventListener("resize", () => this.populate_wrapper())
-    }
-
-    this.initialize()
 }
 
-const project_page = ProjectPage()
+const project_page = new ProjectPage()
