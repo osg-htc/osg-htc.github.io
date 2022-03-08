@@ -12,6 +12,11 @@ $navbar-brand-height: 3.5rem;
 
 $card-border-color: black;
 
+blockquote {
+  border-left: black dotted 1px;
+  padding-left: 10px;
+}
+
 .h-100px {
   height: 100px !important;
 }
