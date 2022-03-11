@@ -78,6 +78,12 @@ main {
   min-height: 90vh;
 }
 
+footer {
+  a {
+    text-decoration: none;
+  }
+}
+
 @include media-breakpoint-up(md) {
   html {
     font-size: 16px;
@@ -102,7 +108,7 @@ h3 {
 
 /* OSG-style links */
 
-a{color:$text;text-decoration:none;}
+a{color:$text;}
 a:hover,a:focus{color:$secondary;text-decoration:underline;}
 
 /* Stealing table CSS from jekyll-theme-minimal */

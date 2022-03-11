@@ -1,9 +1,53 @@
 ---
-title: "Access Point"
+title: OSG Access Point
 layout: title-main
 ---
 
 <div class="container-xxl pb-4">
-    <div
-
+    <div class="row">
+        <div class="col-12 col-lg-6 col-md-6 d-flex">
+            <div class="">
+                <p class="fs-5">
+                    The OSG Access Point is a researchers entrypoint into their associated computing resource. It provides
+                    a location to place their workloads and data to then be submitted and executed elsewhere.
+                </p>
+                <p class="fs-5">
+                    Designed by <a href="https://htcondor.org">HTCSS Team</a>, the Access Point gives researchers dynamic control
+                    over their workload execution. This allows researchers to configure their workload submissions to meet their specific
+                    computational needs. This can include configurations that request GPUs, order job executions, or
+                    download specific software.
+                </p>
+                <p class="fs-5">
+                    Using an Access Point requires no resources beyond your personal computer, and is designed to be performant
+                    no matter your location. Hence our slogan, "Submit Locally, Run Globally".
+                </p>
+            </div>
+        </div>
+        <div class="col-12 col-xl-5 col-lg-5 col-md-6 d-flex">
+            <img class="mx-5" src="{{ '/assets/images/Access-Point.svg' | relative_url }}" />
+        </div>
+    </div>
+    <div class="row justify-content-between my-6">
+        <div class="col-12 col-xl-5 col-lg-5 col-md-6 d-flex">
+            <a class="d-block my-auto" href="https://connect.osg-htc.org/">
+                <img class="my-auto img-fluid" src="{{ '/assets/images/OSGConnect_Logo.png' | relative_url }}" />
+            </a>
+        </div>
+        <div class="col-12 col-lg-6 col-md-6 d-flex">
+            <div class="">
+                <p class="fs-5">
+                    <a href="https://connect.osg-htc.org/">OSGConnect</a> provides an OSG operated Access Point that is made
+                    available to US-Based Researchers, along with other services to assist their running of HTC workloads.
+                </p>
+                <p class="fs-5">
+                    Using an OSG Access Point, researchers can utilize other OSG resources such as the <a href="{{ '/about/open_science_pool/' | relative_url }}">Open Science Pool</a>
+                    and the <a href="{{ '/about/osdf/' | relative_url }}">Open Science Data Federation</a>. These two services provide computational
+                    resources and data capacity to execute your workloads at an Access Point.
+                </p>
+                <div class="mt-3 d-flex">
+                    <a class="mx-auto btn btn-secondary" href="https://connect.osg-htc.org/">Get Started on OSGConnect</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
