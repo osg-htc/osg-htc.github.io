@@ -1,11 +1,11 @@
 ---
-title: "Spotlight"
+title: "Spotlight Researchers"
 layout: title-main
 ---
 
-<div class="bg-light">
+<div class="">
     <div class="container-xxl">
-        <div class="row pt-4">
+        <div class="row rounded pt-4 p-2 bg-light">
             {% assign sorted_spotlights = site.spotlights | sort: "date" | reverse %}
             {% for article in sorted_spotlights %}
             <div class="col-12 col-lg-6 col-xl-4 pb-4">
@@ -15,8 +15,7 @@ layout: title-main
         </div>
     </div>
 </div>
-<div class="container-xxl">
-    <hr>
+<div class="container-xxl py-5">
     <p>
         The OSG Consortium is pleased to see OSG stories reposted on the websites of other organizations.
 

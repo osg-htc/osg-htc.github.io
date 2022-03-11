@@ -1,7 +1,13 @@
 <header>
-    <nav class="navbar navbar-expand-md bg-secondary">
+    <nav class="navbar navbar-light navbar-expand-md {% if page.url == '/' %}bg-secondary{% endif %}">
         <div class="container-xxl">
-            <a class="navbar-brand pt-1 pb-1" href="{{ '/' | relative_url }}"><img height="3 rem" src="{{ '/assets/images/logos/OSG-logo.svg' | relative_url }}" alt="OSG logo"></a>
+            <a class="navbar-brand pt-1 pb-1" href="{{ '/' | relative_url }}">
+                {% if page.url == "/" %}
+                    <img class="my-1" height="36" style="height: 2rem" src="{{ '/assets/images/logos/OSG_Logo_Text.svg' | relative_url }}" alt="OSG logo">
+                {% else %}
+                    <img style="height: 3rem" src="{{ '/assets/images/logos/OSG-logo.svg' | relative_url }}" alt="OSG logo">
+                {% endif %}
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -48,6 +54,9 @@
                     </li>
                 </ul>
             </div>
-        </div> <!-- End Container -->
+        </div>
     </nav>
+    <div class="container-xxl">
+        <hr class="my-0"/>
+    </div>
 </header>

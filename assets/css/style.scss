@@ -13,7 +13,8 @@ $spacers: (
     3: $spacer,
     4: $spacer * 1.5,
     5: $spacer * 3,
-    6: $spacer * 6
+    6: $spacer * 6,
+    7: $spacer * 12
 );
 
 $text: #3a3a3a;
@@ -24,14 +25,21 @@ $warning: #fff1c7;
 $white-offset: #fff7ea;
 $nav-link-color: $text;
 
-$navbar-brand-height: 3rem;
+
+$nav-link-font-weight: 500;
+$navbar-light-color: #3a3a3a;
+
+$border-radius: 1rem;
 
 $card-border-color: black;
-$card-border-radius: 1rem;
+$card-border-radius: $border-radius;
 
 $font-family-base: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $headings-font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $headings-font-weight: 600;
+
+$enable-negative-margins: true;
+
 .h-100px {
   height: 100px !important;
 }
@@ -58,9 +66,16 @@ $headings-font-weight: 600;
 @import 'bootstrap/bootstrap';
 @import 'pages/event';
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Responsive Font Size
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 html {
   font-size: 14px;
+}
+
+main {
+  min-height: 90vh;
 }
 
 @include media-breakpoint-up(md) {
@@ -115,6 +130,10 @@ hr {
   background-color: $gray-700;
 }
 
+.d-s{
+  direction: rtl;
+}
+
 .absolutely-centered {
   top: 50%;  /* position the top  edge of the element at the middle of the parent */
   left: 50%; /* position the left edge of the element at the middle of the parent */
@@ -130,4 +149,55 @@ $viewHeights: 10,15,20;
   .pb-vh-#{$viewHeight} {
     padding-bottom: #{$viewHeight}vh;
   }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Homepage Only
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#homepage-heading {
+  height: 115vh;
+}
+
+#hero-image {
+  position: absolute;
+  height: 115vh;
+  width: 100%;
+  top: 0px;
+  z-index: -1;
+  background: #f1a52b url("/assets/images/OSG_Hero.svg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#hero-content-container {
+  background-color: rgba(0, 0, 0, .6);
+  border-radius: 5px;
+  min-height: 300px;
+  color: white;
+  p {
+    min-height: 150px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  #globe-visualization{
+    min-width: 700px;
+  }
+  #circle-visualization{
+    height: 100vh
+  }
+}
+
+@include media-breakpoint-down(md){
+  #circle-visualization{
+    width: 100%;
+  }
+}
+
+
+#hero-quote{
+
 }

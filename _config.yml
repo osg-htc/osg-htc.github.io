@@ -47,6 +47,9 @@ collections:
   spotlights:
     permalink: /spotlights/:title.html
     output: true
+  services:
+    permalink: /services/:title.html
+    output: true
 
 sass:
   style: compressed
