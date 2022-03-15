@@ -71,7 +71,7 @@ title: Computation on the OSPool
 - parameter sweeps
 - Monte Carlo methods and other model optimization
 
-[Learn more and chat with a Research Computing Facilitator](https://www.osgconnect.net/) by requesting an account.
+[Learn more and chat with a Research Computing Facilitator](https://connect.osg-htc.org/) by requesting an account.
 
 ## Running jobs on the OSPool
 

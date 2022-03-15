@@ -10,7 +10,7 @@ title: Open Science Pool
 
 > The Open Science Pool (OSPool) is a virtual cluster operated by the OSG, with shared computing and data resources using distributed high-throughput computing (dHTC). The pool aggregates computing resources contributed by clusters across and beyond the US, making them usable by the US-based open science community, from individual researchers and research groups at campuses, to multi-institutional collaborations with a US constituency. 
 
-Researchers can submit computational work to the OSPool via access points operated locally to their campuses, or via access points operated as part of the [OSG Connect](https://www.osgconnect.net/) service, which serves researchers affiliated with projects at US-based academic, non-profit, and government institutions.
+Researchers can submit computational work to the OSPool via access points operated locally to their campuses, or via access points operated as part of the [OSG Connect](https://connect.osg-htc.org/) service, which serves researchers affiliated with projects at US-based academic, non-profit, and government institutions.
 
 ## Who can use the OSPool?
 
@@ -30,7 +30,7 @@ Researchers can submit computational work to the OSPool via access points operat
 - model optimization approaches, including Monte Carlo methods
 - Machine learning and AI executed with multiple independent training tasks, different parameters, and/or data subsets
 
->Learn more and chat with a Research Computing Facilitator by [requesting an account](https://www.osgconnect.net/).
+>Learn more and chat with a Research Computing Facilitator by [requesting an account](https://www.connect.osg-htc.org/).
 
 ## Who contributes capacity to the OSPool?
 
