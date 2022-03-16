@@ -1,10 +1,10 @@
 <div class="col-md-3">
-  <nav class="d-none d-md-block bg-light sidebar p-2">
+  <nav class="d-none d-md-block bg-light sidebar p-3">
     {% for section in site.data.about %}
     <h5>{{ section.title }}</h5>
     {% include about_ul.html items=section.docs %}
     {% endfor %}
-    <h5>Documentation</h5>
+    <h5 class="pt-2">Documentation</h5>
     <ul class="nav nav-pills flex-column">
       <li class="nav-item"><a class="nav-link" href="https://support.opensciencegrid.org/">Users</a></li>
       <li class="nav-item"><a class="nav-link" href="https://opensciencegrid.org/docs/">Sysadmins</a></li>

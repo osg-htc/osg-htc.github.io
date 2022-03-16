@@ -1,12 +1,9 @@
 ---
-title: Campus Cyberinfrastructure (CC*)- 21528
+title: Campus Cyberinfrastructure Award Recipients Power the Open Science Pool
 date: 2021-08-12 12:00:00 -0600
 categories: NSF Camput Cyberinfrastructure (CC*)
-layout: container
+layout: title-main-container
 ---
-
-Campus Cyberinfrastructure Award Recipients Power the Open Science Pool
-=======================================================================
 
 The OSG consortium operates the Open Science Pool (OSPool). The OSPool is founded on the principle of sharing, and any researcher at a US institution can access it. The capacity that powers this national computing resources is contributed by clusters located at academic and research institutions. [Campus Cyberinfrastructure awardees](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) play an important role in the value that the OSPool brings to the national S&E community. By sharing their resources, Campus Cyberinfrastructure (CC*) award recipients provide tremendous support for open research.
 

@@ -9,10 +9,10 @@ layout: title-main
     <div class="container-xxl pb-4">
         {% include get/future_events.html %}
         {% if future_events.size != 0 %}
-        <div class="row rounded pt-4 p-2 bg-light">
+        <div class="row g-0 rounded bg-light pb-3 pe-3">
             {% for event in future_events %}
 
-            <div class="col-12 col-lg-6 my-4">
+            <div class="col-12 col-lg-6 pt-3 ps-3">
                 {% include /cards/event-card.html news=event card_image=event.header_image height='150' %}
             </div>
 
@@ -21,10 +21,10 @@ layout: title-main
         {% endif %}
         {% include get/past_events.html %}
         <h2 class="text-muted my-3">Past Events</h2>
-        <div class="row rounded pt-4 p-2 bg-light">
+        <div class="row g-0 rounded bg-light pb-3 pe-3">
             {% for event in past_events %}
 
-            <div class="col-12 col-lg-6 mb-4">
+            <div class="col-12 col-lg-6 pt-3 ps-3">
                 {% include /cards/event-card.html news=event card_image=event.header_image height='150' %}
             </div>
 

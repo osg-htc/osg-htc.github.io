@@ -3,12 +3,33 @@ title: "Latest News"
 layout: title-main
 ---
 
+{% include /get/news.liquid %}
+
+<div class="position-relative watch-child-height">
+    <div class="position-absolute w-100 absolutely-centered watch-parent-height">
+        <div class="container-xxl">
+            <div class="row py-3">
+                {% for article in news limit:3 %}
+                <div class="shadow col-12 col-sm-6 col-lg-4 {% cycle '', 'd-none d-lg-block', 'd-none d-sm-block' %}">
+                    {% include /cards/spotlight-card.html article=news %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-column h-100">
+        <div class="flex-grow-1"></div>
+        <div class="bg-secondary flex-grow-1"></div>
+        <div class="flex-grow-1"></div>
+    </div>
+</div>
+
 <div class="pb-4">
     <div class="container-xxl">
-        <div class="row rounded pt-4 p-2 bg-light">
+        <div class="row rounded bg-light pb-3 pe-3 g-0">
             {% include /get/news.liquid %}
             {% for news in news %}
-            <div class="col-12 col-lg-6 col-xl-4 pb-4">
+            <div class="col-12 col-lg-6 col-xl-4 pt-3 ps-3 d-flex">
                 {% include /cards/spotlight-card.html article=news %}
             </div>
             {% endfor %}

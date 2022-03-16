@@ -47,6 +47,10 @@ $enable-negative-margins: true;
   height: 150px !important;
 }
 
+.mh-200px {
+  min-height: 200px;
+}
+
 .hover-shadow {
   box-shadow: 0px 0px 0px #FFFFFF;
   transition-property: box-shadow;
@@ -80,6 +84,9 @@ main {
 footer {
   a {
     text-decoration: none;
+  }
+  a:hover {
+    color: $text;
   }
 }
 
@@ -115,7 +122,7 @@ a:hover,a:focus{color:$secondary;text-decoration:underline;}
 
 // Card image caps
 .card-img-top {
-  height: 20vw;
+  height: 75%;
   object-fit: cover;
   max-height: 250px;
 }
@@ -191,18 +198,15 @@ $viewHeights: 10,15,20;
   #globe-visualization{
     min-width: 700px;
   }
+
   #circle-visualization{
     height: 100vh
   }
+
 }
 
 @include media-breakpoint-down(md){
   #circle-visualization{
     width: 100%;
   }
-}
-
-
-#hero-quote{
-
 }

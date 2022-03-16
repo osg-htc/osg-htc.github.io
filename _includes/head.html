@@ -28,6 +28,7 @@
 <![endif]-->
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}" ></script>
 
+
 {% for head in include.head %}
     {{ head }}
 {% endfor %}
@@ -35,6 +36,7 @@
 {% for js in include.js %}
 <script src="{{ js.src | relative_url }}" type="{{ js.type | default: 'text/javascript' }}" {{ js.loading}}></script>
 {% endfor %}
+<script src="{{ '/assets/js/base.js' | relative_url }}" defer></script>
 
 {% for css in include.css %}
 <link href="{{ css.href | relative_url }}" media="screen, tv, projection" title="Default" rel="stylesheet">
