@@ -2,7 +2,7 @@
     {% assign article = include.article %}
 {% endif %}
 <a class="text-decoration-none" href="{{ article.url | relative_url }}">
-    <div class="card border-0 hover-shadow h-100">
+    <div class="card border-0 hover-shadow h-100 {{ include.class }}">
         {% if article.card_image or include.card_image %}
         <img height="{{ include.height | default: '200' }}" src="{{ include.card_image | default: article.card_image | relative_url }}" class="card-img-top" alt="article">
         {% endif %}
