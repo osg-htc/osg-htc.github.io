@@ -177,7 +177,7 @@ $viewHeights: 10,15,20;
   width: 100%;
   top: 0px;
   z-index: -1;
-  background: #f1a52b url("{{ '/assets/images/OSG_Hero.svg' | relative_url }}") no-repeat center;
+  background: #f1a52b url("{{ 'assets/images/OSG_Hero.svg' | relative_url }}") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
