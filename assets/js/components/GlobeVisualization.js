@@ -1,3 +1,7 @@
+---
+    layout: blank
+---
+
 import * as d3 from "https://cdn.skypack.dev/d3@7";
 import * as topojson from 'https://cdn.skypack.dev/topojson';
 import {transpose} from "../util.js";
@@ -20,7 +24,7 @@ class GlobeVisualization {
         this.frame_generator = this.globe()
         this.topo = await this.get_topo("110")
         this.create_frame()
-        fetch("/assets/data/job_lines.json").then(d => d.json()).then(d => this.data = d)
+        fetch("{{ '/assets/data/job_lines.json' | relative_url }}").then(d => d.json()).then(d => this.data = d)
         this.get_topo("50").then(d => this.topo = d)
     }
 
@@ -96,7 +100,7 @@ class GlobeVisualization {
     sphere = {type: "Sphere"}
 
     get_topo = async (resolution) => {
-        return await fetch(`/assets/data/land-${resolution}m.json`).then(t => t.json()).then(j => topojson.feature(j, j.objects.land))
+        return await fetch(`{{ '/assets' | relative_url }}/data/land-${resolution}m.json`).then(t => t.json()).then(j => topojson.feature(j, j.objects.land))
     }
 }
 
