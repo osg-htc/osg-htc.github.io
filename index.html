@@ -5,8 +5,6 @@ js_extension:
     loading: "defer"
     type: "module"
 
-css_extension:
-  - href: "/assets/css/homepage.css"
 ---
 
 <div id="homepage-heading" class="d-flex flex-column">
@@ -95,7 +93,7 @@ css_extension:
         {% assign sorted_spotlights = site.spotlights | reverse %}
         {% for article in sorted_spotlights limit:3 %}
         <div class="col-12 col-sm-6 col-lg-4 {% cycle 'order-1 order-md-2', 'd-none d-lg-block order-3', 'd-none d-sm-block' %}">
-          {% include /cards/spotlight-card.html height='150' no_date="true" %}
+          {% include /cards/spotlight-card.html height='150' no_date="true" class="shadow" %}
         </div>
         {% endfor %}
       </div>
@@ -135,6 +133,39 @@ css_extension:
               <div class="mt-3 d-flex">
                 <a class="mx-auto btn btn-secondary shadow" href="{{ '/spotlight.html' | relative_url }}">Read about our Spotlight Researchers</a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xxl py-5">
+  <div class="row justify-content-between">
+    <div class="col-12 col-md-2 col-lg-5 d-flex">
+      <img class="img-fluid" src="{{ '/assets/images/Handshake.svg' | relative_url }}">
+    </div>
+    <div class="col-12 col-md-8 col-lg-6 col-xxl-5 d-flex">
+      <div class="my-auto">
+        <div class="card mt-n7 mt-md-0 border-0">
+          <div class="card-body">
+            <h3 class="mt-0 pb-2">OSG makes dHTC impact to all</h3>
+            <p class="fs-5">
+              OSG services allow researchers of all fields of science to ask bigger questions and is
+              not confined to any one field of science. OSG Access Points
+              provide researchers with a home to access compute resources, such as the Open Science Pool,
+              for complex workloads and the Open Science Data Federation for processing
+              large data sets.
+            </p>
+            <h5 class="pb-2">New to Large-Scale Computing?</h5>
+            <p class="fs-5">
+              OSG provides a dedicated staff of Research Facilitators here to help you use our services. Research Facilitators
+              can assist with your computational approach, teach you how to place your workloads and data on our Access Points,
+              and connect you with researchers using similar software or methods.
+            </p>
+            <div class="mt-3 d-flex">
+              <a class="mx-auto btn btn-secondary shadow" href="{{ '/spotlight.html' | relative_url }}">Read about our Spotlight Researchers</a>
             </div>
           </div>
         </div>
