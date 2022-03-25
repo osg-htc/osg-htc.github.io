@@ -43,18 +43,16 @@
     }
 
     .subtitle {
-      color: $text-muted;
       margin-bottom: 0;
       padding: 10px;
-      background-color: $white-offset;
+      background-color: $warning;
+      background-image: linear-gradient(to top, $warning, white);
       text-align: right;
     }
   }
   .subsection {
-    border-left: solid;
-    border-left-color: $primary;
-    background-color: $white-offset; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to bottom right, $white-offset, white);
+    background-color: $warning; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, $warning, white);
     margin-bottom: auto;
   }
 }
