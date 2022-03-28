@@ -1,8 +1,22 @@
 ---
 title: Des Expanding Universe
-date: 2018-03-01T12:00:00+00:00
+canonical_url: https://osg-htc.org/spotlights/des-expanding-universe.html
+image:
+    path: https://raw.githubusercontent.com/CHTC/Articles/main/images/Dark-Matter-Map-II-e1521045294690.jpg
+    alt: Dark Matter Map Graph
+description: |
+    DES looks to the Open Science Pool to provide a portion of their computing power.
+    Over the last year, DES has gained roughly 4.58 million hours (522 years) of computing
+    from OSG.
+excerpt:  |
+    DES looks to the Open Science Pool to provide a portion of their computing power.
+    Over the last year, DES has gained roughly 4.58 million hours (522 years) of computing
+    from OSG.
 publish: true
-card_image: /assets/images/Dark-Matter-Map-II-e1521045294690.jpg
+card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/Dark-Matter-Map-II-e1521045294690.jpg
+card_alt: Dark Matter Map Graph
+publish_on:
+    - osg
 ---
 
 Since its beginning, our universe has been expanding. The early work of scientists
@@ -40,7 +54,7 @@ analysis.
     </p>
   </div>
   <div class="col-md-6">
-    <img class="mr-3" alt="Dark matter map" src="{{site.baseurl}}/assets/images/Dark-Matter-Map-II-e1521045294690.jpg">
+    <img class="mr-3" alt="Dark matter map" src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Dark-Matter-Map-II-e1521045294690.jpg">
   </div>
 </div>
 

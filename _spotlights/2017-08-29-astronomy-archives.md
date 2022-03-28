@@ -1,8 +1,26 @@
 ---
 title: "Astronomy archives are creating new science every day"
-date: 2017-08-29 12:00:00 -0600
+canonical_url: https://raw.githubusercontent.com/CHTC/Articles/main/images/groom-title.jpg
+image:
+    path: https://raw.githubusercontent.com/CHTC/Articles/main/images/groom-title.jpg
+    alt: Trappist Solar System
+description: |
+    The TRAPPIST-1 system contains a total of seven planets, all around the size of Earth.
+    Three of them — TRAPPIST-1e, f and g — dwell in their star’s so-called “habitable zone.”
+    The habitable zone, or Goldilocks zone, is a band around every star (shown here in green)
+    where astronomers have calculated that temperatures are just right — not too hot, not too
+    cold — for liquid water to pool on the surface of an Earth-like world.
+excerpt: |
+    The TRAPPIST-1 system contains a total of seven planets, all around the size of Earth.
+    Three of them — TRAPPIST-1e, f and g — dwell in their star’s so-called “habitable zone.”
+    The habitable zone, or Goldilocks zone, is a band around every star (shown here in green)
+    where astronomers have calculated that temperatures are just right — not too hot, not too
+    cold — for liquid water to pool on the surface of an Earth-like world.
 categories: Astronomy
-card_image: /assets/images/groom-title.jpg
+card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/groom-title.jpg
+card_alt: Trappist Solar System
+publish_on:
+    - osg
 ---
 
 Accumulated data sets from past and current astronomy research are not dead. Researchers are still doing new science with old data and still making new discoveries.
@@ -22,7 +40,7 @@ Steve Groom serves as task manager for the NASA/IPAC Infrared Science Archive (I
         </p>
     </div>
     <div class="col-md-6">
-        <img class="img-fluid" alt="TRAPPIST-1 system" src="{{site.baseurl}}/assets/images/groom-title.jpg">
+        <img class="img-fluid" alt="TRAPPIST-1 system" src="https://raw.githubusercontent.com/CHTC/Articles/main/images/groom-title.jpg">
     </div>
 </div>
 
@@ -30,7 +48,7 @@ Steve Groom serves as task manager for the NASA/IPAC Infrared Science Archive (I
 
 <div class="row my-5">
     <div class="col-md-6">
-        <img class="w-100 img-fluid" alt="The Spitzer Space Telescope CTA" src="{{site.baseurl}}/assets/images/groom-2.jpg">
+        <img class="w-100 img-fluid" alt="The Spitzer Space Telescope CTA" src="https://raw.githubusercontent.com/CHTC/Articles/main/images/groom-2.jpg">
     </div>
     <div class="col-md-6">
         <p>

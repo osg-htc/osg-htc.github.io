@@ -1,2 +1,3 @@
-{% assign story_in_array = site.spotlights | where: "id", "/spotlights/bat-genomics" %}
+{% include get/spotlights.liquid %}
+{% assign story_in_array = spotlights | where: "id", "/spotlights/bat-genomics" %}
 {% assign hero_data = story_in_array[0] %}

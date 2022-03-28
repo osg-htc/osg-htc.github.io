@@ -11,7 +11,8 @@ layout: padded-default
 <div class="bg-light">
     <div class="container-xxl">
         <div class="row pt-4">
-            {% assign sorted_spotlights = site.spotlights | sort: "date" | reverse %}
+            {% include get/spotlights.liquid %}
+            {% assign sorted_spotlights = spotlights | sort: "date" | reverse %}
             {% for article in sorted_spotlights %}
             <div class="col-12 col-lg-6 col-xl-4 pb-4">
                 {% include /cards/spotlight-card.html data=spotlights no_date="true" %}

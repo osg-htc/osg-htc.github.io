@@ -1,8 +1,27 @@
 ---
 title: "OSG helps LIGO scientists confirm Einstein's unproven theory"
-date: 2016-02-11 12:00:00 -0600
-categories: Astronomy
-card_image: /assets/images/ligo20160211d-smaller-150x150.jpg
+canonical_url:  https://osg-htc.org/spotlights/osg-helps-ligo-scientists-confirm-einsteins-last-unproven-theory.html
+image:
+    path: https://raw.githubusercontent.com/CHTC/Articles/main/images/ligo20160211d-smaller-150x150.jpg
+    alt: Image Courtesy Caltech/MIT/LIGO Laboratory
+description: |
+    LIGO’s detectors search for gravitational waves from deep space. With 
+    two detectors, researchers can use differences in the wave’s arrival times 
+    to constrain the source location in the sky. LIGO’s first data run of
+    its advanced gravitational wave detectors began in September 2015 and
+    ran through January 12, 2016. The first gravitational waves were
+    detected on September 14, 2015 by both detectors.
+excerpt: |
+    LIGO’s detectors search for gravitational waves from deep space. With
+    two detectors, researchers can use differences in the wave’s arrival times
+    to constrain the source location in the sky. LIGO’s first data run of
+    its advanced gravitational wave detectors began in September 2015 and
+    ran through January 12, 2016. The first gravitational waves were
+    detected on September 14, 2015 by both detectors.
+card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/ligo20160211d-smaller-150x150.jpg
+card_alt: Image Courtesy Caltech/MIT/LIGO Laboratory
+publish_on:
+- osg
 ---
 
 Albert Einstein first posed the idea of gravitational waves in his [general theory of relativity](https://en.wikipedia.org/wiki/General_relativity) just over a century ago. But until now, they had never been observed directly. For the first time, scientists with the Laser Interferometer Gravitational-Wave Observatory [(LIGO) Scientific Collaboration](http://www.ligo.org/) (LSC) [have observed ripples in the fabric of spacetime called gravitational waves](https://www.ligo.caltech.edu/news/ligo20160211).
@@ -10,7 +29,7 @@ Albert Einstein first posed the idea of gravitational waves in his [general theo
 <div class="row my-4 justify-content-center">
     <div class="col-sm-6">
         <div>
-            <img class="w-100" src="{{site.baseurl}}/assets/images/ligo20160211d-smaller-150x150.jpg" alt="ligo20160211d-smaller" />
+            <img class="w-100" src="https://raw.githubusercontent.com/CHTC/Articles/main/images/ligo20160211d-smaller-150x150.jpg" alt="ligo20160211d-smaller" />
         </div>
         <small class="text-muted">Image Courtesy Caltech/MIT/LIGO Laboratory</small>
     </div>
@@ -25,19 +44,19 @@ Peter Couvares, data analysis computing manager for the Advanced LIGO project at
 <div class="row my-4">
   <div class="col-4">
     <div>
-      <img class="img-fluid w-100" src="{{site.baseurl}}/assets/images/couvares_cropped-150x150.jpeg" alt="couvares_cropped" />
+      <img class="img-fluid w-100" src="https://raw.githubusercontent.com/CHTC/Articles/main/images/couvares_cropped-150x150.jpeg" alt="couvares_cropped" />
     </div>
     <small class="muted">Peter Couvares, courtesy photo</small>
   </div>
   <div class="col-4">
     <div>
-      <img class="img-fluid w-100" src="{{site.baseurl}}/assets/images/clark_cropped-150x150.jpeg" alt="clark_cropped" />
+      <img class="img-fluid w-100" src="https://raw.githubusercontent.com/CHTC/Articles/main/images/clark_cropped-150x150.jpeg" alt="clark_cropped" />
     </div>
     <small class="muted">James Clark, courtesy photo</small>
   </div>
   <div class="col-4">
     <div>
-      <img class="img-fluid w-100" src="{{site.baseurl}}/assets/images/pekowsy-150x150.jpeg" alt="pekowsy" />
+      <img class="img-fluid w-100" src="https://raw.githubusercontent.com/CHTC/Articles/main/images/pekowsy-150x150.jpeg" alt="pekowsy" />
     </div>
     <small class="muted">Larne Pekowsky, courtesy photo</small>
   </div>
@@ -68,7 +87,7 @@ Using data analysis run on the OSG, the LIGO team looked for a compact binary co
 
 Another big step has been the increase in network speed. The data was cached at the University of Nebraska and streamed to on-demand worker nodes that are able to read from a common location. This project benefited greatly from the NSF’s Campus Cyberinfrastructure &#8211; Network Infrastructure and Engineering (CC-NIE) program, which helped provide a hardware upgrade from 10Gbps to 100Gbps WAN connectivity. Receiving NSF support to upgrade to 100Gbps has enabled huge gains in workflow throughput.
 
-<a href="{{site.baseurl}}/assets/images/WMS-hours-by-facility-comet.png"><img src="{{site.baseurl}}/assets/images/WMS-hours-by-facility-comet.png" alt="WMS hours by facility-comet" width="800" height="500" /></a>
+<a href="/WMS-hours-by-facility-comet.png"><img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/WMS-hours-by-facility-comet.png" alt="WMS hours by facility-comet" width="800" height="500" /></a>
 
 The LIGO analysis ran across 16 different OSG resources, for a total of 4M CPU hours:
 * 1M CPU hour (25%) XSEDE contribution<
