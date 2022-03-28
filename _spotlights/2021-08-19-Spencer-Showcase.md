@@ -9,12 +9,14 @@ excerpt: Kicking off last week’s OSG User School Showcase, Spencer Ericksen, a
 publish: true
 card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/Spencer-Showcase.jpg
 card_alt: Liquid Handler
+banner_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/Spencer-Showcase-Banner.jpg
+banner_alt: Liquid Handler
 author: Josephine Watkins
 publish_on:
     - osg
+    - htcondor
 --- 
 
-By Josephine Watkins
 
 <figure>
   <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Spencer-Showcase.jpg" alt="Liquid Handler"/>

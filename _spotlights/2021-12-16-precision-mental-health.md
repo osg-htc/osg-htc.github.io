@@ -2,20 +2,22 @@
 title: "Harnessing HTC-enabled precision mental health to capture the complexity of smoking cessation"
 canonical_url: https://chtc.cs.wisc.edu/precision-mental-health.html
 image:
-    path: https://raw.githubusercontent.com/CHTC/Articles/main/images/Gaylen-Fronk-square.jpg
+    path: https://raw.githubusercontent.com/CHTC/Articles/main/images/mental_health_banner.jpeg
     alt: Gaylen Fronk Headshot
 description: Collaborating with CHTC research computing facilitation staff, UW-Madison researcher Gaylen Fronk is using HTC to improve cigarette cessation treatments by accounting for the complex differences among patients.
 excerpt: Collaborating with CHTC research computing facilitation staff, UW-Madison researcher Gaylen Fronk is using HTC to improve cigarette cessation treatments by accounting for the complex differences among patients.
-card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/Gaylen-Fronk-square.jpg
-card_alt: Gaylen Fronk
+card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/mental_health.jpeg
+card_alt: Floating and Glowing Brain
+banner_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/mental_health_banner.jpeg
+banner_alt: Floating and Glowing Brain
 author: Josephine Watkins
 publish_on:
-    - osg
+    - chtc
+    - htcondor
 ---   
 
 ***Collaborating with CHTC research computing facilitation staff, UW-Madison researcher Gaylen Fronk is using HTC to improve cigarette cessation treatments by accounting for the complex differences among patients.***
 
-By Josephine Watkins
 
 <figure class="figure float-right" style="margin-left: 1em">
   <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Gaylen-Fronk-square.jpg" class="figure-img img-fluid rounded" alt="Gaylen Fronk" width="250px">

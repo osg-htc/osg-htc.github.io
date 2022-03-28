@@ -9,12 +9,14 @@ excerpt: During the OSG School Showcase, Hannah Moshontz, a postdoctoral fellow 
 publish: true
 card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/Hannah-Showcase.jpg
 card_alt: Brain Model
+banner_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/Hannah-Showcase-Banner.jpg
+banner_alt: Brain Model
 author: Josephine Watkins
 publish_on:
     - osg
+    - htcondor
 --- 
 
-By Josephine Watkins
 
 <figure>
   <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Hannah-Showcase.jpg" alt="Brain Model"/>

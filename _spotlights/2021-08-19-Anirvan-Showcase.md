@@ -9,12 +9,14 @@ excerpt: Anirvan Shukla, a User School participant in 2016, spoke at this year's
 publish: true
 card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/Anirvan-Showcase-1.png
 card_alt: Proton-proton collision
+banner_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/Anirvan-Showcase-banner.png
+banner_alt: Proton-proton collision
 author: Josephine Watkins
 publish_on:
     - osg
+    - htcondor
 --- 
 
-By Josephine Watkins
 
 <figure>
   <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Anirvan-Showcase-1.png" alt="Proton-proton collision"/>

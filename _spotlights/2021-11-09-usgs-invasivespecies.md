@@ -8,14 +8,16 @@ description: Researchers at the USGS are using HTC to pinpoint potential invasiv
 excerpt: Researchers at the USGS are using HTC to pinpoint potential invasive species for the United States.
 card_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/USGS-collage.jpg
 card_alt: Satellite image collage graphic
+banner_src: https://raw.githubusercontent.com/CHTC/Articles/main/images/USGS-collage.jpg
+banner_alt: Satellite image collage graphic
 author: Josephine Watkins
 publish_on:
-    - osg
+    - chtc
+    - htcondor
 ---   
 
 ***Researchers at the USGS are using HTC to pinpoint potential invasive species for the United States.***
 
-By Josephine Watkins
 
 <figure>
   <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/USGS-collage.jpg" alt="Satellite image collage graphic"/>
