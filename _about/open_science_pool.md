@@ -30,7 +30,7 @@ Researchers can submit computational work to the OSPool via access points operat
 - model optimization approaches, including Monte Carlo methods
 - Machine learning and AI executed with multiple independent training tasks, different parameters, and/or data subsets
 
->Learn more and chat with a Research Computing Facilitator by [requesting an account](https://www.connect.osg-htc.org/).
+>Learn more and chat with a Research Computing Facilitator by [requesting an account](https://connect.osg-htc.org/).
 
 ## Who contributes capacity to the OSPool?
 
