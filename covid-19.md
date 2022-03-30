@@ -23,7 +23,7 @@ concurrently-running jobs](https://gracc.opensciencegrid.org/dashboard/db/covid-
 - **Expertise** for maximizing research throughput, including help with workflow design and development.
 
 COVID-19 researchers can access OSG through the Open Science Pool (e.g., the "`osg` VO"), whether
-via the [OSG Connect service](https://www.osgconnect.net/), or by coordinating 
+via the [OSG Connect service](https://connect.osg-htc.org/), or by coordinating 
 with us to route work from other submission points.
 
 Sites Supporting COVID-19 Research
