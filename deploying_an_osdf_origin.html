@@ -1,0 +1,50 @@
+---
+    title: Deploying an OSDF Origin
+    layout: posts
+    permalink: /about/osdf/deploying_an_osdf_origin.html
+---
+
+<p>
+    Our mental model for an OSDF Origin is that of a filesystem, possibly composed of
+    many servers, that is mounted on a host managed via Kubernetes. Both the filesystem
+    and that host is the responsibility of the owner institution. The
+    <a href="https://path-cc.io/">PATh</a> team has access
+    to that host to instantiate the origin services by deploying a container.
+</p>
+<p>
+    The institution owning the hardware on which the filesystem is implemented is
+    responsible for communicating with PATh via the PATh ticketing system what parts
+    of the filesystem they want to export into the OSDF, and who should have read/write
+    access to it. The owner can change this unilaterally any time, but we request
+    notification ideally a few days prior, if possible.
+</p>
+<p>
+    The PATh services team is responsible for operating the origin service as requested.
+    This includes communicating the absolute path the owners exported filesystems show
+    up in the OSG runtime environment to the institution owning the exported filesystem.
+</p>
+<p>
+    <a href="#figure-1">Figure 1</a> below depicts this architectural arrangement.
+    PATh is responsible for services in red. This figure shows an arrangement where
+    the actual exported filesystem sits behind an institutional firewall, while the
+    Kubernetes host is dual homed, straddling this firewall.
+</p>
+<p>
+    We suggest that the institution owning the filesystem and the Kubernetes host work
+    with the
+    <a href="https://pacificresearchplatform.org/">Pacific Research Platform (PRP)</a>
+    project to operate the Kubernetes host. This
+    is by far the least effort way forward for the institution. We are happy to introduce
+    you.
+</p>
+<p>
+    If the institution insists to deploy and operate the origin themselves, we can provide
+    appropriate RPMs. However, we strongly suggest to leave operations of this service to
+    the experts in the PATh operations team.
+</p>
+
+
+<figure id="figure-1" class="figure p-2 bg-light">
+    <img src="{{ '/assets/images/OSDF_Image.png' | relative_url }}" class="figure-img img-fluid rounded" alt="Map of the Open Science Data Federation">
+    <figcaption class="p-1 bg-light">Figure 1: Depicting the architectural arrangement of the OSDF.</figcaption>
+</figure>
