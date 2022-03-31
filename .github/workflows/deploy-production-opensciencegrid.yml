@@ -9,12 +9,12 @@ on:
 
 jobs:
   Build-And-Deploy-Production:
-    if: ${{ github.repository_owner == 'opensciencegrid' }}
+    if: ${{ github.repository_owner == 'osg-htc' }}
     runs-on: ubuntu-18.04
     env:
       CNAME: osg-htc.org
-      production_url: https://github.com/opensciencegrid/osg-htc.git
-      OVERRIDE_CONFIG: _config_osg-htc_org.yml
+      production_url: https://github.com/opensciencegrid/opensciencegrid.github.io
+      OVERRIDE_CONFIG: _config_opensciencegrid_org.yml
 
     steps:
       - uses: actions/checkout@v2
@@ -24,7 +24,7 @@ jobs:
       - name: Setup SSH Keys and known_hosts
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.OSG_HTC_DEPLOY_KEY }}
+          ssh-private-key: ${{ secrets.OPENSCIENCEGRID_ORG_DEPLOY_KEY }}
 
       - name: Initialize GH User
         run: |
@@ -50,4 +50,4 @@ jobs:
           git checkout -b split-branch `git subtree split --prefix _site master`
 
           # Push to Production
-          git push ${{ env.production_url }} HEAD:main --force
+          git push ${{ env.production_url }} HEAD:from-osg-htc --force
