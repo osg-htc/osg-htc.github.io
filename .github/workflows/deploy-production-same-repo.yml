@@ -9,7 +9,7 @@ on:
 
 jobs:
   Build-And-Deploy-Production:
-    if: ${{ github.repository_owner == 'opensciencegrid' }}
+    if: ${{ github.repository_owner == 'osg-htc' }}
     runs-on: ubuntu-18.04
     env:
       CNAME: osg-htc.org
