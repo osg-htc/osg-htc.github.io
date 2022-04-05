@@ -13,7 +13,7 @@ In 2022, NSF released a new CC* solicitation with a new area for data storage on
 
 ## 235 Million Core Hours Contributed by CC* Campuses
 
-In the last year, twenty-five campuses contributed over 235 million core hours to researchers using distributed high throughput computing (dHTC). (April 2021 - March 2022) These core hours supported over 234 projects in fields of study ranging from the medical sciences to the evolutionary sciences, and from biostatistics to physics. This campus support throughout the United States contributed to the advancement of science and to researchers both on and off their campuses. The campuses currently contributing CC*-funded resources shown in the map below. Every month, the OSG is working to help additional campuses to join this effort to support open science by sharing their resources.
+In the last year, twenty-two campuses contributed over 235 million core hours to researchers using distributed high throughput computing (dHTC). (April 2021 - March 2022) These core hours supported over 234 projects in fields of study ranging from the medical sciences to the evolutionary sciences, and from biostatistics to physics. This campus support throughout the United States contributed to the advancement of science and to researchers both on and off their campuses. The campuses currently contributing CC*-funded resources shown in the map below. Every month, the OSG is working to help additional campuses to join this effort to support open science by sharing their resources.
 
 Projects supported by these contributions include (among many others):
 
@@ -67,7 +67,6 @@ The Open Science Pool is an <a href="https://research.cs.wisc.edu/htcondor/" tar
 - <a href="https://cores.research.asu.edu/research-computing/about" target="_blank">Arizona State University</a>
 - <a href="https://sites.clarkson.edu/acres/" target="_blank">Clarkson University</a>
 - <a href="https://computerscience.tcnj.edu/cs-programs-research/funded-projects/" target="_blank">The College of New Jersey</a>
-- <a href="https://www.fsu.edu/" target="_blank">Florida International University</a>
 - <a href="https://pace.gatech.edu/" target="_blank"> Georgia Institute of Technology</a>
 - <a href="https://www.tx-learn.org/" target="_blank">LEARN Texas</a>
 - <a href="https://www1.lehigh.edu/" target="_blank">Lehigh University</a>
@@ -77,11 +76,9 @@ The Open Science Pool is an <a href="https://research.cs.wisc.edu/htcondor/" tar
 - <a href="https://www.purdue.edu/newsroom/releases/2019/Q3/nsf-supports-purdue-team-developing-online-manufacturing-education.html" target="_blank">Purdue University</a>
 - <a href="https://news.syr.edu/blog/2020/09/03/national-science-foundation-awards-390000-to-syracuse-university-computing-initiative/" target="_blank"> Syracuse University</a>
 - <a href="https://www.siue.edu/its/cyberinfrastructure/" target="_blank"> Southern Illinois University Edwardsville</a>
-- <a href="https://www.tntech.edu/" target="_blank">Tennessee Tech University</a>
 - <a href="https://now.tufts.edu/articles/tufts-awarded-nsf-grant-expand-big-data-innovation-and-discovery" target="_blank"> Tufts University</a>
 - <a href="https://ucsdnews.ucsd.edu/pressrelease/sdsc-awarded-nsf-grant-for-triton-shared-computing-cluster-upgrade" target="_blank">University of California San Diego</a>
 - <a href="https://news.engr.uconn.edu/500k-nsf-grant-awarded-to-dr-bing-wang-uconn-health-center-2.php" target="_blank">University of Connecticut</a>
-- <a href="https://www.uark.edu/" target="_blank">University of Arkansas</a>
 - <a href="https://www.colorado.edu/rc/" target="_blank"> University of Colorado Boulder</a>
 - <a href="https://uwm.edu/" target="_blank">University of Wisconsin-Milwaukee</a>
 - <a href="https://www.nd.edu/" target="_blank">University of Notre Dame</a>
