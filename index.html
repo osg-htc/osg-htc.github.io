@@ -4,7 +4,16 @@ css_extension:
   - href: "/assets/css/homepage.css"
 ---
 
-
+{% assign now = "now" | date: "%s" %}
+{% if now < "1656392400" %}
+<hr class="m-0 ">
+<div class="bg-dark">
+  <div class="py-2 container-xxl text-white">
+    <b>Campus Cyberinfrastructure (CC*) 2022</b> solicitation now active! Learn more on our <a href="campus-cyberinfrastructure.html">Campus</a> page.
+  </div>
+</div>
+<hr class="m-0">
+{% endif %}
 <div id="hero-image" class="vh-75 vh-md-50">
   <div class="container-xxl">
     <div class="row justify-content-end">
