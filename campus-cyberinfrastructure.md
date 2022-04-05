@@ -13,7 +13,7 @@ In 2022, NSF released a new CC* solicitation with a new area for data storage on
 
 ## 235 Million Core Hours Contributed by CC* Campuses
 
-In the last year, twenty-five campuses contributed over 235 million core hours to researchers using distributed high throughput computing (dHTC). (April 5th, 2021-2022) These core hours supported over 234 projects in fields of study ranging from the medical sciences to the evolutionary sciences, and from biostatistics to physics. This campus support throughout the United States contributed to the advancement of science and to researchers both on and off their campuses. The campuses currently contributing CC*-funded resources shown in the map below. Every month, the OSG is working to help additional campuses to join this effort to support open science by sharing their resources.
+In the last year, twenty-five campuses contributed over 235 million core hours to researchers using distributed high throughput computing (dHTC). (April 2021 - March 2022) These core hours supported over 234 projects in fields of study ranging from the medical sciences to the evolutionary sciences, and from biostatistics to physics. This campus support throughout the United States contributed to the advancement of science and to researchers both on and off their campuses. The campuses currently contributing CC*-funded resources shown in the map below. Every month, the OSG is working to help additional campuses to join this effort to support open science by sharing their resources.
 
 Projects supported by these contributions include (among many others):
 
@@ -27,7 +27,7 @@ Projects supported by these contributions include (among many others):
 
 ## The CC* Program
 
-The National Science Foundation (NSF) supports the OSPool, OSDF, and campuses that contribute resources to it. For 2022, the National Science Foundation funds the Campus Cyberinfrastructure (CC*) program (NSF 21-528). This program invests in coordinated campus- and regional-level cyberinfrastructure improvements and innovation. Science-driven requirements are the primary motivation for any proposed activity.  The 2022 program has two areas, both of which provide opportunities for campuses to work with the OSG Consortium.
+The National Science Foundation (NSF) supports the OSPool, OSDF, and campuses that contribute resources to it. For 2022, the National Science Foundation funds the Campus Cyberinfrastructure (CC*) program <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 22-582)</a>. This program invests in coordinated campus- and regional-level cyberinfrastructure improvements and innovation. Science-driven requirements are the primary motivation for any proposed activity.  The 2022 program has two areas, both of which provide opportunities for campuses to work with the OSG Consortium.
 
 {% assign now = "now" | date: "%s" %}
 {% if now < "1656392400" %}
