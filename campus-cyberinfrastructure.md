@@ -31,7 +31,7 @@ The National Science Foundation (NSF) supports the OSPool, OSDF, and campuses th
 
 {% assign now = "now" | date: "%s" %}
 {% if now < "1656392400" %}
-**Upcoming Deadline: June 27th, 2021**
+**Upcoming Deadline: June 27th, 2022**
 {% endif %}
 
 The NSF supports awards in 2 CC* program areas:
