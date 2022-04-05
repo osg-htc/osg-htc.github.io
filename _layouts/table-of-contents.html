@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="container-xxl pb-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-8">
+            <div>
+                {{ content }}
+            </div>
+        </div>
+        <div class="d-none d-lg-block col-lg-4 col-xl-3">
+            <div class="sticky-top top-5">
+                <div class="me-auto">
+                    <div class="">
+                        <h3>Contents</h3>
+                        {% include list_of_lists_to_ul.liquid input=page.table_of_contents %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

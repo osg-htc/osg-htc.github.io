@@ -1,7 +1,7 @@
 {% if include.article %}
     {% assign article = include.article %}
 {% endif %}
-<a class="text-decoration-none" href="{{ article.url | relative_url }}">
+<a class="text-decoration-none" href="{{ article.url | default: include.url | relative_url }}">
     <div class="card hover-shadow border-0 h-100">
         {% if article.card_src or include.card_src %}
         <img height="{{ include.height | default: '200' }}" src="{{ include.card_src | default: article.card_src }}" class="card-img-top" alt="article">
@@ -16,7 +16,7 @@
             <hr/>
             <span class="text-decoration-none text-dark">
                 {% if include.content | markdownify | strip_html  %}
-                    {{ article.content }}
+                    {{ include.content }}
                 {% else %}
                     {{ article.excerpt | markdownify | strip_html }}
                 {% endif %}
