@@ -68,7 +68,6 @@ The Open Science Pool is an <a href="https://research.cs.wisc.edu/htcondor/" tar
 - <a href="https://sites.clarkson.edu/acres/" target="_blank">Clarkson University</a>
 - <a href="https://computerscience.tcnj.edu/cs-programs-research/funded-projects/" target="_blank">The College of New Jersey</a>
 - <a href="https://pace.gatech.edu/" target="_blank"> Georgia Institute of Technology</a>
-- <a href="https://www.tx-learn.org/" target="_blank">LEARN Texas</a>
 - <a href="https://www1.lehigh.edu/" target="_blank">Lehigh University</a>
 - <a href="http://www.hpc.lsu.edu/about/index.php" target="_blank"> Louisiana State University</a>
 - <a href="https://www.lsuhsc.edu/" target="_blank"> LSU Health</a>
