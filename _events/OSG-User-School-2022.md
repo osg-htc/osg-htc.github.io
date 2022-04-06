@@ -13,6 +13,7 @@ location: "University of Wisconsin-Madison"
 link: "https://opensciencegrid.org/user-school-2022/#applications"
 image: "/assets/images/events/Madison_Skyline.jpeg"
 header_image: "/assets/images/events/Madison_Skyline.jpeg"
+banner_src: "/assets/images/events/Madison_Skyline.jpeg"
 ---
 
 {% capture main %}
