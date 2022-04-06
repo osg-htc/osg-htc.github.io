@@ -43,7 +43,7 @@ css_extension:
       <ul>
         <li>Open for any scientist or group, of all disciplines, doing open science in the US.</li>
         <li>Built to run <a href="/about/open_science_pool/index.html#what-types-of-work-run-well-on-the-ospool">independent computations</a> on a massive scale.</li>
-        <li>The OSPool is built from idle resources contributed by university campuses, government-supported supercomputing facilities and research collaborations</li>
+        <li>The OSPool is built from resources contributed by university campuses, government-supported supercomputing facilities and research collaborations</li>
         <li>Resources are assigned on a fair-share basis at no cost to researchers; no allocation process is required.</li>
       </ul>
       <h5 id="open-science-data-federation"><a href="{{ '/about/osdf/' | relative_url }}">Open Science Data Federation (OSDF)</a></h5>
@@ -53,8 +53,14 @@ css_extension:
         <li>Improves data access performance, resource consumption and reliability.</li>
         <li><a href="https://support.opensciencegrid.org/support/solutions/articles/12000002985-overview-data-staging-and-transfer-to-jobs#data-locations-and-quotas">The OSG Connect</a> service provides researchers with a default of 500GB of storage space on the OSDF.</li>
       </ul>
-
-
+      <h5 id=""><a href="{{ '/events/2022-All-Hands-Meeting/' | relative_url }}">Annual All Hands Meetings (AHM)</a></h5>
+      <p class="mb-1"><b>OSG organizes an annual AHM to facilitate interactions among the consortium stakeholders.</b></p>
+      <p>This years All-Hands event hosted 38 talks from researchers, collaborators and OSG executives on their contributions towards bringing OSG into 2022.</p>
+      <ul>
+        <li>Researchers presented on their use of OSG services to run their dHTC workloads</li>
+        <li>OSG executives discussed the State of OSG in 2022 and future plans</li>
+        <li>Campus administrators discussed the use of HTC resources on their campuses by researchers and undergraduates alike</li>
+      </ul>
     </div>
     <div class="col-sm-12 col-md-4 mx-md-auto">
       {% include /get/future_events.html %}
@@ -86,22 +92,9 @@ css_extension:
   <div class="container-xxl">
     <div class="row justify-content-center">
       <div class="col-12 col-sm-8 col-md-6 col-xl-4 order-2 order-md-1 mt-3 mt-md-0">
-        <a class="text-decoration-none" href="{{ '/events/2022-All-Hands-Meeting/' | relative_url }}">
-          <div class="card hover-shadow border-0 h-100">
-            <img height="" src="{{ '/assets/images/events/All_Hands_Card_Cap.png' | relative_url }}" class="card-img-top" alt="article">
-            <div class="card-body d-flex flex-column">
-              <h3 class="text-decoration-none">Presentations and Materials now available from AHM 2022</h3>
-              <hr/>
-              <p class="text-decoration-none text-dark">
-                This years All-Hands event hosted 38 talks from researchers, collaborators and OSG executives on their contributions
-                towards bringing OSG into 2022.
-              </p>
-              <p class="text-decoration-none text-dark">
-                Explore the event recordings of each of these talks and other event materials on our event page.
-              </p>
-            </div>
-          </div>
-        </a>
+        <div class="card hover-shadow p-3 bg-white">
+          <a class="twitter-timeline" data-height="550" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
       </div>
       {% include get/spotlights.liquid %}
       {% for article in spotlights limit:2 %}
