@@ -11,8 +11,8 @@ start_date: 2022-07-25
 end_date: 2022-07-29
 location: "University of Wisconsin-Madison"
 link: "https://opensciencegrid.org/user-school-2022/#applications"
-image: "/assets/images/Madison_Skyline.jpeg"
-header_image: "/assets/images/Madison_Skyline.jpeg"
+image: "/assets/images/events/Madison_Skyline.jpeg"
+header_image: "/assets/images/events/Madison_Skyline.jpeg"
 ---
 
 {% capture main %}
