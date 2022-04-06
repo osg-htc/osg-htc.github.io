@@ -6,10 +6,10 @@ on:
 
 jobs:
   Deploy-Web-Preview:
-    if: ${{ github.repository_owner == 'opensciencegrid' }}
+    if: ${{ github.repository_owner == 'osg-htc' }}
     runs-on: ubuntu-18.04
     env:
-      preview_url: https://github.com/opensciencegrid/web-preview.git
+      preview_url: https://github.com/osg-htc/root-web-preview.git
     steps:
       - uses: actions/checkout@v2
         with:
