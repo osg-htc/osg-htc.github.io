@@ -117,4 +117,4 @@ Users submitting jobs can specify their own requirements for per-job compute res
 
 The computing resources for the OSPool are contributed by members of the OSG Compute Federation, typically campuses, government-supported supercomputing centers, and research collaborations. The members individually determine their policies for contributing resources, including the amount of resources it contributes and when these resources are available. In addition, some resource providers decide to share their resources with specific research projects, or they may choose to contribute resources to all in the OSPool.
 
-View facility contributions to the OSPool in [OSG’s Accounting System (GRACC)](https://gracc.opensciencegrid.org/d/000000043/pilot-jobs-summary?orgId=1&var-VOName=osg&var-Facility=All&var-ExitCode=All&var-Probe=All&var-interval=1d).
+[View facility contributions](https://gracc.opensciencegrid.org/d/000000043/pilot-jobs-summary?orgId=1&var-VOName=osg&var-Facility=All&var-ExitCode=All&var-Probe=All&var-interval=1d) to the OSPool in OSG’s Accounting System (GRACC).
