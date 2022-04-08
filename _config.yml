@@ -10,6 +10,9 @@ include:
   - .well-known
   - .nojekyll
 
+exclude:
+  - _spotlights/images
+
 defaults:
   - scope:
       path: ""
