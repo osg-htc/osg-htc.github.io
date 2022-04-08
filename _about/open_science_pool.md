@@ -107,7 +107,7 @@ Learn more and chat with a Research Computing Facilitator by [requesting an acco
 
 ## Learning to use the OSPool
 
-We have complete [knowledge base materials](https://support.opensciencegrid.org/support/home)
+We have a complete [knowledge base of user documentation](https://support.opensciencegrid.org/support/home)
 and an active and supportive [facilitation team](https://support.opensciencegrid.org/support/solutions/articles/12000084585),
 who support all users on [OSG Connect](https://connect.osg-htc.org/) access points.
 
