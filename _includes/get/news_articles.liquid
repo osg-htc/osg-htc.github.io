@@ -1,0 +1,8 @@
+{% assign now = "now" | date: "%s" %}
+{% assign news_articles = "" | split : "" %}
+{% for story in site.news %}
+    {% if story.remove_on > now or story.remove_on == nil %}
+        {% assign news_articles = news_articles | push: story %}
+    {% endif %}
+{% endfor %}
+{% assign news_articles = news_articles | sort: "date" | reverse %}
