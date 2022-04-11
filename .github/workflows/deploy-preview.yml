@@ -9,7 +9,7 @@ jobs:
     if: ${{ github.repository_owner == 'osg-htc' }}
     runs-on: ubuntu-18.04
     env:
-      preview_url: https://github.com/osg-htc/root-web-preview.git
+      preview_url: https://github.com/osg-htc/web-preview.git
     steps:
       - uses: actions/checkout@v2
         with:
