@@ -1,4 +1,6 @@
 {% comment %}
     Use this to filter out the redirects
 {% endcomment %}
-{% assign news = site.news |  where_exp: "news", "news.layout != 'blank'" | sort: "date" | reverse %}
+{% include get/news_articles.liquid %}
+
+{% assign news = news_articles |  where_exp: "news", "news.layout != 'blank'" | sort: "date" | reverse %}
