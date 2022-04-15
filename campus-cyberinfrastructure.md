@@ -10,7 +10,7 @@ table_of_contents:
     href: "#osgs-active-support-of-cc-awardees"
   - name: Actively Supported Colleges
     href: "#osg-supported-colleges-and-universities-contributing-via-the-cc-program"
-  - name: Campus Impact on Open Science
+  - name: CC* Impact on Open Science
     href: "#cc-campus-impact-on-open-science"
     children:
     - name: Computing
