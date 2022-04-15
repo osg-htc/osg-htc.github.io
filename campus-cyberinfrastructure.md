@@ -118,7 +118,7 @@ videos and more.
 ### CC* Campus impact on Open Science
 
 {: .fs-5 }
-The OSG Consortium has been working with CC* campuses pre and post award for several yearsgit push. 
+The OSG Consortium has been working with CC* campuses pre and post award for several years. 
 These campuses have made significant contributions in support of science, both on their 
 own campus and for the entire country.
 
