@@ -45,7 +45,7 @@ The NSF supports awards in 2 CC* program areas:
 - Regional Computing awards, in which the NSF strongly encourages joining PATh, and using our 
   services to contribute to the [Open Science Pool](/about/open_science_pool)
   
-## Let OSG Help with Your CC* Proposal
+## Let OSG Help with your CC* Proposal
 
 {: .fs-5 }
 The [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io), which develops technologies 
@@ -55,8 +55,8 @@ offering letters of support and consulting for:
 {: .fs-5 }
 - Sharing data with authorized users via the [Open Science Data Federation (OSDF)](/about/osdf/)
 - Bringing the power of high throughput computing via the [OSPool](/about/open_science_pool) to your researchers
-- Gathering science drivers and planning local computing resources, and
-- CC*-required resource sharing as specified in <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 22-582)</a>, and other options for integrating with the OSG Consortium
+- Gathering science drivers and planning local computing resources
+- Meeting CC*-required resource sharing as specified in <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 22-582)</a>, and other options for integrating with the OSG Consortium
 - Providing connections to help with data storage systems for shared inter-campus or intra-campus resources
 - Building regional computing networks
 - Developing science gateways to utilize high throughput computing via the [OSPool](/about/open_science_pool)
