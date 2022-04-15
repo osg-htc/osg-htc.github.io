@@ -40,7 +40,7 @@ and encourage the use of OSG services to meet requirements.
 The NSF supports awards in 2 CC* program areas:
 
 {: .fs-5 }
-- Data Storage awards, which mentions the OSG [Open Science Data Federation](/about/osdf/), 
+- Data Storage awards, which mention the OSG [Open Science Data Federation](/about/osdf/), 
   encouraging responses that would add data origins or caches at campuses
 - Regional Computing awards, in which the NSF strongly encourages joining PATh, and using our 
   services to contribute to the [Open Science Pool](/about/open_science_pool)
@@ -49,7 +49,7 @@ The NSF supports awards in 2 CC* program areas:
 
 {: .fs-5 }
 The [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io), which develops technologies 
-and operates services for the OSG, has significant experience working with CC* applicants and awardees, 
+and operates services for the OSG, has significant experience working with CC* applicants and awardees, and
 offering letters of support and consulting for:
 
 {: .fs-5 }
@@ -118,7 +118,7 @@ videos and more.
 ### CC* Campus impact on Open Science
 
 {: .fs-5 }
-The OSG Consortium has been working with CC* campuses pre and post award since <DATE>. 
+The OSG Consortium has been working with CC* campuses pre and post award for several years. 
 These campuses have made significant contributions in support of science, both on their 
 own campus and for the entire country.
 
