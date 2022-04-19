@@ -111,7 +111,7 @@ We have a complete [knowledge base of user documentation](https://support.opensc
 and an active and supportive [facilitation team](https://support.opensciencegrid.org/support/solutions/articles/12000084585),
 who support all users on [OSG Connect](https://connect.osg-htc.org/) access points.
 
-Users submitting jobs can specify their own requirements for per-job compute resources (e.g. CPU cores, memory, etc.) and any special server requirements. We recommend submitting lots of jobs and taking advantage of all the idle cycles, wherever they may be. We cannot guarantee that any single job will finish quickly, but the OSPool will allow you to accomplish a tremendous amount of work across jobs.
+Users submitting jobs can specify their own requirements for per-job compute resources (e.g. CPU cores, memory, etc.) and any special server requirements. We recommend submitting lots of jobs and taking advantage of all the cycles possible, wherever they may be. We cannot guarantee that any single job will finish quickly, but the OSPool will allow you to accomplish a tremendous amount of work across jobs.
 
 ## Who contributes capacity to the OSPool?
 
