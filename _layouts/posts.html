@@ -11,6 +11,9 @@ layout: container
         {% if page.author %}
         <h5>By: {{page.author}}</h5>
         {% endif %}
+        {% if page.collection == "news" %}
+        <h4 class="text-muted">{{ page.date | date: "%B %e, %Y" }}</h4>
+        {% endif %}
       </div> <!-- title-head -->
       {% endif %}
 

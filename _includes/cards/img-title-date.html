@@ -4,7 +4,7 @@
 
 <a class="text-decoration-none d-block" href="{{ data.url }}">
     <div class="card border-0 hover-shadow {{ include.class }}">
-        <img class="card-img-top h-100px" src="{{ data.src | default: include.src }}" alt="{{ data.alt | default: include.alt }}">
+        <img class="card-img-top h-100px" src="{{ data.src | default: include.src | relative_url }}" alt="{{ data.alt | default: include.alt }}">
         <div class="p-1">
             <b class="text-decoration-none">{{ data.title | default: include.title }}</b>
             <div><span class="text-muted text-decoration-none">
