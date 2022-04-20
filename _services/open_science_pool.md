@@ -1,5 +1,6 @@
 ---
 title: Open Science Pool
+layout: text-optimized-width
 ---
 
 <figure class="figure">
