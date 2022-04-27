@@ -12,6 +12,7 @@ card_alt: Hero Image for Morgridge Article Courtesy of Morgridge
 author: Josephine Watkins
 publish_on:
     - chtc
+    - path
 --- 
 
 

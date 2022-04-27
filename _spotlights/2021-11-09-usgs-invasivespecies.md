@@ -14,6 +14,7 @@ author: Josephine Watkins
 publish_on:
     - chtc
     - htcondor
+    - path
 ---   
 
 ***Researchers at the USGS are using HTC to pinpoint potential invasive species for the United States.***
