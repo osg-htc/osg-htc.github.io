@@ -12,6 +12,7 @@ card_alt: Nebraska standing at graduation
 author: Josephine Watkins
 publish_on:
     - osg
+    - path
 --- 
 ***How undergraduates at the University of Nebraska-Lincoln developed a science gateway that enables researchers to build RNA nanomachines for therapeutic, engineering, and basic science applications.***
 

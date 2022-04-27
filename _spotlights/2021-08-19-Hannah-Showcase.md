@@ -15,6 +15,7 @@ author: Josephine Watkins
 publish_on:
     - osg
     - htcondor
+    - path
 --- 
 
 

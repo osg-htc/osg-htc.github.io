@@ -87,7 +87,7 @@ Using data analysis run on the OSG, the LIGO team looked for a compact binary co
 
 Another big step has been the increase in network speed. The data was cached at the University of Nebraska and streamed to on-demand worker nodes that are able to read from a common location. This project benefited greatly from the NSF’s Campus Cyberinfrastructure &#8211; Network Infrastructure and Engineering (CC-NIE) program, which helped provide a hardware upgrade from 10Gbps to 100Gbps WAN connectivity. Receiving NSF support to upgrade to 100Gbps has enabled huge gains in workflow throughput.
 
-<a href="/WMS-hours-by-facility-comet.png"><img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/WMS-hours-by-facility-comet.png" alt="WMS hours by facility-comet" width="800" height="500" /></a>
+<img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/WMS-hours-by-facility-comet.png" alt="WMS hours by facility-comet" width="800" height="500" />
 
 The LIGO analysis ran across 16 different OSG resources, for a total of 4M CPU hours:
 * 1M CPU hour (25%) XSEDE contribution<

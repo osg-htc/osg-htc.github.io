@@ -14,6 +14,7 @@ card_alt: Image of Ariana analyzing bats
 author: Josephine Watkins
 publish_on:
     - osg
+    - path
 --- 
 
 ***An evolutionary biologist at the AMNH used HTC services provided by the OSG to unlock a genomic basis for convergent evolution in bats.***
