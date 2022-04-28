@@ -20,5 +20,5 @@ simulation speed of his project. Watch his presentation below.
 
 ... 
 
-*Learn more about the [David Swanson Memorial Award and past recipients](https://path-cc.io/web-preview/preview-add-ahm-summary-article/news/2021-03-19-Nicholas-Cooley-2021-David-Swanson-Award-Winner/). 
+*Learn more about the [David Swanson Memorial Award and past recipients](https://path-cc.io/news/2021-03-19-Nicholas-Cooley-2021-David-Swanson-Award-Winner/). 
 Browse [all videos](https://www.youtube.com/channel/UCVxyV0Lr1KiTeq7bTw3gwLw/playlists?view=50&sort=dd&shelf_id=1) from OSG All-Hands Meeting 2022.*
