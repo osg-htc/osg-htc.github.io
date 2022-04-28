@@ -1,4 +1,5 @@
 baseurl: ''
+key: osg # Use this for shared content
 theme: jekyll-theme-minimal
 title: OSG
 description: A national, distributed computing partnership for data-intensive research
@@ -8,6 +9,10 @@ google_analytics: UA-69012-28
 include:
   - .well-known
   - .nojekyll
+
+
+exclude:
+  - _spotlights/images
 
 defaults:
   - scope:

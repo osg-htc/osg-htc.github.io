@@ -1,2 +1,6 @@
-{% assign story_in_array = site.spotlights | where: "id", "/spotlights/bat-genomics" %}
-{% assign hero_data = story_in_array[0] %}
+{% comment %}{% include get/spotlights.liquid %}{% endcomment %}
+{% comment %}{% assign story_in_array = spotlights | where: "id", "/spotlights/bat-genomics" %}{% endcomment %}
+{% comment %}{% assign hero_data = story_in_array[0] %}{% endcomment %}
+
+{% assign event_in_list = site.events | where: "id", "/events/OSG-User-School-2022" %}
+{% assign hero_data = event_in_list[0] %}

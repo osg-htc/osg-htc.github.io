@@ -80,3 +80,11 @@
   link: "/news/2021/10/26/bat-genomics.html"
   link_label: "Learn More"
   date: 2021-10-26
+- image: "/assets/images/events/Madison_Skyline.jpeg"
+  alt: "Madison Skyline"
+  title: "OSG User School 2022"
+  title_color: "light"
+  description: "Join us for OSG User School July 25 – 29 on the University of Wisconsin-Madison Campus! The deadline to apply is Monday, April 18."
+  link: "https://opensciencegrid.org/events/OSG-User-School-2022/"
+  link_label: "Learn More"
+  date: 2022-4-6

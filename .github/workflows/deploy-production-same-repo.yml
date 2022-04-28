@@ -9,14 +9,16 @@ on:
 
 jobs:
   Build-And-Deploy-Production:
-    if: ${{ github.repository_owner == 'opensciencegrid' }}
+    if: ${{ github.repository_owner == 'osg-htc' }}
     runs-on: ubuntu-18.04
     env:
-      CNAME: opensciencegrid.org
+      CNAME: osg-htc.org
       OVERRIDE_CONFIG: _config_opensciencegrid_org.yml
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
 
       - name: Initialize GH User
         run: |

@@ -20,8 +20,7 @@ header_image: "assets/images/events/trust-banner.png"
 <p style="font-size: larger; font-weight: bold;">A capability-based authorization infrastructure for distributed High Throughput Computing</p>
 
 The OSG Consortium provides researchers with the ability to bring their distributed high throughput computing (dHTC) workloads to a pool of resources consisting 
-of hardware across approximately 100 different sites. Using this “Open Science Pool” resource, projects can leverage the opportunistic access (nodes that would be 
-otherwise idle at the site), dedicated hardware, or allocated time at large-scallel NSF-funded resources.
+of hardware across approximately 100 different sites. Using this “Open Science Pool” resource, projects can leverage the opportunistic access, dedicated hardware, or allocated time at large-scallel NSF-funded resources.
 
 While dHTC can be a powerful tool to advance scientific discovery, managing trust relationships with so many sites can be challenging; the OSG helps bootstrap the 
 trust relationships between project and provider. Further, authorization in the OSG ecosystem is an evolving topic. On the national and international 

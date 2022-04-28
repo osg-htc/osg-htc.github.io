@@ -39,6 +39,11 @@ $headings-font-weight: 600;
 
 $enable-negative-margins: true;
 
+blockquote {
+  border-left: black dotted 1px;
+  padding-left: 10px;
+}
+
 .h-100px {
   height: 100px !important;
 }
@@ -102,11 +107,6 @@ footer {
   }
 }
 
-body {
-  color: #3a3a3a;
-  position: relative;
-}
-
 /* Tweak vertical spacing of headings */
 h3 {
   margin-top: 1.25rem;
@@ -137,6 +137,15 @@ a:hover,a:focus{color:$secondary;text-decoration:underline;}
   }
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+@each $number, $padding in $spacers {
+  .top-#{$number} {
+    top: #{$padding}
+  }
+}
 hr {
   opacity: 1;
   background-color: $gray-700;
