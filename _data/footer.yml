@@ -1,0 +1,37 @@
+- name: About
+  id: about
+  children:
+    - name: Introduction
+      url: /about/introduction
+    - name: Consortium Members
+      url: /about/organization
+    - name: OSG Team
+      url: /about/team
+    - name: Publications
+      url: /about/publications
+- name: Services
+  id: services
+  children:
+    - name: Open Science Pool
+      url: /about/open_science_pool
+    - name: Open Science Data Federation
+      url: /about/osdf
+    - name: User Spotlights
+      url: /spotlight.html
+- name: Documentation
+  id: documentation
+  children:
+    - name: User
+      url: https://support.opensciencegrid.org/support/home
+    - name: System Admin
+      url: https://opensciencegrid.org/docs/
+    - name: Security
+      url: https://opensciencegrid.org/security/
+- name: Engagement
+  id: engagement
+  children:
+    - name: News
+      url: /news.html
+    - name: Events
+      url: /events.html
+

@@ -1,8 +1,8 @@
 ---
 title: OSG’s Support for Campus Cyberinfrastructure Proposals and Awardees
 date: 2021-08-12 12:00:00 -0600
-categories: NSF Campus Cyberinfrastructure (CC*)
-layout: table-of-contents
+categories: NSF Camput Cyberinfrastructure (CC*)
+layout: title-main-container
 table_of_contents:
   - name: How OSG can help your proposal
     href: "#let-osg-help-with-your-cc-proposal"

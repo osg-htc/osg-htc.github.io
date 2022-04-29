@@ -1,8 +1,3 @@
----
-layout: blank
----
-
-{% include /get/hero_data.liquid %}
 
 #hero-image {
   background: url({{ hero_data.banner_src | relative_url }}) no-repeat center;
