@@ -14,7 +14,7 @@ layout: padded-default
         {% assign sorted_spotlights = spotlights | sort: "date" | reverse %}
         {% for article in sorted_spotlights %}
         <div class="col-12 col-lg-6 col-xl-4 ps-3 pt-3 d-flex">
-            {% include /cards/spotlight-card.html data=spotlights no_date="false" %}
+            {% include /cards/spotlight-card.html data=spotlights  %}
         </div>
         {% endfor %}
     </div>

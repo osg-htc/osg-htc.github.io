@@ -2,5 +2,12 @@
     Use this to filter out the redirects
 {% endcomment %}
 {% include get/news_articles.liquid %}
+{% include get/spotlights.liquid %}
 
-{% assign news = news_articles |  where_exp: "news", "news.layout != 'blank'" | sort: "date" | reverse %}
+{% assign news = news_articles |  where_exp: "news", "news.layout != 'blank'" %}
+
+{% for article in spotlights %}
+    {% assign news = news | push: article %}
+{% endfor %}
+
+{% assign news = news | sort: "date" | reverse %}
