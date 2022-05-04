@@ -38,6 +38,10 @@ defaults:
       path: "_events"
     values:
       layout: events
+  - scope:
+      type: "organization"
+    values:
+      layout: container
 
 collections:
   about:
@@ -54,6 +58,9 @@ collections:
     output: true
   services:
     permalink: /services/:title.html
+    output: true
+  organization:
+    permalink: /organization/:title.html
     output: true
 
 sass:
