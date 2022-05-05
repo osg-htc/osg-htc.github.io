@@ -103,6 +103,13 @@ Our TOR switching infrastructure supports 2x100 Gbit to the network edge of UC S
 
 We have seen sustained peak IO at 80-90% of the theoretical as long as there are lots of clients hitting the system, all reading/writing reasonably sequentially reasonably large files from the file system. See our filesize policy above.
 
+</div>
+
+{: .pt-4 }
+#### What we have learned
+
+<div class="rounded bg-light p-2" markdown="1">
+
 We are very new to using [Ceph](https://docs.ceph.com/en/quincy/) with only a few months of experience.
 - So far had one painful crash of Ceph requiring a few days of maintenance to fix it.
 - We are following other more experienced people in our Ceph deployment.
