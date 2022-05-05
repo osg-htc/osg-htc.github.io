@@ -56,7 +56,7 @@ $400k allows the purchase of 6 storage systems, two headnodes each, a 25Gbps swi
 
 <div class="d-flex py-3">
   <figure style="max-width: 600px" class="mx-auto">
-    <img class="img-fluid" src="/assets/images/UCSD_Data_Origin_Proposal.png" alt="Figure 1: Showing storage architecture of the proposed OSDF origin at UCSD"/>
+    <img class="img-fluid" src="{{ '/assets/images/UCSD_Data_Origin_Proposal.png' | relative_url }}" alt="Figure 1: Showing storage architecture of the proposed OSDF origin at UCSD"/>
     <figcaption>Figure 1: Storage architecture overview</figcaption>
   </figure>
 </div>
