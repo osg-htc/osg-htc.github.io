@@ -13,6 +13,12 @@ table_of_contents:
       href: "#storage-use"
     - name: Currently in operation at UCSD
       href: "#currently-in-operation-at-ucsd"
+      
+image:
+    path: /assets/images/UCSD_Data_Origin_Proposal.png
+    alt: Image of the UCSD Proposal
+
+description: Community provided storage system architectures for OSDF Data Origins
 ---
 
 # {{ page.title }}
