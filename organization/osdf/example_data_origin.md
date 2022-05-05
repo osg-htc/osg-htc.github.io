@@ -35,9 +35,6 @@ particle physics group at the University of California, San Diego.
 ##### Budget
 $400,000
 
-##### Storage:
-7.2 Petabytes usable storage
-
 ##### Pros
 
 - Cheap large volume storage at a good performance 
