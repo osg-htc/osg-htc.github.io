@@ -5,28 +5,26 @@ layout: padded-default
 
 
 <div class="container-xxl">
-    <h1>Spotlight</h1>
-    <hr class="m-0">
+    <h1 class="ps-3 pb-3">Spotlight Articles</h1>
 </div>
-<div class="bg-light">
-    <div class="container-xxl">
-        <div class="row pt-4">
-            {% include get/spotlights.liquid %}
-            {% assign sorted_spotlights = spotlights | sort: "date" | reverse %}
-            {% for article in sorted_spotlights %}
-            <div class="col-12 col-lg-6 col-xl-4 pb-4">
-                {% include /cards/spotlight-card.html data=spotlights no_date="true" %}
-            </div>
-            {% endfor %}
+
+<div class="container-xxl">
+    <div class="row g-0 rounded bg-light pb-3 pe-3">
+        {% include get/spotlights.liquid %}
+        {% assign sorted_spotlights = spotlights | sort: "date" | reverse %}
+        {% for article in sorted_spotlights %}
+        <div class="col-12 col-lg-6 col-xl-4 ps-3 pt-3 d-flex">
+            {% include /cards/spotlight-card.html data=spotlights  %}
         </div>
+        {% endfor %}
     </div>
 </div>
 <div class="container-xxl">
     <hr>
     <p>
-        The OSG Consortium is pleased to see OSG stories reposted on the websites of other organizations.
+        The OSG Consortium is pleased to see OSG user spotlights reposted on the websites of other organizations.
 
-        The stories should be reposted with credits to the OSG website and the original authors, as well as a link to the original posting.
+        The spotlights should be reposted with credits to the OSG website and the original authors, as well as a link to the original posting.
 
         Any alterations to the text or images for the reposting should be agreed by the OSG Communications team.  Please email <a href="mailto:osg-contact@opensciencegrid.org">osg-contact@opensciencegrid.org</a>.
     </p>
