@@ -23,40 +23,46 @@ description: Community provided storage system architectures for OSDF Data Origi
 
 # {{ page.title }}
 
+{: .fs-5 }
 We are actively collecting hardware examples for OSDF, if you would like to submit one
 email us at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) to be featured.
 
+{: .fs-5 }
 OSG has no official recommendation for hardware or storage system architectures, all examples below are
 from community submissions.
 
-## US CMS Tier-2 Center - University of California, San Diego
+{: .mb-4 .mb-3 } 
+# US CMS Tier-2 Center - University of California, San Diego
 
-Ceph storage system for the US CMS Tier-2 Center in the experimental
+{: .fs-5 }
+[Ceph storage system](https://docs.ceph.com/en/quincy/) for the US CMS Tier-2 Center in the experimental
 particle physics group at the University of California, San Diego.
 
-### Overview
+{: .mt-4 .mb-3 }
+## Overview
 
-<div class="rounded bg-light p-2" markdown="1">
+<div class="rounded bg-light p-2 fs-5" markdown="1">
 
-##### Budget
+#### Budget
 $400,000
 
-##### Pros
+#### Pros
 
-- Cheap large volume storage at a good performance 
+- Cheap large volume storage (7.2PB usable) at a good performance (288Gbit/sec theoretical max IO, 100Gbit/sec to WAN)
 - Not too effort-intensive to operate.
 
-##### Cons
+#### Cons
 
-- No system redundancy. All redundancy is disk level.
+- All redundancy is disk level instead of node level.
 - When Ceph crashes it can be painful to rebuild in its entirety. This and possible solutions are discussed [below](#currently-in-operation-at-ucsd).
 
   
 </div>
 
-### Implementation
+{: .mt-4 .mb-3 }
+## Implementation
 
-<div class="rounded bg-light p-2" markdown="1">
+<div class="rounded bg-light p-2 fs-5" markdown="1">
 
 $400k allows the purchase of 6 storage systems, two headnodes each, a 25Gbps switch with 6x100Gbps uplinks, and a Kubernetes (K8S) node with a single 100Gbps NIC. With 3 disk redundancy erasure encoding this provides a total of roughly 1.2PB of Real Byte Capacity of usable storage per array, or 7.2PB usable storage total.
 
@@ -67,7 +73,7 @@ $400k allows the purchase of 6 storage systems, two headnodes each, a 25Gbps swi
   </figure>
 </div>
 
-The individual storage chassis include 102 20TB enterprise quality HDDs. These are extra long chassis that require special racks to accommodate them. **Updated quote**: 102 x 20TB drives for $50,000 for each storage system.
+The individual storage chassis include 102 20TB enterprise quality HDDs. These are extra long chassis that require special racks to accommodate them.
 
 We have recent quotes for one of these from multiple vendors at $50k. We connect them up to the network via 2 headnodes. Each headnode is connected to the disk array via 2x12Gbps special connectors. Each storage node thus theoretically can bring 4x12=48Gbps to the headnodes combined, and we connect each head node at 25Gbps to the top of the rack switch. Each disk array thus has 48Gbps theoretical capacity to the K8S node on the top-of-rack (TOR) switch.
 
@@ -82,9 +88,10 @@ For 102 disks deployed with triple-redundant erasure encoding into two arrays, o
 - We deliberately chose to isolate the OSDF Data Origin on a separate piece of hardware to be conservative, and to meet the architecture described in the OSG documentation, i.e. the K8S node straddles a potential firewall.
 </div>
 
-### Storage Use
+{: .mt-4 .mb-3 }
+## Storage Use
 
-<div class="rounded bg-light p-2" markdown="1">
+<div class="rounded bg-light p-2 fs-5" markdown="1">
 We support primarily data analysis of [CMS](https://www.cms.gov/) data from the [LHC](https://home.cern/science/accelerators/large-hadron-collider).
 
 Roughly **50 active users** with significant storage accounts.
@@ -93,13 +100,14 @@ Roughly **1,000 users that use the cluster and read data from storage** that the
 
 The data that is read by the bulk of the users has typical file sizes between 100MB to ~2GB.
 
-We impose a minimum filesize of 10MB onto the users. The actual policy was chosen in some negotiation with the users to allow all things reasonable that they need to do, but also to disallow unreasonably small files that could hurt performance for all. We do not have real evidence for this being an issue but wanted to play it safe as we started our Ceph adventure. In addition, having millions of small files wastes storage if the files are smaller than the default minimal size in Ceph. We have limited system management effort (one person to operate all storage, all services, a set of login nodes, and a 10,000 core cluster, and a large number of eclectic hardware for R&D purposes), and felt that we needed to put a policy in place to minimize operational headaches.
+We impose a **minimum filesize of 10MB** onto the users. The actual policy was chosen in some negotiation with the users to allow all things reasonable that they need to do, but also to disallow unreasonably small files that could hurt performance for all. We do not have real evidence for this being an issue but wanted to play it safe as we started our Ceph adventure. In addition, having millions of small files wastes storage if the files are smaller than the default minimal size in Ceph. We have limited system management effort (one person to operate all storage, all services, a set of login nodes, and a 10,000 core cluster, and a large number of eclectic hardware for R&D purposes), and felt that we needed to put a policy in place to minimize operational headaches.
 
 </div>
 
-### Currently in Operation at UCSD
+{: .mt-4 .mb-3 }
+## Currently in Operation at UCSD
 
-<div class="rounded bg-light p-2" markdown="1">
+<div class="rounded bg-light p-2 fs-5" markdown="1">
 We presently operate a system that includes 5 such disk arrays instead of the 6 proposed above. The only difference to the proposed above is that we are short on 10Gbps ports in our infrastructure, and don't have a 100Gbps K8S host. Instead, we connect each head node at 10Gbps, and have 6x10Gbps origin servers from a hardware purchase many years ago. 
 
 Our TOR switching infrastructure supports 2x100 Gbit to the network edge of UC San Diego. This is more than the 5x20 provisioned to support Ceph because we have other needs for bandwidth out of our computer room in the physics department.
@@ -108,10 +116,10 @@ We have seen sustained peak IO at 80-90% of the theoretical as long as there are
 
 </div>
 
-{: .pt-4 }
-#### What we have learned
+{: .mt-4 .mb-3 }
+### What we have learned
 
-<div class="rounded bg-light p-2" markdown="1">
+<div class="rounded bg-light p-2 fs-5" markdown="1">
 
 We are very new to using [Ceph](https://docs.ceph.com/en/quincy/) with only a few months of experience.
 - So far had one painful crash of Ceph requiring a few days of maintenance to fix it.

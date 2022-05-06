@@ -58,6 +58,7 @@ offering letters of support and consulting for:
 - Gathering science drivers and planning local computing resources
 - Meeting CC*-required resource sharing as specified in <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 22-582)</a>, and other options for integrating with the OSG Consortium
 - Providing connections to help with data storage systems for shared inter-campus or intra-campus resources
+  - We have collected [community data storage systems](/organization/osdf/example_data_origin.html) for your consideration
 - Building regional computing networks
 - Developing science gateways to utilize high throughput computing via the [OSPool](/about/open_science_pool)
 

@@ -60,7 +60,7 @@ collections:
     permalink: /services/:title.html
     output: true
   organization:
-    permalink: /organization/:title.html
+    permalink: /organization/:path.html
     output: true
 
 sass:
