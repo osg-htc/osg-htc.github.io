@@ -6,7 +6,7 @@ permalink: /acknowledging.html
 
 ## Acknowledging the OSG Consortium
 
-Papers, presentations, and other publications that feature research that benefited from the [Open Science Pool](https://opensciencegrid.org/about/open_science_pool/) resources, services or expertise should cite the following two articles:
+Papers, presentations, and other publications that feature research that benefited from the [Open Science Pool](/services/open_science_pool.html) resources, services or expertise should cite the following two articles:
 
 {: .bg-light .pt-2 .pb-1 }
 > 1. Pordes, R. et al. (2007). "The Open Science Grid", J. Phys. Conf. Ser. 78, 012057.doi:10.1088/1742-6596/78/1/012057.
