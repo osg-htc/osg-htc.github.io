@@ -12,7 +12,7 @@ research by sharing your own capacity.
 
 OSG is helping to organize extra resources to be made available to COVID-19 research!  These resources include:
 
-- **Capabilities for a variety of computational research tasks.** See [Computation on the OSPool](/about/open_science_pool).
+- **Capabilities for a variety of computational research tasks.** See [Computation on the OSPool](/services/open_science_pool.html).
 - **Proactive consultation and facilitation** for quickly scaling up and automating workloads with up to [thousands of 
 concurrently-running jobs](https://gracc.opensciencegrid.org/dashboard/db/covid-19-research?orgId=1).
 - **Access to significant computing capacity** through the *[OSG Connect](https://support.opensciencegrid.org/support/home)*
