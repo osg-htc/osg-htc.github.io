@@ -20,14 +20,21 @@ Researchers can submit computational work to the OSPool via access points
 operated locally to their campuses, or via access points operated as part 
 of the [OSG Connect](https://connect.osg-htc.org/) service, which serves researchers affiliated with 
 projects at US-based academic, non-profit, and government institutions.
-Sign up for an account on [OSG Connect](https://connect.osg-htc.org/), today!
 
-## Who can use the OSPool?
+{: .rounded .p-2 .py-3 .text-center .bg-light .my-4 }
+__Sign up for an OSPool account on__ <a class="ms-2 btn btn-secondary" href="https://connect.osg-htc.org"><b>OSG Connect</b></a>
 
-**Access is free and open to** 
-- any researcher affiliated with a project at a US-based academic, government, or non-profit institution (via the OSG Connect service).
-- any researcher affiliated with such an institution or project with its own access point.
-- all areas of research including social sciences, humanities, life sciences, engineering, medicine, chemistry and physics.
+
+## How Can I Harness the OSPool Capacity?
+
+Researchers can submit computational work to the OSPool via [__Access Points__](/services/access-point.html) operated by the  [OSG Connect](https://connect.osg-htc.org) service, which serves researchers affiliated with projects at US-based academic, non-profit, and government institutions. Sign up for an OSPool account on [OSG Connect](https://connect.osg-htc.org), today!
+
+__Namely, you can benefit from the OSPool Capacity if you are a__
+
+- Researcher affiliated with a project at a US-based academic, government, or non-profit institution (via the OSG Connect service).
+- Researcher affiliated with such an institution or project that operates a local  own access point.
+
+Institutions or collaborations that would like to harness the capacity of the OSPool should contact [support@opensciencegrid.org](mailto:support@opensciencegrid.org)
 
 [View projects](https://gracc.opensciencegrid.org/d/000000037/payload-jobs-summary?orgId=1&var-ReportableVOName=osg&var-Project=All&var-Facility=All&var-User=All&var-ExitCode=All&var-Probe=All&var-interval=1d)
  using the OSPool in OSG’s Accounting System (GRACC).
