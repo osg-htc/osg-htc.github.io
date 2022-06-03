@@ -7,13 +7,10 @@ const iconConfig = {
     shadowSize: [36,36]
 }
 
-const originIcon = L.icon({iconUrl: "/assets/images/map/origin.svg", ...iconConfig})
-const cacheIcon = L.icon({iconUrl: "/assets/images/map/cache.svg", ...iconConfig})
-const cacheAndOriginIcon = L.icon({iconUrl: "/assets/images/map/cache_and_origin.svg", ...iconConfig})
-const blueStarIcon = L.icon({iconUrl: "/assets/images/map/star_blue.svg", ...iconConfig})
-const redStarIcon = L.icon({iconUrl: "/assets/images/map/star_red.svg", ...iconConfig})
-const greenStarIcon = L.icon({iconUrl: "/assets/images/map/star_green.svg", ...iconConfig})
-const purpleStarIcon = L.icon({iconUrl: "/assets/images/map/star_purple.svg", ...iconConfig})
+const blueIcon = L.icon({iconUrl: "/assets/images/map/blueIcon.svg", ...iconConfig})
+const redIcon = L.icon({iconUrl: "/assets/images/map/redIcon.svg", ...iconConfig})
+const greenIcon = L.icon({iconUrl: "/assets/images/map/greenIcon.svg", ...iconConfig})
+const purpleIcon = L.icon({iconUrl: "/assets/images/map/purpleIcon.svg", ...iconConfig})
 
 downloadPNG = async () => {
     let dataUrl = await domtoimage.toPng(document.getElementById("print-region"))
@@ -107,7 +104,7 @@ class ComputeSite {
 
         if(this.hosted_ce == "Yes"){
             let hostedCeHeader = document.createElement("b")
-            hostedCeHeader.textContent = "Hosted at " + this.ce_location
+            hostedCeHeader.textContent = "Hosted"
             hostedCeHeader.classList.add("ps-0", "my-2", "d-block")
             container.appendChild(hostedCeHeader)
         }
@@ -138,7 +135,7 @@ class Collaboration {
 
         let institutionViewMarkers = this.institutions.map(institution => {
             let marker = institution.marker
-            marker.options.icon = greenStarIcon
+            marker.options.icon = greenIcon
             return marker
         })
 
@@ -156,7 +153,7 @@ class Collaboration {
             computeSite => computeSite.ce
         ).map(computeSite => {
             let marker = computeSite.marker
-            marker.options.icon = blueStarIcon
+            marker.options.icon = blueIcon
             return marker
         })
 
@@ -174,7 +171,7 @@ class Collaboration {
             computeSite => computeSite.ap
         ).map(computeSite => {
             let marker = computeSite.marker
-            marker.options.icon = purpleStarIcon
+            marker.options.icon = purpleIcon
             return marker
         })
 
@@ -322,14 +319,14 @@ class CollaborationPage {
     get legend() {
         let legendData = {
             "institutions" : {
-                "Institute" : greenStarIcon?.options?.iconUrl
+                "Institute" : greenIcon?.options?.iconUrl
             },
             "ces" : {
-                "Compute Entrypoints" : blueStarIcon?.options?.iconUrl
+                "Compute Entrypoints" : blueIcon?.options?.iconUrl
             }
             ,
             "aps" : {
-                "Access Points" : purpleStarIcon?.options?.iconUrl
+                "Access Points" : purpleIcon?.options?.iconUrl
             }
         }
 
