@@ -194,9 +194,6 @@ class Map {
             zoomOffset: -1,
             accessToken: 'pk.eyJ1IjoidGFraW5nZHJha2UiLCJhIjoiY2wya3IyZGNvMDFyOTNsbnhyZjBteHRycSJ9.g6tRaqN8_iJxHgAQKNP6Tw'
         }).addTo(this.map);
-        this.map.on("popupopen", (e) => {
-            this.siteSelect.value = e.popup.site.siteName
-        })
 
         // Initialize the legend nodes
         this.legendNode = document.getElementById("legend")
