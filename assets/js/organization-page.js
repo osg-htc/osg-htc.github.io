@@ -1,10 +1,10 @@
 const iconConfig = {
-    iconSize: [48,48],
-    iconAnchor: [24, 48],
-    popupAnchor: [0,-48],
-    shadowUrl: "/assets/images/map/small_shadow.svg",
+    iconSize: [36,36],
+    iconAnchor: [18, 36],
+    popupAnchor: [0,-36],
+    shadowUrl: "/static/images/map/small_shadow.svg",
     shadowAnchor: [12,30],
-    shadowSize: [36,36]
+    shadowSize: [24,24]
 }
 
 const blueIcon = L.icon({iconUrl: "/assets/images/map/blueIcon.svg", ...iconConfig})
