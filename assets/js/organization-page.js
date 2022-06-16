@@ -243,22 +243,17 @@ class Map {
     }
 }
 
-
-class CollaborationPage {
+class Collaborations {
     constructor() {
-        this.map = new Map()
-
-        this.collaborations = undefined
-
-        this.initializeViewSelect()
+        this.keypairs = undefined
         this.initializeASYNC()
     }
 
     initializeASYNC = async () => {
+        if(this.collaborations){
+            return
+        }
         this.collaborations = await this.initializeCollaborations()
-
-        this.initializeCollaborationSelect()
-        this.map.update(this.layer, this.legend)
     }
 
     fetchCollaborations = async () => {
@@ -275,7 +270,7 @@ class CollaborationPage {
 
         let collaborationsJson = await this.fetchCollaborations()
 
-        return Object.entries(collaborationsJson).reduce((previousValue, currentValue) => {
+        Object.entries(collaborationsJson).map((currentValue) => {
             let [name, {computeSites, institutions}] = currentValue
 
             institutions = Object.entries(institutions).map(institution => {
@@ -290,15 +285,35 @@ class CollaborationPage {
                 return new ComputeSite(name, data)
             })
 
-            previousValue[name] = new Collaboration(name, institutions, computeSites)
+            let newCollaboration = new Collaboration(name, institutions, computeSites)
+            this[name] = newCollaboration
+            this.keypairs[name] = newCollaboration
+        })
+    }
 
-            return previousValue
-        }, {})
+
+}
+
+class CollaborationPage {
+    constructor() {
+        this.map = new Map()
+
+        this.collaborations = new Collaborations()
+
+        this.initializeViewSelect()
+        this.initializeASYNC()
+    }
+
+    initializeASYNC = async () => {
+        await this.collaborations.initializeASYNC()
+
+        this.initializeCollaborationSelect()
+        this.map.update(this.layer, this.legend)
     }
 
     initializeCollaborationSelect = () => {
         this.collaborationSelectNode = document.getElementById("collaboration")
-        Object.keys(this.collaborations).forEach(key => {
+        Object.keys(this.collaborations.keypairs).forEach(key => {
             let optionNode = document.createElement("option")
             optionNode.value = key
             optionNode.innerText = key
@@ -345,3 +360,4 @@ class CollaborationPage {
 
 const page = new CollaborationPage()
 
+export { Collaborations }
