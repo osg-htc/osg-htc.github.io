@@ -81,7 +81,7 @@ css_extension:
         <div class="card-body mb-auto">
           <h3 class="m-0"><a href="/news.html">News</a></h3>
           <hr class="my-2">
-          {% include /get/news.liquid %}
+          {% include /get/news.liquid articles="True" %}
           {% for data in news limit: 3 %}
             {% include /cards/title-date.html class="my-2" %}
           {% endfor %}
