@@ -7,10 +7,11 @@
 {% assign news = news_articles |  where_exp: "news", "news.layout != 'blank'" %}
 
 
-{% if include.articles %}
-    {% for article in spotlights %}
-        {% assign news = news |  where_exp: "news", "news.layout != 'blank'" | push: article %}
-    {% endfor %}
-{% endif %}
+{% unless include.articles %}
+    {% assign spotlights = spotlights | where_exp: "featured-user", "featured-user.type == 'news'" %}
+{% endunless %}
+{% for article in spotlights %}
+    {% assign news = news |  where_exp: "news", "news.layout != 'blank'" |  push: article %}
+{% endfor %}
 
 {% assign news = news | sort: "date" | reverse %}
