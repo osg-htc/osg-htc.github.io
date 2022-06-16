@@ -6,8 +6,11 @@
 
 {% assign news = news_articles |  where_exp: "news", "news.layout != 'blank'" %}
 
-{% for article in spotlights %}
-    {% assign news = news | push: article %}
-{% endfor %}
+
+{% if include.articles %}
+    {% for article in spotlights %}
+        {% assign news = news |  where_exp: "news", "news.layout != 'blank'" | push: article %}
+    {% endfor %}
+{% endif %}
 
 {% assign news = news | sort: "date" | reverse %}
