@@ -6,18 +6,88 @@ import * as d3 from "https://cdn.skypack.dev/d3@7";
 import * as topojson from 'https://cdn.skypack.dev/topojson';
 import {transpose} from "../util.js";
 
-import {Collaborations} from "../organization-page.js";
+import {icons} from "../organization-page.js";
+
+class Icon {
+    static size = [30, 45]
+    static icons = {}
+    static getIcon(icon) {
+        if (icon in Icon.icons) {
+            return Icon.icons[icon]
+        }
+        let image = new Image()
+        image.src = icons[icon]?.options?.iconUrl
+        Icon.icons[icon] = image
+        return image
+    }
+}
+
+class CollaborationGlobe {
+
+    constructor(canvas_id, collaboration) {
+        this.globe = new GlobeVisualization(canvas_id, this.render)
+        this.collaboration = collaboration
+        this.initiateScrollSpy()
+
+    }
+
+    initiateScrollSpy = () => {
+        document.addEventListener('scroll', (e) => {
+            this.lastKnownScrollPosition = window.scrollY;
+            let ticking;
+
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+
+                    // Check that the map is centered on the screen
+                    let boundingRect = this.globe.canvas.getBoundingClientRect()
+                    if(window.innerHeight - (boundingRect.height + boundingRect.y) > boundingRect.y){
+                        this.globe.canvas.classList.add("center")
+                        console.log(this.lastKnownScrollPosition)
+                    }
+
+                    ticking = false
+                });
+
+                ticking = true;
+            }
+        });
+    }
+
+    centerMap = () => {
+
+    }
+
+    render = () => {
+
+        if(true){
+            let points = this.collaboration.ces.map(ce => [ce.longitude, ce.latitude])
+
+            this.globe.context.beginPath(), this.globe.geoPath({type: "MultiPoint", coordinates: points}), this.globe.context.fillStyle = "#D100C5", this.globe.context.fill();
+
+            points.forEach( c => {
+                c = this.globe.projection(c)
+                let adjusted_coordinates = [c[0] - Icon.size[0]/2, c[1] - Icon.size[1]]
+
+                this.globe.context.drawImage(Icon.getIcon('greenIcon'), ...adjusted_coordinates, ...Icon.size)
+            })
+        }
+
+    }
+}
+
 
 class GlobeVisualization {
 
-    constructor(canvas_id, collaboration) {
+    constructor(canvas_id, renderFunction) {
         this.canvas = document.getElementById(canvas_id);
         this.canvas.height = this.canvas.offsetHeight
         this.canvas.width = this.canvas.offsetWidth
         this.projection = d3["geoNaturalEarth1"]().translate([this.canvas.width/2,this.canvas.height/2]).scale(this.canvas.width/6).precision(0.1)
         this.context = this.canvas.getContext('2d');
+        this.geoPath = d3.geoPath(this.projection, this.context);
         this.topo = undefined
-        this.data = [[]]
+        this.renderFunction = renderFunction
         this.initialize()
     }
 
@@ -25,7 +95,6 @@ class GlobeVisualization {
         this.frame_generator = this.globe()
         this.topo = await this.get_topo("110")
         this.create_frame()
-        fetch("{{ '/assets/data/job_lines.json' | relative_url }}").then(d => d.json()).then(d => this.data = d)
         this.get_topo("50").then(d => this.topo = d)
     }
 
@@ -34,66 +103,21 @@ class GlobeVisualization {
         setTimeout(() => this.create_frame(), 10)
     }
 
-    * globe() {
-        const path = d3.geoPath(this.projection, this.context);
-
-        const render = (land, arcs, submits, hosts) => {
-
+    * globe() {const render = () => {
             this.context.clearRect(0, 0, 1920, 1080);
-            this.context.beginPath(), path(this.sphere), this.context.fillStyle = "#212529", this.context.fill();
-            this.context.beginPath(), path(this.topo), this.context.fillStyle = "#fff", this.context.fill();
-            this.context.beginPath(), path({type: "MultiPoint", coordinates: submits}), this.context.fillStyle = "#D100C5", this.context.fill();
-            this.context.beginPath(), path({type: "MultiPoint", coordinates: hosts}), this.context.fillStyle = "#00D183", this.context.fill();
-            this.context.beginPath(), path({type: "MultiLineString", coordinates: arcs}), this.context.strokeStyle = "#FFAE2C", this.context.lineWidth = 2, this.context.stroke();
+            this.context.beginPath(), this.geoPath(this.sphere), this.context.fillStyle = "#f1f1f1", this.context.fill();
+            this.context.beginPath(), this.geoPath(this.topo), this.context.fillStyle = "#5a5a5a", this.context.fill();
+
+            this.renderFunction()
 
             return this.context.canvas
         }
 
-        let overlap = 500;
-        let duration = 1000;
-
-        var arcs = [new Arc(duration, this.data[0])]
-        let index = 1;
-        let last_triggered = Date.now();
-
         while(true){
-
-            if((Date.now() - last_triggered) > (duration - overlap)){
-                last_triggered = Date.now();
-
-                arcs.push(new Arc(duration, this.data[index]));
-                index = (index + 1) % this.data.length;
-            }
-
-            let submits = [];
-            let hosts = [];
-            let lines = [];
-            let remove_one = false;
-
-            for (const arc of arcs) {
-                let [arc_submits, arc_hosts, arc_lines] = arc.get_arc()
-
-
-                if(arc_submits == null){
-                    remove_one = true;
-                    continue
-                }
-
-                submits = submits.concat(arc_submits);
-                hosts = hosts.concat(arc_hosts);
-                lines = lines.concat(arc_lines);
-            }
-
-            if(remove_one){
-                arcs.splice(0, 1)
-                remove_one = false;
-            }
-
-            yield render(this.topo, lines, submits, hosts)
+            yield render(this.topo)
         }
 
         return d3.select(this.context.canvas).node();
-
     }
 
     sphere = {type: "Sphere"}
@@ -134,4 +158,4 @@ class Arc {
     }
 }
 
-export {GlobeVisualization}
+export {GlobeVisualization, CollaborationGlobe}

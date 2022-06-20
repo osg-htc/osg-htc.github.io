@@ -2,17 +2,19 @@ const iconConfig = {
     iconSize: [36,36],
     iconAnchor: [18, 36],
     popupAnchor: [0,-36],
-    shadowUrl: "/static/images/map/small_shadow.svg",
+    shadowUrl: "/assets/images/map/small_shadow.svg",
     shadowAnchor: [12,30],
     shadowSize: [24,24]
 }
 
-const blueIcon = L.icon({iconUrl: "/assets/images/map/blueIcon.svg", ...iconConfig})
-const redIcon = L.icon({iconUrl: "/assets/images/map/redIcon.svg", ...iconConfig})
-const greenIcon = L.icon({iconUrl: "/assets/images/map/greenIcon.svg", ...iconConfig})
-const purpleIcon = L.icon({iconUrl: "/assets/images/map/purpleIcon.svg", ...iconConfig})
+const icons = {
+    blueIcon : L.icon({iconUrl: "/assets/images/map/blueIcon.svg", ...iconConfig}),
+    redIcon : L.icon({iconUrl: "/assets/images/map/redIcon.svg", ...iconConfig}),
+    greenIcon : L.icon({iconUrl: "/assets/images/map/greenIcon.svg", ...iconConfig}),
+    purpleIcon : L.icon({iconUrl: "/assets/images/map/purpleIcon.svg", ...iconConfig})
+}
 
-downloadPNG = async () => {
+let downloadPNG = async () => {
     let dataUrl = await domtoimage.toPng(document.getElementById("print-region"))
 
     let link = document.createElement('a');
@@ -21,7 +23,7 @@ downloadPNG = async () => {
     link.click();
 }
 
-toggleFullscreen = async () => {
+let toggleFullscreen = async () => {
     document.getElementById("main").requestFullscreen()
 }
 
@@ -77,8 +79,12 @@ class ComputeSite {
         this.ap = ap
     }
 
+    get coordinates() {
+        return [this.longitude, this.latitude]
+    }
+
     get marker() {
-        return L.marker([this.latitude, this.longitude]).bindPopup(this.html);
+        return L.marker(this.coordinates).bindPopup(this.html);
     }
 
     get html() {
@@ -135,7 +141,7 @@ class Collaboration {
 
         let institutionViewMarkers = this.institutions.map(institution => {
             let marker = institution.marker
-            marker.options.icon = greenIcon
+            marker.options.icon = icons.greenIcon
             return marker
         })
 
@@ -144,16 +150,18 @@ class Collaboration {
         return this._institutionView
     }
 
+    get ces() {
+        return this.computeSites.filter(computeSite => computeSite.ce)
+    }
+
     get ceView() {
         if(this._ceView){
             return this._ceView
         }
 
-        let ceViewMarkers = this.computeSites.filter(
-            computeSite => computeSite.ce
-        ).map(computeSite => {
+        let ceViewMarkers = this.ces.map(computeSite => {
             let marker = computeSite.marker
-            marker.options.icon = blueIcon
+            marker.options.icon = icons.blueIcon
             return marker
         })
 
@@ -162,16 +170,18 @@ class Collaboration {
         return this._ceView
     }
 
+    get aps() {
+        return this.computeSites.filter( computeSite => computeSite.ap )
+    }
+
     get apView(){
         if(this._apView){
             return this._apView
         }
 
-        let apViewMarkers = this.computeSites.filter(
-            computeSite => computeSite.ap
-        ).map(computeSite => {
+        let apViewMarkers = this.aps.map(computeSite => {
             let marker = computeSite.marker
-            marker.options.icon = purpleIcon
+            marker.options.icon = icons.purpleIcon
             return marker
         })
 
@@ -245,7 +255,7 @@ class Map {
 
 class Collaborations {
     constructor() {
-        this.keypairs = undefined
+        this.keypairs = {}
         this.initializeASYNC()
     }
 
@@ -331,14 +341,14 @@ class CollaborationPage {
     get legend() {
         let legendData = {
             "institutions" : {
-                "Institute" : greenIcon?.options?.iconUrl
+                "Institute" : icons.greenIcon?.options?.iconUrl
             },
             "ces" : {
-                "Compute Entrypoints" : blueIcon?.options?.iconUrl
+                "Compute Entrypoints" : icons.blueIcon?.options?.iconUrl
             }
             ,
             "aps" : {
-                "Access Points" : purpleIcon?.options?.iconUrl
+                "Access Points" : icons.purpleIcon?.options?.iconUrl
             }
         }
 
@@ -358,6 +368,4 @@ class CollaborationPage {
     }
 }
 
-const page = new CollaborationPage()
-
-export { Collaborations }
+export { Collaborations, icons }

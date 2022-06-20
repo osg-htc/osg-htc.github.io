@@ -20,7 +20,6 @@
 
 {% seo %}
 <meta name="google-site-verification" content="R_4MuU3rtZf36dK9hio23ADQTe3EubRM9kO41cVXldQ" />
-
 {% endif %}
 
 <!-- Bootstrap 5 -->
@@ -30,12 +29,16 @@
 <![endif]-->
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}" ></script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
 {% for head in include.head %}
     {{ head }}
 {% endfor %}
 
 {% for js in include.js %}
-<script src="{{ js.src | relative_url }}" type="{{ js.type | 'text/javascript' }}" {{ js.loading}}></script>
+<script src="{{ js.src | relative_url }}" type="{{ js.type | 'text/javascript' }}" integrity="{{ js.integrity | '' }}" crossorigin="{{ js.crossorigin | '' }}" {{ js.loading}}></script>
 {% endfor %}
 
 {% for css in include.css %}

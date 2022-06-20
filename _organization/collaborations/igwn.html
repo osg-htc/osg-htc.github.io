@@ -3,21 +3,58 @@ title: IGWN
 layout: default
 
 js_extension:
+    -   src: "https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        loading: "defer"
+        integrity: "sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin: ""
     -   src: "/assets/js/vo-page.js"
         loading: "defer"
         type: module
 ---
 
-<div class="container-xxl">
-    <h1>{{page.title}}</h1>
-    <p>
-        Text
-    </p>
-</div>
-<div class="bg-dark">
-    <div class="container-xxl">
-        <canvas class="vh-100 w-100" id="globe"></canvas>
+<div class="container-xxl pt-5">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <h1 class="display fs-0 pe-3 border-3 border-end">{{page.title}}</h1>
+        </div>
+        <div class="col-auto d-flex">
+            <img height="60" class="w-auto my-auto" alt="Kagra Logo" src="/assets/images/logos/kagra_logo.png">
+        </div>
+        <div class="col-auto d-flex">
+            <img height="60" class="w-auto my-auto" alt="LIGO Logo" src="/assets/images/logos/ligo_logo.png">
+        </div>
+        <div class="col-auto d-flex">
+            <img height="60" class="w-auto my-auto" alt="LSC Logo" src="/assets/images/logos/lsc_logo.png">
+        </div>
+        <div class="col-auto d-flex">
+            <img height="60" class="w-auto my-auto" alt="Virgo Logo" src="/assets/images/logos/egovirgo_logo.jpeg">
+        </div>
     </div>
+    <div class="row my-5 justify-content-center">
+        <div class="col-7">
+            <p class="fs-5">
+                Support areas for IGWN include data management, infrastructure
+                (StashCaches, FTS service for Rucio managed third-party transfers),
+                best practices for software and job management, and in-person participation
+                in the Open Science - LIGO weekly meetings. The LIGO component of
+                the IGWN collaboration has 119 institutions and universities in the
+                US that make use of the Open Science distributed infrastructure for
+                computing. LIGO is supported by the NSF award # PHY-2110594 for the
+                LIGO Data Grid (LDG) and NSF award # PHY-1764464 for the LIGO Lab in
+                computing, R&D, and operations. A detailed list of technical contacts
+                and leads for the various workloads is maintained by the LIGO and Open
+                Science group here. For general purpose data and job management, the
+                lead is: James Clark james.clark@ligo.org
+            </p>
+        </div>
+    </div>
+
+
+
+
+</div>
+<div class="globe-container">
+    <canvas class="w-100 container-xxl py-5 center" id="globe"></canvas>
 </div>
 <div class="vh-100">
     <iframe height="80%" width="100%" allow="fullscreen" src="/organization/iframe.html"></iframe>

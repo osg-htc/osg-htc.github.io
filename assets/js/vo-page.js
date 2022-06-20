@@ -1,13 +1,13 @@
-import {GlobeVisualization} from "./components/globe.js";
-import {Collaborations} from "../organization-page.js";
+import {CollaborationGlobe} from "./components/globe.js";
+import {Collaborations} from "../js/organization-page.js";
 
 const main = async () => {
     const collaborations = new Collaborations()
     await collaborations.initializeASYNC()
 
-    const collaboration =
+    const collaboration = collaborations['IGWN']
 
-
-    const globe = new GlobeVisualization("globe", institutions, ces, aps)
+    const globe = new CollaborationGlobe("globe", collaboration)
 }
 
+main()
