@@ -47,7 +47,7 @@ class Institution {
         header.classList.add("card-header", "bg-white", "px-0")
         container.appendChild(header)
 
-        if(this.labs){
+        if(this.labs && this.labs[0] !== "Local Research Group"){
             let labHeader = document.createElement("h5")
             labHeader.textContent = "Labs"
             labHeader.classList.add("rounded", "ps-0", "my-2")
@@ -56,11 +56,9 @@ class Institution {
             let labUL = document.createElement("ul")
             container.appendChild(labUL)
             this.labs.forEach(lab => {
-                if(lab != "Local Research Group") {
-                    let labNode = document.createElement("li")
-                    labNode.textContent = lab
-                    labUL.appendChild(labNode)
-                }
+                let labNode = document.createElement("li")
+                labNode.textContent = lab
+                labUL.appendChild(labNode)
             })
         }
 
