@@ -2,8 +2,8 @@ const iconConfig = {
     iconSize: [36,36],
     iconAnchor: [18, 36],
     popupAnchor: [0,-36],
-    shadowUrl: "/static/images/map/small_shadow.svg",
-    shadowAnchor: [12,30],
+    shadowUrl: "/assets/images/map/small_shadow.svg",
+    shadowAnchor: [0,15],
     shadowSize: [24,24]
 }
 
@@ -56,9 +56,11 @@ class Institution {
             let labUL = document.createElement("ul")
             container.appendChild(labUL)
             this.labs.forEach(lab => {
-                let labNode = document.createElement("li")
-                labNode.textContent = lab
-                labUL.appendChild(labNode)
+                if(lab != "Local Research Group") {
+                    let labNode = document.createElement("li")
+                    labNode.textContent = lab
+                    labUL.appendChild(labNode)
+                }
             })
         }
 
