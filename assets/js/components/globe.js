@@ -212,8 +212,6 @@ class CollaborationGlobe {
     }
 }
 
-
-
 class GlobeVisualization {
 
     constructor(canvas_id, renderFunction) {
@@ -243,7 +241,7 @@ class GlobeVisualization {
     * globe() {const render = () => {
             this.context.clearRect(0, 0, 1920, 1080);
             this.context.beginPath(), this.geoPath(this.sphere), this.context.fillStyle = "#f1f1f1", this.context.fill();
-            this.context.beginPath(), this.geoPath(this.topo), this.context.fillStyle = "#5a5a5a", this.context.fill();
+            this.context.beginPath(), this.geoPath(this.topo), this.context.fillStyle = "#5a5a5a", this.context.fill(); // this.context.strokeStyle = "#f1f1f1"; this.context.stroke()
 
             this.renderFunction()
 
@@ -260,7 +258,7 @@ class GlobeVisualization {
     sphere = {type: "Sphere"}
 
     get_topo = async (resolution) => {
-        return await fetch(`{{ '/assets' | relative_url }}/data/land-${resolution}m.json`).then(t => t.json()).then(j => topojson.feature(j, j.objects.land))
+        return await fetch(`{{ '/assets' | relative_url }}/data/countries-${resolution}m.json`).then(t => t.json()).then(j => topojson.feature(j, j.objects.land))
     }
 }
 
