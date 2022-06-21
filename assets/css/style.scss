@@ -120,12 +120,22 @@ th, td {
     transition: color .25s;
     transition-timing-function: ease-out;
   }
+  h1 {
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter .25s, background-color .25s, -webkit-backdrop-filter .25s;
+    transition-timing-function: ease-out;
+  }
 }
 
 .opaque {
   color: black;
   a.text-bright {
     color: $secondary;
+  }
+  h1 {
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
   }
 }
 

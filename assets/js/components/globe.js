@@ -65,6 +65,11 @@ class PointsView extends View {
     }
 
     addIcons = (context, locations, scale, color) => {
+
+        locations.sort((a,b) => {
+            return a[1] - b[1]
+        })
+
         locations.forEach( c => {
             let iconSize = Icon.getSize(scale)
 
@@ -93,9 +98,9 @@ class PointsView extends View {
 
         this.addIcons(this.context, points, iconScale, this.icon)
 
-        if(.10 > viewProgress){
+        if(.25 > viewProgress){
             this.fadeOut()
-        } else if(viewProgress < .90){
+        } else if(viewProgress < .75){
             this.fadeIn()
         } else {
             this.fadeOut()
@@ -168,14 +173,24 @@ class CollaborationGlobe {
     }
 
     get view() {
+        let view;
         if(this.scrollProgress < .25){
-            return this.institutionView
+            view = this.institutionView
         } else if(this.scrollProgress < .5) {
-            return this.apView
+            view = this.apView
         } else if(this.scrollProgress < .75) {
-            return this.arcView
+            view = this.arcView
         } else {
-            return this.ceView
+            view = this.ceView
+        }
+
+        // Make the removal of text deterministic
+        if(view === this._view){
+            return view
+        } else {
+            [this.institutionView, this.apView, this.ceView].filter(v => v !== view).forEach(v => v.update(1))
+            this._view = view
+            return view
         }
     }
 
@@ -193,7 +208,7 @@ class CollaborationGlobe {
         //     let li = document.createElement("li")
         //     li.textContent = i.name
         //     ul.appendChild(li)
-        // })
+        // }) TODO: Decide if this should be used
     }
 }
 
