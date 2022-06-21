@@ -15,6 +15,7 @@ $h4-font-size: $font-size-base * 1.5;
 $h5-font-size: $font-size-base * 1.25;
 $h6-font-size: $font-size-base;
 $font-sizes: (
+  -1: $font-size-base * 6,
   0: $font-size-base * 4,
   1: $h1-font-size,
   2: $h2-font-size,
@@ -39,6 +40,10 @@ blockquote {
 
 .h-150px {
   height: 150px !important;
+}
+
+.z-1000 {
+  z-index: 1000;
 }
 
 .hover-shadow {
@@ -97,11 +102,51 @@ th, td {
 
 .center {
   position: sticky;
-  top: 25%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.globe-container {
-  height: 2000px;
+#outer-globe-container {
+  height: 100000px;
+}
+
+.transparent {
+  color: #000; /* Fallback for older browsers */
+  color: rgba(0, 0, 0, 0.0);
+  transition: color .25s;
+  transition-timing-function: ease-out;
+  a.text-bright {
+    color: rgba(0, 0, 0, 0.0);
+    transition: color .25s;
+    transition-timing-function: ease-out;
+  }
+}
+
+.opaque {
+  color: black;
+  a.text-bright {
+    color: $secondary;
+  }
+}
+
+.iframe-container {
+  height: 80vh;
+}
+
+div.resource-list >  ul::-webkit-scrollbar {
+  display: none;
+}
+
+div.resource-list >  ul {
+  max-height: 500px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+#globe {
+  z-index: -1;
 }
 
 .carousel {

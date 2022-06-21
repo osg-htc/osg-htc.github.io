@@ -4,13 +4,16 @@
 
 import * as d3 from "https://cdn.skypack.dev/d3@7";
 import * as topojson from 'https://cdn.skypack.dev/topojson';
-import {transpose} from "../util.js";
+import {transpose, easeOutExpo} from "../util.js";
 
 import {icons} from "../organization-page.js";
 
 class Icon {
     static size = [30, 45]
     static icons = {}
+    static load() {
+        ["blueIcon", "greenIcon", "purpleIcon"].map(i => Icon.getIcon(i))
+    }
     static getIcon(icon) {
         if (icon in Icon.icons) {
             return Icon.icons[icon]
@@ -20,61 +23,180 @@ class Icon {
         Icon.icons[icon] = image
         return image
     }
+    static getSize(scale){
+        return Icon.size.map(s => s*scale)
+    }
+}
+
+class View {
+    constructor(range, id) {
+        this.range = range
+        this.fadedIn = false
+        this.container = document.getElementById(id)
+    }
+
+    getViewProgress(scrollProgress) {
+        return (scrollProgress - this.range[0])/ (this.range[1] - this.range[0])
+    }
+
+    fadeIn() {
+        if(!this.fadedIn){
+            this.container.classList.add("opaque")
+            this.fadedIn = true
+        }
+    }
+
+    fadeOut() {
+        if(this.fadedIn) {
+            this.container.classList.remove("opaque")
+            this.fadedIn = false
+        }
+    }
+}
+
+class PointsView extends View {
+
+    constructor(range, id, points, context, projection, icon) {
+        super(range, id);
+        this.points = points;
+        this.context = context;
+        this.projection = projection;
+        this.icon = icon;
+    }
+
+    addIcons = (context, locations, scale, color) => {
+        locations.forEach( c => {
+            let iconSize = Icon.getSize(scale)
+
+            let adjusted_coordinates = [c[0] - iconSize[0]/2, c[1] - iconSize[1]]
+
+            this.context.drawImage(Icon.getIcon(color), ...adjusted_coordinates, ...iconSize)
+        })
+    }
+
+    iconScale(viewProgress) {
+        if(viewProgress < .5){
+            return easeOutExpo(viewProgress, 0, 1, .5)
+        } else {
+            return easeOutExpo(1 - viewProgress, 0, 1, .5)
+        }
+    }
+
+    update = (scrollProgress) => {
+        let viewProgress = this.getViewProgress(scrollProgress)
+
+        let points = this.points
+            .map(i => [i.longitude, i.latitude])
+            .map(pos => this.projection(pos))
+
+        let iconScale = this.iconScale(viewProgress)
+
+        this.addIcons(this.context, points, iconScale, this.icon)
+
+        if(.10 > viewProgress){
+            this.fadeOut()
+        } else if(viewProgress < .90){
+            this.fadeIn()
+        } else {
+            this.fadeOut()
+        }
+    }
+}
+
+class ArcView extends View {
+
+    constructor(range, id, points_from, points_to, context, projection) {
+        super(range, id);
+        this.points_from = points_from
+        this.points_to = points_to;
+        this.context = context;
+        this.projection = projection;
+
+        this.arc_points = []
+        this.points_from.forEach(pf => {
+            this.points_to.forEach(pt => {
+                this.arc_points.push([pf, pt])
+            })
+        })
+        this.arcs = new Arc(this.arc_points)
+    }
+
+    update = (scrollProgress) => {
+        let arcs = this.arcs.get_arcs(this.getViewProgress(scrollProgress))
+        let geoPath = d3.geoPath(this.projection, this.context)
+
+        this.context.beginPath(), geoPath({type: "MultiLineString", coordinates: arcs}), this.context.strokeStyle = "#FFAE2C", this.context.lineWidth = 2, this.context.stroke();
+
+    }
 }
 
 class CollaborationGlobe {
 
     constructor(canvas_id, collaboration) {
+        this.outerContainer = document.getElementById("outer-globe-container")
+        this.innerContainer = document.getElementById("inner-globe-container")
+
+        this.ceView = document.getElementById("ce-view")
         this.globe = new GlobeVisualization(canvas_id, this.render)
+
+        this.outerContainer.style.marginTop = this.globe.canvas.offsetHeight / 2 + "px"
+        this.outerContainer.style.marginBottom = "-" + this.globe.canvas.offsetHeight / 2 + "px"
+        this.innerContainer.style.height = this.globe.canvas.offsetHeight + "px"
+
         this.collaboration = collaboration
-        this.initiateScrollSpy()
+        this.height = this.outerContainer.clientHeight - (
+            this.globe.canvas.getBoundingClientRect().bottom - this.globe.canvas.getBoundingClientRect().y
+        )
 
+        this.institutionView = new PointsView([-0.05, .25], "institutions-view", this.collaboration.institutions, this.globe.context, this.globe.projection, 'greenIcon')
+        this.apView = new PointsView([.25, .5], "ap-view", this.collaboration.aps, this.globe.context, this.globe.projection, 'purpleIcon')
+        this.arcView = new ArcView([.5, .75], "arc-view", this.collaboration.aps.map(i => [i.longitude, i.latitude]), this.collaboration.ces.map(i => [i.longitude, i.latitude]), this.globe.context, this.globe.projection)
+        this.ceView = new PointsView([.75, 1], "ce-view", this.collaboration.ces, this.globe.context, this.globe.projection, 'blueIcon')
+
+        this.populateHTML()
     }
 
-    initiateScrollSpy = () => {
-        document.addEventListener('scroll', (e) => {
-            this.lastKnownScrollPosition = window.scrollY;
-            let ticking;
+    get scrollPosition() {
+        let containerPosition = this.outerContainer.getBoundingClientRect().top + window.scrollY
+        let globePosition = this.globe.canvas.getBoundingClientRect().top + window.scrollY
 
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-
-                    // Check that the map is centered on the screen
-                    let boundingRect = this.globe.canvas.getBoundingClientRect()
-                    if(window.innerHeight - (boundingRect.height + boundingRect.y) > boundingRect.y){
-                        this.globe.canvas.classList.add("center")
-                        console.log(this.lastKnownScrollPosition)
-                    }
-
-                    ticking = false
-                });
-
-                ticking = true;
-            }
-        });
+        return globePosition - containerPosition
     }
 
-    centerMap = () => {
+    get scrollProgress() {
+        return this.scrollPosition / this.height
+    }
 
+    get view() {
+        if(this.scrollProgress < .25){
+            return this.institutionView
+        } else if(this.scrollProgress < .5) {
+            return this.apView
+        } else if(this.scrollProgress < .75) {
+            return this.arcView
+        } else {
+            return this.ceView
+        }
     }
 
     render = () => {
+        this.view.update(this.scrollProgress)
+    }
 
-        if(true){
-            let points = this.collaboration.ces.map(ce => [ce.longitude, ce.latitude])
+    populateHTML = () => {
+        this.institutionView.container.getElementsByClassName("number-of")[0].textContent = parseInt(this.collaboration.institutions.length)
+        this.apView.container.getElementsByClassName("number-of")[0].textContent = parseInt(this.collaboration.aps.length)
+        this.ceView.container.getElementsByClassName("number-of")[0].textContent = parseInt(this.collaboration.ces.length)
 
-            this.globe.context.beginPath(), this.globe.geoPath({type: "MultiPoint", coordinates: points}), this.globe.context.fillStyle = "#D100C5", this.globe.context.fill();
-
-            points.forEach( c => {
-                c = this.globe.projection(c)
-                let adjusted_coordinates = [c[0] - Icon.size[0]/2, c[1] - Icon.size[1]]
-
-                this.globe.context.drawImage(Icon.getIcon('greenIcon'), ...adjusted_coordinates, ...Icon.size)
-            })
-        }
-
+        let ul = this.institutionView.container.getElementsByClassName("resource-list")[0].getElementsByTagName("ul")[0]
+        // this.collaboration.institutions.forEach(i => {
+        //     let li = document.createElement("li")
+        //     li.textContent = i.name
+        //     ul.appendChild(li)
+        // })
     }
 }
+
 
 
 class GlobeVisualization {
@@ -128,17 +250,14 @@ class GlobeVisualization {
 }
 
 class Arc {
-    constructor(duration, lines) {
+    constructor(lines) {
         this.submit_locations = lines.map(p => p[0])
         this.host_locations = lines.map(p => p[1])
         this.interpolated_points = lines.map(p => d3.geoInterpolate(p[0], p[1]))
-        this.startTime = Date.now()
-        this.duration = duration
-        this.lines = lines
     }
 
-    get_arc(){
-        let t_dx = (Date.now() - this.startTime) / this.duration;
+    get_arcs = (position) => {
+        let t_dx = position;
         let arcs;
 
         if( t_dx < .5 ){
@@ -154,7 +273,7 @@ class Arc {
         }  else {
             return [null, null, null]
         }
-        return [this.submit_locations, this.host_locations, arcs]
+        return arcs
     }
 }
 

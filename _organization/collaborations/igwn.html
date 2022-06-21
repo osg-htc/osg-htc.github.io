@@ -31,7 +31,7 @@ js_extension:
         </div>
     </div>
     <div class="row my-5 justify-content-center">
-        <div class="col-7">
+        <div class="col-12 col-xl-7 col-lg-8 col-md-10">
             <p class="fs-5">
                 Support areas for IGWN include data management, infrastructure
                 (StashCaches, FTS service for Rucio managed third-party transfers),
@@ -48,14 +48,36 @@ js_extension:
             </p>
         </div>
     </div>
-
-
-
-
 </div>
-<div class="globe-container">
-    <canvas class="w-100 container-xxl py-5 center" id="globe"></canvas>
+<div id="outer-globe-container" class="container-xxl pb-5">
+    <div id="inner-globe-container" class="center d-flex">
+        <canvas class="w-100 position-absolute" id="globe"></canvas>
+        <div id="institutions-view" class="transparent position-absolute w-100 top-50 start-0 translate-middle-y row justify-content-apart">
+            <div class="col-8 d-flex">
+                <h1 class="fs--1 my-auto"><span class="number-of"></span> Institutions</h1>
+            </div>
+            <div class="col-4 d-none d-lg-block">
+                <div class="rounded p-2 resource-list">
+                    <ul class=""></ul>
+                </div>
+            </div>
+        </div>
+        <div id="ap-view" class="transparent position-absolute top-50 start-0 translate-middle-y row justify-content-apart">
+            <div class="col-auto">
+                <h1 class="fs--1 z-1000 m-0">Submitting Jobs to <br><span class="number-of"></span> <a class="text-bright" href="/services/access-point">Access Points</a></h1>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <ul id="resource-list"></ul>
+            </div>
+        </div>
+        <div id="arc-view" class="transparent position-absolute top-50 start-0 translate-middle-y">
+            <h1 class="fs--1 z-1000 m-0"></h1>
+        </div>
+        <div id="ce-view" class="transparent position-absolute top-50 start-0 translate-middle-y">
+            <h1 class="fs--1 z-1000 m-0">Executing Jobs using <br><span class="number-of"></span> <a class="text-bright" href="https://htcondor.org/htcondor-ce/overview">Compute Entrypoints</a></h1>
+        </div>
+    </div>
 </div>
-<div class="vh-100">
-    <iframe height="80%" width="100%" allow="fullscreen" src="/organization/iframe.html"></iframe>
+<div class="iframe-container">
+    <iframe height="100%" width="100%" allow="fullscreen" src="https://osg-htc.org/organization/iframe.html"></iframe>
 </div>
