@@ -39,6 +39,7 @@ jobs:
 
       - name: Build and Deploy
         run: |
+          bundle install
           git checkout -b temp-branch
           bundle exec jekyll build --trace
           mkdir temp-dir
