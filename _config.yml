@@ -42,6 +42,10 @@ defaults:
       type: "organization"
     values:
       layout: container
+  - scope:
+      type: "user_side_redirects"
+    values:
+      layout: redirect
 
 collections:
   about:
@@ -61,6 +65,8 @@ collections:
     output: true
   organization:
     permalink: /organization/:path.html
+    output: true
+  user_side_redirects:
     output: true
 
 sass:
