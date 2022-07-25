@@ -58,6 +58,7 @@ layout: title-main
             <div class="col-12 col-lg-6 col-xl-4 pb-4">
                 {% include /cards/spotlight-card.html data=spotlights no_date="true" %}
             </div>
+            {% endfor %}
         <div class="row rounded bg-light pb-3 pe-3 g-0">
 
             {% for article in sorted_spotlights limit:1 %}
