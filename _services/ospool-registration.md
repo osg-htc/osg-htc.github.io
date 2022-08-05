@@ -12,6 +12,8 @@
           href: '#get-help'
 ---
 
+# OSPool User Registration
+
 The OSPool is a computational resource available to any researcher affiliated with a project
 at a US-based academic, government, or non-profit institution.  This page covers registration
 and startup with an [access point](/services/access-point.html) operated by OSG and attached
