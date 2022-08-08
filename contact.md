@@ -10,7 +10,7 @@ Email: <mailto:osg-contact@opensciencegrid.org>
 
 ### To get started using OSG, for OSG support, operational issues
 
-* Email: <mailto:support@opensciencegrid.org>
+* Email: <mailto:support@osg-htc.org>
 * OSG Connect Support: <mailto:support@osgconnect.net> (for users of [OSG Connect](https://support.opensciencegrid.org))
 
 

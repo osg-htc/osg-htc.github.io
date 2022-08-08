@@ -28,6 +28,6 @@ transitioned to a new hosting system:
 *  [Technology](https://opensciencegrid.org/technology/): Current technologies that OSG uses
    and plans for technology adoption in the future.
 
-If what you are looking for is not here, please contact us at [help@opensciencegrid.org](mailto:help@opensciencegrid.org)
+If what you are looking for is not here, please contact us at [help@osg-htc.org](mailto:help@osg-htc.org)
 and we will be happy to assist you.
 

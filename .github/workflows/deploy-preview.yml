@@ -29,7 +29,7 @@ jobs:
           rm CNAME -f
           sed -i "s|baseurl: ''|baseurl: '/web-preview/${{ env.BRANCH_NAME }}'|" _config.yml
           git config user.name "Automatic preview publish"
-          git config user.email "help@opensciencegrid.org"
+          git config user.email "help@osg-htc.org"
           git commit -am "GHA: path-cc/path-cc.github.io #$GITHUB_RUN_NUMBER"
 
       - name: Setup SSH Keys and known_hosts
