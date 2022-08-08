@@ -28,7 +28,9 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="services-dropdown">
                             {% for service in site.services %}
-                                <a class="dropdown-item" href="{{ service.url | relative_url }}">{{ service.title }}</a>
+                                {% if service.title != "Registration and Login for the OSPool" %}
+                                    <a class="dropdown-item" href="{{ service.url | relative_url }}">{{ service.title }}</a>
+                                {% endif %}
                             {% endfor %}
                         </div>
                     </li>
