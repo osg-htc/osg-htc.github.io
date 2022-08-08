@@ -92,22 +92,22 @@ The process below describes how to upload a public key to the registration websi
 1. Click your name at the top right. In the dropdown box, click "My Profile (OSG)" button.
 
    {: .border .border-5 }
-   <img src="{{ '/images/ssh-homepage-dropdown.png' | relative_url }}" class="img-fluid"/>
+   <img src="{{ '/assets/images/ssh-homepage-dropdown.png' | relative_url }}" class="img-fluid"/>
 
 1. On the right hand side of your profile, click "Authenticators" link.
 
    {: .border .border-5 }
-   <img src="{{ '/images/ssh-edit-profile.png' | relative_url }}" class="img-fluid"/>
+   <img src="{{ '/assets/images/ssh-edit-profile.png' | relative_url }}" class="img-fluid"/>
 
 1. On the authenticators page, click the "Manage" button.
 
    {: .border .border-5 }
-   <img src="{{ '/images/ssh-authenticator-select.png' | relative_url }}" class="img-fluid"/>
+   <img src="{{ '/assets/images/ssh-authenticator-select.png' | relative_url }}" class="img-fluid"/>
 
 1. On the new SSH Keys page, click "Add SSH Key" and browse your computer to upload your public SSH key.
    
    {: .border .border-5 }
-   <img src="{{ '/images/ssh-key-list.png' | relative_url }}" class="img-fluid"/>
+   <img src="{{ '/assets/images/ssh-key-list.png' | relative_url }}" class="img-fluid"/>
 
 
 ## Get Help
