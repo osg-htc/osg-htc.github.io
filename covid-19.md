@@ -6,7 +6,7 @@ title: Extra Support for COVID-19 Research
 OSG Support for COVID-19 Research
 =================================
 
-Please contact us at <mailto:help@opensciencegrid.org> if your research group could benefit
+Please contact us at <mailto:help@osg-htc.org> if your research group could benefit
 from computing resources or consulting related to COVID-19, or if you would like to support COVID-19
 research by sharing your own capacity.
 

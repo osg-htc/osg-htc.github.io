@@ -30,7 +30,7 @@ interfaces or datasets, such that end-users may not even be aware of integration
 with OSG and its services/technologies. Some pools share capacity with one another, 
 and organizations can contribute resources to more than one pool. If you’re interested
 in supporting the Open Science Pool, specific projects, or any pool/research 
-community, contact us at <support@opensciencegrid.org>.
+community, contact us at <support@osg-htc.org>.
 
 ## Research Projects with Accounted Usage Across OSG Pools
 [OSG Projects active in the last year](/projects.html)

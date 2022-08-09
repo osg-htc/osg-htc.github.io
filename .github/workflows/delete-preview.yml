@@ -25,7 +25,7 @@ jobs:
       - name: Setup Github User
         run: |
           git config user.name "Automatic preview publish"
-          git config user.email "help@opensciencegrid.org"
+          git config user.email "help@osg-htc.org"
 
       - name: Build and Deploy
         run: |

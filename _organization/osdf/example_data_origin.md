@@ -25,7 +25,7 @@ description: Community provided storage system architectures for OSDF Data Origi
 
 {: .fs-5 }
 We are actively collecting hardware examples for OSDF, if you would like to submit one
-email us at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) to be featured.
+email us at [support@osg-htc.org](mailto:support@osg-htc.org) to be featured.
 
 {: .fs-5 }
 OSG has no official recommendation for hardware or storage system architectures, all examples below are
