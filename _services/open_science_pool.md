@@ -22,7 +22,7 @@ of the [OSG Connect](https://connect.osg-htc.org/) service, which serves researc
 projects at US-based academic, non-profit, and government institutions.
 
 {: .rounded .p-2 .py-3 .text-center .bg-light .my-4 }
-__Sign up for an OSPool account on__ <a class="ms-2 btn btn-secondary" href="https://connect.osg-htc.org"><b>OSG Connect</b></a>
+__Learn how to sign up for an__ <a class="ms-2 btn btn-secondary" href="{{ '/services/ospool-account.html' | relative_url }}"><b>OSPool Account</b></a>
 
 
 ## How Can I Harness the OSPool Capacity?
