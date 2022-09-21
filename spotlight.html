@@ -11,10 +11,9 @@ layout: padded-default
 <div class="container-xxl">
     <div class="row g-0 rounded bg-light pb-3 pe-3">
         {% include get/spotlights.liquid %}
-        {% assign sorted_spotlights = spotlights | sort: "date" | reverse %}
-        {% for article in sorted_spotlights %}
+        {% for article in spotlights %}
         <div class="col-12 col-lg-6 col-xl-4 ps-3 pt-3 d-flex">
-            {% include /cards/spotlight-card.html data=spotlights  %}
+            {% include /cards/spotlight-card.html %}
         </div>
         {% endfor %}
     </div>

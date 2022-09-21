@@ -1,1 +1,9 @@
-{% assign spotlights = site.spotlights | where_exp: "spotlight", "spotlight.publish_on contains site.key" | sort: "date" |  reverse %}
+{% comment %}
+    Use this to filter out the redirects
+{% endcomment %}
+
+{% assign spotlights = site.spotlights | where_exp: "spotlight", "spotlight.publish_on contains site.key"%}
+
+{% assign spotlights = spotlights | where_exp: "featured-user", "featured-user.type != 'news'" | sort: "date" |  reverse %}
+
+
