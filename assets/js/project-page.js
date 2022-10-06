@@ -17,6 +17,12 @@ function populate_project_node(project, node){
     node.getElementsByClassName("project-FieldOfScience")[0].textContent = project["FieldOfScience"]
     node.getElementsByClassName("project-Organization")[0].textContent = project["Organization"]
     node.getElementsByClassName("project-Description")[0].textContent = project["Description"]
+    document.getElementById("cpu-core-hours-bar-graph").src = `https://gracc.opensciencegrid.org/d-solo/tFUN4y44z/projects?orgId=1&var-Project=${project["Name"]}&from=1657307185834&to=1665083185834&panelId=2`
+    document.getElementById("cpu-core-hours-int").src = `https://gracc.opensciencegrid.org/d-solo/tFUN4y44z/projects?orgId=1&var-Project=${project["Name"]}&from=1657307185834&to=1665083185834&panelId=4`
+    document.getElementById("gpu-hours-bar-graph").src = `https://gracc.opensciencegrid.org/d-solo/tFUN4y44z/projects?orgId=1&var-Project=${project["Name"]}&from=1657307185834&to=1665083185834&panelId=14`
+    document.getElementById("gpu-hours-int").src = `https://gracc.opensciencegrid.org/d-solo/tFUN4y44z/projects?orgId=1&var-Project=${project["Name"]}&from=1657307185834&to=1665083185834&panelId=16`
+    document.getElementById("facilities-bar-graph").src = `https://gracc.opensciencegrid.org/d-solo/tFUN4y44z/projects?orgId=1&var-Project=${project["Name"]}&from=1657307185834&to=1665083185834&panelId=10`
+    document.getElementById("facilities-int").src = `https://gracc.opensciencegrid.org/d-solo/tFUN4y44z/projects?orgId=1&var-Project=${project["Name"]}&from=1657307185834&to=1665083185834&panelId=12`
 }
 
 class Search {
@@ -171,7 +177,7 @@ class CardDisplay{
             let card_key = project['Name'].replace(/\s|\./g, '')
 
             clone.setAttribute("href", "#" + card_key)
-            clone.setAttribute("aria-controsl", card_key)
+            clone.setAttribute("aria-controls", card_key)
             clone.getElementsByClassName("project-Description-container")[0].setAttribute("id", card_key)
 
             this.wrapper.node.appendChild(clone)
