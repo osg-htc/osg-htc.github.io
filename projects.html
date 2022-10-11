@@ -15,7 +15,14 @@
         The below projects were active in the last year across reporting pools in the OSG Consortium. Some represent a small research group, while others represent a large collaboration or campus with numerous researchers using resources in OSG pools.
 ---
 
-
+<style>
+    .project-usage-row{
+        min-height: 200px;
+    }
+    .gridjs-table{
+        min-width: 100%;
+    }
+</style>
 <div class="container-xxl">
     {% include layout/title.html %}
     <div class="row">
@@ -44,9 +51,7 @@
         </div>
     </div>
 </div>
-<div class="container-xxl">
-    <div id="wrapper"></div>
-</div>
+<div id="wrapper" class="container-xxl overflow-auto"></div>
 
 <div class="modal fade" id="project-display" tabindex="-1" aria-labelledby="project-Name" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
@@ -75,7 +80,7 @@
                     </div>
                 </div>
                 <h5>Resource Usage</h5>
-                <div class="row">
+                <div class="row project-usage-row">
                     <div class="col-12 col-md-6 cpu-core-hours-bar-graph"></div>
                     <div class="col-12 col-md-6 cpu-core-hours-int"></div>
                 </div>
@@ -84,7 +89,7 @@
                     <div class="col-12 col-md-6 gpu-hours-int"></div>
                 </div>
                 <h5>Where Jobs Have Ran</h5>
-                <div class="row">
+                <div class="row project-usage-row">
                     <div class="col-12 col-md-6 facilities-bar-graph"></div>
                     <div class="col-12 col-md-6 facilities-int"></div>
                 </div>
