@@ -1,6 +1,6 @@
 ---
-short_title: Token Transition Workshop 
-title: "Token Transition Workshop"
+short_title: OSG User Training
+title: "OSG User Training"
 published: true
 
 excerpt: |
