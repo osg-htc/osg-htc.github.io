@@ -4,7 +4,7 @@ title: "OSG User Training"
 published: true
 
 excerpt: |
-    Sign up for one of our Bi Monthly OSG User Training sessions! New User Training is offered monthly, usually on the first Tuesday of the month, and training on various additional topics happens on the third Tuesday of the month.
+    Sign up for our upcoming Special Topics user training session on Bioinformatics Analyses on the OSPool: A BWA Example held on Tuesday, October 18th!
     
 start_date: 2022-10-18
 end_date: 2022-10-19
@@ -18,7 +18,7 @@ header_image: "/assets/images/events/christina_image.jpg"
 
 <p style="font-size: larger; font-weight: bold;">Sign Up for Upcoming Trainings!</p>
 
-Sign up for our upcoming Special Topics user training session on Tuesday, October 18th on Bioinformatics Analyses on the OSPool: A BWA Example!
+Sign up for our upcoming Special Topics user training session on Bioinformatics Analyses on the OSPool: A BWA Example held on Tuesday, October 18th!
 Many bioinformatic workflows are a great fit for the Open Science Pool (OSPool). In our upcoming "Bioinformatics Analyses on the OSPool: A BWA Example" training, we will learn how to use a common bioinformatic tool, Burrows-Wheeler Aligner (BWA), on the OSPool to analyze RNA sequencing data. This workshop will cover how to convert an existing bioinformatics workflow to run on the OSPool, how to keep an organized workflow using HTCondor submit file options, and how to install software on an OSPool Access Point. This workshop will feature hands-on components and time for discussion about other common bioinformatic workflows or tools.
 **[Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)**
 
