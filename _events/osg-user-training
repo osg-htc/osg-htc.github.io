@@ -6,12 +6,12 @@ published: true
 
 excerpt: |
     Sign up for one of our Bi-Monthly OSG User Training sessions! New User Training is offered monthly, usually on the first Tuesday of the month, and training on various additional topics happens on the third Tuesday of the month.
-start_date: 
-end_date: 
+start_date: 2022-10-04
+end_date: 2022-11-15
 location: "Virtual"
 link: "https://portal.osg-htc.org/documentation/support_and_training/training/osgusertraining/"
-image: "/assets/images/HTCondor_Banner.jpg"
-header_image: "/assets/images/HTCondor_Banner.jpg"
+image: "/assets/images/events/christina-koch-chtc-featured.jpg"
+header_image: "/assets/images/events/christina-koch-chtc-featured.jpg"
 ---
 
 {% capture main %}
