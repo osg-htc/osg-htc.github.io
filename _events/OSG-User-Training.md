@@ -4,7 +4,7 @@ title: "OSG User Training"
 published: true
 
 excerpt: |
-    Join us and the broader science communities to learn about making the transition from certificates to tokens for resource access within your organization's infrastructure.
+    Sign up for one of our Bi Monthly OSG User Training sessions! New User Training is offered monthly, usually on the first Tuesday of the month, and training on various additional topics happens on the third Tuesday of the month.
     
 start_date: 2021-10-14
 end_date: 2021-10-15
