@@ -16,7 +16,7 @@ header_image: "/assets/images/events/christina-koch-chtc-featured.jpg"
 
 {% capture main %}
 
-<p style="font-size: larger; font-weight: bold;">Join us October 14 & 15 for an engaging and collaborative workshop!</p>
+<p style="font-size: larger; font-weight: bold;">Sign Up for Upcoming Trainings!</p>
 
   
 
@@ -32,38 +32,25 @@ All User Training sessions are offered from 2:30-4pm ET (and usually on Tuesdays
 {% capture subsection %}
 # Who
 
-System and service administrators in the broader science communities
+All OSG Users
 
 # When
 
-October 14: 10:00am – 1:15pm CT  
-October 15: 10:00am – 2:45pm CT  
-[See a detailed schedule](https://indico.fnal.gov/event/50597/timetable/#20211015)
+Twice a month (usual on the first and third Tuesday every month)
 
 # Where
 
 Virtual
 
-# Fees
-
-No fees, attendance is free!
-
-# Registration
-[Register now](https://indico.fnal.gov/event/50597/registrations/3133/)
-
 # Questions?
 
-Contact us at <events@opensciencegrid.org>. 
+We provide ongoing support via email to <support@osg-htc.org>, and it’s never a bad idea to start by sending questions or issues via email. You can typically expect a first response within a few business hours.
 
 {% endcapture %}
 
 {% capture endblock %}
-## Contact Us
 
 
-If you have any questions about the event, feel free to email us:
-
-<events@opensciencegrid.org>
 {% endcapture %}
 
 {% include event/event-page.html %}
