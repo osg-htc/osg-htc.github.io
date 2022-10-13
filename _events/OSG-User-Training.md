@@ -20,11 +20,11 @@ header_image: "/assets/images/events/christina-koch-chtc-featured.jpg"
 
   
 
-The Token Transition Workshop will be an opportunity for system and service administrators in the broader science communities to learn more about making the transition from certificates to tokens for resource access within your organization's infrastructure. You will be able to share with the community your readiness to make this transition and to learn approaches and processes that organizations are taking for the transition. The deadline for the end of support of OSG 3.5 will be impacted by the information shared in the Workshop.
+All User Training sessions are offered from 2:30-4pm ET (and usually on Tuesdays). New User Training is offered monthly, generally on the first Tuesday of the month, and training on various additional topics happens on the third Tuesday of the month. It's best to already have an active account on an OSG Connect login node (or other access point that submits to the Open Science Pool) to follow along with hands-on examples, but anyone can listen in by registering.
 
-This two-day workshop features a variety of presentations and discussions. Topics that will be discussed include: the future of tokens, the OSPool's use of tokens, OSG Software token transition plans, and the status of the transition to tokens for various communities. We will also discuss tokens from both a technical system administrator perspective and an administrative policy perspective
-
-[View the complete schedule for the workshop here](https://indico.fnal.gov/event/50597/timetable/#20211014). **[Registration is open.](https://indico.fnal.gov/event/50597/registrations/3133/)**
+- Tuesday, October 18: Bioinformatics Analyses on the OSPool: A BWA Example, **[Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)**
+- Tuesday, November 1: New User Training, **[Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)**
+- Tuesday, November 15: Using R on the OSPool, **registration coming soon.**
 
 {% endcapture %}
 
