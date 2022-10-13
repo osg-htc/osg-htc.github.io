@@ -10,8 +10,8 @@ start_date: 2021-10-14
 end_date: 2021-10-15
 location: "Virtual"
 link: "https://portal.osg-htc.org/documentation/support_and_training/training/osgusertraining/"
-image: "/assets/images/events/key-preview.png"
-header_image: "/assets/images/events/key-banner.png"
+image: "/assets/images/events/christina-koch-chtc-featured.jpg"
+header_image: "/assets/images/events/christina-koch-chtc-featured.jpg"
 ---
 
 {% capture main %}
