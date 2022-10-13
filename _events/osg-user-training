@@ -1,17 +1,17 @@
 ---
-short_title: OSG User Training
-title: "OSG User Training"
+short_title: HTCondor Week 2022 
+title: "HTCondor Week 2022, May 23-26"
 layout: events
 published: true
 
 excerpt: |
-    Sign up for one of our Bi-Monthly OSG User Training sessions! New User Training is offered monthly, usually on the first Tuesday of the month, and training on various additional topics happens on the third Tuesday of the month.
-start_date: 2022-10-04
-end_date: 2022-11-15
-location: "Virtual"
-link: "https://portal.osg-htc.org/documentation/support_and_training/training/osgusertraining/"
-image: "/assets/images/events/christina-koch-chtc-featured.jpg"
-header_image: "/assets/images/events/christina-koch-chtc-featured.jpg"
+    HTCondor Week 2022 will be held from Monday 23 May to Thursday 26 May 2022 virtually and in-person at the Fluno Center on the University of Wisconsin-Madison campus. We are planning a hybrid event.
+start_date: 2022-05-23
+end_date: 2022-05-26
+location: "UW-Madison and Virtual"
+link: "http://htcondor.org/HTCondorWeek2022"
+image: "/assets/images/HTCondor_Banner.jpg"
+header_image: "/assets/images/HTCondor_Banner.jpg"
 ---
 
 {% capture main %}
