@@ -1,53 +1,69 @@
 ---
-short_title: OSG User Training
-title: "OSG User Training"
-layout: events
+short_title: Token Transition Workshop 
+title: "Token Transition Workshop"
 published: true
 
 excerpt: |
-    Sign up for one of our Bi Monthly OSG User Training sessions! New User Training is offered monthly, usually on the first Tuesday of the month, and training on various additional topics happens on the third Tuesday of the month.
-start_date: 
-end_date: 
+    Join us and the broader science communities to learn about making the transition from certificates to tokens for resource access within your organization's infrastructure.
+    
+start_date: 2021-10-14
+end_date: 2021-10-15
 location: "Virtual"
-link: "https://portal.osg-htc.org/documentation/support_and_training/training/osgusertraining/"
-image: "/assets/images/events/christina-koch-chtc-featured.jpg"
-header_image: "/assets/images/events/christina-koch-chtc-featured.jpg"
+link: "https://indico.fnal.gov/event/50597/registrations/3133/"
+image: "/assets/images/events/key-preview.png"
+header_image: "/assets/images/events/key-banner.png"
+---
 
 {% capture main %}
 
-<p style="font-size: larger; font-weight: bold;">Sign Up for Upcoming Trainings!</p>
+<p style="font-size: larger; font-weight: bold;">Join us October 14 & 15 for an engaging and collaborative workshop!</p>
 
+  
 
-All User Training sessions are offered from 2:30-4pm ET (and usually on Tuesdays). New User Training is offered monthly, generally on the first Tuesday of the month, and training on various additional topics happens on the third Tuesday of the month. It's best to already have an active account on an OSG Connect login node (or other access point that submits to the Open Science Pool) to follow along with hands-on examples, but anyone can listen in by registering.
+The Token Transition Workshop will be an opportunity for system and service administrators in the broader science communities to learn more about making the transition from certificates to tokens for resource access within your organization's infrastructure. You will be able to share with the community your readiness to make this transition and to learn approaches and processes that organizations are taking for the transition. The deadline for the end of support of OSG 3.5 will be impacted by the information shared in the Workshop.
 
-- Tuesday, October 18: Bioinformatics Analyses on the OSPool: A BWA Example, [Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)
-- Tuesday, November 1: New User Training, [Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)
-- Tuesday, November 15: Using R on the OSPool, registration coming soon.
+This two-day workshop features a variety of presentations and discussions. Topics that will be discussed include: the future of tokens, the OSPool's use of tokens, OSG Software token transition plans, and the status of the transition to tokens for various communities. We will also discuss tokens from both a technical system administrator perspective and an administrative policy perspective
+
+[View the complete schedule for the workshop here](https://indico.fnal.gov/event/50597/timetable/#20211014). **[Registration is open.](https://indico.fnal.gov/event/50597/registrations/3133/)**
 
 {% endcapture %}
 
 
 {% capture subsection %}
-### Dates
+# Who
 
-Twice a month (usually the first and third Tuesday of every month)
+System and service administrators in the broader science communities
 
-### Who
+# When
 
-All OSG Users.
+October 14: 10:00am – 1:15pm CT  
+October 15: 10:00am – 2:45pm CT  
+[See a detailed schedule](https://indico.fnal.gov/event/50597/timetable/#20211015)
 
-### Where
+# Where
 
 Virtual
 
-### Questions?
+# Fees
 
-We provide ongoing support via email to support@osg-htc.org, and it’s never a bad idea to start by sending questions or issues via email. You can typically expect a first response within a few business hours.
+No fees, attendance is free!
+
+# Registration
+[Register now](https://indico.fnal.gov/event/50597/registrations/3133/)
+
+# Questions?
+
+Contact us at <events@opensciencegrid.org>. 
+
 {% endcapture %}
 
 {% capture endblock %}
+## Contact Us
 
 
+If you have any questions about the event, feel free to email us:
+
+<events@opensciencegrid.org>
 {% endcapture %}
 
 {% include event/event-page.html %}
