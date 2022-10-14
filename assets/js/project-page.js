@@ -2,6 +2,7 @@
     layout: blank
 ---
 
+import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, SUMMARY_INDEX, DEBUG} from "./elasticsearch.js";
 
 function makeDelay(ms) {
     let timer = 0;
@@ -9,14 +10,248 @@ function makeDelay(ms) {
         clearTimeout (timer);
         timer = setTimeout(callback, ms);
     };
-};
+}
 
-function populate_project_node(project, node){
-    node.getElementsByClassName("project-Name")[0].textContent = project["Name"]
-    node.getElementsByClassName("project-PIName")[0].textContent = project["PIName"]
-    node.getElementsByClassName("project-FieldOfScience")[0].textContent = project["FieldOfScience"]
-    node.getElementsByClassName("project-Organization")[0].textContent = project["Organization"]
-    node.getElementsByClassName("project-Description")[0].textContent = project["Description"]
+/**
+ * A suite of Boolean functions deciding the visual status of a certain grafana graph
+ *
+ * true results in the graph being shown, false the opposite
+ */
+const elasticSearch = new ElasticSearchQuery(SUMMARY_INDEX, ENDPOINT)
+
+class UsageToggles {
+
+    static async getUsage() {
+        if (this.usage) {
+            return this.usage
+        }
+
+        let usageQueryResult = await elasticSearch.search({
+            size: 0,
+            query: {
+                range: {
+                    EndTime: {
+                        lte: DATE_RANGE['now'],
+                        gte: DATE_RANGE['oneYearAgo']
+                    }
+                }
+            },
+            aggs: {
+                projects: {
+                    "terms": {
+                        field: "ProjectName",
+                        size: 99999999
+                    },
+                    aggs: {
+                        projectCpuUse: {
+                            sum: {
+                                field: "CoreHours"
+                            }
+                        },
+                        projectGpuUse: {
+                            sum: {
+                                field: "GPUHours"
+                            }
+                        }
+                    }
+                }
+            }
+        })
+
+        let projectBuckets = usageQueryResult.aggregations.projects.buckets
+
+        this.usage = projectBuckets.reduce((p, v) => {
+            p[v['key']] = {
+                cpu: v['projectCpuUse']['value'] != 0,
+                gpu: v['projectGpuUse']['value'] != 0
+            }
+            return p
+        }, {})
+
+        return this.usage
+    }
+
+    static async usedCpu(projectName) {
+        let usage = await UsageToggles.getUsage()
+        if (projectName in usage) {
+            return usage[projectName]["cpu"]
+        }
+        return false
+    }
+
+    static async usedGpu(projectName) {
+        let usage = await UsageToggles.getUsage()
+        if (projectName in usage) {
+            return usage[projectName]["gpu"]
+        }
+        return false
+    }
+}
+
+
+/**
+ * A node to create and interact with a Grafana embedded graph
+ *
+ * A single node handles one graph which should be updated on the fly rather then recreated
+ */
+class GraccDisplay {
+    constructor({srcUrl, showDisplay, searchParams}) {
+        this.showDisplay = showDisplay
+        this.srcUrl = srcUrl
+        this.searchParams = searchParams
+        this.loaded = false
+    }
+
+    get node() {
+        if(!this._node){
+            let iframe = document.createElement("iframe")
+            iframe.width = "100%"
+            iframe.height = "100%"
+            iframe.src = this.src
+            iframe.addEventListener("load", () => {
+                this.loaded = true;
+                this.toggle()
+            })
+
+            let loadDisplay = document.createElement("div")
+            loadDisplay.classList.add("spinner-grow")
+            loadDisplay.role = "status"
+
+            let node = document.createElement("div")
+            node.classList.add("justify-content-center")
+            node.style.width = "100%"
+            node.style.height = "200px"
+            node.iframe = iframe
+            node.appendChild(iframe)
+            node.loadDisplay = loadDisplay
+            node.appendChild(loadDisplay)
+
+            this._node = node
+        }
+        return this._node
+    }
+
+    get searchParams(){
+        return this._searchParams
+    }
+
+    set searchParams(searchParams){
+        this._searchParams = searchParams
+        this.update()
+    }
+
+    get src() {
+        let url = new URL(this.srcUrl)
+        let searchParams = {...this.searchParams}
+        Object.entries(searchParams).forEach( ([k,v], i) => url.searchParams.append(k, v))
+        return url.toString()
+    }
+
+    async update(){
+        this.node.iframe.src = this.src
+        this.loaded = false
+        this.toggle()
+    }
+
+    updateSearchParams(searchParams){
+        this.searchParams = {
+            ...this.searchParams,
+            ...searchParams
+        }
+    }
+
+    async toggle(){
+        let showDisplay = await this.showDisplay(this.searchParams["var-Project"])
+        this.node.style.display = showDisplay ? "flex" : "none";
+        this.node.iframe.hidden = !this.loaded
+        this.node.loadDisplay.hidden = this.loaded
+    }
+}
+
+const GRAFANA_PROJECT_BASE_URL = "https://gracc.opensciencegrid.org/d-solo/tFUN4y44z/projects"
+const GRAFANA_BASE = {
+    orgId: 1,
+    from: DATE_RANGE['oneYearAgo'],
+    to: DATE_RANGE['now']
+}
+
+/**
+ * A node wrapping the project information break down
+ */
+class ProjectDisplay{
+    constructor(parentNode) {
+        this.parentNode = parentNode
+        this.grafanaGraphInfo = [
+            {
+                className: "facilities-int",
+                panelId: 12,
+                showDisplay: UsageToggles.usedCpu,
+                ...GRAFANA_BASE
+            },{
+                className: "facilities-bar-graph",
+                panelId: 10,
+                showDisplay: UsageToggles.usedCpu,
+                ...GRAFANA_BASE
+            },{
+                className: "gpu-hours-int",
+                panelId: 16,
+                showDisplay: UsageToggles.usedGpu,
+                ...GRAFANA_BASE
+            },{
+                className: "gpu-hours-bar-graph",
+                panelId: 14,
+                showDisplay: UsageToggles.usedGpu,
+                ...GRAFANA_BASE
+            },{
+                className: "cpu-core-hours-int",
+                panelId: 4,
+                showDisplay: UsageToggles.usedCpu,
+                ...GRAFANA_BASE
+            },{
+                className: "cpu-core-hours-bar-graph",
+                panelId: 2,
+                showDisplay: UsageToggles.usedCpu,
+                ...GRAFANA_BASE
+            }
+        ]
+    }
+
+    get graphDisplays(){
+        // Create these when they are needed and not before
+        if(!this._graphDisplays){
+            this._graphDisplays = this.grafanaGraphInfo.map(graph => {
+                let wrapper = document.getElementsByClassName(graph['className'])[0]
+                let graphDisplay = new GraccDisplay({
+                    srcUrl: GRAFANA_PROJECT_BASE_URL,
+                    showDisplay: graph['showDisplay'],
+                    searchParams: {
+                        to: graph['to'],
+                        from: graph['from'],
+                        orgId: graph['orgId'],
+                        panelId: graph['panelId']
+                    }
+                })
+                wrapper.appendChild(graphDisplay.node)
+                return graphDisplay
+            })
+        }
+        return this._graphDisplays
+    }
+
+    updateTextValue(className, value){
+        this.parentNode.getElementsByClassName(className)[0].textContent = value
+    }
+
+    update({Name, PIName, FieldOfScience, Organization, Description}) {
+        this.updateTextValue("project-Name", Name)
+        this.updateTextValue("project-PIName", PIName)
+        this.updateTextValue("project-FieldOfScience", FieldOfScience)
+        this.updateTextValue("project-Organization", Organization)
+        this.updateTextValue("project-Description", Description)
+        this.graphDisplays.forEach(gd => {
+            gd.updateSearchParams({"var-Project": Name})
+        })
+    }
 }
 
 class Search {
@@ -69,8 +304,10 @@ class Table {
         this.grid = undefined
         this.data_function = data_function
         this.wrapper = wrapper
-        this.display_node = document.getElementById("project-display")
-        this.display_modal = new bootstrap.Modal(document.getElementById("project-display"), {
+
+        let projectDisplayNode = document.getElementById("project-display")
+        this.projectDisplay = new ProjectDisplay(projectDisplayNode)
+        this.display_modal = new bootstrap.Modal(projectDisplayNode, {
             keyboard: true
         })
         this.columns = [
@@ -86,36 +323,16 @@ class Table {
             }, {
                 id: 'FieldOfScience',
                 name: 'Field Of Science'
-            }, {
-                id: "Department",
-                name: "Department",
-                hidden: true
-            }, {
-                id: "Description",
-                name: "Description",
-                hidden: true
-            }, {
-                id: "ID",
-                name: "ID",
-                hidden: true
-            }, {
-                id:  "Organization",
-                name: "Organization",
-                hidden: true
-            }, {
-                id: "ResourceAllocations",
-                name: "Resource Allocations",
-                hidden: true
             }
         ]
     }
-    initialize = async () => {
+    initialize = (data) => {
         let table = this;
         this.grid =  new gridjs.Grid({
             columns: table.columns,
             sort: true,
             className: {
-                container: "table-responsive",
+                container: "",
                 table: "table table-hover",
                 td: "pointer",
                 paginationButton: "mt-2 mt-sm-0"
@@ -125,8 +342,9 @@ class Table {
                 enabled: true,
                 limit: 50,
                 buttonsCount: 1
-            }
-        }).render(table.wrapper.node);
+            },
+            width: "1000px"
+        }).render(table.wrapper);
         this.grid.on('rowClick', this.row_click);
     }
     update = (data) => {
@@ -135,7 +353,7 @@ class Table {
         }).forceRender();
     }
     toggle_row = (toggled_row, project) => {
-        populate_project_node(project, this.display_node)
+        this.projectDisplay.update(project)
         this.display_modal.show()
     }
     row_click = async (PointerEvent, e) => {
@@ -146,67 +364,15 @@ class Table {
     }
 }
 
-class CardDisplay{
-    constructor(wrapper, data_function) {
-        this.wrapper = wrapper
-        this.data_function = data_function
-        this.template_card = document.getElementById("template-card")
-    }
-    initialize = async () => {
-        let data = await this.data_function()
-
-        let projects = Object.values(data)
-
-        this.update(projects)
-    }
-    update = async (data) => {
-        this.wrapper.remove_children()
-
-        for(const project of data){
-            let clone = this.template_card.cloneNode(true)
-            clone.removeAttribute('id')
-
-            populate_project_node(project, clone)
-
-            let card_key = project['Name'].replace(/\s|\./g, '')
-
-            clone.setAttribute("href", "#" + card_key)
-            clone.setAttribute("aria-controsl", card_key)
-            clone.getElementsByClassName("project-Description-container")[0].setAttribute("id", card_key)
-
-            this.wrapper.node.appendChild(clone)
-
-            clone.hidden = false
-        }
-    }
-}
-
-class Wrapper {
-    constructor() {
-        this.node = document.getElementById("wrapper")
-    }
-    remove_children = () => {
-        while(this.node.hasChildNodes()){
-            this.node.removeChild(this.node.firstChild)
-        }
-    }
-}
-
 class ProjectPage{
-    constructor(props) {
+    constructor() {
         this.mode = undefined
         this.data = undefined
         this.filtered_data = undefined
-        this.wrapper = new Wrapper()
+        this.wrapper = document.getElementById("wrapper")
         this.search = new Search(this.get_data, this.update_data)
         this.table = new Table(this.wrapper, this.get_data)
-        this.card_display = new CardDisplay(this.wrapper, this.get_data)
-        window.addEventListener("resize", this.update_width)
-
-        this.initialize()
-    }
-    initialize = async () => {
-        await this.update_width() // update_width ~= initialize based on width
+        this.table.initialize()
     }
     get_data = async () => {
 
@@ -224,7 +390,15 @@ class ProjectPage{
             }
         }
 
-        this.data = await response.json()
+        let usageJson = await UsageToggles.getUsage()
+        let responseJson = await response.json()
+
+        this.data = Object.entries(responseJson).reduce((p, [k,v]) => {
+            if(k in usageJson){
+                p[k] = v
+            }
+            return p
+        }, {})
 
         this.search.initialize()
 
@@ -236,29 +410,10 @@ class ProjectPage{
 
         if(JSON.stringify(this.filtered_data) != JSON.stringify(new_filtered_data)){
             this.filtered_data = new_filtered_data
-            this.update_page_data()
-        }
-    }
-    update_page_data = () => {
-        if(this.mode == "mobile"){
-            this.card_display.update(Object.values(this.filtered_data))
-        } else {
             this.table.update(Object.values(this.filtered_data))
-        }
-    }
-    update_width = async () => {
-        let new_mode = window.innerWidth < 576 ? "mobile" : "desktop";
-        if( new_mode != this.mode){
-            this.mode = new_mode
-            this.wrapper.remove_children()
-            if(this.mode == "mobile"){
-                await this.card_display.initialize()
-            } else {
-                await this.table.initialize()
-            }
-            this.update_data()
         }
     }
 }
 
+UsageToggles.getUsage()
 const project_page = new ProjectPage()
