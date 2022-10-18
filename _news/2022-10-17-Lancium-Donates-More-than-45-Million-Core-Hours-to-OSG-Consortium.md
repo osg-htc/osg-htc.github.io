@@ -2,7 +2,7 @@
 title: Lancium Donates More than 45 Million Core Hours to OSG Consortium
 excerpt: Lancium, Inc., an energy technology and infrastructure company that advances the decarbonization and stability of the electric power grid, has donated more than 45 million core-hours of computing time to the OSG Consortium, a fabric of distributed High Throughput Computing (dHTC) services in support of the National Science & Engineering community.  
 --- 
->Lancium’s computing capabilities used to advance research by the U.S. Department of Energy, the University of Chicago, Carnegie-Mellon University 
+> Lancium’s computing capabilities used to advance research by the U.S. Department of Energy, the University of Chicago, Carnegie-Mellon University 
 
 HOUSTON & SAN DIEGO – Oct. 17, 2022 – Lancium, Inc., an energy technology and infrastructure company that advances the decarbonization and stability of the electric power grid, has donated more than 45 million core-hours of computing time to the [OSG Consortium](https://osg-htc.org/), a fabric of distributed High Throughput Computing (dHTC) services in support of the National Science & Engineering community.  
 
