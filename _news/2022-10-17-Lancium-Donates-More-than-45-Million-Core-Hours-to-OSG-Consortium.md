@@ -13,6 +13,7 @@ Since June 2021, members of the OSG Consortium used Lancium Compute’s offering
 Lancium began donating compute time to the OSG Consortium as the company worked to refine its sustainable HPC concept in 2021.
 
 “We believe that computation has the ability to solve the world’s biggest problems. But how we power that computation is a critical part of the puzzle,” said Dr. Andrew Grimshaw, president of Lancium Compute. “Lancium Compute’s unique approach reimagines how HPC can work in concert with the power grid to enable more renewable energy use. We are proud to partner with OSG to demonstrate how we can build sustainability into HPC.”
+
 Lancium’s Clean Compute Campus™ in Abilene, Texas will be powered by 100 percent renewable energy and provide computing resources with a total cost of ownership significantly lower than leading cloud providers. Lancium will achieve reduced power costs through the use of low-cost renewable energy and by operating its data centers flexibly. This flexibility helps to enhance the stability of the electric power grid. This innovative solution creates a new, dynamic approach to running HPC and AI workloads which further encourages the development of even more renewable generation.
 
  <b>About Lancium</b>
