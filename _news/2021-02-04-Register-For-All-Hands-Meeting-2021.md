@@ -4,7 +4,7 @@ date: 2021-02-04T12:00:00+00:00
 publish: true
 card_image: 
 --- 
-**Register now for the online** <a href="https://indico.fnal.gov/event/47040/registrations/2899/" target="_blank">All-Hands Meeting 2021</a>, **March 1&ndash;5**, offered by the <a href="https://opensciencegrid.org/" target="_blank">OSG</a>. Everyone is invited to attend. Registration is free but required, so
+**Register now for the online** <a href="https://indico.fnal.gov/event/47040/registrations/2899/" target="_blank">All-Hands Meeting 2021</a>, **March 1&ndash;5**, offered by the <a href="/" target="_blank">OSG</a>. Everyone is invited to attend. Registration is free but required, so
 [please take a minute to register now](https://indico.fnal.gov/event/47040/registrations/2899/).
 
 > *The OSG All-Hands Meeting is an excellent opportunity to discuss the latest developments and directions within the OSG, connect with other colleagues and hear from researchers about their work and how they are taking advantage of distributed high throughput computing.*
@@ -26,12 +26,12 @@ The daily meeting topics are:
 * **Thursday:** Impact on Multi-Institutional Collaborations
 * **Friday:** U.S. ATLAS and CMS Projects
 
-An overview of the schedule is available on [the Schedule page](https://opensciencegrid.org/all-hands/2021/schedule/),
+An overview of the schedule is available on [the Schedule page](/all-hands/2021/schedule/),
 and the detailed schedule (in progress) is available in
 [the Indico scheduling system](https://indico.fnal.gov/event/47040/timetable/).
 
 For meeting technology and other logistics, see
-[the Meeting Logistics page](https://opensciencegrid.org/all-hands/2021/technology/).
+[the Meeting Logistics page](/all-hands/2021/technology/).
 Note that Zoom connection details are emailed only to those who registered.
 
 <figure class="figure">

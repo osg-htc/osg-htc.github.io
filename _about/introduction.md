@@ -18,11 +18,11 @@ open science. The Consortium, thus, represents the totality of all researchers,
 resources, individuals and institutions that benefit from or contribute to any 
 of the OSG Fabric of Services (further below).
 
-**[The OSG Council](https://opensciencegrid.org/council/)** governs the consortium ensuring that the OSG benefits 
+**[The OSG Council](/council/)** governs the consortium ensuring that the OSG benefits 
 the scientific mission of its stakeholders: the research communities, organizations 
 that provide resources and services for them, including funding resources. 
 
-**[The Executive Team](https://opensciencegrid.org/management/)** manages the core **[OSG Team](/about/team/)**, with 
+**[The Executive Team](/management/)** manages the core **[OSG Team](/about/team/)**, with 
 team members from various institutions organized into Areas that provide core OSG 
 technologies and services required to operate pools in support of research communities. 
 As of January 2022, the OSG Team is funded primarily via the [PATh](https://path-cc.io/) (NSF #2030508), 
@@ -70,5 +70,5 @@ via an access point operated by their institution or collaboration, or via the
 
 Learn more about [other OSG Pools, who contributes, and who uses them](/about/organization/).
 
-Specific OSG Softwares are described in the [OSG Site Admin documentation](https://opensciencegrid.org/docs/).
+Specific OSG Softwares are described in the [OSG Site Admin documentation](/docs/).
 

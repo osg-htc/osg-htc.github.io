@@ -33,7 +33,7 @@ Sites Supporting COVID-19 Research
 
 Any computing resource provider supporting the `osg` VO ("Open Science Pool", see above) is likely already providing hours
 to support COVID-19.  If you would like to provide additional resources _exclusive_ for COVID-19,
-[instructions are available](https://opensciencegrid.org/docs/compute-element/covid-19/).
+[instructions are available](/docs/compute-element/covid-19/).
 
 Other Activities
 ----------------

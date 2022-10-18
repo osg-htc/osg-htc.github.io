@@ -7,7 +7,7 @@ redirect_from: /myosg-decommissioned/index.html
 The MyOSG and OIM services have been decommissioned
 ---------------------------------------------------
 
-As a part of the larger [spring 2018 service migration](https://opensciencegrid.org/technology/policy/service-migrations-spring-2018/),
+As a part of the larger [spring 2018 service migration](/technology/policy/service-migrations-spring-2018/),
 the OIM and MyOSG services that used to be at _oim.grid.iu.edu_ and _myosg.grid.iu.edu_ have
 been decommissioned.  We apologize for any inconvenience.
 

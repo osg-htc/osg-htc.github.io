@@ -24,6 +24,6 @@ Collectively, these testimonies demonstrate how high throughput computing can tr
 
 ...
 
-*Visit the [materials page](https://opensciencegrid.org/virtual-school-2021/materials/) to browse slide decks, exercises, and recordings of public lectures from OSG Virtual School 2021.*
+*Visit the [materials page](/virtual-school-2021/materials/) to browse slide decks, exercises, and recordings of public lectures from OSG Virtual School 2021.*
 
-*Established in 2010, [OSG School](https://opensciencegrid.org/virtual-school-2021/), typically held each summer at the University of Wisconsin–Madison, is an annual education event for researchers who want to learn how to use distributed high throughput computing methods and tools. We hope to return to an in-person User School in 2022.*
+*Established in 2010, [OSG School](/virtual-school-2021/), typically held each summer at the University of Wisconsin–Madison, is an annual education event for researchers who want to learn how to use distributed high throughput computing methods and tools. We hope to return to an in-person User School in 2022.*

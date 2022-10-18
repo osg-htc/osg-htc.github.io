@@ -12,7 +12,7 @@ excerpt: In March, 251 OSG users, resource providers, and staff convened virtual
 In March, 251 OSG users, resource providers, and staff convened virtually for the OSG All-Hands Meeting 2022. A benefit of this year's virtual format, all talks from the meeting are [avaliable to watch](https://www.youtube.com/channel/UCVxyV0Lr1KiTeq7bTw3gwLw/playlists?view=50&sort=dd&shelf_id=1) on the OSG YouTube Channel. Reflective of the mission of the OSG 
 Consortium, the meeting builds upon the goals central to the organization –– advancing open science via the practice of distributed high-throughput 
 computing. This annual celebration of science has a reputation for both introducing researchers to services that transform their work, and also for 
-cultivating discussion about how OSG can better serve the research community –– the [OSG All-Hands Meeting 2022](https://opensciencegrid.org/all-hands/2022/) was no exception to this rich history of transformation and discussion.
+cultivating discussion about how OSG can better serve the research community –– the [OSG All-Hands Meeting 2022](/all-hands/2022/) was no exception to this rich history of transformation and discussion.
 
 The meeting kicked off with a series of introductory talks on the PATh Project, the OSG Consortium, and the new [PATh Facility](https://path-cc.io/services/credit-accounts/). 
 A highlight of the All-Hands Meeting each year, the David Swanson Memorial Award was presented to Colorado School of Mines PhD Student Connor Natzke, 
@@ -65,4 +65,4 @@ We’re deeply grateful for all the speakers, staff, and attendees who contribut
 
 … 
 
-*Browse the complete collection of videos from the OSG All-Hands Meeting 2022 on [OSG's YouTube channel](https://www.youtube.com/channel/UCVxyV0Lr1KiTeq7bTw3gwLw/playlists?view=50&sort=dd&shelf_id=1). To view slide decks, visit the [Indico event website](https://indico.fnal.gov/event/53029/). Learn more about the [OSG All-Hands Meeting 2022](https://opensciencegrid.org/all-hands/2022/), and browse the rich history of [past OSG All-Hands Meetings](https://opensciencegrid.org/all-hands/).*
+*Browse the complete collection of videos from the OSG All-Hands Meeting 2022 on [OSG's YouTube channel](https://www.youtube.com/channel/UCVxyV0Lr1KiTeq7bTw3gwLw/playlists?view=50&sort=dd&shelf_id=1). To view slide decks, visit the [Indico event website](https://indico.fnal.gov/event/53029/). Learn more about the [OSG All-Hands Meeting 2022](/all-hands/2022/), and browse the rich history of [past OSG All-Hands Meetings](/all-hands/).*

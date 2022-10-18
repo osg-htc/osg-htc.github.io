@@ -10,7 +10,7 @@ excerpt: |
 start_date: 2022-07-25
 end_date: 2022-07-29
 location: "University of Wisconsin-Madison"
-link: "https://opensciencegrid.org/user-school-2022/#applications"
+link: "/user-school-2022/#applications"
 image: "/assets/images/events/Madison_Skyline.jpeg"
 header_image: "/assets/images/events/Madison_Skyline.jpeg"
 banner_src: "/assets/images/events/Madison_Skyline.jpeg"
@@ -45,7 +45,7 @@ Graduate students, advanced undergraduates, post-doctoral students, faculty, and
 The University of Wisconsin-Madison.
 
 ### Application and Deadlines
-Details about the application process can be found on the [OSG User School 2022 site](https://opensciencegrid.org/user-school-2022/#applications).
+Details about the application process can be found on the [OSG User School 2022 site](/user-school-2022/#applications).
 
 **Note:** The application deadline has **passed.**
 
