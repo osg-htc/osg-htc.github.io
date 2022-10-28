@@ -8,7 +8,7 @@ This repository contains the source code of the OSG website; it is not the publi
 
 The real webpage for the OSG is <https://www.opensciencegrid.org>.
 
-# Deployment
+# Deployment 
 
 To have your changes merged into master you must create a PR and get one review. If you don't have anyone in mind you can request _@CannonLock_ and he will review it the next morning.
 
