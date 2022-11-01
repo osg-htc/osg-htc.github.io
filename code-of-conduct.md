@@ -44,6 +44,8 @@ Appeals of sanctions for off-meeting violations,
 with long term impacts,
 may be directed to the OSG Council co-chairs.
 
+*The OSG Council, the governing body off the OSG Consortium, wrote and approved the OSG Code of Conduct*
+
 -------------------------------------------------------------------------------
 
 [^1]: At the moment, the OSG CoC appointees are [the members of the OSG Executive Team](/management/#executive-team)
