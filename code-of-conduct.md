@@ -6,7 +6,7 @@ title: OSG Code of Conduct
 
 # OSG Code of Conduct
 
-*The OSG Council, the governing body off the OSG Consortium, wrote and approved the OSG Code of Conduct*
+*The OSG Council, the governing body of the OSG Consortium, wrote and approved the OSG Code of Conduct*
 
 The OSG Consortium believes that a culture of inclusion,
 integrity, and cooperation is necessary to achieve its scientific goals,
