@@ -6,7 +6,7 @@ title: OSG Code of Conduct
 
 # OSG Code of Conduct
 
-The OSG believes that a culture of inclusion,
+The OSG Consortium believes that a culture of inclusion,
 integrity, and cooperation is necessary to achieve its scientific goals,
 by affording all members the opportunity to reach their full potential.
 All OSG members, participants, vendors, staff, volunteers, conference and workshop attendees, invited speakers,
