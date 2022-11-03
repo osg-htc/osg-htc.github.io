@@ -3,6 +3,7 @@
 ---
 
 import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, SUMMARY_INDEX, DEBUG} from "./elasticsearch.js";
+import {GraccDisplay} from "./util.js";
 
 function makeDelay(ms) {
     let timer = 0;
@@ -88,86 +89,6 @@ class UsageToggles {
     }
 }
 
-
-/**
- * A node to create and interact with a Grafana embedded graph
- *
- * A single node handles one graph which should be updated on the fly rather then recreated
- */
-class GraccDisplay {
-    constructor({srcUrl, showDisplay, searchParams}) {
-        this.showDisplay = showDisplay
-        this.srcUrl = srcUrl
-        this.searchParams = searchParams
-        this.loaded = false
-    }
-
-    get node() {
-        if(!this._node){
-            let iframe = document.createElement("iframe")
-            iframe.width = "100%"
-            iframe.height = "100%"
-            iframe.src = this.src
-            iframe.addEventListener("load", () => {
-                this.loaded = true;
-                this.toggle()
-            })
-
-            let loadDisplay = document.createElement("div")
-            loadDisplay.classList.add("spinner-grow")
-            loadDisplay.role = "status"
-
-            let node = document.createElement("div")
-            node.classList.add("justify-content-center")
-            node.style.width = "100%"
-            node.style.height = "200px"
-            node.iframe = iframe
-            node.appendChild(iframe)
-            node.loadDisplay = loadDisplay
-            node.appendChild(loadDisplay)
-
-            this._node = node
-        }
-        return this._node
-    }
-
-    get searchParams(){
-        return this._searchParams
-    }
-
-    set searchParams(searchParams){
-        this._searchParams = searchParams
-        this.update()
-    }
-
-    get src() {
-        let url = new URL(this.srcUrl)
-        let searchParams = {...this.searchParams}
-        Object.entries(searchParams).forEach( ([k,v], i) => url.searchParams.append(k, v))
-        return url.toString()
-    }
-
-    async update(){
-        this.node.iframe.src = this.src
-        this.loaded = false
-        this.toggle()
-    }
-
-    updateSearchParams(searchParams){
-        this.searchParams = {
-            ...this.searchParams,
-            ...searchParams
-        }
-    }
-
-    async toggle(){
-        let showDisplay = await this.showDisplay(this.searchParams["var-Project"])
-        this.node.style.display = showDisplay ? "flex" : "none";
-        this.node.iframe.hidden = !this.loaded
-        this.node.loadDisplay.hidden = this.loaded
-    }
-}
-
 const GRAFANA_PROJECT_BASE_URL = "https://gracc.opensciencegrid.org/d-solo/tFUN4y44z/projects"
 const GRAFANA_BASE = {
     orgId: 1,
@@ -221,16 +142,18 @@ class ProjectDisplay{
         if(!this._graphDisplays){
             this._graphDisplays = this.grafanaGraphInfo.map(graph => {
                 let wrapper = document.getElementsByClassName(graph['className'])[0]
-                let graphDisplay = new GraccDisplay({
-                    srcUrl: GRAFANA_PROJECT_BASE_URL,
-                    showDisplay: graph['showDisplay'],
-                    searchParams: {
+                let graphDisplay = new GraccDisplay(
+                    GRAFANA_PROJECT_BASE_URL,
+                    graph['showDisplay'],
+                    {
                         to: graph['to'],
                         from: graph['from'],
                         orgId: graph['orgId'],
                         panelId: graph['panelId']
-                    }
-                })
+                    },
+                    "var-Project",
+                    graph
+                )
                 wrapper.appendChild(graphDisplay.node)
                 return graphDisplay
             })
