@@ -57,23 +57,6 @@ class ElasticSearchQuery {
 
         return await this.make_request(url, body, {method:method, ...options})
     }
-
-    async hasUsedCPU(){
-
-        let url = `${this.endpoint}/${this.index}/_search`
-        let method = "POST"
-        let body = {
-
-        }
-
-        let options = {method:method, body:JSON.stringify(body)}
-
-        if(DEBUG){
-            console.log(options)
-        }
-
-        console.log( await this.make_request(url, options))
-    }
 }
 
 export { ENDPOINT, DEBUG, SUMMARY_INDEX, DATE_RANGE }
