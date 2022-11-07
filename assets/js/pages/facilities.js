@@ -208,13 +208,15 @@ class Table {
             }, {
                 id: 'cpuProvided',
                 name: 'Contributed CPU Hours',
-                data: (row) => Math.floor(row.cpuProvided)
+                data: (row) => Math.floor(row.cpuProvided).toLocaleString()
             }, {
                 id: 'numFieldsOfScience',
-                name: 'Impacted Fields of Science'
+                name: 'Impacted Fields of Science',
+                data: (row) => row.numFieldsOfScience.toLocaleString()
             }, {
                 id: 'numProjects',
-                name: 'Impacted Research Projects'
+                name: 'Impacted Research Projects',
+                data: (row) => row.numProjects.toLocaleString()
             }
         ]
     }
@@ -236,7 +238,12 @@ class Table {
                 limit: 50,
                 buttonsCount: 1
             },
-            width: "100%"
+            width: "100%",
+            style: {
+                td: {
+                    'text-align': 'right'
+                }
+            }
         }).render(table.wrapper);
         this.grid.on('rowClick', this.row_click);
     }
