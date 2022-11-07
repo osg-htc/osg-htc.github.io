@@ -1,5 +1,5 @@
 ---
-layout: blank
+    layout: blank
 ---
 
 import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, SUMMARY_INDEX} from "../elasticsearch.js";
@@ -24,7 +24,7 @@ async function getElasticSearchData() {
     let es = new ElasticSearchQuery(SUMMARY_INDEX, ENDPOINT)
 
     // Query ES and ask for Sites that have provided resources in the last year
-    let response = await es.search({"size": 0, "query": {"bool": {"filter": [{"term": {"ResourceType": "Payload"}}, {"range": {"EndTime": {"lte": DATE_RANGE['now'], "gte": DATE_RANGE['oneYearAgo']}}}]}}, "aggs": {"facilities": {"terms": {"field": "OIM_Facility", "size": 99999999}, "aggs": {"facilityCpuProvided": {"sum": {"field": "CoreHours"}}, "facilityGpuProvided": {"sum": {"field": "GPUHours"}}, "countProjectsImpacted": {"cardinality": {"field": "ProjectName"}}, "countFieldsOfScienceImpacted": {"cardinality": {"field": "OIM_FieldOfScience"}}, "countOrganizationImpacted": {"cardinality": {"field": "OIM_Organization"}}, "gpu_bucket_filter": {"bucket_selector": {"buckets_path": {"totalGPU": "facilityGpuProvided", "totalCPU": "facilityCpuProvided"}, "script": "params.totalGPU > 0 || params.totalCPU > 0"}}}}}})
+    let response = await es.search({"size": 0, "query": {"range": {"EndTime": {"lte": DATE_RANGE['now'], "gte": DATE_RANGE['oneYearAgo']}}}, "aggs": {"facilities": {"terms": {"field": "OIM_Facility", "size": 99999999}, "aggs": {"facilityCpuProvided": {"sum": {"field": "CoreHours"}}, "facilityGpuProvided": {"sum": {"field": "GPUHours"}}, "countProjectsImpacted": {"cardinality": {"field": "ProjectName"}}, "countFieldsOfScienceImpacted": {"cardinality": {"field": "OIM_FieldOfScience"}}, "countOrganizationImpacted": {"cardinality": {"field": "OIM_Organization"}}, "gpu_bucket_filter": {"bucket_selector": {"buckets_path": {"totalGPU": "facilityGpuProvided", "totalCPU": "facilityCpuProvided"}, "script": "params.totalGPU > 0 || params.totalCPU > 0"}}}}}})
 
     // Decompose this data into information we want, if they provided GPU or CPU
     let facilityBuckets = response.aggregations.facilities.buckets
@@ -50,7 +50,7 @@ async function getData() {
 
         // Combine the data sets on facility name
         getData.data = Object.entries(topologyData).reduce((p, [k, v]) => {
-            if (k in elasticSearchData) {
+            if (k in elasticSearchData && v.IsCCStar) {
                 p[k] = {...elasticSearchData[k], ...topologyData[k]}
             }
             return p
