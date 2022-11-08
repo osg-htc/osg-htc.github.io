@@ -50,7 +50,7 @@ async function getData() {
 
         // Combine the data sets on facility name
         getData.data = Object.entries(topologyData).reduce((p, [k, v]) => {
-            if (k in elasticSearchData && v.IsCCStar) {
+            if (k in elasticSearchData && v.IsCCStar && v.Name !== "New Mexico State University") {
                 p[k] = {...elasticSearchData[k], ...topologyData[k]}
             }
             return p
