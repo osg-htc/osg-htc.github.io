@@ -49,6 +49,9 @@ For problems that can be run as numerous, self-contained jobs, the OSPool provid
 - model optimization approaches, including Monte Carlo methods
 - machine learning and AI executed with multiple independent training tasks, different parameters, and/or data subsets
 
+{: .rounded .p-2 .py-3 .text-center .bg-light .my-4 }
+__Find projects similar to yours on our__ <a class="ms-2 btn btn-secondary" href="/projects.html"><b>Projects Page</b></a>
+
 The OSPool is made up of mostly opportunistic capacity - contributing clusters may interrupt jobs at any time. Thus, the OSPool supports workloads of numerous jobs that individually complete or checkpoint within 20 hours. 
 
 __Importantly, many compute tasks can take advantage of the OSPool with simple modifications, and we’d love to discuss options with you!__
