@@ -36,8 +36,7 @@ __Namely, you can benefit from the OSPool Capacity if you are a__
 
 Institutions or collaborations that would like to harness the capacity of the OSPool should contact [support@osg-htc.org](mailto:support@osg-htc.org)
 
-[View projects](https://gracc.opensciencegrid.org/d/000000037/payload-jobs-summary?orgId=1&var-ReportableVOName=osg&var-Project=All&var-Facility=All&var-User=All&var-ExitCode=All&var-Probe=All&var-interval=1d)
- using the OSPool in OSG’s Accounting System (GRACC).
+[View projects](/projects.html) using the OSPool on the OSG Project Page.
 
 ## What types of work run well on the OSPool?
 
