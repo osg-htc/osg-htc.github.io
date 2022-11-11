@@ -141,9 +141,11 @@ videos and more.
 - <a href="https://sites.clarkson.edu/acres/" target="_blank">Clarkson University</a>
 - <a href="https://www.fandm.edu/" target="_blank">Franklin and Marshall College</a>
 - <a href="https://pace.gatech.edu/" target="_blank">Georgia Institute of Technology</a>
+- <a href="https://lamar.edu" target="_blank">Lamar University</a>
 - <a href="https://www1.lehigh.edu/" target="_blank">Lehigh University</a>
 - <a href="http://www.hpc.lsu.edu/about/index.php" target="_blank"> Louisiana State University</a>
 - <a href="https://www.lsuhsc.edu/" target="_blank">LSU Health</a>
+- <a href="https://www.psu.edu/" target="_blank">Penn State</a>
 - <a href="https://www.pdx.edu/" target="_blank">Portland State University</a>
 - <a href="https://www.purdue.edu/newsroom/releases/2019/Q3/nsf-supports-purdue-team-developing-online-manufacturing-education.html" target="_blank">Purdue University</a>
 - <a href="https://www.rhodes.edu/" target="_blank">Rhodes University</a>
@@ -159,7 +161,9 @@ videos and more.
 - <a href="https://news.engr.uconn.edu/500k-nsf-grant-awarded-to-dr-bing-wang-uconn-health-center-2.php" target="_blank">University of Connecticut</a>
 - <a href="https://www.nd.edu/" target="_blank">University of Notre Dame</a>
 - <a href="https://www.usc.edu/" target="_blank">University of Southern California</a>
+- <a href="https://www.utc.edu/" target="_blank">University of Tennessee-Chattanooga</a>
 - <a href="https://www1.villanova.edu/university.html" target="_blank">University of Villanova</a>
+- <a href="https://www.uwb.edu/" target="_blank">University of Washington-Bothell</a>
 - <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1925467&HistoricalAwards=false" target="_blank">Wayne State University</a>
 - <a href="https://www.wtamu.edu/" target="_blank">West Texas A&M University</a>
 
