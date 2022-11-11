@@ -155,9 +155,9 @@ videos and more.
 - <a href="https://tcnj.edu/" target="_blank">The College of New Jersey</a>
 - <a href="https://now.tufts.edu/articles/tufts-awarded-nsf-grant-expand-big-data-innovation-and-discovery" target="_blank">Tufts University</a>
 - <a href="https://www.ua.edu/" target="_blank">University of Alabama</a>
-- <a href="https://ucsdnews.ucsd.edu/pressrelease/sdsc-awarded-nsf-grant-for-triton-shared-computing-cluster-upgrade" target="_blank">University of California San Diego</a>
-- <a href="https://www.colorado.edu/rc/" target="_blank"> University of Colorado Boulder</a>
-- <a href="https://www.ucdenver.edu/" target="_blank">University of Colorado Denver</a>
+- <a href="https://ucsdnews.ucsd.edu/pressrelease/sdsc-awarded-nsf-grant-for-triton-shared-computing-cluster-upgrade" target="_blank">University of California-San Diego</a>
+- <a href="https://www.colorado.edu/rc/" target="_blank"> University of Colorado-Boulder</a>
+- <a href="https://www.ucdenver.edu/" target="_blank">University of Colorado-Denver</a>
 - <a href="https://news.engr.uconn.edu/500k-nsf-grant-awarded-to-dr-bing-wang-uconn-health-center-2.php" target="_blank">University of Connecticut</a>
 - <a href="https://www.nd.edu/" target="_blank">University of Notre Dame</a>
 - <a href="https://www.usc.edu/" target="_blank">University of Southern California</a>
