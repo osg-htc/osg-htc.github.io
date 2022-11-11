@@ -16,6 +16,9 @@ computing (dHTC) technologies. The pool aggregates mostly opportunistic
 and other organizations, making them available to the US-based open science 
 community.
 
+{: .rounded .p-2 .py-3 .text-center .bg-light .my-4 }
+__See who is harnessing the capacity of the OSPool to advance their research on our__ <br><a class="ms-2 mt-3 btn btn-secondary" href="/projects.html"><b>Projects Page</b></a>
+
 Researchers can submit computational work to the OSPool via access points 
 operated locally to their campuses, or via access points operated as part 
 of the [OSG Connect](https://connect.osg-htc.org/) service, which serves researchers affiliated with 
@@ -47,9 +50,6 @@ For problems that can be run as numerous, self-contained jobs, the OSPool provid
 - parameter sweeps
 - model optimization approaches, including Monte Carlo methods
 - machine learning and AI executed with multiple independent training tasks, different parameters, and/or data subsets
-
-{: .rounded .p-2 .py-3 .text-center .bg-light .my-4 }
-__See who is harnessing the capacity of the OSPool to advance their research on our__ <br><a class="ms-2 mt-3 btn btn-secondary" href="/projects.html"><b>Projects Page</b></a>
 
 The OSPool is made up of mostly opportunistic capacity - contributing clusters may interrupt jobs at any time. Thus, the OSPool supports workloads of numerous jobs that individually complete or checkpoint within 20 hours. 
 
