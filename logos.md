@@ -20,19 +20,20 @@ superior resolution and smaller file size. PNGs are also made available for use.
 
 ## SVG 
 
-### OSG Logo
+### <a href="/assets/images/logos/OSG-logo.svg" download>OSG Logo</a>
 
 <a href="/assets/images/logos/OSG-logo.svg" download><img class="w-50" src="/assets/images/logos/OSG-logo.svg" alt="OSG Logo"/></a>
 
-### OSG Logo with Text
+### <a href="/assets/images/logos/OSG_Logo_W_Text.svg" download>OSG Logo with Text</a>
 
 <a href="/assets/images/logos/OSG_Logo_W_Text.svg" download><img class="w-50" src="/assets/images/logos/OSG_Logo_W_Text.svg" alt="OSG Logo With Text"/></a>
 
 ## PNG
 
-### OSG Logo
+### <a href="/assets/images/logos/OSG-logo.png" download>OSG Logo</a>
 
 <a href="/assets/images/logos/OSG-logo.png" download><img class="w-50" src="/assets/images/logos/OSG-logo.png" alt="OSG Logo"/></a>
 
-### OSG Logo with Text
+### <a href="/assets/images/logos/OSG_Logo_W_Text.png" download>OSG Logo with Text</a>
+
 <a href="/assets/images/logos/OSG_Logo_W_Text.png" download><img class="w-50" src="/assets/images/logos/OSG_Logo_W_Text.png" alt="OSG Logo With Text"/></a>
