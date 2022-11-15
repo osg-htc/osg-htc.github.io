@@ -137,35 +137,9 @@ videos and more.
 </div>
 
 {: .fs-5 }
-- <a href="https://www.amnh.org/research/computational-sciences" target="_blank">American Museum of Natural History</a>
-- <a href="https://sites.clarkson.edu/acres/" target="_blank">Clarkson University</a>
-- <a href="https://www.fandm.edu/" target="_blank">Franklin and Marshall College</a>
-- <a href="https://pace.gatech.edu/" target="_blank">Georgia Institute of Technology</a>
-- <a href="https://lamar.edu" target="_blank">Lamar University</a>
-- <a href="https://www1.lehigh.edu/" target="_blank">Lehigh University</a>
-- <a href="http://www.hpc.lsu.edu/about/index.php" target="_blank"> Louisiana State University</a>
-- <a href="https://www.lsuhsc.edu/" target="_blank">LSU Health</a>
-- <a href="https://www.psu.edu/" target="_blank">Penn State</a>
-- <a href="https://www.pdx.edu/" target="_blank">Portland State University</a>
-- <a href="https://www.purdue.edu/newsroom/releases/2019/Q3/nsf-supports-purdue-team-developing-online-manufacturing-education.html" target="_blank">Purdue University</a>
-- <a href="https://www.rhodes.edu/" target="_blank">Rhodes University</a>
-- <a href="https://www.rice.edu/" target="_blank">Rice University</a>
-- <a href="https://www.siue.edu/its/cyberinfrastructure/" target="_blank">Southern Illinois University Edwardsville</a>
-- <a href="https://news.syr.edu/blog/2020/09/03/national-science-foundation-awards-390000-to-syracuse-university-computing-initiative/" target="_blank">Syracuse University</a>
-- <a href="https://tcnj.edu/" target="_blank">The College of New Jersey</a>
-- <a href="https://now.tufts.edu/articles/tufts-awarded-nsf-grant-expand-big-data-innovation-and-discovery" target="_blank">Tufts University</a>
-- <a href="https://www.ua.edu/" target="_blank">University of Alabama</a>
-- <a href="https://ucsdnews.ucsd.edu/pressrelease/sdsc-awarded-nsf-grant-for-triton-shared-computing-cluster-upgrade" target="_blank">University of California-San Diego</a>
-- <a href="https://www.colorado.edu/rc/" target="_blank"> University of Colorado-Boulder</a>
-- <a href="https://www.ucdenver.edu/" target="_blank">University of Colorado-Denver</a>
-- <a href="https://news.engr.uconn.edu/500k-nsf-grant-awarded-to-dr-bing-wang-uconn-health-center-2.php" target="_blank">University of Connecticut</a>
-- <a href="https://www.nd.edu/" target="_blank">University of Notre Dame</a>
-- <a href="https://www.usc.edu/" target="_blank">University of Southern California</a>
-- <a href="https://www.utc.edu/" target="_blank">University of Tennessee-Chattanooga</a>
-- <a href="https://www1.villanova.edu/university.html" target="_blank">University of Villanova</a>
-- <a href="https://www.uwb.edu/" target="_blank">University of Washington-Bothell</a>
-- <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1925467&HistoricalAwards=false" target="_blank">Wayne State University</a>
-- <a href="https://www.wtamu.edu/" target="_blank">West Texas A&M University</a>
+{% assign cc_star_sites = site.data.cc_star | sort: "name" %}
+{% for cc_star_site in cc_star_sites %}
+- <a href="{{ cc_star_site.href }}" target="_blank">{{ cc_star_site.name }}</a>{% endfor %}
 
 ### CC* Campus impact on Open Science
 
