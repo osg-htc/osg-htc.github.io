@@ -313,11 +313,12 @@ class ProjectPage{
             }
         }
 
+        let osgconnect_db_jobs = new Set(await (await fetch("/assets/data/osgconnect_projects.json")).json())
         let usageJson = await UsageToggles.getUsage()
         let responseJson = await response.json()
 
         this.data = Object.entries(responseJson).reduce((p, [k,v]) => {
-            if(k in usageJson){
+            if(k in usageJson && osgconnect_db_jobs.has(k)){
                 p[k] = v
             }
             return p
