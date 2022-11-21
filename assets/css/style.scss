@@ -107,17 +107,6 @@ th, td {
 }
 .wrapper { min-width: 1000px; }
 
-#ospool-statistics-display {
-  position: relative;
-  height: 500px;
-  overflow-x: hidden;
-
-  .job-text {
-    font-weight: 700;
-  }
-
-}
-
 @include media-breakpoint-down(md) {
   #ospool-statistics-display {
     position: relative;
