@@ -5,68 +5,26 @@ js_extension:
 -   src: "/assets/js/pages/ospool.js"
     loading: "defer"
 ---
-<h1 class="text-center pt-5 pb-3 fw-bold">OSPool: Compute Capacity for Open Science</h1>
+<h1 class="text-center pt-5 fw-bold">OSPool serving Open Science throughput computing</h1>
+
 <div id="ospool-statistics-display" class="my-5">
   <div class="container-xxl">
-    <div class="row justify-content-center pb-3">
-      <div class="row justify-content-center pb-3">
-        <div class="col-auto"><h1 class="job-text"><span id="ospool-jobs">1</span> Daily Jobs</h1></div>
-      </div>
-    </div>
-    <div class="py-5">
-      <div class="row justify-content-between">
-        <div class="col-12 col-md-auto pt-1 pt-md-0">
-          <div class="d-flex flex-column">
-            <h2 class="fw-light mx-auto fw-normal">
-              <span id="ospool-file-transfers">1</span><span> File Transfers</span>
-            </h2>
-            <h2 class="fw-light mx-auto">Triggered</h2>
-          </div>
-        </div>
-        <div class="col-12 col-md-auto pt-1 pt-md-0">
-          <div class="d-flex flex-column">
-            <h2 class="fw-light mx-auto fw-normal">
-              <span id="ospool-core-hours">1</span><span> Core Hours</span>
-            </h2>
-            <h2 class="fw-light mx-auto">Delivered</h2>
-          </div>
-        </div>
-        <div class="col-12 col-md-auto pt-1 pt-md-0">
-          <div class="d-flex flex-column">
-            <h2 class="fw-light mx-auto fw-normal">
-              <span id="ospool-users">1</span><span> Users</span>
-            </h2>
-            <h2 class="fw-light mx-auto">Supported</h2>
-          </div>
-        </div>
-        <div class="col-12 col-md-auto pt-1 pt-md-0">
-          <div class="d-flex flex-column">
-            <h2 class="fw-light mx-auto fw-normal">
-              <span id="ospool-projects">1</span><span> Projects</span>
-            </h2>
-            <h2 class="fw-light mx-auto">Impacted</h2>
-          </div>
-        </div>
+    <div class="row justify-content-center p-3">
+      <div class="col-12 col-xl-7 col-lg-8 col-md-10 pt-1 pt-md-0">
+        <h1 class="text-center">
+          On <b id="ospool-date"></b>, <b id="ospool-jobs">1</b> jobs completed<br> They were submitted by <b id="ospool-users">1</b> researchers<br> They triggered <b id="ospool-file-transfers">1</b> file transfers, and they consumed <b id="ospool-core-hours">1</b> core hours
+        </h1>
       </div>
     </div>
     <div class="text-center">
       <a href="/projects.html" class="btn btn-secondary">View all OSPool Projects</a>
     </div>
-    <div class="row justify-content-center pt-2">
-      <div class="col-auto"><b>OSPool Usage <span id="ospool-date"></span></b></div>
-    </div>
   </div>
 </div>
-
-<div class="container-xxl pb-5">
+<div class="container-xxl">
   <div class="row justify-content-center">
     <div class="col-12 col-xl-7 col-lg-8 col-md-10">
-      {% include layout/sub-page-header.html class="fw-bold pb-3" title="What is the OSPool?" %}
-    </div>
-  </div>
-
-  <div class="row justify-content-center">
-    <div class="col-12 col-xl-7 col-lg-8 col-md-10">
+      <h1 id="what-is-the-ospool">What is the OSPool?</h1>
       <p>
         The OSPool is a source of
         computing capacity that accessible to any researcher affiliated with a
