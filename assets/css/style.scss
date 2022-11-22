@@ -110,7 +110,7 @@ th, td {
 @include media-breakpoint-down(md) {
   #ospool-statistics-display {
     position: relative;
-    height: 650px;
+    height: 400px;
     overflow-x: hidden;
 
     .job-text {
@@ -121,7 +121,6 @@ th, td {
     h2 {
       font-size: 2rem;
     }
-
   }
 }
 
