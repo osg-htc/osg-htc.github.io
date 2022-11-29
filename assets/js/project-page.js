@@ -3,7 +3,7 @@
 ---
 
 import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, SUMMARY_INDEX, DEBUG} from "./elasticsearch.js";
-import {GraccDisplay} from "./util.js";
+import {GraccDisplay, locale_int_string_sort, string_sort, hideNode} from "./util.js";
 
 function makeDelay(ms) {
     let timer = 0;
@@ -30,12 +30,26 @@ class UsageToggles {
         let usageQueryResult = await elasticSearch.search({
             size: 0,
             query: {
-                range: {
-                    EndTime: {
-                        lte: DATE_RANGE['now'],
-                        gte: DATE_RANGE['oneYearAgo']
-                    }
-                }
+                bool: {
+                    filter: [
+                        {
+                            term: {ResourceType: "Payload"}
+                        },
+                        {
+                            range: {
+                                EndTime: {
+                                    lte: DATE_RANGE['now'],
+                                    gte: DATE_RANGE['oneYearAgo']
+                                }
+                            }
+                        },
+                        {
+                            regexp: {
+                                ProbeName: {"value": ".*(osgconnect\.net|grid\.uchicago\.edu|ci-connect\.net|xd-login\.opensciencegrid.org|SUBMIT.MIT.EDU|csiu.grid.iu.edu|otsgrid.iit.edu|workflow.isi.edu|lsst-glidein.rcac.purdue.edu|scosg16.jlab.org|gluex.phys.uconn.edu|login.duke.ci-connect.net|huxley-osgsub-001.sdmz.amnh.org|pcf-osg.t2.ucsd.edu|login.ci-connect.uchicago.edu|pcf-osg.t2.ucsd.edu|login.ci-connect.uchicago.edu|aragon.cyverse.org|akbul.cyverse.org|glidein-1.sbgrid.org|ce1.opensciencegrid.org|descmp3.cosmology.illinois.edu|osg-learn.chtc.wisc.edu|xd-submit0000.chtc.wisc.edu|login.snowmass21.io|nsgosg.sdsc.edu|osgsub01.sdcc.bnl.gov)"}
+                            }
+                        }
+                    ]
+                },
             },
             aggs: {
                 projects: {
@@ -53,6 +67,11 @@ class UsageToggles {
                             sum: {
                                 field: "GPUHours"
                             }
+                        },
+                        projectJobsRan: {
+                            sum: {
+                                field: "Njobs"
+                            }
                         }
                     }
                 }
@@ -64,7 +83,8 @@ class UsageToggles {
         this.usage = projectBuckets.reduce((p, v) => {
             p[v['key']] = {
                 cpu: v['projectCpuUse']['value'] != 0,
-                gpu: v['projectGpuUse']['value'] != 0
+                gpu: v['projectGpuUse']['value'] != 0,
+                jobs: v['projectJobsRan']['value']
             }
             return p
         }, {})
@@ -107,20 +127,17 @@ class ProjectDisplay{
                 className: "facilities-int",
                 panelId: 12,
                 showDisplay: UsageToggles.usedCpu,
+                height: "400px",
                 ...GRAFANA_BASE
             },{
                 className: "facilities-bar-graph",
                 panelId: 10,
                 showDisplay: UsageToggles.usedCpu,
+                height: "400px",
                 ...GRAFANA_BASE
             },{
                 className: "gpu-hours-int",
                 panelId: 16,
-                showDisplay: UsageToggles.usedGpu,
-                ...GRAFANA_BASE
-            },{
-                className: "gpu-hours-bar-graph",
-                panelId: 14,
                 showDisplay: UsageToggles.usedGpu,
                 ...GRAFANA_BASE
             },{
@@ -129,8 +146,8 @@ class ProjectDisplay{
                 showDisplay: UsageToggles.usedCpu,
                 ...GRAFANA_BASE
             },{
-                className: "cpu-core-hours-bar-graph",
-                panelId: 2,
+                className: "jobs-ran-int",
+                panelId: 22,
                 showDisplay: UsageToggles.usedCpu,
                 ...GRAFANA_BASE
             }
@@ -178,24 +195,11 @@ class ProjectDisplay{
 }
 
 class Search {
-    constructor(data_function, listener) {
+    constructor(data, listener) {
         this.node = document.getElementById("project-search")
-        this.lunr_idx = undefined
-        this.data_function = data_function
         this.listener = listener
         this.timer = undefined
         this.node.addEventListener("input", this.search)
-    }
-    search = () => {
-        clearTimeout(this.timer)
-        this.timer = setTimeout(this.listener, 250)
-    }
-    initialize = async () => {
-
-        if(this.lunr_idx){return}
-
-        let data = Object.values(await this.data_function())
-
         this.lunr_idx = lunr(function () {
             this.ref('Name')
             this.field('Department')
@@ -212,7 +216,11 @@ class Search {
             }, this)
         })
     }
-    filter_data = (data) => {
+    search = () => {
+        clearTimeout(this.timer)
+        this.timer = setTimeout(this.listener, 250)
+    }
+    filter = (data) => {
         if(this.node.value == ""){
             return data
         } else {
@@ -235,21 +243,30 @@ class Table {
         })
         this.columns = [
             {
+                id: 'jobs',
+                name: 'Jobs Ran',
+                data: (row) => Math.floor(row.jobs).toLocaleString(),
+                sort: { compare: locale_int_string_sort }
+            },
+            {
                 id: 'Name',
-                name: 'Name'
+                name: 'Name',
+                sort: { compare: string_sort }
             }, {
                 id: 'PIName',
-                name: 'PI Name'
+                name: 'PI Name',
+                sort: { compare: string_sort }
             }, {
                 id: 'Organization',
-                name: 'Organization'
+                name: 'Organization',
+                sort: { compare: string_sort }
             }, {
                 id: 'FieldOfScience',
-                name: 'Field Of Science'
+                name: 'Field Of Science',
+                sort: { compare: string_sort }
             }
         ]
-    }
-    initialize = (data) => {
+
         let table = this;
         this.grid =  new gridjs.Grid({
             columns: table.columns,
@@ -260,19 +277,25 @@ class Table {
                 td: "pointer",
                 paginationButton: "mt-2 mt-sm-0"
             },
-            data: async () => Object.values(await table.data_function()),
+            data: async () => Object.values(await table.data_function()).sort((a, b) => b.jobs - a.jobs),
             pagination: {
                 enabled: true,
                 limit: 50,
                 buttonsCount: 1
             },
-            width: "1000px"
+            width: "1000px",
+            style: {
+                td: {
+                    'text-align': 'right'
+                }
+            }
         }).render(table.wrapper);
         this.grid.on('rowClick', this.row_click);
     }
-    update = (data) => {
+    update = async () => {
+        let table = this
         this.grid.updateConfig({
-            data: data
+            data: Object.values(await table.data_function()).sort((a, b) => b.jobs - a.jobs)
         }).forceRender();
     }
     toggle_row = (toggled_row, project) => {
@@ -281,23 +304,37 @@ class Table {
     }
     row_click = async (PointerEvent, e) => {
         let data = await this.data_function()
-        let row_name = e["cells"][0].data
+        let row_name = e["cells"][1].data
         let project = data[row_name]
         this.toggle_row(PointerEvent.currentTarget, project)
     }
 }
 
-class ProjectPage{
-    constructor() {
-        this.mode = undefined
-        this.data = undefined
-        this.filtered_data = undefined
-        this.wrapper = document.getElementById("wrapper")
-        this.search = new Search(this.get_data, this.update_data)
-        this.table = new Table(this.wrapper, this.get_data)
-        this.table.initialize()
+class DataManager {
+    constructor(filters, consumerToggles) {
+        this.filters = filters ? filters : {}
+        this.consumerToggles = consumerToggles ? consumerToggles : []
     }
-    get_data = async () => {
+
+    toggleConsumers = () => {
+        this.consumerToggles.forEach(f => f())
+    }
+
+    addFilter = (name, filter) => {
+        this.filters[name] = filter
+        this.toggleConsumers()
+    }
+
+    removeFilter = (name) => {
+        delete this.filters[name]
+        this.toggleConsumers()
+    }
+
+    /**
+     * Compiles the project data and does some prefilters to dump unwanted data
+     * @returns {Promise<*>}
+     */
+    getData = async () => {
 
         if( this.data ){ return this.data }
 
@@ -319,25 +356,73 @@ class ProjectPage{
 
         this.data = Object.entries(responseJson).reduce((p, [k,v]) => {
             if(k in usageJson && osgconnect_db_jobs.has(k)){
-                p[k] = v
+                p[k] = {...v, ...usageJson[k]}
             }
             return p
         }, {})
 
-        this.search.initialize()
-
         return this.data
     }
-    update_data = () => {
 
-        let new_filtered_data = this.search.filter_data(this.data)
+    /**
+     * Filters the original data and returns the remaining data
+     * @returns {Promise<*>}
+     */
+    getFilteredData = async () => {
+        let filteredData = await this.getData()
+        for(const filter of Object.values(this.filters)) {
+            filteredData = filter(filteredData)
+        }
+        return filteredData
+    }
+}
 
-        if(JSON.stringify(this.filtered_data) != JSON.stringify(new_filtered_data)){
-            this.filtered_data = new_filtered_data
-            this.table.update(Object.values(this.filtered_data))
+class ProjectPage{
+    constructor() {
+        this.initialize()
+    }
+
+    /**
+     * Initializes the project page objects
+     *
+     * Easier to do this all in an async environment so I can await on data grabs
+     * @returns {Promise<void>}
+     */
+    initialize = async () => {
+        this.mode = undefined
+        this.dataManager = new DataManager()
+
+        this.wrapper = document.getElementById("wrapper")
+        this.table = new Table(this.wrapper, this.dataManager.getFilteredData)
+        this.dataManager.consumerToggles.push(this.table.update)
+
+        this.search = new Search(Object.values(await this.dataManager.getData()), this.table.update)
+        this.dataManager.addFilter("search", this.search.filter)
+        this.dataManager.addFilter("minimumJobsFilter", this.minimumJobsFilter)
+
+        this.toggleActiveFilterButton = document.getElementById("toggle-active-filter")
+        this.toggleActiveFilterButton.addEventListener("click", this.toggleActiveFilter)
+    }
+
+    minimumJobsFilter = (data) => {
+        return Object.entries(data).reduce((pv, [k,v]) => {
+            if(v['jobs'] >= 100){
+                pv[k] = v
+            } else {
+                console.log(k)
+            }
+            return pv
+        }, {})
+    }
+
+    toggleActiveFilter = () => {
+        if("minimumJobsFilter" in this.dataManager.filters){
+            this.dataManager.removeFilter("minimumJobsFilter")
+        } else {
+            this.dataManager.addFilter("minimumJobsFilter", this.minimumJobsFilter)
         }
     }
 }
 
-UsageToggles.getUsage()
+
 const project_page = new ProjectPage()

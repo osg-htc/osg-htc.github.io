@@ -141,7 +141,6 @@ th, td {
   }
 }
 
-// Hero Image for PATh
 #ospool-statistics-display::before {
   content: " ";
   position: absolute;
@@ -150,3 +149,4 @@ th, td {
   z-index: -1;
   background: url({{ '/assets/images/Waves_Background-01.png' | relative_url }}) no-repeat center bottom;;
 }
+
