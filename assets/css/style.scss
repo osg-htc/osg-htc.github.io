@@ -151,7 +151,7 @@ th, td {
 }
 
 @include media-breakpoint-down(md) {
-  .line-display {
+  .wave-short-display {
     position: relative;
     height: 175px;
     overflow-x: hidden;
@@ -164,7 +164,7 @@ th, td {
 }
 
 @include media-breakpoint-up(md) {
-  .line-display {
+  .wave-short-display {
     position: relative;
     height: 150px;
     overflow-x: hidden;
@@ -176,12 +176,12 @@ th, td {
   }
 }
 
-.line-display::before {
+.wave-short-display::before {
   content: " ";
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: url({{ '/assets/images/Lines.png' | relative_url }}) no-repeat center bottom;;
+  background: url({{ '/assets/images/Waves_Background_Short.png' | relative_url }}) no-repeat center bottom;;
 }
 
