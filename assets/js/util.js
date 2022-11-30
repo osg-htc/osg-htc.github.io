@@ -32,6 +32,7 @@ class GraccDisplay {
 
             let node = document.createElement("div")
             node.classList.add("justify-content-center")
+            node.classList.add("d-flex")
             node.style.width = this.width ? this.width : "100%"
             node.style.height = this.height ? this.height : "200px"
             node.iframe = iframe
@@ -81,4 +82,21 @@ class GraccDisplay {
     }
 }
 
-export {GraccDisplay}
+let string_sort = (a, b) => {
+    let a_standardized = a.toUpperCase()
+    let b_standardized = b.toUpperCase()
+
+    return a_standardized.localeCompare(b_standardized)
+}
+
+let locale_int_string_sort = (a, b) => {
+    let a_int = parseInt(a.replace(/[^0-9\.]/g, ''))
+    let b_int = parseInt(b.replace(/[^0-9\.]/g, ''))
+    return b_int - a_int
+}
+
+let hideNode = (e) => {
+    e.currentTarget.hidden = true
+}
+
+export {GraccDisplay, string_sort, locale_int_string_sort, hideNode}

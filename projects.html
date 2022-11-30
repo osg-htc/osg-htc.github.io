@@ -12,7 +12,7 @@
     css_extension:
     -  href: "https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
     description: |
-        The below projects were active in the last year across reporting pools in the OSG Consortium. Some represent a small research group, while others represent a large collaboration or campus with numerous researchers using resources in OSG pools.
+        These projects were active in the last year across reporting pools in the OSG Consortium. Some represent a small research group, while others represent a large collaboration or campus with numerous researchers using resources in OSG pools.
 ---
 
 <style>
@@ -22,13 +22,23 @@
         margin-top:auto;
         margin-bottom:auto;
     }
+    .overlay {
+        grid-area: 1/1;
+        width: 1000px;
+        z-index: 100000;
+        background-color: #4a4a4ae0;;
+        color: white;
+    }
+    tr td:nth-child(2) {
+        text-decoration: underline;
+    }
 </style>
 <div class="container-xxl">
     {% include layout/title.html %}
     <div class="row">
         <div class="col-12 col-xl-7 col-lg-8 col-md-10">
             <p>
-                The below projects used OSPool resources to advance their research in the past year.
+                The below projects used OSPool resources to advance their research in the past year and ran more than 100 jobs.
                 To run your own research on the OSPool sign up now on <a href="https://connect.osg-htc.org">OSG Connect</a>.
             </p>
             <p class="d-none d-sm-block">
@@ -40,19 +50,30 @@
 
 <div class="container-xxl py-2">
     <div class="row">
-        <div class="col-12 col-xl-7 col-lg-8 col-md-10">
+        <div class="col-12 col-xl-7 col-lg-8 col-md-10 mb-2">
             <input class="form-control" id="project-search" placeholder="Search Project Details" type="search"/>
         </div>
     </div>
 </div>
-<div id="wrapper" class="container-xxl overflow-auto"></div>
+
+<div class="container-xxl" style="display:grid;" >
+    <div id="wrapper" class="overflow-auto"></div>
+    <div class="row">
+        <div class="col-auto">
+            <button id="toggle-active-filter" class="btn btn-outline-primary pt-2"  data-bs-toggle="tooltip" data-bs-placement="top" title="Shows All OSPool Projects with > 0 Usage">
+                Toggle All Active Projects
+            </button>
+        </div>
+    </div>
+</div>
+
 
 <div class="modal fade" id="project-display" tabindex="-1" aria-labelledby="project-Name" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 id="project-Name" class="mb-0 project-Name"></h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -73,19 +94,16 @@
                         <p class="project-Description"></p>
                     </div>
                 </div>
-                <h5>Resource Usage</h5>
-                <div class="row project-usage-row">
-                    <div class="col-12 col-md-6 cpu-core-hours-bar-graph"></div>
-                    <div class="col-12 col-md-6 cpu-core-hours-int"></div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6 gpu-hours-bar-graph"></div>
-                    <div class="col-12 col-md-6 gpu-hours-int"></div>
-                </div>
                 <h5>Where Jobs Have Run</h5>
                 <div class="row project-usage-row">
-                    <div class="col-12 col-md-6 facilities-bar-graph"></div>
-                    <div class="col-12 col-md-6 facilities-int"></div>
+                    <div class="col-12 col-md-8 facilities-bar-graph"></div>
+                    <div class="col-12 col-md-4 facilities-int"></div>
+                </div>
+                <h5>Resource Usage</h5>
+                <div class="row project-usage-row">
+                    <div class="col-12 col-md-4 jobs-ran-int"></div>
+                    <div class="col-12 col-md-4 cpu-core-hours-int"></div>
+                    <div class="col-12 col-md-4 gpu-hours-int"></div>
                 </div>
             </div>
             <div class="modal-footer">
