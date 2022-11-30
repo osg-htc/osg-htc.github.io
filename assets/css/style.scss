@@ -154,7 +154,7 @@ th, td {
   .wave-short-display {
     position: relative;
     height: 175px;
-    overflow-x: hidden;
+    overflow: hidden;
 
     .job-text {
       font-size: 2.5rem;
@@ -167,7 +167,7 @@ th, td {
   .wave-short-display {
     position: relative;
     height: 150px;
-    overflow-x: hidden;
+    overflow: hidden;
 
     .job-text {
       font-size: 4rem;
