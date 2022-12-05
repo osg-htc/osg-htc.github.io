@@ -92,7 +92,7 @@ CC* applicants are encouraged to email OSG Support with questions or requests fo
 <div class="bg-light py-3 my-2 mb-4">
 <div class="row justify-content-center">
 <div class="col-auto">
-<a class="btn btn-primary fs-5" href="mailto:cc-star-proposals@opensciencegrid.org">Email OSG Leadership to Discuss CC* Opportunities</a>
+<a class="btn btn-primary fs-5" href="mailto:cc-star-proposals@osg-htc.org">Email OSG Leadership to Discuss CC* Opportunities</a>
 </div>
 </div>
 </div>
