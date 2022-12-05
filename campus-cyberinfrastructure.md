@@ -68,6 +68,10 @@ innovation.
 The 2023 solicitation has three program areas which explicitly mention 
 and encourage the use of OSG services to meet requirements.
 
+##### Due Date
+
+March 1st, 2023
+
 ##### OSG/PATh Supported Program Areas
 
 __(4) Campus Computing and the Computing Continuum__
@@ -91,10 +95,6 @@ its required "20% of the disk/storage space on the proposed storage system."
 
 - Institutions of Higher Education (IHEs) - Two- and four-year IHEs (including community colleges) accredited in, and having a campus located in the US, acting on behalf of their faculty members. Special Instructions for International Branch Campuses of US IHEs: If the proposal includes funding to be provided to an international branch campus of a US institution of higher education (including through use of subawards and consultant arrangements), the proposer must explain the benefit(s) to the project of performance at the international branch campus, and justify why the project activities cannot be performed at the US campus.
 - Non-profit, non-academic organizations: Independent museums, observatories, research labs, professional societies and similar organizations in the U.S. associated with educational or research activities.
-
-##### Due Date
-
-March 1st, 2023
 
 </div>
 
