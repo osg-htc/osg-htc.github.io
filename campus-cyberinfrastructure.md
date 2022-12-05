@@ -39,6 +39,20 @@ table_of_contents:
 </p>
 {% endif %}
 
+<div class="p-3 my-4 bg-white-offset fs-5 rounded shadow">
+    <h2 class="mt-0 text-center">We are here to help with your <a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf23526&org=NSF">NSF (CC*) Proposal</a>!</h2>
+    <p class="text-center">
+        Campuses with awards from the
+        <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a>
+        Program play an important role in the OSG Consortium. To date, 25 CC* campuses contribute to the more than
+        5M core hours delivered weekly by the <a href="{{ '/services/open_science_pool/' | relative_url }}">Open Science Pool (OSPool)</a>.
+    </p>
+    <p class="mb-0 d-flex justify-content-center pt-3">
+        <a class="btn btn-outline-dark fs-5" href="mailto:cc-star-proposals@osg-htc.org">Contact Us</a>
+        <a class="btn btn-outline-dark ms-1 fs-5" href="#let-osg-help-with-your-cc-proposal">How We Can Help</a>
+    </p>
+</div>
+
 {: .fs-5 }
 The National Science Foundation Campus Cyberinfrastructure (CC*) program 
 <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 22-582)</a>
@@ -101,7 +115,7 @@ videos and more.
 
 <iframe width="100%" height="500px" frameBorder="0" style="margin-bottom:1em; margin-top:1em" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
 
-<div class="row d-none">
+<div id="ccstar-table" class="row d-none">
     <div class="col-12 col-xl-7 col-lg-8 col-md-10">
         <input class="form-control" id="search" placeholder="Search Facility Details" type="search"/>
     </div>
