@@ -63,20 +63,20 @@ and encourage the use of OSG services to meet requirements.
 {: .fs-5 }
 The NSF explicitly mentions the OSG and [PATh](https://path-cc.io) in 3 of the 7 CC* program areas:
 
-##### (4) Campus Computing and the Computing Continuum
+##### __(4) Campus Computing and the Computing Continuum__
 
 {: .fs-5 }
 NSF recommends reaching out to [PATh](https://path-cc.io) for "technical direction/expertise during their proposal
 development" and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the 
 [OSPool](/services/open_science_pool).
 
-##### (5) Regional Computing awards
+##### __(5) Regional Computing awards__
 
 {: .fs-5 }
 NSF strongly encourages joining PATh, and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the
 [OSPool](/services/open_science_pool).
 
-##### (6) Data Storage awards
+##### __(6) Data Storage awards__
 
 {: .fs-5 }
 NSF solely mentions the OSG's [Open Science Data Federation](/services/osdf.html) as a federated data sharing fabric to share
