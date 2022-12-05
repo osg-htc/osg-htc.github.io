@@ -57,31 +57,46 @@ table_of_contents:
 The National Science Foundation Campus Cyberinfrastructure (CC*) program 
 <a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf23526&org=NSF" target="_blank">(NSF 23-526)</a>
 invests in coordinated campus and regional-level cyberinfrastructure improvements and 
-innovation. The 2023 solicitation has three program areas which explicitly mention 
+innovation.
+
+
+## [2023 CC* Solicitation](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)
+
+<div class="border p-3 mt-3 mb-3 pb-0 rounded bg-light" markdown="1">
+
+
+The 2023 solicitation has three program areas which explicitly mention 
 and encourage the use of OSG services to meet requirements.
 
-{: .fs-5 }
-The NSF explicitly mentions the OSG and [PATh](https://path-cc.io) in 3 of the 7 CC* program areas:
+__(4) Campus Computing and the Computing Continuum__
 
-##### __(4) Campus Computing and the Computing Continuum__
 
-{: .fs-5 }
 NSF recommends reaching out to [PATh](https://path-cc.io) for "technical direction/expertise during their proposal
 development" and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the 
 [OSPool](/services/open_science_pool).
 
-##### __(5) Regional Computing awards__
+__(5) Regional Computing awards__
 
-{: .fs-5 }
+
 NSF strongly encourages joining PATh, and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the
 [OSPool](/services/open_science_pool).
 
-##### __(6) Data Storage awards__
+__(6) Data Storage awards__
 
-{: .fs-5 }
 NSF solely mentions the OSG's [Open Science Data Federation](/services/osdf.html) as a federated data sharing fabric to share
 its required "20% of the disk/storage space on the proposed storage system."
   
+##### Eligibility - Who May Submit Proposals
+
+- Institutions of Higher Education (IHEs) - Two- and four-year IHEs (including community colleges) accredited in, and having a campus located in the US, acting on behalf of their faculty members. Special Instructions for International Branch Campuses of US IHEs: If the proposal includes funding to be provided to an international branch campus of a US institution of higher education (including through use of subawards and consultant arrangements), the proposer must explain the benefit(s) to the project of performance at the international branch campus, and justify why the project activities cannot be performed at the US campus.
+- Non-profit, non-academic organizations: Independent museums, observatories, research labs, professional societies and similar organizations in the U.S. associated with educational or research activities.
+
+##### Due Date
+
+March 1st, 2023
+
+</div>
+
 ## Let OSG Help with your CC* Proposal
 
 {: .fs-5 }
