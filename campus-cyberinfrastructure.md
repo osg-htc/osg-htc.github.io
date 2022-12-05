@@ -40,7 +40,7 @@ table_of_contents:
 {% endif %}
 
 <div class="p-3 my-4 bg-white-offset fs-5 rounded shadow">
-    <h2 class="mt-0 text-center">We are here to help with your <a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf23526&org=NSF">NSF (CC*) Proposal</a>!</h2>
+    <h3 class="mt-0 text-center pb-3">We are here to help with your <a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf23526&org=NSF">CC* Proposal (NSF 23-526)</a>!</h3>
     <p class="text-center">
         Campuses with awards from the
         <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a>
@@ -55,19 +55,32 @@ table_of_contents:
 
 {: .fs-5 }
 The National Science Foundation Campus Cyberinfrastructure (CC*) program 
-<a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 22-582)</a>
+<a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf23526&org=NSF" target="_blank">(NSF 23-526)</a>
 invests in coordinated campus and regional-level cyberinfrastructure improvements and 
-innovation. The 2022 solicitation has two program areas, both of which explicitly mention 
+innovation. The 2023 solicitation has three program areas which explicitly mention 
 and encourage the use of OSG services to meet requirements.
 
 {: .fs-5 }
-The NSF supports awards in 2 CC* program areas:
+The NSF explicitly mentions the OSG and [PATh](https://path-cc.io) in 3 of the 7 CC* program areas:
+
+##### (4) Campus Computing and the Computing Continuum
 
 {: .fs-5 }
-- Data Storage awards, which mention the OSG [Open Science Data Federation](/services/osdf.html), 
-  encouraging responses that would add data origins or caches at campuses
-- Regional Computing awards, in which the NSF strongly encourages joining PATh, and using our 
-  services to contribute to the [Open Science Pool](/services/open_science_pool.html)
+NSF recommends reaching out to [PATh](https://path-cc.io) for "technical direction/expertise during their proposal
+development" and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the 
+[OSPool](/services/open_science_pool).
+
+##### (5) Regional Computing awards
+
+{: .fs-5 }
+NSF strongly encourages joining PATh, and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the
+[OSPool](/services/open_science_pool).
+
+##### (6) Data Storage awards
+
+{: .fs-5 }
+NSF solely mentions the OSG's [Open Science Data Federation](/services/osdf.html) as a federated data sharing fabric to share
+its required "20% of the disk/storage space on the proposed storage system."
   
 ## Let OSG Help with your CC* Proposal
 
@@ -80,7 +93,7 @@ offering letters of support and consulting for:
 - Sharing data with authorized users via the [Open Science Data Federation (OSDF)](/services/osdf.html)
 - Bringing the power of high throughput computing via the [OSPool](/services/open_science_pool.html) to your researchers
 - Gathering science drivers and planning local computing resources
-- Meeting CC*-required resource sharing as specified in <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 22-582)</a>, and other options for integrating with the OSG Consortium
+- Meeting CC*-required resource sharing as specified in <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 23-526)</a>, and other options for integrating with the OSG Consortium
 - Providing connections to help with data storage systems for shared inter-campus or intra-campus resources
   - We have collected [community data storage systems](/organization/osdf/example_data_origin.html) for your consideration
 - Building regional computing networks
@@ -177,5 +190,5 @@ via the OSPool.
 {: .fs-5 }
 As of March 2022, the [Open Science Data Federation](/services/osdf.html) integrates 10 data origins, making data 
 accessible via 20 caches, 6 of which are strategically located in the R&E network backbone.
-The CC* solicitation of 2022 (NSF 22-582) encourages responses that would add data origins 
+The CC* solicitation of 2022 (NSF 23-526) encourages responses that would add data origins 
 or caches at campuses.
