@@ -64,15 +64,14 @@ innovation.
 
 <div class="border p-3 mt-3 mb-3 pb-0 rounded bg-light" markdown="1">
 
-
-The 2023 solicitation has three program areas which explicitly mention 
-and encourage the use of OSG services to meet requirements.
-
 ##### Due Date
 
 March 1st, 2023
 
 ##### OSG/PATh Supported Program Areas
+
+The 2023 solicitation has three program areas which explicitly mention
+and encourage the use of OSG services to meet requirements.
 
 __(4) Campus Computing and the Computing Continuum__
 
