@@ -68,8 +68,9 @@ innovation.
 The 2023 solicitation has three program areas which explicitly mention 
 and encourage the use of OSG services to meet requirements.
 
-__(4) Campus Computing and the Computing Continuum__
+##### OSG/PATh Supported Program Areas
 
+__(4) Campus Computing and the Computing Continuum__
 
 NSF recommends reaching out to [PATh](https://path-cc.io) for "technical direction/expertise during their proposal
 development" and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the 
