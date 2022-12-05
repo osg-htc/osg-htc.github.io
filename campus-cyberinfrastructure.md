@@ -44,8 +44,9 @@ table_of_contents:
     <p class="text-center">
         Campuses with awards from the
         <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a>
-        Program play an important role in the OSG Consortium. To date, 25 CC* campuses contribute to the more than
-        5M core hours delivered weekly by the <a href="{{ '/services/open_science_pool/' | relative_url }}">Open Science Pool (OSPool)</a>.
+        Program play an important role in supporting Open Science. To date, 25 CC* campuses contribute to the processing and storage capacity of the
+        <a href="{{ '/services/open_science_pool/' | relative_url }}">Open Science Pool (OSPool)</a> that is 
+        harnessed weekly by more than 2M jobs.
     </p>
     <p class="mb-0 d-flex justify-content-center pt-3">
         <a class="btn btn-outline-dark fs-5" href="mailto:cc-star-proposals@osg-htc.org">Contact Us</a>
