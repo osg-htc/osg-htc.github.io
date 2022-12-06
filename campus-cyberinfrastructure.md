@@ -40,7 +40,7 @@ table_of_contents:
 {% endif %}
 
 <div class="p-3 my-4 bg-white-offset fs-5 rounded shadow">
-    <h3 class="mt-0 text-center pb-3">We are here to help with your <a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf23526&org=NSF">CC* Proposal (NSF 23-526)</a>!</h3>
+    <h3 class="mt-0 text-center pb-3">We are here to help with your <a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf23526&org=NSF">CC* Proposal (NSF 23-526)!</a></h3>
     <p class="text-center">
         Campuses with awards from the
         <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a>
@@ -49,8 +49,8 @@ table_of_contents:
         harnessed weekly by more than 2M jobs.
     </p>
     <p class="mb-0 d-flex justify-content-center pt-3">
-        <a class="btn btn-outline-dark fs-5" href="mailto:cc-star-proposals@osg-htc.org">Contact Us</a>
-        <a class="btn btn-outline-dark ms-1 fs-5" href="#let-osg-help-with-your-cc-proposal">How We Can Help</a>
+        <a class="btn btn-primary text-decoration-underline fs-5" href="mailto:cc-star-proposals@osg-htc.org">Email Us</a>
+        <a class="btn btn-primary text-decoration-underline ms-1 fs-5" href="#let-osg-help-with-your-cc-proposal">How We Can Help</a>
     </p>
 </div>
 
@@ -64,10 +64,6 @@ innovation.
 ## [2023 CC* Solicitation](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)
 
 <div class="border p-3 mt-3 mb-3 pb-0 rounded bg-light" markdown="1">
-
-##### Due Date
-
-March 1st, 2023
 
 ##### OSG/PATh Supported Program Areas
 
@@ -90,15 +86,12 @@ __(6) Data Storage awards__
 
 NSF solely mentions the OSG's [Open Science Data Federation](/services/osdf.html) as a federated data sharing fabric to share
 its required "20% of the disk/storage space on the proposed storage system."
-  
-##### Eligibility - Who May Submit Proposals
 
-- Institutions of Higher Education (IHEs) - Two- and four-year IHEs (including community colleges) accredited in, and having a campus located in the US, acting on behalf of their faculty members. Special Instructions for International Branch Campuses of US IHEs: If the proposal includes funding to be provided to an international branch campus of a US institution of higher education (including through use of subawards and consultant arrangements), the proposer must explain the benefit(s) to the project of performance at the international branch campus, and justify why the project activities cannot be performed at the US campus.
-- Non-profit, non-academic organizations: Independent museums, observatories, research labs, professional societies and similar organizations in the U.S. associated with educational or research activities.
+##### Due Date: March 1st, 2023
 
 </div>
 
-## Let OSG Help with your CC* Proposal
+## Let the PATh team help with your proposal
 
 {: .fs-5 }
 The [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io), which develops technologies 
@@ -108,7 +101,6 @@ offering letters of support and consulting for:
 {: .fs-5 }
 - Sharing data with authorized users via the [Open Science Data Federation (OSDF)](/services/osdf.html)
 - Bringing the power of high throughput computing via the [OSPool](/services/open_science_pool.html) to your researchers
-- Gathering science drivers and planning local computing resources
 - Meeting CC*-required resource sharing as specified in <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 23-526)</a>, and other options for integrating with the OSG Consortium
 - Providing connections to help with data storage systems for shared inter-campus or intra-campus resources
   - We have collected [community data storage systems](/organization/osdf/example_data_origin.html) for your consideration
@@ -116,7 +108,9 @@ offering letters of support and consulting for:
 - Developing science gateways to utilize high throughput computing via the [OSPool](/services/open_science_pool.html)
 
 {: .fs-5 }
-CC* applicants are encouraged to email OSG Support with questions or requests for letters of support regarding their CC* proposal.
+CC* applicants are encouraged to email OSG Leadership at 
+<a class="fs-5" href="mailto:cc-star-proposals@osg-htc.org">cc-star-proposals@osg-htc.org</a>
+with questions or requests for letters of support regarding their CC* proposal.
 
 <div class="bg-light py-3 my-2 mb-4">
 <div class="row justify-content-center">
