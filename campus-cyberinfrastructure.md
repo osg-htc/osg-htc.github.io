@@ -39,22 +39,65 @@ table_of_contents:
 </p>
 {% endif %}
 
+<div class="p-3 my-4 bg-white-offset fs-5 rounded shadow">
+    <h3 class="mt-0 text-center pb-3">We are here to help with your <a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf23526&org=NSF">CC* Proposal (NSF 23-526)</a>!</h3>
+    <p class="text-center">
+        Campuses with awards from the
+        <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a>
+        Program play an important role in supporting Open Science. To date, 25 CC* campuses contribute to the processing and storage capacity of the
+        <a href="{{ '/services/open_science_pool/' | relative_url }}">Open Science Pool (OSPool)</a> that is 
+        harnessed weekly by more than 2M jobs.
+    </p>
+    <p class="mb-0 d-flex justify-content-center pt-3">
+        <a class="btn btn-outline-dark fs-5" href="mailto:cc-star-proposals@osg-htc.org">Contact Us</a>
+        <a class="btn btn-outline-dark ms-1 fs-5" href="#let-osg-help-with-your-cc-proposal">How We Can Help</a>
+    </p>
+</div>
+
 {: .fs-5 }
 The National Science Foundation Campus Cyberinfrastructure (CC*) program 
-<a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 22-582)</a>
+<a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf23526&org=NSF" target="_blank">(NSF 23-526)</a>
 invests in coordinated campus and regional-level cyberinfrastructure improvements and 
-innovation. The 2022 solicitation has two program areas, both of which explicitly mention 
+innovation.
+
+
+## [2023 CC* Solicitation](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)
+
+<div class="border p-3 mt-3 mb-3 pb-0 rounded bg-light" markdown="1">
+
+##### Due Date
+
+March 1st, 2023
+
+##### OSG/PATh Supported Program Areas
+
+The 2023 solicitation has three program areas which explicitly mention
 and encourage the use of OSG services to meet requirements.
 
-{: .fs-5 }
-The NSF supports awards in 2 CC* program areas:
+__(4) Campus Computing and the Computing Continuum__
 
-{: .fs-5 }
-- Data Storage awards, which mention the OSG [Open Science Data Federation](/services/osdf.html), 
-  encouraging responses that would add data origins or caches at campuses
-- Regional Computing awards, in which the NSF strongly encourages joining PATh, and using our 
-  services to contribute to the [Open Science Pool](/services/open_science_pool.html)
+NSF recommends reaching out to [PATh](https://path-cc.io) for "technical direction/expertise during their proposal
+development" and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the 
+[OSPool](/services/open_science_pool).
+
+__(5) Regional Computing awards__
+
+
+NSF strongly encourages joining PATh, and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the
+[OSPool](/services/open_science_pool).
+
+__(6) Data Storage awards__
+
+NSF solely mentions the OSG's [Open Science Data Federation](/services/osdf.html) as a federated data sharing fabric to share
+its required "20% of the disk/storage space on the proposed storage system."
   
+##### Eligibility - Who May Submit Proposals
+
+- Institutions of Higher Education (IHEs) - Two- and four-year IHEs (including community colleges) accredited in, and having a campus located in the US, acting on behalf of their faculty members. Special Instructions for International Branch Campuses of US IHEs: If the proposal includes funding to be provided to an international branch campus of a US institution of higher education (including through use of subawards and consultant arrangements), the proposer must explain the benefit(s) to the project of performance at the international branch campus, and justify why the project activities cannot be performed at the US campus.
+- Non-profit, non-academic organizations: Independent museums, observatories, research labs, professional societies and similar organizations in the U.S. associated with educational or research activities.
+
+</div>
+
 ## Let OSG Help with your CC* Proposal
 
 {: .fs-5 }
@@ -66,7 +109,7 @@ offering letters of support and consulting for:
 - Sharing data with authorized users via the [Open Science Data Federation (OSDF)](/services/osdf.html)
 - Bringing the power of high throughput computing via the [OSPool](/services/open_science_pool.html) to your researchers
 - Gathering science drivers and planning local computing resources
-- Meeting CC*-required resource sharing as specified in <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 22-582)</a>, and other options for integrating with the OSG Consortium
+- Meeting CC*-required resource sharing as specified in <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 23-526)</a>, and other options for integrating with the OSG Consortium
 - Providing connections to help with data storage systems for shared inter-campus or intra-campus resources
   - We have collected [community data storage systems](/organization/osdf/example_data_origin.html) for your consideration
 - Building regional computing networks
@@ -78,7 +121,7 @@ CC* applicants are encouraged to email OSG Support with questions or requests fo
 <div class="bg-light py-3 my-2 mb-4">
 <div class="row justify-content-center">
 <div class="col-auto">
-<a class="btn btn-primary fs-5" href="mailto:cc-star-proposals@opensciencegrid.org">Email OSG Leadership to Discuss CC* Opportunities</a>
+<a class="btn btn-primary fs-5" href="mailto:cc-star-proposals@osg-htc.org">Email OSG Leadership to Discuss CC* Opportunities</a>
 </div>
 </div>
 </div>
@@ -101,7 +144,7 @@ videos and more.
 
 <iframe width="100%" height="500px" frameBorder="0" style="margin-bottom:1em; margin-top:1em" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
 
-<div class="row d-none">
+<div id="ccstar-table" class="row d-none">
     <div class="col-12 col-xl-7 col-lg-8 col-md-10">
         <input class="form-control" id="search" placeholder="Search Facility Details" type="search"/>
     </div>
@@ -163,5 +206,5 @@ via the OSPool.
 {: .fs-5 }
 As of March 2022, the [Open Science Data Federation](/services/osdf.html) integrates 10 data origins, making data 
 accessible via 20 caches, 6 of which are strategically located in the R&E network backbone.
-The CC* solicitation of 2022 (NSF 22-582) encourages responses that would add data origins 
+The CC* solicitation of 2022 (NSF 23-526) encourages responses that would add data origins 
 or caches at campuses.
