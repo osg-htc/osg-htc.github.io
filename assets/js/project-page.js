@@ -152,6 +152,9 @@ class ProjectDisplay{
                 ...GRAFANA_BASE
             }
         ]
+        this.display_modal = new bootstrap.Modal(parentNode, {
+            keyboard: true
+        })
     }
 
     get graphDisplays(){
@@ -178,11 +181,23 @@ class ProjectDisplay{
         return this._graphDisplays
     }
 
+    setUrl() {
+        const url = new URL(window.location.href);
+        url.searchParams.set("project", this.name)
+        history.pushState({}, '', url)
+    }
+
     updateTextValue(className, value){
         this.parentNode.getElementsByClassName(className)[0].textContent = value
     }
 
     update({Name, PIName, FieldOfScience, Organization, Description}) {
+        this.name = Name;
+        this.piName = PIName;
+        this.fieldOfScience = FieldOfScience;
+        this.organization = Organization;
+        this.description = Description;
+
         this.updateTextValue("project-Name", Name)
         this.updateTextValue("project-PIName", PIName)
         this.updateTextValue("project-FieldOfScience", FieldOfScience)
@@ -191,6 +206,8 @@ class ProjectDisplay{
         this.graphDisplays.forEach(gd => {
             gd.updateSearchParams({"var-Project": Name})
         })
+        this.setUrl()
+        this.display_modal.show()
     }
 }
 
@@ -234,16 +251,11 @@ class Search {
 }
 
 class Table {
-    constructor(wrapper, data_function){
+    constructor(wrapper, data_function, updateProjectDisplay){
         this.grid = undefined
         this.data_function = data_function
         this.wrapper = wrapper
-
-        let projectDisplayNode = document.getElementById("project-display")
-        this.projectDisplay = new ProjectDisplay(projectDisplayNode)
-        this.display_modal = new bootstrap.Modal(projectDisplayNode, {
-            keyboard: true
-        })
+        this.updateProjectDisplay = updateProjectDisplay
         this.columns = [
             {
                 id: 'jobs',
@@ -301,15 +313,11 @@ class Table {
             data: Object.values(await table.data_function()).sort((a, b) => b.jobs - a.jobs)
         }).forceRender();
     }
-    toggle_row = (toggled_row, project) => {
-        this.projectDisplay.update(project)
-        this.display_modal.show()
-    }
     row_click = async (PointerEvent, e) => {
         let data = await this.data_function()
         let row_name = e["cells"][1].data
         let project = data[row_name]
-        this.toggle_row(PointerEvent.currentTarget, project)
+        this.updateProjectDisplay(project)
     }
 }
 
@@ -388,15 +396,18 @@ class ProjectPage{
     /**
      * Initializes the project page objects
      *
-     * Easier to do this all in an async environment so I can await on data grabs
+     * Easier to do this all in an async environment so I can wait on data grabs
      * @returns {Promise<void>}
      */
     initialize = async () => {
         this.mode = undefined
         this.dataManager = new DataManager()
 
+        let projectDisplayNode = document.getElementById("project-display")
+        this.projectDisplay = new ProjectDisplay(projectDisplayNode)
+
         this.wrapper = document.getElementById("wrapper")
-        this.table = new Table(this.wrapper, this.dataManager.getFilteredData)
+        this.table = new Table(this.wrapper, this.dataManager.getFilteredData, this.projectDisplay.update.bind(this.projectDisplay))
         this.dataManager.consumerToggles.push(this.table.update)
 
         this.search = new Search(Object.values(await this.dataManager.getData()), this.table.update)
@@ -405,6 +416,11 @@ class ProjectPage{
 
         this.toggleActiveFilterButton = document.getElementById("toggle-active-filter")
         this.toggleActiveFilterButton.addEventListener("click", this.toggleActiveFilter)
+
+        let urlProject = new URLSearchParams(window.location.search).get('project')
+        if(urlProject){
+            this.projectDisplay.update((await this.dataManager.getData())[urlProject])
+        }
     }
 
     minimumJobsFilter = (data) => {

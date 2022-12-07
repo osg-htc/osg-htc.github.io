@@ -55,6 +55,9 @@ class FacilityDisplay {
                 ...GRAFANA_BASE
             }
         ]
+        this.display_modal = new bootstrap.Modal(this.parentNode, {
+            keyboard: true
+        })
     }
 
     get graphDisplays() {
@@ -86,10 +89,19 @@ class FacilityDisplay {
     }
 
     update({Name}) {
+        this.name = Name
         this.updateTextValue("facility-Name", Name)
         this.graphDisplays.forEach(gd => {
             gd.updateSearchParams({"var-facility": Name})
         })
+        this.setUrl()
+        this.display_modal.show()
+    }
+
+    setUrl() {
+        const url = new URL(window.location.href);
+        url.searchParams.set("facility", this.name)
+        history.pushState({}, '', url)
     }
 }
 
@@ -139,14 +151,11 @@ class Search {
 }
 
 class Table {
-    constructor(wrapper, data_function) {
+    constructor(wrapper, data_function, updateDisplay) {
         this.grid = undefined
         this.data_function = data_function
         this.wrapper = wrapper
-        this.facilityDisplay = new FacilityDisplay("display", data_function)
-        this.display_modal = new bootstrap.Modal(document.getElementById("display"), {
-            keyboard: true
-        })
+        this.updateDisplay = updateDisplay
         this.columns = [
             {
                 id: 'Name',
@@ -198,15 +207,11 @@ class Table {
             data: data
         }).forceRender();
     }
-    toggle_row = (toggled_row, facility) => {
-        this.facilityDisplay.update(facility)
-        this.display_modal.show()
-    }
     row_click = async (PointerEvent, e) => {
         let data = await this.data_function()
         let row_name = e["cells"][0].data
         let facility = data[row_name]
-        this.toggle_row(PointerEvent.currentTarget, facility)
+        this.updateDisplay(facility)
     }
 }
 
@@ -218,13 +223,15 @@ class FacilityPage {
         this.filtered_data = undefined
         this.wrapper = document.getElementById("wrapper")
         this.search = new Search(this.dataFunction, this.update_data)
-        this.table = new Table(this.wrapper, this.dataFunction)
+        this.facilityDisplay = new FacilityDisplay("display", this.dataFunction)
+        this.table = new Table(this.wrapper, this.dataFunction, this.facilityDisplay.update.bind(this.facilityDisplay))
         this.initialize()
     }
     initialize = async () => {
         await this.dataFunction()
         await this.table.initialize()
         await this.search.initialize()
+        await this.usePopulatedFacility()
     }
     update_data = async () => {
         let new_filtered_data = await this.search.filter_data()
@@ -232,6 +239,12 @@ class FacilityPage {
         if (JSON.stringify(this.filtered_data) != JSON.stringify(new_filtered_data)) {
             this.filtered_data = new_filtered_data
             this.table.update(Object.values(this.filtered_data))
+        }
+    }
+    async usePopulatedFacility() {
+        let urlFacility = new URLSearchParams(window.location.search).get('facility')
+        if(urlFacility){
+            this.facilityDisplay.update((await this.dataFunction())[urlFacility])
         }
     }
 }
