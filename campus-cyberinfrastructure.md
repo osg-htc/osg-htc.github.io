@@ -75,8 +75,6 @@ readily available to support a spectrum of CC* projects.
 The [NSF 23-526](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm) solicitation explicitly mentions the OSG services
 we provide as a means to meet requirements for the following areas:
 
-#### OSG/PATh Supported Program Areas
-
 {: .fs-5 }
 __(4) Campus Computing and the Computing Continuum__
 
