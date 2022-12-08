@@ -55,48 +55,62 @@ table_of_contents:
 </div>
 
 {: .fs-5 }
-The National Science Foundation Campus Cyberinfrastructure (CC*) program 
-<a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf23526&org=NSF" target="_blank">(NSF 23-526)</a>
-invests in coordinated campus and regional-level cyberinfrastructure improvements and 
-innovation.
+Enhancing the capacity of Research Computing of US campuses through local deployment and cross campus sharing is 
+fully aligned with the vision of our NSF funded project - [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io). 
+Our project is committed to support CC* projects from proposal, through deployment, to operation.
 
 
-## [2023 CC* Solicitation](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)
+## [Proposal](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)
 
 <div class="border p-3 mt-3 mb-3 pb-0 rounded bg-light" markdown="1">
 
-##### OSG/PATh Supported Program Areas
+{: .fs-5 }
+Proposals in response to the 2023 CC* program solicitation ([NSF 23-526](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)) 
+are due on March 1, 2023. Please contact us at [cc-star-proposals@osg-htc.org](mailto:cc-star-proposals@osg-htc.org)
+(the earlier the better!) with any questions
+or requests you may have regarding the involvement of [PATh](https://path-cc.io) in your proposed project. Our technology and services are 
+readily available to support a spectrum of CC* projects.
 
-The 2023 solicitation has three program areas which explicitly mention
-and encourage the use of OSG services to meet requirements.
+{: .fs-5 }
+The [NSF 23-526](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm) solicitation explicitly mentions the OSG services
+we provide as a means to meet requirements for the following areas:
 
+#### OSG/PATh Supported Program Areas
+
+{: .fs-5 }
 __(4) Campus Computing and the Computing Continuum__
 
+{: .fs-5 }
 NSF recommends reaching out to [PATh](https://path-cc.io) for "technical direction/expertise during their proposal
 development" and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the 
 [OSPool](/services/open_science_pool).
 
+{: .fs-5 }
 __(5) Regional Computing awards__
 
-
+{: .fs-5 }
 NSF strongly encourages joining PATh, and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the
 [OSPool](/services/open_science_pool).
 
+{: .fs-5 }
 __(6) Data Storage awards__
 
+{: .fs-5 }
 NSF solely mentions the OSG's [Open Science Data Federation](/services/osdf.html) as a federated data sharing fabric to share
 its required "20% of the disk/storage space on the proposed storage system."
-
-##### Due Date: March 1st, 2023
 
 </div>
 
 ## Let the PATh team help with your proposal
 
 {: .fs-5 }
-The [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io), which develops technologies 
-and operates services for the OSG, has significant experience working with CC* applicants and awardees, and
-offering letters of support and consulting for:
+The National Science Foundation Campus Cyberinfrastructure (CC*) program
+([NSF 23-526](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)) invests in coordinated campus 
+and regional-level cyberinfrastructure improvements and innovation.
+
+{: .fs-5 }
+[PATh](https://path-cc.io) has experience offering consulting to CC* projects during the proposal phase for the 
+following aspects of the proposed project:
 
 {: .fs-5 }
 - Sharing data with authorized users via the [Open Science Data Federation (OSDF)](/services/osdf.html)
@@ -108,19 +122,11 @@ offering letters of support and consulting for:
 - Developing science gateways to utilize high throughput computing via the [OSPool](/services/open_science_pool.html)
 
 {: .fs-5 }
-CC* applicants are encouraged to email OSG Leadership at 
-<a class="fs-5" href="mailto:cc-star-proposals@osg-htc.org">cc-star-proposals@osg-htc.org</a>
-with questions or requests for letters of support regarding their CC* proposal.
+Please do not hesitate (or wait too long) to contact us at 
+[cc-star-proposals@osg-htc.org](mailto:cc-star-proposals@osg-htc.org) with 
+questions or requests for letters of support regarding your CC* proposed project.
 
-<div class="bg-light py-3 my-2 mb-4">
-<div class="row justify-content-center">
-<div class="col-auto">
-<a class="btn btn-primary fs-5" href="mailto:cc-star-proposals@osg-htc.org">Email OSG Leadership to Discuss CC* Opportunities</a>
-</div>
-</div>
-</div>
-
-## OSG’s active support of CC* Awardees
+## Deployment
 
 {: .fs-5 }
 Our experienced and friendly team of engineers and facilitators is dedicated to 
@@ -134,7 +140,7 @@ onboarding into the OSPool or OSDF. The facilitation team also provides extensiv
 support to researchers with regular training, weekly office hours,  documentation, 
 videos and more.
 
-### OSG supported Colleges and Universities contributing via the CC* program:
+## Operation
 
 <iframe width="100%" height="500px" frameBorder="0" style="margin-bottom:1em; margin-top:1em" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
 
