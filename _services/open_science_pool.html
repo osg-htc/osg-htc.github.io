@@ -5,22 +5,28 @@ js_extension:
 -   src: "/assets/js/pages/ospool.js"
     loading: "defer"
 ---
-<h1 class="text-center pt-5 fw-bold">OSPool: serving Open Science throughput computing</h1>
 
-<div id="ospool-statistics-display" class="my-5">
+<div class="container-xxl">
+  <div class="row justify-content-center">
+    <div class="col-12 col-xl-7 col-lg-8 col-md-10">
+      <h1 class="text-center pt-5 fw-bold">OSPool: serving Open Science throughput computing</h1>
+    </div>
+  </div>
+</div>
+<div class="my-5 wave-display text-display">
   <div class="container">
     <div class="row justify-content-center py-3">
-      <div class="col-12 col-xl-9 col-lg-10 col-md-12 col-12 col-sm-11 pt-1 pt-md-0">
-        <h1 class="text-center d-inline-block">
+      <div class="col-12 col-xl-9 col-lg-10 col-md-12 col-12 col-sm-11 pt-1 pt-md-0 d-flex">
+        <h2 class="text-center d-inline-block mx-auto">
           <span class="d-inline-block">On <b id="ospool-date"></b>,</span>
-          <span class="d-inline-block"><b class="d-inline-block"><span id="ospool-jobs">1</span> jobs</b> completed.</span>
+          <span class="d-inline-block"><b class="d-inline-block"><span id="ospool-jobs">1</span> jobs</b> completed.</span><br>
           <span class="d-inline-block">They were submitted by</span>
           <b class="d-inline-block"><span id="ospool-users">1</span> researchers</b>.<br>
           <span class="d-inline-block">They triggered </span>
           <b class="d-inline-block"><span id="ospool-file-transfers">1</span> file transfers</b>.<br>
           <span class="d-inline-block">They consumed</span>
           <b class="d-inline-block"><span id="ospool-core-hours">1</span> core hours</b>.
-        </h1>
+        </h2>
       </div>
     </div>
     <div class="text-center">
@@ -28,6 +34,7 @@ js_extension:
     </div>
   </div>
 </div>
+
 <div class="container-xxl">
   <div class="row justify-content-center">
     <div class="col-12 col-xl-7 col-lg-8 col-md-10">
@@ -50,7 +57,35 @@ js_extension:
         imposes constraints on the sizes on the input and output sandboxes of a
         job.
       </p>
+    </div>
+  </div>
+</div>
 
+<div class="container-xxl">
+  <div class="row justify-content-center">
+    <div class="col-12 col-xl-7 col-lg-8 col-md-10">
+      <h1 class="text-center pt-5 fw-bold">OSPool: Sharing computing capacity in support of Open Science</h1>
+    </div>
+  </div>
+</div>
+<div id="" class="my-5 wave-short-display text-display">
+  <div class="container">
+    <div class="row justify-content-center py-3">
+      <div class="col-12 col-xl-9 col-lg-10 col-md-12 col-12 col-sm-11 pt-1 pt-md-0">
+        <h2 class="text-center d-inline-block">
+          <span class="d-inline-block">On <b id="ospool-site-date"></b>,</span>
+          <span class="d-inline-block"><b class="d-inline-block"><span id="ospool-site-jobs">1</span> jobs</b> completed.</span>
+          <span class="d-inline-block">They harnessed capacity from</span>
+          <b class="d-inline-block"><span id="ospool-sites">1</span> sites.</b><br>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xxl">
+  <div class="row justify-content-center">
+    <div class="col-12 col-xl-7 col-lg-8 col-md-10">
       <h2 id="who-contributes-capacity-to-the-ospool">Who contributes capacity to the OSPool?</h2>
 
       <p>
@@ -65,9 +100,7 @@ js_extension:
       </p>
 
       <p>
-        <a href="https://gracc.opensciencegrid.org/d/000000043/pilot-jobs-summary?orgId=1&amp;var-VOName=osg&amp;var-Facility=All&amp;var-ExitCode=All&amp;var-Probe=All&amp;var-interval=1d">
-          View facility contributions
-        </a> to the OSPool in OSG’s Accounting System (GRACC).
+        View facility contributions on our <a href=" {{ '/facilities' | relative_url }}">Facilities Page</a>.
       </p>
 
       <h2 id="how-can-i-harness-the-ospool-capacity">How Can I Harness the OSPool Capacity?</h2>
