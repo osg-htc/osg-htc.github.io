@@ -127,18 +127,29 @@ questions or requests for letters of support regarding your CC* proposed project
 ## Deployment
 
 {: .fs-5 }
-Our experienced and friendly team of engineers and facilitators is dedicated to 
-supporting system engineers and campus research groups. This team provides networking, 
-computing and data storage consulting in support of proposals,  providing expertise
-and guidance.
+Our experienced and friendly team of engineers and facilitators is dedicated to supporting system engineers and 
+campus research groups. This team provides networking, computing and data storage consulting in support of 
+proposals, providing expertise and guidance.
 
 {: .fs-5 }
-Post award, these teams continue their support to ensure smooth integration and 
-onboarding into the OSPool or OSDF. The facilitation team also provides extensive 
-support to researchers with regular training, weekly office hours,  documentation, 
-videos and more.
+Post award, these teams continue their support to ensure smooth integration and onboarding into the OSPool or OSDF. 
+The facilitation team also provides extensive support to researchers with regular training, weekly office hours, 
+documentation, videos and more.
+
+{: .fs-5 }
+Please contact us at [help@osg-htc.org](mailto:help@osg-htc.org) to schedule a consultation to discuss deployment
+of OSG resources at your campus.
 
 ## Operation
+
+{: .fs-5 }
+After your campus has integrated with the OSPool or OSDF, our team offers continued support to make the best use of 
+computational resources at your campus. This includes troubleshooting of OSG services as well as providing accounting
+data for the research projects and kinds of research making use of your resources.
+
+{: .fs-5 }
+Our staff remains available to assist you with meeting your goals as your research computing needs evolve. If you or 
+your researchers have any questions or issues, please contact us at [support@osg-htc.org](mailto:support@osg-htc.org).
 
 <iframe width="100%" height="500px" frameBorder="0" style="margin-bottom:1em; margin-top:1em" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
 
