@@ -145,7 +145,8 @@ of OSG resources at your campus.
 {: .fs-5 }
 After your campus has integrated with the OSPool or OSDF, our team offers continued support to make the best use of 
 computational resources at your campus. This includes troubleshooting of OSG services as well as providing accounting
-data for the research projects and kinds of research making use of your resources.
+data for the research projects and kinds of research making use of your resources. Also, our CC* liaison will meet with
+you periodically to see how things are going and what we can do to better support you.
 
 {: .fs-5 }
 Our staff remains available to assist you with meeting your goals as your research computing needs evolve. If you or 
