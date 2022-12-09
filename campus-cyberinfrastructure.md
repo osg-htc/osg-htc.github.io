@@ -49,8 +49,8 @@ table_of_contents:
         harnessed weekly by more than 2M jobs.
     </p>
     <p class="mb-0 d-flex justify-content-center pt-3">
-        <a class="btn btn-primary text-decoration-underline fs-5" href="mailto:cc-star-proposals@osg-htc.org">Email Us</a>
-        <a class="btn btn-primary text-decoration-underline ms-1 fs-5" href="#let-osg-help-with-your-cc-proposal">How We Can Help</a>
+        <a class="btn btn-dark text-decoration-underline fs-5" href="mailto:cc-star-proposals@osg-htc.org">Email Us</a>
+        <a class="btn btn-dark text-decoration-underline ms-1 fs-5" href="#let-osg-help-with-your-cc-proposal">How We Can Help</a>
     </p>
 </div>
 
