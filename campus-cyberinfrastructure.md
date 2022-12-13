@@ -15,7 +15,7 @@ css_extension:
 -  href: "https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
 table_of_contents:
   - name: How OSG can help your proposal
-    href: "#let-osg-help-with-your-cc-proposal"
+    href: "#let-the-path-team-help-with-your-proposal"
   - name: How OSG supports Awardees
     href: "#osgs-active-support-of-cc-awardees"
   - name: Actively Supported Colleges
@@ -50,7 +50,7 @@ table_of_contents:
     </p>
     <p class="mb-0 d-flex justify-content-center pt-3">
         <a class="btn btn-dark text-decoration-underline fs-5" href="mailto:cc-star-proposals@osg-htc.org">Email Us</a>
-        <a class="btn btn-dark text-decoration-underline ms-1 fs-5" href="#let-osg-help-with-your-cc-proposal">How We Can Help</a>
+        <a class="btn btn-dark text-decoration-underline ms-1 fs-5" href="#let-the-path-team-help-with-your-proposal">How We Can Help</a>
     </p>
 </div>
 
