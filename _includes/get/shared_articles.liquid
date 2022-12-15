@@ -1,0 +1,4 @@
+{% comment %}
+    Use this to filter out the redirects
+{% endcomment %}
+{% assign shared_articles = site.spotlights | where_exp: "spotlight", "spotlight.publish_on contains site.key" | sort: "date" | reverse %}
