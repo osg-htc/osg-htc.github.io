@@ -8,7 +8,7 @@ js_extension:
   loading:
 - src: "https://unpkg.com/lunr/lunr.js"
   loading:
-- src: "/assets/js/pages/ccstar.js"
+- src: "/assets/js/pages/ccstar_v1.js"
   loading: "defer"
   type: "module"
 css_extension:
