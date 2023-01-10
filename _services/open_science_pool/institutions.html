@@ -1,18 +1,20 @@
 ---
-title: Facilities Actively Contributing to the OSPool
+title: OSPool Contributing Institutions
 layout: padded-default
 js_extension:
 -   src: "https://unpkg.com/gridjs/dist/gridjs.umd.js"
     loading:
 -   src: "https://unpkg.com/lunr/lunr.js"
     loading:
--   src: "/assets/js/pages/facilities.js"
+-   src: "/assets/js/pages/ospool-institution.js"
     loading: "defer"
     type: "module"
 css_extension:
 -  href: "https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
 description: |
-    The below projects were active in the last year across reporting pools in the OSG Consortium. Some represent a small research group, while others represent a large collaboration or campus with numerous researchers using resources in OSG pools.
+    The OSG Consortium contains many institutions that contribute resources to Open Science. Below we
+    acknowledge these institutions and their contributions to science.
+permalink: /services/open_science_pool/institutions.html
 ---
 
 <style>
@@ -32,13 +34,18 @@ description: |
     <div class="row">
         <div class="col-12 col-xl-7 col-lg-8 col-md-10">
             <p>
-                These facilities have contributed to the OSPool in the last year.
+                The <a href="{{ '/services/open_science_pool.html' | relative_url }}">Open Science Pool</a> is powered by contributions from the Open Science community, specifically
+                the select OSG Consortium member institutions listed below. Using the resources freely provided by
+                these institutions and the Consortium's technology suite to power the infrastructure the scale of
+                science has reached new heights.
+            </p>
+            <p>
+                The <b>Institutions</b> below provide administrative control and oversight over the resources that they provide. At universities,
+                the institution listed is typically the name of the university rather than the name of the department
+                inside the university that hosts the resource.
             </p>
             <p class="d-none d-sm-block">
-                <b>Click on a row to view project details.</b>
-            </p>
-            <p class="d-block d-sm-none">
-                <b>Tap on a card to view project details.</b>
+                <b>Click on a row to view institution details.</b>
             </p>
         </div>
     </div>
@@ -47,7 +54,7 @@ description: |
 <div class="container-xxl py-2">
     <div class="row">
         <div class="col-12 col-xl-7 col-lg-8 col-md-10">
-            <input class="form-control" id="search" placeholder="Search Facility Details" type="search"/>
+            <input class="form-control" id="search" placeholder="Search Institution Details" type="search"/>
         </div>
     </div>
 </div>

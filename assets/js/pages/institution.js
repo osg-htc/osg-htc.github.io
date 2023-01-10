@@ -1,6 +1,7 @@
 ---
-    layout: blank
+layout: blank
 ---
+
 
 import FacilityPage, { getFacilityEsData, getTopologyData } from "../facility-table.js";
 
@@ -13,7 +14,7 @@ async function getData() {
 
         // Combine the data sets on facility name
         getData.data = Object.entries(topologyData).reduce((p, [k, v]) => {
-            if (k in elasticSearchData && v.IsCCStar && v.Name !== "New Mexico State University") {
+            if (k in elasticSearchData) {
                 p[k] = {...elasticSearchData[k], ...topologyData[k]}
             }
             return p

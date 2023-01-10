@@ -2,10 +2,10 @@
     layout: blank
 ---
 
-import {DATE_RANGE} from "./elasticsearch.js";
+import ElasticSearchQuery, {DATE_RANGE, ENDPOINT, OSPOOL_FILTER, SUMMARY_INDEX} from "./elasticsearch.js";
 import {GraccDisplay, locale_int_string_sort, string_sort, hideNode} from "./util.js";
 
-const GRAFANA_PROJECT_BASE_URL = "https://gracc.opensciencegrid.org/d-solo/axV4YtN4k/facility-public"
+
 const GRAFANA_BASE = {
     orgId: 1,
     from: DATE_RANGE['oneYearAgo'],
@@ -16,9 +16,10 @@ const GRAFANA_BASE = {
  * A node wrapping the project information break down
  */
 class FacilityDisplay {
-    constructor(nodeId, dataFunction) {
+    constructor(nodeId, dataFunction, grafanaUrl) {
         this.parentNode = document.getElementById(nodeId)
         this.dataFunction = dataFunction
+        this.grafanaUrl = grafanaUrl
         this.grafanaGraphInfo = [
             {
                 className: "gpu-provided",
@@ -58,6 +59,7 @@ class FacilityDisplay {
         this.display_modal = new bootstrap.Modal(this.parentNode, {
             keyboard: true
         })
+        this.parentNode.addEventListener("hidden.bs.modal", this.unsetUrl)
     }
 
     get graphDisplays() {
@@ -66,7 +68,7 @@ class FacilityDisplay {
             this._graphDisplays = this.grafanaGraphInfo.map(graph => {
                 let wrapper = document.getElementsByClassName(graph['className'])[0]
                 let graphDisplay = new GraccDisplay(
-                    GRAFANA_PROJECT_BASE_URL,
+                    this.grafanaUrl,
                     graph['showDisplay'],
                     {
                         to: graph['to'],
@@ -100,7 +102,13 @@ class FacilityDisplay {
 
     setUrl() {
         const url = new URL(window.location.href);
-        url.searchParams.set("facility", this.name)
+        url.searchParams.set("institution", this.name)
+        history.pushState({}, '', url)
+    }
+
+    unsetUrl() {
+        const url = new URL(window.location.href);
+        url.searchParams.delete('institution')
         history.pushState({}, '', url)
     }
 }
@@ -191,7 +199,7 @@ class Table {
                 td: "pointer",
                 paginationButton: "mt-2 mt-sm-0"
             },
-            data: async () => Object.values(await table.data_function()).sort((a, b) => b.cpuProvided - a.cpuProvided),
+            data: async () => Object.values(await this.data_function()).sort((a,b) => b['jobsRan'] - a['jobsRan']),
             pagination: {
                 enabled: true,
                 limit: 10,
@@ -206,6 +214,7 @@ class Table {
         }).render(table.wrapper);
         this.grid.on('rowClick', this.row_click);
     }
+
     update = (data) => {
         this.grid.updateConfig({
             data: data
@@ -220,14 +229,14 @@ class Table {
 }
 
 class FacilityPage {
-    constructor(dataFunction) {
+    constructor(dataFunction, grafanaUrl) {
         this.mode = undefined
         this.dataFunction = dataFunction
         this.data = undefined
         this.filtered_data = undefined
         this.wrapper = document.getElementById("wrapper")
         this.search = new Search(this.dataFunction, this.update_data)
-        this.facilityDisplay = new FacilityDisplay("display", this.dataFunction)
+        this.facilityDisplay = new FacilityDisplay("display", this.dataFunction, grafanaUrl)
         this.table = new Table(this.wrapper, this.dataFunction, this.facilityDisplay.update.bind(this.facilityDisplay))
         this.initialize()
     }
@@ -246,11 +255,66 @@ class FacilityPage {
         }
     }
     async usePopulatedFacility() {
-        let urlFacility = new URLSearchParams(window.location.search).get('facility')
+        let searchParams = new URLSearchParams(window.location.search)
+        let urlFacility = searchParams.has("institution") ? searchParams.get("institution") : searchParams.get("facility")
         if(urlFacility){
             this.facilityDisplay.update((await this.dataFunction())[urlFacility])
         }
     }
 }
 
+async function getFacilityEsData(ospoolOnly = false){
+
+    let es = new ElasticSearchQuery(SUMMARY_INDEX, ENDPOINT)
+
+    // Query ES and ask for Sites that have provided resources in the last year
+    let response = await es.search({
+        "size": 0,
+        "query": {
+            "bool": {
+                "filter": [
+                    {"term": {"ResourceType": "Payload"}},
+                    {"range": {"EndTime": {"lte": DATE_RANGE['now'], "gte": DATE_RANGE['oneYearAgo']}}},
+                    ...(ospoolOnly ? [OSPOOL_FILTER] : []) // Cryptic but much cleaner
+                ],
+                "must_not": [
+                    { "term" : {"ProjectName" : "GLOW"} },
+                ]
+            }
+        }, "aggs": {"facilities": {"terms": {"field": "OIM_Facility", "size": 99999999}, "aggs": {"facilityCpuProvided": {"sum": {"field": "CoreHours"}}, "facilityJobsRan": {"sum": {"field": "Count"}}, "facilityGpuProvided": {"sum": {"field": "GPUHours"}}, "countProjectsImpacted": {"cardinality": {"field": "ProjectName"}}, "countFieldsOfScienceImpacted": {"cardinality": {"field": "OIM_FieldOfScience"}}, "countOrganizationImpacted": {"cardinality": {"field": "OIM_Organization"}}, "gpu_bucket_filter": {"bucket_selector": {"buckets_path": {"totalGPU": "facilityGpuProvided", "totalCPU": "facilityCpuProvided"}, "script": "params.totalGPU > 0 || params.totalCPU > 0"}}}}}})
+
+    // Decompose this data into information we want, if they provided GPU or CPU
+    let facilityBuckets = response.aggregations.facilities.buckets
+    let facilityData = facilityBuckets.reduce((p, v) => {
+        p[v['key']] = {
+            name: v['key'],
+            jobsRan: v['facilityJobsRan']['value'],
+            cpuProvided: v['facilityCpuProvided']['value'],
+            gpuProvided: v['facilityGpuProvided']['value'],
+            numProjects: v['countProjectsImpacted']['value'],
+            numFieldsOfScience: v['countFieldsOfScienceImpacted']['value'],
+            numOrganizations: v['countOrganizationImpacted']['value'],
+        }
+        return p
+    }, {})
+
+    return facilityData
+}
+
+async function getTopologyData() {
+    let response;
+
+    try {
+        response = await fetch("https://topology.opensciencegrid.org/miscfacility/json")
+    } catch (error) {
+        try {
+            response = await fetch("{{ '/assets/data/facilities.json' | relative_url }}")
+        } catch (error) {
+            console.error("Topology and Back Up data fetch failed: " + error)
+        }
+    }
+    return await response.json()
+}
+
+export { getFacilityEsData, getTopologyData }
 export default FacilityPage
