@@ -169,17 +169,17 @@ your researchers have any questions or issues, please contact us at [support@osg
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h5>Resources Provided</h5>
-                <div class="row project-usage-row">
-                    <div class="col-12 col-md-6 gpu-provided"></div>
-                    <div class="col-12 col-md-6 cpu-provided"></div>
-                    <div class="col-12 col-md-6 jobs-ran"></div>
-                </div>
                 <h5 class="pt-3">Science Impact</h5>
                 <div class="row project-usage-row">
                     <div class="col-12 col-xl-6 projects-supported"></div>
                     <div class="col-12 col-xl-6 fields-of-science-supported"></div>
                     <div class="col-12 col-xl-6 organizations-supported"></div>
+                </div>
+                <h5>Resources Provided</h5>
+                <div class="row project-usage-row">
+                    <div class="col-12 col-md-6 jobs-ran"></div>
+                    <div class="col-12 col-md-6 cpu-provided"></div>
+                    <div class="col-12 col-md-6 gpu-provided"></div>
                 </div>
             </div>
             <div class="modal-footer">

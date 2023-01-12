@@ -36,5 +36,5 @@ community, contact us at <support@osg-htc.org>.
 [OSG Projects active in the last year](/projects.html)
 [View OSG Project and usage here](https://gracc.opensciencegrid.org/d/000000037/payload-jobs-summary).
 
-## Facilities Contributing Accounted Resources Across OSG Pools
-[View Facility contributions here](https://gracc.opensciencegrid.org/d/000000043/pilot-jobs-summary?orgId=1).
+## Institutions Contributing Accounted Resources Across OSG Pools
+[View Institution contributions here](/institutions.html).

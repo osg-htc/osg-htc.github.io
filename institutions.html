@@ -1,0 +1,89 @@
+---
+title: OSG Institutions
+layout: padded-default
+js_extension:
+-   src: "https://unpkg.com/gridjs/dist/gridjs.umd.js"
+    loading:
+-   src: "https://unpkg.com/lunr/lunr.js"
+    loading:
+-   src: "/assets/js/pages/institution.js"
+    loading: "defer"
+    type: "module"
+css_extension:
+-  href: "https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+description: |
+    The below projects were active in the last year across reporting pools in the OSG Consortium. Some represent a small research group, while others represent a large collaboration or campus with numerous researchers using resources in OSG pools.
+---
+
+<style>
+    .spinner-grow {
+        height:100px;
+        width:100px;
+        margin-top:auto;
+        margin-bottom:auto;
+    }
+    .wrapper { min-width: 1000px; }
+    tr td:nth-child(1) {
+        text-decoration: underline;
+    }
+</style>
+<div class="container-xxl">
+    {% include layout/title.html %}
+    <div class="row">
+        <div class="col-12 col-xl-7 col-lg-8 col-md-10">
+            <p>
+                Institutions registered with the OSG Consortium leverage the services provided by the Consortium
+                to make locally administrated services accessible to remote researchers. The services provided by
+                an institution can be in the form of computing capacity – processing and/or storage – and/or
+                collections of named objects. Some of the capacity provided by these institutions is available
+                to the Open Science community via the <a href="{{ '/services/open_science_pool/institutions' | relative_url }}">Open Science Pool (OSPool)</a>.
+            </p>
+            <p>
+                <b>Institutions</b> provide administrative control and oversight over the services they provide.
+                At universities, the name of the registered institution is typically the name of the university
+                rather than the name of the department that operates the service.
+            </p>
+            <p>All statistics listed below are a summary of the last year of capacity contributions.</p>
+            <p class="d-none d-sm-block">
+                <b>Click on a row to view institution details.</b>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container-xxl py-2">
+    <div class="row">
+        <div class="col-12 col-xl-7 col-lg-8 col-md-10">
+            <input class="form-control" id="search" placeholder="Search Institution Details" type="search"/>
+        </div>
+    </div>
+</div>
+<div id="wrapper" class="container-xxl overflow-auto"></div>
+
+<div class="modal fade" id="display" tabindex="-1" aria-labelledby="Name" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="facility-Name" class="mb-0 facility-Name"></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h5 class="pt-3">Science Impact</h5>
+                <div class="row project-usage-row">
+                    <div class="col-12 col-xl-6 projects-supported"></div>
+                    <div class="col-12 col-xl-6 fields-of-science-supported"></div>
+                    <div class="col-12 col-xl-6 organizations-supported"></div>
+                </div>
+                <h5>Resources Provided</h5>
+                <div class="row project-usage-row">
+                    <div class="col-12 col-md-6 jobs-ran"></div>
+                    <div class="col-12 col-md-6 cpu-provided"></div>
+                    <div class="col-12 col-md-6 gpu-provided"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
