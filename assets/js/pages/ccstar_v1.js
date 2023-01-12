@@ -23,4 +23,12 @@ async function getData() {
     return getData.data
 }
 
-const facility_page = new FacilityPage(getData, GRAFANA_PROJECT_BASE_URL)
+const tableOptions =  {
+    pagination: {
+        enabled: true,
+        limit: 10,
+        buttonsCount: 1
+    }
+}
+
+const facility_page = new FacilityPage(getData, GRAFANA_PROJECT_BASE_URL, tableOptions)

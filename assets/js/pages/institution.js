@@ -5,7 +5,7 @@ layout: blank
 
 import FacilityPage, { getFacilityEsData, getTopologyData } from "../facility-table.js";
 
-const GRAFANA_PROJECT_BASE_URL = "https://gracc.opensciencegrid.org/d-solo/axV4YtN4k/facility-public"
+const GRAFANA_PROJECT_BASE_URL = "https://gracc.opensciencegrid.org/d-solo/axV4YtN4k/facility"
 
 async function getData() {
     if (!getData.data) {

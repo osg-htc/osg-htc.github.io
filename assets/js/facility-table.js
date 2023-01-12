@@ -59,7 +59,7 @@ class FacilityDisplay {
         this.display_modal = new bootstrap.Modal(this.parentNode, {
             keyboard: true
         })
-        this.parentNode.addEventListener("hidden.bs.modal", this.unsetUrl)
+        this.parentNode.addEventListener("hidden.bs.modal", this.onClose.bind(this))
     }
 
     get graphDisplays() {
@@ -106,6 +106,13 @@ class FacilityDisplay {
         history.pushState({}, '', url)
     }
 
+    onClose(){
+        this.unsetUrl()
+        this.graphDisplays.forEach(gd => {
+            gd.src = ""
+        })
+    }
+
     unsetUrl() {
         const url = new URL(window.location.href);
         url.searchParams.delete('institution')
@@ -150,7 +157,7 @@ class Search {
     filter_data = async () => {
         let data = await this.data_function()
         if (this.node.value == "") {
-            return data
+            return Object.values(await this.data_function()).sort((a,b) => b['jobsRan'] - a['jobsRan'])
         } else {
             let table_keys = this.lunr_idx.search("*" + this.node.value + "*").map(r => r.ref)
             return table_keys.map(key => data[key])
@@ -159,16 +166,17 @@ class Search {
 }
 
 class Table {
-    constructor(wrapper, data_function, updateDisplay) {
+    constructor(wrapper, data_function, updateDisplay, tableOptions = {}) {
         this.grid = undefined
         this.data_function = data_function
         this.wrapper = wrapper
         this.updateDisplay = updateDisplay
+        this.tableOptions = tableOptions
         this.columns = [
             {
                 id: 'Name',
                 name: 'Name',
-                sort: { compare: string_sort }
+                sort: { compare: string_sort },
             }, {
                 id: 'jobsRan',
                 name: 'Jobs Ran',
@@ -200,17 +208,13 @@ class Table {
                 paginationButton: "mt-2 mt-sm-0"
             },
             data: async () => Object.values(await this.data_function()).sort((a,b) => b['jobsRan'] - a['jobsRan']),
-            pagination: {
-                enabled: true,
-                limit: 10,
-                buttonsCount: 1
-            },
             width: "100%",
             style: {
                 td: {
                     'text-align': 'right'
                 }
-            }
+            },
+            ...table.tableOptions
         }).render(table.wrapper);
         this.grid.on('rowClick', this.row_click);
     }
@@ -229,7 +233,7 @@ class Table {
 }
 
 class FacilityPage {
-    constructor(dataFunction, grafanaUrl) {
+    constructor(dataFunction, grafanaUrl, tableOptions) {
         this.mode = undefined
         this.dataFunction = dataFunction
         this.data = undefined
@@ -237,7 +241,7 @@ class FacilityPage {
         this.wrapper = document.getElementById("wrapper")
         this.search = new Search(this.dataFunction, this.update_data)
         this.facilityDisplay = new FacilityDisplay("display", this.dataFunction, grafanaUrl)
-        this.table = new Table(this.wrapper, this.dataFunction, this.facilityDisplay.update.bind(this.facilityDisplay))
+        this.table = new Table(this.wrapper, this.dataFunction, this.facilityDisplay.update.bind(this.facilityDisplay), tableOptions)
         this.initialize()
     }
     initialize = async () => {
