@@ -16,8 +16,6 @@ image: "assets/images/events/capital.jpeg"
 header_image: "assets/images/events/capital.jpeg"
 ---
 
-{% capture main %}
-
 <p style="font-size: larger; font-weight: bold;">Don't miss these in-person learning opportunities in beautiful Madison, Wisconsin!</p>
 
 
