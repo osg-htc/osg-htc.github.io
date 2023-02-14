@@ -41,9 +41,9 @@ To join a group via the Google Groups UI you should:
 
 ## Joining a list via email
 
-To join a Google Group via email, send an email to [Group Name]+subscribe@osg-htc.org.
+To join a Google Group via email, email ```[Group Name]+subscribe@osg-htc.org```.
 
-For example, to join the group called osg-group@osg-htc.org, send an email to osg-group+subscribe@osg-htc.org.
+For example, to join the group called osg-group, email ```osg-group+subscribe@osg-htc.org```.
 
 If this feature is available, you will receive an email with the following information:
 
@@ -67,9 +67,9 @@ In order for us to complete the request, please reply to this email or click
 
 ## Leaving a list via email
 
-To leave a Google Group via email, send a blank email to [Group Name]+unsubscribe@osg-htc.org.
+To leave a Google Group via email, send a blank email to ```[Group Name]+unsubscribe@osg-htc.org```.
 
-In the standard convention, it should look like osg-group+unsubscribe@osg-htc.org.
+In the standard convention, it should look like ```osg-group+unsubscribe@osg-htc.org```.
 
 If it is successful, you should receive an email with the following Subject Line and Content:
 
