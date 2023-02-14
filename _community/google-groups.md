@@ -30,7 +30,7 @@ To join a group via the Google Groups UI you should:
 #### Notes:
 - This method requires the group is open to the public and a Google Associated email address
 
-![Arrow pointing to Join Groups Button in Google Groups UI](/assets/images/Google_Group_Join_UI.png){: .img-fluid }
+![Arrow pointing to Join Groups Button in Google Groups UI](../assets/images/Google_Group_Join_UI.png){: .img-fluid }
 
 ## Leaving a list via webpage
 
