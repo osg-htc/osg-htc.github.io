@@ -19,3 +19,4 @@ Email: [Frank Wuerthwein](mailto:fkw@ucsd.edu) (OSG Executive Director)
 ### For help managing an OSG Mailing list membership
 
 Please refer to our [managing mailing list membership document](./community/mailing-lists).
+
