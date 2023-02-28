@@ -16,6 +16,7 @@ Email: <mailto:osg-contact@opensciencegrid.org>
 ### For OSG policies, executive information
 Email: [Frank Wuerthwein](mailto:fkw@ucsd.edu) (OSG Executive Director)
 
-### For help joining an OSG Mailing list
+### For help managing an OSG Mailing list membership
 
-Please refer to our [Managing Google Groups membership document](/community/google-groups).
+Please refer to our [managing mailing list membership document](./community/mailing-lists).
+
