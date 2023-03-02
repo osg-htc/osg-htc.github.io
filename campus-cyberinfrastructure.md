@@ -65,15 +65,18 @@ Our project is committed to support CC* projects from proposal, through deployme
 <div class="border p-3 mt-3 mb-3 pb-0 rounded bg-light" markdown="1">
 
 {: .fs-5 }
-Proposals in response to the 2023 CC* program solicitation ([NSF 23-526](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)) 
-are due on March 1, 2023. Please contact us at [cc-star-proposals@osg-htc.org](mailto:cc-star-proposals@osg-htc.org)
-(the earlier the better!) with any questions
-or requests you may have regarding the involvement of [PATh](https://path-cc.io) in your proposed project. Our technology and services are 
-readily available to support a spectrum of CC* projects.
+Proposals in response to the 2023 CC* program solicitation
+([NSF 23-526](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)) are due on
+11 September 2023.
+Please contact us at [cc-star-proposals@osg-htc.org](mailto:cc-star-proposals@osg-htc.org)
+(the earlier the better!) with any questions or requests
+you may have regarding the involvement of [PATh](https://path-cc.io) in your proposed project.
+Our technology and services are readily available to support a spectrum of CC* projects.
 
 {: .fs-5 }
-The [NSF 23-526](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm) solicitation explicitly mentions the OSG services
-we provide as a means to meet requirements for the following areas:
+The
+[NSF 23-526](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)
+solicitation explicitly mentions the OSG services we provide as a means to meet requirements for the following areas:
 
 {: .fs-5 }
 __(4) Campus Computing and the Computing Continuum__
