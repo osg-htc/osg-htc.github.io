@@ -369,16 +369,21 @@ class DataManager {
             }
         }
 
-        let osgconnect_db_jobs = new Set(await (await fetch("/assets/data/osgconnect_projects.json")).json())
+        let ospool_projects = new Set(await (await fetch("https://osg-htc.org/ospool-data/data/ospool_projects.json")).json())
+        let osgconnect_projects = new Set(await (await fetch("/assets/data/osgconnect_projects.json")).json())
+
+        let projects = new Set([...ospool_projects, ...osgconnect_projects])
         let usageJson = await UsageToggles.getUsage()
         let responseJson = await response.json()
 
         this.data = Object.entries(responseJson).reduce((p, [k,v]) => {
-            if(k in usageJson && osgconnect_db_jobs.has(k)){
+            if(k in usageJson && projects.has(k)){
                 p[k] = {...v, ...usageJson[k]}
             }
             return p
         }, {})
+
+        console.log(JSON.stringify(Object.keys(this.data)))
 
         return this.data
     }
