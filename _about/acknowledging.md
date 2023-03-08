@@ -1,6 +1,6 @@
 ---
 title: Acknowledging the OSG
-layout: container
+layout: text-optimized-width
 permalink: /acknowledging.html
 ---
 
