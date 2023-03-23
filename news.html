@@ -5,12 +5,11 @@ layout: padded-default
 
 
 <div class="container-xxl">
-    <h1>OSG News</h1>
-    <hr class="m-0">
+    <h1 class="mini-bar mt-1 mb-4">OSG News</h1>
 </div>
-<div class="bg-light pb-4">
-    <div class="container-xxl">
-        <div class="row pt-4">
+<div class="container-xxl">
+    <div class="rounded-3 bg-dark p-3">
+        <div class="row gx-3">
             {% include /get/news.liquid %}
             {% for news in news %}
             <div class="col-12 col-lg-6 col-xl-4 pb-4">
@@ -18,7 +17,7 @@ layout: padded-default
             </div>
             {% endfor %}
         </div>
-        <p class="pt-4">
+        <p class="pt-4 text-light">
             The OSG Consortium is pleased to see OSG stories reposted on the websites of other organizations.
 
             The stories should be reposted with credits to the OSG website and the original authors, as well as a link to the original posting.
