@@ -127,33 +127,36 @@ css_extension:
 </div>
 <div class="bg-light py-4">
   <div class="container-xxl">
-    <h3 class="mini-bar mt-3">OSG By Maps</h3>
-    <div class="row gx-3 pb-3">
-      {% for map in site.data.maps %}
-        <div class="col-12 col-sm-6 col-lg-3 {% cycle '', 'd-none d-sm-block', 'd-none d-lg-block', 'd-none d-lg-block' %}">
-          <a href="https://map.opensciencegrid.org{{ map.params }}">
-            <div class="rounded bg-white hover-shadow">
-              <h5 class="m-0 p-2">{{ map.title }}</h5>
-              <picture>
-                <source srcset="{{ map.image}}.webp">
-                <img class="img-fluid rounded-bottom" src="{{ map.image }}.png">
-              </picture>
-            </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
+    <h2 class="mini-bar my-3">OSG By Maps</h2>
+      <div class="row gx-2">
+        {% for map in site.data.maps %}
+          <div class="col-12 col-sm-6 col-lg-3 {% cycle '', 'd-none d-sm-block', 'd-none d-lg-block', 'd-none d-lg-block' %}">
+            <a href="https://map.opensciencegrid.org{{ map.params }}">
+              <div class="rounded bg-white hover-shadow border-dark border">
+                <h5 class="m-0 p-2">{{ map.title }}</h5>
+                <picture>
+                  <source srcset="{{ map.image}}.webp">
+                  <img class="img-fluid rounded-bottom" src="{{ map.image }}.png">
+                </picture>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
   </div>
 </div>
 <div class="bg-dark py-4 mb-4">
   <div class="container-xxl">
-    <div class="row justify-content-center">
-      {% include get/spotlights.liquid %}
-      {% for article in spotlights limit:3 %}
+    <h2 class="mini-bar my-3 text-light">User Spotlights</h2>
+    <div class="border border-light rounded-3 p-2">
+      <div class="row justify-content-center gx-2">
+        {% include get/spotlights.liquid %}
+        {% for article in spotlights limit:3 %}
         <div class="col-12 col-md-6 col-xl-4 {% cycle 'order-1 order-md-2', 'd-none d-md-block order-3', 'd-none d-xl-block order-3' %}">
           {% include /cards/spotlight-card.html height='150' no_date="true" %}
         </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
