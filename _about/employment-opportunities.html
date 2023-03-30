@@ -12,16 +12,18 @@ title: Employment Opportunities
 {% for job_hash in site.data.jobs %}
     {% assign job = job_hash[1] %}
     {% if now < job.endtime %}
+    <a href="{{ job.url }}">
         <div class="bg-light rounded p-2 px-3 border hover-shadow">
             <div class="row justify-content-between">
                 <div class="col-auto">
-                    <h4>{{ job.title }}</h4>
-                    <h6 class="text-muted">{{ job.institution }}</h6>
+                    <h4 class="text-decoration-none">{{ job.title }}</h4>
+                    <h6 class="text-muted text-decoration-none">{{ job.institution }}</h6>
                 </div>
                 <div class="col-auto d-flex">
-                    <a class="btn btn-dark my-auto" href="{{ job.url }}">Full Listing</a>
+                    <button class="btn btn-dark my-auto text-decoration-none">View Full Listing</button>
                 </div>
             </div>
         </div>
+    </a>
     {% endif %}
 {% endfor %}
