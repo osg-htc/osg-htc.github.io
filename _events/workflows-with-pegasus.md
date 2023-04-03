@@ -4,14 +4,14 @@ title: "OSG User Training: Workflows with Pegasus"
 published: true
 
 excerpt: |
-Sign up for our upcoming User training session on Tuesday, April 18th!
+    Sign up for our upcoming User training session on Tuesday, April 18th!
 
 start_date: 2023-04-18
 end_date: 2023-04-18
 location: "Virtual"
 link: "https://osgfacilitation.setmore.com/bookclass"
-image: "/images/events/pegasus-banner.jpg"
-header_image: "/images/events/pegasus-banner.jpg"
+image: "/assets/images/events/pegasus-banner.jpg"
+header_image: "/assets/images/events/pegasus-banner.jpg"
 ---
 
 {% capture main %}
