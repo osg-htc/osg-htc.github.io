@@ -6,6 +6,9 @@ title: Employment Opportunities
     The OSG Consortium is proud to display the following positions dedicated to advancing the state of research computing.
 </p>
 
+<h2>OSG Project Positions</h2>
+<p>The following positions are with projects that contribute directly to the OSG program of work.</p>
+
 {% include /get/jobs.liquid %}
 
 {% assign internal_jobs = jobs | where_exp: "x", "x.type == 'internal'" %}
@@ -17,11 +20,10 @@ title: Employment Opportunities
 
 {% assign external_jobs = jobs | where_exp: "x", "x.type == 'external'" %}
 {% if external_jobs.size > 0 %}
-    <h2 class="mt-4" id="external-positions">OSG Affiliate Institution Positions</h2>
+    <h2 class="mt-4" id="external-positions">Other Positions of Possible Interest</h2>
     <p>
-        The following positions are offered by our affiliate institutions, and seek to address a similar goal of advancing the
-        state of research computing. If you would like to add your own listing email <a href="mailto:support@osg-htc.org">support@osg-htc.org</a>
-        with position information.
+        The following positions may be of interest to those in the research computing field, but are not
+        affiliated with the OSG program of work nor are endorsed or recommended by OSG leadership
     </p>
     {% for job in external_jobs %}
         {% include /cards/job.html %}
