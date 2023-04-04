@@ -10,10 +10,6 @@ title: Employment Opportunities
 
 {% assign internal_jobs = jobs | where_exp: "x", "x.type == 'internal'" %}
 {% if internal_jobs.size > 0 %}
-    <h2 class="mt-4" id="internal-positions">OSG Employment Opportunities</h2>
-    <p>
-        The OSG is excited to offer the following positions to aid in the advancement of research computing.
-    </p>
     {% for job in internal_jobs %}
         {% include /cards/job.html %}
     {% endfor %}
