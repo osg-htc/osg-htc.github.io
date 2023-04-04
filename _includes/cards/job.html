@@ -1,0 +1,24 @@
+<div class="rounded bg-light p-2 pt-1 mb-2">
+    <div class="row justify-content-between">
+        <div class="col-auto">
+            <h3 id="{{ job.title | slugify }}" class="mb-0 mt-1">{{ job.title }}</h3>
+        </div>
+        <div><hr class="my-2"></div>
+        <div>
+            <h6>Institution</h6>
+            <p>{{ job.institution }}</p>
+        </div>
+        {% if job.close_date %}
+            <div>
+                <h6>Applications Close</h6>
+                <p>{{ job.close_date  | date: "%Y-%m-%d %H:%M" }}</p>
+            </div>
+        {% endif %}
+
+        {% if job.text %}
+            <h6>Summary</h6>
+            {{ job.text | markdownify }}
+        {% endif %}
+    </div>
+    <a class="btn btn-primary" href="{{ job.button.href }}">{{ job.button.text }}</a>
+</div>

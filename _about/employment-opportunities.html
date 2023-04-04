@@ -3,27 +3,33 @@ title: Employment Opportunities
 ---
 
 <p class="mt-3">
-    The OSG Consortium is proud to display positions dedicated to advancing the state of research computing. If you have a
+    The OSG Consortium is proud to offer the following positions dedicated to advancing the state of research computing. If you have a
     position that you would like to add to the list below please contact us at
     <a href="mailto:support@osg-htc.org">support@osg-htc.org</a> with a link to your position.
 </p>
 
-{% assign now = 'now' | date: '%s' | plus: 0 %}
-{% for job_hash in site.data.jobs %}
-    {% assign job = job_hash[1] %}
-    {% if now < job.endtime %}
-    <a href="{{ job.url }}">
-        <div class="bg-light rounded p-2 px-3 border hover-shadow">
-            <div class="row justify-content-between">
-                <div class="col-auto">
-                    <h4 class="text-decoration-none">{{ job.title }}</h4>
-                    <h6 class="text-muted text-decoration-none">{{ job.institution }}</h6>
-                </div>
-                <div class="col-auto d-flex">
-                    <button class="btn btn-dark my-auto text-decoration-none">View Full Listing</button>
-                </div>
-            </div>
-        </div>
-    </a>
-    {% endif %}
-{% endfor %}
+{% include /get/jobs.liquid %}
+
+{% assign internal_jobs = jobs | where_exp: "x", "x.type == 'internal'" %}
+{% if internal_jobs.size > 0 %}
+    <h2 class="mt-4" id="internal-positions">OSG Employment Opportunities</h2>
+    <p>
+        The OSG is excited to offer the following positions to aid in the advancement of research computing.
+    </p>
+    {% for job in internal_jobs %}
+        {% include /cards/job.html %}
+    {% endfor %}
+{% endif %}
+
+{% assign external_jobs = jobs | where_exp: "x", "x.type == 'external'" %}
+{% if external_jobs.size > 0 %}
+    <h2 class="mt-4" id="external-positions">OSG Affiliate Institution Positions</h2>
+    <p>
+        The following positions are offered by our affiliate institutions, and seek to address a similar goal of advancing the
+        state of research computing. If you would like to add your own listing email <a href="mailto:support@osg-htc.org">support@osg-htc.org</a>
+        with position information.
+    </p>
+    {% for job in external_jobs %}
+        {% include /cards/job.html %}
+    {% endfor %}
+{% endif %}
