@@ -11,7 +11,7 @@ Email: <mailto:osg-contact@opensciencegrid.org>
 ### To get started using OSG, for OSG support, operational issues
 
 * Email: <mailto:support@osg-htc.org>
-* OSG Connect Support: <mailto:support@osgconnect.net> (for users of [OSG Connect](https://support.opensciencegrid.org))
+* OSG Account Support: <mailto:support@osg-htc.org> (for users of [OSPool and OSG Access Points](https://portal.osg-htc.org))
 
 ### For OSG policies, executive information
 Email: [Frank Wuerthwein](mailto:fkw@ucsd.edu) (OSG Executive Director)
