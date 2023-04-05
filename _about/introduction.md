@@ -66,7 +66,7 @@ associated with a US-based academic, government, or non-profit organization,
 and with funding from the National Science Foundation through the PATh project
 (NSF #2030508). Applicable researchers can obtain access to OSPool resources 
 via an access point operated by their institution or collaboration, or via the
-**[OSG Connect service](https://connect.osg-htc.org/)**.
+**[OSG Portal](https://portal.osg-htc.org)**.
 
 Learn more about [other OSG Pools, who contributes, and who uses them](/about/organization/).
 
