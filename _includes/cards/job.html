@@ -8,7 +8,7 @@
             <h6>Institution</h6>
             <p>{{ job.institution }}</p>
         </div>
-        {% if job.close_date %}
+        {% if job.close_date and job.show_close_date %}
             <div>
                 <h6>Applications Close</h6>
                 <p>{{ job.close_date  | date: "%Y-%m-%d %H:%M" }}</p>
