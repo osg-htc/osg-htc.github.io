@@ -1,0 +1,32 @@
+---
+title: Employment Opportunities
+---
+
+<p class="mt-3">
+    The OSG Consortium is a national and worldwide hub for research on distributed computing.
+    Below are some employment opportunities related to this work.
+</p>
+
+<h2>OSG Project Positions</h2>
+<p>The following positions are with projects that contribute directly to the OSG program of work.</p>
+
+{% include /get/jobs.liquid %}
+
+{% assign internal_jobs = jobs | where_exp: "x", "x.type == 'internal'" %}
+{% if internal_jobs.size > 0 %}
+    {% for job in internal_jobs %}
+        {% include /cards/job.html %}
+    {% endfor %}
+{% endif %}
+
+{% assign external_jobs = jobs | where_exp: "x", "x.type == 'external'" %}
+{% if external_jobs.size > 0 %}
+    <h2 class="mt-4" id="external-positions">Other Positions of Possible Interest</h2>
+    <p>
+        The following positions may be of interest to those seeking a position in distributed computing,
+        but are not directly associated with the OSG program of work.
+    </p>
+    {% for job in external_jobs %}
+        {% include /cards/job.html %}
+    {% endfor %}
+{% endif %}
