@@ -26,7 +26,7 @@ This workshop will also feature an exercise using text analysis and the next ste
 
 **[Register here](https://osgfacilitation.setmore.com/bookclass)**
 
-All User Training sessions are offered from 2:30-4:00pm EST (and usually on Tuesdays). New User Training is offered monthly, generally on the first Tuesday of the month, and training on various additional topics happens on the third Tuesday of the month. It's best to already have an active account on an OSG Connect login node (or other access point that submits to the Open Science Pool) to follow along with hands-on examples, but anyone can listen in by registering.
+All User Training sessions are offered from 2:30-4:00pm EST (and usually on Tuesdays). New User Training is offered monthly, generally on the first Tuesday of the month, and training on various additional topics happens on the third Tuesday of the month. It's best to already have an active account on an OSG-Operated Access Point (or other access point that submits to the Open Science Pool) to follow along with hands-on examples, but anyone can listen in by registering.
 
 Other upcoming trainings:
 - Tuesday, May 2: New User Training, **more information and registration coming soon.**
