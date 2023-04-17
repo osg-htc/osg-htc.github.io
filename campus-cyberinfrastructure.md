@@ -16,10 +16,11 @@ css_extension:
 table_of_contents:
   - name: How OSG can help your proposal
     href: "#let-the-path-team-help-with-your-proposal"
-  - name: How OSG supports Awardees
-    href: "#osgs-active-support-of-cc-awardees"
-  - name: Actively Supported Colleges
-    href: "#osg-supported-colleges-and-universities-contributing-via-the-cc-program"
+    children: 
+      - name: Deployment
+        href: '#deployment'
+      - name: Operation
+        href: '#operation'
   - name: CC* Impact on Open Science
     href: "#cc-campus-impact-on-open-science"
     children:
