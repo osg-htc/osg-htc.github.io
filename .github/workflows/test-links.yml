@@ -7,6 +7,6 @@ jobs:
 
     steps:
       - uses: CannonLock/test_links@master
-        env:
-          URL_IGNORE: "/https://doi.org/.*/,https://home.cern/science/accelerators/large-hadron-collider,https://www.amnh.org/,https://home.cern/science/experiments/cms,https://docs.google.com/forms/d/e/1FAIpQLSc2zcpgG7aXKKePoOdjOnK-6M8zv_yVnZDkok2onc39E88lXw/viewform,https://docs.google.com/forms/d/e/1FAIpQLSc2zcpgG7aXKKePoOdjOnK-6M8zv_yVnZDkok2onc39E88lXw/viewform,https://ieeexplore.ieee.org/document/6495936,https://www.amnh.org/research/computational-sciences,https://pace.gatech.edu/,https://www.to.infn.it/"
-          FILE_IGNORE: "/.*/employment-opportunities/.*/"
+        with:
+          url_ignore: "/https://doi.org/.*/,https://home.cern/science/accelerators/large-hadron-collider,https://www.amnh.org/,https://home.cern/science/experiments/cms,https://docs.google.com/forms/d/e/1FAIpQLSc2zcpgG7aXKKePoOdjOnK-6M8zv_yVnZDkok2onc39E88lXw/viewform,https://docs.google.com/forms/d/e/1FAIpQLSc2zcpgG7aXKKePoOdjOnK-6M8zv_yVnZDkok2onc39E88lXw/viewform,https://ieeexplore.ieee.org/document/6495936,https://www.amnh.org/research/computational-sciences,https://pace.gatech.edu/,https://www.to.infn.it/"
+          file_ignore: "/.*/employment-opportunities/.*/"
