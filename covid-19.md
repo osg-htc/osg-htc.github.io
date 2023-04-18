@@ -33,7 +33,7 @@ Sites Supporting COVID-19 Research
 
 Any computing resource provider supporting the `osg` VO ("Open Science Pool", see above) is likely already providing hours
 to support COVID-19.  If you would like to provide additional resources _exclusive_ for COVID-19,
-[instructions are available](/docs/compute-element/covid-19/).
+[instructions are available](https://osg-htc.org/docs/compute-element/covid-19/).
 
 Other Activities
 ----------------
@@ -42,9 +42,6 @@ Other Activities
     a broad consortium of industry, academia, and national labs to make a diverse set of
     computing resources available for research.  The COVID-19 HPC consortium meets daily
     to review requests from researchers.
-    
--   [Science Responds](https://science-responds.org/) is a broad COVID-19 response effort from
-    the scientific community.
 
 -   The IRIS-HEP software institute provides effort to the OSG through its _OSG-LHC_ area; it
     has been coordinating additional [COVID-19 activities](https://iris-hep.org/covid-19).
