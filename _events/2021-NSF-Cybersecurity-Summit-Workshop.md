@@ -55,7 +55,7 @@ interoperability, usability and trust in these implementations.
 The inaugural Workshop on Token-Based Authentication and Authorization
 ([WoTBAn&Az 2020](https://indico.rnp.br/event/33/))
 convened online via Zoom on November 30 and December 1, 2020, hosted by
-[TAGPMA](http://www.tagpma.org/).
+[TAGPMA](https://www.tagpma.org/).
 This workshop gathered major R&E CI developers, operators, and service providers,
 including representatives from Fermilab, Globus, LIGO, SciTokens, WLCG and XSEDE,
 to present and discuss early implementations of token-based authentication and
@@ -105,7 +105,7 @@ The intended audience includes developers, operators, and stakeholders in intero
 - Derek Weitzel [dweitzel@unl.edu](mailto:dweitzel@unl.edu)
 
 ### Acknowledgements
-The workshop is co-organized by [SciAuth](https://sciauth.org/) and [TAGPMA](http://www.tagpma.org/).
+The workshop is co-organized by [SciAuth](https://sciauth.org/) and [TAGPMA](https://www.tagpma.org/).
 {% endcapture %}
 
 {% comment %}

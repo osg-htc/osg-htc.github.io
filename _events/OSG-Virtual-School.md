@@ -18,13 +18,13 @@ excerpt: |
       * How to prepare software for use in HTC systems
       * Handling data (input and output) in HTC systems
   
-  - The Public lectures are held daily, August 2–6 from 2:30–4:00 pm CST. Browse the [timetable](https://indico.fnal.gov/event/49686/timetable/#20210802) for a detailed schedule. [Registration](https://indico.fnal.gov/event/49686/registrations/3094/) is open through August 6 and is free, but required. 
+  - The Public lectures are held daily, August 2–6 from 2:30–4:00 pm CST. Browse the [timetable](https://indico.fnal.gov/event/49686/timetable/) for a detailed schedule. [Registration](https://indico.fnal.gov/event/49686/registrations/3094/) is open through August 6 and is free, but required. 
       
   - We plan to continue running the OSG User School every year! In a typical (non-pandemic) year, we accept applications during the month of March. So please keep an eye out for future offerings. (Applications for 2021 are closed.)
 start_date: 2021-08-02
 end_date: 2021-08-13
 location: "Virtual"
-link: "/virtual-school-2021/"
+link: "https://osg-htc.org/virtual-school-2021/"
 image: "assets/images/events/code-graphic.png"
 header_image: "assets/images/events/Madison-Header.jpg"
 ---
@@ -46,7 +46,7 @@ Topics include:
 * Handling data (input and output) in HTC systems
 
 
-The Public lectures are held daily, August 2–6 from 2:30–4:00 pm CST. Browse the [timetable](https://indico.fnal.gov/event/49686/timetable/#20210802) for a detailed schedule. [Registration](https://indico.fnal.gov/event/49686/registrations/3094/) is open through August 6 and is free, but required. 
+The Public lectures are held daily, August 2–6 from 2:30–4:00 pm CST. Browse the [timetable](https://indico.fnal.gov/event/49686/timetable/) for a detailed schedule. [Registration](https://indico.fnal.gov/event/49686/registrations/3094/) is open through August 6 and is free, but required. 
 
 The lectures will be recorded and posted on the School website eventually, along with the complete set of exercises. While full participants also have priority access to experts, personalized learning plans, and small-group learning sessions, by opening lectures up to the public, a great deal of the School content will be available to everyone.
 
@@ -64,7 +64,7 @@ post-doctoral students, faculty, and staff!
 This year's virtual offering has been tuned for remote participation,
 with the goal of helping attendees get their own work running within the 2-week period,
 and is not merely a translation of the in-person program
-(last offered in [2019](/user-school-2019/)).
+(last offered in [2019](https://osg-htc.org/user-school-2019/)).
 
 **The Virtual School will be held the weeks of August 2&ndash;6 and 9&ndash;13.**
 The event is free and materials will be posted publicly.
@@ -76,9 +76,9 @@ which includes access to HTC experts and to HTC systems via the
 
 While no travel is involved and the schedule allows for some flexibility,
 accepted applicants were asked to commit at least 20 hours each week.
-You can view [the high-level schedule for 2021](/virtual-school-2021/schedule/),
+You can view [the high-level schedule for 2021](https://osg-htc.org/virtual-school-2021/schedule/),
 and we expect the detailed schedule and materials to be similar to the
-[OSG Virtual School Pilot 2020](/virtual-school-pilot-2020/).
+[OSG Virtual School Pilot 2020](https://osg-htc.org/virtual-school-pilot-2020/).
 
 We hope to return to an in-person OSG User School in 2022. 
 
@@ -122,7 +122,7 @@ Contact us at <user-school@opensciencegrid.org>.
 ## Contact Us
 
 The OSG Virtual School is part of the
-[OSG Outreach Area](/outreach/)&nbsp;&mdash; please visit that site to
+[OSG Outreach Area](https://osg-htc.org/outreach/)&nbsp;&mdash; please visit that site to
 learn about past OSG Schools.
 
 If you have any questions about the event, feel free to email us:

@@ -11,7 +11,7 @@ excerpt: |
 start_date: 2023-07-10
 end_date: 2023-07-14
 location: "University of Wisconsin–Madison’s Fluno Center and Online via Zoom"
-link: "http://htcondor.org/ThroughputComputing2023"
+link: "https://htcondor.org/ThroughputComputing2023"
 image: "/assets/images/events/Throughput-Computing-2023-Banner.png"
 header_image: "/assets/images/events/Throughput-Computing-2023-Banner.png"
 ---
@@ -38,7 +38,7 @@ If this is your first time registering for an event on the registration site, yo
 
 ### Schedule
 
-The schedule can be found under the [General Schedule](https://agenda.hep.wisc.edu/event/2014/timetable/#20230710) section on the Throughput Computing  2023 event website. The session block topics will not change; however, there will likely be timing adjustments in the schedule as speakers are finalized.
+The schedule can be found under the [General Schedule](https://agenda.hep.wisc.edu/event/2014/timetable/) section on the Throughput Computing  2023 event website. The session block topics will not change; however, there will likely be timing adjustments in the schedule as speakers are finalized.
 
 All the topics typically covered by HTCondor Week and the OSG All-Hands Meeting will be included:
 
@@ -70,7 +70,7 @@ For questions about attending, speaking, accommodations, and other concerns plea
 To learn about this event in more detail, view last year’s schedules for:
 
 - [OSG All-Hands Meeting](https://osg-htc.org/all-hands/2022/schedule/)
-- [HTCondor Week 2022](https://agenda.hep.wisc.edu/event/1733/timetable/#20220523)
+- [HTCondor Week 2022](https://agenda.hep.wisc.edu/event/1733/timetable/)
 
 {% endcapture %}
 

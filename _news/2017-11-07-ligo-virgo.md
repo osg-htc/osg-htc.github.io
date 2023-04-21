@@ -5,7 +5,7 @@ categories: LIGO
 ---
 
 On October 16th, scientists at the LIGO and Virgo scientific collaborations
-[announced](http://www.ligo.org/detections/GW170817/press-release/pr-english.pdf) the detection of gravitational waves
+[announced](https://www.ligo.org/detections/GW170817/press-release/pr-english.pdf) the detection of gravitational waves
 from the collision of two neutron stars that occurred 130 million years ago. This collision has also been observed with
 light emitted across the entire electromagnetic spectrum.
 

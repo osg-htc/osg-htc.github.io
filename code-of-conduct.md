@@ -16,7 +16,7 @@ and all other stakeholders are expected to conduct themselves in a professional 
 that is welcoming to all and free from any form of discrimination, harassment, or retaliation.
 OSG members pledge to treat each other with respect and
 strive to model behaviors that encourage productive debate and allow for respectful disagreement.
-
+X
 All participants in OSG activities will not engage in any inappropriate actions or statements that
 are derogatory or defamatory on the basis of individual characteristics
 such as age, race, ethnicity, sexual orientation, gender identity, gender expression, marital status,
@@ -48,4 +48,4 @@ may be directed to the OSG Council co-chairs.
 
 -------------------------------------------------------------------------------
 
-[^1]: At the moment, the OSG CoC appointees are [the members of the OSG Executive Team](/management/#executive-team)
+[^1]: At the moment, the OSG CoC appointees are [the members of the OSG Executive Team](https://osg-htc.org/management/#executive-team)

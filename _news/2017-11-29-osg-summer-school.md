@@ -24,7 +24,7 @@ and the last-day capstone exercise and its end-to-end workflow example. The larg
 reflected both changes in the technologies involved plus improved pedagogical approaches
 based on experiences with past OSG User Schools and other science end-user engagements.
 
-[All of the training materials](/user-school-2017/) from
+[All of the training materials](https://osg-htc.org/user-school-2017/) from
 the School remain available online indefinitely, in case they are helpful as reference material.
 Also, participants received several clear options for getting ongoing help with their large-scale
 computing needs. Plus, every participant left the School with at least two ways to run jobs —

@@ -9,7 +9,7 @@ excerpt: |
 start_date: 2022-05-23
 end_date: 2022-05-26
 location: "UW-Madison and Virtual"
-link: "http://htcondor.org/HTCondorWeek2022"
+link: "https://htcondor.org/HTCondorWeek2022"
 image: "/assets/images/HTCondor_Banner.jpg"
 header_image: "/assets/images/HTCondor_Banner.jpg"
 ---
@@ -28,7 +28,7 @@ We will have a variety of in-depth tutorials and talks where you can learn more 
 
 Speaking of learning from the community, we'd love to have you give a talk at HTCondor Week. Talks are 15-20 minutes long and are a great way to share your ideas and get feedback from the community. If you have a compelling use of HTCondor you'd like to share, see our [Speaker Information page](https://agenda.hep.wisc.edu/event/1733/abstracts/).
 
-You can get hotel details, and see the agenda overview on the [HTCondor Week 2022 site](http://htcondor.org/HTCondorWeek2022).
+You can get hotel details, and see the agenda overview on the [HTCondor Week 2022 site](https://htcondor.org/HTCondorWeek2022).
 
 Hope to see you there,
 

@@ -6,7 +6,7 @@ card_image: /assets/images/team-2020.jpg
 --- 
 **HTCondor Week May 24-28, 2021**
 
-HTCondor Week 2021 will be a free, virtual event. [Registration is open.](https://agenda.hep.wisc.edu/event/1579/) You can view the detailed schedule here: [https://agenda.hep.wisc.edu/event/1579/timetable/#20210524.detailed](https://agenda.hep.wisc.edu/event/1579/timetable/#20210524.detailed)
+HTCondor Week 2021 will be a free, virtual event. [Registration is open.](https://agenda.hep.wisc.edu/event/1579/) You can view the detailed schedule here: [https://agenda.hep.wisc.edu/event/1579/timetable/](https://agenda.hep.wisc.edu/event/1579/timetable/)
 
 Among the many interesting speakers are:
 
