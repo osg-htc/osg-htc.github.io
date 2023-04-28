@@ -12,8 +12,8 @@ start_date: 2023-07-10
 end_date: 2023-07-14
 location: "University of Wisconsin–Madison’s Fluno Center and Online via Zoom"
 link: "http://htcondor.org/ThroughputComputing2023"
-image: "/assets/images/events/Throughput-Computing-2023-Banner.png"
-header_image: "/assets/images/events/Throughput-Computing-2023-Banner.png"
+image: "/assets/images/events/Throughput-Computing-2023-Banner.jpg"
+header_image: "/assets/images/events/Throughput-Computing-2023-Banner.jpg"
 ---
 
 {% capture main %}
