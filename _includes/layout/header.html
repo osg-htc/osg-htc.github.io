@@ -34,8 +34,14 @@
                             {% endfor %}
                         </div>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ '/campus-cyberinfrastructure.html' | relative_url }}">Campuses</a>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="campusNavLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Campuses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="campusNavLink">
+                            <a class="dropdown-item" href="{{ '/campus-cyberinfrastructure.html' | relative_url }}">CC* Proposals</a>
+                            <a class="dropdown-item" href="{{ '/campus/support.html' | relative_url }}">Support</a>
+                        </div>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ '/spotlight.html' | relative_url }}">Spotlight</a>
