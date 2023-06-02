@@ -1,17 +1,64 @@
-{  
-   "issuer":"https://osg-htc.org/ospool",
-   "jwks_uri":"https://osg-htc.org/ospool/oauth2/certs",
-   "token_endpoint": "https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/token",
-   "userinfo_endpoint": "https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/userinfo",
-   "registration_endpoint": "https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/oidc-cm",
-   "device_authorization_endpoint": "https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/device_authorization",
-   "token_endpoint_auth_methods_supported": [
-      "client_secret_post",
-      "client_secret_basic"
-   ],
-   "grant_types_supported": [
-      "authorization_code",
-      "refresh_token",
-      "urn:ietf:params:oauth:grant-type:device_code"
-   ]
+{
+  "issuer":"https://osg-htc.org/ospool",
+  "jwks_uri":"https://osg-htc.org/ospool/oauth2/certs",
+  "token_endpoint":"https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/token",
+  "userinfo_endpoint":"https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/userinfo",
+  "registration_endpoint":"https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/oidc-cm",
+  "device_authorization_endpoint":"https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/device_authorization",
+  "authorization_endpoint":"https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/authorize",
+  "introspection_endpoint":"https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/introspect",
+  "revocation_endpoint":"https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/revoke",
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_basic"
+  ],
+  "device_authorization_endpoint":"https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/device_authorization",
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "client_secret_basic"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "code_challenge_method_supported": [
+    "plain",
+    "S256"
+  ],
+  "scopes_supported": [
+    "edu.uiuc.ncsa.myproxy.getcert",
+    "org.cilogon.userinfo",
+    "openid",
+    "profile",
+    "email",
+    "offline_access"
+  ],
+  "response_types_supported": [
+    "code",
+    "id_token"
+  ],
+  "grant_types_supported": [
+    "authorization_code",
+    "refresh_token",
+    "urn:ietf:params:oauth:grant-type:device_code",
+    "web",
+    "urn:oa4mp:params:oauth:grant-type:token-info",
+    "urn:ietf:params:oauth:grant-type:token-exchange"
+  ],
+  "response_modes_supported": [
+    "query",
+    "fragment",
+    "form_post"
+  ],
+  "claims_supported": [
+    "sub",
+    "aud",
+    "iss",
+    "exp",
+    "iat",
+    "email"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256",
+    "RS384",
+    "RS512"
+  ]
 }
