@@ -70,7 +70,7 @@ The call for abstracts for the **HTCondor sessions** of Throughput Computing 23 
 
 ### Questions and Resources
 
-For questions about attending, speaking, accommodations, and other concerns please contact us at [htc23@path-cc.io](mailto:\htc23@path-cc.io).
+For questions about attending, speaking, accommodations, and other concerns please contact us at [htc23@path-cc.io](mailto:htc23@path-cc.io).
 
 To learn about this event in more detail, view last year’s schedules for:
 
