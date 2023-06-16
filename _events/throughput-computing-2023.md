@@ -19,7 +19,7 @@ header_image: "/assets/images/events/Throughput-Computing-2023-Banner.jpg"
 {% capture main %}
 ### Registration
 
-Registration for [Throughput Computing 2023](https://agenda.hep.wisc.edu/event/2014/) is open, but in-person registration closes on **June 15!**
+Registration for [Throughput Computing 2023](https://agenda.hep.wisc.edu/event/2014/) is open, but in-person registration closes on **June 20th!**
 
 For the first time, HTCondor Week and the OSG All-Hands Meeting will join together as a single, integrated event from July 10–14 to be held at the University of Wisconsin–Madison’s [Fluno Center](https://fluno.com/). Throughput Computing 2023 is sponsored by the OSG Consortium, the HTCondor team, and the UW-Madison Center for High Throughput Computing.
 
