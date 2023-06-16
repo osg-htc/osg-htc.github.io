@@ -25,15 +25,13 @@ For the first time, HTCondor Week and the OSG All-Hands Meeting will join togeth
 
 This will primarily be an in-person event, but remote participation (via Zoom) for the many plenary events will also be offered.
 
-**Registration for in-person attendance:** [Register here.](https://uw.ungerboeck.com/prod/emc00/PublicSignIn.aspx?&aat=hAc2KhMWB4wgUAGwFEqLOM9xYB4D841E2wk3wrAJ6R8%3d)
+**Registration for in-person attendance (Closes June 20th):** [Register here.](https://uw.ungerboeck.com/prod/emc00/PublicSignIn.aspx?&aat=hAc2KhMWB4wgUAGwFEqLOM9xYB4D841E2wk3wrAJ6R8%3d)
 
-**Registration for virtual attendance:** [Register here.](https://agenda.hep.wisc.edu/event/2014/registrations/251/)
+**Registration for virtual attendance (Will remain open throughout):** [Register here.](https://agenda.hep.wisc.edu/event/2014/registrations/251/)
 
 If you register for the in-person event at the University of Wisconsin–Madison, you can attend plenary and non-plenary sessions, mingle with colleagues, and have planned or ad hoc meetings. Evening events are also planned throughout the week.
 
 If this is your first time registering for an event on the registration site, you will have to create an account first and then register.
-
-*Registration for in-person attendance closes June 15.*
 
 ### Schedule
 
