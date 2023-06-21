@@ -17,7 +17,7 @@ jobs:
     env:
       preview_url: https://github.com/osg-htc/web-preview.git
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: 'recursive'
           ref: ${{ inputs.branch }}
@@ -39,7 +39,7 @@ jobs:
           git commit -am "GHA: path-cc/path-cc.github.io #$GITHUB_RUN_NUMBER"
 
       - name: Setup SSH Keys and known_hosts
-        uses: webfactory/ssh-agent@v0.5.3
+        uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{ secrets.WEB_PREVIEW_DEPLOY_KEY }}
 
