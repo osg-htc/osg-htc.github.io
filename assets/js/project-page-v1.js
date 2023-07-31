@@ -4,6 +4,8 @@
 
 import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, SUMMARY_INDEX, OSPOOL_FILTER} from "./elasticsearch.js";
 import {GraccDisplay, locale_int_string_sort, string_sort, hideNode} from "./util.js";
+import {PieChart} from "./components/pie-chart.js";
+
 
 function makeDelay(ms) {
     let timer = 0;
@@ -12,6 +14,8 @@ function makeDelay(ms) {
         timer = setTimeout(callback, ms);
     };
 }
+
+
 
 /**
  * A suite of Boolean functions deciding the visual status of a certain grafana graph
@@ -78,7 +82,9 @@ class UsageToggles {
 
         this.usage = projectBuckets.reduce((p, v) => {
             p[v['key']] = {
+                cpuHours: v['projectCpuUse']['value'],
                 cpu: v['projectCpuUse']['value'] != 0,
+                gpuHours: v['projectGpuUse']['value'],
                 gpu: v['projectGpuUse']['value'] != 0,
                 jobs: v['projectJobsRan']['value']
             }
@@ -111,6 +117,8 @@ const GRAFANA_BASE = {
     from: DATE_RANGE['oneYearAgo'],
     to: DATE_RANGE['now']
 }
+
+
 
 /**
  * A node wrapping the project information break down
@@ -349,13 +357,18 @@ class DataManager {
         this.toggleConsumers()
     }
 
+    getData = async () => {
+        if(!this.data) {
+            this.data = this._getData()
+        }
+        return this.data
+    }
+
     /**
      * Compiles the project data and does some prefilters to dump unwanted data
      * @returns {Promise<*>}
      */
-    getData = async () => {
-
-        if( this.data ){ return this.data }
+    _getData = async () => {
 
         let response;
 
@@ -383,7 +396,7 @@ class DataManager {
             return p
         }, {})
 
-        console.log(JSON.stringify(Object.keys(this.data)))
+        console.log(this.data)
 
         return this.data
     }
@@ -399,6 +412,26 @@ class DataManager {
         }
         return filteredData
     }
+
+    reduceByKey = async (key) => {
+        let data = await this.getData()
+        let reducedData = Object.values(data).reduce((p, v) => {
+            if(v[key] in p) {
+                p[v[key]] += v['jobs']
+            } else {
+                p[v[key]] = v['jobs']
+            }
+            return p
+        }, {})
+        let sortedData = Object.entries(reducedData)
+            .map(([k,v]) => {return {label: k, jobs: v}})
+            .sort((a, b) => b.jobs - a.jobs)
+        return {
+            labels: sortedData.map(x => x.label),
+            data: sortedData.map(x => x.jobs)
+        }
+    }
+
 }
 
 class ProjectPage{
@@ -415,6 +448,15 @@ class ProjectPage{
     initialize = async () => {
         this.mode = undefined
         this.dataManager = new DataManager()
+
+        new PieChart(
+            "project-institution-summary",
+            (await this.dataManager.reduceByKey("Organization"))
+        )
+        new PieChart(
+            "project-fos-summary",
+            (await this.dataManager.reduceByKey("FieldOfScience"))
+        )
 
         let projectDisplayNode = document.getElementById("project-display")
         this.projectDisplay = new ProjectDisplay(projectDisplayNode)
@@ -436,12 +478,12 @@ class ProjectPage{
         }
     }
 
+
+
     minimumJobsFilter = (data) => {
         return Object.entries(data).reduce((pv, [k,v]) => {
             if(v['jobs'] >= 100){
                 pv[k] = v
-            } else {
-                console.log(k)
             }
             return pv
         }, {})
