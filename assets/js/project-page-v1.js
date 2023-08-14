@@ -2,7 +2,7 @@
     layout: blank
 ---
 
-import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, SUMMARY_INDEX, OSPOOL_FILTER} from "./elasticsearch.js";
+import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, SUMMARY_INDEX, OSPOOL_FILTER} from "./elasticsearch-v1.js";
 import {GraccDisplay, locale_int_string_sort, string_sort, hideNode} from "./util.js";
 
 function makeDelay(ms) {
