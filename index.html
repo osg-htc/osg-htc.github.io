@@ -3,12 +3,16 @@ layout: default
 css_extension:
   - href: "/assets/css/homepage.css"
 ---
-
+{% include /get/hero_data.liquid %}
 <div id="hero-image" class="vh-75 vh-md-50">
   <div class="container-xxl">
     <div class="row justify-content-end">
+      {% if hero_data.additional_image %}
+        <div class="col-12 col-sm-10 col-md-6 col-xxl-7 col- d-flex order-md-2">
+          <img class="img-fluid pt-3 pt-lg-0" src="{{ hero_data.additional_image.src | relative_url }}" alt="{{ hero_data.additional_image.alt }}" />
+        </div>
+      {% endif %}
       <div class="col-12 col-md-5 col-xxl-5">
-        {% include /get/hero_data.liquid %}
         <div class="p-3 mb-3 mt-4 d-flex flex-column" id="hero-content-container">
           <h3 class="text-white">{{ hero_data.title }}</h3>
           <hr>
