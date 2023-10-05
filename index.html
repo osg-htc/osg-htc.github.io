@@ -92,27 +92,23 @@ css_extension:
           {% endfor %}
         </div>
       </div>
-    </div>
-  </div>
-</div>
-<div class="bg-light py-4">
-  <div class="container-xxl">
-    <h2 id="osg-by-maps" class="mini-bar my-3">OSG By Maps</h2>
-      <div class="row gx-2">
-        {% for map in site.data.maps %}
-          <div class="col-12 col-sm-6 col-lg-3 {% cycle '', 'd-none d-sm-block', 'd-none d-lg-block', 'd-none d-lg-block' %}">
-            <a href="https://map.opensciencegrid.org{{ map.params }}">
-              <div class="rounded bg-white hover-shadow border-dark border">
-                <h4 class="m-0 p-2">{{ map.title }}</h4>
-                <picture>
-                  <source srcset="{{ map.image}}.webp">
-                  <img class="img-fluid rounded-bottom" src="{{ map.image }}.png">
-                </picture>
+      <div class="card mt-2">
+        <div class="card-body mb-auto">
+          <h3 class="m-0">OSG By Maps</h3>
+          <hr class="my-2">
+          {% for map in site.data.maps %}
+            <a class="text-decoration-none d-block" href="https://map.opensciencegrid.org/{{ map.params }}">
+              <div class="card border-0 hover-shadow p-1 my-2">
+                <b class="text-decoration-none">
+                  <img src="assets/images/geo-alt.svg" alt="Geo Icon for Maps" width="28px">
+                  {{ map.title }}
+                </b>
               </div>
             </a>
-          </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
       </div>
+    </div>
   </div>
 </div>
 <div class="bg-dark py-4 mb-4">
