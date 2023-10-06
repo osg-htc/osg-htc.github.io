@@ -165,7 +165,8 @@ class ProjectDisplay{
                         to: graph['to'],
                         from: graph['from'],
                         orgId: graph['orgId'],
-                        panelId: graph['panelId']
+                        panelId: graph['panelId'],
+                        "var-Filter": "ResourceType|=|Payload"
                     },
                     "var-Project",
                     graph
