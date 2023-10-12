@@ -38,7 +38,7 @@ to support COVID-19.  If you would like to provide additional resources _exclusi
 Other Activities
 ----------------
 
--   OSG participates in the [COVID-19 HPC consortium](https://covid19-hpc-consortium.org/),
+-   OSG participates in the COVID-19 HPC consortium,
     a broad consortium of industry, academia, and national labs to make a diverse set of
     computing resources available for research.  The COVID-19 HPC consortium meets daily
     to review requests from researchers.
