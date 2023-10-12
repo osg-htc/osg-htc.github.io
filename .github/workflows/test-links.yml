@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: CannonLock/test_links@master
         with:
-          file_ignore: "/./about/organization/index.html/, /./about/index.html/, /./myosg-decommissioned/index.html/, /./osg-twiki-decommissioned/index.html/, /./ticket-decommissioned/index.html/, /./voms-retirement/index.html/"
+          file_ignore: "/./about/organization/index.html/,/./about/index.html/,/./myosg-decommissioned/index.html/,/./osg-twiki-decommissioned/index.html/,/./ticket-decommissioned/index.html/,/./voms-retirement/index.html/"
