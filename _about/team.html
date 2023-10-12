@@ -3,6 +3,13 @@ layout: container
 title: The OSG Team
 ---
 
+{% assign people = "" |  split: "" %}
+{% for person in site.data.people %}
+    {% assign people = people | push: person[1] %}
+{% endfor %}
+{% assign people = people | sort: "name" %}
+
+
 <div class="container-xxl">
     <h2 class="ps-3">Executive Team</h2>
     <p class="ps-3">
@@ -11,12 +18,11 @@ title: The OSG Team
     </p>
     <div class="row g-0 rounded bg-light pb-3 pe-3">
         {% for member in site.data.orgs.exec-team.personnel %}
-        {% for person_hash in site.data.people %}
-        {% assign person = person_hash[1] %}
+        {% for person in people %}
         {% if person.shortname == member %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 pt-3 ps-3 d-flex">
             <div class="card shadow border-0 flex-grow-1">
-                <img class="card-img-top" src="{{person.image | relative_url}}" alt="Card image cap">
+                <img class="card-img-top" src="/assets/{{person.image | relative_url}}" alt="Card image cap">
                 <div class="card-body d-flex flex-column">
                     <div class="card-text">
                         {% if person.website %}
@@ -39,12 +45,10 @@ title: The OSG Team
 <div class="container-xxl">
     <h2 class="ps-3">Full Team</h2>
     <div class="row g-0 bg-light rounded bg-light pb-2 pe-2">
-        {% assign people = site.data.people | sort %}
-        {% for person_hash in people %}
-        {% assign person = person_hash[1] %}
+        {% for person in people %}
         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xxl-2 pt-2 ps-2 d-flex">
             <div class="card border-0 shadow flex-grow-1">
-                <img class="card-img-top" src="{{person.image}}" alt="Card image cap">
+                <img class="card-img-top" src="/assets/{{person.image}}" alt="Card image cap">
                 <div class="card-body d-flex flex-column">
                     <div class="card-text">
                         {% if person.website %}

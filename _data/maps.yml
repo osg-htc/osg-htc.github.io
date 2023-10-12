@@ -1,0 +1,12 @@
+- title: All Sites
+  image: /assets/images/osg_map_previews/Sites
+  params: "#45.737115,-90.140436|2"
+- title: OSPool Contributors
+  image: /assets/images/osg_map_previews/OSPool_Contributors
+  params: ?view=OSPool#15.737115,-90.140436|3
+- title: OSDF Contributors
+  image: /assets/images/osg_map_previews/OSDF
+  params: ?view=OpenScienceDataFederation#45.737115,-90.140436|2
+- title: CC* Sites
+  image: /assets/images/osg_map_previews/CC-Star
+  params: ?view=CCStar#38.737115,-90.140436|5

@@ -1,0 +1,1 @@
+{% assign site-specific-articles = site.spotlights | where_exp: "featured-user", "featured-user.publish_on contains site.key" | sort: "date" |  reverse %}

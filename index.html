@@ -3,12 +3,16 @@ layout: default
 css_extension:
   - href: "/assets/css/homepage.css"
 ---
-
+{% include /get/hero_data.liquid %}
 <div id="hero-image" class="vh-75 vh-md-50">
   <div class="container-xxl">
     <div class="row justify-content-end">
+      {% if hero_data.additional_image %}
+        <div class="col-12 col-sm-10 col-md-6 col-xxl-7 col- d-flex order-md-2">
+          <img class="img-fluid pt-3 pt-lg-0" src="{{ hero_data.additional_image.src | relative_url }}" alt="{{ hero_data.additional_image.alt }}" />
+        </div>
+      {% endif %}
       <div class="col-12 col-md-5 col-xxl-5">
-        {% include /get/hero_data.liquid %}
         <div class="p-3 mb-3 mt-4 d-flex flex-column" id="hero-content-container">
           <h3 class="text-white">{{ hero_data.title }}</h3>
           <hr>
@@ -24,7 +28,7 @@ css_extension:
 <div class="container-xxl mt-4">
   <div class="row mb-4">
     <div class="col-md-8">
-      <h1>The OSG Consortium</h1>
+      <h1 class="mini-bar">The OSG Consortium</h1>
       <p class="fst-italic">
         Established in 2005, the OSG Consortium operates a fabric of distributed High
         Throughput Computing (dHTC) services in support of the National Science & Engineering
@@ -32,43 +36,9 @@ css_extension:
         providers that form the consortium are unified in their commitment to advance
         open science via these services.
       </p>
-      <div class="row gx-2">
-          <div class="col-12 col-lg-6">
-            <div class="p-3 mb-1 mb-lg-4 bg-white-offset rounded shadow">
-              <h3 class="mt-0 fw-bold text-center"><a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf23526&org=NSF">NSF (CC*) Proposal (NSF 23-526)</a></h3>
-              <p class="">
-                Campuses with awards from the
-                <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a>
-                Program play an important role in supporting Open Science. To date, 25 CC* campuses contribute to the processing and storage capacity of the
-                <a href="https://osg-htc.org/services/open_science_pool">Open Science Pool (OSPool)</a> that is
-                harnessed weekly by more than 2M jobs.
-              </p>
-              </p>
-              <p class="mb-0 d-flex justify-content-center pt-3">
-                <a class="btn btn-outline-dark" href="mailto:cc-star-proposals@osg-htc.org">Contact Us</a>
-                <a class="btn btn-outline-dark ms-1" href="/services/research-computing/#let-osg-help-with-your-cc-proposal">How We Can Help</a>
-              </p>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="p-3 mb-4 bg-white-offset rounded shadow">
-              <h3 class="mt-0 fw-bold text-center"><a href="https://beta.nsf.gov/funding/opportunities/geosciences-open-science-ecosystem-geo-ose">NSF (GEO OSE) Proposal (NSF 23-534)</a></h3>
-              <p class="">
-                The PATh Facility provides CPU and GPU high throughput computing capacity for the NSF community.
-                Proposals to the NSF GEO Open Science Ecosystem solicitation can request credits on the
-                <a href="https://path-cc.io/facility/index">Facility</a>.
-                Please reach out to <a href="mailto:geo-ose-proposals@path-cc.io">geo-ose-proposals@path-cc.io</a>
-                for any questions or consultations.
-              </p>
-              <p class="mb-0 d-flex justify-content-center pt-3">
-                <a class="btn btn-outline-dark" href="mailto:geo-ose-proposals@path-cc.io">Contact Us</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      <h5 id="open-science-pool-ospool"><a href="{{ '/services/open_science_pool.html' | relative_url }}">Open Science Pool (OSPool)</a></h5>
+      <h5 id="open-science-pool-ospool"><a href="{{ '/services/open_science_pool.html' | relative_url }}">Open Science Pool</a></h5>
       <p>
-        Any researcher performing Open Science in the US can become an OSPool user. The OSPool
+        Any researcher performing Open Science in the US can become an <a href="{{ '/services/open_science_pool.html' | relative_url }}">OSPool</a> user. The OSPool
         provides its users with fair-share access (no allocation needed!) to processing and
         storage capacity contributed by university campuses, government-supported
         supercomputing institutions and research collaborations. Using state-of-the-art
@@ -76,19 +46,31 @@ css_extension:
         Throughput workloads that consist of large ensembles of independent computations.
       </p>
       <h5 id="open-science-data-federation"><a href="{{ '/services/osdf.html' | relative_url }}">Open Science Data Federation (OSDF)</a></h5>
-      <p>The OSDF enables users and institutions to share data files and storage capacity, making them both accessible in dHTC environments such as the OSPool.</p>
+      <p>
+        The <a href="{{ '/services/osdf.html' | relative_url }}">Open Science Data Federation (OSDF)</a> enables users
+        and institutions to share data files and storage capacity, making them both accessible in dHTC environments
+        such as the OSPool.
+      </p>
       <ul>
         <li>Provides campuses and researchers with the ability to manage their data files, input and output, in support of running their dHTC workloads.</li>
         <li>Improves file access performance, resource consumption and reliability.</li>
-        <li><a href="https://support.opensciencegrid.org/support/solutions/articles/12000002985-overview-data-staging-and-transfer-to-jobs#data-locations-and-quotas">The OSG Connect</a> service provides researchers with a default of 500GB of storage space on the OSDF.</li>
+        <li><a href="https://portal.osg-htc.org/documentation/htc_workloads/managing_data/overview/">OSG-Operated Access Points</a> provide researchers with a default of 500GB of storage space on the OSDF.</li>
       </ul>
       <h5 id=""><a href="{{ '/events/2022-All-Hands-Meeting/' | relative_url }}">OSG All-Hands (AH) Meetings</a></h5>
       <p>
-        If you are a current or potential consumer, provider or executive, of dHTC, you are welcome to
-        attend the annual OSG AH meetings. The more than 250 attendees of the 2022 meeting were offered 38
-        presentations from researchers who reviewed their use of OSG services, executives who
-        discussed the current state and future plans for the OSG services, and administrators
-        who reported on the adoption of HTC by faculty and students on their campuses.
+        <b>
+          You are invited to <a href="https://path-cc.io/htc23">Throughput Computing 2023</a> — an event that combines
+          HTCondor Week 2023 and the OSG All-Hands Meeting 2023 — in beautiful Madison, Wisconsin, the week of July 10–14.
+        </b>
+        OSG Consortium staff, campuses, and researchers will discuss topics including the state of the OSG, OSG services,
+        science enabled by the OSPool, and campus services and perspectives.
+      </p>
+      <p>
+        The annual All-Hands Meeting works to foster relationships between the researchers and campuses using OSG
+        services and service providers in the OSG Consortium. The more than 250 attendees of the 2022 meeting were
+        offered 38 presentations from researchers who reviewed their use of OSG services, executives who discussed
+        the current state and future plans for the OSG services, and administrators who reported on the adoption
+        of HTC by faculty and students on their campuses.
       </p>
     </div>
     <div class="col-sm-12 col-md-4 mx-md-auto">
@@ -117,20 +99,38 @@ css_extension:
     </div>
   </div>
 </div>
-<div class="bg-light py-4 mb-4">
+<div class="bg-light py-4">
   <div class="container-xxl">
-    <div class="row justify-content-center">
-      <div class="col-12 col-sm-8 col-md-6 col-xl-4 order-2 order-md-1 mt-3 mt-md-0">
-        <div class="card hover-shadow p-3 bg-white">
-          <a class="twitter-timeline" data-height="550" href="https://twitter.com/osg_htc?ref_src=twsrc%5Etfw">Tweets by osg_htc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
+    <h2 id="osg-by-maps" class="mini-bar my-3">OSG By Maps</h2>
+      <div class="row gx-2">
+        {% for map in site.data.maps %}
+          <div class="col-12 col-sm-6 col-lg-3 {% cycle '', 'd-none d-sm-block', 'd-none d-lg-block', 'd-none d-lg-block' %}">
+            <a href="https://map.opensciencegrid.org{{ map.params }}">
+              <div class="rounded bg-white hover-shadow border-dark border">
+                <h4 class="m-0 p-2">{{ map.title }}</h4>
+                <picture>
+                  <source srcset="{{ map.image}}.webp">
+                  <img class="img-fluid rounded-bottom" src="{{ map.image }}.png">
+                </picture>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
       </div>
-      {% include get/spotlights.liquid %}
-      {% for article in spotlights limit:2 %}
-        <div class="col-12 col-md-6 col-xl-4 {% cycle 'order-1 order-md-2', 'd-none d-xl-block order-3' %}">
+  </div>
+</div>
+<div class="bg-dark py-4 mb-4">
+  <div class="container-xxl">
+    <h2 class="mini-bar my-3 text-light">User Spotlights</h2>
+    <div class="border border-light rounded-3 p-2">
+      <div class="row justify-content-center gx-2">
+        {% include get/spotlights.liquid %}
+        {% for article in spotlights limit:3 %}
+        <div class="col-12 col-md-6 col-xl-4 {% cycle 'order-1 order-md-2', 'd-none d-md-block order-3', 'd-none d-xl-block order-3' %}">
           {% include /cards/spotlight-card.html height='150' no_date="true" %}
         </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
@@ -153,7 +153,7 @@ css_extension:
         <div class="card-body">
           <h3>Submit Locally, Run Globally</h3>
           <hr>
-          <p>Researchers can run jobs on OSG from their home institution or <a href="https://connect.osg-htc.org/">OSG's centrally-operated submission service, OSG Connect</a> (available for US-based research and scholarship).</p>
+          <p>Researchers can run jobs on OSG from their home institution or an <a href="https://portal.osg-htc.org/">OSG-Operated Access Point</a> (available for US-based research and scholarship).</p>
         </div>
       </div>
     </div>
@@ -210,7 +210,7 @@ css_extension:
       <div class="col-md-12 col-lg-10 col-xl-8">
         <h3>Find Us!</h3>
         <p>Are you a resource provider wanting to join our collaboration? Contact us: <a href="mailto:support@osg-htc.org">support@osg-htc.org</a>.</p>
-        <p>Are you a user wanting more computing resources? Check with your 'local' computing providers, or consider using <a href="https://connect.osg-htc.org/">OSG Connect</a> (available to US-based academic/govt/non-profit research projects).</p>
+        <p>Are you a user wanting more computing resources? Check with your 'local' computing providers, or consider using an <a href="https://portal.osg-htc.org">OSG-Operated Access Point</a> which has access to the OSPool (available to US-based academic/govt/non-profit research projects).</p>
         <p>For any other inquiries, reach us at: <a href="mailto:support@osg-htc.org">support@osg-htc.org</a>.</p>
         <p>To see the breadth of the OSG impact, <a href="https://gracc.opensciencegrid.org">explore our accounting portal</a>.</p>
       </div>

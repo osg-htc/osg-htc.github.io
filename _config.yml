@@ -46,6 +46,10 @@ defaults:
       type: "user_side_redirects"
     values:
       layout: redirect
+  - scope:
+      type: "community"
+    values:
+      layout: text-optimized-width
 
 collections:
   about:
@@ -68,6 +72,10 @@ collections:
     output: true
   user_side_redirects:
     output: true
+  community:
+    output: true
+    permalink: /community/:path.html
+
 
 sass:
   style: compressed

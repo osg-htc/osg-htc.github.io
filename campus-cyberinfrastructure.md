@@ -16,10 +16,11 @@ css_extension:
 table_of_contents:
   - name: How OSG can help your proposal
     href: "#let-the-path-team-help-with-your-proposal"
-  - name: How OSG supports Awardees
-    href: "#osgs-active-support-of-cc-awardees"
-  - name: Actively Supported Colleges
-    href: "#osg-supported-colleges-and-universities-contributing-via-the-cc-program"
+    children: 
+      - name: Deployment
+        href: '#deployment'
+      - name: Operation
+        href: '#operation'
   - name: CC* Impact on Open Science
     href: "#cc-campus-impact-on-open-science"
     children:
@@ -32,72 +33,15 @@ table_of_contents:
 
 # OSG’s Support for Campus Cyberinfrastructure Proposals and Awardees
 
-{% assign now = "now" | date: "%s" %}
-{% if now < "1656392400" %}
-<p class="fs-5 pt-2 pb-1">
-<b>Upcoming Deadline: June 27th, 2022</b>
-</p>
-{% endif %}
 
-<div class="p-3 my-4 bg-white-offset fs-5 rounded shadow">
-    <h3 class="mt-0 text-center pb-3">We are here to help with your <a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf23526&org=NSF">CC* Proposal (NSF 23-526)!</a></h3>
-    <p class="text-center">
-        Campuses with awards from the
-        <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a>
-        Program play an important role in supporting Open Science. To date, 25 CC* campuses contribute to the processing and storage capacity of the
-        <a href="{{ '/services/open_science_pool/' | relative_url }}">Open Science Pool (OSPool)</a> that is 
-        harnessed weekly by more than 2M jobs.
-    </p>
-    <p class="mb-0 d-flex justify-content-center pt-3">
-        <a class="btn btn-dark text-decoration-underline fs-5" href="mailto:cc-star-proposals@osg-htc.org">Email Us</a>
-        <a class="btn btn-dark text-decoration-underline ms-1 fs-5" href="#let-the-path-team-help-with-your-proposal">How We Can Help</a>
-    </p>
-</div>
+#### Final Deadline Passed: September 11th, 2023
+
 
 {: .fs-5 }
 Enhancing the capacity of Research Computing of US campuses through local deployment and cross campus sharing is 
 fully aligned with the vision of our NSF funded project - [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io). 
 Our project is committed to support CC* projects from proposal, through deployment, to operation.
 
-
-## [Proposal](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)
-
-<div class="border p-3 mt-3 mb-3 pb-0 rounded bg-light" markdown="1">
-
-{: .fs-5 }
-Proposals in response to the 2023 CC* program solicitation ([NSF 23-526](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)) 
-are due on March 1, 2023. Please contact us at [cc-star-proposals@osg-htc.org](mailto:cc-star-proposals@osg-htc.org)
-(the earlier the better!) with any questions
-or requests you may have regarding the involvement of [PATh](https://path-cc.io) in your proposed project. Our technology and services are 
-readily available to support a spectrum of CC* projects.
-
-{: .fs-5 }
-The [NSF 23-526](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm) solicitation explicitly mentions the OSG services
-we provide as a means to meet requirements for the following areas:
-
-{: .fs-5 }
-__(4) Campus Computing and the Computing Continuum__
-
-{: .fs-5 }
-NSF recommends reaching out to [PATh](https://path-cc.io) for "technical direction/expertise during their proposal
-development" and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the 
-[OSPool](/services/open_science_pool).
-
-{: .fs-5 }
-__(5) Regional Computing awards__
-
-{: .fs-5 }
-NSF strongly encourages joining PATh, and suggests working with the OSG to contribute its "minimum of 20% shared time on the cluster" to the
-[OSPool](/services/open_science_pool).
-
-{: .fs-5 }
-__(6) Data Storage awards__
-
-{: .fs-5 }
-NSF solely mentions the OSG's [Open Science Data Federation](/services/osdf.html) as a federated data sharing fabric to share
-its required "20% of the disk/storage space on the proposed storage system."
-
-</div>
 
 ## Let the PATh team help with your proposal
 
