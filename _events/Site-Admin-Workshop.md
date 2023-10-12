@@ -49,7 +49,6 @@ No fees, attendance is free!
 ### Registration
 
 Registration and completion of this brief survey is required for participants who are not registered for the All-Hands Meeting to receive connection information. Seats are limited.
-Please [register here.](https://docs.google.com/forms/d/1wUu3czRT_0Ask6rDW79QqrkQzyzR8ksyNM6uqWTOYXc//viewform) 
 
 ### Questions?
 

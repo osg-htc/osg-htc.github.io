@@ -18,7 +18,7 @@ Lancium’s Clean Compute Campus™ in Abilene, Texas will be powered by 100 per
 
  <b>About Lancium</b>
  
-Headquartered in The Woodlands, Texas, Lancium is dedicated to accelerating the energy transition through technologies and infrastructure designed to enable more clean energy production while also balancing and stabilizing the power grid. Lancium’s Clean Campuses are designed to provide a low-cost, sustainable solution for large-scale, energy-intensive customers through our propriety Lancium Smart Response™ technology. For more information, visit [www.lancium.com](www.lancium.com). Follow Lancium on social media: [Facebook](https://www.facebook.com/Lancium), [Twitter](https://twitter.com/lancium), [LinkedIn](https://www.linkedin.com/company/lancium-llc/), [YouTube](https://www.youtube.com/channel/UCVF4VACWHoiCqiNeSud6BsA)
+Headquartered in The Woodlands, Texas, Lancium is dedicated to accelerating the energy transition through technologies and infrastructure designed to enable more clean energy production while also balancing and stabilizing the power grid. Lancium’s Clean Campuses are designed to provide a low-cost, sustainable solution for large-scale, energy-intensive customers through our propriety Lancium Smart Response™ technology. For more information, visit [www.lancium.com](https://www.lancium.com). Follow Lancium on social media: [Facebook](https://www.facebook.com/Lancium), [Twitter](https://twitter.com/lancium), [LinkedIn](https://www.linkedin.com/company/lancium-llc/), [YouTube](https://www.youtube.com/channel/UCVF4VACWHoiCqiNeSud6BsA)
 
 <b>About OSG</b>
 
