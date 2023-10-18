@@ -148,17 +148,16 @@ own campus and for the entire country.
 #### Computing
 
 {: .fs-5 }
-In the last year, twenty-two campuses contributed over 235 million core hours to researchers 
-via the [OSPool](/services/open_science_pool.html) (April 2021 - March 2022). These contributions supported more than 230 
+Campuses contribute core hours to researchers 
+via the [OSPool](/services/open_science_pool.html), a compute resource accessible to any 
+researcher affiliated with a US academic institution. These contributions support more than 230 
 research groups, campuses, multi-campus collaborations, and gateways, and in fields of 
-study ranging from the medicine to economics, and from genomics to physics. Every month,
-OSG services help additional campuses to support open science by sharing their resources 
-via the OSPool.
+study ranging from the medicine to economics, and from genomics to physics.
 
 #### Data Storage
 
 {: .fs-5 }
-As of March 2022, the [Open Science Data Federation](/services/osdf.html) integrates 10 data origins, making data 
-accessible via 20 caches, 6 of which are strategically located in the R&E network backbone.
-The CC* solicitation of 2022 (NSF 23-526) encourages responses that would add data origins 
+The [Open Science Data Federation](/services/osdf.html) integrates data origins, making data 
+accessible via caches, of which many are strategically located in the R&E network backbone.
+The CC* solicitation of 2023 (NSF 23-526) encourages responses that would add data origins 
 or caches at campuses.
