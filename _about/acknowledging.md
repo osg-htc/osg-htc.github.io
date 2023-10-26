@@ -2,11 +2,14 @@
 title: Acknowledging the OSG
 layout: text-optimized-width
 permalink: /acknowledging.html
+tagline: Citing OSG Services, resources, and/or staff expertise
+description: -|
+    Articles and DOIs to cite for the use of the OSPool and OSDF resources, services and/or staff expertise.
 ---
 
 ## Acknowledging the OSG Consortium
 
-Papers, presentations, and other publications that feature research that benefited from the [Open Science Pool (OSPool)](/services/open_science_pool.html) and [Open Science Data Federation (OSDF)](/services/osdf.html) resources, services or expertise should cite the following two articles and two DOIs:
+Papers, presentations, and other publications that feature research that benefited from the [Open Science Pool (OSPool)](/services/open_science_pool.html) and [Open Science Data Federation (OSDF)](/services/osdf.html) resources, services and/or staff expertise should cite the following articles and DOIs:
 
 {: .bg-light .pt-2 .pb-1 }
 > 1. Pordes, R., Petravick, D., Kramer, B., Olson, D., Livny, M., Roy, A., Avery, P., Blackburn, K., Wenaus, T., Würthwein, F., Foster, I., Gardner, R., Wilde, M., Blatecky, A., McGee, J., & Quick, R. (2007). The open science grid. J. Phys. Conf. Ser., 78, 012057. https://doi.org/10.1088/1742-6596/78/1/012057
