@@ -43,7 +43,7 @@ Other Activities
     computing resources available for research.  The COVID-19 HPC consortium meets daily
     to review requests from researchers.
     
--   [Science Responds](https://science-responds.org/) is a broad COVID-19 response effort from
+-   Science Responds is a broad COVID-19 response effort from
     the scientific community.
 
 -   The IRIS-HEP software institute provides effort to the OSG through its _OSG-LHC_ area; it
