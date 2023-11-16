@@ -10,7 +10,12 @@
 {% endfor %}
 
 {% if features.size == 0 %}
-    {% assign features = spotlights %}
+    {% for feature in spotlights %}
+        {% assign feature_date = feature.date |  date: "%s" |  plus: 0 %}
+        {% if feature.banner_src != nil %}
+            {% assign features = features | push: feature %}
+        {% endif %}
+    {% endfor %}
 {% endif %}
 
 {% assign day = "now" |  date: "%e" | plus: 1 %}
