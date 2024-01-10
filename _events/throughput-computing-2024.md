@@ -6,7 +6,7 @@ layout: events
 published: true
 
 excerpt: |
-    Save the Dates for Throughput Computing July 8-12, 2024
+    Don't miss this opportunity to reconnect with colleagues and learn about more about HTC.
 
 
 start_date: 2024-07-8
@@ -20,14 +20,14 @@ header_image: "/assets/images/events/Throughput-Computing-2024-Banner.jpg"
 
 **Save the Date for HTC24 - July 8 - 12 in Madison, WI:** 
 
-Save the dates for HTC24! Join us for the second annual integrated Throughput Computing event — which combines HTCondor’s former annual event “HTCondor Week” and the OSG’s “All-Hands Meeting” — from July 8-12 to be held at the University of Wisconsin-Madison’s [Fluno Center](https://fluno.com/). HTC24 is sponsored by the OSG Consortium, the HTCondor team and the UW-Madison Center for High Throughput Computing. 
+Join us for the second annual integrated Throughput Computing event — which combines HTCondor’s former annual event “HTCondor Week” and the OSG’s “All-Hands Meeting” — from July 8-12 to be held at the University of Wisconsin-Madison’s [Fluno Center](https://fluno.com/). HTC24 is sponsored by the OSG Consortium, the HTCondor team and the UW-Madison Center for High Throughput Computing. 
 
 
 Registration will open in March. This will primarily be an in-person event, but remote participation (via Zoom) for the many plenary events will also be offered.
 If you register for the in-person event at the University of Wisconsin–Madison, you can attend plenary and non-plenary sessions, mingle with colleagues, and have planned or ad hoc meetings. Evening events are also planned throughout the week.
 
 
-### Schedule
+### The Agenda
 
 All the topics typically covered by HTCondor Week and the OSG All-Hands Meeting will be included:
 
