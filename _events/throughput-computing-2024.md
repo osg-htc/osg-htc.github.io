@@ -1,6 +1,6 @@
 ---
 short_title: Save the Dates for Throughput Computing 2024
-title: Save the Dates for Throughput Computing 2024 - a joint HTCondor, CHTC & OSG event
+title: Save the Dates for Throughput Computing 2024 
 
 layout: events
 published: true
