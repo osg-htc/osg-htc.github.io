@@ -9,7 +9,7 @@ excerpt: |
     Save the Dates for Throughput Computing July 8-12, 2024
 
 
-start_date: 2024-01-10
+start_date: 2024-07-8
 end_date: 2024-07-12
 location: "University of Wisconsin–Madison’s Fluno Center and Online via Zoom"
 image: "/assets/images/events/Throughput-Computing-2024-Banner.jpg"
