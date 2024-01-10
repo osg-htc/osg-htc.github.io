@@ -1,23 +1,23 @@
 ---
-short_title: Throughput Computing 2024
+short_title: Save the Date forThroughput Computing 2024
 title: Throughput Computing 2024
 layout: events
 published: true
 
 excerpt: |
-    Throughput Computing July 8-12, 2024
+    Save the Date for Throughput Computing July 8-12, 2024
 
 
 start_date: 2024-01-10
 end_date: 2024-07-12
 location: "University of Wisconsin–Madison’s Fluno Center and Online via Zoom"
-image: "/assets/images/events/Throughput-Computing-2023-Banner.jpg"
-header_image: "/assets/images/events/Throughput-Computing-2023-Banner.jpg"
+image: "/assets/images/events/Throughput-Computing-2024-Banner.jpg"
+header_image: "/assets/images/events/Throughput-Computing-2024-Banner.jpg"
 ---
 
 {% capture main %}
 
-**Save the Date for HTC24 - July 8 -12 in Madison, WI:** 
+**Save the Date for HTC24 - July 8 - 12 in Madison, WI:** 
 
 For the first time, HTCondor Week and the OSG All-Hands Meeting will join together as a single, integrated event from July 10–14 to be held at the University of Wisconsin–Madison’s [Fluno Center](https://fluno.com/). Throughput Computing 2023 is sponsored by the OSG Consortium, the HTCondor team, and the UW-Madison Center for High Throughput Computing.
 
