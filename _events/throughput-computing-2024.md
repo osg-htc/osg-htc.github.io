@@ -68,7 +68,7 @@ Registration for Throughput Computing 2024 will open in March.
 
 ### Questions?
 
-Please email [htc24@path-cc.io](mailto:htc24@path-cc.io) with any questions.
+Please email [htc23@path-cc.io](mailto:htc23@path-cc.io) with any questions.
 
 {% endcapture %}
 
