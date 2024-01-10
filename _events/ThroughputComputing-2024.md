@@ -6,7 +6,7 @@ layout: events
 published: true
 
 excerpt: |
-    Save the Date for Throughput Computing July 8-12, 2024
+    Save the Dates for Throughput Computing July 8-12, 2024
 
 
 start_date: 2024-01-10
