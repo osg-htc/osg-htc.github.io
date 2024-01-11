@@ -41,11 +41,11 @@ All the topics typically covered by HTCondor Week and the OSG All-Hands Meeting 
 
 ### Questions and Resources
 
-For questions about attending, speaking, accommodations, and other concerns please contact us at [htc23@path-cc.io](mailto:htc23@path-cc.io).
+For questions about attending, speaking, accommodations, and other concerns please contact us at [htc@path-cc.io](mailto:htc@path-cc.io).
 
-To learn about this event in more detail, view last year’s schedules for HTC23:
+To learn about this event in more detail, view last year’s schedules for HTC24:
 
-- [HTC23 Schedule](https://agenda.hep.wisc.edu/event/2014/timetable/#all.detailed)
+- [HTC24 Schedule](https://agenda.hep.wisc.edu/event/2014/timetable/#all.detailed)
 {% endcapture %}
 
 
@@ -68,7 +68,7 @@ Registration for Throughput Computing 2024 will open in March.
 
 ### Questions?
 
-Please email [htc23@path-cc.io](mailto:htc23@path-cc.io) with any questions.
+Please email [htc@path-cc.io](mailto:htc@path-cc.io) with any questions.
 
 {% endcapture %}
 
