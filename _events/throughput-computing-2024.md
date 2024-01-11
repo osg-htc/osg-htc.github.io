@@ -43,9 +43,9 @@ All the topics typically covered by HTCondor Week and the OSG All-Hands Meeting 
 
 For questions about attending, speaking, accommodations, and other concerns please contact us at [htc@path-cc.io](mailto:htc@path-cc.io).
 
-To learn about this event in more detail, view last year’s schedules for HTC24:
+To learn about this event in more detail, view last year’s schedules for HTC23:
 
-- [HTC24 Schedule](https://agenda.hep.wisc.edu/event/2014/timetable/#all.detailed)
+- [HTC23 Schedule](https://agenda.hep.wisc.edu/event/2014/timetable/#all.detailed)
 {% endcapture %}
 
 
