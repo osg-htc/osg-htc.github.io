@@ -5,6 +5,8 @@ title: Contact Information
 
 <h1>OSG Contact Information</h1>
 
+### Request an OSPool Account
+Sign up to use OSPool capacity on the [OSG Portal]((https://portal.osg-htc.org/application)).
 ### For Media Contact, or general questions about the OSG website.
 Email: <mailto:osg-contact@opensciencegrid.org>
 
