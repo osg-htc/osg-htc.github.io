@@ -38,12 +38,12 @@ to support COVID-19.  If you would like to provide additional resources _exclusi
 Other Activities
 ----------------
 
--   OSG participates in the [COVID-19 HPC consortium](https://covid19-hpc-consortium.org/),
+-   OSG participates in the COVID-19 HPC consortium,
     a broad consortium of industry, academia, and national labs to make a diverse set of
     computing resources available for research.  The COVID-19 HPC consortium meets daily
     to review requests from researchers.
     
--   [Science Responds](https://science-responds.org/) is a broad COVID-19 response effort from
+-   Science Responds is a broad COVID-19 response effort from
     the scientific community.
 
 -   The IRIS-HEP software institute provides effort to the OSG through its _OSG-LHC_ area; it

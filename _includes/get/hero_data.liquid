@@ -1,3 +1,24 @@
 {% include get/spotlights.liquid %}
-{% assign story_in_array = spotlights | where: "id", "/spotlights/EHT" %}
-{% assign hero_data = story_in_array[0] %}
+
+{% assign 3_months_ago = "now" |  date: "%s" | minus: 15768000 %}
+{% assign features = "" | split : "" %}
+{% for feature in spotlights %}
+    {% assign feature_date = feature.date |  date: "%s" |  plus: 0 %}
+    {% if feature_date > 3_months_ago and feature.banner_src != nil %}
+        {% assign features = features | push: feature %}
+    {% endif %}
+{% endfor %}
+
+{% if features.size == 0 %}
+    {% for feature in spotlights %}
+        {% assign feature_date = feature.date |  date: "%s" |  plus: 0 %}
+        {% if feature.banner_src != nil %}
+            {% assign features = features | push: feature %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% assign day = "now" |  date: "%e" | plus: 1 %}
+{% assign index = day |  modulo: features.size %}
+
+{% assign hero_data = features[index] %}

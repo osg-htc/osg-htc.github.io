@@ -53,7 +53,7 @@ to ensure that best practices are developed and observed to ensure compatibility
 interoperability, usability and trust in these implementations.
 
 The inaugural Workshop on Token-Based Authentication and Authorization
-([WoTBAn&Az 2020](https://indico.rnp.br/event/33/))
+WoTBAn&Az 2020
 convened online via Zoom on November 30 and December 1, 2020, hosted by
 [TAGPMA](http://www.tagpma.org/).
 This workshop gathered major R&E CI developers, operators, and service providers,
@@ -113,7 +113,7 @@ You want to put the content that you want in the subsection in this capture
 {% endcomment %}
 {% capture subsection %}
 ### Registration
-Fill out the registration [form](https://forms.uits.iu.edu/machform/view.php?id=134371) found on the
+Fill out the registration form found on the
 [event page](https://www.trustedci.org/2021-cybersecurity-summit).
 
 ### Date
