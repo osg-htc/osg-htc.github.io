@@ -34,7 +34,27 @@ table_of_contents:
 # OSG’s Support for Campus Cyberinfrastructure Proposals and Awardees
 
 
-#### Final Deadline Passed: September 11th, 2023
+{% assign now = "now" | date: "%s" %}
+{% if now < "1656392400" %}
+<p class="fs-5 pt-2 pb-1">
+<b>Upcoming Deadline: April 22nd, 2024</b>
+</p>
+{% endif %}
+
+<div class="p-3 my-4 bg-white-offset fs-5 rounded shadow">
+    <h3 class="mt-0 text-center pb-3">We are here to help with your <a href="https://new.nsf.gov/funding/opportunities/campus-cyberinfrastructure-cc/nsf24-530/solicitation">CC* Proposal (NSF 24-530)!</a></h3>
+    <p class="text-center">
+        Campuses with awards from the
+        <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a>
+        Program play an important role in supporting Open Science. To date, 25 CC* campuses contribute to the processing and storage capacity of the
+        <a href="{{ '/services/open_science_pool/' | relative_url }}">Open Science Pool (OSPool)</a> that is 
+        harnessed weekly by more than 2M jobs.
+    </p>
+    <p class="mb-0 d-flex justify-content-center pt-3">
+        <a class="btn btn-dark text-decoration-underline fs-5" href="mailto:cc-star-proposals@osg-htc.org">Email Us</a>
+        <a class="btn btn-dark text-decoration-underline ms-1 fs-5" href="#let-the-path-team-help-with-your-proposal">How We Can Help</a>
+    </p>
+</div>
 
 
 {: .fs-5 }
