@@ -203,10 +203,6 @@ your researchers have any questions or issues, please contact us at [support@osg
     </div>
 </div>
 
-{: .fs-5 }
-{% assign cc_star_sites = site.data.cc_star | sort: "name" %}
-{% for cc_star_site in cc_star_sites %}
-- <a href="{{ cc_star_site.href }}" target="_blank">{{ cc_star_site.name }}</a>{% endfor %}
 
 ### CC* Campus impact on Open Science
 
