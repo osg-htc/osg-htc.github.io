@@ -35,11 +35,21 @@ table_of_contents:
 
 
 {% assign now = "now" | date: "%s" %}
-{% if now < "1656392400" %}
-<p class="fs-5 pt-2 pb-1">
+{% if now < "1713830399" %}
+<p class="fs-5 pt-2 pb-1 text-primary">
 <b>Upcoming Deadlines: April 22nd and October 15th, 2024</b>
 </p>
 {% endif %}
+
+{% assign now = "now" | date: "%s" %}
+{% if now < "1729036799" and now > "1729036799" %}
+<p class="fs-5 pt-2 pb-1 text-primary">
+<b>Upcoming Deadline: October 15th, 2024</b>
+</p>
+{% endif %}
+
+{% assign now = "now" | date: "%s" %}
+{% if now < "1729036799" %}
 
 <div class="p-3 my-4 bg-white-offset fs-5 rounded shadow">
     <h3 class="mt-0 text-center pb-3">We are here to help with your <a href="https://new.nsf.gov/funding/opportunities/campus-cyberinfrastructure-cc/nsf24-530/solicitation">CC* Proposal (NSF 24-530)!</a></h3>
@@ -86,18 +96,20 @@ __(2) Computing and the Computing Continuum for the Campus or Region__
 
 {: .fs-5 }
 
-NSF notes that for "All Area (2) proposals should commit to a minimum of 20% shared time and describe their approach to making the computing resource available as a shared resource external to the state/region and the institution(s) being primarily served. Proposals are strongly encouraged to address this requirement by joining the [Partnerships to Advance Throughput Computing (PATh) campus federation](https://path-cc.io) and adopting an appropriate subset of PATh services to make the resource available to researchers on a national scale. Proposals are encouraged to include a letter of collaboration from the selected platform and describe how they will track and report on meeting the 20% extramural usage goal each year. Institutions in need of technical direction/expertise during their proposal development are encouraged to engage the NSF-funded PATh project at: [https://path-cc.io](https://path-cc.io)."
+NSF notes that for "All Area (2) proposals should commit to a minimum of 20% shared time and describe their approach to making the computing resource available as a shared resource external to the state/region and the institution(s) being primarily served. Proposals are strongly encouraged to address this requirement by joining the [Partnerships to Advance Throughput Computing (PATh)](https://path-cc.io) campus federation and adopting an appropriate subset of PATh services to make the resource available to researchers on a national scale. Proposals are encouraged to include a letter of collaboration from the selected platform and describe how they will track and report on meeting the 20% extramural usage goal each year. Institutions in need of technical direction/expertise during their proposal development are encouraged to engage the NSF-funded PATh project at: [https://path-cc.io](https://path-cc.io)."
 
 {: .fs-5 }
 __(4) Data Storage and Digital Archives for the Campus or Region__
 
 {: .fs-5 }
-NSF states that "All Area (4) proposals are required to have interoperability with a national and federated data sharing fabric such as PATh/OSDF(see: [http://www.opensciencegrid.org/about/osdf)](http://www.opensciencegrid.org/about/osdf). At least 20% of the disk/storage space on the proposed storage system should be made available as part of the chosen federated data sharing fabric."
+NSF states that "All Area (4) proposals are required to have interoperability with a national and federated data sharing fabric such as PATh/OSDF(see: [http://www.osg-htc.org/about/osdf)](http://www.opensciencegrid.org/about/osdf). At least 20% of the disk/storage space on the proposed storage system should be made available as part of the chosen federated data sharing fabric."
 
 {: .fs-5 }
 
 
 </div>
+
+{% endif %}
 
 
 
