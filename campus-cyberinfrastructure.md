@@ -1,6 +1,6 @@
 ---
 title: OSG’s Support for Campus Cyberinfrastructure Proposals and Awardees
-date: 2021-08-12 12:00:00 -0600
+date: 2024-02-05 12:00:00 -0600
 categories: NSF Campus Cyberinfrastructure (CC*)
 layout: table-of-contents
 js_extension:
@@ -34,7 +34,37 @@ table_of_contents:
 # OSG’s Support for Campus Cyberinfrastructure Proposals and Awardees
 
 
-#### Final Deadline Passed: September 11th, 2023
+{% assign now = "now" | date: "%s" %}
+{% if now < "1713830399" %}
+<p class="fs-5 pt-2 pb-1 text-primary">
+<b>Upcoming Deadlines: April 22nd and October 15th, 2024</b>
+</p>
+{% endif %}
+
+{% assign now = "now" | date: "%s" %}
+{% if now < "1729036799" and now > "1729036799" %}
+<p class="fs-5 pt-2 pb-1 text-primary">
+<b>Upcoming Deadline: October 15th, 2024</b>
+</p>
+{% endif %}
+
+{% assign now = "now" | date: "%s" %}
+{% if now < "1729036799" %}
+
+<div class="p-3 my-4 bg-white-offset fs-5 rounded shadow">
+    <h3 class="mt-0 text-center pb-3">We are here to help with your <a href="https://new.nsf.gov/funding/opportunities/campus-cyberinfrastructure-cc/nsf24-530/solicitation">CC* Proposal (NSF 24-530)!</a></h3>
+    <p class="text-center">
+        Campuses with awards from the
+        <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a>
+        Program play an important role in supporting Open Science. To date, 37 CC* campuses contribute to the processing and storage capacity of the
+        <a href="{{ '/services/open_science_pool/' | relative_url }}">Open Science Pool (OSPool)</a> that is 
+        harnessed weekly by more than 3M jobs.
+    </p>
+    <p class="mb-0 d-flex justify-content-center pt-3">
+        <a class="btn btn-dark text-decoration-underline fs-5" href="mailto:cc-star-proposals@osg-htc.org">Email Us</a>
+        <a class="btn btn-dark text-decoration-underline ms-1 fs-5" href="#let-the-path-team-help-with-your-proposal">How We Can Help</a>
+    </p>
+</div>
 
 
 {: .fs-5 }
@@ -43,11 +73,51 @@ fully aligned with the vision of our NSF funded project - [Partnership to Advanc
 Our project is committed to support CC* projects from proposal, through deployment, to operation.
 
 
+## [Proposal](https://new.nsf.gov/funding/opportunities/campus-cyberinfrastructure-cc/nsf24-530/solicitation)
+
+<div class="border p-3 mt-3 mb-3 pb-0 rounded bg-light" markdown="1">
+
+{: .fs-5 }
+Proposals in response to the 2024 CC* program solicitation
+([NSF 24-530](https://new.nsf.gov/funding/opportunities/campus-cyberinfrastructure-cc/nsf24-530/solicitation)) are due on
+22 April 2024 and 15 October 2024.
+Please contact us at [cc-star-proposals@osg-htc.org](mailto:cc-star-proposals@osg-htc.org)
+(the earlier the better!) with any questions or requests
+you may have regarding the involvement of [PATh](https://path-cc.io) in your proposed project.
+Our technology and services are readily available to support a spectrum of CC* projects.
+
+{: .fs-5 }
+The
+[NSF 24-530](https://new.nsf.gov/funding/opportunities/campus-cyberinfrastructure-cc/nsf24-530/solicitation)
+solicitation explicitly mentions the OSG services we provide as a means to meet requirements for the following areas:
+
+{: .fs-5 }
+__(2) Computing and the Computing Continuum for the Campus or Region__
+
+{: .fs-5 }
+
+NSF notes that for "All Area (2) proposals should commit to a minimum of 20% shared time and describe their approach to making the computing resource available as a shared resource external to the state/region and the institution(s) being primarily served. Proposals are strongly encouraged to address this requirement by joining the [Partnerships to Advance Throughput Computing (PATh)](https://path-cc.io) campus federation and adopting an appropriate subset of PATh services to make the resource available to researchers on a national scale. Proposals are encouraged to include a letter of collaboration from the selected platform and describe how they will track and report on meeting the 20% extramural usage goal each year. Institutions in need of technical direction/expertise during their proposal development are encouraged to engage the NSF-funded PATh project at: [https://path-cc.io](https://path-cc.io)."
+
+{: .fs-5 }
+__(4) Data Storage and Digital Archives for the Campus or Region__
+
+{: .fs-5 }
+NSF states that "All Area (4) proposals are required to have interoperability with a national and federated data sharing fabric such as PATh/OSDF(see: [http://www.osg-htc.org/about/osdf)](http://www.opensciencegrid.org/about/osdf). At least 20% of the disk/storage space on the proposed storage system should be made available as part of the chosen federated data sharing fabric."
+
+{: .fs-5 }
+
+
+</div>
+
+{% endif %}
+
+
+
 ## Let the PATh team help with your proposal
 
 {: .fs-5 }
 The National Science Foundation Campus Cyberinfrastructure (CC*) program
-([NSF 23-526](https://www.nsf.gov/pubs/2023/nsf23526/nsf23526.htm)) invests in coordinated campus 
+([NSF 24-530](https://new.nsf.gov/funding/opportunities/campus-cyberinfrastructure-cc/nsf24-530/solicitation) invests in coordinated campus 
 and regional-level cyberinfrastructure improvements and innovation.
 
 {: .fs-5 }
@@ -57,10 +127,10 @@ following aspects of the proposed project:
 {: .fs-5 }
 - Sharing data with authorized users via the [Open Science Data Federation (OSDF)](/services/osdf.html)
 - Bringing the power of high throughput computing via the [OSPool](/services/open_science_pool.html) to your researchers
-- Meeting CC*-required resource sharing as specified in <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 23-526)</a>, and other options for integrating with the OSG Consortium
+- Meeting CC*-required resource sharing as specified in <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 24-530)</a>, and other options for integrating with the OSG Consortium
 - Providing connections to help with data storage systems for shared inter-campus or intra-campus resources
   - We have collected [community data storage systems](/organization/osdf/example_data_origin.html) for your consideration
-- Building regional computing networks
+- Building [regional computing networks](https://osg-htc.org/spotlights/gpargo-cc-star.html)
 - Developing science gateways to utilize high throughput computing via the [OSPool](/services/open_science_pool.html)
 
 {: .fs-5 }
@@ -159,5 +229,4 @@ study ranging from the medicine to economics, and from genomics to physics.
 {: .fs-5 }
 The [Open Science Data Federation](/services/osdf.html) integrates data origins, making data 
 accessible via caches, of which many are strategically located in the R&E network backbone.
-The CC* solicitation of 2023 (NSF 23-526) encourages responses that would add data origins 
-or caches at campuses.
+The CC* solicitation of 2024 (NSF 24-530) requires interoperability with a national and federated data sharing fabric such as PATh/OSDFs.
