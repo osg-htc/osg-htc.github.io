@@ -117,7 +117,7 @@ NSF states that "All Area (4) proposals are required to have interoperability wi
 
 {: .fs-5 }
 The National Science Foundation Campus Cyberinfrastructure (CC*) program
-([NSF 24-530](https://new.nsf.gov/funding/opportunities/campus-cyberinfrastructure-cc/nsf24-530/solicitation) invests in coordinated campus 
+([NSF 24-530](https://new.nsf.gov/funding/opportunities/campus-cyberinfrastructure-cc/nsf24-530/solicitation)) invests in coordinated campus 
 and regional-level cyberinfrastructure improvements and innovation.
 
 {: .fs-5 }
