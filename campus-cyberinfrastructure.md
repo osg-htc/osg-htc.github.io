@@ -57,7 +57,7 @@ table_of_contents:
         Campuses with awards from the
         <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a>
         Program play an important role in supporting Open Science. To date, 37 CC* campuses contribute to the processing and storage capacity of the
-        <a href="{{ '/services/open_science_pool/' | relative_url }}">Open Science Pool (OSPool)</a> that is 
+        <a href="{{ '/services/open_science_pool.html' | relative_url }}">Open Science Pool (OSPool)</a> that is 
         harnessed weekly by more than 3M jobs.
     </p>
     <p class="mb-0 d-flex justify-content-center pt-3">
@@ -102,7 +102,7 @@ NSF notes that for "All Area (2) proposals should commit to a minimum of 20% sha
 __(4) Data Storage and Digital Archives for the Campus or Region__
 
 {: .fs-5 }
-NSF states that "All Area (4) proposals are required to have interoperability with a national and federated data sharing fabric such as PATh/OSDF(see: [http://www.osg-htc.org/about/osdf)](http://www.opensciencegrid.org/about/osdf). At least 20% of the disk/storage space on the proposed storage system should be made available as part of the chosen federated data sharing fabric."
+NSF states that "All Area (4) proposals are required to have interoperability with a national and federated data sharing fabric such as PATh/OSDF(see: [http://www.osg-htc.org/about/osdf](http://www.opensciencegrid.org/about/osdf)). At least 20% of the disk/storage space on the proposed storage system should be made available as part of the chosen federated data sharing fabric."
 
 {: .fs-5 }
 
