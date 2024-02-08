@@ -4,6 +4,8 @@
 
 import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, SUMMARY_INDEX, OSPOOL_FILTER} from "./elasticsearch-v1.js";
 import {GraccDisplay, locale_int_string_sort, string_sort, hideNode} from "./util.js";
+import {PieChart} from "./components/pie-chart.js";
+
 
 function makeDelay(ms) {
     let timer = 0;
@@ -12,6 +14,8 @@ function makeDelay(ms) {
         timer = setTimeout(callback, ms);
     };
 }
+
+
 
 /**
  * A suite of Boolean functions deciding the visual status of a certain grafana graph
@@ -78,7 +82,9 @@ class UsageToggles {
 
         this.usage = projectBuckets.reduce((p, v) => {
             p[v['key']] = {
+                cpuHours: v['projectCpuUse']['value'],
                 cpu: v['projectCpuUse']['value'] != 0,
+                gpuHours: v['projectGpuUse']['value'],
                 gpu: v['projectGpuUse']['value'] != 0,
                 jobs: v['projectJobsRan']['value']
             }
@@ -111,6 +117,8 @@ const GRAFANA_BASE = {
     from: DATE_RANGE['oneYearAgo'],
     to: DATE_RANGE['now']
 }
+
+
 
 /**
  * A node wrapping the project information break down
@@ -208,6 +216,20 @@ class ProjectDisplay{
     }
 }
 
+class ProjectCount {
+    constructor(dataGetter, node) {
+        this.node = node
+        this.dataGetter = dataGetter
+        this.update()
+    }
+
+    update = async () => {
+        let data = await this.dataGetter()
+        this.node.textContent = Object.keys(data).length
+        console.log(Object.keys(data).length)
+    }
+}
+
 class Search {
     constructor(data, listener) {
         this.node = document.getElementById("project-search")
@@ -238,7 +260,8 @@ class Search {
         if(this.node.value == ""){
             return data
         } else {
-            let table_keys = this.lunr_idx.search("*" + this.node.value + "*").map(r => r.ref)
+            console.log(this.node.value)
+            let table_keys = this.lunr_idx.search("" + this.node.value + "~2").map(r => r.ref)
             return table_keys.reduce((pv, k) => {
                 pv[k] = data[k]
                 return pv
@@ -350,13 +373,18 @@ class DataManager {
         this.toggleConsumers()
     }
 
+    getData = async () => {
+        if(!this.data) {
+            this.data = this._getData()
+        }
+        return this.data
+    }
+
     /**
      * Compiles the project data and does some prefilters to dump unwanted data
      * @returns {Promise<*>}
      */
-    getData = async () => {
-
-        if( this.data ){ return this.data }
+    _getData = async () => {
 
         let response;
 
@@ -384,7 +412,7 @@ class DataManager {
             return p
         }, {})
 
-        console.log(JSON.stringify(Object.keys(this.data)))
+        console.log(this.data)
 
         return this.data
     }
@@ -400,6 +428,27 @@ class DataManager {
         }
         return filteredData
     }
+
+    reduceByKey = async (key, value) => {
+        let data = await this.getFilteredData()
+        let reducedData = Object.values(data).reduce((p, v) => {
+            if(v[key] in p) {
+                p[v[key]] += v[value]
+            } else {
+                p[v[key]] = v[value]
+            }
+            return p
+        }, {})
+        let sortedData = Object.entries(reducedData)
+            .filter(([k,v]) => v > 0)
+            .map(([k,v]) => {return {label: k, [value]: Math.round(v)}})
+            .sort((a, b) => b[value] - a[value])
+        return {
+            labels: sortedData.map(x => x.label),
+            data: sortedData.map(x => x[value])
+        }
+    }
+
 }
 
 class ProjectPage{
@@ -424,25 +473,69 @@ class ProjectPage{
         this.table = new Table(this.wrapper, this.dataManager.getFilteredData, this.projectDisplay.update.bind(this.projectDisplay))
         this.dataManager.consumerToggles.push(this.table.update)
 
-        this.search = new Search(Object.values(await this.dataManager.getData()), this.table.update)
+        this.search = new Search(Object.values(await this.dataManager.getData()), this.dataManager.toggleConsumers)
         this.dataManager.addFilter("search", this.search.filter)
         this.dataManager.addFilter("minimumJobsFilter", this.minimumJobsFilter)
 
         this.toggleActiveFilterButton = document.getElementById("toggle-active-filter")
         this.toggleActiveFilterButton.addEventListener("click", this.toggleActiveFilter)
 
+        this.projectCount = new ProjectCount(this.dataManager.getFilteredData, document.getElementById("project-count"))
+
         let urlProject = new URLSearchParams(window.location.search).get('project')
         if(urlProject){
             this.projectDisplay.update((await this.dataManager.getData())[urlProject])
         }
+
+        this.orgPieChart = new PieChart(
+            "project-fos-cpu-summary",
+            this.dataManager.reduceByKey.bind(this.dataManager, "FieldOfScience", "cpuHours"),
+            "# of CPU Hours by Field of Science"
+        )
+        this.FosPieChart = new PieChart(
+            "project-fos-job-summary",
+            this.dataManager.reduceByKey.bind(this.dataManager, "FieldOfScience", "jobs"),
+            "# of Jobs by Field Of Science"
+        )
+        this.jobPieChart = new PieChart(
+            "project-job-summary",
+            this.dataManager.reduceByKey.bind(this.dataManager, "Name", "jobs"),
+            "# of Jobs by Project",
+            ({label, value}) => {
+                this.table.updateProjectDisplay(this.dataManager.data[label])
+            }
+        )
+        this.cpuPieChart = new PieChart(
+            "project-cpu-summary",
+            this.dataManager.reduceByKey.bind(this.dataManager, "Name", "cpuHours"),
+            "# of CPU Hours by Project",
+            ({label, value}) => {
+                this.table.updateProjectDisplay(this.dataManager.data[label])
+            }
+        )
+        this.gpuPieChart = new PieChart(
+            "project-gpu-summary",
+            this.dataManager.reduceByKey.bind(this.dataManager, "Name", "gpuHours"),
+            "# of GPU Hours by Project",
+            ({label, value}) => {
+                this.table.updateProjectDisplay(this.dataManager.data[label])
+            }
+        )
+
+        this.dataManager.consumerToggles.push(this.orgPieChart.update)
+        this.dataManager.consumerToggles.push(this.FosPieChart.update)
+        this.dataManager.consumerToggles.push(this.jobPieChart.update)
+        this.dataManager.consumerToggles.push(this.cpuPieChart.update)
+        this.dataManager.consumerToggles.push(this.gpuPieChart.update)
+        this.dataManager.consumerToggles.push(this.projectCount.update)
     }
+
+
 
     minimumJobsFilter = (data) => {
         return Object.entries(data).reduce((pv, [k,v]) => {
             if(v['jobs'] >= 100){
                 pv[k] = v
-            } else {
-                console.log(k)
             }
             return pv
         }, {})
