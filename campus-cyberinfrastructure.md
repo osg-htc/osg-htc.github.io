@@ -168,39 +168,71 @@ your researchers have any questions or issues, please contact us at [support@osg
 
 <iframe width="100%" height="500px" frameBorder="0" style="margin-bottom:1em; margin-top:1em" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
 
-<div id="ccstar-table" class="row d-none">
-    <div class="col-12 col-xl-7 col-lg-8 col-md-10">
-        <input class="form-control" id="search" placeholder="Search Facility Details" type="search"/>
-    </div>
-</div>
-<div id="wrapper" class="overflow-auto"></div>
 
-<div class="modal fade" id="display" tabindex="-1" aria-labelledby="Name" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="facility-Name" class="mb-0 facility-Name"></h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h5 class="pt-3">Science Impact</h5>
-                <div class="row project-usage-row">
-                    <div class="col-12 col-xl-6 projects-supported"></div>
-                    <div class="col-12 col-xl-6 fields-of-science-supported"></div>
-                    <div class="col-12 col-xl-6 organizations-supported"></div>
-                </div>
-                <h5>Resources Provided</h5>
-                <div class="row project-usage-row">
-                    <div class="col-12 col-md-6 jobs-ran"></div>
-                    <div class="col-12 col-md-6 cpu-provided"></div>
-                    <div class="col-12 col-md-6 gpu-provided"></div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+<div class="accordion" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        CC* Institutional Contributions
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <div id="ccstar-table" class="row d-none">
+            <div class="col-12 col-xl-7 col-lg-8 col-md-10">
+                <input class="form-control" id="search" placeholder="Search Facility Details" type="search"/>
             </div>
         </div>
+        <div id="wrapper" class="overflow-auto"></div>
+        
+        <div class="modal fade" id="display" tabindex="-1" aria-labelledby="Name" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 id="facility-Name" class="mb-0 facility-Name"></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="pt-3">Science Impact</h5>
+                        <div class="row project-usage-row">
+                            <div class="col-12 col-xl-6 projects-supported"></div>
+                            <div class="col-12 col-xl-6 fields-of-science-supported"></div>
+                            <div class="col-12 col-xl-6 organizations-supported"></div>
+                        </div>
+                        <h5>Resources Provided</h5>
+                        <div class="row project-usage-row">
+                            <div class="col-12 col-md-6 jobs-ran"></div>
+                            <div class="col-12 col-md-6 cpu-provided"></div>
+                            <div class="col-12 col-md-6 gpu-provided"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        All CC* Institutions
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <ul>
+          {% assign cc_star_sites = site.data.cc_star | sort: "name" %} 
+          {% for cc_star_site in cc_star_sites %}
+            <li><a href="{{ cc_star_site.href }}">{{ cc_star_site.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
 
