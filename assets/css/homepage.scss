@@ -28,3 +28,18 @@ layout: blank
     backdrop-filter: blur(15px);
   }
 }
+
+@media (min-width: 576px) {
+  .bookends {
+    background-image: url("/assets/images/OSG_Bookends_start.png"), url("/assets/images/OSG_Bookends_end.png");
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+    background-size: 235px 378px, 235px 378px; } }
+
+@media (min-width: 992px) {
+  .bookends {
+    background-size: 235px 378px, 235px 378px; } }
+
+@media (max-width: 991.98px) {
+  .bookends {
+    background-size: 118px 189px, 118px 189px; } }
