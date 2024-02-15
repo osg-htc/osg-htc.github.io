@@ -100,8 +100,15 @@
 .navbar-text {
   padding-top: $nav-link-padding-y;
   padding-bottom: $nav-link-padding-y;
+  padding-left: 22.6rem;
 }
 
+/* Media query for screens up to 768px width */
+@media only screen and (max-width: 768px) {
+  .navbar-text {
+    padding-left: 0; /* Remove left padding for mobile devices */
+  }
+}
 
 // Responsive navbar
 //
