@@ -114,7 +114,7 @@ Registration to participate fully in OSG Virtual School 2021 has closed, but [re
 
 # Questions?
 
-Contact us at <user-school@opensciencegrid.org>. 
+Contact us at <school@osg-htc.org>. 
 
 {% endcapture %}
 
@@ -127,7 +127,7 @@ learn about past OSG Schools.
 
 If you have any questions about the event, feel free to email us:
 
-<user-school@opensciencegrid.org>
+<school@osg-htc.org>
 {% endcapture %}
 
 {% include event/event-page.html %}
