@@ -31,7 +31,7 @@ The school is ideal for:
 
 People accepted to this program will receive financial support for basic travel and local costs associated with the School.
   
-To learn more about the event, check out this articles [that features 2023 School students and their motiviations for attending.](https://chtc.cs.wisc.edu/OSG-School.html)
+To learn more about the event, check out this article [that features 2023 School students and their motiviations for attending.](https://chtc.cs.wisc.edu/OSG-School.html)
 
 [View complete details and access School application](https://osg-htc.org/school-2024)
 
