@@ -1,10 +1,10 @@
 ---
-short_title: OSG User School 2024
-title: "OSG User School 2024, Aug. 5–9"
+short_title: OSG School 2024
+title: "OSG School 2024, Aug. 5–9"
 layout: events
 published: true
 excerpt: |
-    Applications for the OSG User School 2024 at the University of Wisconsin-Madison are now open!
+    Applications for the OSG School 2024 at the University of Wisconsin-Madison are now open!
 start_date: 2024-03-20
 end_date: 2024-08-09
 location: "University of Wisconsin-Madison"
