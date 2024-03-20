@@ -31,11 +31,10 @@ The school is ideal for:
 
 People accepted to this program will receive financial support for basic travel and local costs associated with the School.
   
-[View details and access School application](https://osg-htc.org/school-2024)
+To learn more about the event, check out this articles written about the OSG User School 2024: [This article features 2023 School students and their motiviations for attending.](https://chtc.cs.wisc.edu/OSG-School.html)
 
-To learn more about the event, check out this articles written about the OSG User School 2024:
+- [View complete details and access School application](https://osg-htc.org/school-2024)
 
-- [This article features 2023 School student and their motiviations for attending](https://chtc.cs.wisc.edu/OSG-School.html)
 
 {% endcapture %}
 
@@ -43,7 +42,7 @@ To learn more about the event, check out this articles written about the OSG Use
 {% capture subsection %}
 ### Dates
 
-August 5 - 0, 2024
+August 5 - 8, 2024
 
 ### Who
 
