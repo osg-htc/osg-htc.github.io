@@ -1,6 +1,6 @@
 ---
 short_title: OSG User School 2024
-title: "OSG User School 2023, Aug. 5–9"
+title: "OSG User School 2024, Aug. 5–9"
 layout: events
 published: true
 excerpt: |
@@ -15,7 +15,7 @@ header_image: "/assets/images/events/osg-user-school-2023-event.jpg"
 
 {% capture main %}
 
-**Could you tranform your research with vast amounts of computing? ** 
+**Could you tranform your research with vast amounts of computing?** 
 
 Applications are now open and are due by Monday, 1 April 2024.
 
