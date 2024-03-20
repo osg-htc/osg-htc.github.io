@@ -17,7 +17,7 @@ header_image: "/assets/images/events/osg-user-school-2023-event.jpg"
 
 **Could you tranform your research with vast amounts of computing?** 
 
-Applications are now open and are due by Monday, 1 April 2024.
+Applications for the OSG School are now open!
 
 The OSG School provides researchers the opportunity to learn how to use high-throughput computing (HTC) systems to run large-scale computing applications at their campus or using the national-scale [Open Science Pool](https://osg-htc.org/services/open_scienc_Pool.html) – to run large-scale computing applications that are at the heart of today's cutting-edge science.
 
