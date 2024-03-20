@@ -35,7 +35,7 @@ People accepted to this program will receive financial support for basic travel 
 
 To learn more about the event, check out this articles written about the OSG User School 2024:
 
-- (This article features 2023 School student and their motiviations for attending](https://chtc.cs.wisc.edu/OSG-School.html)
+- [This article features 2023 School student and their motiviations for attending](https://chtc.cs.wisc.edu/OSG-School.html)
 
 {% endcapture %}
 
