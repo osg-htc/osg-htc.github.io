@@ -154,6 +154,12 @@ class ProjectDisplay{
                 panelId: 22,
                 showDisplay: UsageToggles.usedCpu,
                 ...GRAFANA_BASE
+            },{
+                className:"facilities-table",
+                panelId: 23,
+                showDisplay: UsageToggles.usedCpu,
+                height: "400px",
+                ...GRAFANA_BASE
             }
         ]
         this.display_modal = new bootstrap.Modal(parentNode, {

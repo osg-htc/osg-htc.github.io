@@ -208,9 +208,15 @@
                 </div>
                 <h5>Where Jobs Have Run</h5>
                 <div class="row project-usage-row">
-                    <div class="col-12 col-md-8 facilities-bar-graph"></div>
+                    <div class="col-12 col-md-8" style="display: block;" id="facilities-bar-graph">
+                        <div class="facilities-bar-graph"></div>
+                    </div>
+                    <div class="col-12 col-md-8" style="display: none;" id="facilities-table">
+                        <div class="facilities-table"></div>
+                    </div>
                     <div class="col-12 col-md-4 facilities-int"></div>
                 </div>
+                <button id="toggle-table-btn" class="btn btn-secondary my-2">Show Table</button>
                 <h5>Resource Usage</h5>
                 <div class="row project-usage-row">
                     <div class="col-12 col-md-4 jobs-ran-int"></div>
@@ -224,3 +230,24 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleBtn = document.getElementById('toggle-table-btn');
+        const tableContainer = document.getElementById('facilities-table');
+        const chartContainer = document.getElementById('facilities-bar-graph');
+        toggleBtn.addEventListener('click', function() {
+            // Toggle the display style
+            if (tableContainer.style.display === 'none' || tableContainer.style.display === '') {
+                tableContainer.style.display = 'block';
+                chartContainer.style.display = 'none';
+                toggleBtn.textContent = 'Show Pie Chart'; // Optional: Change button text
+            } else {
+                tableContainer.style.display = 'none';
+                chartContainer.style.display = 'block';
+                toggleBtn.textContent = 'Show Table'; // Optional: Change button text
+            }
+        });
+    });
+</script>
+    
