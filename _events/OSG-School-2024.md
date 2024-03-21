@@ -9,8 +9,8 @@ start_date: 2024-03-20
 end_date: 2024-08-09
 location: "University of Wisconsin-Madison"
 link: "https://osg-htc.org/school-2024/"
-image: "/assets/images/events/OSG-User-School2023.jpeg"
-header_image: "/assets/images/events/OSG-User-School2023.jpeg"
+image: "/assets/images/events/osg-user-school-2023-event.jpg"
+header_image: "/assets/images/events/osg-user-school-2023-event.jpg"
 ---
 
 {% capture main %}
