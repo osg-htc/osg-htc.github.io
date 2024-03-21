@@ -15,7 +15,7 @@ header_image: "/assets/images/events/osg-user-school-2023-event.jpg"
 
 {% capture main %}
 
-**Could you tranform your research with vast amounts of computing?** 
+**Is limited computing capacity holding back your science?** 
 
 Applications for the OSG School are now open!
 
@@ -42,7 +42,7 @@ To learn more about the event, check out this article [that features 2023 School
 {% capture subsection %}
 ### Dates
 
-August 5 - 8, 2024
+August 5–9, 2024
 
 ### Who
 
