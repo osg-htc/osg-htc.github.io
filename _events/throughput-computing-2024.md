@@ -12,8 +12,8 @@ excerpt: |
 start_date: 2024-07-8
 end_date: 2024-07-12
 location: "University of Wisconsin–Madison’s Fluno Center and Online via Zoom"
-image: "/assets/images/events/Throughput-Computing-2024-Banner.jpg"
-header_image: "/assets/images/events/Throughput-Computing-2024-Banner.jpg"
+image: "/assets/images/events/throughput-2024-banners.png"
+header_image: "/assets/images/events/throughput-2024-banners.png"
 ---
 
 {% capture main %}
