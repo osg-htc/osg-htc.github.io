@@ -69,7 +69,7 @@ Organizations, researchers, campuses, facilitators and administrators interested
 
 ### Registration
 
-Registration Is Open! [Visit the Event Site for registration information.](https://agenda.hep.wisc.edu/event/2175/) Registration is **required** for attendees, even if you plan to attend remotely only. Registration for in-person attendance will cost $125 per day; there is no fee for registration for virtual attendance. There are two places to register, depending upon whether you will be attending in-person or remotely:
+Registration Is Open! [Visit the Event Site for registration information.](https://agenda.hep.wisc.edu/event/2175/) Registration is **required** for attendees, even if you plan to attend remotely only. Registration for in-person attendance will cost $125 per day; there is no fee for registration for virtual attendance. There are two places to register, depending upon whether you will be attending in person or remotely:
 
 - [In-Person Attendance](https://uwmadison.eventsair.com/htc24/reg/Site/Register)
 - [Virtual Participation](https://agenda.hep.wisc.edu/event/2175/registrations/257/)
