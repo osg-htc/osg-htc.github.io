@@ -20,17 +20,16 @@ header_image: "/assets/images/events/Throughput-Computing-2024-Banner.jpg"
 
 **Don't miss this opportunity to reconnect with colleagues and learn more about HTC.** 
 
-Join us for the second annual Throughput Computing event from July 8-12 to be held at the University of Wisconsin-Madison’s [Fluno Center](https://fluno.com/). HTC24 is sponsored by the OSG Consortium, the HTCondor team and the UW-Madison Center for High Throughput Computing. 
+Join us for the second annual Throughput Computing event from July 8-12 to be held at the University of Wisconsin-Madison’s [Fluno Center](https://fluno.com/). HTC 24 is sponsored by the OSG Consortium, the HTCondor team and the UW-Madison Center for High Throughput Computing. 
 
 
-**[Registration is Open!](https://agenda.hep.wisc.edu/event/2175/).** This will primarily be an in-person event, but remote participation (via Zoom) for the many plenary events will also be offered.
+**[Registration is Open!](https://agenda.hep.wisc.edu/event/2175/)** This will primarily be an in-person event, but remote participation (via Zoom) for the many plenary events will also be offered.
 If you register for the in-person event at the University of Wisconsin–Madison, you can attend plenary and non-plenary sessions, mingle with colleagues, and have planned or ad hoc meetings. Evening social and recreational events are also planned throughout the week.
 
 
 ### The Agenda
 
 Topics Include:
-
 
 - Grabbing Data by the Horns Without Getting Gored: Including OSDF, Pelican, Data Hungry Workflows and Tutorials
 - CC* Current and Prospective Campuses: Meet the Team, Stump the Experts and Technical Talks
@@ -45,14 +44,13 @@ Topics Include:
 - and the Todd and Greg Comedy Hour!
   
 
-
 ### Questions and Resources
 
 For questions about attending, speaking, accommodations, and other concerns please contact us at [htc@path-cc.io](mailto:htc@path-cc.io).
 
-To learn about this event in more detail, view the event website schedules for HTC23:
+To learn about this event in more detail, view the event website schedules for HTC 24:
 
-- [HTC24 Site](https://agenda.hep.wisc.edu/event/2175/)
+- [HTC 24 Site](https://agenda.hep.wisc.edu/event/2175/)
 {% endcapture %}
 
 
@@ -71,9 +69,9 @@ Organizations, researchers, campuses, facilitators and administrators interested
 
 ### Registration
 
-Registration Is Open! [Visit the Event Site for registration information.](https://agenda.hep.wisc.edu/event/2175/) Registration is **required** for attendees, even if yo plan to attend remotely only. Registration for in-person attendance will cost $125 per day; there is no fee for registration for virtual attendance. There are two places to register, depending upon whether you will be attending in-person or remotely:
+Registration Is Open! [Visit the Event Site for registration information.](https://agenda.hep.wisc.edu/event/2175/) Registration is **required** for attendees, even if you plan to attend remotely only. Registration for in-person attendance will cost $125 per day; there is no fee for registration for virtual attendance. There are two places to register, depending upon whether you will be attending in-person or remotely:
 
-- [In Person Attendance](https://uwmadison.eventsair.com/htc24/reg/Site/Register)
+- [In-Person Attendance](https://uwmadison.eventsair.com/htc24/reg/Site/Register)
 - [Virtual Participation](https://agenda.hep.wisc.edu/event/2175/registrations/257/)
  
 ### Questions?
