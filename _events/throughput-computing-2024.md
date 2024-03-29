@@ -48,7 +48,7 @@ Topics Include:
 
 For questions about attending, speaking, accommodations, and other concerns please contact us at [htc@path-cc.io](mailto:htc@path-cc.io).
 
-To learn about this event in more detail, view the event website schedules for HTC 24:
+To learn about HTC 24 in more detail, view the event website:
 
 - [HTC 24 Site](https://agenda.hep.wisc.edu/event/2175/)
 {% endcapture %}
