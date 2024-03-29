@@ -20,7 +20,7 @@ header_image: "/assets/images/events/Throughput-Computing-2024-Banner.jpg"
 
 **Don't miss this opportunity to reconnect with colleagues and learn more about HTC.** 
 
-Join us for the second annual integrated Throughput Computing event — which combines HTCondor’s former annual event “HTCondor Week” and the OSG’s “All-Hands Meeting” — from July 8-12 to be held at the University of Wisconsin-Madison’s [Fluno Center](https://fluno.com/). HTC24 is sponsored by the OSG Consortium, the HTCondor team and the UW-Madison Center for High Throughput Computing. 
+Join us for the second annual integrated Throughput Computing event from July 8-12 to be held at the University of Wisconsin-Madison’s [Fluno Center](https://fluno.com/). HTC24 is sponsored by the OSG Consortium, the HTCondor team and the UW-Madison Center for High Throughput Computing. 
 
 
 **[Registration is Open!](https://agenda.hep.wisc.edu/event/2175/).** This will primarily be an in-person event, but remote participation (via Zoom) for the many plenary events will also be offered.
@@ -43,7 +43,7 @@ Topics Include:
 - Collaborations Meetings and Discussions 
 - U.S. ATLAS and CMS Meetings
 - and the Todd and Greg Comedy Hour!
-- 
+  
 
 
 ### Questions and Resources
