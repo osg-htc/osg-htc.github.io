@@ -1,6 +1,6 @@
 ---
 short_title: You are Invited to Attend Throughput Computing 2024
-title: Join Us at Througnput Computing 2024, July 8 - 12
+title: Join Us at Throughput Computing 2024, July 8 - 12
 
 layout: events
 published: true
