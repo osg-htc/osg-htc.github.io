@@ -1,6 +1,6 @@
 ---
-short_title: Registration is Open for Throughput Computing 2024
-title: Registration is Open for Throughput Computing 2024 
+short_title: You are Invited to Attend Throughput Computing 2024
+title: Join Us at Througnput Computing 2024, July 8 - 12, in Madison
 
 layout: events
 published: true
@@ -20,24 +20,21 @@ header_image: "/assets/images/events/throughput-2024-banners.png"
 
 **Don't miss this opportunity to reconnect with colleagues and learn more about HTC.** 
 
-**[Registration is Open!](https://agenda.hep.wisc.edu/event/2175/)** Join us for the second annual Throughput Computing event from July 8-12 to be held at the University of Wisconsin-Madison’s [Fluno Center](https://fluno.com/). HTC 24 is sponsored by the OSG Consortium, the HTCondor team and the UW-Madison Center for High Throughput Computing. 
+Join us for the second annual Throughput Computing event (HTC 24) from July 8-12 to be held at the University of Wisconsin-Madison’s [Fluno Center](https://fluno.com/). The goal of HTC 24 is to bring together researchers, campuses, facilitators, administrators, government representatives and professionals interested in high throughput computing to:
 
-### The Agenda
+-Engage with the throughput computing community, including the [OSG Consortium](https://osg-htc.org/) and the [PATh](https://path-cc.io/) and [Pelican](https://pelicanplatform.org/) teams and many others contributing to HTC
+-Be inspired by engaging presentations and conversations with leaders with common interests
+-Learn about HTC and new developments to advance your science, your collaboration or your campus
 
-Topics Include:
+**[Registration is Open!](https://agenda.hep.wisc.edu/event/2175/)**
 
-- Grabbing Data by the Horns Without Getting Gored: Including OSDF, Pelican, Data Hungry Workflows and Tutorials
-- CC* Current and Prospective Campuses: Meet the Team, Stump the Experts and Technical Talks
-- Campus Services and Perspectives
-- Powering AI and ML with Distributed Computing
-- Featured Research on the OSPool
-- HTCondor In Depth and Under the Hood
-- HTCondor Training Outside the Box
-- Mastering Complex Workflows
-- Collaborations Meetings and Discussions 
-- U.S. ATLAS and CMS Meetings
-- and the Todd and Greg Comedy Hour!
-  
+This year for the first time we will have a track dedicated to CC* or potential CC* campuses on Wednesday, July 10th. These sessions will bring together campus staff involved with HTC with the OSG Consortium staff engaged with and supporting these organizations. The goal is to connect with and learn from each other to improve the experience of providing or utilizing capacity and to advance scientific research.
+
+Also new this year following its success at the European HTCondor Week, we are introducing Lightning Showcases from the community on Tuesday, July 9. We hope you will consider presenting. Because we want to keep this relaxed and informal, sign up will only be available shortly before HTC begins. 
+
+HTC 24 is sponsored by the OSG Consortium, the HTCondor team and the UW-Madison Center for High Throughput Computing. 
+
+
 
 ### Questions and Resources
 
@@ -56,7 +53,7 @@ Monday, July 8 through Friday, July 12, 2024.
 
 ### Who
 
-Organizations, researchers, campuses, facilitators and administrators interested in the [HTCondor Software Suite](https://htcondor.org) and high throughput computing or the [OSG Consortium](https://osg-htc.org/) resources or services (including the [OSPool](https://osg-htc.org/services/open_science_pool.html), the [Open Science Data Federation](https://osg-htc.org/services/osdf.html), the [Pelican Platform](https://pelicanplatform.org/), or the [PATh Facility](https://path-cc.io/facility/).)
+Researchers, campuses, scientific collaborations, facilitators, administrators and professionals interested in the [HTCondor Software Suite](https://htcondor.org) and high throughput computing or the [OSG Consortium](https://osg-htc.org/) resources or services (including the [OSPool](https://osg-htc.org/services/open_science_pool.html), the [Open Science Data Federation](https://osg-htc.org/services/osdf.html), the [Pelican Platform](https://pelicanplatform.org/), or the [PATh Facility](https://path-cc.io/facility/).)
 
 ### Where
 
