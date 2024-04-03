@@ -32,6 +32,11 @@ This year for the first time we will have a track dedicated to CC* or potential 
 
 Also new this year following its success at the European HTCondor Week, we are introducing Lightning Showcases from the community on Tuesday, July 9. We hope you will consider presenting. Because we want to keep this relaxed and informal, sign up will only be available shortly before HTC begins. 
 
+We also encourage you to consider a more formal talk. Technical presentations at HTC 24 are short, typically 20 minutes in length. Applying merely requires a [brief abstract submission] (https://agenda.hep.wisc.edu/event/2175/abstracts/). 
+
+Madison, Wisconsin is both a beautiful and a popular place to visit in the summer; we encourage you to register and book your hotel room as early as possible. Visit the Event Site [Local Arrangements](https://agenda.hep.wisc.edu/event/2175/page/67-local-arrangements) for accommodation details. 
+
+
 HTC 24 is sponsored by the OSG Consortium, the HTCondor team and the UW-Madison Center for High Throughput Computing. 
 
 
