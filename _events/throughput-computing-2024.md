@@ -20,7 +20,7 @@ header_image: "/assets/images/events/throughput-2024-banners.png"
 
 **Don't miss this opportunity to reconnect with colleagues and learn more about HTC.** 
 
-YOu are invited to the second annual Throughput Computing event (HTC 24) from July 8-12 to be held at the University of Wisconsin-Madison’s [Fluno Center](https://fluno.com/). The goal of HTC 24 is to bring together researchers, campuses, facilitators, administrators, government representatives and professionals interested in high throughput computing to:
+You are invited to the second annual Throughput Computing event (HTC 24) from July 8-12 to be held at the University of Wisconsin-Madison’s [Fluno Center](https://fluno.com/). The goal of HTC 24 is to bring together researchers, campuses, facilitators, administrators, government representatives and professionals interested in high throughput computing to:
 
 - Engage with the throughput computing community, including the [OSG Consortium](https://osg-htc.org/) and the [PATh](https://path-cc.io/) and [Pelican](https://pelicanplatform.org/) teams and many others contributing to HTC
 - Be inspired by engaging presentations and conversations with community leaders and contributors sharing common interests
