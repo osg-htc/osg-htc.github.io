@@ -30,9 +30,9 @@ You are invited to the second annual Throughput Computing event (HTC 24) from Ju
 
 ### Connect with CC* Campuses and OSG Staff 
 
-CC* campuses (current and potential) will have the opportunity to build connections and advance their technical understanding at the dedicated CC* track held Wednesday, July 10th. These sessions will bring together campus staff, including staff involved with HTC technology, with the OSG Consortium staff. The goal is to engage with and to learn from each other to improve the experience of providing or utilizing capacity and to advance scientific research on your own campus and across the nation.
+CC* campuses (current and potential) will have the opportunity to build connections and to advance their technical know how at the dedicated CC* track held Wednesday, July 10th. These sessions will bring together campus staff, including staff involved directly with HTC technology, with the OSG Consortium staff. The goal is to engage with and to learn from each other to improve the experience of providing or utilizing capacity and to advance scientific research on your own campus and across the nation.
 
-### Speaking Opportunities to Contribute to the HTC Community
+### Speaking Opportunities 
 
 Also new this year following its success at the European HTCondor Week, we are introducing Lightning Showcases from the community on Tuesday, July 9. We hope you will consider presenting. Because we want to keep this relaxed and informal, sign up will only be available shortly before HTC begins. 
 
@@ -43,11 +43,9 @@ We also encourage you to consider a more formal talk. Technical presentations at
 Madison, Wisconsin is both a beautiful and a popular place to visit in the summer. We do have a limited number of room blocks reserved for HTC 24 and encourage you to register and book your hotel room as early as possible. Visit the Event Site [Local Arrangements](https://agenda.hep.wisc.edu/event/2175/page/67-local-arrangements) for accommodation details. 
 
 
-HTC 24 is sponsored by the OSG Consortium, the HTCondor team and the UW-Madison Center for High Throughput Computing. 
-
-
-
 ### Questions and Resources
+
+HTC 24 is sponsored by the OSG Consortium, the HTCondor team and the UW-Madison Center for High Throughput Computing. 
 
 For questions about attending, speaking, accommodations, and other concerns please contact us at [htc@path-cc.io](mailto:htc@path-cc.io).
 
