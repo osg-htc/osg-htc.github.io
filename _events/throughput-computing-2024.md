@@ -30,7 +30,7 @@ You are invited to the second annual Throughput Computing event (HTC 24) from Ju
 
 ### Connect with CC* Campuses and OSG Staff 
 
-CC* campuses (current and potential) will have the opportunity to build connections and advance their technical understanding to contribute or utilize OSPool capacity at the dedicated CC* track held Wednesday, July 10th. These sessions will bring together campus staff, including staff involved with HTC technology, with the OSG Consortium staff. The goal is to engage with and to learn from each other to improve the experience of providing or utilizing capacity and to advance scientific research on your own campus and across the nation.
+CC* campuses (current and potential) will have the opportunity to build connections and advance their technical understanding at the dedicated CC* track held Wednesday, July 10th. These sessions will bring together campus staff, including staff involved with HTC technology, with the OSG Consortium staff. The goal is to engage with and to learn from each other to improve the experience of providing or utilizing capacity and to advance scientific research on your own campus and across the nation.
 
 ### Speaking Opportunities to Contribute to the HTC Community
 
