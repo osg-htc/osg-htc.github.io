@@ -18,7 +18,7 @@ header_image: "/assets/images/events/throughput-2024-banners.png"
 
 {% capture main %}
 
-**Don't miss this opportunity to reconnect with colleagues and learn more about HTC.** 
+**Don't miss this opportunity to connect with the High Throughput Computing community.** 
 
 You are invited to the second annual Throughput Computing event (HTC 24) from July 8-12 to be held at in beautiful Madison, Wisconsin. HTC 24 brings together researchers, campuses, science collaborations, facilitators, administrators, government representatives and professionals interested in high throughput computing to:
 
@@ -30,11 +30,11 @@ You are invited to the second annual Throughput Computing event (HTC 24) from Ju
 
 ### Connect with CC* Campuses and OSG Staff 
 
-CC* campuses (current and potential) will have the opportunity to build connections and to advance their technical know how at the dedicated CC* track held Wednesday, July 10th. These sessions will bring together campus staff, including staff involved directly with HTC technology, with the OSG Consortium staff. The goal is to engage with and to learn from each other to improve the experience of providing or utilizing capacity and to advance scientific research on your own campus and across the nation.
+[CC* campuses](https://osg-htc.org/campus-cyberinfrastructure.html) (current and potential) will have the opportunity to build connections and to advance their technical know how at the dedicated CC* track held Wednesday, July 10th. These sessions will bring together campus staff, including staff involved directly with HTC technology, with the OSG Consortium staff. The goal is to engage with and to learn from each other to improve the experience of providing or utilizing capacity and to advance scientific research on your own campus and across the nation.
 
 ### Speaking Opportunities 
 
-Also new this year following its success at the European HTCondor Week, we are introducing Lightning Showcases from the community on Tuesday, July 9. We hope you will consider presenting. Because we want to keep this relaxed and informal, sign up will only be available shortly before HTC begins. 
+We are introducing Lightning Showcases from the community on Tuesday, July 9.  Come and give a lightning talk about your project, tool, or activities around HTC.  To keep the session relaxed and informal, there will be opportunities for signing up for a slot on the first day of the workshop.
 
 We also encourage you to consider a more formal talk. Technical presentations at HTC 24 are short, typically 20 minutes in length. Applying merely requires a [brief abstract submission](https://agenda.hep.wisc.edu/event/2175/abstracts/). 
 
