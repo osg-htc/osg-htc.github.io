@@ -6,7 +6,7 @@ layout: events
 published: true
 
 excerpt: |
-    Don't miss this opportunity to reconnect with colleagues and learn about more about HTC.
+    Don't miss this opportunity to connect with the High Throughput Computing community.
 
 
 start_date: 2024-07-8
