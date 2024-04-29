@@ -79,8 +79,7 @@ Our project is committed to support CC* projects from proposal, through deployme
 
 {: .fs-5 }
 Proposals in response to the 2024 CC* program solicitation
-([NSF 24-530](https://new.nsf.gov/funding/opportunities/campus-cyberinfrastructure-cc/nsf24-530/solicitation)) are due on
-22 April 2024 and 15 October 2024.
+([NSF 24-530](https://new.nsf.gov/funding/opportunities/campus-cyberinfrastructure-cc/nsf24-530/solicitation)) are due on 15 October 2024.
 Please contact us at [cc-star-proposals@osg-htc.org](mailto:cc-star-proposals@osg-htc.org)
 (the earlier the better!) with any questions or requests
 you may have regarding the involvement of [PATh](https://path-cc.io) in your proposed project.
