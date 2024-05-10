@@ -45,7 +45,8 @@ title: The OSG Team
 <div class="container-xxl">
     <h2 class="ps-3">Full Team</h2>
     <div class="row g-0 bg-light rounded bg-light pb-2 pe-2">
-        {% for member in team %}
+        {% assign current_team = team | where_exp: "member", "member.status != 'Past'" %}
+        {% for member in current_team %}
         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xxl-2 pt-2 ps-2 d-flex">
             <div class="card border-0 shadow flex-grow-1">
                 <img class="card-img-top" src="{{ base_image_path | append: member.image | relative_url }}" alt="Card image cap">
