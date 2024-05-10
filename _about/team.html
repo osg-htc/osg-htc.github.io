@@ -46,7 +46,6 @@ title: The OSG Team
     <h2 class="ps-3">Full Team</h2>
     <div class="row g-0 bg-light rounded bg-light pb-2 pe-2">
         {% for member in team %}
-        {% if member.status != "Past" %}
         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xxl-2 pt-2 ps-2 d-flex">
             <div class="card border-0 shadow flex-grow-1">
                 <img class="card-img-top" src="{{ base_image_path | append: member.image | relative_url }}" alt="Card image cap">
@@ -63,16 +62,15 @@ title: The OSG Team
                 </div>
             </div>
         </div>
-        {% endif %}
         {% endfor %}
         <br>
     </div>
 </div>
 <div class="container-xxl">
-    <h2 class="ps-3">Previous Team Members</h2>
+    <h2 class="ps-3 mt-3">Previous Team Members</h2>
     <div class="row g-0 bg-light rounded bg-light pb2 pe-2">
-        {% for member in team %}
-        {% if member.status == "Past" %}
+        {% assign previous_teams = team | where: "status", "Past" | sort: "name" %}
+        {% for member in previous_teams %}
         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xxl-2 pt-2 ps-2 d-flex">
             <div class="card border-0 shadow flex-grow-1">
                 <img class="card-img-top" src="{{ base_image_path | append: member.image | relative_url }}" alt="Card image cap">
@@ -89,7 +87,6 @@ title: The OSG Team
                 </div>
             </div>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
 </div>
