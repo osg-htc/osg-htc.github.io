@@ -15,7 +15,7 @@ The OSG David Swanson Award was established to honor our late colleague, David S
 
 David passed away in an accident in fall 2019. In his memory the award is bestowed annually upon one or more former students of the OSG School who have subsequently achieved significant dHTC-enabled research outcomes, and covers the recipient’s costs of attending the OSG All-Hands Meeting to present their work.
 
-![Past-awardees](/assets/images/DSA-photos/ronda-and-past-awardees.jpg)
+<img src="/assets/images/DSA-photos/ronda-and-past-awardees.jpg" width="75%" align="center">
 
 *Ronda Swanson presents the David Swanson Award to past and present recipients 
 Anirvan Shukla, Conor Natzke, Aashish Tripathee, and Jimena Gonzalez at HTC23.*
@@ -36,7 +36,6 @@ Anirvan Shukla, Conor Natzke, Aashish Tripathee, and Jimena Gonzalez at HTC23.*
 Anirvan Shukla, a 2020 award recipient and 2016 OSG School participant, was a graduate student in the Department of Physics, University of Hawaiʻi at Mānoa and at the September 2020 All-Hands Meeting spoke about [“Antimatter: Using High Throughput Computing to Study Very Rare Processes.”](https://indico.fnal.gov/event/22127/contributions/194478/)
 
 John Li, of the University of Wisconsin–Madison. attended the OSG School in 2019 and quickly accelerated in his use of high throughput computing, whether running via a campus access point or on the Open Science Pool via an OSG Connect access point. John spoke about [his work](https://indico.fnal.gov/event/47040/contributions/208347/) using data mining in genomics by high-throughput computing and noted that high-throughput computing saves significant computation time and projects that would have taken 2–3 years were completed in 1–2 weeks.
-
 
 ### 2021
 
@@ -63,8 +62,7 @@ Nick Cooley, 2021 recipient of the David Swanson Award, attended the OSG School 
 	* "Searching for gravitational lenses in the Dark Energy Survey"
 	* [Presentation at HTC23](https://agenda.hep.wisc.edu/event/2014/contributions/28463/)
 
-![2023-dsa-awardees](/assets/images/DSA-photos/2023-awardees.jpg)
+<img src="/assets/images/DSA-photos/2023-awardees.jpg" width="75%" align="center">
 
-![2023-at-presenting](/assets/images/DSA-photos/2023-aashish-tripathee.jpg)
-
-![2023-jg-presenting](/assets/images/DSA-photos/2023-jimena-gonzalez.jpg)
+<img src="/assets/images/DSA-photos/2023-aashish-tripathee.jpg" width="25%">
+<img src="/assets/images/DSA-photos/2023-jimena-gonzalez.jpg" width="70%">
