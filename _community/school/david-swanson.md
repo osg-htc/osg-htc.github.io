@@ -31,11 +31,9 @@ Anirvan Shukla, Conor Natzke, Aashish Tripathee, and Jimena Gonzalez at HTC23.*
 	* "Data mining in genomics by high-throughput computing"
 	* [Presentation at OSG AHM 2021](https://indico.fnal.gov/event/47040/contributions/208347/)
 
-#### More about the recipients
+**Anirvan Shukla**, a 2020 award recipient and 2016 OSG School participant, was a graduate student in the Department of Physics, University of Hawaiʻi at Mānoa and at the September 2020 All-Hands Meeting spoke about [“Antimatter: Using High Throughput Computing to Study Very Rare Processes.”](https://indico.fnal.gov/event/22127/contributions/194478/)
 
-Anirvan Shukla, a 2020 award recipient and 2016 OSG School participant, was a graduate student in the Department of Physics, University of Hawaiʻi at Mānoa and at the September 2020 All-Hands Meeting spoke about [“Antimatter: Using High Throughput Computing to Study Very Rare Processes.”](https://indico.fnal.gov/event/22127/contributions/194478/)
-
-John Li, of the University of Wisconsin–Madison. attended the OSG School in 2019 and quickly accelerated in his use of high throughput computing, whether running via a campus access point or on the Open Science Pool via an OSG Connect access point. John spoke about [his work](https://indico.fnal.gov/event/47040/contributions/208347/) using data mining in genomics by high-throughput computing and noted that high-throughput computing saves significant computation time and projects that would have taken 2–3 years were completed in 1–2 weeks.
+**John Li**, of the University of Wisconsin–Madison. attended the OSG School in 2019 and quickly accelerated in his use of high throughput computing, whether running via a campus access point or on the Open Science Pool via an OSG Connect access point. John spoke about [his work](https://indico.fnal.gov/event/47040/contributions/208347/) using data mining in genomics by high-throughput computing and noted that high-throughput computing saves significant computation time and projects that would have taken 2–3 years were completed in 1–2 weeks.
 
 ### 2021
 
@@ -43,9 +41,7 @@ John Li, of the University of Wisconsin–Madison. attended the OSG School in 20
 	* "Computational Biology on OSG"
 	* [Presentation at OSG AHM 2021](https://indico.fnal.gov/event/47040/contributions/208348/)
 
-#### More about the recipient
-
-Nick Cooley, 2021 recipient of the David Swanson Award, attended the OSG School in 2018. Since that time, Nick and his group at the University of Pittsburgh have undertaken a number of projects benefiting from dHTC and OSG capabilities, with more than 2 million hours of compute usage on the Open Science Pool in the last year. Nick discussed [his work](https://indico.fnal.gov/event/47040/contributions/208348/) in computational biology on OSG. 
+**Nick Cooley**, 2021 recipient of the David Swanson Award, attended the OSG School in 2018. Since that time, Nick and his group at the University of Pittsburgh have undertaken a number of projects benefiting from dHTC and OSG capabilities, with more than 2 million hours of compute usage on the Open Science Pool in the last year. Nick discussed [his work](https://indico.fnal.gov/event/47040/contributions/208348/) in computational biology on OSG. 
 
 ### 2022
 
@@ -62,7 +58,9 @@ Nick Cooley, 2021 recipient of the David Swanson Award, attended the OSG School 
 	* "Searching for gravitational lenses in the Dark Energy Survey"
 	* [Presentation at HTC23](https://agenda.hep.wisc.edu/event/2014/contributions/28463/)
 
+<!--
 <img src="/assets/images/DSA-photos/2023-awardees.jpg" width="75%" align="center">
 
 <img src="/assets/images/DSA-photos/2023-aashish-tripathee.jpg" width="25%">
 <img src="/assets/images/DSA-photos/2023-jimena-gonzalez.jpg" width="70%">
+-->
