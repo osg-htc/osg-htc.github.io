@@ -58,6 +58,14 @@ Anirvan Shukla, Conor Natzke, Aashish Tripathee, and Jimena Gonzalez at HTC23.*
 	* "Searching for gravitational lenses in the Dark Energy Survey"
 	* [Presentation at HTC23](https://agenda.hep.wisc.edu/event/2014/contributions/28463/)
 
+### 2024
+
+* **Cort Posnansky**, Penn State University (Physics, OSGVSP23)
+	* "Leveraging [HTC] to search for continuous gravitational waves"
+	* [Presentation at HTC24](https://agenda.hep.wisc.edu/event/2175/contributions/31164/)
+
+The 2024 recipient of the OSG David Swanson Award is **Cort Posnansky**, who attended the OSG School last year, in 2023. As a graduate student in Physics at Penn State University, and a member of the LIGO-Virgo-KAGRA collaboration, he has been using the knowledge and skills gained at the OSG School to improve several HTCondor workflows used to detect gravitational waves. In addition, Cort has been assisting scientists outside his field in taking advantage of Penn State computing resources with HTCondor, and hosting workshops to teach skills learned at the OSG School. 
+
 <!--
 <img src="/assets/images/DSA-photos/2023-awardees.jpg" width="75%" align="center">
 
