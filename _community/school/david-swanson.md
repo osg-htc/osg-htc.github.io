@@ -61,6 +61,7 @@ Anirvan Shukla, Conor Natzke, Aashish Tripathee, and Jimena Gonzalez at HTC23.*
 ### 2024
 
 * **Cort Posnansky**, Penn State University (Physics, OSGS23)
+	* "Finding Compact Binary Mergers with GstLAL"
 	* [Presentation at HTC 24](https://agenda.hep.wisc.edu/event/2175/contributions/31164/)
 
 The 2024 recipient of the OSG David Swanson Award is **Cort Posnansky**, who attended the OSG School last year, in 2023. As a graduate student in Physics at Penn State University, and a member of the LIGO-Virgo-KAGRA collaboration, he has been using the knowledge and skills gained at the OSG School to improve several HTCondor workflows used to detect gravitational waves. In addition, Cort has been assisting scientists outside his field in taking advantage of Penn State computing resources with HTCondor, and hosting workshops to teach skills learned at the OSG School. 
