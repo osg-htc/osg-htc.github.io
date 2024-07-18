@@ -2,10 +2,10 @@
 layout: blank
 ---
 
-{% include /get/hero_data.liquid %}
+{% include /get/hero_story.liquid %}
 
 #hero-image {
-  background: url({{ hero_data.banner_src | relative_url }}) no-repeat center;
+  background: url({{ hero_story.banner_src | relative_url }}) no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

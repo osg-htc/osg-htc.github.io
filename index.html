@@ -3,27 +3,42 @@ layout: default
 css_extension:
   - href: "/assets/css/homepage.css"
 ---
-{% include /get/hero_data.liquid %}
+
+{% include /get/hero_story.liquid %}
 <div id="hero-image" class="vh-75 vh-md-50">
-  <div class="container-xxl">
-    <div class="row justify-content-end">
-      {% if hero_data.additional_image %}
-        <div class="col-12 col-sm-10 col-md-6 col-xxl-7 col- d-flex order-md-2">
-          <img class="img-fluid pt-3 pt-lg-0" src="{{ hero_data.additional_image.src | relative_url }}" alt="{{ hero_data.additional_image.alt }}" />
+    <div class="container-xxl">
+        <div class="row {% if hero_story.additional_image %}justify-content-center{% endif %}">
+            {% if hero_story.additional_image %}
+                <div class="col-12 col-sm-10 col-md-6 col-xxl-7 col- d-flex order-md-2">
+                    <img class="img-fluid pt-3 pt-lg-0" src="{{ hero_story.additional_image.src | relative_url }}" alt="{{ hero_story.additional_image.alt }}" />
+                </div>
+            {% endif %}
+            <div class="col-12 col-md-6 col-xxl-5 order-lg-1">
+                <div class="p-3 my-3 d-flex flex-column shadow" id="hero-content-container">
+                    <h3>{{ hero_story.title }}</h3>
+                    <hr>
+                    <div style="min-height: 150px">
+                        {{ hero_story.excerpt | markdownify }}
+                    </div>
+                    {% unless hero_story.buttons %}
+                        <a class="mt-auto me-auto btn btn-primary" href="{{ hero_story.url | relative_url }}">Read About Spotlight User</a>
+                    {% else %}
+                        {% if hero_story.buttons.length == 1 %}
+                            <a class="mt-auto me-auto btn btn-primary" href="{{ buttons[0].href | relative_url }}">{{ buttons[0].text }}</a>
+                        {% else %}
+                            <div class="row mt-auto">
+                                {% for button in hero_story.buttons %}
+                                    <div class="col-auto">
+                                        <a class="btn btn-primary" href="{{ button.href | default: hero_story.url | relative_url }}">{{ button.text }}</a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endunless %}
+                </div>
+            </div>
         </div>
-      {% endif %}
-      <div class="col-12 col-md-5 col-xxl-5">
-        <div class="p-3 mb-3 mt-4 d-flex flex-column" id="hero-content-container">
-          <h3 class="text-white">{{ hero_data.title }}</h3>
-          <hr>
-          <p class="text-white">
-            {{ hero_data.excerpt }}
-          </p>
-          <a class="mt-auto me-auto btn btn-primary" href="{{ hero_data.url | relative_url }}">Read about our Spotlight User</a>
-        </div>
-      </div>
     </div>
-  </div>
 </div>
 <div class="container-xxl mt-4">
   <div class="row mb-4">
