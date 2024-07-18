@@ -27,10 +27,10 @@
     If there is a recent news story show it first for this week only
 {% endcomment %}
 
-{% include get/news.liquid %}
+{% include get/shared_articles.liquid %}
 
 {% assign one_week_ago = "now" | date: "%s" | minus: 1204800 %}
-{% for article in news %}
+{% for article in shared_articles %}
   {% assign article_date = article.date | date: "%s" | plus: 0 %}
   {% if article_date > one_week_ago and article.banner_src != nil %}
     {% assign hero_story = article %}
