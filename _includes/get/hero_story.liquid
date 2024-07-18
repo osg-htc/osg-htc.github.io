@@ -29,7 +29,7 @@
 
 {% include get/news.liquid %}
 
-{% assign one_week_ago = "now" | date: "%s" | minus: 604800 %}
+{% assign one_week_ago = "now" | date: "%s" | minus: 1204800 %}
 {% for article in news %}
   {% assign article_date = article.date | date: "%s" | plus: 0 %}
   {% if article_date > one_week_ago and article.banner_src != nil %}
