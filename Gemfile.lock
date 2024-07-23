@@ -13,6 +13,7 @@ GEM
     forwardable-extended (2.6.0)
     google-protobuf (3.23.4-aarch64-linux)
     google-protobuf (3.23.4-arm64-darwin)
+    google-protobuf (3.23.4-x86_64-linux)
     http_parser.rb (0.8.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -75,6 +76,7 @@ GEM
 PLATFORMS
   aarch64-linux
   arm64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   jekyll
@@ -84,4 +86,4 @@ DEPENDENCIES
   kramdown-parser-gfm
 
 BUNDLED WITH
-   2.2.33
+   2.2.30
