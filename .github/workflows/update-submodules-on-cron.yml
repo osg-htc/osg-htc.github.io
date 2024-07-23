@@ -1,0 +1,36 @@
+name: Update Submodules on Cron
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+
+  Update-Submodules:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+          fetch-depth: 0
+
+      - name: Pull down submodules
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+          git submodule update --init --recursive --remote
+          
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Update Article Submodule"
+            git push
+          else
+            echo "no changes";
+          fi
+
+  trigger-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Deployment
+        uses: osg-htc/osg-htc.github.io/.github/workflows/deploy-production-same-repo.yml@main
