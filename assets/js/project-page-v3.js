@@ -574,3 +574,13 @@ const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 })
 
 const project_page = new ProjectPage()
+
+const populate_aggregate_statistics = async () => {
+    const data = await project_page.dataManager.getData()
+    document.getElementById("ospool-projects").textContent = Object.keys(data).length
+    document.getElementById("ospool-jobs").textContent = Object.values(data).reduce((p, v) => p + v.jobs, 0).toLocaleString()
+    document.getElementById("ospool-institutions").textContent = new Set(Object.values(data).map(v => v.InstitutionID)).size
+    document.getElementById("ospool-fields-of-science").textContent = new Set(Object.values(data).map(v => v.FieldOfScience)).size
+    document.getElementById("ospool-aggregate-text").hidden = false
+}
+populate_aggregate_statistics()
