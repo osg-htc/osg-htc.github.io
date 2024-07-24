@@ -10,8 +10,8 @@ excerpt: |
 start_date: 2024-09-24
 end_date: 2024-09-27
 location: "NIKHEF-Amsterdam. Amsterdam, Netherlands"
-image: "/images/events/HTCondorEurope.jpeg"
-header_image: "/images/events/HTCondorEurope.jpeg"
+image: "/assets/images/events/HTCondor_red_blk_notag.png"
+header_image: "/assets/images/events/HTCondor_red_blk_notag.png"
 ---
 
 {% capture main %}

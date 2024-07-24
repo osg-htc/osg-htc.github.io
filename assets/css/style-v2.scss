@@ -80,7 +80,7 @@ th, td {
 // Card image caps
 .card-img-top {
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .event-card-img-top{
