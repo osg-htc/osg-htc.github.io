@@ -28,6 +28,10 @@ jobs:
         with:
           submodules: 'recursive'
 
+      - name: Update Submodules
+        run: |
+          git submodule update --init --recursive --remote    
+
       - name: Initialize GH User
         run: |
           git config user.name "GitHub Actions"
