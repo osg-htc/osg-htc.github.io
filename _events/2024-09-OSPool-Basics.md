@@ -30,7 +30,6 @@ If you’re new to the OSPool (or been away for awhile) and want to get started,
 
 Training is a mix of presentation and hands-on. No prior experience is needed. 
 
-Register via setmore: https://osgfacilitation.setmore.com/#classes
 Registration opens one month in advance of the training.
 
 **[Register here](https://osgfacilitation.setmore.com/#classes)**
@@ -56,6 +55,10 @@ Tuesday, September 17, 2:30-4pm ET
 # Where
 
 Virtual
+
+# Registration
+
+[Register here](https://osgfacilitation.setmore.com/#classes)
 
 # Questions?
 
