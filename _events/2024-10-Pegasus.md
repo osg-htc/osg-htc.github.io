@@ -2,9 +2,10 @@
 short_title: "Fall OSG Training - Pegasus Workflows"
 title: "Join Us For Fall Training - Workflows with Pegasus"
 published: true
+layout: events
 
 excerpt: |
-	Learn about the Pegasus workflow manager and try hands-on examples!
+  Learn about the Pegasus workflow manager and try hands-on examples!
     
 start_date: 2024-10-15
 end_date: 2024-10-15

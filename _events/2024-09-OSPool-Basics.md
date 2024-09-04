@@ -2,9 +2,10 @@
 short_title: "Fall OSG Training - OSPool Basics"
 title: "Join Us For Fall Training - OSPool Basics"
 published: true
+layout: events
 
 excerpt: |
-	Learn about the OSPool and practice using it!
+  Learn about the OSPool and practice using it!
     
 start_date: 2024-09-17
 end_date: 2024-09-17
