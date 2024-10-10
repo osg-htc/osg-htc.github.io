@@ -44,7 +44,7 @@ Any US-based researcher interested in learning more about the OSPool.
 
 # When
 
-Tuesday, September 17, 2:30-4pm ET
+Tuesday, October 15, 2:30-4pm ET
 
 # Where
 
