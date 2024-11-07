@@ -23,7 +23,9 @@ autonomous “origins”, for efficient access to those files from anywhere
 in the world via a global namespace and network of caches. 
 
 The OSDF is powered by the [Pelican Platform](https://pelicanplatform.org/),
- a tool that makes it easier to deliver data. 
+ a tool that makes it easier to deliver data. One of its core components is 
+the data origin, a service that makes it possible to access data sets 
+through a client. 
 
 In this training, we will provide an introduction to Pelican and the OSDF, and 
 then dive into a hands-on example of how 
