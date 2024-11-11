@@ -14,7 +14,7 @@ the pool’s relevant research community.
 
 **[A list of OSG pools and compute usage within each is available in the OSG’s Accounting System (GRACC)](https://gracc.opensciencegrid.org/d/000000043/pilot-jobs-summary?orgId=1&from=now-1y&to=now&var-VOName=All&var-Facility=All&var-ExitCode=All&var-Probe=All&var-interval=7d).**
 
-*The OSG Team operates the [Open Science Pool (OSPool)](/services/open_science_pool.html)* for use by research projects 
+*The OSG Team operates the [Open Science Pool (OSPool)](/services/ospool.html)* for use by research projects 
 associated with a US-based academic, government, or non-profit organization, 
 and with funding from the National Science Foundation through the NSF PATh 
 project (NSF #2030508). Applicable researchers can obtain access to OSPool 

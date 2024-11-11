@@ -80,7 +80,7 @@ Monday, July 10 through Friday, July 14, 2023.
 
 ### Who
 
-Organizations, researchers, campuses, facilitators and administrators interested in the [HTCondor Software Suite](https://htcondor.org) and high throughput computing or the [OSG Consortium](https://osg-htc.org/) resources or services (including the [OSPool](https://osg-htc.org/services/open_science_pool.html), the [Open Science Data Federation](https://osg-htc.org/services/osdf.html) or the [PATh Facility](https://path-cc.io/facility/).)
+Organizations, researchers, campuses, facilitators and administrators interested in the [HTCondor Software Suite](https://htcondor.org) and high throughput computing or the [OSG Consortium](https://osg-htc.org/) resources or services (including the [OSPool](https://osg-htc.org/services/ospool.html), the [Open Science Data Federation](https://osg-htc.org/services/osdf.html) or the [PATh Facility](https://path-cc.io/facility/).)
 
 ### Where
 
