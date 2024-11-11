@@ -33,7 +33,7 @@ in supporting the Open Science Pool, specific projects, or any pool/research
 community, contact us at <support@osg-htc.org>.
 
 ## Research Projects with Accounted Usage Across OSG Pools
-[OSG Projects active in the last year](/projects.html)
+[OSG Projects active in the last year](/services/ospool/projects.html)
 [View OSG Project and usage here](https://gracc.opensciencegrid.org/d/000000037/payload-jobs-summary).
 
 ## Institutions Contributing Accounted Resources Across OSG Pools
