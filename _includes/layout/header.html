@@ -27,11 +27,16 @@
                             Services
                         </a>
                         <div class="dropdown-menu" aria-labelledby="services-dropdown">
-                            {% for service in site.services %}
-                                {% if service.title != "Registration and Login for the OSPool" %}
-                                    <a class="dropdown-item" href="{{ service.url | relative_url }}">{{ service.title }}</a>
-                                {% endif %}
-                            {% endfor %}
+                            <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" id="services-ospool-dropdown" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OSPool</a>
+                                <ul class="dropdown-menu dropdown-submenu" aria-labelledby="services-ospool-dropdown">
+                                    <li><a class="dropdown-item" href="{{ '/services/open_science_pool' | relative_url }}">Overview</a></li>
+                                    <li><a class="dropdown-item" href="{{ '/services/open_science_pool/institutions' | relative_url }}">Institutions</a></li>
+                                    <li><a class="dropdown-item" href="{{ '/projects' | relative_url }}">Projects</a></li>
+                                </ul>
+                            </div>
+                            <a class="dropdown-item" href="{{ '/services/osdf.html' | relative_url }}">OSDF</a>
+                            <a class="dropdown-item" href="{{ '/services/htcondor.html' | relative_url }}">OSG-Operated Access Points</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown active">
