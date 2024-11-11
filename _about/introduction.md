@@ -13,7 +13,7 @@ data capacity for distributed high-throughput computing (dHTC)**. Each pool is
 organized and operated to serve a particular research community (e.g. a campus, 
 multi-institutional collaboration, etc.), using technologies and 
 services provided by the core OSG Team. One of these pools, known as the 
-**[Open Science Pool](/services/open_science_pool.html)** is operated for all of US-associated 
+**[Open Science Pool](/services/ospool.html)** is operated for all of US-associated 
 open science. The Consortium, thus, represents the totality of all researchers, 
 resources, individuals and institutions that benefit from or contribute to any 
 of the OSG Fabric of Services (further below).
@@ -61,7 +61,7 @@ contributions and usage across reporting OSG pools, including specific metrics
 for participating institutions and research projects, some of which represent 
 hundreds or thousands of individual users.
 
-**[The Open Science Pool (OSPool)](/services/open_science_pool.html)** provides dHTC capacity for research projects 
+**[The Open Science Pool (OSPool)](/services/ospool.html)** provides dHTC capacity for research projects 
 associated with a US-based academic, government, or non-profit organization,
 and with funding from the National Science Foundation through the PATh project
 (NSF #2030508). Applicable researchers can obtain access to OSPool resources 

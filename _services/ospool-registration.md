@@ -1,15 +1,16 @@
 ---
-    title: Registration and Login for the OSPool
-    layout: table-of-contents
-    table_of_contents:
-        - name: Get An Account
-          href: '#get-an-ospool-account'
-        - name: Meet A Facilitator
-          href: '#meet-with-a-research-computing-facilitator'
-        - name: Login
-          href: '#login'
-        - name: Get Help
-          href: '#get-help'
+title: Registration and Login for the OSPool
+layout: table-of-contents
+table_of_contents:
+  - name: Get An Account
+    href: '#get-an-ospool-account'
+  - name: Meet A Facilitator
+    href: '#meet-with-a-research-computing-facilitator'
+  - name: Login
+    href: '#login'
+  - name: Get Help
+    href: '#get-help'
+permalink: '/ospool-registration.html'
 ---
 
 # OSPool User Registration
