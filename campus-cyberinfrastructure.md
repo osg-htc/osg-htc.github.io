@@ -165,7 +165,7 @@ you periodically to see how things are going and what we can do to better suppor
 Our staff remains available to assist you with meeting your goals as your research computing needs evolve. If you or 
 your researchers have any questions or issues, please contact us at [support@osg-htc.org](mailto:support@osg-htc.org).
 
-<iframe width="100%" height="500px" frameBorder="0" style="margin-bottom:1em; margin-top:1em" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
+<iframe width="100%" height="500px" frameBorder="0" style="margin-bottom:1em; margin-top:1em" src="https://map.osg-htc.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
 
 
 
