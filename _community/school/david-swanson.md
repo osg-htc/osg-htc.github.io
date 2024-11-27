@@ -49,6 +49,11 @@ Anirvan Shukla, Conor Natzke, Aashish Tripathee, and Jimena Gonzalez at HTC23.*
 	* "Investigating the strong nuclear force with the OSG"
 	* [Presentation at OSG AHM 2022](https://indico.fnal.gov/event/53029/contributions/236143/)
 
+The OSG’s annual David Swanson Award was established to honor my husband David's contribution to campus research across the country, through the advancement of DHTC and the OSG Consortium. The award is bestowed annually upon one or more former students of the OSG User School who have subsequently achieved significant DHTC-enabled research outcomes, and covers the recipient's costs of attending the OSG All-Hands Meeting to present their work. Of course, given the pandemic, we will welcome awardees from 2020 through 2022 at the next in-person meeting, but we are excited to hear about their work virtually, in the meantime.
+
+This year’s recipient of the David Swanson Award is Connor Natzke, who attended the OSG User School in 2019, where I hear he was an enthusiastic participant and immediately began applying what he learned to his own work. Since that time, Connor has undertaken several projects benefiting from dHTC and OSG capabilities, with more than 135 thousand hours of computing on the Open Science Pool over the last two years. Connor is here today to talk about how he has used the Open Science Pool to study the strong nuclear force during his time as a graduate student at the Colorado School of Mines. Take it away, Connor.
+
+
 ### 2023
 
 * **Aashish Tripathee**, University of Michigan (Physics, OSGVSP20)
@@ -57,6 +62,11 @@ Anirvan Shukla, Conor Natzke, Aashish Tripathee, and Jimena Gonzalez at HTC23.*
 * **Jimena Gonzalez**, UW–Madison (Physics, OSGVS21)
 	* "Searching for gravitational lenses in the Dark Energy Survey"
 	* [Presentation at HTC 23](https://agenda.hep.wisc.edu/event/2014/contributions/28463/)
+
+One of the 2023 David Swanson Award recipients was **Aashish Tripathee**, who attended the OSG School virtually in 2020. As a member of the LIGO Collaboration, he came to the School with a basic knowledge of using high-throughput computing tools on LIGO systems. The School helped him access even more computing capacity and in the past 3 years, he has used tens of millions of computing hours over the LIGO and Open Science pools. Aashish, a post-doc at the University of Michigan, shared at HTC23 about the search for _continuous_ gravitational waves using distributed high throughput computing.
+
+The second recipient of the OSG David Swanson Award in 2023 was **Jimena González**, who despite being a physics graduate student here at the University of Wisconsin–Madison, still had to participate virtually in the OSG School in 2021. Since attending the School, Jimena has used computing capacity in the Open Science Pool, plus applied her learning to leverage a similar system down at Fermilab, for about 300,000 total hours of computing. In her HTC23 talk, she shared how HTC has made possible her research into gravitational lenses as a tool to explore dark energy and fundamental properties of the cosmos.
+
 
 ### 2024
 
