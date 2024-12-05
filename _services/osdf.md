@@ -90,62 +90,62 @@ The caches in the distribution network are primarily managed by PATh staff but c
 
 <div class="container">
     <div class="row text-center align-items-center mt-4">
-        <div class="col-sm col-3">
+        <div class="col">
             <a href="https://chtc.cs.wisc.edu/" target="_blank">
                 <img src="/assets/images/osdf/chtc.png" class="img-fluid" alt="CHTC">
             </a>
         </div>
-        <div class="col-sm col-3">
+        <div class="col">
             <a href="https://www.es.net/" target="_blank">
                 <img src="/assets/images/osdf/esnet.jpeg" class="img-fluid" alt="ESnet">
             </a>
         </div>
-        <div class="col-sm col-3">
+        <div class="col">
             <a href="https://www.internet2.edu/" target="_blank">
                 <img src="/assets/images/osdf/internet2.png" class="img-fluid" alt="Internet2">
             </a>
         </div>
-        <div class="col-sm col-3">
+        <div class="col">
             <a href="https://www.unl.edu/" target="_blank">
                 <img src="/assets/images/osdf/nebraska-n.jpg" class="img-fluid" alt="University of Nebraska">
             </a>
         </div>
-        <div class="col-sm col-3">
+        <div class="col">
             <a href="https://nationalresearchplatform.org/" target="_blank">
                 <img src="/assets/images/osdf/NRP.png" class="img-fluid" alt="NRP">
             </a>
         </div>
-        <div class="col-sm col-3">
+        <div class="col">
             <a href="https://www.syracuse.edu/" target="_blank">
                 <img src="/assets/images/osdf/syracuse.png" class="img-fluid" alt="Syracuse University">
             </a>
         </div>
-        <div class="col-sm col-3">
+        <div class="col">
             <a href="https://path-cc.io/" target="_blank">
                 <img src="/assets/images/osdf/path.png" class="img-fluid" alt="Path-CC">
             </a>
         </div>
     </div>
     <div class="row text-center d-md-flex d-none">
-        <div class="col-sm col-3">
+        <div class="col">
             <p>CHTC</p>
         </div>
-        <div class="col-sm col-3">
+        <div class="col">
             <p>ESnet</p>
         </div>
-        <div class="col-sm col-3">
+        <div class="col">
             <p>Internet2</p>
         </div>
-        <div class="col-sm col-3">
+        <div class="col">
             <p>University of Nebraska</p>
         </div>
-        <div class="col-sm col-3">
+        <div class="col">
             <p>NRP</p>
         </div>
-        <div class="col-sm col-3">
+        <div class="col">
             <p>Syracuse University</p>
         </div>
-        <div class="col-sm col-3">
+        <div class="col">
             <p>PATh</p>
         </div>
     </div>
