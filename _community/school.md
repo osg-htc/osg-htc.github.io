@@ -17,7 +17,7 @@ layout: text-optimized-width
 The OSG Consortium runs the OSG School, an annual education event for researchers who want to learn to use DHTC methods and
 tools.  It is held each summer at the University of Wisconsin–Madison.
 
-
+{: .w-100 }
 ![](/assets/images/osg-school-2024-attendees.jpeg)
 
 *OSG School 2024 Group Photo*
