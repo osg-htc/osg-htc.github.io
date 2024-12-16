@@ -17,6 +17,31 @@ layout: text-optimized-width
 The OSG Consortium runs the OSG School, an annual education event for researchers who want to learn to use DHTC methods and
 tools.  It is held each summer at the University of Wisconsin–Madison.
 
+{: .w-100 }
+![](/assets/images/osg-school-2024-attendees.jpeg)
+
+*OSG School 2024 Group Photo*
+
+## Overview
+
+During this week-long training event, students learn to use high-throughput computing (HTC) systems — at their own campus or using the OSG — to run large-scale computing applications that are at the heart of today’s cutting-edge science. Through lectures, discussions, and lots of hands-on activities with experienced OSG staff, students will learn how HTC systems work, how to run and manage lots of jobs and huge datasets, to implement a scientific computing workflow, and where to turn for more information and help.
+
+The School is ideal for graduate students in any science or research domain where large-scale computing is a vital part of the research process, plus we will consider applications from advanced undergraduates, post-doctoral students, faculty, and staff. Students accepted to this program will receive financial support for basic travel and local costs associated with the School.
+
+## Next OSG School
+
+The next OSG User School will be held in the summer of 2025. 
+Applications will likely open in early 2025.
+
+## Materials
+
+The OSG User School want virtual in 2020 and 2021, which means that we were able to record lectures to complement lecture and exercise materials! 
+
+* [OSG Virtual School Pilot, August 2021](https://osg-htc.org/virtual-school-2021/materials/)
+* [OSG Virtual School Pilot, July 2020](https://osg-htc.org/virtual-school-pilot-2020/#materials/)
+
+### Past OSG Schools and Materials
+
 - [OSG School 2024](https://osg-htc.org/school-2024/) — 5–9 August 2024
 - [OSG School 2023](https://osg-htc.org/user-school-2023/) — 7–11 August 2023
 - [OSG User School 2022](https://osg-htc.org/user-school-2022/) — 25–29 July 2022
