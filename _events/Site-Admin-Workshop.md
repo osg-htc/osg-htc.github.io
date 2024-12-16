@@ -52,7 +52,7 @@ Registration and completion of this brief survey is required for participants wh
 
 ### Questions?
 
-Contact us at <events@opensciencegrid.org>. 
+Contact us at <events@osg-htc.org>. 
 
 {% endcapture %}
 

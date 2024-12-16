@@ -26,4 +26,4 @@ HTCondor is an open source distributed computing software and related technologi
 ## Contacts
 
 For questions or comments, please email
-[our events mailing list](mailto:events@opensciencegrid.org).
+[our events mailing list](mailto:events@osg-htc.org).

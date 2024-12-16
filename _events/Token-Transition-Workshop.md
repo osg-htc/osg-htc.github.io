@@ -53,7 +53,7 @@ No fees, attendance is free!
 
 # Questions?
 
-Contact us at <events@opensciencegrid.org>. 
+Contact us at <events@osg-htc.org>. 
 
 {% endcapture %}
 
@@ -63,7 +63,7 @@ Contact us at <events@opensciencegrid.org>.
 
 If you have any questions about the event, feel free to email us:
 
-<events@opensciencegrid.org>
+<events@osg-htc.org>
 {% endcapture %}
 
 {% include event/event-page.html %}

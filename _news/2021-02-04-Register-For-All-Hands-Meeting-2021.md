@@ -42,7 +42,7 @@ Note that Zoom connection details are emailed only to those who registered.
 ## Contacts
 
 For questions or comments, please email
-[our events mailing list](mailto:events@opensciencegrid.org).
+[our events mailing list](mailto:events@osg-htc.org).
 
 See you there!
 
