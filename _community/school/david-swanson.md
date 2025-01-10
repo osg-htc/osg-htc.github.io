@@ -49,8 +49,7 @@ Anirvan Shukla, Conor Natzke, Aashish Tripathee, and Jimena Gonzalez at HTC23.*
 	* "Investigating the strong nuclear force with the OSG"
 	* [Presentation at OSG AHM 2022](https://indico.fnal.gov/event/53029/contributions/236143/)
 
-This year’s recipient of the David Swanson Award is Connor Natzke, who attended the OSG User School in 2019, where I hear he was an enthusiastic participant and immediately began applying what he learned to his own work. Since that time, Connor has undertaken several projects benefiting from dHTC and OSG capabilities, with more than 135 thousand hours of computing on the Open Science Pool over the last two years. Connor is here today to talk about how he has used the Open Science Pool to study the strong nuclear force during his time as a graduate student at the Colorado School of Mines. Take it away, Connor.
-
+The 2022 recipient of the David Swanson Award was Connor Natzke, who attended the OSG User School in 2019, who immediately began applying what he learned to his own work. Since that time, Connor has undertaken several projects benefiting from dHTC and OSG capabilities, with more than 135 thousand hours of computing on the Open Science Pool over the last two years. Connor used the Open Science Pool to study the strong nuclear force during his time as a graduate student at the Colorado School of Mines. 
 
 ### 2023
 
