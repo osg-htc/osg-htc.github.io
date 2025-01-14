@@ -30,12 +30,13 @@ The School is ideal for graduate students in any science or research domain wher
 
 ## Next OSG School
 
-The next OSG User School will be held in the summer of 2025. 
-Applications will likely open in early 2025.
+The OSG School 2025 is scheduled for June 23&ndash;27.
+Please visit [the OSG School 2025 website](https://osg-htc.org/school-2025/) for all the details!
 
 ## Materials
 
-The OSG User School want virtual in 2020 and 2021, which means that we were able to record lectures to complement lecture and exercise materials! 
+The OSG User School (as it was called then) was held virtually in 2020 and 2021,
+which means that we were able to record lectures to complement lecture and exercise materials!
 
 * [OSG Virtual School Pilot, August 2021](https://osg-htc.org/virtual-school-2021/materials/)
 * [OSG Virtual School Pilot, July 2020](https://osg-htc.org/virtual-school-pilot-2020/#materials/)
@@ -61,4 +62,7 @@ The OSG User School want virtual in 2020 and 2021, which means that we were able
 
 ## David Swanson Award
 
-To honor our late colleague David Swanson an award was created to acknowledge OSG School students that have achieved significant dHTC-enabled research outcomes. You can read more on the [David Swanson Award](school/david-swanson) page.
+To honor our late colleague David Swanson,
+the OSG Consortium created an award to acknowledge OSG School students
+who have achieved significant dHTC-enabled research outcomes.
+You can read more on the [David Swanson Award](school/david-swanson) page.
