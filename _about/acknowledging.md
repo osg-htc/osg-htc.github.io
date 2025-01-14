@@ -23,6 +23,6 @@ Papers, presentations, and other publications that feature research that benefit
 and include in the text the following acknowledgement:
 
 {: .bg-light .pt-2 .pb-1 }
-> This research was done using services provided by the OSG Consortium [1,2,3,4], which is supported by the National Science Foundation awards #2030508 and #1836650.
+> This research was done using services provided by the OSG Consortium [1,2,3,4], which is supported by the National Science Foundation awards #2030508 and #2323298.
 
-For your convenience, [a BibTex file containing the above three references](/assets/osg.bib) has been provided.
+For your convenience, [a BibTex file containing the above four references](/assets/osg.bib) has been provided.
