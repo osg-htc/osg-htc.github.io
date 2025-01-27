@@ -1,22 +1,17 @@
 ---
-layout: container
-title: Contact Information
+title: Contact Us
+layout: text-optimized-width
 ---
 
-<h1>OSG Contact Information</h1>
+<figure class="w-100 figure">
+    <img src="https://pages.cs.wisc.edu/~ckoch5/contact-photos/talk-to-us-chicago.jpeg">
+</figure>
 
-We'd love to hear from you! Get in touch: 
-<table><tr>
+We want to hear from you! Our work depends on the collaborations and feedback 
+of our community. Please reach out at any time with questions, comments, 
+complaints, ideas, or whatever you want to share. 
 
-<td>
-<a class="btn btn-primary me-md-2 text-dark" href="mailto:support@osg-htc.org" role="button">Email Us</a>
-</td>
-
-<td>
-<a class="btn btn-primary me-md-2 text-dark" href="" role="button">Join our Slack instance</a>
-</td>
-
-</tr></table>
+<a class="btn btn-primary me-md-2 text-dark" href="mailto:support@osg-htc.org" role="button">Contact us via email</a>
 
 Or, just fill out the 
 form below and someone will reply to you in 1-2 business days. 
@@ -27,7 +22,8 @@ form below and someone will reply to you in 1-2 business days.
               <INPUT type="text" id="firstname"><BR>
     <LABEL for="email">email: </LABEL>
               <INPUT type="text" id="email"><BR>
-    <INPUT type="checkboxes" name="meeting" value="Yes">Would you like to schedule a meeting?<BR>
+	<LABEL for="meeting">Would you like to schedule a meeting?</LABEL>
+    <INPUT type="checkboxes" name="meeting" value=" "<BR>
 	<LABEL for="email">Comment: </LABEL>
               <INPUT type="text input" id="email"><BR>
     <INPUT type="submit" value="Send"> <INPUT type="reset">
@@ -35,49 +31,39 @@ form below and someone will reply to you in 1-2 business days.
  </FORM>
 
 
-<hr>
+***
 
-<div class="col-md-8">
-<h2>For Campuses</h2>
+## Other Contact Resources
 
-Contact the Campus Coordinator at support@osg-htc.org. 
-
-<a class="btn btn-primary me-md-2 text-dark" href="https://osg-htc.org/campus-cyberinfrastructure.html" role="button">Learn about CC*</a>
-
-</div>
-
-
-<div class="col-md-8">
-<h2>For Researchers</h2>
+### Use OSG Services
 
 Contact the <a href="">Research Facilitation team</a> at support@osg-htc.org or 
 see our <a href="https://portal.osg-htc.org/documentation/support_and_training/support/getting-help-from-RCFs/">help page</a> for other ways to get in touch. 
 
-<a class="btn btn-primary me-md-2 text-dark" href="https://portal.osg-htc.org/application" role="button">Request an Account</a>
+<a class="btn btn-primary me-md-2 text-dark" href="https://portal.osg-htc.org/application" role="button">Request an OSPool Account</a>
 
 <a class="btn btn-primary me-md-2 text-dark" href="https://osgfacilitation.setmore.com/#classes" role="button">Register for trainings or events</a>
 
-</div>
+### Contribute to OSG Services
 
-<div class="col-md-8">
-<h2>For Infrastructure staff</h2>
+Contact the Campus Coordinator at support@osg-htc.org. 
+
+<a class="btn btn-primary me-md-2 text-dark" href="https://osg-htc.org/campus-cyberinfrastructure.html" role="button">Learn about CC* Support</a>
+
+### Learn About Our Technologies
 
 For general questions, contact support@osg-htc.org. 
 
-For specific questions about our technologies: 
-<ul>
-<li>About OSG Software: TBD</li>
-<li>About HTCSS: TBD</li>
-<li>About Pelican: https://pelicanplatform.org/contact</li>
-</ul>
+* About HTCSS: https://htcondor.org/
+* About Pelican: https://pelicanplatform.org/
+* About OSG Software: https://osg-htc.org/docs/
 
-</div>
+***
 
-<h3>For OSG policies, executive information</h3>
+### For OSG policies, executive information
 Email: [Frank Wuerthwein](mailto:fkw@ucsd.edu) (OSG Executive Director)
 
-
-<h3>For help managing an OSG Mailing list membership</h3>
+### For help managing an OSG Mailing list membership</h3>
 
 Please refer to our [managing mailing list membership document](./community/mailing-lists).
 
