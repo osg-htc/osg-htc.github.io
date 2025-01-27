@@ -56,6 +56,10 @@ see our <a href="https://portal.osg-htc.org/documentation/support_and_training/s
         </div>
       </div>
     </div>
+  </div>  
+</div>  
+<div class="container-xxl">
+  <div class="row border-4 border-primary ">
     <div class="col-12 col-md-6 col-lg-4 mb-4">
       <div class="card h-100">
         <div class="card-body">
@@ -68,6 +72,10 @@ see our <a href="https://portal.osg-htc.org/documentation/support_and_training/s
         </div>
       </div>
     </div>
+  </div>  
+</div>
+<div class="container-xxl">
+  <div class="row border-4 border-primary ">
     <div class="col-12 col-md-6 col-lg-4 mb-4">
       <div class="card h-100">
         <div class="card-body">
