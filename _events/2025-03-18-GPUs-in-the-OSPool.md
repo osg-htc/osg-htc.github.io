@@ -4,7 +4,7 @@ title: "OSPool User Training - GPUs in the OSPool"
 published: true
 
 excerpt: |
-    Sign up for our user training on building containers on Tuesday, February 18!
+    Sign up for our user training on GPUs in the OSPool on Tuesday, February 18!
     
 start_date: 2025-03-18
 end_date: 2025-03-18

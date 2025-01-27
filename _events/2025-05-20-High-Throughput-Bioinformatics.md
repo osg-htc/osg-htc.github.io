@@ -4,7 +4,7 @@ title: "OSPool User Training - Adapting Workflows for High Throughput Bioinforma
 published: true
 
 excerpt: |
-    Sign up for our user training on building containers on Tuesday, May 20!
+    Sign up for our user training on HTC Bioinformatics on Tuesday, May 20!
     
 start_date: 2025-05-20
 end_date: 2025-05-20
@@ -29,7 +29,7 @@ Prerequisites:
 
 **[Register here](https://osgfacilitation.setmore.com/#classes)**
 
-All User Training sessions are offered from 2:30-4:00pm EST on the third Tuesday of the month. New User Training is offered monthly, generally on the first Tuesday of the month, and training on various additional topics happens on the third Tuesday of the month. It's best to already have an active account on an OSG Connect login node (or other access point that submits to the Open Science Pool) to follow along with hands-on examples, but anyone can listen in by registering.
+All User Training sessions are offered from 2:30-4:00pm EST on the third Tuesday of the month. It's best to already have an active account on an OSG Connect login node (or other access point that submits to the Open Science Pool) to follow along with hands-on examples, but anyone can listen in by registering.
 
 [Other upcoming trainings](https://portal.osg-htc.org/documentation/support_and_training/training/osgusertraining/)
 
@@ -43,7 +43,7 @@ OSPool users who want to learn about creating and scaling up their workflows, es
 
 # When
 
-Tuesday, April 20 from 2:30-4:00pm EST
+Tuesday, May 20 from 2:30-4:00pm EST
 
 # Where
 

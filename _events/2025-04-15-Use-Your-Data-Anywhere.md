@@ -4,7 +4,7 @@ title: "OSPool User Training - Use Your Data Anywhere"
 published: true
 
 excerpt: |
-    Sign up for our user training on building containers on Tuesday, April 15!
+    Sign up for our user training on using your data on distributed systems on Tuesday, April 15!
     
 start_date: 2025-04-15
 end_date: 2025-04-15
