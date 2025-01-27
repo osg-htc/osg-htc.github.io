@@ -40,7 +40,7 @@ form below and someone will reply to you in 1-2 business days.
 
 <div class="container-xxl">
   <div class="row border-4 border-primary ">
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="col-12">
       <div class="card h-100">
         
         <div class="card-body">
@@ -60,7 +60,7 @@ see our <a href="https://portal.osg-htc.org/documentation/support_and_training/s
 </div>  
 <div class="container-xxl">
   <div class="row border-4 border-primary ">
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="col-12">
       <div class="card h-100">
         <div class="card-body">
           <h3>Contribute to OSG Services</h3>
@@ -76,7 +76,7 @@ see our <a href="https://portal.osg-htc.org/documentation/support_and_training/s
 </div>
 <div class="container-xxl">
   <div class="row border-4 border-primary ">
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="col-12">
       <div class="card h-100">
         <div class="card-body">
           <h3>Learn About Our Technologies</h3>
@@ -101,7 +101,7 @@ see our <a href="https://portal.osg-htc.org/documentation/support_and_training/s
 
 Email: [Frank Wuerthwein](mailto:fkw@ucsd.edu) (OSG Executive Director)
 
-#### For help managing an OSG Mailing list membership</h3>
+#### For help managing an OSG Mailing list membership
 
 Please refer to our [managing mailing list membership document](./community/mailing-lists).
 
