@@ -3,16 +3,19 @@ title: Contact Us
 layout: text-optimized-width
 ---
 
-<figure class="w-100 figure">
-    <img size="100%" src="https://pages.cs.wisc.edu/~ckoch5/contact-photos/talk-to-us-chicago.jpeg">
-</figure>
+<img src="https://pages.cs.wisc.edu/~ckoch5/contact-photos/talk-to-us-chicago.jpeg" class="w-100" /> 
 
-We want to hear from you! Our work depends on the collaborations and feedback 
+# We Want to Hear From You
+
+Our work depends on the collaborations and feedback 
 of our community. Please reach out at any time with questions, comments, 
-complaints, ideas, or whatever you want to share. 
+complaints, ideas, or whatever you want to share! 
 
+<center>
 <a class="btn btn-primary me-md-2 text-dark" href="mailto:support@osg-htc.org" role="button">Contact us via email</a>
+</center>
 
+<!--
 Or, just fill out the 
 form below and someone will reply to you in 1-2 business days. 
 
@@ -29,41 +32,68 @@ form below and someone will reply to you in 1-2 business days.
     <INPUT type="submit" value="Send"> <INPUT type="reset">
     </P>
  </FORM>
-
+-->
 
 ***
 
-## Other Contact Resources
+## Other Resources
 
-### Use OSG Services
-
-Contact the <a href="">Research Facilitation team</a> at support@osg-htc.org or 
+<div class="container-xxl">
+  <div class="row border-4 border-primary ">
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card h-100">
+        
+        <div class="card-body">
+          <h3>Use OSG Services</h3>
+          <hr>
+          <p>Contact the <a href="">Research Facilitation team</a> at support@osg-htc.org or 
 see our <a href="https://portal.osg-htc.org/documentation/support_and_training/support/getting-help-from-RCFs/">help page</a> for other ways to get in touch. 
 
 <a class="btn btn-primary me-md-2 text-dark" href="https://portal.osg-htc.org/application" role="button">Request an OSPool Account</a>
 
 <a class="btn btn-primary me-md-2 text-dark" href="https://osgfacilitation.setmore.com/#classes" role="button">Register for trainings or events</a>
-
-### Contribute to OSG Services
-
-Contact the Campus Coordinator at support@osg-htc.org. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3>Contribute to OSG Services</h3>
+          <hr>
+          <p>Contact the Campus Coordinator at support@osg-htc.org. 
 
 <a class="btn btn-primary me-md-2 text-dark" href="https://osg-htc.org/campus-cyberinfrastructure.html" role="button">Learn about CC* Support</a>
+</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3>Learn About Our Technologies</h3>
+          <hr>
+          <p>For general questions, contact support@osg-htc.org. 
+<ul>
+<li>About HTCSS: https://htcondor.org/</li>
+<li>About Pelican: https://pelicanplatform.org/</li>
+<li>About OSG Software: https://osg-htc.org/docs/</li>
+</ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-### Learn About Our Technologies
-
-For general questions, contact support@osg-htc.org. 
-
-* About HTCSS: https://htcondor.org/
-* About Pelican: https://pelicanplatform.org/
-* About OSG Software: https://osg-htc.org/docs/
 
 ***
 
-### For OSG policies, executive information
+#### For OSG policies, executive information
+
 Email: [Frank Wuerthwein](mailto:fkw@ucsd.edu) (OSG Executive Director)
 
-### For help managing an OSG Mailing list membership</h3>
+#### For help managing an OSG Mailing list membership</h3>
 
 Please refer to our [managing mailing list membership document](./community/mailing-lists).
 
