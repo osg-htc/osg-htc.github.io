@@ -4,7 +4,7 @@ layout: text-optimized-width
 ---
 
 <figure class="w-100 figure">
-    <img src="https://pages.cs.wisc.edu/~ckoch5/contact-photos/talk-to-us-chicago.jpeg">
+    <img size="100%" src="https://pages.cs.wisc.edu/~ckoch5/contact-photos/talk-to-us-chicago.jpeg">
 </figure>
 
 We want to hear from you! Our work depends on the collaborations and feedback 
@@ -22,10 +22,10 @@ form below and someone will reply to you in 1-2 business days.
               <INPUT type="text" id="firstname"><BR>
     <LABEL for="email">email: </LABEL>
               <INPUT type="text" id="email"><BR>
-	<LABEL for="meeting">Would you like to schedule a meeting?</LABEL>
-    <INPUT type="checkboxes" name="meeting" value=" "<BR>
+    <input type="checkbox" id="meeting" name="meeting" value="Meet">
+      <label for="meeting"> I would like to schedule a meeting.</label><br>
 	<LABEL for="email">Comment: </LABEL>
-              <INPUT type="text input" id="email"><BR>
+              <INPUT type="text" id="email"><BR>
     <INPUT type="submit" value="Send"> <INPUT type="reset">
     </P>
  </FORM>
