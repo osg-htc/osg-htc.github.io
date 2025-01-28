@@ -272,6 +272,13 @@ class Table {
                     className: "gridjs-th gridjs-td pointer gridjs-th-sort text-start"
                 }
             }, {
+                id: 'projectInstitutionName',
+                name: 'Institution',
+                sort: { compare: string_sort },
+                attributes: {
+                    className: "gridjs-th gridjs-td pointer gridjs-th-sort text-start"
+                }
+            }, {
                 id: 'majorFieldOfScience',
                 name: 'Field Of Science',
                 attributes: {
