@@ -1,6 +1,8 @@
 ---
 short_title: OSPool User Training - Adapting Workflows for High Throughput Bioinformatics
 title: "OSPool User Training - Adapting Workflows for High Throughput Bioinformatics"
+
+layout: events
 published: true
 
 excerpt: |

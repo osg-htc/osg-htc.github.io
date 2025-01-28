@@ -1,6 +1,8 @@
 ---
 short_title: OSPool User Training - GPUs in the OSPool
 title: "OSPool User Training - GPUs in the OSPool"
+
+layout: events
 published: true
 
 excerpt: |

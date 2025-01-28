@@ -1,6 +1,8 @@
 ---
 short_title: OSPool User Training - Building and Using Containers on the OSPool
 title: "OSPool User Training - Building and Using Containers on the OSPool"
+
+layout: events
 published: true
 
 excerpt: |

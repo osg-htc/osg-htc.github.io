@@ -1,6 +1,8 @@
 ---
 short_title: OSPool User Training - Use Your Data Anywhere
 title: "OSPool User Training - Use Your Data Anywhere"
+
+layout: events
 published: true
 
 excerpt: |
