@@ -2,6 +2,7 @@
 short_title: OSPool User Training - Building and Using Containers on the OSPool
 title: "OSPool User Training - Building and Using Containers on the OSPool"
 published: true
+layout: events
 
 excerpt: |
     Sign up for our user training on building containers on Tuesday, February 18!

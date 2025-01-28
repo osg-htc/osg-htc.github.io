@@ -1,30 +1,32 @@
 ---
-short_title: OSPool User Training - Adapting Workflows for High Throughput Bioinformatics
-title: "OSPool User Training - Adapting Workflows for High Throughput Bioinformatics"
+short_title: OSPool User Training - GPUs in the OSPool
+title: "OSPool User Training - GPUs in the OSPool"
 published: true
+layout: events
 
 excerpt: |
-    Sign up for our user training on HTC Bioinformatics on Tuesday, May 20!
+    Sign up for our user training on GPUs in the OSPool on Tuesday, March 18!
     
-start_date: 2025-05-20
-end_date: 2025-05-20
+start_date: 2025-03-18
+end_date: 2025-03-18
 location: "Virtual"
 link: "https://portal.osg-htc.org/documentation/support_and_training/training/osgusertraining/"
-image: "/assets/images/events/2024-osg-school-collab.jpg"
-header_image: "/assets/images/events/2024-osg-school-collab.jpg"
+image: "/assets/images/events/server-stock-image.jpg"
+header_image: "/assets/images/events/server-stock-image.jpg"
 ---
 
 {% capture main %}
 
-<p style="font-size: larger; font-weight: bold;">Sign Up for our May 20 user training on high throughput bioinformatics!</p>
+<p style="font-size: larger; font-weight: bold;">Sign Up for our March 18 user training on GPU jobs!</p>
 
-Sign Up for our May 20 user training on high throughput bioinformatics!
+Sign Up for our March 18 user training on GPU jobs!
 
-In this workshop, we will create and scale up a BWA bioinformatics workflow using HTCondor on the OSPool, covering general topics such as software, keeping an organized work environment, and HTCondor submit file options. While the workshop covers a bioinformatics example, topics discussed are applicable to any workflow on the OSPool. This workshop is recommended for users who want to learn how to scale up their computing and create workflows.
+This session will focus on GPUs in the OSPool, emphasizing their capabilities, availability, and best practices for accessing and utilizing them effectively. The discussion will include common examples and codes to provide practical insights and demonstrate their application.
 
 Prerequisites: 
 * Some familiarity with shell commands, such as how to edit files, copy/paste in the terminal
 * Have an OSPool account and know how to log in, submit a single job
+* Some familiarity with containers
 
 
 **[Register here](https://osgfacilitation.setmore.com/#classes)**
@@ -39,11 +41,11 @@ All User Training sessions are offered from 2:30-4:00pm EST on the third Tuesday
 {% capture subsection %}
 # Who
 
-OSPool users who want to learn about creating and scaling up their workflows, especially in a bioinformatics setting.
+OSPool users who want to learn about GPUs and use them in their jobs
 
 # When
 
-Tuesday, May 20 from 2:30-4:00pm EST
+Tuesday, March 18 from 2:30-4:00pm EST
 
 # Where
 

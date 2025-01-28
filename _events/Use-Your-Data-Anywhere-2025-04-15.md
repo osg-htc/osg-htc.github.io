@@ -1,31 +1,31 @@
 ---
-short_title: OSPool User Training - GPUs in the OSPool
-title: "OSPool User Training - GPUs in the OSPool"
+short_title: OSPool User Training - Use Your Data Anywhere
+title: "OSPool User Training - Use Your Data Anywhere"
 published: true
+layout: events
 
 excerpt: |
-    Sign up for our user training on GPUs in the OSPool on Tuesday, March 18!
+    Sign up for our user training on using your data on distributed systems on Tuesday, April 15!
     
-start_date: 2025-03-18
-end_date: 2025-03-18
+start_date: 2025-04-15
+end_date: 2025-04-15
 location: "Virtual"
 link: "https://portal.osg-htc.org/documentation/support_and_training/training/osgusertraining/"
-image: "/assets/images/events/server-stock-image.jpg"
-header_image: "/assets/images/events/server-stock-image.jpg"
+image: "/assets/images/events/showmic-helping.jpg"
+header_image: "/assets/images/events/showmic-helping.jpg"
 ---
 
 {% capture main %}
 
-<p style="font-size: larger; font-weight: bold;">Sign Up for our March 18 user training on GPU jobs!</p>
+<p style="font-size: larger; font-weight: bold;">Sign Up for our April 15 user training on the Open Science Data Federation (OSDF)!</p>
 
-Sign Up for our March 18 user training on GPU jobs!
+Sign Up for our April 15 user training on the Open Science Data Federation (OSDF)!
 
-This session will focus on GPUs in the OSPool, emphasizing their capabilities, availability, and best practices for accessing and utilizing them effectively. The discussion will include common examples and codes to provide practical insights and demonstrate their application.
+In this training, we will introduce attendees to the Open Science Data Federation (OSDF); a data platform that allows you to stage data for both distributed computing (as on the OSPool) and share your data with others. It’s even possible to connect your own storage to the OSDF directly, to both share and use yourself. Join us for an overview of the OSDF and hands-on examples of using it. 
 
 Prerequisites: 
 * Some familiarity with shell commands, such as how to edit files, copy/paste in the terminal
 * Have an OSPool account and know how to log in, submit a single job
-* Some familiarity with containers
 
 
 **[Register here](https://osgfacilitation.setmore.com/#classes)**
@@ -40,11 +40,11 @@ All User Training sessions are offered from 2:30-4:00pm EST on the third Tuesday
 {% capture subsection %}
 # Who
 
-OSPool users who want to learn about GPUs and use them in their jobs
+OSPool users who have large data needs or want to learn about data in distributed computing
 
 # When
 
-Tuesday, March 18 from 2:30-4:00pm EST
+Tuesday, April 15 from 2:30-4:00pm EST
 
 # Where
 

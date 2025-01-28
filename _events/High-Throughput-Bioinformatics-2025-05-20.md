@@ -1,26 +1,27 @@
 ---
-short_title: OSPool User Training - Use Your Data Anywhere
-title: "OSPool User Training - Use Your Data Anywhere"
+short_title: OSPool User Training - Adapting Workflows for High Throughput Bioinformatics
+title: "OSPool User Training - Adapting Workflows for High Throughput Bioinformatics"
 published: true
+layout: events
 
 excerpt: |
-    Sign up for our user training on using your data on distributed systems on Tuesday, April 15!
+    Sign up for our user training on HTC Bioinformatics on Tuesday, May 20!
     
-start_date: 2025-04-15
-end_date: 2025-04-15
+start_date: 2025-05-20
+end_date: 2025-05-20
 location: "Virtual"
 link: "https://portal.osg-htc.org/documentation/support_and_training/training/osgusertraining/"
-image: "/assets/images/events/showmic-helping.jpg"
-header_image: "/assets/images/events/showmic-helping.jpg"
+image: "/assets/images/events/2024-osg-school-collab.jpg"
+header_image: "/assets/images/events/2024-osg-school-collab.jpg"
 ---
 
 {% capture main %}
 
-<p style="font-size: larger; font-weight: bold;">Sign Up for our April 15 user training on the Open Science Data Federation (OSDF)!</p>
+<p style="font-size: larger; font-weight: bold;">Sign Up for our May 20 user training on high throughput bioinformatics!</p>
 
-Sign Up for our April 15 user training on the Open Science Data Federation (OSDF)!
+Sign Up for our May 20 user training on high throughput bioinformatics!
 
-In this training, we will introduce attendees to the Open Science Data Federation (OSDF); a data platform that allows you to stage data for both distributed computing (as on the OSPool) and share your data with others. It’s even possible to connect your own storage to the OSDF directly, to both share and use yourself. Join us for an overview of the OSDF and hands-on examples of using it. 
+In this workshop, we will create and scale up a BWA bioinformatics workflow using HTCondor on the OSPool, covering general topics such as software, keeping an organized work environment, and HTCondor submit file options. While the workshop covers a bioinformatics example, topics discussed are applicable to any workflow on the OSPool. This workshop is recommended for users who want to learn how to scale up their computing and create workflows.
 
 Prerequisites: 
 * Some familiarity with shell commands, such as how to edit files, copy/paste in the terminal
@@ -39,11 +40,11 @@ All User Training sessions are offered from 2:30-4:00pm EST on the third Tuesday
 {% capture subsection %}
 # Who
 
-OSPool users who have large data needs or want to learn about data in distributed computing
+OSPool users who want to learn about creating and scaling up their workflows, especially in a bioinformatics setting.
 
 # When
 
-Tuesday, April 15 from 2:30-4:00pm EST
+Tuesday, May 20 from 2:30-4:00pm EST
 
 # Where
 
