@@ -26,8 +26,6 @@ You are invited to the annual Throughput Computing Week (HTC25) from June 2-6 to
 - Be inspired by presentations and conversations with community leaders and contributors sharing common interests
 - Learn about HTC and new developments to advance your science, your collaboration or your campus
 
-**Registration Opens in January 2025**
-
 ### Connect with CC* Campuses and OSG Staff 
 
 [CC* campuses](https://osg-htc.org/campus-cyberinfrastructure.html) (current and potential) will have the opportunity to build connections and to advance their technical know how at the dedicated CC* track. These sessions will bring together campus staff, including staff involved directly with HTC technology, with the OSG Consortium staff. The goal is to engage with and to learn from each other to improve the experience of providing or utilizing capacity and to advance scientific research on your own campus and across the nation.
@@ -38,7 +36,7 @@ We encourage you to consider giving a talk. Technical presentations at HTC25 are
 
 ### Visiting Madison
 
-Madison, Wisconsin is both a beautiful and a popular place to visit in the summer. We will have room blocks reserved for HTC25 and encourage you to register and book your hotel room as early as possible. Further accommodation details will be availble when registration opens. 
+Madison, Wisconsin is both a beautiful and a popular place to visit in the summer. We will have room blocks reserved for HTC25 and encourage you to register and book your hotel room as early as possible. Further accommodation details will be available when registration opens. 
 
 
 ### Questions and Resources
@@ -46,10 +44,6 @@ Madison, Wisconsin is both a beautiful and a popular place to visit in the summe
 HTC25 is sponsored by the OSG Consortium, the HTCondor team and the UW-Madison Center for High Throughput Computing. 
 
 For questions about attending, speaking, accommodations, and other concerns please contact us at [htc@path-cc.io](mailto:htc@path-cc.io).
-
-To learn about HTC25 in more detail, view the HTC24 event website:
-
-- [HTC 24 Site](https://agenda.hep.wisc.edu/event/2175/)
 {% endcapture %}
 
 
@@ -58,6 +52,14 @@ To learn about HTC25 in more detail, view the HTC24 event website:
 
 Monday, June 2 through Friday, June 6, 2025.
 
+### Registration
+
+Registration opens February 12, 2025.
+
+### Website
+
+[https://agenda.hep.wisc.edu/event/2297/](https://agenda.hep.wisc.edu/event/2297/)
+
 ### Who
 
 Researchers, campuses, scientific collaborations, facilitators, administrators and professionals interested in the [HTCondor Software Suite](https://htcondor.org) and high throughput computing or the [OSG Consortium](https://osg-htc.org/) resources or services (including the [OSPool](https://osg-htc.org/services/open_science_pool.html), the [Open Science Data Federation](https://osg-htc.org/services/osdf.html), the [Pelican Platform](https://pelicanplatform.org/), or the [PATh Facility](https://path-cc.io/facility/).)
@@ -65,10 +67,6 @@ Researchers, campuses, scientific collaborations, facilitators, administrators a
 ### Where
 
 [Fluno Center](https://fluno.com/) on the University of Wisconsin-Madison campus and Online via Zoom.
-
-### Registration
-
-Registration opens January 2025. 
  
 ### Questions?
 
