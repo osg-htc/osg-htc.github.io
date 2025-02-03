@@ -48,7 +48,17 @@ The OSDF may be for you if...
 
 <div class="alert alert-dark d-flex flex-column">
 <h5 class="mx-auto">Want to use or process data hosted on the OSDF? </h5>
-<a class="btn btn-secondary mx-auto d-block mt-3" href="mailto:support@osg-htc.org">Contact OSDF Support Staff</a> or <a class="btn btn-secondary mx-auto d-block mt-3" href="mailto:support@osg-htc.org">Request an OSPool Account</a>
+<div class="row justify-content-center">
+<div class="col-auto">
+<a class="btn btn-secondary mx-auto d-block mt-3" href="mailto:support@osg-htc.org">Contact OSDF Support Staff</a>
+</div>
+<div class="col-auto d-flex">
+<div class="my-auto pt-2">or</div>
+</div>
+<div class="col-auto">
+<a class="btn btn-secondary mx-auto d-block mt-3" href="mailto:support@osg-htc.org">Request an OSPool Account</a>
+</div>
+</div>
 </div>
 
 
