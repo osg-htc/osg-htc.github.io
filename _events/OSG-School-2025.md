@@ -6,7 +6,7 @@ published: true
 excerpt: |
     Applications for the OSG User School 2025 at the University of Wisconsin-Madison are now open!
 start_date: 2025-06-23
-end_date: 2023-06-27
+end_date: 2025-06-27
 location: "University of Wisconsin-Madison"
 link: "https://osg-htc.org/school-2025/"
 image: "/assets/images/events/osg-user-school-2023-event.jpg"
