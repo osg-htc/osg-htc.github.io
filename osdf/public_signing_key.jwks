@@ -15,6 +15,14 @@
             "alg": "RS256",
             "kid": "xrdshoveler",
             "kty": "RSA"
+        },
+        {
+            "alg": "ES256",
+            "crv": "P-256",
+            "kid": "sOgGIwIMg2CKR429hf2dNe8dBof0WvCqWHR1QKSoQ5U",
+            "kty": "EC",
+            "x": "VQkzkZVAmyrmu8fYKjoevEmlUZ45kWS0SfsIrMfpbQ4",
+            "y": "8FmvtdMrUwF8LZ_I4V1WgU0_b8WNXAkCFiCgeP3m_mU"
         }
     ]
 }
