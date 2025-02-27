@@ -6,5 +6,5 @@ gem "jekyll"
 gem "jekyll-redirect-from"
 gem 'kramdown-parser-gfm'
 gem 'jekyll-sitemap'
-gem "webrick", "~> 1.9"
+gem "webrick"
 

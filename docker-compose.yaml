@@ -4,8 +4,8 @@ services:
     volumes:
       - .:/app
     working_dir: /app
-    command: /bin/bash -c "bundle update --bundler && bundle exec jekyll serve --watch --config _config.yml -H 0.0.0.0 -P 8010"
+    command: /bin/bash -c "bundle install && bundle update --bundler && bundle exec jekyll serve --watch --config _config.yml -H 0.0.0.0 -P 8012"
     ports:
-      - "8010:8010"
+      - "8012:8012"
     stdin_open: true
     tty: true
