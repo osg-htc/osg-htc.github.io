@@ -392,7 +392,7 @@ class DataManager {
         try {
             usageJson = await UsageToggles.getUsage()
         } catch(e) {
-            this.error = "Error fetching usage data, reloading page in 5 seconds."
+            this.error = "Error fetching usage data, reloading page in 5 seconds. Learn more on the status page status.osg-htc.org"
             setTimeout(() => {window.location.reload()}, 5000)
         }
 
