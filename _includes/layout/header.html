@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-light bg-secondary">
         <div class="container-xxl">
             <a class="navbar-brand pt-1 pb-1" href="{{ '/' | relative_url }}"><img height="55" src="{{ '/assets/images/logos/OSG-logo.svg' | relative_url }}" alt="OSG logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,10 +80,10 @@
                     </li>
                 </ul>
             
-            <span class="navbar-text">
+            <span class="flex-grow-1 d-flex">
                 {% if page.url  == "/" %}
-                        <a class="btn btn-primary me-md-2 text-dark" href="https://portal.osg-htc.org/application" role="button">Request an Account</a>
-                        {% endif %}
+                    <a class="btn btn-light ms-auto me-md-2" href="https://portal.osg-htc.org/application" role="button">Request an Account</a>
+                {% endif %}
             </span>
             </div>
         </div> <!-- End Container -->

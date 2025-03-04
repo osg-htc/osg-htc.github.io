@@ -168,7 +168,7 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-theme-minimal
   kramdown-parser-gfm
-  webrick (~> 1.9)
+  webrick
 
 RUBY VERSION
    ruby 3.4.2p28
