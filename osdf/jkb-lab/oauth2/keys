@@ -1,6 +1,8 @@
 {
 	"keys": [
 		{
+			"alg": "ES256",
+			"kid": "q7i8vfzN9CyLpjZQ8eZYoRLSMQOeRbJQcBJZIUguQtF",
 			"crv": "P-256",
 			"kty": "EC",
 			"x": "ALqsSZVglUTQwTph_1aVBMhi_uxhho0ZbrP7kG2jC3w",
