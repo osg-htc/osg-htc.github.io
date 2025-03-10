@@ -9,6 +9,8 @@
       url: /code-of-conduct
     - name: Acknowledging OSG
       url: /acknowledging
+    - name: Privacy Policy
+      url: /privacy-policy
 - name: Services
   id: services
   children:
