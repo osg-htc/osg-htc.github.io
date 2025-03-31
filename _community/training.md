@@ -20,7 +20,7 @@ Anyone can register and join monthly trainings - no account is needed!
 
 <div class="alert alert-dark d-flex flex-column">
 <h5 class="mx-auto">Don't want to wait until our next training?</h5>
-<a class="btn btn-secondary mx-auto d-block mt-3" href="https://portal.osg-htc.org/application">Test Drive the OSPool Now</a>
+<a class="btn btn-secondary mx-auto d-block mt-3" href="https://portal.osg-htc.org/documentation/overview/test-drive-ospool/">Test Drive the OSPool Now</a>
 </div>
 
 ## Bring us to your campus or event!
