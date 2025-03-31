@@ -17,17 +17,19 @@ The OSDF is part of the OSG Fabric of Services, running software developed by th
 
 There are many ways to participate in the OSDF. Read on for three different ways to engage. 
 
+{: .mini-bar}
 ### Share
 
 The OSDF may be for you if...
 - You are part of a collaborative project that works with shared data sets
 - You have generated data as part of a project and want to share it
 
-<div class="alert alert-dark d-flex flex-column">
+<div class="alert alert-light border-0 shadow d-flex flex-column">
 <h5 class="mx-auto">Want to make your dataset available via the OSDF?</h5>
 <a class="btn btn-secondary mx-auto d-block mt-3" href="mailto:support@osg-htc.org">Contact OSDF Support Staff</a>
 </div>
 
+{: .mini-bar}
 ### Contribute
 
 The OSDF can be a platform for sharing data from your institution or contributing infrastructure to a national project. These are some ways that institutions and communities can contribute to the OSDF: 
@@ -35,18 +37,19 @@ The OSDF can be a platform for sharing data from your institution or contributin
 - Provide unused storage space for other groups or projects to use via the OSDF
 - Host infrastructure to make the OSDF more robust, like a local cache
 
-<div class="alert alert-dark d-flex flex-column">
+<div class="alert alert-light border-0 shadow d-flex flex-column">
 <h5 class="mx-auto">Want to contribute to the OSDF infrastructure?</h5>
 <a class="btn btn-secondary mx-auto d-block mt-3" href="https://docs.google.com/forms/d/e/1FAIpQLSem2Lu-9nL2DBOXrSzmHTWdBZHsMmVN_pIq5ITSnj4A51BTLw/viewform?usp=header">Request a Meeting</a>
 </div>
 
+{: .mini-bar}
 ### Use
 
 The OSDF may be for you if...
 - You are using the OSPool to analyze or produce data. 
 - You want to analyze data that has been shared on the OSDF.
 
-<div class="alert alert-dark d-flex flex-column">
+<div class="alert  alert-light border-0 shadow d-flex flex-column">
 <h5 class="mx-auto">Want to use or process data hosted on the OSDF? </h5>
 <div class="row justify-content-center">
 <div class="col-auto">
