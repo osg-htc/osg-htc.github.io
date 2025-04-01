@@ -18,7 +18,7 @@ David passed away in an accident in fall 2019. In his memory the award is bestow
 <img src="/assets/images/DSA-photos/ronda-and-past-awardees.jpg" width="75%" align="center">
 
 *Ronda Swanson presents the David Swanson Award to past and present recipients 
-Anirvan Shukla, Conor Natzke, Aashish Tripathee, and Jimena Gonzalez at HTC23.*
+Anirvan Shukla, Conor Natzke, Jimena Gonzalez, and Aashish Tripathee at HTC23.*
 
 ## Award Recipients
 
@@ -49,7 +49,7 @@ Anirvan Shukla, Conor Natzke, Aashish Tripathee, and Jimena Gonzalez at HTC23.*
 	* "Investigating the strong nuclear force with the OSG"
 	* [Presentation at OSG AHM 2022](https://indico.fnal.gov/event/53029/contributions/236143/)
 
-The 2022 recipient of the David Swanson Award was Connor Natzke, who attended the OSG User School in 2019, who immediately began applying what he learned to his own work. Since that time, Connor has undertaken several projects benefiting from dHTC and OSG capabilities, with more than 135 thousand hours of computing on the Open Science Pool over the last two years. Connor used the Open Science Pool to study the strong nuclear force during his time as a graduate student at the Colorado School of Mines. 
+The 2022 recipient of the David Swanson Award was **Connor Natzke**, who attended the OSG User School in 2019, who immediately began applying what he learned to his own work. Since that time, Connor has undertaken several projects benefiting from dHTC and OSG capabilities, with more than 135 thousand hours of computing on the Open Science Pool over the last two years. Connor used the Open Science Pool to study the strong nuclear force during his time as a graduate student at the Colorado School of Mines. 
 
 ### 2023
 
