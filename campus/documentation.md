@@ -6,6 +6,21 @@ layout: text-optimized-width
 
 # OSPool Site Admin Documentation
 
+## Supported Cluster OSes and HTCondor Versions
+
+{: .my-3 }
+| OS                     | HTCondor       | Notes                                                                                     |
+|-------------------------|----------------|-------------------------------------------------------------------------------------------|
+| EL7 (*)                | 23.10.*        | EL7 is no longer supported, and thus our ability to support such systems may be removed at any time. |
+| EL8 (*)                | 24.* (> 24.0)  |                                                                                           |
+| EL9 (*)                | 24.* (> 24.0)  |                                                                                           |
+| Debian 11 (bullseye)   | 24.* (> 24.0)  |                                                                                           |
+| Debian 12 (bookworm)   | 24.* (> 24.0)  |                                                                                           |
+| Ubuntu 20.04 (focal)   | 24.0.*         | Ubuntu 20.04 is no longer supported, and thus our ability to support such systems may be removed at any time. |
+| Ubuntu 22.04 (jammy)   | 24.* (> 24.0)  |                                                                                           |
+| Ubuntu 24.04 (noble)   | 24.* (> 24.0)  |                                                                                           |
+| (*) Tested variants are RHEL, Alma, and Rocky. |                |                                                                                           |
+
 ## Monitoring and Information
 
 ### Viewing researcher jobs running within a glidein job
