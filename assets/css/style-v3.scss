@@ -12,17 +12,28 @@ $info: #2B77F1;
 $white-offset: #fff7ea;
 
 $navbar-brand-height: 3.5rem;
+$navbar-light-color: #5a5a5a;
 
 $card-border-color: black;
 
 $font-family-base: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $headings-font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-size-base: 1rem;
+$font-weight-base: 400;
 
 blockquote {
   border-left: black dotted 1px;
   padding-left: 10px;
 }
+
+.h-60px {
+  height: 60px !important;
+}
+
+.h-80px {
+  height: 80px !important;
+}
+
 
 .h-100px {
   height: 100px !important;
@@ -63,8 +74,11 @@ h3 {
 
 /* OSG-style links */
 
-a{color:#b67b3c;text-decoration:none;}
-a:hover,a:focus{color:#7c5429;text-decoration:underline;}
+a{color:#F08231;text-decoration:none;}
+a:hover,a:focus{color:#F1A52B;text-decoration:underline;}
+
+a.dark{color:#F08231;text-decoration:none;}
+a.dark:hover,a.dark:focus{color:#F1A52B;text-decoration:underline;}
 
 /* Stealing table CSS from jekyll-theme-minimal */
 
@@ -209,3 +223,22 @@ th, td {
   background: url({{ '/assets/images/Waves_Background_Short.png' | relative_url }}) no-repeat center bottom;;
 }
 
+.navbar-nav {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.fade-in-active {
+  opacity: 0%;
+  transition: opacity .1s ease-out;
+}
+
+.fade-in-active.fade-in-visible {
+  opacity: 95%;
+  transition: opacity .5s ease-out;
+}
+
+.hover-highlight:hover * {
+  color: $secondary !important;
+  transition: color .1s ease-out;
+}
