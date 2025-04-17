@@ -12,15 +12,24 @@ css_extension:
     <div class="container-xxl">
         <div class="row gx-1 py-3">
             <div class="col-md-4 d-flex">
-                <div class="card border-0 hover-shadow flex-grow-1">
+                <div class="card border-0 flex-grow-1">
                     <div class="d-flex justify-content-center p-2">
-                        <img class="m-auto mw-100" height="140" src="{{ '/assets/images/homepage/OSDF.png' | relative_url }}" alt="Image 3">
+                        <img class="m-auto mw-100" height="150" src="{{ '/assets/images/homepage/OSDF.png' | relative_url }}" alt="Image 3">
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <h4 class="card-title">OSDF</h4>
+                        <h2 class="mini-bar card-title">OSDF</h2>
                         <p class="card-text">
                             The OSDF enables users and institutions to share data files
-                            and storage capacity, making them both accessible in dHTC environments such as the OSPool.
+                            and storage capacity.
+                        </p>
+                        <p>
+                            Leveraging the OSDF, providers can make their datasets available to a wide variety of
+                            compute users, such as:
+                            <ul>
+                                <li>Browsers</li>
+                                <li>Jupyter Notebooks</li>
+                                <li>HTC Environments, such as the OSPool</li>
+                            </ul>
                         </p>
                         <div class="mt-auto">
                             <a href="/services/osdf" class="btn btn-secondary">Explore OSDF</a>
@@ -29,17 +38,20 @@ css_extension:
                 </div>
             </div>
             <div class="col-md-4 d-flex">
-                <div class="card border-0 hover-shadow flex-grow-1">
+                <div class="card border-0 flex-grow-1">
                     <div class="d-flex justify-content-center p-2">
-                        <img class="m-auto mw-100" height="130" src="{{ '/assets/images/homepage/OSPool.png' | relative_url }}" alt="Image 3">
+                        <img class="m-auto mw-100" height="150" src="{{ '/assets/images/homepage/OSPool.png' | relative_url }}" alt="Image 3">
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <h4 class="card-title">OSPool</h4>
-                        <h6 class="font-weight-light">A national throughput computing service</h6>
+                        <h2 class="mini-bar card-title">OSPool</h2>
+                        <h6 class="font-weight-light">No Proposal, No Allocation, No Cost</h6>
                         <p class="card-text">
-                            The OSPool provides its users with fair-share access (no allocation needed!) to processing
-                            and storage capacity contributed by university campuses, government-supported supercomputing
+                            The OSPool provides its users with fair-share access to compute
+                            and storage capacity contributed by university campuses, and government-supported supercomputing
                             institutions.
+                        </p>
+                        <p>
+                            Sign up now and join the <a href="/projects">hundreds of researchers and educators</a> already using the OSPool!
                         </p>
                         <div class="mt-auto">
                             <a href="https://portal.osg-htc.org/application" class="btn btn-secondary">Request An Account</a>
@@ -49,12 +61,12 @@ css_extension:
                 </div>
             </div>
             <div class="col-md-4 d-flex">
-                <div class="card border-0 hover-shadow flex-grow-1">
+                <div class="card border-0 flex-grow-1">
                     <div class="d-flex justify-content-center p-2">
-                        <img class="m-auto mw-100" height="130" src="{{ '/assets/images/homepage/HTC25.png' | relative_url }}" alt="Image 3">
+                        <img class="m-auto mw-100" height="150" src="{{ '/assets/images/homepage/HTC25.png' | relative_url }}" alt="Image 3">
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <h4 class="card-title">Throughput Computing Week</h4>
+                        <h2 class="mini-bar card-title">Throughput Computing Week</h2>
                         <p class="card-text">
                             <b>Join us for HTC25, June 2-6. Sign up available on <a
                                         href="https://agenda.hep.wisc.edu/event/2297/">event website</a>.</b>
@@ -133,9 +145,8 @@ css_extension:
             </div>
         </div>
     </div>
-    <div class="bg-light py-4">
+    <div class="py-4">
         <div class="container-xxl">
-            <h2 id="osg-by-maps" class="mini-bar my-3">OSG By Maps</h2>
             <div class="row gx-2">
                 {% for map in site.data.maps %}
                     <div class="col-12 col-sm-6 col-lg-3 {% cycle '', 'd-none d-sm-block', 'd-none d-lg-block', 'd-none d-lg-block' %}">
@@ -151,21 +162,22 @@ css_extension:
                     </div>
                 {% endfor %}
             </div>
+            <hr/>
+            <h5 id="osg-by-maps" class="text-center">OSG By Maps</h5>
         </div>
     </div>
-    <div class="bg-dark py-4 mb-4">
+    <div class="bg-secondary py-4 mb-4">
         <div class="container-xxl">
-            <h2 class="mini-bar my-3 text-light">User Spotlights</h2>
-            <div class="border border-light rounded-3 p-2">
-                <div class="row justify-content-center gx-2">
-                    {% include get/spotlights.liquid %}
-                    {% for article in spotlights limit: 3 %}
-                        <div class="col-12 col-md-6 col-xl-4 {% cycle 'order-1 order-md-2', 'd-none d-md-block order-3', 'd-none d-xl-block order-3' %}">
-                            {% include /cards/spotlight-card.html height='150' no_date="true" %}
-                        </div>
-                    {% endfor %}
-                </div>
+            <div class="row justify-content-center gx-2">
+                {% include get/spotlights.liquid %}
+                {% for article in spotlights limit: 3 %}
+                    <div class="col-12 col-md-6 col-xl-4 {% cycle 'order-1 order-md-2', 'd-none d-md-block order-3', 'd-none d-xl-block order-3' %}">
+                        {% include /cards/spotlight-card.html height='150' no_date="true" %}
+                    </div>
+                {% endfor %}
             </div>
+            <hr/>
+            <h5 class="mb-0 text-center">User Spotlights</h5>
         </div>
     </div>
     <div class="container-xxl">
