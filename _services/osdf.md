@@ -71,7 +71,7 @@ The OSDF may be for you if...
 
 Any US-based academic, government, or non-profit institution may connect their object store to the OSDF.
 
-Researchers using the [OSPool](https://osg-htc.org/services/open_science_pool.html) from an [OSG-operated Access Point](https://osg-htc.org/services/access-point) automatically get an allocation on a local filesystem connected to the OSDF.
+Researchers using the [OSPool](https://osg-htc.org/services/ospool/) from an [OSG-operated Access Point](https://osg-htc.org/services/access-point) automatically get an allocation on a local filesystem connected to the OSDF.
 
 ### Can I get storage on the OSDF? / OSDF and CC* Storage
 

@@ -13,7 +13,7 @@
   id: services
   children:
     - name: Open Science Pool
-      url: /services/open_science_pool
+      url: /services/ospool/
     - name: Open Science Data Federation
       url: /services/osdf
     - name: OSG-Operated Access Points
