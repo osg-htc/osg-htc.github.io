@@ -65,7 +65,7 @@ collections:
     permalink: /spotlights/:title.html
     output: true
   services:
-    permalink: /services/:title.html
+    permalink: /services/:path.html
     output: true
   organization:
     permalink: /organization/:path.html
