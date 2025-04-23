@@ -57,7 +57,7 @@ table_of_contents:
         Campuses with awards from the
         <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a>
         Program play an important role in supporting Open Science. To date, 37 CC* campuses contribute to the processing and storage capacity of the
-        <a href="{{ '/services/open_science_pool.html' | relative_url }}">Open Science Pool (OSPool)</a> that is 
+        <a href="{{ '/services/ospool/' | relative_url }}">Open Science Pool (OSPool)</a> that is 
         harnessed weekly by more than 3M jobs.
     </p>
     <p class="mb-0 d-flex justify-content-center pt-3">
@@ -125,12 +125,12 @@ following aspects of the proposed project:
 
 {: .fs-5 }
 - Sharing data with authorized users via the [Open Science Data Federation (OSDF)](/services/osdf.html)
-- Bringing the power of high throughput computing via the [OSPool](/services/open_science_pool.html) to your researchers
+- Bringing the power of high throughput computing via the [OSPool](/services/ospool/l) to your researchers
 - Meeting CC*-required resource sharing as specified in <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 24-530)</a>, and other options for integrating with the OSG Consortium
 - Providing connections to help with data storage systems for shared inter-campus or intra-campus resources
   - We have collected [community data storage systems](/organization/osdf/example_data_origin.html) for your consideration
 - Building [regional computing networks](https://osg-htc.org/spotlights/gpargo-cc-star.html)
-- Developing science gateways to utilize high throughput computing via the [OSPool](/services/open_science_pool.html)
+- Developing science gateways to utilize high throughput computing via the [OSPool](/services/ospool/)
 
 {: .fs-5 }
 Please do not hesitate (or wait too long) to contact us at 
@@ -246,7 +246,7 @@ own campus and for the entire country.
 
 {: .fs-5 }
 Campuses contribute core hours to researchers 
-via the [OSPool](/services/open_science_pool.html), a compute resource accessible to any 
+via the [OSPool](/services/ospool/), a compute resource accessible to any 
 researcher affiliated with a US academic institution. These contributions support more than 230 
 research groups, campuses, multi-campus collaborations, and gateways, and in fields of 
 study ranging from the medicine to economics, and from genomics to physics.

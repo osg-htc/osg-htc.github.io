@@ -37,13 +37,16 @@ class ElasticSearchQuery {
      */
     async make_request(url, body = {}, options={}){
 
-        let response = await fetch(url, {
-            ...options,
-            body: JSON.stringify(body),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
+        let response = await Promise.race([
+            fetch(url, {
+                ...options,
+                body: JSON.stringify(body),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }),
+            new Promise((_, reject) => setTimeout(() => reject(new Error('Request timed out')), 15000))
+        ])
 
         if( !response.ok ){
             console.error(await response.json())

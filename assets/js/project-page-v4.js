@@ -403,8 +403,7 @@ class DataManager {
             return response.json()
 
         } catch(error) {
-            this.error = "Error fetching data, reloading page in 5 seconds."
-            setTimeout(() => {window.location.reload()}, 5000)
+            this.error = "Error fetching usage data, learn more on the OSG status page: status.osg-htc.org"
         }
     }
 
@@ -421,8 +420,7 @@ class DataManager {
         try {
             usageJson = await UsageToggles.getUsage()
         } catch(e) {
-            this.error = "Error fetching usage data, reloading page in 5 seconds."
-            setTimeout(() => {window.location.reload()}, 5000)
+            this.error = "Error fetching usage data, learn more on the OSG status page: status.osg-htc.org"
         }
 
         this.data = Object.entries(responseJson).reduce((p, [k,v]) => {

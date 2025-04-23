@@ -1,0 +1,22 @@
+{% if include.data %}
+{% assign data = include.data %}
+{% endif %}
+
+<a class="text-decoration-none d-block hover-highlight" href="{{ data.url }}">
+    <div class="border-0 {{ include.class }} d-flex">
+        <img class="h-80px rounded" style="aspect-ratio: 1; object-fit: cover;" src="{{ data.src | default: include.src | relative_url }}" alt="{{ data.alt | default: include.alt }}">
+        <div class="ps-2">
+            <h6 class="text-decoration-none text-dark mb-0">{{ data.title | default: include.title }}</h6>
+            <div><small class="text-muted text-decoration-none">
+            {% if data.start_date != data.end_date %}
+                {% assign date = data.start_date | date: "%B %e" %}
+                {% assign date = data.end_date | date: "-%e, %Y" | prepend: date %}
+            {% else %}
+                {% assign date = data.start_date | date: "%B %e, %Y" %}
+            {% endif %}
+
+            {{ date }}
+        </small></div>
+        </div>
+    </div>
+</a>

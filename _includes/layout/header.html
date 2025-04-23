@@ -1,27 +1,12 @@
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
         <div class="container-xxl">
-            <a class="navbar-brand pt-1 pb-1" href="{{ '/' | relative_url }}"><img height="55" src="{{ '/assets/images/logos/OSG-logo.svg' | relative_url }}" alt="OSG logo"></a>
+            <a class="navbar-brand pt-1 pb-1" href="{{ '/' | relative_url }}"><img height="55" style="filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.2))" src="{{ '/assets/images/logos/OSG-logo.svg' | relative_url }}" alt="OSG logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            About
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {% for section in site.data.about %}
-                            {% for item in section.docs %}
-                            {% assign item_url = item | prepend:"/about/" | append:"/" %}
-                            {% assign p = site.about | where:"url", item_url | first %}
-                            <a class="dropdown-item" href="{{ p.url | relative_url }}">{{ p.nav | default: p.title }}</a>
-                            {% endfor %}
-                            {% endfor %}
-                            <a class="dropdown-item" href="{{ '/acknowledging.html' | relative_url }}">Acknowledging OSG</a>
-                        </div>
-                    </li>
                     <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="services-dropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Services
@@ -30,9 +15,9 @@
                             <div class="dropend">
                                 <a class="dropdown-item dropdown-toggle" id="services-ospool-dropdown" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OSPool</a>
                                 <ul class="dropdown-menu dropdown-submenu" aria-labelledby="services-ospool-dropdown">
-                                    <li><a class="dropdown-item" href="{{ '/services/open_science_pool' | relative_url }}">Overview</a></li>
-                                    <li><a class="dropdown-item" href="{{ '/services/open_science_pool/institutions' | relative_url }}">Institutions</a></li>
-                                    <li><a class="dropdown-item" href="{{ '/projects' | relative_url }}">Projects</a></li>
+                                    <li><a class="dropdown-item" href="{{ '/services/ospool' | relative_url }}">Overview</a></li>
+                                    <li><a class="dropdown-item" href="{{ '/services/ospool/institutions' | relative_url }}">Institutions</a></li>
+                                    <li><a class="dropdown-item" href="{{ '/services/ospool/projects' | relative_url }}">Projects</a></li>
                                 </ul>
                             </div>
                             <div class="dropend">
@@ -52,6 +37,7 @@
                         <div class="dropdown-menu" aria-labelledby="campusNavLink">
                             <a class="dropdown-item" href="{{ '/campus/support.html' | relative_url }}">Support</a>
                             <a class="dropdown-item" href="{{ '/campus-cyberinfrastructure.html' | relative_url }}">CC* Proposals</a>
+                            <a class="dropdown-item" href="{{ '/campus/documentation.html' | relative_url }}">Site Admin Documentation</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown active">
@@ -70,21 +56,43 @@
                         <a class="nav-link" href="{{ '/contact.html' | relative_url }}">Contact</a>
                     </li>
                     <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% for section in site.data.about %}
+                            {% for item in section.docs %}
+                            {% assign item_url = item | prepend:"/about/" | append:"/" %}
+                            {% assign p = site.about | where:"url", item_url | first %}
+                            <a class="dropdown-item" href="{{ p.url | relative_url }}">{{ p.nav | default: p.title }}</a>
+                            {% endfor %}
+                            {% endfor %}
+                            <a class="dropdown-item" href="{{ '/acknowledging.html' | relative_url }}">Acknowledging OSG</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Docs
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            <a class="dropdown-item" href="https://portal.osg-htc.org/documentation/">For Users</a>
+                            <a class="dropdown-item " href="https://portal.osg-htc.org/documentation/">For Users</a>
                             <a class="dropdown-item" href="https://osg-htc.org/docs/">For Sysadmins</a>
                             <a class="dropdown-item" href="https://osg-htc.org/security/">Security</a>
                         </div>
                     </li>
                 </ul>
-            
-            <span class="navbar-text">
-                {% if page.url  == "/" %}
-                        <a class="btn btn-primary me-md-2 text-dark" href="https://portal.osg-htc.org/application" role="button">Request an Account</a> 
-                        {% endif %}
+            <span class="flex-grow-1 d-flex">
+                <div class=" ms-auto mx-auto me-lg-0 d-flex flex-row">
+                    <a class="text-dark d-flex fs-2 me-2" href="https://portal.osg-htc.org/application" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Apply for Account">
+                        <i class="bi-person-fill-add my-auto"></i>
+                    </a>
+                    <a class="text-dark d-flex fs-3 me-3" href="/contact.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Contact Us">
+                        <i class="bi-telephone-fill my-auto"></i>
+                    </a>
+
+                    <a href="https://path-cc.io" class="me-2"><img height="55" src="{{ '/assets/images/logos/Logo_Round_Med.png' | relative_url }}" alt="OSG logo"></a>
+                    <a href="https://iris-hep.org/"><img height="55" src="{{ '/assets/images/logos/IRIS_HEP.png' | relative_url }}" alt="OSG logo"></a>
+                </div>
             </span>
             </div>
         </div> <!-- End Container -->

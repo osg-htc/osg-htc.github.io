@@ -3,8 +3,8 @@
 {% endif %}
 
 <a class="text-decoration-none d-block" href="{{ data.url }}">
-    <div class="card border-0 hover-shadow p-1 {{ include.class }}">
-        <b class="text-decoration-none">{{ data.title }}</b>
-        <div><span class="text-muted text-decoration-none">{{ data.date | date: "%B %e, %Y"}}</span></div>
+    <div class="card border-0 hover-highlight {{ include.class }}">
+        <h6 class="text-decoration-none text-dark mb-0">{{ data.title }}</h6>
+        <div><small class="text-muted text-decoration-none">{{ data.date | date: "%B %e, %Y"}}</small></div>
     </div>
 </a>
