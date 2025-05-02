@@ -1,6 +1,3 @@
-import React from "https://esm.sh/react@18.3.1?dev";
-import ReactDOM from "https://esm.sh/react-dom@18.3.1?dev";
-
 import ElasticSearchQuery, {
   ADSTASH_ENDPOINT,
   DATE_RANGE,
@@ -8,11 +5,8 @@ import ElasticSearchQuery, {
 } from "./elasticsearch-v1.js";
 import Color from "https://colorjs.io/dist/color.js";
 
-// imports a module into root called "chtcWebComponents"
-import "./chtcWebComponents.js";
-
 // rename React.createElement
-const r = React.createElement;
+const e = React.createElement;
 
 const EPSCOR_STATES = [
   "AL", // Alabama
@@ -202,8 +196,6 @@ class UsageToggles {
       console.log(e);
     }
 
-    console.log(this.usage);
-
     return this.usage;
   }
 }
@@ -335,8 +327,6 @@ function getColorOfName(context) {
 }
 
 async function mountPieCharts(dataManager) {
-  console.log(chtcWebComponents);
-
   const charts = [
     {
       id: "project-fos-file-summary",
@@ -389,7 +379,7 @@ async function mountPieCharts(dataManager) {
       });
 
       root.render(
-        r(
+        e(
           "div",
           {
             style: {
@@ -401,7 +391,7 @@ async function mountPieCharts(dataManager) {
           },
           [
             // Pie chart wrapper
-            r(
+            e(
               "div",
               {
                 style: {
@@ -411,7 +401,7 @@ async function mountPieCharts(dataManager) {
               },
               // Pie Chart as child
               [
-                r(chtcWebComponents.PieChart, {
+                e(CHTCWebComponents.PieChart, {
                   axisLabel: title,
                   bgColor: "#222529",
                   data: reorganizedData,
@@ -419,7 +409,7 @@ async function mountPieCharts(dataManager) {
               ]
             ),
             // List to the side
-            r(
+            e(
               "div",
               {
                 style: {
@@ -430,7 +420,7 @@ async function mountPieCharts(dataManager) {
               },
               [
                 // Actual ul
-                r(
+                e(
                   "ul",
                   {
                     style: {
@@ -442,7 +432,7 @@ async function mountPieCharts(dataManager) {
                   },
                   reorganizedData.map((item) =>
                     // Each list element
-                    r(
+                    e(
                       "li",
                       {
                         key: item.label,
@@ -454,7 +444,7 @@ async function mountPieCharts(dataManager) {
                       },
                       [
                         // Colored Box
-                        r("div", {
+                        e("div", {
                           style: {
                             width: "16px",
                             height: "16px",
@@ -485,7 +475,7 @@ async function mountTable(dataManager) {
   if (tableContainer) {
     const root = ReactDOM.createRoot(tableContainer);
     root.render(
-      r(chtcWebComponents.Table, {
+      e(CHTCWebComponents.Table, {
         data: Object.values(data).map((dataPoint) => [
           dataPoint.projectName,
           dataPoint.projectInstitutionName,
