@@ -238,14 +238,10 @@ class Search {
         this.node.addEventListener("input", this.search)
         this.lunr_idx = lunr(function () {
             this.ref('Name')
-            this.field('Department')
-            this.field('Description')
             this.field('FieldOfScience')
-            this.field('ID')
             this.field('Name')
             this.field('Organization')
             this.field('PIName')
-            this.field('ResourceAllocations')
 
             data.forEach(function (doc) {
                 this.add(doc)
@@ -261,7 +257,7 @@ class Search {
             return data
         } else {
             console.log(this.node.value)
-            let table_keys = this.lunr_idx.search("" + this.node.value + "~2").map(r => r.ref)
+            let table_keys = this.lunr_idx.search(`*${this.node.value}* ${this.node.value} ${this.node.value}~2`).map(r => r.ref)
             return table_keys.reduce((pv, k) => {
                 pv[k] = data[k]
                 return pv
@@ -429,6 +425,8 @@ class DataManager {
             }
             return p
         }, {})
+
+        console.log(this.data)
 
         return this.data
     }
