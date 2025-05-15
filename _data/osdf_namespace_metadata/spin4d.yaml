@@ -7,6 +7,8 @@ description: |
   SPIn4D's [data release one](http://dtn-itc.ifa.hawaii.edu/spin4d/DR1/) is 109TB of simulated small-scale dynamo
   actions accompanying the project's first paper.  A [corresponding Jupyter notebook](https://github.com/ifauh/spin4d-data/blob/main/spin4d-data-exploration.ipynb)
   illustrates how to access and use the data via the OSDF using the [Pelican](https://pelicanplatform.org) clients.
+  The dataset is also [accessible](https://www.linkedin.com/pulse/ndp-action-astronomical-data-size-national-data-platform-lfwnc/)
+  the [National Data Platform](https://nationaldataplatform.org/).
 
   For more information, see the [accompanying spotlight article](https://pelicanplatform.org/news/2024/12/20/sun-secrets).
 organization: University of Hawaii-Moana
