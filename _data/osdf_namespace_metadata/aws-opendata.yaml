@@ -27,3 +27,4 @@ namespace:
   - /aws-opendata/us-east-1
   - /aws-opendata/us-west-1
   - /aws-opendata/us-west-2
+publicObject: # Optional namespace path to a public object

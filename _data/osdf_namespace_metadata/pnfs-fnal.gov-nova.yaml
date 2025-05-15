@@ -17,3 +17,4 @@ display: true # Whether or not to display this namespace
 name: NOVA
 namespace: 
   - "/pnfs/fnal.gov/usr/nova"
+publicObject: # Optional namespace path to a public object

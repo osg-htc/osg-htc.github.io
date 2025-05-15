@@ -19,3 +19,4 @@ display: true # Whether or not to display this namespace
 name: Dark Energy Survey
 namespace: 
   - "/pnfs/fnal.gov/usr/des"
+publicObject: # Optional namespace path to a public object

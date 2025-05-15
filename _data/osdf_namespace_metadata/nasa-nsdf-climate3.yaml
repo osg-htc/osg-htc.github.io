@@ -29,3 +29,4 @@ namespace:
   - "/nasa/nsdf/climate3"
 thirtyDayReads: 472358196
 oneYearReads: 472358196
+publicObject: # Optional namespace path to a public object

@@ -19,3 +19,4 @@ namespace:
   - "/ndp/burnpro3d"
 thirtyDayReads: 487991877
 oneYearReads: 9213605566
+publicObject: # Optional namespace path to a public object

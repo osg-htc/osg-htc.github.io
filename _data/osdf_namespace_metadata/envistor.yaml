@@ -26,3 +26,4 @@ namespace:
   - "/envistor"
 thirtyDayReads: 24
 oneYearReads: 95684852
+publicObject: # Optional namespace path to a public object

@@ -21,3 +21,4 @@ display: true # Whether or not to display this namespace
 name: MINERvA
 namespace: 
   - "/pnfs/fnal.gov/usr/minerva"
+publicObject: # Optional namespace path to a public object

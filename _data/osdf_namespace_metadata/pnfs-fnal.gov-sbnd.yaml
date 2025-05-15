@@ -25,3 +25,4 @@ display: true # Whether or not to display this namespace
 name: Short-Baseline Near Detector
 namespace: 
   - "/pnfs/fnal.gov/usr/sbnd"
+publicObject: # Optional namespace path to a public object

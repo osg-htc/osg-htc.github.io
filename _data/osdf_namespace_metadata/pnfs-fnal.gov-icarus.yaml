@@ -23,3 +23,4 @@ display: true # Whether or not to display this namespace
 name: ICARUS
 namespace: 
   - "/pnfs/fnal.gov/usr/icarus"
+publicObject: # Optional namespace path to a public object
