@@ -1,10 +1,9 @@
 description: |
   Namespace used by Fabio for ongoing CheckMK testing of NRP caches
-organization: UCSD
+organization: University of California, San Diego # Name of the organization
 dataVisibility: public
 size: null # In bytes so I can parse how I want
-bytesXferd: null # In bytes so I can parse how I want
-url: # Organization URL
+objectCount: null # Number of objects in the namespace
 fieldOfScience: Computer and Information Sciences and Support Services
 numberOfDatasets: null# Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
@@ -16,4 +15,6 @@ namespace:
 thirtyDayReads: 856217001500
 oneYearReads: 4022334926146365
 publicObject: # Optional namespace path to a public object
-organizationUrl:
+organizationUrl: null
+repositoryUrl: null
+publicObject: null
