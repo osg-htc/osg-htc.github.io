@@ -1,9 +1,9 @@
 description: |
-  This is a test origin utilized by staff of the [LIGO Laboratory](https://www.ligo.caltech.edu/) at
-  Caltech to test new versions of origin software and configuration, to ensure that upcoming changes
+  This is a test namespace utilized by staff of the [LIGO Laboratory](https://www.ligo.caltech.edu/) at
+  Caltech to test new versions of [Pelican](https://pelicanplatform.org/) software and configuration, to ensure that upcoming changes
   do not disrupt ongoing data analysis on any of the production origins.
 
-  This data is private
+  This data is private.
 organization: California Institute of Technology
 dataVisibility: private
 size: 15322207341
