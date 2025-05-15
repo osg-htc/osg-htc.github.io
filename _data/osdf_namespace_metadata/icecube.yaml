@@ -1,9 +1,9 @@
 description: |
-The **IceCube dataset** comes from the [*IceCube Neutrino Observatory*](https://icecube.wisc.edu), a cubic-kilometer detector embedded deep in Antarctic ice near the South Pole. It records when high-energy neutrinos interact with the ice. 
-
-Using over 5,000 optical sensors deployed between 1,450 and 2,450 meters below the surface, the observatory captures detailed information about these events, including their timing, location, and intensity. The data is used to study cosmic neutrinos and the astrophysical phenomena that produce them, such as **black holes**, **supernovae**, and **gamma-ray bursts**.
-
-[NSF EAGER Award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1941481)
+  The **IceCube dataset** comes from the [*IceCube Neutrino Observatory*](https://icecube.wisc.edu), a cubic-kilometer detector embedded deep in Antarctic ice near the South Pole. It records when high-energy neutrinos interact with the ice. 
+  
+  Using over 5,000 optical sensors deployed between 1,450 and 2,450 meters below the surface, the observatory captures detailed information about these events, including their timing, location, and intensity. The data is used to study cosmic neutrinos and the astrophysical phenomena that produce them, such as **black holes**, **supernovae**, and **gamma-ray bursts**.
+  
+  [NSF EAGER Award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1941481)
 
 organization: Wisconsin Icecube Particle Astrophysics Center # Name of the organization
 dataVisibility: private # public, or private
