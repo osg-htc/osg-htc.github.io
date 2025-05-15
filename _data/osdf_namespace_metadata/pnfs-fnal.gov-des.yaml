@@ -1,0 +1,21 @@
+description: |
+  The Dark Energy Survey (DES) will probe the origin of the accelerating universe and help uncover the nature of dark energy
+  by measuring the 14-billion-year history of cosmic expansion with high precision. A 570M-pix camera, the DECam, is being
+  built for this project and  comprehensive tests were successfully accomplished at Fermilab's telescope simulator (pictured above).
+  As we countdown to DECam's first light, workload and excitement increase among our collaborators. Starting in late 2011 and
+  continuing for five years, DES will survey a large swath of the southern sky out to vast distances in order to provide new clues
+  to this most fundamental of questions.
+organization: Fermi Lab National Accelerator Laboratory
+dataVisibility: public # public, or private
+size: 136000000000 # In bytes so I can parse how I want
+objectCount: 36656
+bytesXferd: null # In bytes so I can parse how I want
+url: https://astro.fnal.gov/the-des-project/
+fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+numberOfDatasets: null # Number of datasets in the namespace
+rank: 0 # Rank of the namespace, 0 will have the lowest priority
+inProgress: false # Whether or not the namespace is in progress
+display: true # Whether or not to display this namespace
+name: Dark Energy Survey
+namespace: 
+  - "/pnfs/fnal.gov/usr/des"
