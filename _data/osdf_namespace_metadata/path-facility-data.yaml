@@ -1,8 +1,16 @@
 description: |
-    Data in the PATh facility.
+  Staging area for data used in the [PATh Facility](https://path-cc.io/facility/index.html).
+  The PATh Facility is a distributed computing resource spanning 5 sites, from San Diego, California
+  to Syracuse, New York, that provides NSF-funded researches with compute credits for High Throughput
+  Computing workflows.
 
-    Associated with `/path-facility/projects`.
-organization: PATh
+  This repository enables these NSF projects to stage their research data
+  outputs to an object store connected to the OSDF and then process and analyze the data using
+  the OSDF via both the PATh Facility computing hardware and the [OSPool](https://osg-htc.org/ospool).
+
+  This data is organized as "working datasets" representing active workloads from researchers, not
+  permanent scientific outputs.
+organization: University of Wisconsin-Madison
 dataVisibility: private
 size: 13958398725 # In bytes so I can parse how I want
 bytesXferd:  # In bytes so I can parse how I want
@@ -17,4 +25,4 @@ namespace:
   - "/path-facility/data"
 thirtyDayReads: 5703247164232
 oneYearReads: 1242013815896678
-organizationUrl: https://path-cc.io/
+organizationUrl: https://wisc.edu/

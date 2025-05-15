@@ -2,8 +2,10 @@ description: |
   MicroBooNE is a large 170-ton liquid-argon time projection chamber (LArTPC) neutrino experiment located on the Booster
   neutrino beamline at Fermilab. The experiment first started collecting neutrino data in October 2015.
 
-  MicroBooNE will investigate the low energy excess events observed by the MiniBooNE experiment, measure a suite of low
+  MicroBooNE investigates the low energy excess events observed by the MiniBooNE experiment, measure a suite of low
   energy neutrino cross sections, and investigate astro-particle physics.
+
+  MicroBooNE uses the OSDF to deliver common data inputs for large-scale simulation jobs distributed across the US.
 organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 3500000000000 # In bytes so I can parse how I want
@@ -19,4 +21,4 @@ name: MicroBooNE
 namespace: 
   - "/pnfs/fnal.gov/usr/uboone"
 publicObject: # Optional namespace path to a public object
-organizationUrl: https://microboone.fnal.gov/
+organizationUrl: https://fnal.gov/

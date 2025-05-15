@@ -3,6 +3,8 @@ description: |
   Since the late 1990s, physicists have known that neutrinos exhibit a quantum mechanical behavior called oscillations. But
   this behavior is not predicted by the Standard Model of particle physics. NOvA is working to better understand these strange
   particles through precision measurements of their oscillation properties.
+
+  NOvA uses the OSDF to deliver common data inputs for large-scale simulation jobs distributed across the US.
 organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 10800000000000 # In bytes so I can parse how I want
@@ -18,4 +20,4 @@ name: NOVA
 namespace: 
   - "/pnfs/fnal.gov/usr/nova"
 publicObject: # Optional namespace path to a public object
-organizationUrl: https://novaexperiment.fnal.gov/
+organizationUrl: https://fnal.gov/
