@@ -24,4 +24,4 @@ name: SPIn4D Data Release 1
 namespace: 
   - "/uhkoa/SPIN4D-DR1"
 publicObject: # Optional namespace path to a public object
-organizationUrl: http://dtn-itc.ifa.hawaii.edu/spin4d/DR1/
+organizationUrl: https://manoa.hawaii.edu/
