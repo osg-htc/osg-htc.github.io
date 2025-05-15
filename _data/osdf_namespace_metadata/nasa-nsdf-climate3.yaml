@@ -1,17 +1,31 @@
 description: |
+  The [NASA C1440-LLC2160 dataset](https://data.nas.nasa.gov/geoseccoviz/geoseccovizdata/c1440_llc2160/GEOS/)
+  is [the simulation output from research into coupling two models](https://www.nas.nasa.gov/SC21/research/project16.html):
+  a global atmospheric model and a global ocean model that were originally
+  designed to be run separately. The atmospheric model is a C1440
+  configuration of the Goddard Earth Observing System (GEOS) atmospheric
+  model running on a cubed-sphere grid. The global ocean model is an LLC2160
+  configuration of the MITgcm model that uses a latlon-cap grid. Each model
+  was run for over 10000 hourly timesteps covering over 14 simulation
+  months. With more than 10000 time steps and multiple scalar fields, it
+  totals approximately 1.8 PB.
 
-organization: # Name of the organization
-dataVisibility: # public, or private
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: # Organization URL
-fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
-numberOfDatasets: # Number of datasets in the namespace
-rank: 0 # Rank of the namespace, 0 will have the lowest priority
-inProgress: false # Whether or not the namespace is in progress
-display: true # Whether or not to display this namespace
-name: # Human readable name of the namespace
-namespace: 
+  In order to make this dataset more accessible and easier to visualize, the
+  [National Science Data Fabric](https://nationalsciencedatafabric.org/) has
+  processed the raw data into the [ViSUS](https://visus.org/) data format
+  using their [OpenViSUS](https://github.com/sci-visus/OpenVisus) toolsuite.
+organization: National Science Data Fabric
+dataVisibility: public
+size: 719098913751040  # bytes
+bytesXferd:  # bytes
+url: https://nationalsciencedatafabric.org/
+fieldOfScience: Physical Sciences  # 40.0402
+numberOfDatasets: 1
+rank: 0  # zero is lowest priority
+inProgress: true
+display: true
+name: NASA C1440-LLC2160, DYAMOND
+namespace:
   - "/nasa/nsdf/climate3"
 thirtyDayReads: 472358196
 oneYearReads: 472358196
