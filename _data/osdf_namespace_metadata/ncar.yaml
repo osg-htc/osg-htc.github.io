@@ -30,7 +30,6 @@ organization: NSF National Center for Atmospheric Research
 dataVisibility: public # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
-url: https://ncar.ucar.edu # Organization URL
 fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: # Number of datasets in the namespace
 rank: 2 # Rank of the namespace, 0 will have the lowest priority
