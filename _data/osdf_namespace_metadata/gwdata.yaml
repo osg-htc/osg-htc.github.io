@@ -5,13 +5,16 @@ description: |
   in the detection and study of black holes throughout the universe.
 
   These datasets are the calibrated readouts from the corresponding interferometers.
+  Also included are mirrors of data analysis products released to zenodo to
+  accompany publications.
 organization: California Institute of Technology
 dataVisibility: public
-size: # In bytes so I can parse how I want
+size: 341886627771
+objectCount: 1393
 bytesXferd: # In bytes so I can parse how I want
 url: https://gwosc.org/
 fieldOfScience: Astronomy and Astrophysics
-numberOfDatasets: # Number of datasets in the namespace
+numberOfDatasets: 70
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
