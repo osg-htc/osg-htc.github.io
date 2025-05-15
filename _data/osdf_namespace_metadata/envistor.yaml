@@ -1,15 +1,30 @@
 description: |
+  The South Florida region is home to nearly 10 million people, and the population is growing. The region faces several challenges,
+  such as rising sea levels and flooding, harmful algae blooms, water contamination, and wildlife habit loss, which affects the economy
+  and the welfare of its population. Florida International University (FIU) will build EnviStor, which aims to be a centrally managed
+  Petabyte scale storage system that is also a clearing house for supporting interdisciplinary research and modeling involving both built
+  and natural environments in South Florida. EnviStor provides opportunities for students (75% of whom coming from underrepresented groups
+  in STEM) and faculty to enhance their knowledge of database management, focusing on interoperability.
 
-organization: # Name of the organization
-dataVisibility: # public, or private
+  EnviStor facilitates inter and intra-campus capabilities, augmenting the current FIU storage capabilities from the Terabyte to the
+  Petabyte scale through a low-latency, high-performance, and cost-effective architecture to facilitate the creation of science data
+  products. Data backups will be sent to the cloud, ensuring data preservation. In addition, the architecture will include interfaces
+  that facilitate the sharing of datasets at intra- and inter-campus levels. EnviStor will share 20% of its storage resources by federating
+  with the OSDF (Open Science Data Federation) and leveraging FIU?s Dataverse repository. This effort is also supported by National Discovery
+  Cloud for Climate (NDC-C) resources.
+
+  [NSF CC* Award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2322308)
+
+organization: Florida International University
+dataVisibility: public
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
-url: # Organization URL
-fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+url: https://www.cis.fiu.edu/kfscis-professor-awarded-500000-nsf-grant-for-environment/
+fieldOfScience: "Natural Resources and Conservation"
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
-inProgress: false # Whether or not the namespace is in progress
+inProgress: true # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
-name: # Human readable name of the namespace
+name: EnviStor
 namespace: 
   - "/envistor"
