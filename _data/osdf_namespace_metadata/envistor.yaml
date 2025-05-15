@@ -15,7 +15,7 @@ organization: Florida International University
 dataVisibility: public
 size: null # In bytes so I can parse how I want
 objectCount: null
-fieldOfScience: "Natural Resources and Conservation"
+fieldOfScience: Natural Resources and Conservation
 numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: true # Whether or not the namespace is in progress
