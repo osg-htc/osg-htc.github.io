@@ -12,4 +12,4 @@ inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
-	- "/et-gw/PUBLIC"
+  - "/et-gw/PUBLIC"

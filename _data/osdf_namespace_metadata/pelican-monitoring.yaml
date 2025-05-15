@@ -11,4 +11,4 @@ rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: false # Whether or not to display this namespace
 namespace: 
-	- "/pelican/monitoring"
+  - "/pelican/monitoring"
