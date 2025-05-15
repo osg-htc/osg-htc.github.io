@@ -1,5 +1,5 @@
 description: |
-
+ General namespace for Purdue University OSStore contribution.
 organization: Purdue University # Name of the organization
 dataVisibility: # public, or private
 size: # In bytes so I can parse how I want

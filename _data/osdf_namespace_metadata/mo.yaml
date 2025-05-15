@@ -1,5 +1,5 @@
 description: |
-
+ General namespace for University of Missouri OSStore contribution. 
 organization: University of Missouri # Name of the organization
 dataVisibility: # public, or private
 size: # In bytes so I can parse how I want
