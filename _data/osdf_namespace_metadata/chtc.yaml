@@ -15,10 +15,9 @@ description: |
 organization: University of Wisconsin - Madison
 dataVisibility: private # public, or private
 size: 445115415442995 # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://chtc.wisc.edu # Organization URL
+objectCount: null
 fieldOfScience: Multi/Interdisciplinary Studies
-numberOfDatasets: # Number of datasets in the namespace
+numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
@@ -29,3 +28,5 @@ namespace:
 thirtyDayReads: 122298434257295
 oneYearReads: 5339965187224643
 organizationUrl: https://chtc.wisc.edu
+repositoryUrl:
+  url: null
