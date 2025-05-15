@@ -11,8 +11,8 @@ description: |
   - inform science, technology, and communications public policies.
 organization: Center for Applied Internet Data Analysis (CAIDA)
 dataVisibility: private
-size: 106000000000000 # NOTE -- Justin added up approx sizes of all their listed datasets, but I'm unsure if all are currently available via OSDF.
-bytesXferd: # unknown
+size: null # cumulative size of their online catalog is 106000000000000b, but most is not yet accessible
+bytesXferd: null # unknown
 url: https://www.caida.org/
 fieldOfScience: COMPUTER AND INFORMATION SCIENCES AND SUPPORT SERVICES
 numberOfDatasets: 148
