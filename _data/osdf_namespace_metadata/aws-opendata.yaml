@@ -33,5 +33,5 @@ oneYearReads: null
 organizationUrl: https://aws.amazon.com/opendata/
 repositoryUrl:
   url: https://registry.opendata.aws/
-  label: Registry of Open Data on AWS
+  label: Dataset Catalog
 publicObject: /aws-opendata/us-east-1/tcga-2-open/01063b4e-5a0d-4f11-8061-f8fd9a5f2fa5/5e3fd2aa-e0dd-4fe8-9944-05bba5d6bd91.FPKM.txt.gz # Object from the cancer genome atlas. Tested with pelican object get pelican://osg-htc.org/aws-opendata/us-east-1/tcga-2-open/01063b4e-5a0d-4f11-8061-f8fd9a5f2fa5/5e3fd2aa-e0dd-4fe8-9944-05bba5d6bd91.FPKM.txt.gz .
