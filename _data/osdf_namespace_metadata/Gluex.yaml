@@ -5,4 +5,4 @@ size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
 url: # Organization URL
 fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
-namespace: "/Gluex"
+numberOfDatasets: # Number of datasets in the namespacenamespace: "/gluex"
