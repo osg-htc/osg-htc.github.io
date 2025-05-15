@@ -1,0 +1,26 @@
+---
+name:
+namespace:
+  - "/noaa/fisheries-1"
+  - "/noaa/fisheries-2"
+description: |
+  ???
+
+organization:
+organizationUrl:
+repositoryUrl:
+  url:
+fieldOfScience: Natural Resources and Conservation  # 03.0301
+numberOfDatasets: 1
+
+dataVisibility: public
+publicObject:
+size:  # bytes
+
+display: false
+rank: 0  # zero is lowest priority
+inProgress: false
+
+bytesXferd:  # bytes
+thirtyDayReads:
+oneYearReads:
