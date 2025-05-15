@@ -1,15 +1,21 @@
 description: |
+  The Electron-Ion Collider is a proposed facility being built at
+  the Brookhaven National Laboratory.  Experiments at the facility
+  include the ePIC detector.  The computing for EIC is a joint collaboration
+  with the [Jefferson National Lab](https://www.jlab.org/eic); the datasets
+  connected to the OSDF include input files and other information necessary
+  to help with simulations of the detector's behavior.
 
-organization: # Name of the organization
+organization: Jefferson National Lab
 dataVisibility: # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
-url: # Organization URL
-fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+url: https://www.jlab.org/eic
+fieldOfScience: Nuclear Physics
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
-name: # Human readable name of the namespace
+name: Electron-Ion Collider Simulations
 namespace: 
   - "/eic"
