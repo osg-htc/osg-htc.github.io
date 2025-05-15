@@ -16,3 +16,4 @@ namespace:
 thirtyDayReads: 14957546805
 oneYearReads: 8172086399139906
 publicObject: # Optional namespace path to a public object
+organizationUrl:

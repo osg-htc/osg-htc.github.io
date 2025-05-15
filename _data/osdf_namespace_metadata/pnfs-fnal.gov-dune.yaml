@@ -21,3 +21,4 @@ name: DUNE
 namespace: 
   - "/pnfs/fnal.gov/usr/dune"
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://lbnf-dune.fnal.gov/

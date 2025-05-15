@@ -12,7 +12,6 @@ organization: University of California, San Diego
 dataVisibility: private
 size: null # In bytes so I can parse how I want
 objectCount: null
-url: https://www.caida.org/
 fieldOfScience: Computer and Information Sciences and Support Services # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority

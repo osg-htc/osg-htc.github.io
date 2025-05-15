@@ -21,3 +21,4 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 130362
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://www.jessiekb.com/

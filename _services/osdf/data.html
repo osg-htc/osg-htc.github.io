@@ -47,7 +47,7 @@
     </div>
     <div id="wrapper" class="overflow-auto"></div>
 
-    <p class="fs-5">
+    <p class="fs-5 mt-4">
         The OSDF is a data federation, connecting independently operated storage.
         Visit the links above for information about data access policies, how to
         use the data, and more up-to-date information about what data is included.
@@ -57,8 +57,8 @@
 
 <div id="" class="my-5 wave-osdf-display text-display">
     <div class="container-xxl mw-1000">
-        <div class="row gx-3">
-            <div class="col-4">
+        <div class="row gx-3 justify-content-center">
+            <div class="col-12 col-md-4">
                 <div class="">
                     <div id="connected" class="big-number">1</div>
                     <div class="big-label">Repositories</div>
@@ -67,7 +67,7 @@
                     available via the OSDF
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <div>
                     <div id="transferred" class="big-number">1</div>
                     <div class="big-label">Objects per Second</div>
@@ -76,7 +76,7 @@
                     transferred on average
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <div>
                     <div id="delivered" class="big-number">1</div>
                     <div class="big-label">Petabytes</div>
@@ -126,7 +126,8 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div>
-                            <h5 class="mb-1">Organization </h5><p class="data-organization"></p>
+                            <h5 class="mb-1">Organization </h5>
+                            <p class="data-organization"></p>
                         </div>
                         <div>
                             <h5 class="mb-1">Field of Research</h5><p class="data-fieldOfScience"></p>
@@ -141,6 +142,37 @@
                         </div>
                     </div>
                 </div>
+                <div id="" class="my-5 wave-osdf-display text-display">
+                    <div class="row gx-3 justify-content-center mx-2">
+                        <div class="col-12 col-md-6 col-lg-4 d-none">
+                            <div class="">
+                                <div id="numberOfDatasets" class="big-number">1</div>
+                                <div class="big-label">Datasets</div>
+                            </div>
+                            <div class="rounded bg-secondary p-2 fs-4 text-center">
+                                available via the OSDF
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 d-none">
+                            <div>
+                                <div id="oneYearReads" class="big-number">1</div>
+                                <div class="big-label"></div>
+                            </div>
+                            <div class="rounded bg-secondary p-2 fs-4 text-center">
+                                of data delivered (12 mos)
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 d-none">
+                            <div>
+                                <div id="size" class="big-number">1</div>
+                                <div class="big-label"></div>
+                            </div>
+                            <div class="rounded bg-secondary p-2 fs-4 text-center">
+                                of data connected
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -148,55 +180,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        let counter = async (id, endValue, numIncrements, decimals=0) => {
-            let node = document.getElementById(id)
-
-            let valueArray = [...Array(numIncrements).keys()].map((value, index) => {
-                return Math.floor(endValue * (Math.sqrt((index+1)/numIncrements)))
-            })
-
-            let index = 0;
-            let interval = setInterval(() => {
-                if (index >= valueArray.length) {
-                    clearInterval(interval)
-                } else {
-                    node.textContent = int_to_small_format(valueArray[index], decimals)
-                }
-                index += 1;
-            }, 50)
-        }
-
-        async function initialize_ospool_report () {
-           counter("connected", 32, 20)
-            counter("transferred", 127, 20)
-            counter("delivered", 129, 20)
-        }
-
-        /**
-         * A function to convert large numbers into a < 4 char format, i.e. 100,000 to 100k or 10^^9 to 1b
-         *
-         * It would be interesting to find a solution to this that is better than O(N)
-         * @param int An integer
-         * @param decimals The amount of decimal places to include
-         */
-        function int_to_small_format(int, decimals=0) {
-            if(int < 10**3) {
-                return int.toFixed(decimals)
-            } else if ( int < 10**6 ) {
-                return (int / 10**3).toFixed(decimals) + "K"
-            } else if ( int < 10**9 ) {
-                return (int / 10**6).toFixed(decimals) + "M"
-            } else if ( int < 10**12 ) {
-                return (int / 10**9).toFixed(decimals) + "B"
-            } else {
-                return int.toFixed(decimals)
-            }
-        }
-
-
-        initialize_ospool_report()
-    })
-</script>

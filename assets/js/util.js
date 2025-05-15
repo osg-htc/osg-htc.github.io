@@ -123,9 +123,10 @@ const bytesSizesLong = ['Bytes', 'Kilobytes', 'Megabytes', 'Gigabytes', 'Terabyt
 
 function formatBytes(bytes, long=false) {
     if (bytes === 0) return '0 Bytes';
+    if (!bytes) return bytes;
     const k = 1000;
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    const byteValue = parseFloat((bytes / Math.pow(k, i)).toFixed(2))
+    const byteValue = parseFloat((bytes / Math.pow(k, i)).toFixed(0))
 
     if(long){
         return `${byteValue} ${bytesSizesLong[i]}`

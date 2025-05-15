@@ -41,6 +41,31 @@ class ProjectDisplay{
         });
     }
 
+    updateBigNumberValue(id, value, label = null){
+        const node = document.getElementById(id)
+
+        // Check that the data exists
+        if (!value) {
+
+            // If you can see the parent
+            if (!node.parentNode.parentNode.classList.contains("d-none")) {
+                // If the value is empty, hide the parent
+                node.parentNode.parentNode.classList.add("d-none")
+            }
+
+            return
+        }
+
+        // If there is a label swap it
+        if (label) {
+            node.nextElementSibling.innerText = label
+        }
+
+        node.innerText = value
+        node.parentNode.parentNode.classList.remove("d-none")
+
+    }
+
     update({
        description,
        organization,
@@ -55,6 +80,8 @@ class ProjectDisplay{
        display,
        name,
        namespace,
+       oneYearReads,
+       publicObject,
        id
     }) {
         this.id = id
@@ -67,6 +94,16 @@ class ProjectDisplay{
         this.updateTextValue("data-organization", organization);
         this.updateTextValue("data-fieldOfScience", fieldOfScience);
         this.updateTextValue("data-description", description);
+
+        // Update the big value numbers
+        let [readsValue, readsLabel] = formatBytes(oneYearReads, true)?.split(" ") || [null, null]
+        this.updateBigNumberValue("oneYearReads", readsValue, readsLabel);
+
+        this.updateBigNumberValue("numberOfDatasets", numberOfDatasets);
+
+        let [sizeValue, sizeLabel] = formatBytes(size, true)?.split(" ") || [null, null]
+        this.updateBigNumberValue("size", sizeValue, sizeLabel);
+
         this.setUrl();
         this.display_modal.show();
     }
@@ -203,7 +240,7 @@ class DataManager {
 
     getData = () => {
 
-        const data = {
+        let data = {
             {% for d in site.data.osdf_namespace_metadata %}
                 {{ d[0] | jsonify }}: {
                     {% for k in d[1] %}
@@ -312,3 +349,52 @@ const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 const project_page = new DataPage()
 
+document.addEventListener("DOMContentLoaded", function(event) {
+    let counter = async (id, endValue, numIncrements, decimals=0) => {
+        let node = document.getElementById(id)
+
+        let valueArray = [...Array(numIncrements).keys()].map((value, index) => {
+            return Math.floor(endValue * (Math.sqrt((index+1)/numIncrements)))
+        })
+
+        let index = 0;
+        let interval = setInterval(() => {
+            if (index >= valueArray.length) {
+                clearInterval(interval)
+            } else {
+                node.textContent = int_to_small_format(valueArray[index], decimals)
+            }
+            index += 1;
+        }, 50)
+    }
+
+    async function initialize_ospool_report () {
+        counter("connected", 32, 20)
+        counter("transferred", 127, 20)
+        counter("delivered", 129, 20)
+    }
+
+    /**
+     * A function to convert large numbers into a < 4 char format, i.e. 100,000 to 100k or 10^^9 to 1b
+     *
+     * It would be interesting to find a solution to this that is better than O(N)
+     * @param int An integer
+     * @param decimals The amount of decimal places to include
+     */
+    function int_to_small_format(int, decimals=0) {
+        if(int < 10**3) {
+            return int.toFixed(decimals)
+        } else if ( int < 10**6 ) {
+            return (int / 10**3).toFixed(decimals) + "K"
+        } else if ( int < 10**9 ) {
+            return (int / 10**6).toFixed(decimals) + "M"
+        } else if ( int < 10**12 ) {
+            return (int / 10**9).toFixed(decimals) + "B"
+        } else {
+            return int.toFixed(decimals)
+        }
+    }
+
+
+    initialize_ospool_report()
+})

@@ -1,5 +1,5 @@
 description: |
-
+  Note: this is a duplicate FDP namespace that Brian merged with fdp-hpe.yaml
 organization: # Name of the organization
 dataVisibility: # public, or private
 size: # In bytes so I can parse how I want
@@ -9,7 +9,7 @@ fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.go
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
-display: true # Whether or not to display this namespace
+display: false # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/nrp/fdp"
@@ -17,3 +17,4 @@ thirtyDayReads: 0
 oneYearReads: 4431898151243586
 thirtyDayReads: 0
 oneYearReads: 4431898151243586
+organizationUrl:
