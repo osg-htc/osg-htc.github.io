@@ -1,0 +1,17 @@
+---
+    title: Data in the OSDF
+    layout: padded-default
+    js_extension:
+    -   src: "https://unpkg.com/gridjs/dist/gridjs.umd.js"
+        loading:
+    -   src: "https://unpkg.com/lunr/lunr.js"
+        loading:
+    -   src: "/assets/js/osdf-data-page-v4.js"
+        loading: "defer"
+        type: "module"
+    css_extension:
+    -  href: "https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+    permalink: /services/osdf/data.html
+---
+
+{{ site.data.osdf_namespace_metadata | jsonify }}

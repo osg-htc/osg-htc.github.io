@@ -2,7 +2,8 @@ description: |
     Special projects data in the PATh facility.
 
     To avoid redundancy, focus on `/path-facility/data` instead.
-organizationType: # public, or private
+organization: # Name of the organization
+dataVisibility: # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
 url: # Organization URL

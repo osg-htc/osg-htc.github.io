@@ -1,6 +1,7 @@
 description: |
 
-organizationType: # public, or private
+organization: # Name of the organization
+dataVisibility: # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
 url: # Organization URL
