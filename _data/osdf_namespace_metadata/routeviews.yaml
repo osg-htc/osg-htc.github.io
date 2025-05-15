@@ -11,20 +11,18 @@ description: |
   [Cisco Systems](https://www.cisco.com/), the [Defense Advanced Research Projects Agency](https://www.darpa.mil/),
   [Juniper Networks](https://www.juniper.net/), Sprint Advanced Technology Laboratories,
   [Catchpoint](https://catchpoint.com/) and the providers who graciously provide their BGP views.
-
 organization: University of Oregon
 dataVisibility: public
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
+size: 113627027734528  # bytes
+bytesXferd:  # bytes
 url: https://www.routeviews.org/routeviews/
-# 11.0901
-fieldOfScience: Computer and Information Sciences and Support Services
-numberOfDatasets: # Number of datasets in the namespace
-rank: 0 # Rank of the namespace, 0 will have the lowest priority
-inProgress: false # Whether or not the namespace is in progress
-display: true # Whether or not to display this namespace
+fieldOfScience: Computer and Information Sciences and Support Services  # 11.0901
+numberOfDatasets: 1
+rank: 0  # zero is lowest priority
+inProgress: false
+display: true
 name: RouteViews
-namespace: 
+namespace:
   - "/routeviews"
 thirtyDayReads: 176869801
 oneYearReads: 176869894
