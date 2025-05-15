@@ -10,11 +10,9 @@ description: |
   [DE-SC0024426](https://pamspublic.science.energy.gov/WebPAMSExternal/Interface/Common/ViewPublicAbstract.aspx?rv=5b18d4f7-1f1a-4858-b35a-1040e0f1900a&rtc=24&PRoleId=10).
 organization: General Atomics
 dataVisibility: private
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://fdp.readthedocs.io/en/latest/user_guide.html
-fieldOfScience: Nuclear Physics
-numberOfDatasets: # Number of datasets in the namespace
+size: null # In bytes so I can parse how I want
+fieldOfScience: Physical Sciences
+numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
@@ -25,3 +23,5 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 409563225097221
 organizationUrl: https://fdp.readthedocs.io/en/latest/user_guide.html
+repositoryUrl:
+  url: null
