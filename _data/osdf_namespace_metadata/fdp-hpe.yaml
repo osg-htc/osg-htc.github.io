@@ -1,11 +1,16 @@
 description: |
+  The [Fusion Data Platform](https://github.com/Fusion-Data-Platform/fdp) (FDP) provides
+  a modern, Python-based data framework for analyzing data from magnetic fusion experiments.
 
-organization: # Name of the organization
-dataVisibility: # public, or private
+  Using data from the [DIII-D National Fusion Facility](https://www.ga.com/magnetic-fusion/diii-d),
+  users can leverage the FDP software to stream data via the OSDF services for their fusion data
+  analysis
+organization: General Atomics
+dataVisibility: private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
-url: # Organization URL
-fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+url: https://fdp.readthedocs.io/en/latest/user_guide.html
+fieldOfScience: Nuclear Physics
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
@@ -13,3 +18,6 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/fdp-hpe"
+  - "/nrp/fdp"
+thirtyDayReads: 0
+oneYearReads: 409563225097221

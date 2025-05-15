@@ -13,3 +13,5 @@ display: false # Whether or not to display this namespace
 name: University of Hawai'i KoaStore# Human readable name of the namespace
 namespace: 
   - "/uhkoa"
+thirtyDayReads: 0
+oneYearReads: 1669909818762

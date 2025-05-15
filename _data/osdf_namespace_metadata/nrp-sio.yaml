@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/nrp/sio"
+thirtyDayReads: 38285252813
+oneYearReads: 4022334926146365

@@ -14,3 +14,5 @@ inProgress: false # Whether or not the namespace is in progress
 display: false # Whether or not to display this namespace
 namespace: 
   - "/path-facility/projects"
+thirtyDayReads: 29523415051
+oneYearReads: 1241954326373335

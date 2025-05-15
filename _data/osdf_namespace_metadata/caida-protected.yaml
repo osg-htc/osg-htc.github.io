@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/caida/protected"
+thirtyDayReads: 0
+oneYearReads: 2428996385122106

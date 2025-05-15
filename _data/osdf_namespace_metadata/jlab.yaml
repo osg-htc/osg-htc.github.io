@@ -1,15 +1,23 @@
 description: |
+  The Jefferson National Laboratory (JLab) operates particle accelerator
+  facilities and associated detectors for experiments like
+  [GlueX](https://www.gluex.org/).
 
-organization: # Name of the organization
-dataVisibility: # public, or private
+  JLab connects its storage to the OSDF to allow large-scale data simulation
+  and reprocessing on the PATh-operated [OSPool resources](https://osg-htc.org/services/ospool/) and JLab-provided
+  capacity.
+organization: Jefferson National Laboratory
+dataVisibility: private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
-url: # Organization URL
-fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+url: https://www.jlab.org/
+fieldOfScience: Physics
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
-name: # Human readable name of the namespace
+name: JLab Simulation Datasets
 namespace: 
   - "/jlab"
+thirtyDayReads: 0
+oneYearReads: 636965041436104

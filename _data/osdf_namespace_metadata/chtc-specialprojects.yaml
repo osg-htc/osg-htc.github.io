@@ -13,3 +13,7 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/chtc/specialprojects"
+thirtyDayReads: 5286894039594
+oneYearReads: 5339965187224643
+thirtyDayReads: 5286894039594
+oneYearReads: 5339965187224643

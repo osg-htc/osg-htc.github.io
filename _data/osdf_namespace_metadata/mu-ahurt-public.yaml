@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/mu/ahurt/public"
+thirtyDayReads: 0
+oneYearReads: 970306300

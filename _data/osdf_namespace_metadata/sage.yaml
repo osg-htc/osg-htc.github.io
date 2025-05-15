@@ -1,0 +1,24 @@
+description: |
+  The Sage project provides a platform for AI computing at the edge.  It operates
+  a nationwide infrastructure of distributed sensors - from urban landscapes to remote
+  mountainsides - that collect, process using AI techniques, and aggregate data.
+
+  With over 100 Sage nodes deployed across 17 states, including fire-prone regions in
+  the Western U.S., the platform supports rapid-response science and sustained observation
+  of ecological systems, agriculture, urban environments, and weather-related hazards.
+
+  Sage uploads its data into NSF CC* funded storage systems connected to the OSDF.  Data
+  access requires a Sage account; more information can be found in [the Sage documentation](https://sagecontinuum.org/docs/tutorials/accessing-data) and tutorials.
+organization: Northwestern University
+dataVisibility: private
+size: 116631128783045
+bytesXferd: # In bytes so I can parse how I want
+url: https://sagecontinuum.org/
+fieldOfScience: Computer and Information Sciences
+numberOfDatasets: # Number of datasets in the namespace
+rank: 0 # Rank of the namespace, 0 will have the lowest priority
+inProgress: false # Whether or not the namespace is in progress
+display: true # Whether or not to display this namespace
+name: Sage AI at the Edge # Human readable name of the namespace
+namespace: 
+  - "/sage"

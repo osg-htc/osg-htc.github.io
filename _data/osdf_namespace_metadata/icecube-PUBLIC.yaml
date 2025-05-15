@@ -12,3 +12,5 @@ inProgress: false # Whether or not the namespace is in progress
 display: false # Whether or not to display this namespace
 namespace: 
   - "/icecube/PUBLIC"
+thirtyDayReads: 138632907277119
+oneYearReads: 8172086399139906

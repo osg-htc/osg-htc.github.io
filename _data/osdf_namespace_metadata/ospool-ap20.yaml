@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/ospool/ap20"
+thirtyDayReads: 1779031566288032
+oneYearReads: 66657090789660448

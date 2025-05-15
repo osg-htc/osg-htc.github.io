@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/et-gw/PUBLIC"
+thirtyDayReads: 14957546805
+oneYearReads: 8172086399139906

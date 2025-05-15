@@ -13,3 +13,5 @@ display: false # Whether or not to display this namespace
 name: Purdue University OSStore # Human readable name of the namespace
 namespace: 
   - "/purdue"
+thirtyDayReads: 0
+oneYearReads: 0

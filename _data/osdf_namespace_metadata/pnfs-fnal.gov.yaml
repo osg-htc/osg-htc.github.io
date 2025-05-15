@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/pnfs/fnal.gov"
+thirtyDayReads: 25281384551835
+oneYearReads: 2480817800284764

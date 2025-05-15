@@ -26,3 +26,5 @@ display: true # Whether or not to display this namespace
 name: RouteViews
 namespace: 
   - "/routeviews"
+thirtyDayReads: 176869801
+oneYearReads: 176869894
