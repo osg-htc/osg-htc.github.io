@@ -3,7 +3,7 @@ description: |
 
     Associated with `/path-facility/projects`.
 organization: PATh
-dataVisibility: public
+dataVisibility: private
 size: 13958398725 # In bytes so I can parse how I want
 bytesXferd:  # In bytes so I can parse how I want
 url: https://path-cc.io/  # Organization URL
