@@ -20,3 +20,4 @@ name: Dark Energy Survey
 namespace: 
   - "/pnfs/fnal.gov/usr/des"
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://astro.fnal.gov/the-des-project/

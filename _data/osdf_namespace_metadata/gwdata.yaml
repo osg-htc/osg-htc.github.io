@@ -24,3 +24,4 @@ namespace:
 thirtyDayReads: 60654177017013
 oneYearReads: 366130970071859
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://gwosc.org/

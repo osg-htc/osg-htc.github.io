@@ -1,7 +1,12 @@
 description: |
-  The MeerKAT Absorption Line Survey (MALS) consists of 1655 hrs of MeerKAT time
+  The MeerKAT Absorption Line Survey (MALS) consists of 1,655 hours of observatory time on the
+  [MeerKAT](https://www.sarao.ac.za/science/meerkat/about-meerkat/) radio telescope at the South
+  African Radio Astronomy Observatory.  The survey aims
   to carry out the most sensitive search of HI and OH absorption lines at 0<z<2,
   the redshift range over which most of the cosmic evolution in the star formation rate density takes place.
+
+  The MALS dataset is replicated to the OSDF to allow collaborators at the [NRAO](https://public.nrao.edu/)
+  participate in the scientific study of the data.
 organization: Inter-University Centre for Astronomy and Astrophysics
 dataVisibility: public
 size: 250000000000000
@@ -18,3 +23,4 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 0
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://mals.iucaa.in/

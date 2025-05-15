@@ -1,12 +1,18 @@
 description: |
-  The **IceCube dataset** comes from the [*IceCube Neutrino Observatory*](https://icecube.wisc.edu), a cubic-kilometer detector embedded deep in Antarctic ice near the South Pole. It records when high-energy neutrinos interact with the ice. 
+  The **IceCube repository** integrates data from the [*IceCube Neutrino Observatory*](https://icecube.wisc.edu),
+  a cubic-kilometer detector embedded deep in Antarctic ice near the South Pole. IceCube records when high-energy
+  neutrinos interact with the ice. 
   
-  Using over 5,000 optical sensors deployed between 1,450 and 2,450 meters below the surface, the observatory captures detailed information about these events, including their timing, location, and intensity. The data is used to study cosmic neutrinos and the astrophysical phenomena that produce them, such as **black holes**, **supernovae**, and **gamma-ray bursts**.
+  Using over 5,000 optical sensors deployed between 1,450 and 2,450 meters below the surface, the observatory
+  captures detailed information about these events, including their timing, location, and intensity. The data
+  is used to study cosmic neutrinos and the astrophysical phenomena that produce them, such as **black holes**,
+  **supernovae**, and **gamma-ray bursts**.
   
   The IceCube collaboration is supported by [multiple funding agencies](https://icecube.wisc.edu/collaboration/funding/) including
-  the [NSF](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2042807)
+  the [NSF](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2042807).  The dataset is maintained by the
+  Wisconsin Icecube Particle Astrophysics Center.
 
-organization: Wisconsin Icecube Particle Astrophysics Center # Name of the organization
+organization: University of Wisconsin-Madison
 dataVisibility: private # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
@@ -19,5 +25,7 @@ display: true # Whether or not to display this namespace
 name: IceCube Neutrino Data # Human readable name of the namespace
 namespace: 
   - "/icecube"
+  - "/icecube/PUBLIC"
 thirtyDayReads: 138632907277119
 oneYearReads: 7727207464114454
+organizationUrl: https://wipac.wisc.edu

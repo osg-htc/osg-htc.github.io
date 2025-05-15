@@ -24,3 +24,4 @@ name: ICARUS
 namespace: 
   - "/pnfs/fnal.gov/usr/icarus"
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://icarus.fnal.gov/

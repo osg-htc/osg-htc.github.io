@@ -226,7 +226,7 @@ th, td {
 @include media-breakpoint-down(md) {
   .wave-osdf-display {
     position: relative;
-    height: 160px;
+    height: 550px;
     overflow: hidden;
 
     .big-number {
@@ -249,7 +249,7 @@ th, td {
 @include media-breakpoint-up(md) {
   .wave-osdf-display {
     position: relative;
-    height: 240px;
+    height: 260px;
     overflow: hidden;
 
     .big-number {
@@ -276,7 +276,7 @@ th, td {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 0;
   background: url({{ '/assets/images/Waves_Background-01.png' | relative_url }}) no-repeat center bottom;;
 }
 

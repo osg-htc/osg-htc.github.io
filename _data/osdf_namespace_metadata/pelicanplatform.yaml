@@ -17,3 +17,4 @@ namespace:
 thirtyDayReads: 61976853904
 oneYearReads: 9200333527202
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://pelicanplatform.org

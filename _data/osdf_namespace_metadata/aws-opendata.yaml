@@ -8,9 +8,12 @@ description: |
 
   There are currently nearly **700 datasets**, totaling over **100 petabytes of data**.
 
-
   Browse the full catalog at the **[Registry of Open Data on AWS](https://registry.opendata.aws)**.
 
+  The AWS Open Data datasets are publicly accessible and are integrated with the OSDF, allowing
+  users to stage the data closer to nationally-funded computing resources via the OSDF's
+  hardware infrastructure.  This enables fusion between AWS Open Data and other data sources
+  accessible via the OSDF.
 
 organization: Amazon Web Services, Inc.
 dataVisibility: public
@@ -28,3 +31,4 @@ namespace:
   - /aws-opendata/us-west-1
   - /aws-opendata/us-west-2
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://aws.amazon.com/opendata/
