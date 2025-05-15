@@ -35,26 +35,27 @@
         <div class="col-4">
             <span class="big-number"><span id="connected">1</span> PB</span>
             <div class="rounded bg-secondary p-2 fs-4">
-                of Scientific Datasets Connected
+                of scientific data connected
             </div>
         </div>
         <div class="col-4">
             <span class="big-number"><span id="transferred">1</span> GB</span>
             <div class="rounded bg-secondary p-2 fs-4">
-                transferred per Second on Average
+                objects transferred per second
             </div>
         </div>
         <div class="col-4">
             <span class="big-number"><span id="delivered">1</span>PB</span>
             <div class="rounded bg-secondary p-2 fs-4">
-                of Data Delivered this year
+                of objects delivered in the last year
             </div>
         </div>
     </div>
 
     <h2 class="pt-3">Repositories connected to the OSDF</h2>
     <p>
-        Repositories can connect to the OSDF to help deliver public or private datasets.  Datasets currently registered with the OSDF include:
+        Repositories can connect to the OSDF to help deliver scientific data.  The table below illustrates
+        the datasets accessible via the OSDF.
     </p>
 
     <div class="row">
@@ -144,8 +145,8 @@
         }
 
         async function initialize_ospool_report () {
-            counter("connected", 129, 20)
-            counter("transferred", 4, 1)
+            counter("connected", 120, 20)
+            counter("transferred", 128, 1)
             counter("delivered", 129, 20)
         }
 
