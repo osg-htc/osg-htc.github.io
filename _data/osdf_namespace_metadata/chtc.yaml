@@ -1,16 +1,23 @@
 description: |
-  The Center for High Throughput Computing (CHTC), established in 2006, aims to bring the power of High Throughput Computing to all fields of research, and to allow the future of HTC to be shaped by insight from all fields.
+  The Center for High Throughput Computing (CHTC), established in 2006, aims to
+  bring the power of High Throughput Computing to all fields of research, and to
+  allow the future of HTC to be shaped by insight from all fields.
 
-  High Throughput Computing is a collection of principles and techniques which maximize the effective throughput of computing resources towards a given problem. When applied for scientific computing, HTC can result in improved use of a computing resource, improved automation, and help drive the scientific problem forward.
+  Beyond technologies and innovation and HTC through projects like
+  [HTCondor](https://htcondor.org), the CHTC operates general purpose clusters for
+  the UW-Madison campus.  CHTC allows researchers to stage their research data
+  to an object store connected to the OSDF and then process and analyze the data using
+  the OSDF with on-campus resources or the [OSPool](https://osg-htc.org/ospool).
 
-  The team at CHTC develops technologies and services for HTC. CHTC is the home of the HTCondor Software Suite which has over 30 years of experience in tackling HTC problems; it manages shared computing resources for researchers on the UW-Madison campus; and it leads the OSG Consortium, a national-scale environment for distributed HTC.
+  This data is organized as "working datasets" representing running workloads, not
+  permanent scientific outputs.
 
 organization: University of Wisconsin - Madison
 dataVisibility: private # public, or private
 size: 445115415442995 # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
 url: https://chtc.wisc.edu # Organization URL
-fieldOfScience: Multi/Interdisciplinary Studies # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+fieldOfScience: Multi/Interdisciplinary Studies
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
@@ -18,5 +25,6 @@ display: true # Whether or not to display this namespace
 name: Center for High Throughput Computing Researcher Data # Human readable name of the namespace
 namespace: 
   - "/chtc"
+  - "/chtc/specialprojects"
 thirtyDayReads: 122298434257295
 oneYearReads: 5339965187224643

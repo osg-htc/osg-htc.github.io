@@ -9,7 +9,8 @@ description: |
   The datasets kept in EnviStor can be accessed via the OSDF; work is ongoing to provide new computing workflows and AI-based dataset
   discovery that will help users utilize the data.
 
-  [NSF CC* Award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2322308)
+  The EnviStor activity and underlying storage is funded through the [NSF Campus Cyberinfrastructure program](https://www.nsf.gov/funding/opportunities/cc-campus-cyberinfrastructure) under
+  [Award # 2322308](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2322308).
 
 organization: Florida International University
 dataVisibility: public

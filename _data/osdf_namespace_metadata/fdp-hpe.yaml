@@ -4,7 +4,10 @@ description: |
 
   Using data from the [DIII-D National Fusion Facility](https://www.ga.com/magnetic-fusion/diii-d),
   users can leverage the FDP software to stream data via the OSDF services for their fusion data
-  analysis
+  analysis.
+
+  The FDP is funded by the DOE under award
+  [DE-SC0024426](https://pamspublic.science.energy.gov/WebPAMSExternal/Interface/Common/ViewPublicAbstract.aspx?rv=5b18d4f7-1f1a-4858-b35a-1040e0f1900a&rtc=24&PRoleId=10).
 organization: General Atomics
 dataVisibility: private
 size: # In bytes so I can parse how I want
