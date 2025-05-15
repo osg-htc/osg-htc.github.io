@@ -13,13 +13,11 @@ description: |
 organization: National Radio Astronomy Observatory
 dataVisibility: public
 size: 4068193022771
-objects: 36068
+objectCount: 36068
 datasets: 15962
-bytesXferd: # In bytes so I can parse how I want
-url: https://public.nrao.edu/vlass/
 fieldOfScience: Astronomy and Astrophysics
-numberOfDatasets: # Number of datasets in the namespace
-rank: 0 # Rank of the namespace, 0 will have the lowest priority
+numberOfDatasets: null # Number of datasets in the namespace
+rank: 3 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: NRAO VLASS
@@ -27,5 +25,6 @@ namespace:
   - "/nrao-ardg"
 thirtyDayReads: 17994033984997
 oneYearReads: 277174499417100
-publicObject: # Optional namespace path to a public object
+publicObject: /nrao-ardg/fmadsen/vlass-32PIMS/data/casa-20250128-231334.log # Optional namespace path to a public object
 organizationUrl: https://public.nrao.edu/vlass/
+repositoryUrl: null
