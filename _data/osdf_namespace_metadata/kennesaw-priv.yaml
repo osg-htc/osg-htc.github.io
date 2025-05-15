@@ -1,7 +1,8 @@
 description: |
   Enables faculty and students at Kennesaw State University to use their
   [NSF Campus Cyberinfrastructure (CC*)](https://www.nsf.gov/funding/opportunities/cc-campus-cyberinfrastructure)
-  funded storage with their local HPC cluster via OSDF.
+  funded storage ([Award #2430289](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2430289&HistoricalAwards=false))
+  with their local HPC cluster via OSDF.
 organization: Kennesaw State University
 dataVisibility: private
 size:  # bytes
