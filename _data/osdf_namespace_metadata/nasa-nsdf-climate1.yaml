@@ -23,7 +23,7 @@ description: |
   data provided by NASA.
 
 organization: National Science Data Fabric
-url: https://nationalsciencedatafabric.org/
+organizationUrl: https://nationalsciencedatafabric.org/
 fieldOfScience: Physical Sciences  # 40.0402
 numberOfDatasets: 1
 
