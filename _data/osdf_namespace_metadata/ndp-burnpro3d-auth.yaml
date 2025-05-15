@@ -12,7 +12,7 @@ url: https://wifire.ucsd.edu/burnpro3d
 fieldOfScience: NATURAL RESOURCES AND CONSERVATION
 numberOfDatasets: # Unknown, but this source reports 3926 https://wifire-data.sdsc.edu/dataset. Not sure which are available through OSDF
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
-inProgress: false # Whether or not the namespace is in progress
+inProgress: true # Whether or not the namespace is in progress
 display: false # this is currently a test namespace for A Tuna
 name: BurnPro3D
 namespace: 
