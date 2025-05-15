@@ -15,3 +15,4 @@ namespace:
   - "/nsdf"
 thirtyDayReads: 5692199277
 oneYearReads: 51565615859
+publicObject: # Optional namespace path to a public object

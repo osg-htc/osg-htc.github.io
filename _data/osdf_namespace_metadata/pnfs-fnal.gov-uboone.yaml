@@ -18,3 +18,4 @@ display: true # Whether or not to display this namespace
 name: MicroBooNE
 namespace: 
   - "/pnfs/fnal.gov/usr/uboone"
+publicObject: # Optional namespace path to a public object

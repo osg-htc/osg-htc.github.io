@@ -15,3 +15,4 @@ namespace:
   - "/nrp/osdf"
 thirtyDayReads: 65536
 oneYearReads: 4071644828549216
+publicObject: # Optional namespace path to a public object

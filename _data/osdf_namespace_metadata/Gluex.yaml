@@ -20,3 +20,4 @@ namespace:
   - /Gluex
 thirtyDayReads: 0
 oneYearReads: 215894157976
+publicObject: # Optional namespace path to a public object

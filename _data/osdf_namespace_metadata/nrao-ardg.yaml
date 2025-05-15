@@ -27,3 +27,4 @@ namespace:
   - "/nrao-ardg"
 thirtyDayReads: 17994033984997
 oneYearReads: 277174499417100
+publicObject: # Optional namespace path to a public object

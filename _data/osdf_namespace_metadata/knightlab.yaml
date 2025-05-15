@@ -15,3 +15,4 @@ namespace:
   - "/knightlab"
 thirtyDayReads: 0
 oneYearReads: 258218216565
+publicObject: # Optional namespace path to a public object

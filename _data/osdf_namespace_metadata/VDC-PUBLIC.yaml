@@ -19,3 +19,4 @@ namespace:
   - "/VDC/PUBLIC"
 thirtyDayReads: 0
 oneYearReads: 8172086399139906
+publicObject: # Optional namespace path to a public object

@@ -20,3 +20,4 @@ display: true # Whether or not to display this namespace
 name: Short-Baseline Neutrino Program
 namespace: 
   - "/pnfs/fnal.gov/usr/sbn"
+publicObject: # Optional namespace path to a public object
