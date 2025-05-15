@@ -5,4 +5,6 @@ size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
 url: # Organization URL
 fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
-numberOfDatasets: # Number of datasets in the namespacenamespace: "/igwn/test"
+numberOfDatasets: # Number of datasets in the namespace
+rank: # Rank of the namespace, 0 will have the lowest priority
+namespace: "/igwn/test"
