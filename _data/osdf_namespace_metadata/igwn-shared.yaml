@@ -21,3 +21,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/igwn/shared"
+thirtyDayReads: 4510807352791
+oneYearReads: 55089078351451224

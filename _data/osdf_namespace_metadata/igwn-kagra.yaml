@@ -18,3 +18,5 @@ display: true # Whether or not to display this namespace
 name: KAGRA Gravitational Wave Data
 namespace: 
   - "/igwn/kagra"
+thirtyDayReads: 0
+oneYearReads: 45946311946152008

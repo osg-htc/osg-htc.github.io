@@ -40,3 +40,5 @@ name: National Center for Atmospheric Research # Human readable name of the name
 namespace: 
   - "/ncar"
   - "/ncar-rda"
+thirtyDayReads: 214628666771028
+oneYearReads: 251907377023419
