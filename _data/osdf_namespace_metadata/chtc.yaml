@@ -3,7 +3,7 @@ description: |
 
   High Throughput Computing is a collection of principles and techniques which maximize the effective throughput of computing resources towards a given problem. When applied for scientific computing, HTC can result in improved use of a computing resource, improved automation, and help drive the scientific problem forward.
 
-The team at CHTC develops technologies and services for HTC. CHTC is the home of the HTCondor Software Suite which has over 30 years of experience in tackling HTC problems; it manages shared computing resources for researchers on the UW-Madison campus; and it leads the OSG Consortium, a national-scale environment for distributed HTC.
+  The team at CHTC develops technologies and services for HTC. CHTC is the home of the HTCondor Software Suite which has over 30 years of experience in tackling HTC problems; it manages shared computing resources for researchers on the UW-Madison campus; and it leads the OSG Consortium, a national-scale environment for distributed HTC.
 
 organization: Center for High Throughput Computing # Name of the organization
 dataVisibility: private # public, or private
