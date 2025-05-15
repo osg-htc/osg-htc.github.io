@@ -1,0 +1,29 @@
+description: |
+  **[AWS Open Data](https://aws.amazon.com/opendata/)** hosts
+  publicly accessible datasets covering areas such as earth science, climate,
+  genomics, machine learning, transportation, and economics. The collection
+  includes contributions from a range of organizations, including government
+  agencies, academic institutions, and private companies.
+
+
+  There are currently nearly **700 datasets**, totaling over **100 petabytes of data**.
+
+
+  Browse the full catalog at the **[Registry of Open Data on AWS](https://registry.opendata.aws)**.
+
+
+organization: Amazon Web Services, Inc.
+dataVisibility: public
+size: null
+bytesXferd: null
+url: https://aws.amazon.com/opendata/
+fieldOfScience: Multi/Interdisciplinary Studies.
+numberOfDatasets: 690
+rank: null
+inprogress: false
+display: true
+name: Amazon Web Services Open Data
+namespace:
+  - /aws-opendata/us-east-1
+  - /aws-opendata/us-west-1
+  - /aws-opendata/us-west-2
