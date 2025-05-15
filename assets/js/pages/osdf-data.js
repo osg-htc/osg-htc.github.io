@@ -64,11 +64,11 @@ class Search {
         this.timer = undefined
         this.node.addEventListener("input", this.search)
         this.lunr_idx = lunr(function () {
-            this.ref('Name')
-            this.field('FieldOfScience')
-            this.field('Name')
-            this.field('Organization')
-            this.field('PIName')
+            this.ref('name')
+            this.field('fieldOfScience')
+            this.field('organization')
+            this.field('description')
+            this.field('name')
 
             data.forEach(function (doc) {
                 this.add(doc)
@@ -148,7 +148,7 @@ class Table {
             data: async () => Object.values(await table.data_function()),
             pagination: {
                 enabled: true,
-                limit: 50,
+                limit: 15,
                 buttonsCount: 1
             },
             width: "1000px",
