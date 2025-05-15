@@ -1,0 +1,25 @@
+description: |
+  The [SPIn4D project](https://ifauh.github.io/SPIN4D/) (Spectropolarimetric Inversion in Four Dimensions with Deep Learning)
+  develops neural networks to help prepare for the huge amount of solar data coming
+  from the NSF-funded [Inouye Solar Telescope](https://nso.edu/telescopes/inouye-solar-telescope/),
+  the most powerful solar telescope in the world.
+
+  SPIn4D's [data release one](http://dtn-itc.ifa.hawaii.edu/spin4d/DR1/) is 109TB of simulated small-scale dynamo
+  actions accompanying the project's first paper.  A [corresponding Jupyter notebook](https://github.com/ifauh/spin4d-data/blob/main/spin4d-data-exploration.ipynb)
+  illustrates how to access and use the data via the OSDF using the [Pelican](https://pelicanplatform.org) clients.
+
+  For more information, see the [accompanying spotlight article](https://pelicanplatform.org/news/2024/12/20/sun-secrets).
+organization: University of Hawaii-Moana
+dataVisibility: public
+size: 119846767427584
+objectCount:
+bytesXferd: # In bytes so I can parse how I want
+url: http://dtn-itc.ifa.hawaii.edu/spin4d/DR1/
+fieldOfScience: Astronomy and Astrophysics
+numberOfDatasets: 6
+rank: 2 # Rank of the namespace, 0 will have the lowest priority
+inProgress: false # Whether or not the namespace is in progress
+display: true # Whether or not to display this namespace
+name: SPIn4D Data Release 1
+namespace: 
+  - "/uhkoa/SPIN4D-DR1"
