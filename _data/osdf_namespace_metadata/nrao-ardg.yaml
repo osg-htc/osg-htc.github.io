@@ -25,3 +25,5 @@ display: true # Whether or not to display this namespace
 name: NRAO VLASS
 namespace: 
   - "/nrao-ardg"
+thirtyDayReads: 17994033984997
+oneYearReads: 277174499417100

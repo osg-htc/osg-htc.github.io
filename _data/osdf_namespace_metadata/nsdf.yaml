@@ -13,3 +13,5 @@ display: false
 name:
 namespace:
   - "/nsdf"
+thirtyDayReads: 5692199277
+oneYearReads: 51565615859

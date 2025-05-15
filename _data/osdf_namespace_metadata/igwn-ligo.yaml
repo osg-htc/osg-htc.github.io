@@ -20,3 +20,5 @@ display: true # Whether or not to display this namespace
 name: LIGO Gravitational Wave Data
 namespace: 
   - "/igwn/ligo"
+thirtyDayReads: 4038613088590885
+oneYearReads: 46103145102056864

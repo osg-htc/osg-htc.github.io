@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/nasa/nsdf/climate2"
+thirtyDayReads: 591051052
+oneYearReads: 40335295047

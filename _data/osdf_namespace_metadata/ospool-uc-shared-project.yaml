@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/ospool/uc-shared/project"
+thirtyDayReads: 22782090819801
+oneYearReads: 6775984561295982

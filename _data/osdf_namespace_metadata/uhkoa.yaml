@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/uhkoa"
+thirtyDayReads: 0
+oneYearReads: 1669909818762

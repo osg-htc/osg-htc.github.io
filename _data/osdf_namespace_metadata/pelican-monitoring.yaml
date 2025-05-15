@@ -12,3 +12,5 @@ inProgress: false # Whether or not the namespace is in progress
 display: false # Whether or not to display this namespace
 namespace: 
   - "/pelican/monitoring"
+thirtyDayReads: 489152683
+oneYearReads: 6304482723

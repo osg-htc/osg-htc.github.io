@@ -19,3 +19,5 @@ display: true # Whether or not to display this namespace
 name: JLab Simulation Datasets
 namespace: 
   - "/jlab"
+thirtyDayReads: 0
+oneYearReads: 636965041436104

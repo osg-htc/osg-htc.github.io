@@ -13,3 +13,5 @@ display: false # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/jlab-osdf"
+thirtyDayReads: 47275143531529
+oneYearReads: 636965041498365

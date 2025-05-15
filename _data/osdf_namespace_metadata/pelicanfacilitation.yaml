@@ -12,3 +12,5 @@ inProgress: false # Whether or not the namespace is in progress
 display: false # Whether or not to display this namespace
 namespace: 
   - "/pelicanfacilitation"
+thirtyDayReads: 0
+oneYearReads: 0

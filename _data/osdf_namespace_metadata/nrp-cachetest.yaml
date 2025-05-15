@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/nrp/cachetest"
+thirtyDayReads: 856217001500
+oneYearReads: 4022334926146365

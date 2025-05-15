@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/fdp-hpe"
+thirtyDayReads: 0
+oneYearReads: 409563225097221

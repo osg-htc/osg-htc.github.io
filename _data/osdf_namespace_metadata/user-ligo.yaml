@@ -13,3 +13,5 @@ display: false # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/user/ligo"
+thirtyDayReads: 29275177600
+oneYearReads: 22711595539537004

@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/icecube"
+thirtyDayReads: 138632907277119
+oneYearReads: 7727207464114454

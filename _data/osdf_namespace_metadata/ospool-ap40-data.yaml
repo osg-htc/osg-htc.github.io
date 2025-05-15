@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/ospool/ap40/data"
+thirtyDayReads: 1520601338598672
+oneYearReads: 11062824070975420

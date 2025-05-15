@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/path-facility/data"
+thirtyDayReads: 5703247164232
+oneYearReads: 1242013815896678

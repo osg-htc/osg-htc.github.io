@@ -16,3 +16,5 @@ display: true
 name: Kennesaw State University CC* Storage
 namespace:
   - "/kennesaw-priv"
+thirtyDayReads: 46
+oneYearReads: 1329748

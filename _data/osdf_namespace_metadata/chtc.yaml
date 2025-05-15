@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/chtc"
+thirtyDayReads: 122298434257295
+oneYearReads: 5339965187224643

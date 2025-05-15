@@ -19,3 +19,5 @@ display: true # Whether or not to display this namespace
 name: Electron-Ion Collider Simulations
 namespace: 
   - "/eic"
+thirtyDayReads: 0
+oneYearReads: 4120

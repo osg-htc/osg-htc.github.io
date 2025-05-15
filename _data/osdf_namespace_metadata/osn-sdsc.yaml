@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/osn-sdsc"
+thirtyDayReads: 67371008
+oneYearReads: 373263780714960

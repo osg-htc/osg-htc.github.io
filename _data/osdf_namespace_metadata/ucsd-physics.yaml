@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/ucsd/physics"
+thirtyDayReads: 12836138539
+oneYearReads: 2666750742874

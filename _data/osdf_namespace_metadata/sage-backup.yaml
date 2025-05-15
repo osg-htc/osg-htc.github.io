@@ -13,3 +13,7 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/sage-backup"
+thirtyDayReads: 0
+oneYearReads: 71571001350
+thirtyDayReads: 0
+oneYearReads: 71571001350

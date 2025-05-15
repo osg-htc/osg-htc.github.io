@@ -18,3 +18,5 @@ display: true # Whether or not to display this namespace
 name: Public Gravitational Wave Data
 namespace: 
   - "/gwdata"
+thirtyDayReads: 60654177017013
+oneYearReads: 366130970071859

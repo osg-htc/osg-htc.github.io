@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/kennesaw"
+thirtyDayReads: 1322040
+oneYearReads: 1329748

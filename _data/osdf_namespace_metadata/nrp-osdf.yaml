@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/nrp/osdf"
+thirtyDayReads: 65536
+oneYearReads: 4071644828549216

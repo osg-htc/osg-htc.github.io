@@ -13,3 +13,5 @@ display: true # Whether or not to display this namespace
 name: # Human readable name of the namespace
 namespace: 
   - "/igwn/cit"
+thirtyDayReads: 641939268951660
+oneYearReads: 45946311946152008
