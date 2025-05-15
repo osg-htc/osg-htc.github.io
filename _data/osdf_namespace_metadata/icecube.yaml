@@ -3,14 +3,15 @@ description: |
   
   Using over 5,000 optical sensors deployed between 1,450 and 2,450 meters below the surface, the observatory captures detailed information about these events, including their timing, location, and intensity. The data is used to study cosmic neutrinos and the astrophysical phenomena that produce them, such as **black holes**, **supernovae**, and **gamma-ray bursts**.
   
-  [NSF EAGER Award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1941481)
+  The IceCube collaboration is supported by [multiple funding agencies](https://icecube.wisc.edu/collaboration/funding/) including
+  the [NSF](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2042807)
 
 organization: Wisconsin Icecube Particle Astrophysics Center # Name of the organization
 dataVisibility: private # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
 url: https://wipac.wisc.edu # Organization URL
-fieldOfScience: PHYSCIAL SCIENCES # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress

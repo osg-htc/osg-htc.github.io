@@ -31,7 +31,9 @@ class ProjectDisplay{
     }
 
     updateTextValue(className, value){
-        this.parentNode.getElementsByClassName(className)[0].innerHTML = value
+        [...this.parentNode.getElementsByClassName(className)].forEach(x => {
+            x.innerHTML = value;
+        });
     }
 
     update({
@@ -115,6 +117,7 @@ class Table {
                 id: 'name',
                 name: 'Name',
                 sort: { compare: string_sort },
+                formatter: (cell) => gridjs.html(`${cell}<i class="bi bi-box-arrow-up-right ms-2 mb-2"></i>`),
                 attributes: {
                     className: "gridjs-th gridjs-td pointer gridjs-th-sort text-start"
                 }
@@ -128,13 +131,6 @@ class Table {
             },  {
                 id: 'fieldOfScience',
                 name: 'Field Of Science',
-                sort: { compare: string_sort },
-                attributes: {
-                    className: "gridjs-th gridjs-td pointer gridjs-th-sort text-start"
-                }
-            },  {
-                id: 'numberOfDatasets',
-                name: 'Number Of Datasets',
                 sort: { compare: string_sort },
                 attributes: {
                     className: "gridjs-th gridjs-td pointer gridjs-th-sort text-start"
@@ -199,7 +195,7 @@ class DataManager {
         this.toggleConsumers()
     }
 
-    getData = async () => {
+    getData = () => {
 
         const data = {
             {% for d in site.data.osdf_namespace_metadata %}
@@ -297,6 +293,21 @@ class DataPage{
         if (urlProject) {
             this.projectDisplay.update((await this.dataManager.getData())[urlProject])
         }
+
+        // Update the repository count
+        document.getElementById("repository-count").innerText = Object.values(this.dataManager.getData()).length
+    }
+}
+
+class RepositoryCount {
+    constructor() {
+        this.node = document.getElementById("repository-count")
+
+    }
+
+    update = async () => {
+        let data = await this.dataManager.getFilteredData()
+        this.node.innerHTML = Object.keys(data).length
     }
 }
 

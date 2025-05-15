@@ -1,0 +1,23 @@
+description: |
+  MINERvA (Main Injector Neutrino ExpeRiment to study v-A interactions) is the first neutrino experiment in the
+  world to use a high-intensity beam to study neutrino reactions with five different nuclei, creating the first
+  self-contained comparison of interactions in different elements. While this type of study has previously been
+  done using beams of electrons, this is a first for neutrinos.
+
+  MINERvA is providing the world's best, high-precision measurements of neutrino interactions on various nuclei,
+  in the 1-to 10-GeV energy range. MINERvA's results are being used as inputs to current and future experiments
+  seeking to study neutrino oscillations, or the ability of neutrinos to change their type.
+organization: Fermi Lab National Accelerator Laboratory
+dataVisibility: public # public, or private
+size: 34500000000 # In bytes so I can parse how I want
+objectCount: 35339
+bytesXferd: null # In bytes so I can parse how I want
+url: https://minerva.fnal.gov/
+fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+numberOfDatasets: null # Number of datasets in the namespace
+rank: 0 # Rank of the namespace, 0 will have the lowest priority
+inProgress: false # Whether or not the namespace is in progress
+display: true # Whether or not to display this namespace
+name: MINERvA
+namespace: 
+  - "/pnfs/fnal.gov/usr/minerva"

@@ -14,8 +14,8 @@ fieldOfScience: Astronomy and Astrophysics
 numberOfDatasets: 2
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
-display: true # Whether or not to display this namespace
-name: # Human readable name of the namespace
+display: false # Whether or not to display this namespace
+name: IGWN Read Test # Human readable name of the namespace
 namespace: 
   - "/igwn/test"
 thirtyDayReads: 0

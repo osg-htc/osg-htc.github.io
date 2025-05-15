@@ -1,0 +1,25 @@
+description: |
+  The ICARUS neutrino detector measures 65 feet long and weighs 760 tons. It began its life in Gran Sasso Laboratory in
+  Italy, seeking out elusive particles using pioneering technology. It later spent two years undergoing upgrades at CERN,
+  the European particle physics laboratory and home of the Large Hadron Collider. It moved to Fermilab in 2017 and was
+  installed in its detector hall in 2018, where along with the new Cosmic Ray Tagger it forms the far detector for the
+  Short-Baseline Neutrino program.
+  
+  The ICARUS collaboration is investigating signs of physics that may point to a new kind of neutrino called the sterile
+  neutrino. Other experiments have made measurements that suggest a departure from the standard three-neutrino model. ICARUS
+  is also investigating the various probabilities of a neutrino interacting with different types of matter as well as
+  neutrino-related astrophysics topics.
+organization: Fermi Lab National Accelerator Laboratory
+dataVisibility: public # public, or private
+size: 32000000000 # In bytes so I can parse how I want
+objectCount: 32767
+bytesXferd: null # In bytes so I can parse how I want
+url: https://icarus.fnal.gov/
+fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+numberOfDatasets: null # Number of datasets in the namespace
+rank: 0 # Rank of the namespace, 0 will have the lowest priority
+inProgress: false # Whether or not the namespace is in progress
+display: true # Whether or not to display this namespace
+name: ICARUS
+namespace: 
+  - "/pnfs/fnal.gov/usr/icarus"
