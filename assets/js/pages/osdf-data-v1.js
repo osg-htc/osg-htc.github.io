@@ -22,11 +22,16 @@ class ProjectDisplay{
         this.display_modal = new bootstrap.Modal(parentNode, {
             keyboard: true
         })
+        this.parentNode.addEventListener("hidden.bs.modal", () => {
+            const url = new URL(window.location.href);
+            url.searchParams.delete("repository")
+            history.pushState({}, '', url)
+        })
     }
 
     setUrl() {
         const url = new URL(window.location.href);
-        url.searchParams.set("project", this.name)
+        url.searchParams.set("repository", this.id)
         history.pushState({}, '', url)
     }
 
@@ -52,6 +57,7 @@ class ProjectDisplay{
        namespace,
        id
     }) {
+        this.id = id
         this.name = name;
         this.organization = organization;
         this.description = description;
@@ -289,25 +295,13 @@ class DataPage{
         this.search = new Search(Object.values(await this.dataManager.getData()), this.dataManager.toggleConsumers)
         this.dataManager.addFilter("search", this.search.filter)
 
-        let urlProject = new URLSearchParams(window.location.search).get('project')
+        let urlProject = new URLSearchParams(window.location.search).get('repository')
         if (urlProject) {
-            this.projectDisplay.update((await this.dataManager.getData())[urlProject])
+            this.projectDisplay.update((this.dataManager.getData()[urlProject]))
         }
 
         // Update the repository count
         document.getElementById("repository-count").innerText = Object.values(this.dataManager.getData()).length
-    }
-}
-
-class RepositoryCount {
-    constructor() {
-        this.node = document.getElementById("repository-count")
-
-    }
-
-    update = async () => {
-        let data = await this.dataManager.getFilteredData()
-        this.node.innerHTML = Object.keys(data).length
     }
 }
 
