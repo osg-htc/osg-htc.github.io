@@ -1,10 +1,16 @@
 description: |
+  The [XENON Dark Matter Project](https://xenonexperiment.org/) is a scientific
+  collaboration organized around the XENONnT dark matter detector at the INFN
+  [Gran Sasso National Laboratory](https://www.lngs.infn.it/en/lngs-overview) in
+  Gran Sasso, Italy.
 
-organization: # Name of the organization
+  This repository is used to store data and simulations from the XENONnT experiment
+  to aid in its computing workloads.
+organization: University of Chicago # Name of the organization
 dataVisibility: # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
-url: # Organization URL
+url: https://www.lngs.infn.it/en/lngs-overview # Organization URL
 fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
@@ -15,3 +21,5 @@ namespace:
   - "/nrp/protected/xenon-biggrid-nl/"
 thirtyDayReads: 0
 oneYearReads: 152114667955363
+organizationUrl: https://www.uchicago.edu/en
+repositoryUrl: https://xenonexperiment.org/

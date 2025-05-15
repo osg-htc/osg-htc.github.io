@@ -1,11 +1,12 @@
 description: |
-  Research in machine learning methods like deep learning neural networks, computer vision and morphological neural networks. 
+  Research in machine learning methods like deep learning neural networks,
+  computer vision and morphological neural networks. 
 organization: University of Missouri # Name of the organization
 dataVisibility: public # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
 url: https://engineering.missouri.edu/faculty/j-alex-hurt/ # Organization URL
-fieldOfScience: COMPUTER AND INFORMATION SCIENCES AND SUPPORT SERVICES # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+fieldOfScience: Computer and Information Sciences
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
@@ -16,3 +17,4 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 970306300
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://engineering.missouri.edu/faculty/j-alex-hurt/

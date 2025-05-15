@@ -1,16 +1,21 @@
 description: |
-  Jessica Kendall-Bar leads a research group that integrates engineering, data science, ecology, and
-  visual storytelling/public communication to explore the behavior and physiology of marine life.
+  Jessica Kendall-Bar leads a research group that integrates engineering, data science, and ecology
+  to explore the behavior and physiology of marine life.  The data stored on the OSDF includes high-resolution
+  multimodal data such as video, GPS, and electrophysiology.
 
-  Her visual data work has appeared in various media platforms—from UC San Diego news to national outlets
-  like The New York Times and The Atlantic—and has contributed to global policy efforts in areas such as
-  marine mammal protection and coral reef recovery.
+  The OSDF data is catalogued on the [National Data Platform](https://nationaldataplatform.org/), enabling
+  textual, conceptual, and map-based spatiotemporal search capabilities.
+
+  The NDP project is using this dataset as inputs for a data challenge planned for Fall 2025.  It also
+  powers an application running on the [National Research Platform](https://nationalresearchplatform.org/)
+  at <https://lifeinthedeep.nrp-nautilus.io/>.
+
 organization: University of California, San Diego
 dataVisibility: private
-size: # unknown -- none currently available
+size: 5497558138880 # 5TB number communicated by Ilkay via emailed slide.
 bytesXferd: # none
 url: https://www.jessiekb.com/
-fieldOfScience: MULTI/INTERDISCIPLINARY STUDIES
+fieldOfScience: Biological and Biomedical Sciences
 numberOfDatasets: # unknown -- none currently available
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: true # Whether or not the namespace is in progress
@@ -21,3 +26,4 @@ namespace:
   - "/jkb-lab-public"
 thirtyDayReads: 0
 oneYearReads: 131628
+organizationUrl: https://www.jessiekb.com/

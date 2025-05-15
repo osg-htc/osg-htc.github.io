@@ -24,8 +24,10 @@ description: |
   demonstrate cutting-edge technologies for working with petascale climate
   data provided by NASA.
 
-organization: National Science Data Fabric
-url: https://nationalsciencedatafabric.org/
+organization: University of Utah
+organizationUrl: https://nationalsciencedatafabric.org/
+repositoryUrl:
+  url: https://data.nas.nasa.gov/geoseccoviz/
 fieldOfScience: Physical Sciences  # 40.0402
 numberOfDatasets: 1
 

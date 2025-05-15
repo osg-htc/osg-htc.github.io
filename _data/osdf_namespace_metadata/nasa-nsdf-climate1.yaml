@@ -23,7 +23,9 @@ description: |
   data provided by NASA.
 
 organization: National Science Data Fabric
-url: https://nationalsciencedatafabric.org/
+organizationUrl: https://nationalsciencedatafabric.org/
+repositoryUrl:
+  url: https://data.nas.nasa.gov/ecco/
 fieldOfScience: Physical Sciences  # 40.0402
 numberOfDatasets: 1
 

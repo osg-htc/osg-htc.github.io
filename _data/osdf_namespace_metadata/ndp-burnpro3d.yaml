@@ -20,3 +20,4 @@ namespace:
 thirtyDayReads: 487991877
 oneYearReads: 9213605566
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://wifire.ucsd.edu/burnpro3d

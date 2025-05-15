@@ -4,7 +4,7 @@ description: |
   These data are created and used within individual users' workflows as they analyze gravitational-wave data in order
   to detect black hole collisions and other cosmic phenomena. This origin is hosted at Caltech.
 
-  This data is not yet public.
+  This data is not public; it is in support of in-progress computational workflows.
 organization: California Institute of Technology
 dataVisibility: private
 size: 31537610933565
@@ -19,3 +19,4 @@ display: true # Whether or not to display this namespace
 name: Caltech Gravitational Wave Data # Human readable name of the namespace
 namespace: 
   - "/igwn/cit"
+organizationUrl: https://www.ligo.caltech.edu/

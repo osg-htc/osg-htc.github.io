@@ -18,3 +18,4 @@ name: NOVA
 namespace: 
   - "/pnfs/fnal.gov/usr/nova"
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://novaexperiment.fnal.gov/

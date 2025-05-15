@@ -21,3 +21,4 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 4120
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://www.jlab.org/eic
