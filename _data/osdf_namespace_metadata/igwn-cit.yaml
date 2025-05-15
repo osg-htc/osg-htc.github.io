@@ -19,3 +19,4 @@ display: true # Whether or not to display this namespace
 name: Caltech Gravitational Wave Data # Human readable name of the namespace
 namespace: 
   - "/igwn/cit"
+organizationUrl: https://www.ligo.caltech.edu/

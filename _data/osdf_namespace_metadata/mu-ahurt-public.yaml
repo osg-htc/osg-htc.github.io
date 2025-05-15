@@ -16,3 +16,4 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 970306300
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://engineering.missouri.edu/faculty/j-alex-hurt/

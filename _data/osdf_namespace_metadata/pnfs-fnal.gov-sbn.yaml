@@ -21,3 +21,4 @@ name: Short-Baseline Neutrino Program
 namespace: 
   - "/pnfs/fnal.gov/usr/sbn"
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://sbn.fnal.gov/

@@ -43,3 +43,4 @@ namespace:
 thirtyDayReads: 214628666771028
 oneYearReads: 251907377023419
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://ncar.ucar.edu
