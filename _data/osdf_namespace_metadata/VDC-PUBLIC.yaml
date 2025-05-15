@@ -1,16 +1,20 @@
 description: |
+  Experiments related to the Virtual Data Collaboratory at the Scientific
+  Computing and Imaging Institute at the University of Utah.
 
-organization: # Name of the organization
-dataVisibility: # public, or private
+  These cyberinfrastructure experiments include activities like running automated
+  workflows on the OSPool triggered on alerts from the [EarthScope Consortium](https://www.earthscope.org/).
+organization: University of Utah
+dataVisibility: public
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
-url: # Organization URL
-fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+url: https://par.nsf.gov/servlets/purl/10187417
+fieldOfScience: Computer and Information Sciences
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
-name: # Human readable name of the namespace
+name: Virtual Data Collaboratory # Human readable name of the namespace
 namespace: 
   - "/VDC/PUBLIC"
 thirtyDayReads: 0

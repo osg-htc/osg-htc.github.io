@@ -8,8 +8,8 @@ description: |
   This is the data not yet released to the public.
 organization: California Institute of Technology
 dataVisibility: private
-size: 135506218188800
-objectCount: 245800
+size: 138805574893272
+objectCount: 245785
 bytesXferd: # In bytes so I can parse how I want
 url: https://www.ligo.caltech.edu/
 fieldOfScience: Astronomy and Astrophysics

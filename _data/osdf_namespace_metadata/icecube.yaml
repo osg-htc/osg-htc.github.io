@@ -3,7 +3,8 @@ description: |
   
   Using over 5,000 optical sensors deployed between 1,450 and 2,450 meters below the surface, the observatory captures detailed information about these events, including their timing, location, and intensity. The data is used to study cosmic neutrinos and the astrophysical phenomena that produce them, such as **black holes**, **supernovae**, and **gamma-ray bursts**.
   
-  [NSF EAGER Award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1941481)
+  The IceCube collaboration is supported by [multiple funding agencies](https://icecube.wisc.edu/collaboration/funding/) including
+  the [NSF](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2042807)
 
 organization: Wisconsin Icecube Particle Astrophysics Center # Name of the organization
 dataVisibility: private # public, or private

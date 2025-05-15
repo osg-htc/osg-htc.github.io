@@ -1,0 +1,22 @@
+description: |
+  The international Short-Baseline Neutrino Program at Fermilab examines the properties of neutrinos,
+  specifically how the flavor of a neutrino changes as it moves through space and matter. The program
+  emerged from a joint proposal, submitted by three scientific collaborations, to use particle detectors
+  to perform sensitive searches for ve appearance and νμ disappearance in the Booster Neutrino Beam. All
+  of the detectors are types of liquid-argon time projection chambers, and each contributes to the
+  development of this particle detection technology for the long-baseline Deep Underground Neutrino Experiments
+  (DUNE).
+organization: Fermi Lab National Accelerator Laboratory
+dataVisibility: public # public, or private
+size: 761000000000 # In bytes so I can parse how I want
+objectCount: 78747
+bytesXferd: null # In bytes so I can parse how I want
+url: https://sbn.fnal.gov/
+fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+numberOfDatasets: null # Number of datasets in the namespace
+rank: 0 # Rank of the namespace, 0 will have the lowest priority
+inProgress: false # Whether or not the namespace is in progress
+display: true # Whether or not to display this namespace
+name: Short-Baseline Neutrino Program
+namespace: 
+  - "/pnfs/fnal.gov/usr/sbn"

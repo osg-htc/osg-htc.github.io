@@ -6,7 +6,7 @@
         loading:
     -   src: "https://unpkg.com/lunr/lunr.js"
         loading:
-    -   src: "/assets/js/pages/osdf-data.js?version=2"
+    -   src: "/assets/js/pages/osdf-data-v0.js"
         loading: "defer"
         type: "module"
     css_extension:
@@ -27,39 +27,55 @@
 
 
 <div class="container-xxl py-2 mw-1000">
-    <h1>{{page.title}}</h1>
-    <p>
+    <h1 class="text-center">{{page.title}}</h1>
+    <p class="text-center">
         The OSDF service connects the nation’s scientific data repositories to computing infrastructure
     </p>
-    <div class="row gx-3">
-        <div class="col-4">
-            <span class="big-number"><span id="connected">1</span> PB</span>
-            <div class="rounded bg-secondary p-2 fs-4">
-                of Scientific Datasets Connected
+</div>
+
+<div id="" class="my-5 wave-osdf-display text-display">
+    <div class="container-xxl mw-1000">
+        <div class="row gx-3">
+            <div class="col-4">
+                <div class="">
+                    <div id="connected" class="big-number">1</div>
+                    <div class="big-label">Repositories</div>
+                </div>
+                <div class="rounded bg-secondary p-2 fs-4 text-center">
+                    available via the OSDF
+                </div>
             </div>
-        </div>
-        <div class="col-4">
-            <span class="big-number"><span id="transferred">1</span> GB</span>
-            <div class="rounded bg-secondary p-2 fs-4">
-                transferred per Second on Average
+            <div class="col-4">
+                <div>
+                    <div id="transferred" class="big-number">1</div>
+                    <div class="big-label">Objects per Second</div>
+                    </div>
+                <div class="rounded bg-secondary p-2 fs-4 text-center">
+                    transferred on average
+                </div>
             </div>
-        </div>
-        <div class="col-4">
-            <span class="big-number"><span id="delivered">1</span>PB</span>
-            <div class="rounded bg-secondary p-2 fs-4">
-                of Data Delivered this year
+            <div class="col-4">
+                <div>
+                    <div id="delivered" class="big-number">1</div>
+                    <div class="big-label">Petabytes</div>
+                    </div>
+                <div class="rounded bg-secondary p-2 fs-4 text-center">
+                    of data delivered (12 mos)
+                </div>
             </div>
         </div>
     </div>
-
-    <h2 class="pt-3">Repositories connected to the OSDF</h2>
+</div>
+<div class="container-xxl mw-1000">
+    <h2 class="pt-3">Repositories available via the OSDF</h2>
     <p>
-        Repositories can connect to the OSDF to help deliver public or private datasets.  Datasets currently registered with the OSDF include:
+        Repositories can connect to the OSDF to help deliver scientific data.  The table below illustrates
+        the datasets accessible via the OSDF.
     </p>
 
     <div class="row">
         <div class="col-12 col-xl-7 col-lg-8 col-md-10 mb-2">
-            <input class="form-control" id="project-search" placeholder="Search Project Details" type="search"/>
+            <input class="form-control" id="project-search" placeholder="Search Details" type="search"/>
         </div>
     </div>
     <div id="wrapper" class="overflow-auto"></div>
@@ -72,17 +88,17 @@
 
     <h2>Using the OSDF</h2>
     <p>
-        The OSDF provides the foundational data delivery infrastructure using software provided by the Pelican Platform. Communities using the OSDF build infrastructure, such as indexing, tools, or data discovery, on top of this foundation. The OSDF can be used to download data via the browser, visualization in a notebook, or as part of large-scale computational workflows:
+        The OSDF provides the foundational data delivery infrastructure using software provided by the <a href="https://pelicanplatform.org/">Pelican Platform</a>. Communities using the OSDF build infrastructure, such as indexing, tools, or data discovery, on top of this foundation. The OSDF can be used to download data via the browser, visualization in a notebook, or as part of large-scale computational workflows:
     </p>
     <ul>
         <li>
-            NCAR’s Research Data Archive links directly to the OSDF as part of their download webpage.
+            NCAR’s Research Data Archive links directly to the OSDF as part of <a href="https://rda.ucar.edu/datasets/d841001/dataaccess">their download webpage</a>.
         </li>
         <li>
-            The SPIN4D project combines AI and Astronomy to study the solar photosphere, publishing notebooks explaining how to visualize data located in the OSDF.
+            The <a href="https://www2.hao.ucar.edu/news/news-article/cutting-edge-spin4d-project-combines-ai-and-astronomy">SPIN4D</a> project combines AI and Astronomy to study the solar photosphere, publishing <a href="https://github.com/ifauh/spin4d-data/blob/main/spin4d-data-exploration.ipynb">notebooks explaining how to visualize data</a> located in the OSDF.
         </li>
         <li>
-            The OSPool provides a national-scale computing service, integrating the OSDF directly using the HTCondor Software Suite. The OSPool OSDF page catalogs how different OSPool projects have utilized the service in the last year.
+            The <a href="https://osg-htc.org/services/ospool/">OSPool</a> provides a national-scale computing service, <a href="https://portal.osg-htc.org/documentation/htc_workloads/managing_data/osdf/">integrating the OSDF directly</a> using the <a href="https://htcondor.org">HTCondor Software Suite</a>. The <a href="https://osg-htc.org/services/osdf/projects">OSPool OSDF page</a> catalogs how different OSPool projects have utilized the service in the last year.
         </li>
     </ul>
 
@@ -144,8 +160,8 @@
         }
 
         async function initialize_ospool_report () {
-            counter("connected", 129, 20)
-            counter("transferred", 4, 1)
+            counter("connected", 65, 20)
+            counter("transferred", 127, 20)
             counter("delivered", 129, 20)
         }
 

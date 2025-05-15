@@ -3,7 +3,14 @@
 ---
 
 import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, SUMMARY_INDEX, OSPOOL_FILTER} from "/assets/js/elasticsearch-v1.js";
-import {GraccDisplay, locale_int_string_sort, string_sort, hideNode} from "/assets/js/util.js";
+import {
+    GraccDisplay,
+    locale_int_string_sort,
+    string_sort,
+    hideNode,
+    sortByteString,
+    formatBytes, byteStringToBytes
+} from "/assets/js/util.js";
 import {PieChart} from "/assets/js/components/pie-chart.js";
 
 /**
@@ -209,7 +216,7 @@ class DataManager {
         }
 
         const visibleData = Object.entries(data).reduce((reduced, v) => {
-            if(v[1]['display']){
+            if(v[1]['display'] && v[1]['name'] ){
                 reduced[v[0]] = v[1]
                 reduced[v[0]]['id'] = v[0]
             }

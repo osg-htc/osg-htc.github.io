@@ -1,10 +1,18 @@
 description: |
+  The Center for Applied Internet Data Analysis (CAIDA) runs an "Network Telescope", collecting
+  packets sent to a cross-section of the public Internet similarly to how a telescope collects stray
+  light.
 
-organization: # Name of the organization
-dataVisibility: # public, or private
+  This dataset is made available to scientists attempting to understand how activity, such as malware,
+  is moving across the Internet.
+
+  The CAIDA integration with OSDF aims to stage the most recent subset of the recorded data to be
+  made available for large-scale analysis.
+organization: University of California, San Diego
+dataVisibility: private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
-url: # Organization URL
+url: https://www.caida.org/
 fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority

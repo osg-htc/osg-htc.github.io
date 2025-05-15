@@ -5,12 +5,12 @@ description: |
 
   The team at CHTC develops technologies and services for HTC. CHTC is the home of the HTCondor Software Suite which has over 30 years of experience in tackling HTC problems; it manages shared computing resources for researchers on the UW-Madison campus; and it leads the OSG Consortium, a national-scale environment for distributed HTC.
 
-organization: Center for High Throughput Computing # Name of the organization
+organization: University of Wisconsin - Madison
 dataVisibility: private # public, or private
 size: 445115415442995 # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
 url: https://chtc.wisc.edu # Organization URL
-fieldOfScience: MULTI/INTERDISCIPLINARY STUDIES # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+fieldOfScience: Multi/Interdisciplinary Studies # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
