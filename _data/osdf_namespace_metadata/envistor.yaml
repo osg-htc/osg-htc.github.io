@@ -1,17 +1,13 @@
 description: |
   The South Florida region is home to nearly 10 million people, and the population is growing. The region faces several challenges,
   such as rising sea levels and flooding, harmful algae blooms, water contamination, and wildlife habit loss, which affects the economy
-  and the welfare of its population. Florida International University (FIU) will build EnviStor, which aims to be a centrally managed
-  Petabyte scale storage system that is also a clearing house for supporting interdisciplinary research and modeling involving both built
-  and natural environments in South Florida. EnviStor provides opportunities for students (75% of whom coming from underrepresented groups
-  in STEM) and faculty to enhance their knowledge of database management, focusing on interoperability.
+  and the welfare of its population. Florida International University (FIU) runs the EnviStor project, which is a centrally managed,
+  petabyte-scale storage system that is also a clearing house for supporting interdisciplinary research and modeling involving both built
+  and natural environments in South Florida. EnviStor provides opportunities for students
+  and faculty to enhance their knowledge of database management, focusing on interoperability.
 
-  EnviStor facilitates inter and intra-campus capabilities, augmenting the current FIU storage capabilities from the Terabyte to the
-  Petabyte scale through a low-latency, high-performance, and cost-effective architecture to facilitate the creation of science data
-  products. Data backups will be sent to the cloud, ensuring data preservation. In addition, the architecture will include interfaces
-  that facilitate the sharing of datasets at intra- and inter-campus levels. EnviStor will share 20% of its storage resources by federating
-  with the OSDF (Open Science Data Federation) and leveraging FIU?s Dataverse repository. This effort is also supported by National Discovery
-  Cloud for Climate (NDC-C) resources.
+  The datasets kept in EnviStor can be accessed via the OSDF; work is ongoing to provide new computing workflows and AI-based dataset
+  discovery that will help users utilize the data.
 
   [NSF CC* Award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2322308)
 
