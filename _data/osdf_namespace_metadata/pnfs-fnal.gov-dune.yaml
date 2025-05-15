@@ -6,7 +6,7 @@ description: |
   DUNE will pursue three major science goals: find out whether neutrinos could be the reason the universe is made of matter;
   look for subatomic phenomena that could help realize Einstein's dream of the unification of forces; and watch for neutrinos
   emerging from an exploding star, perhaps witnessing the birth of a neutron star or a black hole.
-organization: Fermi Lab National Accelerator Laboratory
+organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 7400000000000 # In bytes so I can parse how I want
 objectCount: 1407846

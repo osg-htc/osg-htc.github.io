@@ -11,7 +11,7 @@ description: |
   experiments that will employ the LArTPC technology, such as the long-baseline Deep Underground Neutrino Experiment, [DUNE](https://www.dunescience.org/).
 
   SBND uses the OSDF to deliver common data inputs for large-scale simulation jobs distributed across the US.
-organization: Fermi Lab National Accelerator Laboratory
+organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 503000000000 # In bytes so I can parse how I want
 objectCount: 60125

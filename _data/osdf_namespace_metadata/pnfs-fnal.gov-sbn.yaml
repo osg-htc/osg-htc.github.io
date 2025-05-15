@@ -6,7 +6,7 @@ description: |
   of the detectors are types of liquid-argon time projection chambers, and each contributes to the
   development of this particle detection technology for the long-baseline Deep Underground Neutrino Experiments
   (DUNE).
-organization: Fermi Lab National Accelerator Laboratory
+organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 761000000000 # In bytes so I can parse how I want
 objectCount: 78747

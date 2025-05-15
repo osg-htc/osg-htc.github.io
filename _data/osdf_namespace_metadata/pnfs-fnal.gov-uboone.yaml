@@ -4,7 +4,7 @@ description: |
 
   MicroBooNE will investigate the low energy excess events observed by the MiniBooNE experiment, measure a suite of low
   energy neutrino cross sections, and investigate astro-particle physics.
-organization: Fermi Lab National Accelerator Laboratory
+organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 3500000000000 # In bytes so I can parse how I want
 objectCount: 356300

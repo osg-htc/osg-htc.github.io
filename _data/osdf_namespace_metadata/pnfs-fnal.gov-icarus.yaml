@@ -9,7 +9,7 @@ description: |
   neutrino. Other experiments have made measurements that suggest a departure from the standard three-neutrino model. ICARUS
   is also investigating the various probabilities of a neutrino interacting with different types of matter as well as
   neutrino-related astrophysics topics.
-organization: Fermi Lab National Accelerator Laboratory
+organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 32000000000 # In bytes so I can parse how I want
 objectCount: 32767

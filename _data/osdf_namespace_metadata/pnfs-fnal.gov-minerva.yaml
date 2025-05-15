@@ -7,7 +7,7 @@ description: |
   MINERvA is providing the world's best, high-precision measurements of neutrino interactions on various nuclei,
   in the 1-to 10-GeV energy range. MINERvA's results are being used as inputs to current and future experiments
   seeking to study neutrino oscillations, or the ability of neutrinos to change their type.
-organization: Fermi Lab National Accelerator Laboratory
+organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 34500000000 # In bytes so I can parse how I want
 objectCount: 35339

@@ -5,7 +5,7 @@ description: |
   As we countdown to DECam's first light, workload and excitement increase among our collaborators. Starting in late 2011 and
   continuing for five years, DES will survey a large swath of the southern sky out to vast distances in order to provide new clues
   to this most fundamental of questions.
-organization: Fermi Lab National Accelerator Laboratory
+organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 136000000000 # In bytes so I can parse how I want
 objectCount: 36656
