@@ -10,7 +10,7 @@ description: |
 organization: California Institute of Technology
 dataVisibility: private
 size: # In bytes so I can parse how I want
-objectCount: 1,000,000
+objectCount: 1000000
 bytesXferd: # In bytes so I can parse how I want
 url: https://www.ligo.caltech.edu/
 fieldOfScience: Astronomy and Astrophysics
