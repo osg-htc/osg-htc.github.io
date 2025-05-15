@@ -1,3 +1,7 @@
+---
+name: OpenViSUS Conversion of NASA's C1440-LLC2160 Simulation
+namespace:
+  - "/nasa/nsdf/climate3"
 description: |
   The [NASA C1440-LLC2160 dataset](https://data.nas.nasa.gov/geoseccoviz/geoseccovizdata/c1440_llc2160/GEOS/)
   is [the simulation output from research into coupling two models](https://www.nas.nasa.gov/SC21/research/project16.html):
@@ -14,19 +18,25 @@ description: |
   [National Science Data Fabric](https://nationalsciencedatafabric.org/) has
   processed the raw data into the [ViSUS](https://visus.org/) data format
   using their [OpenViSUS](https://github.com/sci-visus/OpenVisus) toolsuite.
+
+  It will be used in the
+  [2026 IEEE SciVis Contest](https://sciviscontest2026.github.io/) to
+  demonstrate cutting-edge technologies for working with petascale climate
+  data provided by NASA.
+
 organization: National Science Data Fabric
-dataVisibility: public
-size: 719098913751040  # bytes
-bytesXferd:  # bytes
 url: https://nationalsciencedatafabric.org/
 fieldOfScience: Physical Sciences  # 40.0402
 numberOfDatasets: 1
-rank: 0  # zero is lowest priority
-inProgress: true
+
+dataVisibility: public
+publicObject: /nasa/nsdf/climate3/dyamond/GEOS/GEOS_CO2/co2_face_2_depth_52_time_0_10269.idx
+size: 719098913751040  # bytes
+
 display: true
-name: NASA C1440-LLC2160, DYAMOND
-namespace:
-  - "/nasa/nsdf/climate3"
+rank: 0  # zero is lowest priority
+inProgress: false
+
+bytesXferd:  # bytes
 thirtyDayReads: 472358196
 oneYearReads: 472358196
-publicObject: # Optional namespace path to a public object
