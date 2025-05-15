@@ -1,18 +1,21 @@
 description: |
-    Namespace for use in OSDF usage tutorials by CHTC Research Facilitators
+    Datasets for use in OSDF usage tutorials by [Pelican Platform](https://pelicanplatform.org) facilitation team.
+
+    This repository supports the education and workforce development mission of the
+    Pelican Project.
 organization: UW-Madison # Name of the organization
 dataVisibility: private # public, or private
 size: 2416 # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
-url: https://chtc.cs.wisc.edu/uw-research-computing/facilitation-team # Organization URL
-fieldOfScience: Multi/Interdisciplinary Studies # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+url: https://pelicanplatform.org
+fieldOfScience: Computer and Information Sciences
 numberOfDatasets: 0 # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
-name: CHTC Research Facilitator OSDF Tutorial Namespace # Human readable name of the namespace
+name: OSDF Tutorial Data
 namespace: 
   - "/osdf-tutorial"
 thirtyDayReads: 0
 oneYearReads: 49311789860419
-organizationUrl: https://chtc.cs.wisc.edu/uw-research-computing/facilitation-team
+organizationUrl: https://pelicanplatform.org
