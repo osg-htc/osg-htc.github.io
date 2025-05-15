@@ -13,9 +13,11 @@ url: https://aws.amazon.com/opendata/ # Organization URL
 fieldOfScience: MULTI/INTERDISCIPLINARY STUDIES. # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: 690 # Number of datasets in the namespace
 rank: # Rank of the namespace, 0 will have the lowest priority
+inprogress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: Amazon Web Services Open Data # Human readable name of the namespace
 namespace: 
-	- "/aws-opendata/us-east-1"
+  - "/aws-opendata/us-east-1"
   - "/aws-opendata/us-west-1"
   - "/aws-opendata/us-west-2"
+  
