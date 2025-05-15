@@ -18,5 +18,6 @@ display: true # Whether or not to display this namespace
 name: Jessica Kendall-Bar Lab
 namespace: 
   - "/jkb-lab"
+  - "/jkb-lab-public"
 thirtyDayReads: 0
-oneYearReads: 1266
+oneYearReads: 131628
