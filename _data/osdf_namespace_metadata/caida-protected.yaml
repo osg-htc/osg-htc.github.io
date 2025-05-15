@@ -25,3 +25,4 @@ oneYearReads: 2428996385122106
 organizationUrl: https://www.caida.org/
 repositoryUrl:
   url: https://catalog.caida.org/search?query=types=dataset
+  label: Dataset Catalog
