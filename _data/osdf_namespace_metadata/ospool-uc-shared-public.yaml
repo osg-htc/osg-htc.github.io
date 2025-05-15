@@ -13,5 +13,6 @@ display: false # Whether or not to display this namespace
 name: OSPool Public Staging # Human readable name of the namespace
 namespace: 
   - "/ospool/uc-shared/public"
+publicObject: "/ospool/uc-shared/public/eht/GRMHD_kharma-v3/Ma+0.94_w5/torus.out0.05986.h5" # Public object name
 thirtyDayReads: 1302366219757806
 oneYearReads: 2366781818837408
