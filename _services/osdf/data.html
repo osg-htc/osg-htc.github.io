@@ -6,7 +6,7 @@
         loading:
     -   src: "https://unpkg.com/lunr/lunr.js"
         loading:
-    -   src: "/assets/js/pages/osdf-data-v0.js"
+    -   src: "/assets/js/pages/osdf-data-v1.js"
         loading: "defer"
         type: "module"
     css_extension:
@@ -27,11 +27,33 @@
 
 
 <div class="container-xxl py-2 mw-1000">
-    <h1 class="text-center">{{page.title}}</h1>
-    <p class="text-center">
+    <h1>{{page.title}}</h1>
+    <p>
         The OSDF service connects the nation’s scientific data repositories to computing infrastructure
     </p>
 </div>
+
+<div class="container-xxl mw-1000">
+    <h2 class="pt-1">Repositories available via the OSDF</h2>
+    <p>
+        <span id="repository-count"></span> repositories are connected to the OSDF to help deliver scientific data.  The table below illustrates
+        the datasets accessible via the OSDF.
+    </p>
+
+    <div class="row">
+        <div class="col-12 col-xl-7 col-lg-8 col-md-10 mb-2">
+            <input class="form-control" id="project-search" placeholder="Search Details" type="search"/>
+        </div>
+    </div>
+    <div id="wrapper" class="overflow-auto"></div>
+
+    <p>
+        The OSDF is a data federation, connecting independently operated storage.
+        Visit the links above for information about data access policies, how to
+        use the data, and more up-to-date information about what data is included.
+    </p>
+</div>
+
 
 <div id="" class="my-5 wave-osdf-display text-display">
     <div class="container-xxl mw-1000">
@@ -66,26 +88,8 @@
         </div>
     </div>
 </div>
+
 <div class="container-xxl mw-1000">
-    <h2 class="pt-3">Repositories available via the OSDF</h2>
-    <p>
-        Repositories can connect to the OSDF to help deliver scientific data.  The table below illustrates
-        the datasets accessible via the OSDF.
-    </p>
-
-    <div class="row">
-        <div class="col-12 col-xl-7 col-lg-8 col-md-10 mb-2">
-            <input class="form-control" id="project-search" placeholder="Search Details" type="search"/>
-        </div>
-    </div>
-    <div id="wrapper" class="overflow-auto"></div>
-
-    <p>
-        The OSDF is a data federation, connecting independently operated storage.
-        Visit the links above for information about data access policies, how to
-        use the data, and more up-to-date information about what data is included.
-    </p>
-
     <h2>Using the OSDF</h2>
     <p>
         The OSDF provides the foundational data delivery infrastructure using software provided by the <a href="https://pelicanplatform.org/">Pelican Platform</a>. Communities using the OSDF build infrastructure, such as indexing, tools, or data discovery, on top of this foundation. The OSDF can be used to download data via the browser, visualization in a notebook, or as part of large-scale computational workflows:
@@ -114,21 +118,27 @@
             </div>
             <div class="modal-body">
                 <div class="row">
+                    <div class="col-12">
+                        <div class="data-description"></div>
+                    </div>
+                    <div class="col-12">
+                        <hr>
+                    </div>
                     <div class="col-12 col-md-6">
                         <div>
-                            <h5 class="mb-1">Name</h5>
-                            <p class="data-name"></p>
+                            <h5 class="mb-1">Organization </h5><p class="data-organization"></p>
                         </div>
+                        <div>
+                            <h5 class="mb-1">Field of Research</h5><p class="data-fieldOfScience"></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
                         <div>
                             <h5 class="mb-1">Field of Research</h5><p class="data-fieldOfScience"></p>
                         </div>
                         <div>
                             <h5 class="mb-1">Organization </h5><p class="data-organization"></p>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <h5 class="mb-1">Description</h5>
-                        <div class="data-description"></div>
                     </div>
                 </div>
             </div>
@@ -160,7 +170,7 @@
         }
 
         async function initialize_ospool_report () {
-            counter("connected", 65, 20)
+           counter("connected", 32, 20)
             counter("transferred", 127, 20)
             counter("delivered", 129, 20)
         }
