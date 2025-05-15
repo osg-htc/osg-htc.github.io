@@ -19,3 +19,4 @@ name: MicroBooNE
 namespace: 
   - "/pnfs/fnal.gov/usr/uboone"
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://microboone.fnal.gov/

@@ -3,9 +3,9 @@ name: Kennesaw State University CC* Storage
 namespace:
   - "/kennesaw-priv"
 description: |
-  Enables faculty and students at Kennesaw State University to use their
+  This repository enables faculty and students at Kennesaw State University to use their
   [NSF Campus Cyberinfrastructure (CC*)](https://www.nsf.gov/funding/opportunities/cc-campus-cyberinfrastructure)
-  funded storage ([Award #2430289](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2430289&HistoricalAwards=false))
+  funded [storage](https://www.kennesaw.edu/research/centers-facilities/center-research-computing/nsf-campus-cyberinfrastructure/data-storage-project.php) ([Award #2430289](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2430289&HistoricalAwards=false))
   with their local HPC cluster via OSDF.
 
 organization: Kennesaw State University
@@ -24,3 +24,4 @@ inProgress: true
 bytesXferd:  # bytes
 thirtyDayReads: 46
 oneYearReads: 1329748
+organizationUrl: https://www.kennesaw.edu/
