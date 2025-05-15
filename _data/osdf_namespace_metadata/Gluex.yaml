@@ -1,21 +1,22 @@
 description: |
-
+  
   [GlueX](http://www.gluex.org) is an experiment at the Thomas Jefferson National Accelerator Facility (JLab) in Newport News, Virginia, that studies how particles called mesons behave to learn more about the strong force—the force that holds atomic nuclei together. The dataset from GlueX comes from millions of collisions between high-energy photons and protons. It records what kinds of particles are produced, how fast they’re moving, and in what directions.
 
+
   [NSF Award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1812415)
-organization: Jefferson Lab # Name of the organization
-dataVisibility: public # public, or private
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://www.jlab.org # Organization URL
-fieldOfScience: Physcial Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
-numberOfDatasets: # Number of datasets in the namespace
-rank: 0 # Rank of the namespace, 0 will have the lowest priority
-inProgress: false # Whether or not the namespace is in progress
-display: true # Whether or not to display this namespace
-name: GlueX # Human readable name of the namespace
-namespace: 
-  - "/gluex"
-  - "/Gluex"
+organization: Jefferson Lab
+dataVisibility: public
+size: null
+bytesXferd: null
+url: https://www.jlab.org
+fieldOfScience: Physcial Sciences
+numberOfDatasets: null
+rank: 0
+inProgress: false
+display: true
+name: GlueX
+namespace:
+  - /gluex
+  - /Gluex
 thirtyDayReads: 0
 oneYearReads: 215894157976
