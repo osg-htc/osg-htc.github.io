@@ -9,7 +9,7 @@ description: |
   atmospheric and Earth systems datasets.  When downloading data from the web interface, users are automatically
   redirected to the OSDF cyberinfrastructure.
 
-  Example notebooks that analyze data from these datasets can be found in the [NCAR OSDF Examples repository](https://github.com/NCAR/osdf_examples).
+  Example notebooks that analyze data from these datasets can be found in the [NCAR OSDF Examples repository](https://github.com/NCAR/osdf_examples) and are part of the [NCAR effort to utilize the OSDF](https://rda.ucar.edu/resources/ndcc-osdf/).
 
   ### Visualizations
   *Visualization of climate data over South America on October 10, 2020, using NCAR datasets.*
