@@ -1,7 +1,7 @@
 description: |
   The [Short-Baseline Near Detector](https://sbn-nd.fnal.gov/) (SBND) is a 112-ton active mass liquid argon time projection chamber (LArTPC)
   neutrino detector that sits only 110-m from the target of the Booster Neutrino Beam (BNB) at Fermilab. SBND is
-  the near detector in the Short-Baseline Neutrino Program. ICARUS is the far detectors in the program, and
+  the near detector in the Short-Baseline Neutrino Program. ICARUS is the far detector in the program, and
   MicroBooNE ran previously in the same beam.
 
   SBND will record over a million neutrino interactions per year. By providing such a high statistics measurement
