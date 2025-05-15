@@ -1,5 +1,5 @@
 description: |
-Scripps Institution of Oceanography scientists conduct fundamental research to understand and protect the planet, and investigate our oceans, Earth, and atmosphere to find solutions to our greatest environmental challenges. 
+  Scripps Institution of Oceanography scientists conduct fundamental research to understand and protect the planet, and investigate our oceans, Earth, and atmosphere to find solutions to our greatest environmental challenges. 
 organization: Scripps Institute of Oceanography # Name of the organization
 dataVisibility: private # public, or private
 size: # In bytes so I can parse how I want
