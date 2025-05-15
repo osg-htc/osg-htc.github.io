@@ -26,6 +26,8 @@ description: |
 
 organization: National Science Data Fabric
 organizationUrl: https://nationalsciencedatafabric.org/
+repositoryUrl:
+  url: https://data.nas.nasa.gov/geoseccoviz/
 fieldOfScience: Physical Sciences  # 40.0402
 numberOfDatasets: 1
 
