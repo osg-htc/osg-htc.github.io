@@ -1,0 +1,9 @@
+---
+---
+
+{{ site.data.osdf_namespace_metadata | jsonify }}
+
+
+{% for x in site.data.osdf_namespace_metadata %}
+  {{ x[1].description | markdownify }}
+{% endfor %}
