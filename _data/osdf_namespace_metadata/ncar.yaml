@@ -1,15 +1,34 @@
 description: |
+[NCAR](https://ncar.ucar.edu/) provides a wide range of atmospheric and Earth system science datasets, including observational data from airborne and ground-based instruments, outputs from community weather and climate models, and large-scale reanalysis and simulation data. These datasets support research on weather patterns, climate change, the water cycle, and extreme weather events. They are used by researchers, educators, and policymakers in the U.S. and internationally.
 
-organization: # Name of the organization
-dataVisibility: # public, or private
+This work is part of the [Pathfinders project](https://ndc-pathfinders.org), a collaboration between five initiatives aimed at developing science-led pathways through the NSF cyberinfrastructure landscape.
+
+Example notebooks that analyze data from these datasets can be found in the [NCAR OSDF Examples GitHub repository](https://github.com/NCAR/osdf_examples).
+
+### Visualizations
+*Visualization of climate data over South America on October 10, 2020, using NCAR datasets.*
+
+<img src="https://raw.githubusercontent.com/osg-htc/osg-htc.github.io/master/assets/images/South_American_Climate.png" width="600" height="400" alt="Climate over South America on October 10, 2020">  
+
+<br>
+
+*Visualization of ocean temperature on January 16, 2014.*
+
+<img src="https://raw.githubusercontent.com/osg-htc/osg-htc.github.io/master/assets/images/Ocean_Heat.png" width="600" height="400" alt="Ocean heat on January 16, 2014">  
+
+[NSF Award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1852977)
+
+organization: National Center for Atmospheric Research # Name of the organization
+dataVisibility: public # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
-url: # Organization URL
-fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+url: https://ncar.ucar.edu # Organization URL
+fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
-name: # Human readable name of the namespace
+name: National Center for Atmospheric Research # Human readable name of the namespace
 namespace: 
   - "/ncar"
+  - "/ncar-rda"

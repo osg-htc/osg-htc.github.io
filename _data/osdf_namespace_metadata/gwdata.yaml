@@ -1,15 +1,20 @@
 description: |
+  Public gravitational wave data from international gravitational wave network,
+  including data from [LIGO](https://www.ligo.caltech.edu/), [VIRGO](https://www.virgo-gw.eu/),
+  and [KAGRA](https://gwcenter.icrr.u-tokyo.ac.jp/en/).  This data can be used
+  in the detection and study of black holes throughout the universe.
 
-organization: # Name of the organization
-dataVisibility: # public, or private
+  These datasets are the calibrated readouts from the corresponding interferometers.
+organization: Gravitational Wave Open Science Center
+dataVisibility: public
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
-url: # Organization URL
-fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+url: https://gwosc.org/
+fieldOfScience: Astronomy and Astrophysics
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
-name: # Human readable name of the namespace
+name: Public Gravitational Wave Data
 namespace: 
   - "/gwdata"

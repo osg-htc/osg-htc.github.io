@@ -1,15 +1,27 @@
 description: |
+  Radio astronomy data from the Very Large Array Sky Survey (VLASS).
 
-organization: # Name of the organization
-dataVisibility: # public, or private
-size: # In bytes so I can parse how I want
+  As written in the [VLASS homepage](https://public.nrao.edu/vlass/),
+  VLASS is a survey of the universe through the use of the Very Large
+  Array in New Mexico.  THe VLASS is designed to produce a large collection
+  of radio data available to wide range of scientists within the astronomical
+  community. VLASS's science goal is to produce a radio, all-sky survey that
+  will benefit the entire astronomical community. As VLASS completes its three
+  scans of the sky separated by approximately 32 months, new developments in
+  data processing techniques will allow scientists an opportunity to download data
+  instantly on potentially millions of astronomical radio sources.
+organization: National Radio Astronomy Observatory
+dataVisibility: public
+size: 4068193022771
+objects: 36068
+datasets: 15962
 bytesXferd: # In bytes so I can parse how I want
-url: # Organization URL
-fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+url: https://public.nrao.edu/vlass/
+fieldOfScience: Astronomy and Astrophysics
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
-name: # Human readable name of the namespace
+name: NRAO VLASS
 namespace: 
   - "/nrao-ardg"
