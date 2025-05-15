@@ -10,17 +10,19 @@ description: |
   made available for large-scale analysis.
 organization: University of California, San Diego
 dataVisibility: private
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://www.caida.org/
-fieldOfScience: Computer and Information Sciences
-numberOfDatasets: # Number of datasets in the namespace
+size: null # In bytes so I can parse how I want
+objectCount: null
+fieldOfScience: Computer and Information Sciences and Support Services # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
-inProgress: false # Whether or not the namespace is in progress
+inProgress: true # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
-name: # Human readable name of the namespace
+name: Center for Applied Internet Data Analysis # Human readable name of the namespace
 namespace: 
   - "/caida/protected"
 thirtyDayReads: 0
 oneYearReads: 2428996385122106
 organizationUrl: https://www.caida.org/
+repositoryUrl:
+  url: https://catalog.caida.org/search?query=types=dataset
+  label: Dataset Catalog
