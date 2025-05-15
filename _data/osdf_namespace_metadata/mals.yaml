@@ -1,11 +1,11 @@
 description: |
-
+The MeerKAT Absorption Line Survey (MALS) consists of 1655 hrs of MeerKAT time to carry out the most sensitive search of HI and OH absorption lines at 0<z<2, the redshift range over which most of the cosmic evolution in the star formation rate density takes place. 
 organization: Inter-University Centre for Astronomy and Astrophysics
 dataVisibility: public
 size: 250000000000000 # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
 url: https://mals.iucaa.in/
-fieldOfScience: 40
+fieldOfScience: PHYSICAL SCIENCES
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: true # Whether or not the namespace is in progress
