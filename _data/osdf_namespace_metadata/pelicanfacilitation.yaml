@@ -1,14 +1,15 @@
 description: |
-  A namespace for the CHTC facilitation team to use for a variety of facilitation purposes
+  A namespace for the CHTC facilitation team to use for a variety of facilitation purposes.
 organization: UW Madison
 dataVisibility: public
 size: 0
-bytesXferd: # In bytes so I can parse how I want
-url: https://chtc.cs.wisc.edu/
-fieldOfScience: COMPUTER AND INFORMATION SCIENCES AND SUPPORT SERVICES
-numberOfDatasets: # not for datasets
+bytesXferd: 0 # In bytes so I can parse how I want
+url: https://chtc.cs.wisc.edu/uw-research-computing/facilitation-team
+fieldOfScience: Computer and Information Sciences and Support Services
+numberOfDatasets: 0 # not for datasets
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: false # Whether or not to display this namespace
+name: Pelican Facilitation Playground
 namespace: 
   - "/pelicanfacilitation"
