@@ -9,9 +9,10 @@ description: |
   **supernovae**, and **gamma-ray bursts**.
   
   The IceCube collaboration is supported by [multiple funding agencies](https://icecube.wisc.edu/collaboration/funding/) including
-  the [NSF](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2042807)
+  the [NSF](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2042807).  The dataset is maintained by the
+  Wisconsin Icecube Particle Astrophysics Center.
 
-organization: Wisconsin Icecube Particle Astrophysics Center # Name of the organization
+organization: University of Wisconsin-Madison
 dataVisibility: private # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
@@ -24,5 +25,6 @@ display: true # Whether or not to display this namespace
 name: IceCube Neutrino Data # Human readable name of the namespace
 namespace: 
   - "/icecube"
+  - "/icecube/PUBLIC"
 thirtyDayReads: 138632907277119
 oneYearReads: 7727207464114454
