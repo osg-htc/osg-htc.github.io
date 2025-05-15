@@ -9,7 +9,6 @@ description: |
 organization: University of Chicago # Name of the organization
 dataVisibility: private # public, or private
 size: null # In bytes so I can parse how I want
-url: https://www.lngs.infn.it/en/lngs-overview # Organization URL
 fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
@@ -20,6 +19,6 @@ namespace:
   - "/nrp/protected/xenon-biggrid-nl/"
 thirtyDayReads: 0
 oneYearReads: 152114667955363
-organizationUrl: https://www.lngs.infn.it/en/lngs-overview
+organizationUrl: https://www.uchicago.edu/en
 repositoryUrl: 
   url: https://xenonexperiment.org/
