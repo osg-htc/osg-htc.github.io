@@ -1,5 +1,5 @@
 description: |
-  The Short-Baseline Near Detector (SBND) is a 112-ton active mass liquid argon time projection chamber (LArTPC)
+  The [Short-Baseline Near Detector](https://sbn-nd.fnal.gov/) (SBND) is a 112-ton active mass liquid argon time projection chamber (LArTPC)
   neutrino detector that sits only 110-m from the target of the Booster Neutrino Beam (BNB) at Fermilab. SBND is
   the near detector in the Short-Baseline Neutrino Program. ICARUS is the far detectors in the program, and
   MicroBooNE ran previously in the same beam.
@@ -8,14 +8,16 @@ description: |
   of the un-oscillated content of the BNB, SBND plays a critical role in performing searches for neutrino oscillations
   at the SBN Program. The large data sample will also allow studies of neutrino-argon interactions in the GeV energy
   range with unprecedented precision. The physics of these interactions is an important element of future neutrino
-  experiments that will employ the LArTPC technology, such as the long-baseline Deep Underground Neutrino Experiment, DUNE.
+  experiments that will employ the LArTPC technology, such as the long-baseline Deep Underground Neutrino Experiment, [DUNE](https://www.dunescience.org/).
+
+  SBND uses the OSDF to deliver common data inputs for large-scale simulation jobs distributed across the US.
 organization: Fermi Lab National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 503000000000 # In bytes so I can parse how I want
 objectCount: 60125
-bytesXferd: null # In bytes so I can parse how I want
+bytesXferd: null
 url: https://sbn-nd.fnal.gov/
-fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+fieldOfScience: Physical Sciences
 numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
