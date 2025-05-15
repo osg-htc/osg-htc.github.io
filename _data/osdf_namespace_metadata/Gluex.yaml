@@ -25,3 +25,4 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 215894157976
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://www.jlab.org

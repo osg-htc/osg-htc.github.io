@@ -28,3 +28,4 @@ namespace:
 thirtyDayReads: 24
 oneYearReads: 95684852
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://www.cis.fiu.edu/kfscis-professor-awarded-500000-nsf-grant-for-environment/

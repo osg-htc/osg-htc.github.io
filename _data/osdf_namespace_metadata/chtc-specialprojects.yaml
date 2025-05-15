@@ -20,3 +20,4 @@ oneYearReads: 5339965187224643
 thirtyDayReads: 5286894039594
 oneYearReads: 5339965187224643
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://dorealab.cals.wisc.edu/

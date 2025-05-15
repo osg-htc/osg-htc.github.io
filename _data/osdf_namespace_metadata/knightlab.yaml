@@ -16,3 +16,4 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 258218216565
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://knightlab.ucsd.edu/

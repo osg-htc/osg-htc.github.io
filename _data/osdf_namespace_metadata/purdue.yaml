@@ -16,3 +16,4 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 0
 publicObject: # Optional namespace path to a public object
+organizationUrl: https://purdue.edu/
