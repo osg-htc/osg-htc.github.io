@@ -1,16 +1,16 @@
 description: |
-    Namespace for use in OSDF usage tutorials by OSG-HTC Research Facilitators
-organization: OSG-HTC # Name of the organization
+    Namespace for use in OSDF usage tutorials by CHTC Research Facilitators
+organization: UW-Madison # Name of the organization
 dataVisibility: private # public, or private
 size: 2416 # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
-url: https://osg-htc.org/ # Organization URL
+url: https://chtc.cs.wisc.edu/uw-research-computing/facilitation-team # Organization URL
 fieldOfScience: Multi/Interdisciplinary Studies # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: 0 # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
-name: OSDF Tutorial Namespace # Human readable name of the namespace
+name: CHTC Research Facilitator OSDF Tutorial Namespace # Human readable name of the namespace
 namespace: 
   - "/osdf-tutorial"
 thirtyDayReads: 0
