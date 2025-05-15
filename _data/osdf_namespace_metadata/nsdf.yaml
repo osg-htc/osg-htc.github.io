@@ -7,4 +7,5 @@ url: # Organization URL
 fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: # Number of datasets in the namespace
 rank: # Rank of the namespace, 0 will have the lowest priority
-display: true # Whether or not to display this namespacenamespace: "/nsdf"
+display: true # Whether or not to display this namespace
+namespace: "/nsdf"
