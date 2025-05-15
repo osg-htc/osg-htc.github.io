@@ -6,7 +6,7 @@
         loading:
     -   src: "https://unpkg.com/lunr/lunr.js"
         loading:
-    -   src: "/assets/js/pages/osdf-data.js?version=2"
+    -   src: "/assets/js/pages/osdf-data.js?version=3"
         loading: "defer"
         type: "module"
     css_extension:
@@ -27,31 +27,46 @@
 
 
 <div class="container-xxl py-2 mw-1000">
-    <h1>{{page.title}}</h1>
-    <p>
+    <h1 class="text-center">{{page.title}}</h1>
+    <p class="text-center">
         The OSDF service connects the nation’s scientific data repositories to computing infrastructure
     </p>
-    <div class="row gx-3">
-        <div class="col-4">
-            <span class="big-number"><span id="connected">1</span> PB</span>
-            <div class="rounded bg-secondary p-2 fs-4">
-                of scientific data connected
+</div>
+
+<div id="" class="my-5 wave-osdf-display text-display">
+    <div class="container-xxl mw-1000">
+        <div class="row gx-3">
+            <div class="col-4">
+                <div class="">
+                    <div id="connected" class="big-number">1</div>
+                    <div class="big-label">Datasets</div>
+                </div>
+                <div class="rounded bg-secondary p-2 fs-4 text-center">
+                    connected to the OSDF
+                </div>
             </div>
-        </div>
-        <div class="col-4">
-            <span class="big-number"><span id="transferred">1</span></span>
-            <div class="rounded bg-secondary p-2 fs-4">
-                objects transferred per second
+            <div class="col-4">
+                <div>
+                    <div id="transferred" class="big-number">1</div>
+                    <div class="big-label">Objects</div>
+                    </div>
+                <div class="rounded bg-secondary p-2 fs-4 text-center">
+                    transferred per second
+                </div>
             </div>
-        </div>
-        <div class="col-4">
-            <span class="big-number"><span id="delivered">1</span>PB</span>
-            <div class="rounded bg-secondary p-2 fs-4">
-                of objects delivered in the last year
+            <div class="col-4">
+                <div>
+                    <div id="delivered" class="big-number">1</div>
+                    <div class="big-label">Petabytes</div>
+                    </div>
+                <div class="rounded bg-secondary p-2 fs-4 text-center">
+                    of data delivered
+                </div>
             </div>
         </div>
     </div>
-
+</div>
+<div class="container-xxl mw-1000">
     <h2 class="pt-3">Repositories connected to the OSDF</h2>
     <p>
         Repositories can connect to the OSDF to help deliver scientific data.  The table below illustrates
@@ -145,8 +160,8 @@
         }
 
         async function initialize_ospool_report () {
-            counter("connected", 120, 20)
-            counter("transferred", 128, 1)
+            counter("connected", 65, 20)
+            counter("transferred", 127, 20)
             counter("delivered", 129, 20)
         }
 
