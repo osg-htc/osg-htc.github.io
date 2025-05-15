@@ -3,6 +3,7 @@ description: |
 
 organization: # Name of the organization
 dataVisibility: public # public, or private
+publicObject: /pelicanplatform/test/hello-world.txt
 size: 8132  # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
 url: https://pelicanplatform.org  # Organization URL
