@@ -14,10 +14,8 @@ description: |
 organization: University of Hawaii-Moana
 dataVisibility: public
 size: 119846767427584
-objectCount:
-bytesXferd: # In bytes so I can parse how I want
-url: http://dtn-itc.ifa.hawaii.edu/spin4d/DR1/
-fieldOfScience: Astronomy and Astrophysics
+objectCount: null
+fieldOfScience: Physcial Sciences
 numberOfDatasets: 6
 rank: 2 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
@@ -27,3 +25,6 @@ namespace:
   - "/uhkoa/SPIN4D-DR1"
 publicObject: # Optional namespace path to a public object
 organizationUrl: https://manoa.hawaii.edu/
+repositoryUrl:
+  url:  http://dtn-itc.ifa.hawaii.edu/spin4d/DR1/
+  
