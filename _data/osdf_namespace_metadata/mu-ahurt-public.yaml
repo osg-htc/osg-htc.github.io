@@ -5,7 +5,7 @@ organization: University of Missouri # Name of the organization
 dataVisibility: public # public, or private
 size: null # In bytes so I can parse how I want
 objectCount: null
-fieldOfScience: Computer and Information Sciencesd and Support Services
+fieldOfScience: Computer and Information Sciences and Support Services
 numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
