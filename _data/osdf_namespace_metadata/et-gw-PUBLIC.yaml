@@ -1,19 +1,28 @@
 description: |
+  Simulation data used for the Einstein Telescope Mock Data Challenge.
 
-organization: # Name of the organization
-dataVisibility: # public, or private
-size: # In bytes so I can parse how I want
+  The Einstein Telescope (ET) is a proposed next-generation gravitational wave
+  observatory, aiming to detect gravitational waves with much higher
+  sensitivity than either the LIGO or VIRGO instruments.
+
+  As part of the studies and the design proposal for the ET instrument, the
+  mock data challenge was run in 2024 to better understand how the future data
+  may be distributed and analyzed.
+organization: UCLouvain
+dataVisibility: public
+size: 6764573491
 bytesXferd: # In bytes so I can parse how I want
-url: # Organization URL
-fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
-numberOfDatasets: # Number of datasets in the namespace
+fieldOfScience: Astronomy and Astrophysics
+numberOfDatasets: 3
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
-display: false # Whether or not to display this namespace
-name: # Human readable name of the namespace
+display: true
+name: Einstein Telescope Simulations
 namespace: 
   - "/et-gw/PUBLIC"
 thirtyDayReads: 16372877593
 oneYearReads: 359946611774579
-publicObject: # Optional namespace path to a public object
-organizationUrl:
+publicObject: /et-gw/PUBLIC/MDC1/v2/data/E1/E-E1_STRAIN_DATA-1000008192-2048.gwf
+organizationUrl: https://www.uclouvain.be/en
+repositoryUrl:
+  url: http://et-origin.cism.ucl.ac.be/
