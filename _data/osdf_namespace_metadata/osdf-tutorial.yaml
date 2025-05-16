@@ -19,4 +19,4 @@ oneYearReads: 62261
 organizationUrl: https://wisc.edu/
 repositoryUrl:
   # TODO: Update URL with the appropriate Pelican notebook.
-  url: https://pelicanplatform.org
+  url: https://github.com/osg-htc/tutorial-osdf-noaa/blob/main/01-get-and-share-objects.ipynb
