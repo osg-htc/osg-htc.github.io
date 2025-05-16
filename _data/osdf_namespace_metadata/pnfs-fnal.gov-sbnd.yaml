@@ -15,15 +15,15 @@ organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 503000000000 # In bytes so I can parse how I want
 objectCount: 60125
-bytesXferd: null
-url: https://sbn-nd.fnal.gov/
 fieldOfScience: Physical Sciences
 numberOfDatasets: null # Number of datasets in the namespace
-rank: 0 # Rank of the namespace, 0 will have the lowest priority
+rank: 1 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: Short-Baseline Near Detector
 namespace: 
   - "/pnfs/fnal.gov/usr/sbnd"
-publicObject: # Optional namespace path to a public object
+publicObject: null # Optional namespace path to a public object
 organizationUrl: https://fnal.gov/
+repositoryUrl:
+  url: https://sbn-nd.fnal.gov/
