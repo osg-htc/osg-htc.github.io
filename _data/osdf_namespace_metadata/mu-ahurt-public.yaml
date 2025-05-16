@@ -3,11 +3,10 @@ description: |
   computer vision and morphological neural networks. 
 organization: University of Missouri # Name of the organization
 dataVisibility: public # public, or private
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://engineering.missouri.edu/faculty/j-alex-hurt/ # Organization URL
-fieldOfScience: Computer and Information Sciences
-numberOfDatasets: # Number of datasets in the namespace
+size: null # In bytes so I can parse how I want
+objectCount: null
+fieldOfScience: Computer and Information Sciences and Support Services
+numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
@@ -16,5 +15,7 @@ namespace:
   - "/mu/ahurt/public"
 thirtyDayReads: 0
 oneYearReads: 970306300
-publicObject: # Optional namespace path to a public object
-organizationUrl: https://engineering.missouri.edu/faculty/j-alex-hurt/
+organizationUrl: https://missouri.edu
+repositoryUrl:
+  url: https://engineering.missouri.edu/faculty/j-alex-hurt/
+publicObject: /mu/ahurt/public/DOTA/train_chipped512/dmp_vis.tar.gz

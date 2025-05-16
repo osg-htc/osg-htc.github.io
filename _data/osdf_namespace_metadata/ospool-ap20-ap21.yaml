@@ -8,11 +8,14 @@ description: |
 
   This data is organized as "working datasets" representing running workloads, not
   permanent scientific outputs.
+
 organization: University of Chicago # Name of the organization
 dataVisibility: private # public, or private
-size: 18000000000000 # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://osg-htc.org/services/ospool/ # Organization URL
+# ap20:  18000000000000
+# ap21:  21000000000000
+# ---------------------
+#        39000000000000
+size: 39000000000000  # In bytes so I can parse how I want
 fieldOfScience: Multi/Interdisciplinary Studies # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
@@ -21,6 +24,19 @@ display: true # Whether or not to display this namespace
 name: OSPool AP Working Data
 namespace: 
   - "/ospool/ap20"
-thirtyDayReads: 1676997303241980
-oneYearReads: 20652777419903600
+  - "/ospool/ap21"
+
+# ap20: 1676997303241980
+# ap21: 1023347691521650
+# ----------------------
+#       2700344994763630
+thirtyDayReads: 2700344994763630
+
+# ap20: 20652777419903600
+# ap21: 23436532373051000
+# -----------------------
+#       44089309792954600
+oneYearReads: 44089309792954600
 organizationUrl: https://www.uchicago.edu/en
+repositoryUrl:
+  url: https://osg-htc.org/services/ospool/

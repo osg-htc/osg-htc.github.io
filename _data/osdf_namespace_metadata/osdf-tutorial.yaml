@@ -7,7 +7,7 @@ organization: University of Wisconsin - Madison
 dataVisibility: private # public, or private
 size: 2416 # In bytes so I can parse how I want
 fieldOfScience: Computer and Information Sciences
-numberOfDatasets: 0 # Number of datasets in the namespace
+numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
