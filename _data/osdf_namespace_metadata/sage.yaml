@@ -12,7 +12,7 @@ description: |
 organization: Northwestern University
 dataVisibility: private
 size: 116631128783045
-fieldOfScience: Computer and Information Sciences
+fieldOfScience: Computer and Information Sciences and Support Services # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: null # Number of datasets in the namespace
 rank: 1 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
