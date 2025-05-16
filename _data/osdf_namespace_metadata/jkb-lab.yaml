@@ -13,10 +13,9 @@ description: |
 organization: University of California, San Diego
 dataVisibility: private
 size: 5497558138880 # 5TB number communicated by Ilkay via emailed slide.
-bytesXferd: # none
-url: https://www.jessiekb.com/
+objectCount: null # Number of objects in the namespace
 fieldOfScience: Biological and Biomedical Sciences
-numberOfDatasets: # unknown -- none currently available
+numberOfDatasets: null # unknown -- none currently available
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: true # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
@@ -27,3 +26,6 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 1266
 organizationUrl: https://www.jessiekb.com/
+repositoryUrl:
+  url: https://nationaldataplatform.org/ckandata
+  label: Dataset Catalog
