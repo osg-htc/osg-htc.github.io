@@ -1,13 +1,14 @@
 description: |
   Simulation data used for the Einstein Telescope Mock Data Challenge.
 
-  The Einstein Telescope (ET) is a proposed next-generation gravitational wave
+  The [Einstein Telescope](https://www.et-gw.eu/) (ET) is a proposed next-generation gravitational wave
   observatory, aiming to detect gravitational waves with much higher
   sensitivity than either the LIGO or VIRGO instruments.
 
   As part of the studies and the design proposal for the ET instrument, the
   mock data challenge was run in 2024 to better understand how the future data
-  may be distributed and analyzed.
+  may be distributed and analyzed.  An example tutorial for using the data can
+  be found [on GitHub](https://github.com/elenacuoco/ET-MDC-Tutorials).
 organization: UCLouvain
 dataVisibility: public
 size: 6764573491
