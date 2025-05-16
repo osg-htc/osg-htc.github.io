@@ -145,6 +145,14 @@ class ProjectDisplay{
         let [sizeValue, sizeLabel] = formatBytes(size, true)?.split(" ") || [null, null]
         this.updateBigNumberValue("size", sizeValue, sizeLabel);
 
+        // If all the values are empty, hide the parent
+        if (!sizeValue && !readsValue && !numberOfDatasets) {
+            document.getElementById("oneYearReads").parentNode.parentNode.parentNode.parentNode.classList.add("d-none")
+        } else {
+            document.getElementById("oneYearReads").parentNode.parentNode.parentNode.parentNode.classList.remove("d-none")
+        }
+
+
         this.setUrl();
         this.display_modal.show();
     }
