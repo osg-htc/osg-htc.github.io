@@ -3,20 +3,35 @@ description: |
 
   As written in the [VLASS homepage](https://public.nrao.edu/vlass/),
   VLASS is a survey of the universe through the use of the Very Large
-  Array in New Mexico.  THe VLASS is designed to produce a large collection
+  Array (VLA) in New Mexico.  The VLASS is designed to produce a large collection
   of radio data available to wide range of scientists within the astronomical
   community. VLASS's science goal is to produce a radio, all-sky survey that
   will benefit the entire astronomical community. As VLASS completes its three
   scans of the sky separated by approximately 32 months, new developments in
   data processing techniques will allow scientists an opportunity to download data
   instantly on potentially millions of astronomical radio sources.
+
+  The data consists of interferometric visibilities stored in 
+  ([Measurement Set (MS)](https://casa.nrao.edu/Memos/229.html)) format. Each
+  dataset contains calibrated visibilities for one of the sixteen spectral windows
+  of the VLA and covers an area of 4 square degrees (2 degrees x 2 degrees) in the
+  sky. All sixteen spectral windows are combined to generate a single image, so that
+  the data contained in this data origin can be used to make images of approximately 
+  70 regions in the sky, each image covering 4 square degrees. The [LibRA software
+  package](https://github.com/ARDG-NRAO/LibRA) is used to transform visibilities to
+  images. The architecture and design considerations for LibRA are shown in [this
+  presentation](https://www.aoc.nrao.edu/~sbhatnag/Talks/For_BrianB.pdf). Recent
+  large scale imaging achievements by the NRAO team that were made possible through
+  use of OSG resources are reported in this [NRAO Newsletter article]
+  (https://science.nrao.edu/enews/17.3/index.shtml#deepimaging) and [this press
+  release](https://public.nrao.edu/news/astronomers-study-the-universe-300-times-faster/).
 organization: National Radio Astronomy Observatory
 dataVisibility: public
 size: 4068193022771
 objectCount: 36068
-numberOfDatasets: 15962
 fieldOfScience: Astronomy and Astrophysics
-rank: 3 # Rank of the namespace, 0 will have the lowest priority
+numberOfDatasets: 15962
+rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: NRAO VLASS
@@ -24,7 +39,6 @@ namespace:
   - "/nrao-ardg"
 thirtyDayReads: 17994033984997
 oneYearReads: 277174499417100
-publicObject: /nrao-ardg/fmadsen/vlass-32PIMS/data/casa-20250128-231334.log # Optional namespace path to a public object
 organizationUrl: https://public.nrao.edu/vlass/
-repositoryUrl:
-  url: https://public.nrao.edu/vlass/
+repositoryUrl: null
+publicObject: /nrao-ardg/fmadsen/vlass-32PIMS/data/T23t17/J161533+503000/VLASS2.1.sb38528342.eb38565674.59072.03519471065_split_SPW0.ms
