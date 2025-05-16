@@ -130,7 +130,6 @@ class ProjectDisplay{
         document.getElementById("data-public-object").style.display = publicObject ? "block" : "none"
         document.getElementById("data-pelican-download").innerText = `pelican object get osdf://${publicObject} ./`
         document.getElementById("data-browser-download").href = `https://osdf-director.osg-htc.org${publicObject}`
-        document.getElementById("data-browser-download").innerText = `https://osdf-director.osg-htc.org${publicObject}`
 
         // Update the big value numbers
         let [readsValue, readsLabel] = formatBytes(oneYearReads, true)?.split(" ") || [null, null]

@@ -6,7 +6,7 @@
         loading:
     -   src: "https://unpkg.com/lunr/lunr.js"
         loading:
-    -   src: "/assets/js/pages/osdf-data-v7.js"
+    -   src: "/assets/js/pages/osdf-data-v8.js"
         loading: "defer"
         type: "module"
     css_extension:
@@ -27,9 +27,9 @@
 
 
 <div class="container-xxl py-2 mw-1000">
-    <h1>{{page.title}}</h1>
+    <h1 class="mini-bar">{{page.title}}</h1>
     <p class="fs-5">
-        The OSDF service connects the nation’s scientific data repositories to computing infrastructure
+        The OSDF service connects the nation’s scientific data repositories to computing infrastructure.
     </p>
 </div>
 
@@ -101,11 +101,69 @@
         </li>
     </ul>
 
-    <div class="d-flex align-items-center justify-content-center mt-5">
-        <a href="https://pelicanplatform.org/" target="_blank">
-            <img width="80" src="/assets/images/logos/PelicanPlatformLogo_Icon.png" alt="Pelican Logo" class="img-fluid" style="max-width: 200px;">
-        </a>
-        <h2 class="ms-3 mb-0">Powered By <a href="https://pelicanplatform.org">Pelican Platform</a></h2>
+    <h2>How to bring your Dataset to the OSDF</h2>
+    <div>
+        <h3 class="mini-bar">Share</h3>
+        <p>The OSDF may be for you if...</p>
+        <ul>
+            <li>You are part of a collaborative project that works with shared data sets</li>
+            <li>You have generated data as part of a project and want to share it</li>
+        </ul>
+        <div class="alert alert-light border-0 shadow d-flex flex-column">
+            <h5 class="mx-auto">Want to make your dataset available via the OSDF?</h5>
+            <a class="btn btn-secondary mx-auto d-block mt-3" href="mailto:support@osg-htc.org">Contact OSDF Support Staff</a>
+        </div>
+    </div>
+
+    <div class="mini-bar">
+        <h3 class="mini-bar">Use</h3>
+        <p>The OSDF may be for you if...</p>
+        <ul>
+            <li>You are using the OSPool to analyze or produce data.</li>
+            <li>You want to analyze data that has been shared on the OSDF.</li>
+        </ul>
+        <div class="alert alert-light border-0 shadow d-flex flex-column">
+            <h5 class="mx-auto">Want to use or process data hosted on the OSDF?</h5>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <a class="btn btn-secondary mx-auto d-block mt-3" href="mailto:support@osg-htc.org">Contact OSDF Support Staff</a>
+                </div>
+                <div class="col-auto d-flex">
+                    <div class="my-auto pt-2">or</div>
+                </div>
+                <div class="col-auto">
+                    <a class="btn btn-secondary mx-auto d-block mt-3" href="https://portal.osg-htc.org/application">Request an OSPool Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row mt-5 justify-content-center">
+        <div class="col-auto">
+            <div class="d-flex align-items-center">
+                <a href="https://pelicanplatform.org/" target="_blank">
+                    <img width="80" src="/assets/images/logos/PelicanPlatformLogo_Icon.png" alt="Pelican Logo" class="img-fluid" style="max-width: 200px;">
+                </a>
+                <h2 class="ms-3 mb-0">Powered By <a href="https://pelicanplatform.org">Pelican Platform</a></h2>
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="d-flex align-items-center">
+                <a href="https://path-cc.io" target="_blank">
+                    <img width="80" src="/assets/images/logos/Logo_Round_Med.png" alt="PATh Logo" class="img-fluid" style="max-width: 200px;">
+                </a>
+                <h2 class="ms-3 mb-0">Operated by <a href="https://path-cc.io">PATh</a></h2>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5 justify-content-center">
+        <div class="col-auto">
+            <a href="https://pelicanplatform.org/" target="_blank">
+                <img width="320" src="/assets/images/logos/OSDF_OSPool_Logos.png" alt="Pelican Logo" class="img-fluid">
+            </a>
+        </div>
     </div>
 </div>
 
@@ -143,7 +201,7 @@
                         <h6>With Pelican Client on the Command Line</h6>
                         <pre class="rounded p-2 bg-dark text-light"><code id="data-pelican-download"></code></pre>
                         <h6>From Your Browser</h6>
-                        <a id="data-browser-download" class="btn btn-dark" target="_blank"></a>
+                        <a id="data-browser-download" class="btn btn-dark" target="_blank">Click to Download Public Object</a>
                     </div>
                 </div>
                 <div id="" class="my-5 wave-osdf-display text-display">
@@ -180,11 +238,23 @@
             </div>
 
             <div class="modal-footer d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                    <a href="https://pelicanplatform.org/" target="_blank">
-                        <img width="40" src="/assets/images/logos/PelicanPlatformLogo_Icon.png" alt="Pelican Logo" class="img-fluid" style="max-width: 200px;">
-                    </a>
-                    <h5 class="ms-3 mb-0">Powered By <a href="https://pelicanplatform.org">Pelican Platform</a></h5>
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="d-flex align-items-center">
+                            <a href="https://pelicanplatform.org/" target="_blank">
+                                <img width="40" src="/assets/images/logos/PelicanPlatformLogo_Icon.png" alt="Pelican Logo" class="img-fluid" style="max-width: 200px;">
+                            </a>
+                            <h5 class="ms-3 mb-0">Powered By <a href="https://pelicanplatform.org">Pelican Platform</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="d-flex align-items-center">
+                            <a href="https://path-cc.io" target="_blank">
+                                <img width="40" src="/assets/images/logos/Logo_Round_Med.png" alt="PATh Logo" class="img-fluid" style="max-width: 200px;">
+                            </a>
+                            <h5 class="ms-3 mb-0">Operated by <a href="https://path-cc.io">PATh</a></h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
