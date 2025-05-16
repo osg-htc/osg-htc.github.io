@@ -22,8 +22,7 @@ description: |
   images. The architecture and design considerations for LibRA are shown in [this
   presentation](https://www.aoc.nrao.edu/~sbhatnag/Talks/For_BrianB.pdf). Recent
   large scale imaging achievements by the NRAO team that were made possible through
-  use of OSG resources are reported in this [NRAO Newsletter article]
-  (https://science.nrao.edu/enews/17.3/index.shtml#deepimaging) and [this press
+  use of OSG resources are reported in this [NRAO Newsletter article](https://science.nrao.edu/enews/17.3/index.shtml#deepimaging) and [this press
   release](https://public.nrao.edu/news/astronomers-study-the-universe-300-times-faster/).
 organization: National Radio Astronomy Observatory
 dataVisibility: public
