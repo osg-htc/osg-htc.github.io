@@ -23,7 +23,7 @@ display: true # Whether or not to display this namespace
 name: SPIN4D Data Release 1
 namespace: 
   - "/uhkoa/SPIN4D-DR1"
-publicObject: /uhkoa/SPIN4D-DR1/SPIN4D_SSD_50G_V # Optional namespace path to a public object
+publicObject: /uhkoa/SPIN4D-DR1/SPIN4D_SSD_50G_V/subdomain_9.054681 # Optional namespace path to a public object
 organizationUrl: https://manoa.hawaii.edu/
 repositoryUrl:
   url:  http://dtn-itc.ifa.hawaii.edu/spin4d/DR1/
