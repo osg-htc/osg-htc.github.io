@@ -26,4 +26,4 @@ name: Short-Baseline Near Detector
 namespace: 
   - "/pnfs/fnal.gov/usr/sbnd"
 publicObject: # Optional namespace path to a public object
-organizationUrl: https://sbn-nd.fnal.gov/
+organizationUrl: https://fnal.gov/

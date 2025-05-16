@@ -1,11 +1,13 @@
 description: |
-  Scripps Institution of Oceanography scientists conduct fundamental research to understand and protect the planet, and investigate our oceans, Earth, and atmosphere to find solutions to our greatest environmental challenges. 
+  Scripps Institution of Oceanography scientists conduct fundamental research to
+  understand and protect the planet, and investigate our oceans, Earth, and atmosphere
+  to find solutions to our greatest environmental challenges.
 organization: Scripps Institute of Oceanography # Name of the organization
 dataVisibility: private # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
 url: https://scripps.ucsd.edu/ # Organization URL
-fieldOfScience: MULTI/INTERDISCIPLINARY STUDIES # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+fieldOfScience: Biological and Biomedical Sciences
 numberOfDatasets: # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress

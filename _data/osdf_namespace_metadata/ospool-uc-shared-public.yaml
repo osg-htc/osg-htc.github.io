@@ -2,7 +2,7 @@ description: |
   Data staging area for OSPool projects with public data
 organization: University of Chicago # Name of the organization
 dataVisibility: public # public, or private
-size: 16000000000000 # In bytes so I can parse how I want
+size: 10600000000000 # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
 url: https://osg-htc.org/services/ospool/ # Organization URL
 fieldOfScience: Multi/Interdisciplinary Studies # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55

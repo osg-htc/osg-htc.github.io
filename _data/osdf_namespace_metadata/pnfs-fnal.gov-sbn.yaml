@@ -6,6 +6,8 @@ description: |
   of the detectors are types of liquid-argon time projection chambers, and each contributes to the
   development of this particle detection technology for the long-baseline Deep Underground Neutrino Experiments
   (DUNE).
+
+  SBN uses the OSDF to deliver common data inputs for large-scale simulation jobs distributed across the US.
 organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 761000000000 # In bytes so I can parse how I want
@@ -21,4 +23,4 @@ name: Short-Baseline Neutrino Program
 namespace: 
   - "/pnfs/fnal.gov/usr/sbn"
 publicObject: # Optional namespace path to a public object
-organizationUrl: https://sbn.fnal.gov/
+organizationUrl: https://fnal.gov/

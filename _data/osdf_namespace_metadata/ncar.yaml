@@ -5,8 +5,8 @@ description: |
   the water cycle, and extreme weather events. They are used by researchers, educators, and policymakers
   across the US.
 
-  Integrated with the OSDF is NCAR's Research Data Archive (RDA), the centrally-managed archive of the laboratory's
-  atmospheric and Earth systems datasets.  When downloading data from the web interface, users are automatically
+  Integrated with the OSDF is NCAR's Research Data Archive (RDA), the centrally managed archive of the laboratory's
+  atmospheric and Earth system datasets.  When downloading data from the web interface, users are automatically
   redirected to the OSDF cyberinfrastructure.
 
   Example notebooks that analyze data from these datasets can be found in the [NCAR OSDF Examples repository](https://github.com/NCAR/osdf_examples) and are part of the [NCAR effort to utilize the OSDF](https://rda.ucar.edu/resources/ndcc-osdf/).
@@ -28,12 +28,11 @@ description: |
 
 organization: NSF National Center for Atmospheric Research
 dataVisibility: public # public, or private
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://ncar.ucar.edu # Organization URL
+size: null # In bytes so I can parse how I want
+objectCount: null
 fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: # Number of datasets in the namespace
-rank: 0 # Rank of the namespace, 0 will have the lowest priority
+rank: 2 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: NCAR Research Data Archive # Human readable name of the namespace
@@ -42,5 +41,8 @@ namespace:
   - "/ncar-rda"
 thirtyDayReads: 214628666771028
 oneYearReads: 251907377023419
-publicObject: # Optional namespace path to a public object
-organizationUrl: https://ncar.ucar.edu
+organizationUrl: https://ncar.ucar.edu # Organization URL
+repositoryUrl: 
+  url: https://rda.ucar.edu # Repository URL
+  label: Dataset Catalog
+publicObject: /ncar/rda/d208000/index.html # Optional namespace path to a public object

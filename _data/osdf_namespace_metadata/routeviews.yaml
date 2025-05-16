@@ -17,10 +17,10 @@ description: |
   [Catchpoint](https://catchpoint.com/) and the providers who graciously provide their BGP views.
 
 organization: University of Oregon
-organizationUrl: https://www.routeviews.org/routeviews/
+organizationUrl: https://www.uoregon.edu/
 repositoryUrl:
-  url: https://archive.routeviews.org/
-fieldOfScience: Computer and Information Sciences and Support Services  # 11.0901
+  url: https://www.routeviews.org/routeviews/
+fieldOfScience: Computer and Information Sciences
 numberOfDatasets: 1
 
 dataVisibility: public
