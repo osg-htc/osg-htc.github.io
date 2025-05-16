@@ -18,7 +18,7 @@ display: true # Whether or not to display this namespace
 name: MicroBooNE
 namespace: 
   - "/pnfs/fnal.gov/usr/uboone"
-publicObject: null # Optional namespace path to a public object
+publicObject: /pnfs/fnal.gov/usr/uboone/persistent/stash/wcp_ups/wcp/releases/tag/v00_10_00/input_data_files/XGB_nue_seed2_0923.xml # Optional namespace path to a public object
 organizationUrl: https://fnal.gov/
 repositoryUrl:
   url: https://microboone.fnal.gov/

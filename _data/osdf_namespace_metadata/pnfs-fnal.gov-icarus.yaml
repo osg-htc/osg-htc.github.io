@@ -23,7 +23,7 @@ display: true # Whether or not to display this namespace
 name: ICARUS
 namespace: 
   - "/pnfs/fnal.gov/usr/icarus"
-publicObject: null # Optional namespace path to a public object
+publicObject: null # Optional namespace path to a public object - Derek: No usage in the last year, only 1 test file
 organizationUrl: https://fnal.gov/
 repositoryUrl:
   url: https://icarus.fnal.gov/

@@ -21,7 +21,7 @@ display: true # Whether or not to display this namespace
 name: MINERvA
 namespace: 
   - "/pnfs/fnal.gov/usr/minerva"
-publicObject: null # Optional namespace path to a public object
+publicObject: /pnfs/fnal.gov/usr/minerva/persistent/stash/mc_generation_flux/mc-flux/mc/g4numiv6/00/00/00/06/g4numiv6_dk2nu_minervamebar_me000z-200i_0000_0006.root # Optional namespace path to a public object
 organizationUrl: https://fnal.gov/
 repositoryUrl:
   url: https://minerva.fnal.gov/

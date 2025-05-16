@@ -20,7 +20,7 @@ display: true # Whether or not to display this namespace
 name: DUNE
 namespace: 
   - "/pnfs/fnal.gov/usr/dune"
-publicObject: null # Optional namespace path to a public object
+publicObject: /pnfs/fnal.gov/usr/dune/persistent/stash/Flux/Supernova/v1/gvkm_nue_spectrum.root # Optional namespace path to a public object
 organizationUrl: https://fnal.gov/
 repositoryUrl:
   url: https://lbnf-dune.fnal.gov/

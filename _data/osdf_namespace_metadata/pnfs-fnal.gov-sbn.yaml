@@ -20,7 +20,7 @@ display: true # Whether or not to display this namespace
 name: Short-Baseline Neutrino Program
 namespace: 
   - "/pnfs/fnal.gov/usr/sbn"
-publicObject: null # Optional namespace path to a public object
+publicObject: /pnfs/fnal.gov/usr/sbn/persistent/stash/physics/beam/GENIE/BNB/standard/v01_00/converted_beammc_icarus_0113.root # Optional namespace path to a public object
 organizationUrl: https://fnal.gov/
 repositoryUrl:
   url: https://sbn.fnal.gov/

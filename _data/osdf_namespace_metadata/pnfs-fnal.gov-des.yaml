@@ -21,7 +21,7 @@ namespace:
   - "/pnfs/fnal.gov/usr/des"
 thirtyDayReads: null
 oneYearReads: null
-publicObject: null # Optional namespace path to a public object
+publicObject: /pnfs/fnal.gov/usr/des/persistent/stash/gw/ALLWISE_AGN/allwiseagn_v1_082022.dat # Optional namespace path to a public object
 organizationUrl: https://www.fnal.gov
 repositoryUrl: 
   url: https://astro.fnal.gov/the-des-project/

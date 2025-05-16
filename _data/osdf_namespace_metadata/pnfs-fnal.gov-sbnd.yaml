@@ -23,7 +23,7 @@ display: true # Whether or not to display this namespace
 name: Short-Baseline Near Detector
 namespace: 
   - "/pnfs/fnal.gov/usr/sbnd"
-publicObject: null # Optional namespace path to a public object
+publicObject: /pnfs/fnal.gov/usr/sbnd/persistent/stash/fluxFiles/bnb/BooNEtoGSimple/configK-v1/july2023/neutrinoMode/gsimple_april07_baseline_0019_redecay_wkaonwgh.root # Optional namespace path to a public object
 organizationUrl: https://fnal.gov/
 repositoryUrl:
   url: https://sbn-nd.fnal.gov/

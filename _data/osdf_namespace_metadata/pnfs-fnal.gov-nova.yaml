@@ -17,7 +17,7 @@ display: true # Whether or not to display this namespace
 name: NOVA
 namespace: 
   - "/pnfs/fnal.gov/usr/nova"
-publicObject: null # Optional namespace path to a public object
+publicObject: /pnfs/fnal.gov/usr/nova/persistent/stash/flux/g4numi/v6r1b/me000z200i/g4numiv6_minervame_me000z200i_0_0005.root # Optional namespace path to a public object
 organizationUrl: https://fnal.gov/
 repositoryUrl:
   url: https://novaexperiment.fnal.gov/
