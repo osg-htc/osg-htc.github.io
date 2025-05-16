@@ -15,6 +15,7 @@ namespace:
   - "/mu/ahurt/public"
 thirtyDayReads: 0
 oneYearReads: 970306300
-organizationUrl: https://engineering.missouri.edu/faculty/j-alex-hurt/
-repositoryUrl: null
+organizationUrl: https://missouri.edu
+repositoryUrl:
+  url: https://engineering.missouri.edu/faculty/j-alex-hurt/
 publicObject: /mu/ahurt/public/DOTA/train_chipped512/dmp_vis.tar.gz
