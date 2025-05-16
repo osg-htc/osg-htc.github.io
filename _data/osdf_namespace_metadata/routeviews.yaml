@@ -15,7 +15,7 @@ organization: University of Oregon
 organizationUrl: https://www.uoregon.edu/
 repositoryUrl:
   url: https://www.routeviews.org/routeviews/
-fieldOfScience: Computer and Information Sciences and Support Services
+fieldOfScience: Computer Systems Networking and Telecommunications  # 11.0901
 numberOfDatasets: 1
 dataVisibility: public
 publicObject: /routeviews/chicago/route-views.chicago/bgpdata/2025.03/RIBS/rib.20250319.0400.bz2
