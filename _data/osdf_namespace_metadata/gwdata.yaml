@@ -11,11 +11,9 @@ organization: California Institute of Technology
 dataVisibility: public
 size: 77032444311984
 objectCount: 1290210
-bytesXferd: # In bytes so I can parse how I want
-url: https://gwosc.org/
 fieldOfScience: Astronomy and Astrophysics
 numberOfDatasets: 70
-rank: 0 # Rank of the namespace, 0 will have the lowest priority
+rank: 3 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: Gravitational Wave Open Science Center
@@ -23,5 +21,6 @@ namespace:
   - "/gwdata"
 thirtyDayReads: 60654177017013
 oneYearReads: 366130970071859
-publicObject: # Optional namespace path to a public object
+publicObject: /gwdata/zenodo/ligo-virgo-kagra/index.txt # tested with pelican object get osdf:///gwdata/zenodo/ligo-virgo-kagra/index.txt .
 organizationUrl: https://gwosc.org/
+repositoryUrl: null
