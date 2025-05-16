@@ -6,8 +6,6 @@ description: |
 organization: University of Wisconsin - Madison
 dataVisibility: private # public, or private
 size: 2416 # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://pelicanplatform.org
 fieldOfScience: Computer and Information Sciences
 numberOfDatasets: 0 # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
