@@ -23,7 +23,7 @@ organization: University of Utah
 organizationUrl: https://nationalsciencedatafabric.org/
 repositoryUrl:
   url: https://data.nas.nasa.gov/geoseccoviz/
-fieldOfScience: Physical Sciences  # 40.0402
+fieldOfScience: Atmospheric Sciences and Meteorology  # 40.0402
 numberOfDatasets: 1
 dataVisibility: public
 publicObject: /nasa/nsdf/climate3/dyamond/GEOS/GEOS_CO2/co2_face_2_depth_52_time_0_10269.idx

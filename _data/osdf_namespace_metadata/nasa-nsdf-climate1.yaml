@@ -20,7 +20,7 @@ organization: University of Utah
 organizationUrl: https://www.utah.edu/
 repositoryUrl:
   url: https://data.nas.nasa.gov/ecco/
-fieldOfScience: Physical Sciences  # 40.0402
+fieldOfScience: Atmospheric Sciences and Meteorology  # 40.0402
 numberOfDatasets: 1
 name: OpenViSUS Conversion of NASA's ECCO Project's 1/48° MITgcm Simulation
 namespace:
