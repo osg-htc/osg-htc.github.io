@@ -18,6 +18,6 @@ display: true # Whether or not to display this namespace
 name: VIRGO Gravitational Wave Data
 namespace: 
   - "/igwn/virgo"
-thirtyDayReads: 246082135167662
-oneYearReads: 45946311946152008
+thirtyDayReads: 269563925490601
+oneYearReads: 3046944641469200
 organizationUrl: https://www.virgo-gw.eu/

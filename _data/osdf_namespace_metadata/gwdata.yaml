@@ -19,8 +19,8 @@ display: true # Whether or not to display this namespace
 name: Gravitational Wave Open Science Center
 namespace: 
   - "/gwdata"
-thirtyDayReads: 60654177017013
-oneYearReads: 366130970071859
+thirtyDayReads: 58523540450000
+oneYearReads: 368065653158180
 publicObject: /gwdata/zenodo/ligo-virgo-kagra/index.txt # tested with pelican object get osdf:///gwdata/zenodo/ligo-virgo-kagra/index.txt .
 organizationUrl: https://gwosc.org/
 repositoryUrl: null

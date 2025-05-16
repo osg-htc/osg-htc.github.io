@@ -21,6 +21,6 @@ name: LIGO Gravitational Wave Data
 namespace: 
   - "/igwn/ligo"
   - "/user/ligo"
-thirtyDayReads: 4038613088590885
-oneYearReads: 46103145102056864
+thirtyDayReads: 3894337423325970
+oneYearReads: 22558599596480200
 organizationUrl: https://www.ligo.caltech.edu/

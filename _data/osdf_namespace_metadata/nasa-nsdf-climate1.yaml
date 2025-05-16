@@ -38,5 +38,5 @@ rank: 0  # zero is lowest priority
 inProgress: false
 
 bytesXferd:  # bytes
-thirtyDayReads: 48433739102
-oneYearReads: 823571083949
+thirtyDayReads: 45098988340
+oneYearReads: 864388563354

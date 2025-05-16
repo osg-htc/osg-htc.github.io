@@ -18,7 +18,7 @@ name: XENONnT Dark Matter # Human readable name of the namespace
 namespace: 
   - "/nrp/protected/xenon-biggrid-nl/"
 thirtyDayReads: 0
-oneYearReads: 152114667955363
+oneYearReads: 152114667948168
 organizationUrl: https://www.uchicago.edu/en
 repositoryUrl:
   url: https://xenonexperiment.org/

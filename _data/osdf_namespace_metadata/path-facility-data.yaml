@@ -21,6 +21,6 @@ display: true # Whether or not to display this namespace
 name: PATh Facility Researcher Data # Human readable name of the namespace
 namespace: 
   - "/path-facility/data"
-thirtyDayReads: 5703247164232
-oneYearReads: 1242013815896678
+thirtyDayReads: 7134824038133
+oneYearReads: 1241810445184950
 organizationUrl: https://wisc.edu/

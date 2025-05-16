@@ -19,5 +19,5 @@ name: IGWN Read Test # Human readable name of the namespace
 namespace: 
   - "/igwn/test"
 thirtyDayReads: 0
-oneYearReads: 46058170597445808
+oneYearReads: 2101389
 organizationUrl: https://www.ligo.caltech.edu/

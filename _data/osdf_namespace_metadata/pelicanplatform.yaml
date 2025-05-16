@@ -14,7 +14,7 @@ inProgress: false # Whether or not the namespace is in progress
 display: false # Whether or not to display this namespace
 namespace: 
   - "/pelicanplatform"
-thirtyDayReads: 61976853904
-oneYearReads: 9200333527202
+thirtyDayReads: 61976849721
+oneYearReads: 9200333527280
 publicObject: # Optional namespace path to a public object
 organizationUrl: https://pelicanplatform.org
