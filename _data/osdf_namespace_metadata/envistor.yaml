@@ -28,5 +28,5 @@ oneYearReads: 95684852
 # BrianB commented this out until we have a non-test URL from EnviStor.
 # publicObject: /envistor/test2
 organizationUrl: https://www.fiu.edu/
-repostitoryUrl:
+repositoryUrl:
   url: https://www.cis.fiu.edu/kfscis-professor-awarded-500000-nsf-grant-for-environment/
