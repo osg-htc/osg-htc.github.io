@@ -1,8 +1,3 @@
----
-name: NCEI Water Column Sonar Data
-namespace:
-  - "/noaa/fisheries-1"
-  - "/noaa/fisheries-2"
 description: |
   NOAA collects and uses active acoustic (or sonar) data for a variety of
   mapping requirements. Water column sonar data focus on the area from near
@@ -13,22 +8,21 @@ description: |
   and remotely monitoring undersea oil spills. NCEI archives water column
   sonar data collected by NOAA line offices, academia, industry, and
   international institutions.
-
 organization: National Oceanic and Atmospheric Administration
 organizationUrl: https://www.noaa.gov/
 repositoryUrl:
   url: https://www.ncei.noaa.gov/products/water-column-sonar-data
 fieldOfScience: Natural Resources and Conservation  # 03.0301
 numberOfDatasets: 1
-
 dataVisibility: public
 publicObject: /noaa/fisheries-1/noaa-wcsd-pds/data/raw/Henry_B._Bigelow/HB2403/README_HB2403_EK80.md
 size: 331978855304407  # bytes
-
 display: true
-rank: 0  # zero is lowest priority
+rank: 1  # zero is lowest priority
 inProgress: false
-
-bytesXferd:  # bytes
-thirtyDayReads:
-oneYearReads:
+name: NCEI Water Column Sonar Data
+namespace:
+  - "/noaa/fisheries-1"
+  - "/noaa/fisheries-2"
+thirtyDayReads: null
+oneYearReads: null
