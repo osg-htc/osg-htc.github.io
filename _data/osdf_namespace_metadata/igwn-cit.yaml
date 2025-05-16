@@ -17,7 +17,7 @@ display: true # Whether or not to display this namespace
 name: Caltech Gravitational Wave Data # Human readable name of the namespace
 namespace: 
   - "/igwn/cit"
-thirtyDayReads: null
-oneYearReads: null
+thirtyDayReads: 769728653555870
+oneYearReads: 17688932216985000
 organizationUrl: https://www.ligo.caltech.edu/
 repositoryUrl: null
