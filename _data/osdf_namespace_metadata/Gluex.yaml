@@ -11,8 +11,6 @@ description: |
 organization: Jefferson National Laboratory
 dataVisibility: public
 size: null
-bytesXferd: null
-url: http://www.gluex.org
 fieldOfScience: Physical Sciences
 numberOfDatasets: null
 rank: 0
@@ -24,5 +22,7 @@ namespace:
   - /Gluex
 thirtyDayReads: 0
 oneYearReads: 215894157976
-publicObject: # Optional namespace path to a public object
+publicObject: null # Optional namespace path to a public object
 organizationUrl: https://www.jlab.org
+repositoryUrl: 
+  url: http://www.gluex.org
