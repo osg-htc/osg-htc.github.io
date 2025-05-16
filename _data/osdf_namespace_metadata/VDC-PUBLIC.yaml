@@ -18,6 +18,6 @@ name: Virtual Data Collaboratory # Human readable name of the namespace
 namespace: 
   - "/VDC/PUBLIC"
 thirtyDayReads: 0
-oneYearReads: 8172086399139906
+oneYearReads: 12609677166
 publicObject: # Optional namespace path to a public object
-organizationUrl: https://par.nsf.gov/servlets/purl/10187417
+organizationUrl: https://www.utah.edu/

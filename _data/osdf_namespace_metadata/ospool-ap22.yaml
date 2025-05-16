@@ -14,5 +14,5 @@ name: # Human readable name of the namespace
 namespace: 
   - "/ospool/ap22"
 thirtyDayReads: 0
-oneYearReads: 66657090789660448
+oneYearReads: 91406519414
 organizationUrl:

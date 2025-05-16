@@ -18,6 +18,6 @@ name: KAGRA Gravitational Wave Data
 namespace: 
   - "/igwn/kagra"
 thirtyDayReads: 0
-oneYearReads: 45946311946152008
+oneYearReads: 449373434362
 organizationUrl: https://gwcenter.icrr.u-tokyo.ac.jp/en/
 repositoryUrl: null

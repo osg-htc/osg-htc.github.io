@@ -13,6 +13,25 @@ import {
 } from "/assets/js/util.js";
 import {PieChart} from "/assets/js/components/pie-chart.js";
 
+let counter = async (id, endValue, numIncrements, decimals=0) => {
+    let node = document.getElementById(id)
+
+    let valueArray = [...Array(numIncrements).keys()].map((value, index) => {
+        return Math.floor(endValue * (Math.sqrt((index+1)/numIncrements)))
+    })
+
+    let index = 0;
+    let interval = setInterval(() => {
+        if (index >= valueArray.length) {
+            clearInterval(interval)
+        } else {
+            node.textContent = int_to_small_format(valueArray[index], decimals)
+        }
+        index += 1;
+    }, 50)
+}
+
+
 /**
  * A node wrapping the project information break down
  */
@@ -82,6 +101,8 @@ class ProjectDisplay{
        namespace,
        oneYearReads,
        publicObject,
+       organizationUrl,
+       repositoryUrl,
        id
     }) {
         this.id = id
@@ -91,57 +112,49 @@ class ProjectDisplay{
         this.fieldOfScience = fieldOfScience;
 
         this.updateTextValue("data-name", name);
-        this.updateTextValue("data-organization", organization);
         this.updateTextValue("data-fieldOfScience", fieldOfScience);
         this.updateTextValue("data-description", description);
+        this.updateTextValue("data-organization", organization)
+
+        // If there is a organizationURL then make it a link
+        if(organizationUrl) {
+            this.updateTextValue("data-organization", `<a href="${organizationUrl}" target="_blank">${organization}</a>`)
+        }
+
+        // If there is a dataRepostioryUrl then make it a link
+        if(repositoryUrl) {
+            this.updateTextValue("data-organization-url", `<a class="btn btn-secondary" href="${repositoryUrl['url']}" target="_blank">${repositoryUrl["label"]}</a>`)
+        }
+
+        // If there is a publicObject then update those pieces
+        document.getElementById("data-public-object").style.display = publicObject ? "block" : "none"
+        document.getElementById("data-pelican-download").innerText = `pelican object get osdf://${publicObject} ./`
+        document.getElementById("data-browser-download").href = `https://osdf-director.osg-htc.org${publicObject}`
+        document.getElementById("data-browser-download").innerText = `https://osdf-director.osg-htc.org${publicObject}`
 
         // Update the big value numbers
         let [readsValue, readsLabel] = formatBytes(oneYearReads, true)?.split(" ") || [null, null]
+        if (oneYearReads < 1000000000) {
+            readsValue = null
+            readsLabel = null
+        }
         this.updateBigNumberValue("oneYearReads", readsValue, readsLabel);
 
-        this.updateBigNumberValue("numberOfDatasets", numberOfDatasets);
+        this.updateBigNumberValue("numberOfDatasets", numberOfDatasets?.toLocaleString());
 
         let [sizeValue, sizeLabel] = formatBytes(size, true)?.split(" ") || [null, null]
         this.updateBigNumberValue("size", sizeValue, sizeLabel);
 
+        // If all the values are empty, hide the parent
+        if (!sizeValue && !readsValue && !numberOfDatasets) {
+            document.getElementById("oneYearReads").parentNode.parentNode.parentNode.parentNode.classList.add("d-none")
+        } else {
+            document.getElementById("oneYearReads").parentNode.parentNode.parentNode.parentNode.classList.remove("d-none")
+        }
+
+
         this.setUrl();
         this.display_modal.show();
-    }
-}
-
-class Search {
-    constructor(data, listener) {
-        this.node = document.getElementById("project-search")
-        this.listener = listener
-        this.timer = undefined
-        this.node.addEventListener("input", this.search)
-        this.lunr_idx = lunr(function () {
-            this.ref('name')
-            this.field('fieldOfScience')
-            this.field('organization')
-            this.field('description')
-            this.field('name')
-
-            data.forEach(function (doc) {
-                this.add(doc)
-            }, this)
-        })
-    }
-    search = () => {
-        clearTimeout(this.timer)
-        this.timer = setTimeout(this.listener, 250)
-    }
-    filter = (data) => {
-        if(this.node.value == ""){
-            return data
-        } else {
-            console.log(this.node.value)
-            let table_keys = this.lunr_idx.search(`*${this.node.value}* ${this.node.value} ${this.node.value}~2`).map(r => r.ref)
-            return table_keys.reduce((pv, k) => {
-                pv[k] = data[k]
-                return pv
-            }, {})
-        }
     }
 }
 
@@ -178,26 +191,56 @@ class Table {
                 attributes: {
                     className: "gridjs-th gridjs-td pointer gridjs-th-sort text-start"
                 }
-            }
+            },  {
+                id: 'organizationUrl',
+                name: '',
+                formatter: (cell, row, _) => {
+
+                    const id = row["_cells"][0]['data']
+                    const data = this.data_function()[id]
+
+                    // If there is a dataRepostioryUrl then make it a link
+                    if(data?.["repositoryUrl"]){
+                        return gridjs.html(`<a class="btn btn-secondary" href="${data["repositoryUrl"]["url"]}" target="_blank">${data["repositoryUrl"]["label"] || "View Datasets"}</a>`)
+                    }
+
+                    return gridjs.html(`<a class="btn btn-outline-dark" href="${data["organizationUrl"]}" target="_blank">Learn More</a>`)
+                },
+                sort: false,
+                attributes: {
+                    className: "m-0"
+                },
+                width: "124px"
+            },
         ]
 
         let table = this;
         this.grid =  new gridjs.Grid({
             columns: table.columns,
-            sort: true,
+            search: true,
             className: {
                 container: "",
                 table: "table table-hover",
                 td: "pointer",
                 paginationButton: "mt-2 mt-sm-0"
             },
-            data: async () => Object.values(await table.data_function()),
+            data: () => {
+
+
+                const order = (d) => {
+                    return d?.rank * 100 + !!d?.publicObject * 10 + !!d?.size * 1 + !!d?.oneYearReads * 1 + !!d?.numberOfDatasets * 1
+                }
+
+                const data = Object.values(table.data_function())
+
+                return data.sort((a, b) => order(b) - order(a))
+
+            },
             pagination: {
                 enabled: true,
-                limit: 15,
-                buttonsCount: 1
+                limit: 15
             },
-            width: "1000px",
+            width: "970px",
             style: {
                 td: {
                     'text-align': 'right'
@@ -209,14 +252,13 @@ class Table {
     update = async () => {
         let table = this
         this.grid.updateConfig({
-            data: Object.values(await table.data_function()).sort((a, b) => b.jobs - a.jobs)
+            data: Object.values(table.data_function()).sort((a, b) => b.jobs - a.jobs)
         }).forceRender();
     }
     row_click = async (PointerEvent, e) => {
         let data = await this.data_function()
         let row_name = e["cells"][0].data
         let project = data[row_name]
-        console.log(project)
         this.updateProjectDisplay(project)
     }
 }
@@ -277,8 +319,8 @@ class DataManager {
      * Filters the original data and returns the remaining data
      * @returns {Promise<*>}
      */
-    getFilteredData = async () => {
-        let filteredData = await this.getData()
+    getFilteredData = () => {
+        let filteredData = this.getData()
         for(const filter of Object.values(this.filters)) {
             filteredData = filter(filteredData)
         }
@@ -329,9 +371,6 @@ class DataPage{
         this.table = new Table(this.wrapper, this.dataManager.getFilteredData, this.projectDisplay.update.bind(this.projectDisplay))
         this.dataManager.consumerToggles.push(this.table.update)
 
-        this.search = new Search(Object.values(await this.dataManager.getData()), this.dataManager.toggleConsumers)
-        this.dataManager.addFilter("search", this.search.filter)
-
         let urlProject = new URLSearchParams(window.location.search).get('repository')
         if (urlProject) {
             this.projectDisplay.update((this.dataManager.getData()[urlProject]))
@@ -339,6 +378,7 @@ class DataPage{
 
         // Update the repository count
         document.getElementById("repository-count").innerText = Object.values(this.dataManager.getData()).length
+        counter("connected", Object.values(this.dataManager.getData()).length, 20)
     }
 }
 
@@ -349,52 +389,31 @@ const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 const project_page = new DataPage()
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    let counter = async (id, endValue, numIncrements, decimals=0) => {
-        let node = document.getElementById(id)
+async function initialize_ospool_report () {
+    counter("transferred", 127, 20)
+    counter("delivered", 129, 20)
+}
 
-        let valueArray = [...Array(numIncrements).keys()].map((value, index) => {
-            return Math.floor(endValue * (Math.sqrt((index+1)/numIncrements)))
-        })
-
-        let index = 0;
-        let interval = setInterval(() => {
-            if (index >= valueArray.length) {
-                clearInterval(interval)
-            } else {
-                node.textContent = int_to_small_format(valueArray[index], decimals)
-            }
-            index += 1;
-        }, 50)
+/**
+ * A function to convert large numbers into a < 4 char format, i.e. 100,000 to 100k or 10^^9 to 1b
+ *
+ * It would be interesting to find a solution to this that is better than O(N)
+ * @param int An integer
+ * @param decimals The amount of decimal places to include
+ */
+function int_to_small_format(int, decimals=0) {
+    if(int < 10**3) {
+        return int.toFixed(decimals)
+    } else if ( int < 10**6 ) {
+        return (int / 10**3).toFixed(decimals) + "K"
+    } else if ( int < 10**9 ) {
+        return (int / 10**6).toFixed(decimals) + "M"
+    } else if ( int < 10**12 ) {
+        return (int / 10**9).toFixed(decimals) + "B"
+    } else {
+        return int.toFixed(decimals)
     }
-
-    async function initialize_ospool_report () {
-        counter("connected", 32, 20)
-        counter("transferred", 127, 20)
-        counter("delivered", 129, 20)
-    }
-
-    /**
-     * A function to convert large numbers into a < 4 char format, i.e. 100,000 to 100k or 10^^9 to 1b
-     *
-     * It would be interesting to find a solution to this that is better than O(N)
-     * @param int An integer
-     * @param decimals The amount of decimal places to include
-     */
-    function int_to_small_format(int, decimals=0) {
-        if(int < 10**3) {
-            return int.toFixed(decimals)
-        } else if ( int < 10**6 ) {
-            return (int / 10**3).toFixed(decimals) + "K"
-        } else if ( int < 10**9 ) {
-            return (int / 10**6).toFixed(decimals) + "M"
-        } else if ( int < 10**12 ) {
-            return (int / 10**9).toFixed(decimals) + "B"
-        } else {
-            return int.toFixed(decimals)
-        }
-    }
+}
 
 
-    initialize_ospool_report()
-})
+initialize_ospool_report()

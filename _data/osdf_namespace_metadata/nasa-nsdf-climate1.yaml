@@ -22,8 +22,8 @@ description: |
   demonstrate cutting-edge technologies for working with petascale climate
   data provided by NASA.
 
-organization: National Science Data Fabric
-organizationUrl: https://nationalsciencedatafabric.org/
+organization: University of Utah
+organizationUrl: https://www.utah.edu/
 repositoryUrl:
   url: https://data.nas.nasa.gov/ecco/
 fieldOfScience: Physical Sciences  # 40.0402
@@ -38,5 +38,5 @@ rank: 0  # zero is lowest priority
 inProgress: false
 
 bytesXferd:  # bytes
-thirtyDayReads: 48433739102
-oneYearReads: 823571083949
+thirtyDayReads: 45098988340
+oneYearReads: 864388563354

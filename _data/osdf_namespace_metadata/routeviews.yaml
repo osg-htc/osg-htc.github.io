@@ -1,7 +1,3 @@
----
-name: RouteViews
-namespace:
-  - "/routeviews"
 description: |
   The RouteViews dataset provides a map of the Internet, as seen by participating
   sites.  The information, collected from the [BGP](https://en.wikipedia.org/wiki/Border_Gateway_Protocol)
@@ -15,22 +11,20 @@ description: |
   [Cisco Systems](https://www.cisco.com/), the [Defense Advanced Research Projects Agency](https://www.darpa.mil/),
   [Juniper Networks](https://www.juniper.net/), Sprint Advanced Technology Laboratories,
   [Catchpoint](https://catchpoint.com/) and the providers who graciously provide their BGP views.
-
 organization: University of Oregon
-organizationUrl: https://www.routeviews.org/routeviews/
+organizationUrl: https://www.uoregon.edu/
 repositoryUrl:
-  url: https://archive.routeviews.org/
-fieldOfScience: Computer and Information Sciences and Support Services  # 11.0901
+  url: https://www.routeviews.org/routeviews/
+fieldOfScience: Computer and Information Sciences and Support Services
 numberOfDatasets: 1
-
 dataVisibility: public
 publicObject: /routeviews/chicago/route-views.chicago/bgpdata/2025.03/RIBS/rib.20250319.0400.bz2
 size: 113627027734528  # bytes
-
 display: true
-rank: 0  # zero is lowest priority
+rank: 1 # zero is lowest priority
 inProgress: false
-
-bytesXferd:  # bytes
-thirtyDayReads: 176869801
-oneYearReads: 176869894
+thirtyDayReads: 252838517
+oneYearReads: 252838638
+name: RouteViews
+namespace:
+  - "/routeviews"

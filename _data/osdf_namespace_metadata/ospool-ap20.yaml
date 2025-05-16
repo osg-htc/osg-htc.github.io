@@ -21,6 +21,6 @@ display: true # Whether or not to display this namespace
 name: OSPool AP Working Data
 namespace: 
   - "/ospool/ap20"
-thirtyDayReads: 1779031566288032
-oneYearReads: 66657090789660448
+thirtyDayReads: 1676997303241980
+oneYearReads: 20652777419903600
 organizationUrl: https://www.uchicago.edu/en

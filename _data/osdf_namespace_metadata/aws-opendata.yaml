@@ -5,7 +5,6 @@ description: |
   includes contributions from a range of organizations, including government
   agencies, academic institutions, and private companies.
 
-
   There are currently nearly **700 datasets**, totaling over **100 petabytes of data**.
 
   Browse the full catalog at the **[Registry of Open Data on AWS](https://registry.opendata.aws)**.
@@ -18,11 +17,10 @@ description: |
 organization: Amazon Web Services, Inc.
 dataVisibility: public
 size: null
-bytesXferd: null
-url: https://aws.amazon.com/opendata/
+objectCount: null
 fieldOfScience: Multi/Interdisciplinary Studies.
 numberOfDatasets: 690
-rank: null
+rank: 10 # Assigning higher since we probably want to highlight this
 inprogress: false
 display: true
 name: Amazon Web Services Open Data
@@ -30,5 +28,10 @@ namespace:
   - /aws-opendata/us-east-1
   - /aws-opendata/us-west-1
   - /aws-opendata/us-west-2
-publicObject: # Optional namespace path to a public object
+thirtyDayReads: null
+oneYearReads: null
 organizationUrl: https://aws.amazon.com/opendata/
+repositoryUrl:
+  url: https://registry.opendata.aws/
+  label: Dataset Catalog
+publicObject: /aws-opendata/us-east-1/tcga-2-open/01063b4e-5a0d-4f11-8061-f8fd9a5f2fa5/5e3fd2aa-e0dd-4fe8-9944-05bba5d6bd91.FPKM.txt.gz # Object from the cancer genome atlas. Tested with pelican object get pelican://osg-htc.org/aws-opendata/us-east-1/tcga-2-open/01063b4e-5a0d-4f11-8061-f8fd9a5f2fa5/5e3fd2aa-e0dd-4fe8-9944-05bba5d6bd91.FPKM.txt.gz .

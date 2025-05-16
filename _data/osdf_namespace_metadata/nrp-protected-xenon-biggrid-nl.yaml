@@ -7,19 +7,18 @@ description: |
   This repository is used to store data and simulations from the XENONnT experiment
   to aid in its computing workloads.
 organization: University of Chicago # Name of the organization
-dataVisibility: # public, or private
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://www.lngs.infn.it/en/lngs-overview # Organization URL
-fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
-numberOfDatasets: # Number of datasets in the namespace
+dataVisibility: private # public, or private
+size: null # In bytes so I can parse how I want
+fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
-name: # Human readable name of the namespace
+name: XENONnT Dark Matter # Human readable name of the namespace
 namespace: 
   - "/nrp/protected/xenon-biggrid-nl/"
 thirtyDayReads: 0
-oneYearReads: 152114667955363
+oneYearReads: 152114667948168
 organizationUrl: https://www.uchicago.edu/en
-repositoryUrl: https://xenonexperiment.org/
+repositoryUrl:
+  url: https://xenonexperiment.org/

@@ -11,21 +11,22 @@ description: |
 
   The EnviStor activity and underlying storage is funded through the [NSF Campus Cyberinfrastructure program](https://www.nsf.gov/funding/opportunities/cc-campus-cyberinfrastructure) under
   [Award # 2322308](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2322308).
-
 organization: Florida International University
 dataVisibility: public
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://www.cis.fiu.edu/kfscis-professor-awarded-500000-nsf-grant-for-environment/
-fieldOfScience: "Natural Resources and Conservation"
-numberOfDatasets: # Number of datasets in the namespace
+size: null # In bytes so I can parse how I want
+objectCount: null
+fieldOfScience: Natural Resources and Conservation
+numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: true # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: EnviStor
 namespace: 
   - "/envistor"
-thirtyDayReads: 24
-oneYearReads: 95684852
-publicObject: # Optional namespace path to a public object
-organizationUrl: https://www.cis.fiu.edu/kfscis-professor-awarded-500000-nsf-grant-for-environment/
+thirtyDayReads: 36
+oneYearReads: 95684864
+# BrianB commented this out until we have a non-test URL from EnviStor.
+# publicObject: /envistor/test2
+organizationUrl: https://www.fiu.edu/
+repositoryUrl:
+  url: https://www.cis.fiu.edu/kfscis-professor-awarded-500000-nsf-grant-for-environment/

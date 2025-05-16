@@ -19,7 +19,7 @@ display: true # Whether or not to display this namespace
 name: IGWN Shared Gravitational Wave Data # Human readable name of the namespace
 namespace: 
   - "/igwn/shared"
-thirtyDayReads: 4510807352791
-oneYearReads: 55089078351451224
+thirtyDayReads: 4436999054511
+oneYearReads: 2668375776814160
 organizationUrl: https://www.ligo.caltech.edu/
 repositoryUrl: null

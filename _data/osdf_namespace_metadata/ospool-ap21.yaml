@@ -13,6 +13,6 @@ display: false # Whether or not to display this namespace
 name: OSPool AP21 Staging # Human readable name of the namespace
 namespace: 
   - "/ospool/ap21"
-thirtyDayReads: 854596390484838
-oneYearReads: 66657090789660448
+thirtyDayReads: 1023347691521650
+oneYearReads: 23436532373051000
 organizationUrl: https://osg-htc.org/services/ospool/

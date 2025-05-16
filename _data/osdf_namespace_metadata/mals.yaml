@@ -10,10 +10,9 @@ description: |
 organization: Inter-University Centre for Astronomy and Astrophysics
 dataVisibility: public
 size: 250000000000000
-bytesXferd: # In bytes so I can parse how I want
-url: https://mals.iucaa.in/
+objectCount: null
 fieldOfScience: Physical Sciences
-numberOfDatasets: # Number of datasets in the namespace
+numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: true # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
@@ -22,5 +21,7 @@ namespace:
   - "/mals"
 thirtyDayReads: 0
 oneYearReads: 0
-publicObject: # Optional namespace path to a public object
-organizationUrl: https://mals.iucaa.in/
+publicObject: /mals/mals-release.tar.gz # Probably too large to be a great test object, but it starts downloading anyway...
+organizationUrl: https://www.iucaa.in/en/
+repositoryUrl:
+  url: https://mals.iucaa.in/

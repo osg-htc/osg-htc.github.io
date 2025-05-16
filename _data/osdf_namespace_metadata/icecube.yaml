@@ -12,7 +12,7 @@ description: |
   the [NSF](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2042807).  The dataset is maintained by the
   Wisconsin Icecube Particle Astrophysics Center.
 
-organization: University of Wisconsin-Madison
+organization: University of Wisconsin - Madison
 dataVisibility: private # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want
@@ -26,6 +26,6 @@ name: IceCube Neutrino Data # Human readable name of the namespace
 namespace: 
   - "/icecube"
   - "/icecube/PUBLIC"
-thirtyDayReads: 138632907277119
-oneYearReads: 7727207464114454
+thirtyDayReads: 139221399022659
+oneYearReads: 7727299876651540
 organizationUrl: https://wipac.wisc.edu
