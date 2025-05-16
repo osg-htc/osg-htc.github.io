@@ -18,7 +18,7 @@ namespace:
   - "/ndp/burnpro3d"
 thirtyDayReads: 316964599
 oneYearReads: 9337358188
-publicObject: /ndp/burnpro3d/YosemiteBurnExample/ # Optional namespace path to a public object
+publicObject: /ndp/burnpro3d/YosemiteBurnExample/burnpro3d-yosemite-example.csv # Optional namespace path to a public object
 organizationUrl: https://wifire.ucsd.edu/burnpro3d
 repositoryUrl:
   url:  https://wifire-data.sdsc.edu/dataset
