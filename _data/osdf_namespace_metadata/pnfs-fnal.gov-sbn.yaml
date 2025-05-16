@@ -12,15 +12,15 @@ organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 761000000000 # In bytes so I can parse how I want
 objectCount: 78747
-bytesXferd: null # In bytes so I can parse how I want
-url: https://sbn.fnal.gov/
 fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: null # Number of datasets in the namespace
-rank: 0 # Rank of the namespace, 0 will have the lowest priority
+rank: 1 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: Short-Baseline Neutrino Program
 namespace: 
   - "/pnfs/fnal.gov/usr/sbn"
-publicObject: # Optional namespace path to a public object
+publicObject: /pnfs/fnal.gov/usr/sbn/persistent/stash/physics/beam/GENIE/BNB/standard/v01_00/converted_beammc_icarus_0113.root # Optional namespace path to a public object
 organizationUrl: https://fnal.gov/
+repositoryUrl:
+  url: https://sbn.fnal.gov/
