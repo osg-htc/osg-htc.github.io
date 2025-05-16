@@ -8,11 +8,10 @@ description: |
   capacity.
 organization: Jefferson National Laboratory
 dataVisibility: private
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://www.jlab.org/
-fieldOfScience: Physics
-numberOfDatasets: # Number of datasets in the namespace
+size: null
+objectCount: null
+fieldOfScience: Physical Sciences
+numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
@@ -22,3 +21,4 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 636965041436104
 organizationUrl: https://www.jlab.org/
+repositoryUrl: null
