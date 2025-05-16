@@ -6,7 +6,7 @@ description: |
   Array (VLA) in New Mexico. The VLA is one of the most sensitive telescopes
   in the radio band that can provide more sensitive images of the universe
   than any other radio telescope in the world. This, however, requires processing
-  large volume of data and requires super-computer class computing
+  large volumes of data and super-computer class computing
   resources. The VLASS is designed to produce a large collection
   of radio data available to wide range of scientists within the astronomical
   community. VLASS's science goal is to produce a radio, all-sky survey that
@@ -26,7 +26,7 @@ description: |
   images. The architecture and design considerations for LibRA are shown in [this
   presentation](https://www.aoc.nrao.edu/~sbhatnag/Talks/For_BrianB.pdf).
 
-  Teams of scientists at the [National Radio Astronomy Observaory
+  Teams of scientists at the [National Radio Astronomy Observatory
   (NRAO)](http://www.nrao.edu), Socorro, NM and the Center for High Throughput Computing
   (CHTC) have used the PATh and NRP facilities of the OSG to make the
   deepest image in the radio band of the Hubble Ultra-deep Field
