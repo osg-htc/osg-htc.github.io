@@ -13,6 +13,25 @@ import {
 } from "/assets/js/util.js";
 import {PieChart} from "/assets/js/components/pie-chart.js";
 
+let counter = async (id, endValue, numIncrements, decimals=0) => {
+    let node = document.getElementById(id)
+
+    let valueArray = [...Array(numIncrements).keys()].map((value, index) => {
+        return Math.floor(endValue * (Math.sqrt((index+1)/numIncrements)))
+    })
+
+    let index = 0;
+    let interval = setInterval(() => {
+        if (index >= valueArray.length) {
+            clearInterval(interval)
+        } else {
+            node.textContent = int_to_small_format(valueArray[index], decimals)
+        }
+        index += 1;
+    }, 50)
+}
+
+
 /**
  * A node wrapping the project information break down
  */
@@ -355,25 +374,6 @@ const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 })
 
 const project_page = new DataPage()
-
-
-let counter = async (id, endValue, numIncrements, decimals=0) => {
-    let node = document.getElementById(id)
-
-    let valueArray = [...Array(numIncrements).keys()].map((value, index) => {
-        return Math.floor(endValue * (Math.sqrt((index+1)/numIncrements)))
-    })
-
-    let index = 0;
-    let interval = setInterval(() => {
-        if (index >= valueArray.length) {
-            clearInterval(interval)
-        } else {
-            node.textContent = int_to_small_format(valueArray[index], decimals)
-        }
-        index += 1;
-    }, 50)
-}
 
 async function initialize_ospool_report () {
     counter("transferred", 127, 20)
