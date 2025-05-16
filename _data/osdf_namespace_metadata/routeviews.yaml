@@ -23,8 +23,8 @@ size: 113627027734528  # bytes
 display: true
 rank: 1 # zero is lowest priority
 inProgress: false
-thirtyDayReads: 176869801
-oneYearReads: 176869894
+thirtyDayReads: 252838517
+oneYearReads: 252838638
 name: RouteViews
 namespace:
   - "/routeviews"

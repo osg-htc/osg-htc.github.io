@@ -12,8 +12,8 @@ display: false # Whether or not to display this namespace
 name: CheckMK Probe Namespace # Human readable name of the namespace
 namespace: 
   - "/nrp/cachetest"
-thirtyDayReads: 856217001500
-oneYearReads: 4022334926146365
+thirtyDayReads: 854213001500
+oneYearReads: 2395013261465260
 publicObject: # Optional namespace path to a public object
 organizationUrl: null
 repositoryUrl: null

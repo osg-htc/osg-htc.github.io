@@ -17,5 +17,5 @@ name: OSDF Tutorial Data
 namespace: 
   - "/osdf-tutorial"
 thirtyDayReads: 0
-oneYearReads: 49311789860419
+oneYearReads: 62261
 organizationUrl: https://pelicanplatform.org

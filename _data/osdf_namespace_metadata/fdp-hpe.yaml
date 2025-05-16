@@ -21,7 +21,7 @@ namespace:
   - "/fdp-hpe"
   - "/nrp/fdp"
 thirtyDayReads: 0
-oneYearReads: 409563225097221
+oneYearReads: 553211044
 organizationUrl: https://fdp.readthedocs.io/en/latest/user_guide.html
 repositoryUrl:
   url: null

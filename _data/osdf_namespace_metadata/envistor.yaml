@@ -23,8 +23,8 @@ display: true # Whether or not to display this namespace
 name: EnviStor
 namespace: 
   - "/envistor"
-thirtyDayReads: 24
-oneYearReads: 95684852
+thirtyDayReads: 36
+oneYearReads: 95684864
 # BrianB commented this out until we have a non-test URL from EnviStor.
 # publicObject: /envistor/test2
 organizationUrl: https://www.fiu.edu/

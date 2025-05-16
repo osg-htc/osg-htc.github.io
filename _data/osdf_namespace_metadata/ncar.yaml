@@ -39,8 +39,8 @@ name: NCAR Research Data Archive # Human readable name of the namespace
 namespace: 
   - "/ncar"
   - "/ncar-rda"
-thirtyDayReads: 214628666771028
-oneYearReads: 251907377023419
+thirtyDayReads: 218481971416683
+oneYearReads: 264353361185352
 organizationUrl: https://ncar.ucar.edu # Organization URL
 repositoryUrl: 
   url: https://rda.ucar.edu # Repository URL

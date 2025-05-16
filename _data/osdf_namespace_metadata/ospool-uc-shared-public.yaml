@@ -14,7 +14,7 @@ name: OSPool Public Staging # Human readable name of the namespace
 namespace: 
   - "/ospool/uc-shared/public"
 publicObject: "/ospool/uc-shared/public/eht/GRMHD_kharma-v3/Ma+0.94_w5/torus.out0.05986.h5" # Public object name
-thirtyDayReads: 1302366219757806
-oneYearReads: 2366781818837408
+thirtyDayReads: 1325265802131560
+oneYearReads: 2426417531645050
 publicObject: # Optional namespace path to a public object
 organizationUrl: https://osg-htc.org/services/ospool/

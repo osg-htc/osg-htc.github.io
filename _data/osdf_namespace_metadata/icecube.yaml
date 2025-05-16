@@ -26,6 +26,6 @@ name: IceCube Neutrino Data # Human readable name of the namespace
 namespace: 
   - "/icecube"
   - "/icecube/PUBLIC"
-thirtyDayReads: 138632907277119
-oneYearReads: 7727207464114454
+thirtyDayReads: 139221399022659
+oneYearReads: 7727299876651540
 organizationUrl: https://wipac.wisc.edu

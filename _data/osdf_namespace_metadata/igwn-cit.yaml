@@ -20,3 +20,5 @@ name: Caltech Gravitational Wave Data # Human readable name of the namespace
 namespace: 
   - "/igwn/cit"
 organizationUrl: https://www.ligo.caltech.edu/
+thirtyDayReads: 769728653555870
+oneYearReads: 17688932216985000

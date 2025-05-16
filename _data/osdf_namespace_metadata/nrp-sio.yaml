@@ -14,7 +14,7 @@ display: true # Whether or not to display this namespace
 name: Scripps Institute of Oceanography # Human readable name of the namespace
 namespace: 
   - "/nrp/sio"
-thirtyDayReads: 38285252813
-oneYearReads: 4022334926146365
+thirtyDayReads: 38384294620
+oneYearReads: 38428297113
 organizationUrl: https://scripps.ucsd.edu/
 repositoryUrl: null
