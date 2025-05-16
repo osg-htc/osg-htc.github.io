@@ -25,7 +25,8 @@ namespace:
   - "/jkb-lab-public"
 thirtyDayReads: 0
 oneYearReads: 1266
-organizationUrl: https://www.jessiekb.com/
+# Group's URL would be https://www.jessiekb.com/
+organizationUrl: https://ucsd.edu/
 repositoryUrl:
   url: https://nationaldataplatform.org/ckandata
   label: Dataset Catalog
