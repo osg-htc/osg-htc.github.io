@@ -102,6 +102,7 @@ class ProjectDisplay{
        oneYearReads,
        publicObject,
        organizationUrl,
+       repositoryUrl,
        id
     }) {
         this.id = id
@@ -117,7 +118,12 @@ class ProjectDisplay{
 
         // If there is a organizationURL then make it a link
         if(organizationUrl) {
-            this.updateTextValue("data-organization-url", `<a class="btn btn-secondary" href="${organizationUrl}" target="_blank">Read More</a>`)
+            this.updateTextValue("data-organization", `<a href="${organizationUrl}" target="_blank">${organization}</a>`)
+        }
+
+        // If there is a dataRepostioryUrl then make it a link
+        if(repositoryUrl) {
+            this.updateTextValue("data-organization-url", `<a class="btn btn-secondary" href="${repositoryUrl['url']}" target="_blank">${repositoryUrl["label"]}</a>`)
         }
 
         // If there is a publicObject then update those pieces
