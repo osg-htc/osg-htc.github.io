@@ -10,7 +10,7 @@ description: |
 
   This data is organized as "working datasets" representing active workloads from researchers, not
   permanent scientific outputs.
-organization: University of Wisconsin-Madison
+organization: University of Wisconsin - Madison
 dataVisibility: private
 size: 13958398725 # In bytes so I can parse how I want
 bytesXferd:  # In bytes so I can parse how I want

@@ -3,7 +3,7 @@ description: |
 
     This repository supports the education and workforce development mission of the
     Pelican Project.
-organization: UW-Madison # Name of the organization
+organization: University of Wisconsin - Madison
 dataVisibility: private # public, or private
 size: 2416 # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want

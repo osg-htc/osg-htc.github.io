@@ -5,7 +5,7 @@ description: |
   with the [Jefferson National Lab](https://www.jlab.org/eic); the datasets
   connected to the OSDF include input files and other information necessary
   to help with simulations of the detector's behavior.
-organization: Jefferson National Lab
+organization: Jefferson National Laboratory
 dataVisibility: # public, or private
 size: # In bytes so I can parse how I want
 bytesXferd: # In bytes so I can parse how I want

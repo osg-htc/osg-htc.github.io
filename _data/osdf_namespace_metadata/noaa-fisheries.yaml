@@ -1,5 +1,5 @@
 ---
-name: NOAA NCEI Water Column Sonar Data
+name: NCEI Water Column Sonar Data
 namespace:
   - "/noaa/fisheries-1"
   - "/noaa/fisheries-2"
@@ -14,8 +14,8 @@ description: |
   sonar data collected by NOAA line offices, academia, industry, and
   international institutions.
 
-organization: National Centers for Environmental Information
-organizationUrl: https://www.ncei.noaa.gov/
+organization: National Oceanic and Atmospheric Administration
+organizationUrl: https://www.noaa.gov/
 repositoryUrl:
   url: https://www.ncei.noaa.gov/products/water-column-sonar-data
 fieldOfScience: Natural Resources and Conservation  # 03.0301
