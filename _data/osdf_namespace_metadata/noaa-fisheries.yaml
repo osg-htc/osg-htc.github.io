@@ -22,8 +22,8 @@ fieldOfScience: Natural Resources and Conservation  # 03.0301
 numberOfDatasets: 1
 
 dataVisibility: public
-publicObject:
-size:  # bytes
+publicObject: /noaa/fisheries-1/noaa-wcsd-pds/data/raw/Henry_B._Bigelow/HB2403/README_HB2403_EK80.md
+size: 331978855304407  # bytes
 
 display: true
 rank: 0  # zero is lowest priority
