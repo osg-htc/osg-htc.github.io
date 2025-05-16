@@ -195,7 +195,7 @@ class Table {
 
 
                 const order = (d) => {
-                    return d?.rank * 100 + d?.publicObject * 10 + d?.size * 1 + d?.oneYearReads * 1 + d?.numberOfDatasets * 1
+                    return d?.rank * 100 + !!d?.publicObject * 10 + !!d?.size * 1 + !!d?.oneYearReads * 1 + !!d?.numberOfDatasets * 1
                 }
 
                 const data = Object.values(table.data_function())
