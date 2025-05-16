@@ -4,12 +4,10 @@ description: |
   to find solutions to our greatest environmental challenges.
 organization: Scripps Institute of Oceanography # Name of the organization
 dataVisibility: private # public, or private
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://scripps.ucsd.edu/ # Organization URL
+size: null # In bytes so I can parse how I want
 fieldOfScience: Biological and Biomedical Sciences
-numberOfDatasets: # Number of datasets in the namespace
-rank: 0 # Rank of the namespace, 0 will have the lowest priority
+numberOfDatasets: null # Number of datasets in the namespace
+rank: 1 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: Scripps Institute of Oceanography # Human readable name of the namespace
@@ -18,3 +16,4 @@ namespace:
 thirtyDayReads: 38285252813
 oneYearReads: 4022334926146365
 organizationUrl: https://scripps.ucsd.edu/
+repositoryUrl: null
