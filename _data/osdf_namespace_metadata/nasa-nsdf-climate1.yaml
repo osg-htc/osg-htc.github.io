@@ -1,8 +1,3 @@
----
-name: OpenViSUS Conversion of NASA's ECCO Project's 1/48° MITgcm Simulation
-namespace:
-  - "/nasa/nsdf/climate1"
-  - "/nasa/nsdf/climate2"
 description: |
   The [LLC4320 ocean dataset](https://ecco-group.org/world-of-ecco.htm) is
   the product of a 14-month simulation of ocean circulation and dynamics
@@ -21,22 +16,21 @@ description: |
   [2026 IEEE SciVis Contest](https://sciviscontest2026.github.io/) to
   demonstrate cutting-edge technologies for working with petascale climate
   data provided by NASA.
-
 organization: University of Utah
 organizationUrl: https://www.utah.edu/
 repositoryUrl:
   url: https://data.nas.nasa.gov/ecco/
 fieldOfScience: Physical Sciences  # 40.0402
 numberOfDatasets: 1
-
+name: OpenViSUS Conversion of NASA's ECCO Project's 1/48° MITgcm Simulation
+namespace:
+  - "/nasa/nsdf/climate1"
+  - "/nasa/nsdf/climate2"
 dataVisibility: public
 publicObject: /nasa/nsdf/climate1/llc4320/idx/salt/salt_llc4320_x_y_depth.idx
 size: 957279078711296  # bytes
-
 display: true
 rank: 0  # zero is lowest priority
 inProgress: false
-
-bytesXferd:  # bytes
 thirtyDayReads: 45098988340
 oneYearReads: 864388563354

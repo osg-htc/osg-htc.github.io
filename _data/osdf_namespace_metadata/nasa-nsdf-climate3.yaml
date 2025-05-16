@@ -1,7 +1,3 @@
----
-name: OpenViSUS Conversion of NASA's C1440-LLC2160 Simulation
-namespace:
-  - "/nasa/nsdf/climate3"
 description: |
   The [NASA C1440-LLC2160 dataset](https://data.nas.nasa.gov/geoseccoviz/geoseccovizdata/c1440_llc2160/GEOS/)
   is [the simulation output from research into coupling two models](https://www.nas.nasa.gov/SC21/research/project16.html):
@@ -23,22 +19,20 @@ description: |
   [2026 IEEE SciVis Contest](https://sciviscontest2026.github.io/) to
   demonstrate cutting-edge technologies for working with petascale climate
   data provided by NASA.
-
 organization: University of Utah
 organizationUrl: https://nationalsciencedatafabric.org/
 repositoryUrl:
   url: https://data.nas.nasa.gov/geoseccoviz/
 fieldOfScience: Physical Sciences  # 40.0402
 numberOfDatasets: 1
-
 dataVisibility: public
 publicObject: /nasa/nsdf/climate3/dyamond/GEOS/GEOS_CO2/co2_face_2_depth_52_time_0_10269.idx
 size: 719098913751040  # bytes
-
 display: true
 rank: 0  # zero is lowest priority
 inProgress: false
-
-bytesXferd:  # bytes
+name: OpenViSUS Conversion of NASA's C1440-LLC2160 Simulation
+namespace:
+  - "/nasa/nsdf/climate3"
 thirtyDayReads: 472358547
 oneYearReads: 472358547
