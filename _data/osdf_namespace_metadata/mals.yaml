@@ -22,5 +22,6 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 0
 publicObject: /mals/mals-release.tar.gz # Probably too large to be a great test object, but it starts downloading anyway...
-organizationUrl: https://mals.iucaa.in/
-repositoryUrl: null
+organizationUrl: https://www.iucaa.in/en/
+repositoryUrl:
+  url: https://mals.iucaa.in/
