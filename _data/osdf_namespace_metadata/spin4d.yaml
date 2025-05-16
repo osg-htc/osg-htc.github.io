@@ -15,7 +15,7 @@ organization: University of Hawaii-Moana
 dataVisibility: public
 size: 119846767427584
 objectCount: null
-fieldOfScience: Physcial Sciences
+fieldOfScience: Physical Sciences
 numberOfDatasets: 6
 rank: 2 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
