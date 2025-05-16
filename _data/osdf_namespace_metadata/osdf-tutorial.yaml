@@ -16,4 +16,7 @@ namespace:
   - "/osdf-tutorial"
 thirtyDayReads: 0
 oneYearReads: 49311789860419
-organizationUrl: https://pelicanplatform.org
+organizationUrl: https://wisc.edu/
+repositoryUrl:
+  # TODO: Update URL with the appropriate Pelican notebook.
+  url: https://pelicanplatform.org
