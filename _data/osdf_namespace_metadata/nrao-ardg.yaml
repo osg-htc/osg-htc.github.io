@@ -3,7 +3,11 @@ description: |
 
   As written in the [VLASS homepage](https://public.nrao.edu/vlass/),
   VLASS is a survey of the universe through the use of the Very Large
-  Array (VLA) in New Mexico.  The VLASS is designed to produce a large collection
+  Array (VLA) in New Mexico. The VLA is one of the most sensitive telescopes
+  in the radio band that can provide more sensitive images of the universe
+  than any other radio telescope in the world. This, however, requires processing
+  large volume of data and requires super-computer class computing
+  resources. The VLASS is designed to produce a large collection
   of radio data available to wide range of scientists within the astronomical
   community. VLASS's science goal is to produce a radio, all-sky survey that
   will benefit the entire astronomical community. As VLASS completes its three
@@ -11,7 +15,7 @@ description: |
   data processing techniques will allow scientists an opportunity to download data
   instantly on potentially millions of astronomical radio sources.
 
-  The data consists of interferometric visibilities stored in 
+  The data in this data origin consists of interferometric visibilities stored in 
   ([Measurement Set (MS)](https://casa.nrao.edu/Memos/229.html)) format. Each
   dataset contains calibrated visibilities for one of the sixteen spectral windows
   of the VLA and covers an area of 4 square degrees (2 degrees x 2 degrees) in the
@@ -20,8 +24,19 @@ description: |
   70 regions in the sky, each image covering 4 square degrees. The [LibRA software
   package](https://github.com/ARDG-NRAO/LibRA) is used to transform visibilities to
   images. The architecture and design considerations for LibRA are shown in [this
-  presentation](https://www.aoc.nrao.edu/~sbhatnag/Talks/For_BrianB.pdf). Recent
-  large scale imaging achievements by the NRAO team that were made possible through
+  presentation](https://www.aoc.nrao.edu/~sbhatnag/Talks/For_BrianB.pdf).
+
+  Teams of scientists at the [National Radio Astronomy Observaory
+  (NRAO)](http://www.nrao.edu), Socorro, NM and the Center for High Throughput Computing
+  (CHTC) have used the PATh and NRP facilities of the OSG to make the
+  deepest image in the radio band of the Hubble Ultra-deep Field
+  (HUDF).  Similarly, the COSMOS HI Large Extra Galactic Survey
+  (CHILES)[http://chiles.astro.columbia.edu/] project has 1000 hr of integration with the VLA on the
+  COSMOS field. Imaging the CHILES data using PATh and NRP facilities
+  delivered the deepest radio image of this region of the sky, at an
+  unmatched data processing throughput. Similarly to the VLASS data stored in this
+  data origin, the data for HUDF and CHILES is stored in the PATh facility data origin.
+  These recent large scale imaging achievements that were made possible through
   use of OSG resources are reported in this [NRAO Newsletter article]
   (https://science.nrao.edu/enews/17.3/index.shtml#deepimaging) and [this press
   release](https://public.nrao.edu/news/astronomers-study-the-universe-300-times-faster/).
