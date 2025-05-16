@@ -7,11 +7,10 @@ description: |
   This is the data not yet released to the public.
 organization: University of Tokyo
 dataVisibility: private
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://gwcenter.icrr.u-tokyo.ac.jp/en/
+size: null # In bytes so I can parse how I want
+objectCount: null
 fieldOfScience: Astronomy and Astrophysics
-numberOfDatasets: # Number of datasets in the namespace
+numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
@@ -21,3 +20,4 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 45946311946152008
 organizationUrl: https://gwcenter.icrr.u-tokyo.ac.jp/en/
+repositoryUrl: null

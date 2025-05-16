@@ -10,8 +10,6 @@ organization: California Institute of Technology
 dataVisibility: private
 size: 138805574893272
 objectCount: 245785
-bytesXferd: # In bytes so I can parse how I want
-url: https://www.ligo.caltech.edu/
 fieldOfScience: Astronomy and Astrophysics
 numberOfDatasets: 12 # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
@@ -23,3 +21,4 @@ namespace:
 thirtyDayReads: 4038613088590885
 oneYearReads: 46103145102056864
 organizationUrl: https://www.ligo.caltech.edu/
+repositoryUrl: null
