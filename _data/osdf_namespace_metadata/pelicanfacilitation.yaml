@@ -2,11 +2,9 @@ description: |
   A namespace for the [Pelican Platform](https://pelicanplatform.org/) facilitation team to use for a variety of facilitation purposes.
 organization: University of Wisconsin-Madison
 dataVisibility: public
-size: 0
-bytesXferd: 0 # In bytes so I can parse how I want
-url: https://pelicanplatform.org/
+size: null
 fieldOfScience: Computer and Information Sciences and Support Services
-numberOfDatasets: 0 # not for datasets
+numberOfDatasets: null # not for datasets
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: false # Whether or not to display this namespace
@@ -17,3 +15,5 @@ thirtyDayReads: 0
 oneYearReads: 0
 publicObject: # Optional namespace path to a public object
 organizationUrl: https://wisc.edu
+repositoryUrl: null
+publicObjectUrl: null
