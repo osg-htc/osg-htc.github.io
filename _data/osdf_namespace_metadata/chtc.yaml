@@ -25,8 +25,8 @@ name: CHTC Researcher Data
 namespace: 
   - "/chtc"
   - "/chtc/specialprojects"
-thirtyDayReads: 122298434257295
-oneYearReads: 5339965187224643
+thirtyDayReads: 118701425179211
+oneYearReads: 5341756039548910
 organizationUrl: https://wisc.edu
 repositoryUrl:
   url: https://chtc.cs.wisc.edu/

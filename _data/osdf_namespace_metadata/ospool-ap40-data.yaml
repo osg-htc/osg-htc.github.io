@@ -22,6 +22,6 @@ display: true # Whether or not to display this namespace
 name: OSPool AP Working Data
 namespace: 
   - "/ospool/ap40/data"
-thirtyDayReads: 1520601338598672
-oneYearReads: 11062824070975420
+thirtyDayReads: 1529524963342780
+oneYearReads: 11140957788277200
 organizationUrl: https://www.wisc.edu/

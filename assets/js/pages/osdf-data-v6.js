@@ -102,6 +102,7 @@ class ProjectDisplay{
        oneYearReads,
        publicObject,
        organizationUrl,
+       repositoryUrl,
        id
     }) {
         this.id = id
@@ -117,7 +118,12 @@ class ProjectDisplay{
 
         // If there is a organizationURL then make it a link
         if(organizationUrl) {
-            this.updateTextValue("data-organization-url", `<a class="btn btn-secondary" href="${organizationUrl}" target="_blank">Read More</a>`)
+            this.updateTextValue("data-organization", `<a href="${organizationUrl}" target="_blank">${organization}</a>`)
+        }
+
+        // If there is a dataRepostioryUrl then make it a link
+        if(repositoryUrl) {
+            this.updateTextValue("data-organization-url", `<a class="btn btn-secondary" href="${repositoryUrl['url']}" target="_blank">${repositoryUrl["label"] || "View Datasets"}</a>`)
         }
 
         // If there is a publicObject then update those pieces
@@ -138,6 +144,14 @@ class ProjectDisplay{
 
         let [sizeValue, sizeLabel] = formatBytes(size, true)?.split(" ") || [null, null]
         this.updateBigNumberValue("size", sizeValue, sizeLabel);
+
+        // If all the values are empty, hide the parent
+        if (!sizeValue && !readsValue && !numberOfDatasets) {
+            document.getElementById("oneYearReads").parentNode.parentNode.parentNode.parentNode.classList.add("d-none")
+        } else {
+            document.getElementById("oneYearReads").parentNode.parentNode.parentNode.parentNode.classList.remove("d-none")
+        }
+
 
         this.setUrl();
         this.display_modal.show();

@@ -9,8 +9,6 @@ organization: California Institute of Technology
 dataVisibility: private
 size: 31537610933565
 objectCount: 469323
-bytesXferd: # In bytes so I can parse how I want
-url: https://www.ligo.caltech.edu/
 fieldOfScience: Astronomy and Astrophysics
 numberOfDatasets: 1581 # This is how many users currently have directories. Should do the same as whatever you decide for ospool-apN
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
@@ -19,4 +17,7 @@ display: true # Whether or not to display this namespace
 name: Caltech Gravitational Wave Data # Human readable name of the namespace
 namespace: 
   - "/igwn/cit"
+thirtyDayReads: 769728653555870
+oneYearReads: 17688932216985000
 organizationUrl: https://www.ligo.caltech.edu/
+repositoryUrl: null

@@ -16,8 +16,8 @@ display: true # Whether or not to display this namespace
 name: BurnPro3D
 namespace: 
   - "/ndp/burnpro3d"
-thirtyDayReads: 487991877
-oneYearReads: 9213605566
+thirtyDayReads: 316964599
+oneYearReads: 9337358188
 publicObject: /ndp/burnpro3d/TLS_scans.zip # Optional namespace path to a public object
 organizationUrl: https://wifire.ucsd.edu/burnpro3d
 repositoryUrl:

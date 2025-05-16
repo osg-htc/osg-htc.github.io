@@ -15,15 +15,15 @@ organization: Fermi National Accelerator Laboratory
 dataVisibility: public # public, or private
 size: 32000000000 # In bytes so I can parse how I want
 objectCount: 32767
-bytesXferd: null # In bytes so I can parse how I want
-url: https://icarus.fnal.gov/
 fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: null # Number of datasets in the namespace
-rank: 0 # Rank of the namespace, 0 will have the lowest priority
+rank: 1 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: ICARUS
 namespace: 
   - "/pnfs/fnal.gov/usr/icarus"
-publicObject: # Optional namespace path to a public object
+publicObject: null # Optional namespace path to a public object - Derek: No usage in the last year, only 1 test file
 organizationUrl: https://fnal.gov/
+repositoryUrl:
+  url: https://icarus.fnal.gov/

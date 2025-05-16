@@ -11,15 +11,17 @@ organization: Fermi National Accelerator Laboratory
 dataVisibility: public
 size: 136000000000
 objectCount: 36656
-bytesXferd: null # In bytes so I can parse how I want
-url: https://astro.fnal.gov/the-des-project/
 fieldOfScience: Physical Sciences # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
 numberOfDatasets: null # Number of datasets in the namespace
-rank: 0 # Rank of the namespace, 0 will have the lowest priority
+rank: 1 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: Dark Energy Survey
 namespace: 
   - "/pnfs/fnal.gov/usr/des"
-publicObject: # Optional namespace path to a public object
-organizationUrl: https://astro.fnal.gov/the-des-project/
+thirtyDayReads: null
+oneYearReads: null
+publicObject: /pnfs/fnal.gov/usr/des/persistent/stash/gw/ALLWISE_AGN/allwiseagn_v1_082022.dat # Optional namespace path to a public object
+organizationUrl: https://www.fnal.gov
+repositoryUrl: 
+  url: https://astro.fnal.gov/the-des-project/

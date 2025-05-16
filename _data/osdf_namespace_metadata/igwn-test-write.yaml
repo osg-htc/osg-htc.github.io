@@ -9,8 +9,6 @@ organization: California Institute of Technology
 dataVisibility: private
 size: 443967241
 objectCount: 47
-bytesXferd: # In bytes so I can parse how I want
-url: https://www.ligo.caltech.edu/
 fieldOfScience: Astronomy and Astrophysics
 numberOfDatasets: 2
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
@@ -20,5 +18,6 @@ name: IGWN Write Test # Human readable name of the namespace
 namespace: 
   - "/igwn/test-write"
 thirtyDayReads: 0
-oneYearReads: 46058170597445808
+oneYearReads: 468
 organizationUrl: https://www.ligo.caltech.edu/
+repositoryUrl: null

@@ -21,7 +21,7 @@ name: Center for Applied Internet Data Analysis # Human readable name of the nam
 namespace: 
   - "/caida/protected"
 thirtyDayReads: 0
-oneYearReads: 2428996385122106
+oneYearReads: 0
 organizationUrl: https://www.caida.org/
 repositoryUrl:
   url: https://catalog.caida.org/search?query=types=dataset

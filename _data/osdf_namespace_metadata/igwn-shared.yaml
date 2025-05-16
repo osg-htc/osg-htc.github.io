@@ -11,8 +11,6 @@ organization: California Institute of Technology
 dataVisibility: private
 size: 100695746686856
 objectCount: 1033379
-bytesXferd: # In bytes so I can parse how I want
-url: https://www.ligo.caltech.edu/
 fieldOfScience: Astronomy and Astrophysics
 numberOfDatasets: 5 # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
@@ -21,6 +19,7 @@ display: true # Whether or not to display this namespace
 name: IGWN Shared Gravitational Wave Data # Human readable name of the namespace
 namespace: 
   - "/igwn/shared"
-thirtyDayReads: 4510807352791
-oneYearReads: 55089078351451224
+thirtyDayReads: 4436999054511
+oneYearReads: 2668375776814160
 organizationUrl: https://www.ligo.caltech.edu/
+repositoryUrl: null

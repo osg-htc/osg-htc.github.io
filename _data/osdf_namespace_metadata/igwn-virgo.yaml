@@ -7,17 +7,16 @@ description: |
   This is the data not yet released to the public.
 organization: European Gravitational Observatory
 dataVisibility: private
-size: 
-bytesXferd: # In bytes so I can parse how I want
-url: https://www.virgo-gw.eu/
+size: null
 fieldOfScience: Astronomy and Astrophysics
-numberOfDatasets: # Number of datasets in the namespace
+numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
 name: VIRGO Gravitational Wave Data
 namespace: 
   - "/igwn/virgo"
-thirtyDayReads: 246082135167662
-oneYearReads: 45946311946152008
+thirtyDayReads: 269563925490601
+oneYearReads: 3046944641469200
 organizationUrl: https://www.virgo-gw.eu/
+repositoryUrl: null

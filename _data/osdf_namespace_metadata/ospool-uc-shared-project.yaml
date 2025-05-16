@@ -22,7 +22,7 @@ name: PATh Collaboration Services
 namespace: 
   - "/ospool/uc-shared/project"
   - "/ospool/uc-shared/public"
-thirtyDayReads: 22782090819801
-oneYearReads: 6775984561295982
+thirtyDayReads: 21723475821543
+oneYearReads: 6775986102458060
 organizationUrl: https://www.uchicago.edu/en
 publicObject: "/ospool/uc-shared/public/eht/GRMHD_kharma-v3/Ma+0.94_w5/torus.out0.05986.h5" # Public object name

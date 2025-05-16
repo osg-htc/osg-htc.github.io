@@ -6,12 +6,11 @@ description: |
   connected to the OSDF include input files and other information necessary
   to help with simulations of the detector's behavior.
 organization: Jefferson National Laboratory
-dataVisibility: # public, or private
-size: # In bytes so I can parse how I want
-bytesXferd: # In bytes so I can parse how I want
-url: https://www.jlab.org/eic
+dataVisibility: public # public, but no listings and I was unable to find a valid object
+size: null # In bytes so I can parse how I want
+objectCount: null
 fieldOfScience: Physical Sciences
-numberOfDatasets: # Number of datasets in the namespace
+numberOfDatasets: null # Number of datasets in the namespace
 rank: 0 # Rank of the namespace, 0 will have the lowest priority
 inProgress: false # Whether or not the namespace is in progress
 display: true # Whether or not to display this namespace
@@ -20,5 +19,6 @@ namespace:
   - "/eic"
 thirtyDayReads: 0
 oneYearReads: 4120
-publicObject: # Optional namespace path to a public object
 organizationUrl: https://www.jlab.org/eic
+repositoryUrl:
+  url: null

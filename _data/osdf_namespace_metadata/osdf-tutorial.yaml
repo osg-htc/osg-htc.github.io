@@ -15,7 +15,7 @@ name: OSDF Tutorial Data
 namespace: 
   - "/osdf-tutorial"
 thirtyDayReads: 0
-oneYearReads: 49311789860419
+oneYearReads: 62261
 organizationUrl: https://wisc.edu/
 repositoryUrl:
   # TODO: Update URL with the appropriate Pelican notebook.
