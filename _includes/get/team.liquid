@@ -1,0 +1,7 @@
+{% assign team = "" | split: "" %}
+
+{% for member in site.data.people%}
+  {% if member[1].organizations contains site.key %}
+    {% assign team = team | push: member[1] %}
+  {% endif %}
+{% endfor %}

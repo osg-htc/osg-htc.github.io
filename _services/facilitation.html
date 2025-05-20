@@ -1,0 +1,166 @@
+---
+layout: table-of-contents
+title: "OSG Research Computing Facilitators"
+permalink: /services/facilitation.html
+intro_image:
+intro_image_absolute: true
+intro_image_hide_on_mobile: false
+table_of_contents:
+    - name: What We Do
+    - name: Regular Activities
+    - name: Training
+    - name: Other Events
+    - name: Our Philosophy
+excerpt: Facilitation Services leverage the CHTC-pioneered principles of Research Computing Facilitation to accelerate dHTC uptake by campus researchers and collaborations via the Open Science Federation and OSG-Operated Access Points, and by campuses and other organizations interested in advancing their own dHTC and dHTC Facilitation capabilities.
+weight: 2
+featured: true
+---
+
+
+<h1>{{ page.title }}</h1>
+
+{{ page.excerpt }}
+
+{% include get/team.liquid %}
+<div class="row py-3">
+    {% assign base_image_path = "/staff-list/" %}
+    {% assign promoted_teams = team | where: "is_facilitator", 1 | sort: "weight" %}
+    {% for member in promoted_teams %}
+    <div class="col-12 mb-2">
+        <div class="h-100 team team-summary team-summary-large">
+            <div class="row justify-content-between flex-grow-1">
+                <div class="col-auto d-flex">
+                    <div class="team-meta d-flex flex-grow-1">
+                        <div class=mt-auto>
+                            {% if member.website %}
+                            <a href="{{ member.website }}">
+                            {% endif %}
+                            <h2 class="team-name">{{ member.name }}</h2>
+                            {% if member.website %}
+                            </a>
+                            {% endif %}
+                            <p class="team-institution">{{ member.institution }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="team-image">
+                        <img alt="{{ member.name }}" class="img-fluid mb-2" src="{{ base_image_path | append: member.image | relative_url }}" />
+                    </div>
+                </div>
+            </div>
+            {% if member.description or member.path.description %}
+                <p class="team-description text-muted mt-3 mb-0">{{ member.path.description | default: member.description }}</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+<h2 id="what-we-do">What We Do</h2>
+
+<p>To help researchers effectively utilize computing resources, our
+Research Computing Facilitators (RCFs) not only guide the implementation of
+computational work on PATh-supported compute capacity, but can also
+point researchers to other national services related to
+research computing and data needs. </p>
+
+<h5 class="mx-auto"><a class="btn  btn-outline-primary text-decoration-none" href="https://path-cc.io/contact/">Talk to Us</a></h5>
+
+<h5 class="mx-auto"><a class="btn  btn-outline-primary text-decoration-none" href="#our-philosophy">Learn More about Our Approach</a></h5>
+
+<br>
+
+<h3 id="regular-activities">Regular Activities</h3>
+
+<p>We are available to answer questions via an email “ticket” system. We
+aim to provide a first response (although not necessarily a solution!)
+within 1-2 business days.</p>
+
+<h5 class="mx-auto"><a class="btn  btn-outline-primary text-decoration-none" href="mailto:support@path-cc.io">Email Us</a></h5>
+
+
+<p>In addition to email, we host drop-in “office hours” online twice a
+week. </p>
+
+<ul>
+    <li><b>Tuesday</b>
+    <ul><li>4 - 5:30pm ET / 1 - 2:30pm PT</li></ul>
+    </li>
+    <li><b>Thursday</b>
+    <ul><li>11:30am - 1pm ET / 8:30 - 10am PT</li></ul>
+    </li>
+</ul>
+
+<p>No appointment is needed, just show up during the available times!
+Contact us for the zoom link. </p>
+
+<p>All of these details are also on our Get Help page. </p>
+
+<h5 class="mx-auto"><a class="btn  btn-outline-primary text-decoration-none" href="https://portal.osg-htc.org/documentation/support_and_training/support/getting-help-from-RCFs/">Get Help</a></h5>
+
+<h3 id="training">Training</h3>
+
+<p>The Facilitation Team offers monthly training sessions for the HTC
+community. Upcoming training events are announced via the OSPool users email
+list and are listed on our monthly training page. The Team also organizes
+and hosts an annual in-person summer school, the OSG School. </p>
+
+<h5 class="mx-auto"><a class="btn  btn-outline-primary text-decoration-none" href="https://portal.osg-htc.org/documentation/support_and_training/training/osgusertraining/">Monthly Training</a></h5>
+
+<h5 class="mx-auto"><a class="btn  btn-outline-primary text-decoration-none" href="https://osg-htc.org/community/school.html">Annual OSG School</a></h5>
+
+<h3 id="other-events">Other Events</h3>
+
+<p>Are you hosting an event where the audience might benefit from our services?
+We are happy to give guest presentations or trainings for your organization
+or event. Let us know at support@osg-htc.org</p>
+
+<h2 id="our-philosophy">Our Philosophy</h2>
+
+<p>Drawing upon the principles of Research Computing Facilitation (RCF) pioneered
+by UW-Madison’s Center for High Throughput Computing, the Facilitation Services
+team work to expand the impact of dHTC and dHTC Facilitation across various PATh
+stakeholders, including researchers, multi-institutional collaborations, and the
+campuses and organizations that support them. These principles include:</p>
+
+<ul>
+<li>proactive engagement</li>
+<li>personalized guidance</li>
+<li>technology agnosticism</li>
+<li>‘teach-to-fish’ documentation and training methodologies (empowering participants to realize dHTC impacts for themselves)</li>
+<li>prioritization of “research performance” over computing performance, and</li>
+<li>advocacy for user-centric improvements to relevant technologies.</li>
+</ul>
+
+<p>PATh Research Computing Facilitators apply these principles to the practice of
+dHTC Facilitation for researchers, research groups, and multi-institutional
+collaborations leveraging the dHTC environment of the OSG
+via access services like the [OSG Portal](https://portal.osg-htc.org) (available
+to researchers affiliated with any US-based academic, government, or non-profit
+organization). For example, all new users of the OSG-Operated Access Points first
+meet with a Facilitator to collaborate on an efficient on-ramp plan and
+anticipated impact, with accessible ongoing support.</p>
+
+<h3>Facilitation for Campuses</h3>
+
+<p>Leveraging the same principles and a history of experience with researchers,
+the RCF team also facilitates the navigation of PATh services for staff at
+campuses  (including NSF CC\* awardees) and other organizations looking to
+enhance their dHTC capabilities, whether by growing local dHTC capacity and
+support, or by connecting local resources and end-users into the OSG. As part
+of the services for campuses, the RCF team also leverages its own experience in
+dHTC for end-users to offer dHTC Facilitation training via shadowing, workshops,
+and ongoing support channels.</p>
+
+<h3>Taking dHTC Impact Farther</h3>
+
+<p>As an ultimate principle of Research Computing Facilitation, insights from the
+facilitation of dHTC stakeholders are continually integrated across PATh areas
+to improve dHTC capabilities and services. These include improvements to
+strategies for Community Empowerment, where our RCFs also contribute
+significantly to the materials and execution of PATh’s various outreach,
+education, and training programs. As part of the services for campuses, the RCF
+team leverages its own experience in dHTC for end-users to offer dHTC
+Facilitation training for personnel at campuses.</p>

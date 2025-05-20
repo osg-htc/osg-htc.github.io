@@ -307,3 +307,54 @@ th, td {
 .gridjs-th-content {
   font-size: 1.2rem;
 }
+
+// For the team cards on the facilitation page
+.team-summary {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  .team-image {
+    height: 5rem;
+    width: 5rem;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .team-meta {
+    flex: 1;
+    h2 {
+      margin: 0;
+    }
+    p {
+      color: $black;
+      margin: 0;
+      font-weight: 500;
+    }
+    p.team-description {
+      text-transform: uppercase;
+    }
+    p.team-institution {
+      color: darken($primary, 20%);
+    }
+  }
+  .team-content {
+    margin-top: 20px;
+    flex: 1 0 100%;
+  }
+}
+
+.team-summary-large {
+  background-color: $white-offset;
+  padding: 15px;
+  border-radius: 3px;
+  .team-image {
+    height: 90px;
+    width: 90px;
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 90px;
+    }
+  }
+}
