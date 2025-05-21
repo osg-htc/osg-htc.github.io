@@ -200,10 +200,10 @@ class Table {
 
                     // If there is a dataRepostioryUrl then make it a link
                     if(data?.["repositoryUrl"]){
-                        return gridjs.html(`<a class="btn btn-secondary" href="${data["repositoryUrl"]["url"]}" target="_blank">${data["repositoryUrl"]["label"] || "View Datasets"}</a>`)
+                        return gridjs.html(`<a class="btn btn-secondary" href="${data["repositoryUrl"]["url"]}" target="_blank" onclick="event.stopPropagation()">${data["repositoryUrl"]["label"] || "View Datasets"}</a>`)
                     }
 
-                    return gridjs.html(`<a class="btn btn-outline-dark" href="${data["organizationUrl"]}" target="_blank">Learn More</a>`)
+                    return gridjs.html(`<a class="btn btn-outline-dark" href="${data["organizationUrl"]}" target="_blank" onclick="event.stopPropagation()">Learn More</a>`)
                 },
                 sort: false,
                 attributes: {
