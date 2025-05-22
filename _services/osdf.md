@@ -227,3 +227,28 @@ The caches in the distribution network are primarily managed by PATh staff but c
     </div>
 </div>
 
+<div class="row mt-3 justify-content-center">
+    <div class="col-auto mt-3">
+        <div class="d-flex align-items-center">
+            <a href="https://pelicanplatform.org/" target="_blank">
+                <img width="80" src="/assets/images/logos/PelicanPlatformLogo_Icon.png" alt="Pelican Logo" class="img-fluid" style="max-width: 200px;">
+            </a>
+            <h2 class="ms-3 mb-0">Powered By <a href="https://pelicanplatform.org">Pelican Platform</a></h2>
+        </div>
+    </div>
+    <div class="col-auto mt-3">
+        <div class="d-flex align-items-center">
+            <a href="https://path-cc.io" target="_blank">
+                <img width="80" src="/assets/images/logos/Logo_Round_Med.png" alt="PATh Logo" class="img-fluid" style="max-width: 200px;">
+            </a>
+            <h2 class="ms-3 mb-0">Operated by <a href="https://path-cc.io">PATh</a></h2>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-auto mt-3">
+        <a href="https://pelicanplatform.org/" target="_blank">
+            <img width="320" src="/assets/images/logos/OSDF_OSPool_Logos.png" alt="Pelican Logo" class="img-fluid">
+        </a>
+    </div>
+</div>
