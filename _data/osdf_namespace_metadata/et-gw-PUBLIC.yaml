@@ -6,12 +6,12 @@ description: |
   sensitivity than either the LIGO or VIRGO instruments.
 
   As part of the studies and the design proposal for the ET instrument, the
-  mock data challenge was run in 2024 to better understand how the future data
+  mock data challenge is being run in 2024 and 2025 to better understand how the future data
   may be distributed and analyzed.  An example tutorial for using the data can
   be found [on GitHub](https://github.com/elenacuoco/ET-MDC-Tutorials).
 organization: UCLouvain
 dataVisibility: public
-size: 6764573491
+size: 6764573491200
 bytesXferd: # In bytes so I can parse how I want
 fieldOfScience: Astronomy and Astrophysics
 numberOfDatasets: 3

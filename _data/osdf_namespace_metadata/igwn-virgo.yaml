@@ -7,7 +7,7 @@ description: |
   This is the data not yet released to the public.
 organization: European Gravitational Observatory
 dataVisibility: private
-size: 16106127360
+size: 16106127360000
 fieldOfScience: Astronomy and Astrophysics
 numberOfDatasets: 10
 rank: 0 # Rank of the namespace, 0 will have the lowest priority

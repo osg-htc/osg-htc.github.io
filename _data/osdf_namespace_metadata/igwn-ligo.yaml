@@ -22,4 +22,5 @@ namespace:
 thirtyDayReads: 3894337423325970
 oneYearReads: 22558599596480200
 organizationUrl: https://www.ligo.caltech.edu/
-repositoryUrl: null
+repositoryUrl:
+  url: https://www.ligo.caltech.edu
