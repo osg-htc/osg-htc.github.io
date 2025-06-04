@@ -152,6 +152,7 @@ class UsageToggles {
             }
         })
 
+        console.log(usageQueryResult);
         let projectBuckets = usageQueryResult.aggregations.projects.buckets
 
         try {
