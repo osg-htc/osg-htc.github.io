@@ -1,90 +1,23 @@
 import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, OSPOOL_FILTER, SUMMARY_INDEX, ADSTASH_SUMMARY_INDEX, ADSTASH_ENDPOINT} from "./elasticsearch-v1.js";
 import {GraccDisplay, locale_int_string_sort, string_sort} from "./util.js";
+import {getOverview, getProjectOverview} from "./adstash.mjs"
 import Color from "https://colorjs.io/dist/color.js";
 
 // rename React.createElement
 const e = React.createElement;
 
-
-// todo: switch this endpoint to ADSTASH_SUMMARY_INDEX and ADSTASH_ENDPOINT
-// still not sure of the equivalent ResourceType and ProbeName fields
-const elasticSearch = new ElasticSearchQuery(ADSTASH_SUMMARY_INDEX, ADSTASH_ENDPOINT)
-
 class UsageToggles {
     static async getUsage() {
-        if (this.usage) {
-            return this.usage
+        if (!this.usage) {
+            this.usage = await getOverview()
         }
-
-        let usageQueryResult = await elasticSearch.search({
-            size: 0, // increase this to debug ES queries
-            query: {
-                bool: {
-                    filter: [
-                        // {
-                        //     term: {ResourceType: "Payload"}
-                        // },
-                        {
-                            range: {
-                                Date: {
-                                    lte: DATE_RANGE['now'],
-                                    gte: DATE_RANGE['oneYearAgo']
-                                }
-                            }
-                        },
-                        // OSPOOL_FILTER
-                    ]
-                },
-            },
-            aggs: {
-                projects: {
-                    "terms": {
-                        field: "ProjectName.keyword",
-                        size: 99999999
-                    },
-                    aggs: {
-                        projectCpuUse: {
-                            sum: {
-                                field: "CpuHours"
-                            }
-                        },
-                        projectGpuUse: {
-                            sum: {
-                                field: "GpuHours"
-                            }
-                        },
-                        projectJobsRan: {
-                            sum: {
-                                field: "NumJobs"
-                            }
-                        }
-                    }
-                }
-            }
-        })
-
-        console.log("UsageToggles.getUsage.usageQueryResult: ", usageQueryResult)
-        let projectBuckets = usageQueryResult.aggregations.projects.buckets
-
-        this.usage = projectBuckets.reduce((p, v) => {
-            p[v['key']] = {
-                cpuHours: v['projectCpuUse']['value'],
-                cpu: v['projectCpuUse']['value'] != 0,
-                gpuHours: v['projectGpuUse']['value'],
-                gpu: v['projectGpuUse']['value'] != 0,
-                jobs: v['projectJobsRan']['value']
-            }
-            return p
-        }, {})
-
-        console.log("Final UsageToggles.usage: ", this.usage)
         return this.usage
     }
 
     static async usedCpu(projectName) {
         let usage = await UsageToggles.getUsage()
         if (projectName in usage) {
-            return usage[projectName]["cpu"]
+            return usage[projectName]["cpuHours"]
         }
         return false
     }
@@ -92,7 +25,7 @@ class UsageToggles {
     static async usedGpu(projectName) {
         let usage = await UsageToggles.getUsage()
         if (projectName in usage) {
-            return usage[projectName]["gpu"]
+            return usage[projectName]["gpuHours"]
         }
         return false
     }
@@ -263,13 +196,13 @@ class Table {
         this.updateProjectDisplay = updateProjectDisplay
         this.columns = [
             {
-                id: 'jobs',
+                id: 'numJobs',
                 name: 'Jobs Ran',
-                data: (row) => Math.floor(row.jobs).toLocaleString(),
+                data: (row) => Math.floor(row.numJobs).toLocaleString(),
                 sort: { compare: locale_int_string_sort }
             },
             {
-                id: 'Name',
+                id: 'projectName',
                 name: 'Name',
                 sort: { compare: string_sort },
                 attributes: {
@@ -309,7 +242,7 @@ class Table {
                 td: "pointer",
                 paginationButton: "mt-2 mt-sm-0"
             },
-            data: async () => Object.values(await table.data_function()).sort((a, b) => b.jobs - a.jobs),
+            data: async () => Object.values(await table.data_function()).sort((a, b) => b.numJobs - a.numJobs),
             pagination: {
                 enabled: true,
                 limit: 50,
@@ -328,7 +261,7 @@ class Table {
     update = async () => {
         let table = this
         this.grid.updateConfig({
-            data: Object.values(await table.data_function()).sort((a, b) => b.jobs - a.jobs)
+            data: Object.values(await table.data_function()).sort((a, b) => b.numJobs - a.numJobs)
         }).forceRender();
     }
 
@@ -398,11 +331,6 @@ class DataManager {
 
         let responseJson = await this._fetch("https://topology.opensciencegrid.org/miscproject/json")
 
-        let ospool_projects = new Set(await this._fetch("https://osg-htc.org/ospool-data/data/ospool_projects.json"))
-        let osgconnect_projects = new Set(await this._fetch("/assets/data/osgconnect_projects.json"))
-
-        let projects = new Set([...ospool_projects, ...osgconnect_projects])
-
         let usageJson;
         try {
             usageJson = await UsageToggles.getUsage()
@@ -412,7 +340,7 @@ class DataManager {
         }
 
         this.data = Object.entries(responseJson).reduce((p, [k,v]) => {
-            if(k in usageJson && projects.has(k)){
+            if(k in usageJson){
                 p[k] = {...v, ...usageJson[k]}
             }
             return p
@@ -495,17 +423,17 @@ class ProjectPage{
 
         this.createPieChart(
             "project-fos-cpu-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "FieldOfScience", "cpuHours"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "broadFieldOfScience", "cpuHours"),
             "# of CPU Hours by Field of Science"
         )
         this.createPieChart(
             "project-fos-job-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "FieldOfScience", "jobs"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "broadFieldOfScience", "numJobs"),
             "# of Jobs by Field Of Science"
         )
         this.createPieChart(
             "project-job-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "Name", "jobs"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "projectName", "numJobs"),
             "# of Jobs by Project",
             ({label, value}) => {
                 this.table.updateProjectDisplay(this.dataManager.data[label])
@@ -513,7 +441,7 @@ class ProjectPage{
         )
         this.createPieChart(
             "project-cpu-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "Name", "cpuHours"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "projectName", "cpuHours"),
             "# of CPU Hours by Project",
             ({label, value}) => {
                 this.table.updateProjectDisplay(this.dataManager.data[label])
@@ -521,7 +449,7 @@ class ProjectPage{
         )
         this.createPieChart(
             "project-gpu-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "Name", "gpuHours"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "projectName", "gpuHours"),
             "# of GPU Hours by Project",
             ({label, value}) => {
                 this.table.updateProjectDisplay(this.dataManager.data[label])
@@ -557,7 +485,7 @@ class ProjectPage{
 
     minimumJobsFilter = (data) => {
         return Object.entries(data).reduce((pv, [k,v]) => {
-            if(v['jobs'] >= 100){
+            if(v['numJobs'] >= 100){
                 pv[k] = v
             }
             return pv
