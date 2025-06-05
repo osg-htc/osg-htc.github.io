@@ -1,103 +1,23 @@
----
-    layout: blank
----
+import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, OSPOOL_FILTER, SUMMARY_INDEX, ADSTASH_SUMMARY_INDEX, ADSTASH_ENDPOINT} from "./elasticsearch-v1.js";
+import {GraccDisplay, locale_int_string_sort, string_sort} from "./util.js";
+import {getOverview, getProjectOverview} from "./adstash.mjs"
+import Color from "https://colorjs.io/dist/color.js";
 
-import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, SUMMARY_INDEX, OSPOOL_FILTER} from "./elasticsearch-v1.js";
-import {GraccDisplay, locale_int_string_sort, string_sort, hideNode} from "./util.js";
-import {PieChart} from "./components/pie-chart.js";
-
-
-function makeDelay(ms) {
-    let timer = 0;
-    return function(callback){
-        clearTimeout (timer);
-        timer = setTimeout(callback, ms);
-    };
-}
-
-
-
-/**
- * A suite of Boolean functions deciding the visual status of a certain grafana graph
- *
- * true results in the graph being shown, false the opposite
- */
-const elasticSearch = new ElasticSearchQuery(SUMMARY_INDEX, ENDPOINT)
+// rename React.createElement
+const e = React.createElement;
 
 class UsageToggles {
-
     static async getUsage() {
-        if (this.usage) {
-            return this.usage
+        if (!this.usage) {
+            this.usage = await getOverview()
         }
-
-        let usageQueryResult = await elasticSearch.search({
-            size: 0,
-            query: {
-                bool: {
-                    filter: [
-                        {
-                            term: {ResourceType: "Payload"}
-                        },
-                        {
-                            range: {
-                                EndTime: {
-                                    lte: DATE_RANGE['now'],
-                                    gte: DATE_RANGE['oneYearAgo']
-                                }
-                            }
-                        },
-                        OSPOOL_FILTER
-                    ]
-                },
-            },
-            aggs: {
-                projects: {
-                    "terms": {
-                        field: "ProjectName",
-                        size: 99999999
-                    },
-                    aggs: {
-                        projectCpuUse: {
-                            sum: {
-                                field: "CoreHours"
-                            }
-                        },
-                        projectGpuUse: {
-                            sum: {
-                                field: "GPUHours"
-                            }
-                        },
-                        projectJobsRan: {
-                            sum: {
-                                field: "Njobs"
-                            }
-                        }
-                    }
-                }
-            }
-        })
-
-        let projectBuckets = usageQueryResult.aggregations.projects.buckets
-
-        this.usage = projectBuckets.reduce((p, v) => {
-            p[v['key']] = {
-                cpuHours: v['projectCpuUse']['value'],
-                cpu: v['projectCpuUse']['value'] != 0,
-                gpuHours: v['projectGpuUse']['value'],
-                gpu: v['projectGpuUse']['value'] != 0,
-                jobs: v['projectJobsRan']['value']
-            }
-            return p
-        }, {})
-
         return this.usage
     }
 
     static async usedCpu(projectName) {
         let usage = await UsageToggles.getUsage()
         if (projectName in usage) {
-            return usage[projectName]["cpu"]
+            return usage[projectName]["cpuHours"]
         }
         return false
     }
@@ -105,7 +25,7 @@ class UsageToggles {
     static async usedGpu(projectName) {
         let usage = await UsageToggles.getUsage()
         if (projectName in usage) {
-            return usage[projectName]["gpu"]
+            return usage[projectName]["gpuHours"]
         }
         return false
     }
@@ -226,7 +146,7 @@ class ProjectCount {
     update = async () => {
         let data = await this.dataGetter()
         this.node.textContent = Object.keys(data).length
-        console.log(Object.keys(data).length)
+        console.log("Project Count:", Object.keys(data).length)
     }
 }
 
@@ -267,6 +187,8 @@ class Search {
 }
 
 class Table {
+    // todo: use CHTCWebComponents.Table
+    // should be somewhat drop-in
     constructor(wrapper, data_function, updateProjectDisplay){
         this.grid = undefined
         this.data_function = data_function
@@ -274,13 +196,13 @@ class Table {
         this.updateProjectDisplay = updateProjectDisplay
         this.columns = [
             {
-                id: 'jobs',
+                id: 'numJobs',
                 name: 'Jobs Ran',
-                data: (row) => Math.floor(row.jobs).toLocaleString(),
+                data: (row) => Math.floor(row.numJobs).toLocaleString(),
                 sort: { compare: locale_int_string_sort }
             },
             {
-                id: 'Name',
+                id: 'projectName',
                 name: 'Name',
                 sort: { compare: string_sort },
                 attributes: {
@@ -320,7 +242,7 @@ class Table {
                 td: "pointer",
                 paginationButton: "mt-2 mt-sm-0"
             },
-            data: async () => Object.values(await table.data_function()).sort((a, b) => b.jobs - a.jobs),
+            data: async () => Object.values(await table.data_function()).sort((a, b) => b.numJobs - a.numJobs),
             pagination: {
                 enabled: true,
                 limit: 50,
@@ -335,12 +257,14 @@ class Table {
         }).render(table.wrapper);
         this.grid.on('rowClick', this.row_click);
     }
+
     update = async () => {
         let table = this
         this.grid.updateConfig({
-            data: Object.values(await table.data_function()).sort((a, b) => b.jobs - a.jobs)
+            data: Object.values(await table.data_function()).sort((a, b) => b.numJobs - a.numJobs)
         }).forceRender();
     }
+
     row_click = async (PointerEvent, e) => {
         let data = await this.data_function()
         let row_name = e["cells"][1].data
@@ -407,26 +331,22 @@ class DataManager {
 
         let responseJson = await this._fetch("https://topology.opensciencegrid.org/miscproject/json")
 
-        let ospool_projects = new Set(await this._fetch("https://osg-htc.org/ospool-data/data/ospool_projects.json"))
-        let osgconnect_projects = new Set(await this._fetch("/assets/data/osgconnect_projects.json"))
-
-        let projects = new Set([...ospool_projects, ...osgconnect_projects])
-
         let usageJson;
         try {
             usageJson = await UsageToggles.getUsage()
         } catch(e) {
+            console.error("Error during UsageToggles.getUsage:", e);
             this.error = "Error fetching usage data, learn more on the OSG status page: status.osg-htc.org"
         }
 
         this.data = Object.entries(responseJson).reduce((p, [k,v]) => {
-            if(k in usageJson && projects.has(k)){
+            if(k in usageJson){
                 p[k] = {...v, ...usageJson[k]}
             }
             return p
         }, {})
 
-        console.log(this.data)
+        console.log("Final data from DataManager.data:", this.data)
 
         return this.data
     }
@@ -501,54 +421,71 @@ class ProjectPage{
             this.projectDisplay.update((await this.dataManager.getData())[urlProject])
         }
 
-        this.orgPieChart = new PieChart(
+        this.createPieChart(
             "project-fos-cpu-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "FieldOfScience", "cpuHours"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "broadFieldOfScience", "cpuHours"),
             "# of CPU Hours by Field of Science"
         )
-        this.FosPieChart = new PieChart(
+        this.createPieChart(
             "project-fos-job-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "FieldOfScience", "jobs"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "broadFieldOfScience", "numJobs"),
             "# of Jobs by Field Of Science"
         )
-        this.jobPieChart = new PieChart(
+        this.createPieChart(
             "project-job-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "Name", "jobs"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "projectName", "numJobs"),
             "# of Jobs by Project",
             ({label, value}) => {
                 this.table.updateProjectDisplay(this.dataManager.data[label])
             }
         )
-        this.cpuPieChart = new PieChart(
+        this.createPieChart(
             "project-cpu-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "Name", "cpuHours"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "projectName", "cpuHours"),
             "# of CPU Hours by Project",
             ({label, value}) => {
                 this.table.updateProjectDisplay(this.dataManager.data[label])
             }
         )
-        this.gpuPieChart = new PieChart(
+        this.createPieChart(
             "project-gpu-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "Name", "gpuHours"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "projectName", "gpuHours"),
             "# of GPU Hours by Project",
             ({label, value}) => {
                 this.table.updateProjectDisplay(this.dataManager.data[label])
             }
         )
 
-        this.dataManager.consumerToggles.push(this.orgPieChart.update)
-        this.dataManager.consumerToggles.push(this.FosPieChart.update)
-        this.dataManager.consumerToggles.push(this.jobPieChart.update)
-        this.dataManager.consumerToggles.push(this.cpuPieChart.update)
-        this.dataManager.consumerToggles.push(this.gpuPieChart.update)
+        // todo: Re-enable these, shouldn't be too hard to have it continually update
+        // this.dataManager.consumerToggles.push(this.orgPieChart.update)
+        // this.dataManager.consumerToggles.push(this.FosPieChart.update)
+        // this.dataManager.consumerToggles.push(this.jobPieChart.update)
+        // this.dataManager.consumerToggles.push(this.cpuPieChart.update)
+        // this.dataManager.consumerToggles.push(this.gpuPieChart.update)
         this.dataManager.consumerToggles.push(this.projectCount.update)
     }
 
+    createPieChart = async (id, dataGetter, label, onClick) => {
+        // todo: onClick is not currently provided by CHTCWebComponents.PieChart
 
+        const chartElement = document.getElementById(id);
+
+        let data = await dataGetter();
+        data = data.labels.map((label, i) => {
+            return { label, value: data.data[i] };
+        });
+
+        if (!chartElement) return;
+        const root = ReactDOM.createRoot(chartElement);
+
+        root.render(
+            createPieChartWithLegend(label, data)
+        );
+    }
 
     minimumJobsFilter = (data) => {
         return Object.entries(data).reduce((pv, [k,v]) => {
-            if(v['jobs'] >= 100){
+            if(v['numJobs'] >= 100){
                 pv[k] = v
             }
             return pv
@@ -564,8 +501,141 @@ class ProjectPage{
     }
 }
 
-const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+function createPieChartWithLegend(label, data) {
+    // todo: border of white, as it looks ugly and "fades" out when the slices are small
+    // also, the legend may not have enough width?
+
+    return e(
+        "div",
+        {
+            style: {
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-start",
+                gap: "20px",
+            },
+        },
+        [
+            // Pie chart wrapper
+            e(
+                "div",
+                {
+                    style: {
+                        maxWidth: "215px",
+                        flex: "0 0 215px",
+                    },
+                },
+                // Pie Chart as child
+                [
+                    e(CHTCWebComponents.PieChart, {
+                        axisLabel: label,
+                        bgColor: "#222529",
+                        data,
+                    }),
+                ]
+            ),
+            // List to the side
+            e(
+                "div",
+                {
+                    style: {
+                        maxHeight: "250px",
+                        overflowY: "auto",
+                        padding: "10px 10px 10px 0",
+                    },
+                },
+                [
+                    // Actual ul
+                    e(
+                        "ul",
+                        {
+                            style: {
+                                listStyleType: "none",
+                                padding: 0,
+                                fontSize: "0.8rem",
+                                overflowX: "auto",
+                            },
+                        },
+                        data.map((item) =>
+                            // Each list element
+                            e(
+                                "li",
+                                {
+                                    key: item.label,
+                                    style: {
+                                        display: "flex",
+                                        alignItems: "center",
+                                        marginBottom: "4px",
+                                    },
+                                },
+                                [
+                                    // Colored Box
+                                    e("div", {
+                                        style: {
+                                            width: "16px",
+                                            height: "16px",
+                                            backgroundColor: getColorOfName(item.label),
+                                            marginRight: "8px",
+                                            flexShrink: 0,
+                                        },
+                                    }),
+                                    // Name
+                                    item.label,
+                                ]
+                            )
+                        )
+                    ),
+                ]
+            ),
+        ]
+    );
+}
+
+/**
+ * Get a color based on a string name.
+ * @param {string} context The string to get a color for.
+ * @returns {string} A unique color for the given string.
+ */
+function getColorOfName(context) {
+    /**
+     * Returns a hash code from a string
+     * @param {string} str The string to hash.
+     * @return A 32bit integer
+     * @see http://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
+     */
+    function hashCode(str) {
+        let hash = 0;
+        for (let i = 0, len = str.length; i < len; i++) {
+            let chr = str.charCodeAt(i);
+            hash = (hash << 5) - hash + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+        return hash;
+    }
+
+
+    const colors = [
+        "#37a2eb",
+        "#ff6384",
+        "#ff9e40",
+        "#9966ff",
+        "#ffcd56",
+        "#4dbd74",
+    ];
+
+    const hash = hashCode(context) ** 2; // Make sure its positive
+    const colorStr = colors[hash % (colors.length - 1)];
+    let color = new Color(colorStr).to("lch");
+
+    // Manipulate the color based on the hash
+    color = new Color(color.lighten((hash % 19) / 100));
+    color = new Color(color.darken((hash % 23) / 100));
+
+    return color.to("srgb").toString();
+}
+
+const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+tooltipTriggerList.forEach(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 
