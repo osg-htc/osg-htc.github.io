@@ -7,8 +7,8 @@ const e = React.createElement;
 
 
 // todo: switch this endpoint to ADSTASH_SUMMARY_INDEX and ADSTASH_ENDPOINT
-// there seems to be an issue with the data and/or filters (OSPOOL_FILTER?)
-const elasticSearch = new ElasticSearchQuery(SUMMARY_INDEX, ENDPOINT)
+// still not sure of the equivalent ResourceType and ProbeName fields
+const elasticSearch = new ElasticSearchQuery(ADSTASH_SUMMARY_INDEX, ADSTASH_ENDPOINT)
 
 class UsageToggles {
     static async getUsage() {
@@ -17,45 +17,45 @@ class UsageToggles {
         }
 
         let usageQueryResult = await elasticSearch.search({
-            size: 0,
+            size: 0, // increase this to debug ES queries
             query: {
                 bool: {
                     filter: [
-                        {
-                            term: {ResourceType: "Payload"}
-                        },
+                        // {
+                        //     term: {ResourceType: "Payload"}
+                        // },
                         {
                             range: {
-                                EndTime: {
+                                Date: {
                                     lte: DATE_RANGE['now'],
                                     gte: DATE_RANGE['oneYearAgo']
                                 }
                             }
                         },
-                        OSPOOL_FILTER
+                        // OSPOOL_FILTER
                     ]
                 },
             },
             aggs: {
                 projects: {
                     "terms": {
-                        field: "ProjectName",
+                        field: "ProjectName.keyword",
                         size: 99999999
                     },
                     aggs: {
                         projectCpuUse: {
                             sum: {
-                                field: "CoreHours"
+                                field: "CpuHours"
                             }
                         },
                         projectGpuUse: {
                             sum: {
-                                field: "GPUHours"
+                                field: "GpuHours"
                             }
                         },
                         projectJobsRan: {
                             sum: {
-                                field: "Njobs"
+                                field: "NumJobs"
                             }
                         }
                     }
