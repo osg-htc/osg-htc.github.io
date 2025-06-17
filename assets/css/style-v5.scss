@@ -62,6 +62,11 @@ blockquote {
 @import 'pages/event';
 @import 'uw/mini_bar';
 
+// Responsive font sizing
+html { font-size: 14px; }
+@media (min-width: 768px) { html { font-size: 16px; } }
+@media (min-width: 1200px) { html { font-size: 18px; } }
+
 // Need for the Fixed Navbar
 body {
   color: #5a5a5a;
