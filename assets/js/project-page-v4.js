@@ -326,7 +326,6 @@ class Table {
                 limit: 50,
                 buttonsCount: 1
             },
-            width: "1000px",
             style: {
                 td: {
                     'text-align': 'right'

@@ -1,6 +1,6 @@
 ---
 title: OSPool Contributing Institutions
-layout: padded-default
+layout: ospool
 js_extension:
 -   src: "https://unpkg.com/gridjs/dist/gridjs.umd.js"
     loading:
@@ -29,10 +29,11 @@ permalink: /services/ospool/institutions.html
         text-decoration: underline;
     }
 </style>
-<div class="container-xxl">
-    {% include layout/title.html %}
-    <div class="row">
+<div class="container-xxl pt-5">
+    <div class="row justify-content-center">
         <div class="col-12 col-xl-7 col-lg-8 col-md-10">
+
+             {% include layout/title.html %}
             <p>
                 The <a href="{{ '/services/open_science_pool' | relative_url }}">OSPool</a> is powered by
                 contributions from the Open Science community, specifically the institutions listed below. The scale of
@@ -53,11 +54,7 @@ permalink: /services/ospool/institutions.html
 </div>
 
 <div class="container-xxl">
-    <div class="row">
-        <div class="col-12 col-xl-10 col-lg-11 col-md-12">
-            <div id="wrapper" class=" overflow-auto"></div>
-        </div>
-    </div>
+    <div id="wrapper" class=" overflow-auto"></div>
 </div>
 
 <div class="modal fade" id="display" tabindex="-1" aria-labelledby="Name" aria-hidden="true">

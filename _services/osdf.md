@@ -1,15 +1,16 @@
 ---
 title: Open Science Data Federation
-layout: text-optimized-width
+layout: osdf
 ---
 
+<div class="container-xxl mw-1000" markdown="1">
 
 <figure class="w-100 figure">
-    <iframe width="100%" height="500px" frameBorder="0" style="margin-top:1em" allow="fullscreen" src="https://map.osg-htc.org/map/iframe?view=OpenScienceDataFederation#45.737115,-45.140436|2"></iframe>
-    <figcaption>US Map featuring the locations of current OSDF <a href="/docs/data/stashcache/overview/#architecture">architectural components</a>.</figcaption>
+    <iframe width="100%" height="500px" frameBorder="0" style="margin-top:1em" allow="fullscreen" src="https://map.osg-htc.org/map/iframe?view=OpenScienceDataFederation#20.737115,-10.140436|2"></iframe>
+    <figcaption>Locations of current OSDF <a href="/docs/data/stashcache/overview/#architecture">architectural components</a>.</figcaption>
 </figure>
 
-## Open Science Data Federation
+# Open Science Data Federation
 
 The Open Science Data Federation (OSDF) connects disparate dataset repositories into a single, nation-wide data distribution network. Leveraging the OSDF, providers can make their datasets available to a wide variety of compute users, from browsers to Jupyter notebooks to high throughput computing environments.
 
@@ -24,10 +25,10 @@ The OSDF may be for you if...
 - You are part of a collaborative project that works with shared data sets
 - You have generated data as part of a project and want to share it
 
-<div class="alert alert-light border-0 shadow d-flex flex-column">
-<h5 class="mx-auto">Want to make your dataset available via the OSDF?</h5>
-<a class="btn btn-secondary mx-auto d-block mt-3" href="mailto:support@osg-htc.org">Contact OSDF Support Staff</a>
-</div>
+
+##### Want to make your dataset available via the OSDF?
+<a class="btn btn-outline-secondary mx-auto mt-3" href="mailto:support@osg-htc.org">Contact OSDF Support Staff</a>
+
 
 {: .mini-bar}
 ### Contribute
@@ -37,10 +38,10 @@ The OSDF can be a platform for sharing data from your institution or contributin
 - Provide unused storage space for other groups or projects to use via the OSDF
 - Host infrastructure to make the OSDF more robust, like a local cache
 
-<div class="alert alert-light border-0 shadow d-flex flex-column">
-<h5 class="mx-auto">Want to contribute to the OSDF infrastructure?</h5>
-<a class="btn btn-secondary mx-auto d-block mt-3" href="https://docs.google.com/forms/d/e/1FAIpQLSem2Lu-9nL2DBOXrSzmHTWdBZHsMmVN_pIq5ITSnj4A51BTLw/viewform?usp=header">Request a Meeting</a>
-</div>
+
+##### Want to contribute to the OSDF infrastructure?
+<a class="btn btn-outline-secondary mx-auto mt-3" href="https://docs.google.com/forms/d/e/1FAIpQLSem2Lu-9nL2DBOXrSzmHTWdBZHsMmVN_pIq5ITSnj4A51BTLw/viewform?usp=header">Request a Meeting</a>
+
 
 {: .mini-bar}
 ### Use
@@ -49,20 +50,21 @@ The OSDF may be for you if...
 - You are using the OSPool to analyze or produce data. 
 - You want to analyze data that has been shared on the OSDF.
 
-<div class="alert  alert-light border-0 shadow d-flex flex-column">
-<h5 class="mx-auto">Want to use or process data hosted on the OSDF? </h5>
-<div class="row justify-content-center">
+
+##### Want to use or process data hosted on the OSDF?
+
+<div class="row mb-4">
 <div class="col-auto">
-<a class="btn btn-secondary mx-auto d-block mt-3" href="mailto:support@osg-htc.org">Contact OSDF Support Staff</a>
+<a class="btn btn-outline-secondary mx-auto d-block mt-3" href="mailto:support@osg-htc.org">Contact OSDF Support Staff</a>
 </div>
 <div class="col-auto d-flex">
 <div class="my-auto pt-2">or</div>
 </div>
 <div class="col-auto">
-<a class="btn btn-secondary mx-auto d-block mt-3" href="mailto:support@osg-htc.org">Request an OSPool Account</a>
+<a class="btn btn-outline-secondary mx-auto d-block mt-3" href="mailto:support@osg-htc.org">Request an OSPool Account</a>
 </div>
 </div>
-</div>
+
 
 
 ## FAQ
@@ -77,7 +79,7 @@ Researchers using the [OSPool](https://osg-htc.org/services/ospool/) from an [OS
 
 What about a researcher or community that would like to connect to the OSDF but doesn’t have their own storage infrastructure?
 
--   A half dozen [CC* Storage projects](https://new.nsf.gov/funding/opportunities/cc-campus-cyberinfrastructure) have committed to having their storage managed by OSG; projects can request space from the OSG for their use via the support desk.
+-   [CC* Storage projects](https://new.nsf.gov/funding/opportunities/cc-campus-cyberinfrastructure) have committed to having their storage managed by OSG; projects can request space from the OSG for their use via the support desk.
 
 -   Researchers can request an [OSN](https://openstoragenetwork.readthedocs.io/en/latest/) allocation from ACCESS and request OSG connect their bucket to the OSDF.
 
@@ -251,4 +253,6 @@ The caches in the distribution network are primarily managed by PATh staff but c
             <img width="320" src="/assets/images/logos/OSDF_OSPool_Logos.png" alt="Pelican Logo" class="img-fluid">
         </a>
     </div>
+</div>
+
 </div>
