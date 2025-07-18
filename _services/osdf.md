@@ -69,56 +69,139 @@ The OSDF may be for you if...
 
 ## FAQ
 
-### Who can use the OSDF?
+<div id="faq-accordion" class="accordion mb-4">
+  <div class="accordion-item">
+    <h2 id="faq-header-1" class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-controls="faq-collapse-1" aria-expanded="false">
+        Who can use the OSDF?
+      </button>
+    </h2>
+    <div id="faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-header-1">
+      <div class="accordion-body">
+        <p>Any US-based academic, government, or non-profit institution may connect their object store to the OSDF.</p>
+        <p>Researchers using the <a href="https://osg-htc.org/services/ospool/">OSPool</a> from an <a href="https://osg-htc.org/services/access-point">OSG-operated Access Point</a> automatically get an allocation on a local filesystem connected to the OSDF.</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 id="faq-header-q2" class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-controls="faq-collapse-2" aria-expanded="false">
+        Can I get storage on the OSDF? / OSDF and CC* Storage
+      </button>
+    </h2>
+    <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-header-q2">
+      <div class="accordion-body">
+        <p>
+        What about a researcher or community that would like to connect to the OSDF but doesn’t have their own storage infrastructure?
+        </p>
+        <ul>
+          <li>
+            <a href="https://new.nsf.gov/funding/opportunities/cc-campus-cyberinfrastructure">CC* Storage projects</a> have committed to having their storage managed by OSG; projects can request space from the OSG for their use via the support desk.
+          </li>
+          <li>
+            Researchers can request an <a href="https://openstoragenetwork.readthedocs.io/en/latest/">OSN</a> allocation from ACCESS and request OSG connect their bucket to the OSDF.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 id="faq-header-q3" class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-controls="faq-collapse-3" aria-expanded="false">
+        What is needed to contribute to the OSDF?
+      </button>
+    </h2>
+    <div id="faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-header-q3">
+      <div class="accordion-body">
+        <p>
+          The “origin” service connects the backend object store (a POSIX filesystem, S3-compatible endpoint, or HTTP endpoint) with the national infrastructure. The origin service needs access to the storage and incoming connectivity from the external infrastructure.
+        </p>
+        <p>
+          Most origin backends are currently a mounted shared filesystem, and S3 endpoints like those found on AWS or <a href="https://www.openstoragenetwork.org/">OSN</a> are increasingly common. To ease operations, the OSG Consortium offers a “hosted origin service” where central experts will install and operate the origin as a container. The container is most often deployed via on-prem hardware as part of the <a href="https://nationalresearchplatform.org/">National Research Platform</a> or an institutional Kubernetes cluster and inside a <a href="https://fasterdata.es.net/science-dmz/">ScienceDMZ</a>.
+        </p>
+        <p>
+          If the repository runs their own origin, this can be done on “bare metal” with native packages or as a container operated by the institution.
+        </p>
+        <p>
+          The hardware needed for the origin varies widely based on expected usage; it is typically deployed on server-class hardware. Planning the network connectivity with the object store and out to the national infrastructure (including firewalls along the path) is key. The OSG team is experienced in consulting and providing help to universities in designing the integration. To provide the community some guidance, we host your <a href="https://osg-htc.org/organization/osdf/example_data_origin.html">suggested solutions</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 id="faq-header-q4" class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-4" aria-controls="faq-collapse-4" aria-expanded="false">
+        How is the OSDF used?
+      </button>
+    </h2>
+    <div id="faq-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-header-q4">
+      <div class="accordion-body">
+        <p>
+          The Open Science Data Federation (OSDF) enables users and institutions to make datasets available to compute jobs running in distributed high-throughput computing (dHTC) environments such as the <a href="https://osg-htc.org/services/open_science_pool.html">Open Science Pool (OSPool)</a>. Compute jobs submitted from an HTCondor access point (e.g. an <a href="https://osg-htc.org/services/access-point">OSG-Operated Access Point</a>) can access data stored in data origins, with HTCondor managing data transfer via the OSDF’s global namespace and data caches.
+        </p>
+        <p>
+          By providing the distributed data access layer via these data caches, jobs running in the OSPool (or any other resource pool) can reduce wide-area network consumption, load on the data origins, and latency of data access.
+        </p>
+        <p>
+          The OSDF is not limited to dHTC environments: it can be accessed via a browser (like S3, OSDF’s underlying protocol is HTTPS) or directly via a <a href="https://github.com/PelicanPlatform/pelicanfs">Python client</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 id="faq-header-q5" class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-5" aria-controls="faq-collapse-5" aria-expanded="false">
+        Example OSDF Use Cases
+      </button>
+    </h2>
+    <div id="faq-collapse-5" class="accordion-collapse collapse" aria-labelledby="faq-header-q5">
+      <div class="accordion-body">
+        <p>
+          The OSDF can be used in a variety of scenarios, including:
+        </p>
+        <ul>
+          <li>
+            A repository wants to stream its datasets, at scale, without scaling egress.
+          </li>
+          <li>
+            A researcher wants to share a dataset with their community so others can use it in computational workflows.
+          </li>
+          <li>
+            A researcher produces data on the OSPool that they need to store for future processing or sharing with the community.
+          </li>
+          <li>
+            A team wants to make their datasets available to their community without opening their storage directly to the Internet.
+          </li>
+        </ul>
+        <p>To learn more details about these or other use cases, please reach out to our team of Research Computing Facilitators through support@osg-htc.org.</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 id="faq-header-q6" class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-6" aria-controls="faq-collapse-6" aria-expanded="false">
+        Who can access data in the OSDF?
+      </button>
+    </h2>
+    <div id="faq-collapse-6" class="accordion-collapse collapse" aria-labelledby="faq-header-q6">
+      <div class="accordion-body">
+        <p>
+          Each <a href="https://osg-htc.org/docs/data/stashcache/overview/#architecture">origin</a> is configured to enforce the object store’s access policies. Objects can be made public or private, and the repository controls the rules for sharing. For example, origins at Access Points can provide users with a public directory and a directory that is only accessible to a user’s jobs.
+        </p>
+        <p>
+          The content distribution network enforces the origin’s access policies by requiring a signed <a href="https://scitokens.org/">access token</a> for non-public objects.
+        </p>
+        <p>
+          Objects cached in the content distribution network are visible to the administrators of the <a href="https://osg-htc.org/docs/data/stashcache/overview/#architecture">cache</a> services and of the execution points where a user’s jobs run. Non-public data is encrypted when sent over the network, but not on disk. The OSDF is appropriate for non-public data from “open science” communities but not highly regulated or sensitive data (such as PII or HIPAA data).
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-Any US-based academic, government, or non-profit institution may connect their object store to the OSDF.
 
-Researchers using the [OSPool](https://osg-htc.org/services/ospool/) from an [OSG-operated Access Point](https://osg-htc.org/services/access-point) automatically get an allocation on a local filesystem connected to the OSDF.
 
-### Can I get storage on the OSDF? / OSDF and CC* Storage
-
-What about a researcher or community that would like to connect to the OSDF but doesn’t have their own storage infrastructure?
-
--   [CC* Storage projects](https://new.nsf.gov/funding/opportunities/cc-campus-cyberinfrastructure) have committed to having their storage managed by OSG; projects can request space from the OSG for their use via the support desk.
-
--   Researchers can request an [OSN](https://openstoragenetwork.readthedocs.io/en/latest/) allocation from ACCESS and request OSG connect their bucket to the OSDF.
-
-### What is needed to contribute to the OSDF? 
-
-The “origin” service connects the backend object store (a POSIX filesystem, S3-compatible endpoint, or HTTP endpoint) with the national infrastructure. The origin service needs access to the storage and incoming connectivity from the external infrastructure.
-
-Most origin backends are currently a mounted shared filesystem and S3 endpoints like those found on AWS or [OSN](https://www.openstoragenetwork.org/) are increasingly common. To ease operations, the OSG Consortium offers a “hosted origin service” where central experts will install and operate the origin as a container. The container is most often deployed via on-prem hardware deployed as part of the [National Research Platform](https://nationalresearchplatform.org/) or an institutional Kubernetes cluster and inside a [ScienceDMZ](https://fasterdata.es.net/science-dmz/).
-
-If the repository runs their own origin, this can be done on “bare metal” with native packages or as a container operated by the institution.
-
-The hardware needed for the origin varies widely based on expected usage; it is typically deployed on server-class hardware; planning the network connectivity with the object store and out to the national infrastructure (including firewalls along the path) is key. The OSG team is experienced in consulting and providing help to universities in designing the integration. To provide the community some guidance, we host your [suggested solutions](https://osg-htc.org/organization/osdf/example_data_origin.html).
-
-### How is OSDF used?
-
-The Open Science Data Federation (OSDF) enables users and institutions to make datasets available to compute jobs running in distributed high-throughput computing (dHTC) environments such as the [Open Science Pool (OSPool)](https://osg-htc.org/services/open_science_pool.html). Compute jobs submitted from an HTCondor access point (e.g. an [OSG-Operated Access Point](https://osg-htc.org/services/access-point)) can access data stored in data origins, with HTCondor managing data transfer via the OSDF’s global namespace and data caches.
-
-By providing the distributed data access layer via these data caches, jobs running in the OSPool (or any other resource pool) can reduce wide-area network consumption, load on the data origins, and latency of data access.
-
-The OSDF is not limited to dHTC environments: it can be accessed via a browser (like S3, OSDF’s underlying protocol is HTTPS) or directly via a [Python client](https://github.com/PelicanPlatform/pelicanfs).
-
-#### Example OSDF Use Cases
-
--   A repository wants to stream its datasets, at scale, without scaling egress.
--   A researcher wants to share a dataset with their community so others can use it in computational workflows.
--   A researcher produces data on the OSPool that they need to store for future processing or sharing with the community.
--   A team wants to make their datasets available to their community without opening their storage directly to the Internet.
-
-To learn more details about these or other use cases, please reach out to our team of Research Computing Facilitators through support@osg-htc.org.
-
-## Who can access data in the OSDF?
-
-Each [origin](https://osg-htc.org/docs/data/stashcache/overview/#architecture) is configured to enforce the object store’s access policies. Objects can be made public or private, and the repository controls the rules for sharing. For example, origins at Access Points can provide users with a public directory and a directory that is only accessible to a user’s jobs.
-
-The content distribution network enforces the origin’s access policies by requiring a signed [access token](https://scitokens.org/) for non-public objects.
-
-Objects cached in the content distribution network are visible to the administrators of the [cache](https://osg-htc.org/docs/data/stashcache/overview/#architecture) services and of the execution points where a user’s jobs run. Non-public data is encrypted when sent over the network, but not on disk. The OSDF is appropriate for non-public data from “open science” communities but not highly regulated or sensitive data (such as PII or HIPAA data).
-
-### Who is behind the OSDF?
+## OSDF Contributors
 
 The OSDF is part of the OSG Fabric of Services run by the OSG Consortium.
 
