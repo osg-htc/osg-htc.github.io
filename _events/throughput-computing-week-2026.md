@@ -12,8 +12,8 @@ excerpt: |
 start_date: 2026-06-09
 end_date: 2026-06-12
 location: "University of Wisconsin–Madison’s Fluno Center and Online via Zoom"
-image: "/images/events/throughput-2026-banners.png"
-header_image: "images/events/throughput-2026-banners.png"
+image: "/assets/images/events/throughput-2026-banners.png"
+header_image: "/assets/images/events/throughput-2026-banners.png"
 ---
 
 {% capture main %}
