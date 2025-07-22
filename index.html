@@ -133,7 +133,7 @@ css_extension:
                         <div class="p-2 bg-white rounded flex-grow-1">
                             <h6 class="mb-1"><a href="/events.html">Events</a></h6>
                             {% for data in future_events limit: 3 %}
-                                {% include /cards/horizontal-news.html class="mt-2" src=data.header_image %}
+                                {% include /cards/horizontal-news.html class="mt-2" src=data.banner.path %}
                             {% endfor %}
                         </div>
                     {% endif %}
