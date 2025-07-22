@@ -62,19 +62,19 @@ class ProjectDisplay{
 
 	async updateInstitutionPieChart(data) {
 		new PieChart(
-			"project-institution-pie-chart",
-			async () => {
-				return Object.entries(data)
-						.filter(([k,v]) => v.numJobs > 0)
-						.sort((a, b) => b[1]['numJobs'] - a[1]['numJobs'])
-						.reduce((p, [k,v]) => {
-							return {
-								labels: [...p.labels, k],
-								data: [...p.data, v.numJobs]
-							}
-						}, {labels: [], data: []})
-			},
-			"# of Jobs by Institution"
+				"project-institution-pie-chart",
+				async () => {
+					return Object.entries(data)
+							.filter(([k,v]) => v.numJobs > 0)
+							.sort((a, b) => b[1]['numJobs'] - a[1]['numJobs'])
+							.reduce((p, [k,v]) => {
+								return {
+									labels: [...p.labels, k],
+									data: [...p.data, v.numJobs]
+								}
+							}, {labels: [], data: []})
+				},
+				"# of Jobs by Institution"
 		)
 	}
 

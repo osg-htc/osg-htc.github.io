@@ -2,7 +2,7 @@
     layout: blank
 ---
 
-import {getOverview, getProjectOverview} from "./adstash.mjs"
+import {getProjects} from "./adstash.mjs"
 import {
     GraccDisplay,
     locale_int_string_sort,
@@ -14,6 +14,7 @@ import {
 } from "./util.js";
 import Color from "https://colorjs.io/dist/color.js";
 import {PieChart} from "./components/pie-chart.js";
+import Search from "./Search.mjs";
 
 const orange = new Color("#f4b627")
 const white = new Color("#ffffff")
@@ -34,42 +35,6 @@ class ProjectCount {
         let data = await this.dataGetter()
         this.node.textContent = Object.keys(data).length
         console.log(Object.keys(data).length)
-    }
-}
-
-class Search {
-    constructor(data, listener) {
-        this.node = document.getElementById("project-search")
-        this.listener = listener
-        this.timer = undefined
-        this.node.addEventListener("input", this.search)
-        this.lunr_idx = lunr(function () {
-            this.ref('projectName')
-            this.field('broadFieldOfScience')
-            this.field('projectName')
-            this.field('projectInstitutionName')
-
-            data.forEach(function (doc) {
-                this.add(doc)
-            }, this)
-        })
-    }
-    search = () => {
-        clearTimeout(this.timer)
-        this.timer = setTimeout(this.listener, 250)
-    }
-    filter = (data) => {
-        console.log(data)
-        if(this.node.value == ""){
-            return data
-        } else {
-            console.log(this.node.value)
-            let table_keys = this.lunr_idx.search(`*${this.node.value}* ${this.node.value} ${this.node.value}~2`).map(r => r.ref)
-            return table_keys.reduce((pv, k) => {
-                pv[k] = data[k]
-                return pv
-            }, {})
-        }
     }
 }
 
@@ -208,7 +173,7 @@ class DataManager {
 
         let usageJson;
         try {
-            usageJson = await getOverview()
+            usageJson = await getProjects()
         } catch(e) {
             this.error = "Error fetching usage data, learn more on the status page: status.osg-htc.org"
         }

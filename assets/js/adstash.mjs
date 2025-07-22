@@ -3,7 +3,15 @@
  */
 import ElasticSearchQuery, {ADSTASH_ENDPOINT, ADSTASH_SUMMARY_INDEX, DATE_RANGE} from "./elasticsearch-v1.js";
 
-export const getOverview = async () => {
+export const getInstitutions = async () => {
+	return await getAggregatedData("ResourceInstitution.name.keyword")
+}
+
+export const getProjects = async () => {
+	return await getAggregatedData("ProjectName.keyword")
+}
+
+export const getAggregatedData = async (bucketKey) => {
 	const elasticSearch = new ElasticSearchQuery(ADSTASH_SUMMARY_INDEX, ADSTASH_ENDPOINT)
 
 	let usageQueryResult = await elasticSearch.search({
@@ -17,9 +25,9 @@ export const getOverview = async () => {
 			}
 		},
 		"aggs": {
-			"projects": {
+			"bucket": {
 				"terms": {
-					"field": "ProjectName.keyword",
+					"field": bucketKey,
 					"size": 10000
 				},
 				"aggs": {
@@ -71,18 +79,11 @@ export const getOverview = async () => {
 		}
 	})
 
-	let projectBuckets = usageQueryResult.aggregations.projects.buckets
+	let buckets = usageQueryResult.aggregations.bucket.buckets
 
 	try {
-
 		// Simplify the data keys
-		return projectBuckets.reduce((p, v) => {
-
-			// If the project is not mapped skip it
-			if(v['CommonFields']['hits']['hits'][0]['_source']['ProjectInstitution']?.['name'] === undefined){
-				return p
-			}
-
+		return buckets.reduce((p, v) => {
 			p[v['key']] = {
 				projectName: v['key'],
 				numJobs: v['NumJobs']['value'],
@@ -111,7 +112,7 @@ export const getOverview = async () => {
 	return {}
 }
 
-export const getProjectOverview = async (projectName) => {
+export const getEntityOverview = async (aggKey, entityKey, entityValue) => {
 	const elasticSearch = new ElasticSearchQuery(ADSTASH_SUMMARY_INDEX, ADSTASH_ENDPOINT)
 
 	let usageQueryResult = await elasticSearch.search({
@@ -129,16 +130,16 @@ export const getProjectOverview = async (projectName) => {
 					},
 					{
 						term: {
-							"ProjectName.keyword": projectName
+							[entityKey]: entityValue,
 						}
 					}
 				]
 			}
 		},
 		"aggs": {
-			"institutions": {
+			"agg": {
 				"terms": {
-					"field": "ResourceInstitution.name.keyword",
+					"field": aggKey,
 					"size": 10000
 				},
 				"aggs": {
@@ -182,10 +183,10 @@ export const getProjectOverview = async (projectName) => {
 		}
 	})
 
-	let institutionBuckets = usageQueryResult.aggregations.institutions.buckets
+	let buckets = usageQueryResult.aggregations.agg.buckets
 
 	try {
-		return institutionBuckets.reduce((p, v) => {
+		return buckets.reduce((p, v) => {
 
 			p[v['key']] = {
 				projectName: v['key'],
@@ -205,6 +206,14 @@ export const getProjectOverview = async (projectName) => {
 	}
 
 	return {}
+}
+
+export const getInstitutionOverview = async (institutionName) => {
+	return await getEntityOverview("ProjectName.keyword", "ResourceInstitution.name.keyword", institutionName)
+}
+
+export const getProjectOverview = async (projectName) => {
+	return await getEntityOverview("ResourceInstitution.name.keyword", "ProjectName.keyword", projectName)
 }
 
 const EPSCOR_STATES = [

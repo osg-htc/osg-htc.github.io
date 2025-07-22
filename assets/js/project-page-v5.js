@@ -2,62 +2,12 @@
     layout: blank
 ---
 
-import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, SUMMARY_INDEX, OSPOOL_FILTER} from "./elasticsearch-v1.js";
-import {getOverview, getProjectOverview} from "./adstash.mjs"
-import {GraccDisplay, locale_int_string_sort, string_sort, hideNode} from "./util.js";
+import {getProjects} from "./adstash.mjs"
+import {locale_int_string_sort, string_sort} from "./util.js";
 import {PieChart} from "./components/pie-chart.js";
 import ProjectDisplay from "./components/ProjectDisplay.mjs";
-
-
-class ProjectCount {
-    constructor(dataGetter, node) {
-        this.node = node
-        this.dataGetter = dataGetter
-        this.update()
-    }
-
-    update = async () => {
-        let data = await this.dataGetter()
-        this.node.textContent = Object.keys(data).length
-        console.log(Object.keys(data).length)
-    }
-}
-
-class Search {
-    constructor(data, listener) {
-        this.node = document.getElementById("project-search")
-        this.listener = listener
-        this.timer = undefined
-        this.node.addEventListener("input", this.search)
-        this.lunr_idx = lunr(function () {
-            this.ref('Name')
-            this.field('FieldOfScience')
-            this.field('Name')
-            this.field('Organization')
-            this.field('PIName')
-
-            data.forEach(function (doc) {
-                this.add(doc)
-            }, this)
-        })
-    }
-    search = () => {
-        clearTimeout(this.timer)
-        this.timer = setTimeout(this.listener, 250)
-    }
-    filter = (data) => {
-        if(this.node.value == ""){
-            return data
-        } else {
-            console.log(this.node.value)
-            let table_keys = this.lunr_idx.search(`*${this.node.value}* ${this.node.value} ${this.node.value}~2`).map(r => r.ref)
-            return table_keys.reduce((pv, k) => {
-                pv[k] = data[k]
-                return pv
-            }, {})
-        }
-    }
-}
+import UpdateTextField from "./components/UpdateTextField.mjs";
+import Search from "./Search.mjs"
 
 class Table {
     constructor(wrapper, data_function, updateProjectDisplay){
@@ -200,7 +150,7 @@ class DataManager {
         let topologyData = await this._fetch("https://topology.opensciencegrid.org/miscproject/json")
         let usageJson;
         try {
-            usageJson = await getOverview()
+            usageJson = await getProjects()
         } catch(e) {
             this.error = "Error fetching usage data, learn more on the OSG status page: status.osg-htc.org"
         }
@@ -278,7 +228,10 @@ class ProjectPage{
         this.toggleActiveFilterButton = document.getElementById("toggle-active-filter")
         this.toggleActiveFilterButton.addEventListener("click", this.toggleActiveFilter)
 
-        this.projectCount = new ProjectCount(this.dataManager.getFilteredData, document.getElementById("project-count"))
+        this.projectCount = new UpdateTextField(
+            async () => Object.keys(await this.dataManager.getFilteredData()).length,
+            document.getElementById("project-count")
+        )
 
         let urlProject = new URLSearchParams(window.location.search).get('project')
         if(urlProject){
@@ -356,7 +309,7 @@ const project_page = new ProjectPage()
 const populate_aggregate_statistics = async () => {
     const data = await project_page.dataManager.getData()
     document.getElementById("ospool-projects").textContent = Object.keys(data).length
-    document.getElementById("ospool-jobs").textContent = Object.values(data).reduce((p, v) => p + v.jobs, 0).toLocaleString()
+    document.getElementById("ospool-jobs").textContent = Object.values(data).reduce((p, v) => p + v.numJobs, 0).toLocaleString()
     document.getElementById("ospool-institutions").textContent = new Set(Object.values(data).map(v => v.InstitutionID)).size
     document.getElementById("ospool-fields-of-science").textContent = new Set(Object.values(data).map(v => v.FieldOfScience)).size
     document.getElementById("ospool-aggregate-text").hidden = false
