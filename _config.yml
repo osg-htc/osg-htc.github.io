@@ -55,8 +55,11 @@ collections:
   about:
     permalink: /:collection/:path/
     output: true
-  events:
+  events_legacy:
     permalink: /events/:path/
+    output: true
+  events:
+    permalink: /events/:year/:month/:day/:title/
     output: true
   news:
     permalink: /news/:year/:month/:day/:title.html
