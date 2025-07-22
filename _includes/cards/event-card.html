@@ -3,21 +3,21 @@
 {% endif %}
 
 <div class="card hover-shadow border-0 h-100">
-    {% if event.card_image or include.card_image %}
+    {% if event.image %}
         <a class="d-block text-decoration-none" href="{{ event.url | relative_url }}">
-            <img height="{{ include.height | default: '200' }}" src="{{ include.card_image | default: event.card_image | relative_url }}" class="card-img-top event-card-img-top" alt="News">
+            <img src="{{ event.image.path | relative_url }}" alt="{{ event.image.alt }}" class="card-img-top event-card-img-top" height="{{ include.height | default: '200' }}">
         </a>
     {% endif %}
     <div class="card-body d-flex flex-column">
         <a class="d-block text-decoration-none" href="{{ event.url | relative_url }}">
-            <h3 class="text-decoration-none">{{ event.title }}</h3>
+            <h3 class="text-decoration-none">{{ event.short_title }}</h3>
         </a>
         <div>
             {% if event.start_date != event.end_date %}
-            {% assign date = event.start_date | date: "%B %e" %}
-            {% assign date = event.end_date | date: "-%e, %Y" | prepend: date %}
+                {% assign date = event.start_date | date: "%B %e" %}
+                {% assign date = event.end_date | date: "-%e, %Y" | prepend: date %}
             {% else %}
-            {% assign date = event.start_date | date: "%B %e, %Y" %}
+                {% assign date = event.start_date | date: "%B %e, %Y" %}
             {% endif %}
             <span class="text-muted text-decoration-none">{{ date }}</span>
         </div>

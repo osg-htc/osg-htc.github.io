@@ -4,6 +4,7 @@ theme: jekyll-theme-minimal
 title: OSG
 description: A national, distributed computing partnership for data-intensive research
 google_analytics: UA-69012-28
+future: true
 
 # Jekyll does not build hidden directories by default.
 include:
@@ -35,9 +36,13 @@ defaults:
     values:
       layout: posts
   - scope:
-      path: "_events"
+      type: events_legacy
     values:
       layout: events
+  - scope:
+      type: events
+    values:
+      layout: events_modern
   - scope:
       type: "organization"
     values:

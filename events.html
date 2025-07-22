@@ -9,25 +9,25 @@ layout: padded-default
 </div>
 <div class="bg-light">
     <div class="container-xxl">
-        {% include get/future_events.html %}
+        {% include get/future_events.liquid %}
         {% if future_events.size != 0 %}
         <div class="row my-4">
             {% for event in future_events %}
 
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 my-4">
-                {% include /cards/event-card.html news=event card_image=event.header_image height='150' %}
+                {% include /cards/event-card.html news=event height='150' %}
             </div>
 
             {% endfor %}
         </div>
         {% endif %}
-        {% include get/past_events.html %}
+        {% include get/past_events.liquid %}
         <h3 class="text-muted pt-3">Past Events</h3>
         <div class="row">
             {% for event in past_events %}
 
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mb-4">
-                {% include /cards/event-card.html news=event card_image=event.header_image height='150' %}
+                {% include /cards/event-card.html news=event height='150' %}
             </div>
 
             {% endfor %}
