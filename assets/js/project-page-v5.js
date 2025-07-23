@@ -314,4 +314,5 @@ const populate_aggregate_statistics = async () => {
     document.getElementById("ospool-fields-of-science").textContent = new Set(Object.values(data).map(v => v.FieldOfScience)).size
     document.getElementById("ospool-aggregate-text").hidden = false
 }
+
 populate_aggregate_statistics()

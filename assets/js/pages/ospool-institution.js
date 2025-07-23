@@ -2,54 +2,68 @@
     layout: blank
 ---
 
-import {PluginPosition, BaseComponent, h} from "https://unpkg.com/gridjs@5.1.0/dist/gridjs.module.js"
-import {GraccDisplay, locale_int_string_sort, string_sort, createNode} from "./util.js";
-import Search from "../Search.mjs";
+import {getInstitutions, getInstitutionsOverview, getProjects} from "../adstash.mjs";
+import {Grid, PluginPosition, BaseComponent, h} from "https://unpkg.com/gridjs@5.1.0/dist/gridjs.module.js"
+import {GraccDisplay, locale_int_string_sort, string_sort, createNode} from "../util.js";
+import InstitutionDisplay from "../components/InstitutionDisplay.mjs";
 
-/**
- * A node wrapping the project information break down
- */
-class FacilityDisplay {
-    constructor(nodeId, dataFunction, grafanaUrl) {
-        this.parentNode = document.getElementById(nodeId)
-        this.display_modal = new bootstrap.Modal(this.parentNode, {
-            keyboard: true
-        })
+class DataManager {
+    constructor(filters, consumerToggles, errorNode) {
+        this.filters = filters ? filters : {}
+        this.consumerToggles = consumerToggles ? consumerToggles : []
+        this.errorNode = errorNode ? errorNode : document.getElementById("error")
+        this.error = undefined
     }
 
-    updateTextValue(className, value) {
-        this.parentNode.getElementsByClassName(className)[0].textContent = value
+    toggleConsumers = () => {
+        this.consumerToggles.forEach(f => f())
     }
 
-    update({Name}) {
-        this.name = Name
-        this.updateTextValue("facility-Name", Name)
-        this.graphDisplays.forEach(gd => {
-            gd.updateSearchParams({"var-facility": Name})
-        })
-        this.setUrl()
-        this.display_modal.show()
+    addFilter = (name, filter) => {
+        this.filters[name] = filter
+        this.toggleConsumers()
     }
 
-    setUrl() {
-        const url = new URL(window.location.href);
-        url.searchParams.set("institution", this.name)
-        history.pushState({}, '', url)
+    removeFilter = (name) => {
+        delete this.filters[name]
+        this.toggleConsumers()
     }
 
-    onClose(){
-        this.unsetUrl()
-        this.graphDisplays.forEach(gd => {
-            gd.src = ""
-        })
+    getData = async () => {
+        if(!this.data) {
+            this.data = await this._getData()
+        }
+        console.log(this.data)
+
+        return this.data
     }
 
-    unsetUrl() {
-        const url = new URL(window.location.href);
-        url.searchParams.delete('institution')
-        history.pushState({}, '', url)
+    set error(error){
+        if(error){
+            this.errorNode.textContent = error
+            this.errorNode.style.display = "block"
+        } else {
+            this.errorNode.style.display = "none"
+        }
+    }
+
+    _getData = async () => {
+        return await getInstitutions()
+    }
+
+    /**
+     * Filters the original data and returns the remaining data
+     * @returns {Promise<*>}
+     */
+    getFilteredData = async () => {
+        let filteredData = await this.getData()
+        for(const filter of Object.values(this.filters)) {
+            filteredData = filter(filteredData)
+        }
+        return filteredData
     }
 }
+
 
 class Table {
     constructor(wrapper, data_function, updateDisplay, tableOptions = {}, summaryData = {}) {
@@ -60,21 +74,21 @@ class Table {
         this.tableOptions = tableOptions
         this.columns = [
             {
-                id: 'Name',
+                id: 'institutionName',
                 name: 'Name',
                 sort: { compare: string_sort },
                 attributes: {
                     className: "gridjs-th gridjs-td pointer gridjs-th-sort text-start"
                 }
             }, {
-                id: 'jobsRan',
+                id: 'numJobs',
                 name: 'Jobs Ran',
-                data: (row) => Math.floor(row.jobsRan).toLocaleString(),
+                data: (row) => Math.floor(row.numJobs).toLocaleString(),
                 sort: { compare: locale_int_string_sort }
             }, {
-                id: 'numFieldsOfScience',
+                id: 'numBroadFieldOfScience',
                 name: 'Impacted Fields of Science',
-                data: (row) => row.numFieldsOfScience.toLocaleString(),
+                data: (row) => row.numBroadFieldOfScience.toLocaleString(),
                 sort: { compare: locale_int_string_sort }
             }, {
                 id: 'numProjects',
@@ -94,7 +108,7 @@ class Table {
                 td: "pointer",
                 paginationButton: "mt-2 mt-sm-0"
             },
-            data: async () => Object.values(await this.data_function()).sort((a,b) => b['jobsRan'] - a['jobsRan']),
+            data: async () => Object.values(await this.data_function()).sort((a,b) => b['numJobs'] - a['numJobs']),
             width: "100%",
             search: {
                 enabled: true
@@ -121,138 +135,32 @@ class Table {
     row_click = async (PointerEvent, e) => {
         let data = await this.data_function()
         let row_name = e["cells"][0].data
-        let facility = data[row_name]
-        this.updateDisplay(facility)
+        this.updateDisplay(data[row_name])
     }
 }
 
 class FacilityPage {
-    constructor(dataFunction, grafanaUrl, tableOptions) {
+    constructor(tableOptions) {
         this.mode = undefined
-        this.dataFunction = dataFunction
-        this.data = undefined
-        this.filtered_data = undefined
+        this.dataFunction = new DataManager().getFilteredData
         this.wrapper = document.getElementById("wrapper")
-        this.facilityDisplay = new FacilityDisplay("display", this.dataFunction, grafanaUrl)
-        this.table = new Table(this.wrapper, this.dataFunction, this.facilityDisplay.update.bind(this.facilityDisplay), tableOptions)
+        this.institutionDisplay = new InstitutionDisplay(document.getElementById("display"))
+        this.table = new Table(this.wrapper, this.dataFunction, this.institutionDisplay.update.bind(this.institutionDisplay), tableOptions)
         this.initialize()
     }
     initialize = async () => {
         await this.usePopulatedFacility()
     }
-    update_data = async () => {
-        let new_filtered_data = await this.search.filter_data()
-
-        if (JSON.stringify(this.filtered_data) != JSON.stringify(new_filtered_data)) {
-            this.filtered_data = new_filtered_data
-            this.table.update(Object.values(this.filtered_data))
-        }
-    }
     async usePopulatedFacility() {
         let searchParams = new URLSearchParams(window.location.search)
         let urlFacility = searchParams.has("institution") ? searchParams.get("institution") : searchParams.get("facility")
         if(urlFacility){
-            this.facilityDisplay.update((await this.dataFunction())[urlFacility])
+            await this.institutionDisplay.update((await this.dataFunction())[urlFacility])
         }
     }
 }
 
-async function getFacilityEsData(ospoolOnly = false){
-
-    let es = new ElasticSearchQuery(SUMMARY_INDEX, ENDPOINT)
-
-    // Query ES and ask for Sites that have provided resources in the last year
-    let response = await es.search({
-        "size": 0,
-        "query": {
-            "bool": {
-                "filter": [
-                    {"term": {"ResourceType": "Payload"}},
-                    {"range": {"EndTime": {"lte": DATE_RANGE['now'], "gte": DATE_RANGE['oneYearAgo']}}},
-                    ...(ospoolOnly ? [OSPOOL_FILTER] : []) // Cryptic but much cleaner
-                ],
-                "must_not": [
-                    { "term" : {"ProjectName" : "GLOW"} },
-                ]
-            }
-        },
-        "aggs": {
-            "fieldsOfScience": { "cardinality": { "field": "OIM_FieldOfScience" }, },
-            "jobsRan": { "sum": { "field": "Count" } },
-            "projects": { "cardinality": { "field": "ProjectName" } },
-            "facilities": {
-                "terms": {
-                    "field": "OIM_Facility", "size": 99999999
-                },
-                "aggs": {
-                    "facilityCpuProvided": {"sum": {"field": "CoreHours"}},
-                    "facilityJobsRan": {"sum": {"field": "Count"}},
-                    "facilityGpuProvided": {"sum": {"field": "GPUHours"}},
-                    "countProjectsImpacted": {"cardinality": {"field": "ProjectName"}},
-                    "countFieldsOfScienceImpacted": {"cardinality": {"field": "OIM_FieldOfScience"}},
-                    "countOrganizationImpacted": {"cardinality": {"field": "OIM_Organization"}},
-                    "gpu_bucket_filter": {
-                        "bucket_selector": {
-                            "buckets_path": {"totalGPU": "facilityGpuProvided", "totalCPU": "facilityCpuProvided"},
-                            "script": "params.totalGPU > 0 || params.totalCPU > 0"
-                        }
-                    }
-                }
-            }
-        }
-    })
-
-    // Decompose this data into information we want, if they provided GPU or CPU
-    let facilityBuckets = response.aggregations.facilities.buckets
-    let facilityData = facilityBuckets.reduce((p, v) => {
-        p[v['key']] = {
-            name: v['key'],
-            jobsRan: v['facilityJobsRan']['value'],
-            cpuProvided: v['facilityCpuProvided']['value'],
-            gpuProvided: v['facilityGpuProvided']['value'],
-            numProjects: v['countProjectsImpacted']['value'],
-            numFieldsOfScience: v['countFieldsOfScienceImpacted']['value'],
-            numOrganizations: v['countOrganizationImpacted']['value'],
-        }
-        return p
-    }, {})
-
-    return facilityData
-}
-
-async function getTopologyData() {
-    let response;
-
-    try {
-        response = await fetch("https://topology.opensciencegrid.org/miscfacility/json")
-    } catch (error) {
-        try {
-            response = await fetch("{{ '/assets/data/facilities.json' | relative_url }}")
-        } catch (error) {
-            console.error("Topology and Back Up data fetch failed: " + error)
-        }
-    }
-    return await response.json()
-}
-
-async function getData() {
-    if (!getData.data) {
-        let elasticSearchData = await getFacilityEsData(true)
-        let topologyData = await getTopologyData()
-
-        // Combine the data sets on facility name
-        getData.data = Object.entries(topologyData).reduce((p, [k, v]) => {
-            if (k in elasticSearchData) {
-                p[k] = {...elasticSearchData[k], ...topologyData[k]}
-            }
-            return p
-        }, {})
-    }
-
-    return getData.data
-}
-
-const facility_page = new FacilityPage(getData, GRAFANA_PROJECT_BASE_URL)
+const facility_page = new FacilityPage()
 
 class FacilitySummaryPlugin extends BaseComponent {
 
@@ -260,15 +168,15 @@ class FacilitySummaryPlugin extends BaseComponent {
         super(...props);
 
         this.state = {
-            numFacilities: 0,
-            jobsRan: 0,
-            numFieldsOfScience: 0,
+            numInstitutions: 0,
+            numJobs: 0,
+            numBroadFieldOfScience: 0,
             numProjects: 0
         };
     }
 
     setTotal() {
-        getFacilitySummaryData(true).then(data => {
+        getInstitutionsOverview().then(data => {
             this.setState(data);
         });
     }
@@ -283,12 +191,12 @@ class FacilitySummaryPlugin extends BaseComponent {
 
 
         let facilitiesLeft = h("div", { className: "col-auto" }, "Summary Statistics:")
-        let facilitiesRight = h("div", { className: "col-auto" }, this.state['numFacilities'])
+        let facilitiesRight = h("div", { className: "col-auto" }, this.state['numInstitutions'])
         let facilitiesDiv = h("div", { className: "row justify-content-between" }, facilitiesLeft, facilitiesRight)
 
         let numFacilities = h('td', { className: tdClass }, facilitiesDiv)
-        let jobsRanTd = h('td', { textContent: this.state['jobsRan'], className: tdClass + "text-end"})
-        let numFieldsOfScienceTd = h('td', { textContent: this.state['numFieldsOfScience'], className: tdClass + "text-end"})
+        let jobsRanTd = h('td', { textContent: this.state['numJobs'].toLocaleString(), className: tdClass + "text-end"})
+        let numFieldsOfScienceTd = h('td', { textContent: this.state['numBroadFieldOfScience'], className: tdClass + "text-end"})
         let numProjectsTd = h('td', { textContent: this.state['numProjects'], className: tdClass + "text-end"})
 
         let row = h("tr", {}, numFacilities, jobsRanTd, numFieldsOfScienceTd, numProjectsTd)

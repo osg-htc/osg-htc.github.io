@@ -1,39 +1,13 @@
 import {PieChart} from "./pie-chart.js";
-import {getProjectOverview} from "../adstash.mjs";
+import {getInstitutionOverview, getProjectOverview} from "../adstash.mjs";
 import Count from "./Count.mjs";
 
-class ProjectDisplay{
+class InstitutionDisplay{
 	constructor(parentNode) {
 		this.parentNode = parentNode
 		this.display_modal = new bootstrap.Modal(parentNode, {
 			keyboard: true
 		})
-	}
-
-	setUrl(Name) {
-		const url = new URL(window.location.href);
-		url.searchParams.set("project", Name)
-		history.pushState({}, '', url)
-	}
-
-	updateTextValue(className, value){
-		Array.from(this.parentNode.getElementsByClassName(className)).forEach(e => {
-			e.textContent = value
-		})
-	}
-
-	async update({Name, PIName, FieldOfScience, Organization, Description}) {
-		this.updateTextValue("project-Name", Name)
-		this.updateTextValue("project-PIName", PIName)
-		this.updateTextValue("project-FieldOfScience", FieldOfScience)
-		this.updateTextValue("project-Organization", Organization)
-		this.updateTextValue("project-Description", Description)
-		this.setUrl(Name)
-		this.clearGraphSlots()
-		this.parentNode.addEventListener("shown.bs.modal", () => {
-			this.updateGraphs(Name)
-		}, {once : true})
-		this.display_modal.show()
 	}
 
 	/**
@@ -45,42 +19,105 @@ class ProjectDisplay{
 				n.removeChild(n.firstChild)
 			}
 			let placeholder = document.createElement("span")
-			placeholder.className = "placeholder-glow w-100"
+			placeholder.className = "placeholder  bg-light w-100"
 			n.appendChild(placeholder)
 		})
 	}
 
-	async updateGraphs(Name){
-
-		const data = await this.getData(Name)
-		this.updateInstitutionPieChart(data)
-		Count("project-institution-count", Object.keys(data).length, 300)
-		Count("project-job-count", Math.round(Object.values(data).reduce((p, v) => p + v.numJobs, 0)), 100)
-		Count("project-cpu-count", Math.round(Object.values(data).reduce((p, v) => p + v.cpuHours, 0)), 100)
-		Count("project-gpu-count", Math.round(Object.values(data).reduce((p, v) => p + v.gpuHours, 0)), 100)
+	setUrl(Name) {
+		const url = new URL(window.location.href);
+		url.searchParams.set("institution", Name)
+		history.pushState({}, '', url)
 	}
 
-	async updateInstitutionPieChart(data) {
-		new PieChart(
-				"project-institution-pie-chart",
-				async () => {
-					return Object.entries(data)
-							.filter(([k,v]) => v.numJobs > 0)
-							.sort((a, b) => b[1]['numJobs'] - a[1]['numJobs'])
-							.reduce((p, [k,v]) => {
-								return {
-									labels: [...p.labels, k],
-									data: [...p.data, v.numJobs]
-								}
-							}, {labels: [], data: []})
-				},
-				"# of Jobs by Institution"
+	updateTextValue(className, value){
+		Array.from(this.parentNode.getElementsByClassName(className)).forEach(e => {
+			e.textContent = value
+		})
+	}
+
+	async update({institutionName}) {
+		this.updateTextValue("institution-Name", institutionName)
+		this.setUrl(institutionName)
+		this.clearGraphSlots()
+		this.parentNode.addEventListener("shown.bs.modal", () => {
+			this.updateWithData(institutionName)
+		}, {once : true})
+		this.display_modal.show()
+	}
+
+	async updateWithData(Name){
+		const data = await this.getData(Name)
+
+		console.log(data)
+
+		this.fillTable(
+				"supported-projects-table",
+				Object.values(data)
+						.reduce((acc, {projectName, numJobs}) => [...acc, [projectName, numJobs]], [])
+						.sort((a, b) => b[1] - a[1])
 		)
+		this.fillTable(
+				"supported-fos-table",
+				Object.entries(
+						Object.values(data)
+							.reduce((acc, {broadFieldOfScience, numJobs}) => {
+							acc[broadFieldOfScience] = acc[broadFieldOfScience] ? acc[broadFieldOfScience] + numJobs : numJobs;
+							return acc;
+						}, {})
+				)
+						.sort((a, b) => b[1] - a[1])
+						.filter(([k, v]) => k !== 'null')
+		)
+		this.fillTable(
+				"supported-project-institution-table",
+				Object.entries(
+						Object.values(data)
+								.reduce((acc, {projectInstitutionName, numJobs}) => {
+									acc[projectInstitutionName] = acc[projectInstitutionName] ? acc[projectInstitutionName] + numJobs : numJobs;
+									return acc;
+								}, {})
+				)
+						.sort((a, b) => b[1] - a[1])
+						.filter(([k, v]) => k !== 'null')
+		)
+		Count("institution-job-count", Math.round(Object.values(data).reduce((p, v) => p + v.numJobs, 0)), 100)
+		Count("institution-cpu-count", Math.round(Object.values(data).reduce((p, v) => p + v.cpuHours, 0)), 100)
+		Count("institution-gpu-count", Math.round(Object.values(data).reduce((p, v) => p + v.gpuHours, 0)), 100)
 	}
 
 	async getData(Name){
-		return await getProjectOverview(Name)
+		return await getInstitutionOverview(Name)
+	}
+
+	fillTable(id, data) {
+		const table = document.getElementById(id);
+		if (!table) {
+			console.error(`Table with id ${id} not found.`);
+			return;
+		}
+
+		// Get the table body from the table
+		const tableBody = table.querySelector("tbody");
+
+		// Clear existing rows in the table body
+		while (tableBody.firstChild) {
+			tableBody.removeChild(tableBody.firstChild);
+		}
+
+		// Add the data as rows to the table body
+		data.forEach(([key, value]) => {
+			const row = document.createElement("tr");
+			const keyCell = document.createElement("td");
+			keyCell.textContent = key;
+			row.appendChild(keyCell);
+			const valueCell = document.createElement("td");
+			valueCell.className = "text-end";
+			valueCell.textContent = value.toLocaleString();
+			row.appendChild(valueCell);
+			tableBody.appendChild(row);
+		})
 	}
 }
 
-export default ProjectDisplay;
+export default InstitutionDisplay;
