@@ -54,6 +54,7 @@ class ProjectDisplay{
 
 		const data = await this.getData(Name)
 		this.updateInstitutionPieChart(data)
+		Count("project-institution-count", Object.keys(data).length, 300)
 		Count("project-job-count", Math.round(Object.values(data).reduce((p, v) => p + v.numJobs, 0)), 100)
 		Count("project-cpu-count", Math.round(Object.values(data).reduce((p, v) => p + v.cpuHours, 0)), 100)
 		Count("project-gpu-count", Math.round(Object.values(data).reduce((p, v) => p + v.gpuHours, 0)), 100)
