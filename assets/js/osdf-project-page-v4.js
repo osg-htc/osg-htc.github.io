@@ -2,7 +2,7 @@
     layout: blank
 ---
 
-import ElasticSearchQuery, {ADSTASH_ENDPOINT, DATE_RANGE, ADSTASH_SUMMARY_INDEX} from "./elasticsearch-v1.js";
+import {getProjects} from "./adstash.mjs"
 import {
     GraccDisplay,
     locale_int_string_sort,
@@ -14,6 +14,7 @@ import {
 } from "./util.js";
 import Color from "https://colorjs.io/dist/color.js";
 import {PieChart} from "./components/pie-chart.js";
+import Search from "./Search.mjs";
 
 const orange = new Color("#f4b627")
 const white = new Color("#ffffff")
@@ -21,184 +22,6 @@ const whiteorange = orange.range("#ffffff", {
     space: "lch", // interpolation space
     outputSpace: "srgb"
 })
-
-
-function makeDelay(ms) {
-    let timer = 0;
-    return function(callback){
-        clearTimeout (timer);
-        timer = setTimeout(callback, ms);
-    };
-}
-
-const EPSCOR_STATES = [
-    "AL", // Alabama
-    "AK", // Alaska
-    "AR", // Arkansas
-    "DE", // Delaware
-    "GU", // Guam
-    "HI", // Hawaii
-    "ID", // Idaho
-    "IA", // Iowa
-    "KS", // Kansas
-    "KY", // Kentucky
-    "LA", // Louisiana
-    "ME", // Maine
-    "MS", // Mississippi
-    "MT", // Montana
-    "NE", // Nebraska
-    "NV", // Nevada
-    "NH", // New Hampshire
-    "NM", // New Mexico
-    "ND", // North Dakota
-    "OK", // Oklahoma
-    "PR", // Puerto Rico
-    "RI", // Rhode Island
-    "SC", // South Carolina
-    "SD", // South Dakota
-    "VI", // U.S. Virgin Islands
-    "VT", // Vermont
-    "WV", // West Virginia
-    "WY"  // Wyoming
-];
-
-const COMMON_FIELDS = [
-		"MajorFieldOfScience",
-    "BroadFieldOfScience",
-    "DetailedFieldOfScience",
-    "ProjectInstitution.name",
-    "ProjectInstitution.ipeds_metadata.website_address",
-    "ProjectInstitution.ipeds_metadata.historically_black_college_or_university",
-    "ProjectInstitution.ipeds_metadata.tribal_college_or_university",
-    "ProjectInstitution.ipeds_metadata.state"
-]
-
-/**
- * A suite of Boolean functions deciding the visual status of a certain grafana graph
- *
- * true results in the graph being shown, false the opposite
- */
-const elasticSearch = new ElasticSearchQuery(ADSTASH_SUMMARY_INDEX, ADSTASH_ENDPOINT)
-
-class UsageToggles {
-
-    static async getUsage() {
-        if (this.usage) {
-            return this.usage
-        }
-
-        let usageQueryResult = await elasticSearch.search({
-            size: 0,
-            query: {
-                range: {
-                    Date: {
-                        lte: DATE_RANGE['now'],
-                        gte: DATE_RANGE['oneYearAgo']
-                    }
-                }
-            },
-            "aggs": {
-                "projects": {
-                    "terms": {
-                        "field": "ProjectName.keyword",
-                        "size": 10000
-                    },
-                    "aggs": {
-                        "NumJobs": {
-                            "sum": {
-                                "field": "NumJobs"
-                            }
-                        },
-                        "FileTransferCount": {
-                            "sum": {
-                                "field": "FileTransferCount"
-                            }
-                        },
-                        "ByteTransferCount": {
-                            "sum": {
-                                "field": "ByteTransferCount"
-                            }
-                        },
-                        "CpuHours": {
-                            "sum": {
-                                "field": "CpuHours"
-                            }
-                        },
-                        "GpuHours": {
-                            "sum": {
-                                "field": "GpuHours"
-                            }
-                        },
-                        "OSDFFileTransferCount": {
-                            "sum": {
-                                "field": "OSDFFileTransferCount"
-                            }
-                        },
-                        "OSDFByteTransferCount": {
-                            "sum": {
-                                "field": "OSDFByteTransferCount"
-                            }
-                        },
-                        "CommonFields": {
-                            "top_hits": {
-                                "_source": {
-                                    "includes": COMMON_FIELDS
-                                },
-                                "size": 1
-                            }
-                        }
-                    }
-                }
-            }
-        })
-
-        let projectBuckets = usageQueryResult.aggregations.projects.buckets
-
-        try {
-            this.usage = projectBuckets.reduce((p, v) => {
-
-                // If the project is not mapped skip it
-                if(v['CommonFields']['hits']['hits'][0]['_source']['ProjectInstitution']?.['name'] === undefined){
-                    return p
-                }
-
-                p[v['key']] = {
-                    projectName: v['key'],
-                    numJobs: v['NumJobs']['value'],
-                    cpuHours: v['CpuHours']['value'],
-                    gpuHours: v['GpuHours']['value'],
-                    fileTransferCount: v['FileTransferCount']['value'],
-                    byteTransferCount: v['ByteTransferCount']['value'],
-                    osdfFileTransferCount: v['OSDFFileTransferCount']['value'],
-                    osdfByteTransferCount: v['OSDFByteTransferCount']['value'],
-                    broadFieldOfScience: v['CommonFields']['hits']['hits'][0]['_source']['BroadFieldOfScience'],
-                    majorFieldOfScience: v['CommonFields']['hits']['hits'][0]['_source']['MajorFieldOfScience'],
-                    detailedFieldOfScience: v['CommonFields']['hits']['hits'][0]['_source']['DetailedFieldOfScience'],
-                    projectInstitutionName: v['CommonFields']['hits']['hits'][0]['_source']['ProjectInstitution']?.['name'],
-                    projectInstitutionIpedsWebsiteAddress: v['CommonFields']['hits']['hits'][0]['_source']?.['ProjectInstitution']?.['ipeds_metadata']?.['website_address'],
-                    projectInstitutionIpedsHistoricallyBlackCollegeOrUniversity: v['CommonFields']['hits']['hits'][0]['_source']?.['ProjectInstitution']?.['ipeds_metadata']?.['historically_black_college_or_university'],
-                    projectInstitutionIpedsTribalCollegeOrUniversity: v['CommonFields']['hits']['hits'][0]['_source']?.['ProjectInstitution']?.['ipeds_metadata']?.['tribal_college_or_university'],
-                    projectInstitutionIpedsState: v['CommonFields']['hits']['hits'][0]['_source']?.['ProjectInstitution']?.['ipeds_metadata']?.['state'],
-                    projectEpscorState: EPSCOR_STATES.includes(v['CommonFields']['hits']['hits'][0]['_source']?.['ProjectInstitution']?.['ipeds_metadata']?.['state'])
-                }
-                return p
-            }, {})
-        } catch(e){
-            console.log(e)
-        }
-
-        console.log(this.usage)
-
-        return this.usage
-    }
-}
-
-const GRAFANA_PROJECT_BASE_URL = "https://gracc.opensciencegrid.org/d-solo/tFUN4y44z/projects"
-const GRAFANA_BASE = {
-    orgId: 1,
-    from: DATE_RANGE['oneYearAgo'],
-    to: DATE_RANGE['now']
-}
 
 
 class ProjectCount {
@@ -212,42 +35,6 @@ class ProjectCount {
         let data = await this.dataGetter()
         this.node.textContent = Object.keys(data).length
         console.log(Object.keys(data).length)
-    }
-}
-
-class Search {
-    constructor(data, listener) {
-        this.node = document.getElementById("project-search")
-        this.listener = listener
-        this.timer = undefined
-        this.node.addEventListener("input", this.search)
-        this.lunr_idx = lunr(function () {
-            this.ref('projectName')
-            this.field('broadFieldOfScience')
-            this.field('projectName')
-            this.field('projectInstitutionName')
-
-            data.forEach(function (doc) {
-                this.add(doc)
-            }, this)
-        })
-    }
-    search = () => {
-        clearTimeout(this.timer)
-        this.timer = setTimeout(this.listener, 250)
-    }
-    filter = (data) => {
-        console.log(data)
-        if(this.node.value == ""){
-            return data
-        } else {
-            console.log(this.node.value)
-            let table_keys = this.lunr_idx.search(`*${this.node.value}* ${this.node.value} ${this.node.value}~2`).map(r => r.ref)
-            return table_keys.reduce((pv, k) => {
-                pv[k] = data[k]
-                return pv
-            }, {})
-        }
     }
 }
 
@@ -386,7 +173,7 @@ class DataManager {
 
         let usageJson;
         try {
-            usageJson = await UsageToggles.getUsage()
+            usageJson = await getProjects()
         } catch(e) {
             this.error = "Error fetching usage data, learn more on the status page: status.osg-htc.org"
         }

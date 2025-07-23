@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "3.4.2"
+ruby "3.4.4"
 
 gem "jekyll-theme-minimal"
 gem "jekyll"

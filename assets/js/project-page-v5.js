@@ -2,269 +2,12 @@
     layout: blank
 ---
 
-import ElasticSearchQuery, {ENDPOINT, DATE_RANGE, SUMMARY_INDEX, OSPOOL_FILTER} from "./elasticsearch-v1.js";
-import {GraccDisplay, locale_int_string_sort, string_sort, hideNode} from "./util.js";
+import {getProjects} from "./adstash.mjs"
+import {locale_int_string_sort, string_sort} from "./util.js";
 import {PieChart} from "./components/pie-chart.js";
-
-
-function makeDelay(ms) {
-    let timer = 0;
-    return function(callback){
-        clearTimeout (timer);
-        timer = setTimeout(callback, ms);
-    };
-}
-
-
-
-/**
- * A suite of Boolean functions deciding the visual status of a certain grafana graph
- *
- * true results in the graph being shown, false the opposite
- */
-const elasticSearch = new ElasticSearchQuery(SUMMARY_INDEX, ENDPOINT)
-
-class UsageToggles {
-
-    static async getUsage() {
-        if (this.usage) {
-            return this.usage
-        }
-
-        let usageQueryResult = await elasticSearch.search({
-            size: 0,
-            query: {
-                bool: {
-                    filter: [
-                        {
-                            term: {ResourceType: "Payload"}
-                        },
-                        {
-                            range: {
-                                EndTime: {
-                                    lte: DATE_RANGE['now'],
-                                    gte: DATE_RANGE['oneYearAgo']
-                                }
-                            }
-                        },
-                        OSPOOL_FILTER
-                    ]
-                },
-            },
-            aggs: {
-                projects: {
-                    "terms": {
-                        field: "ProjectName",
-                        size: 99999999
-                    },
-                    aggs: {
-                        projectCpuUse: {
-                            sum: {
-                                field: "CoreHours"
-                            }
-                        },
-                        projectGpuUse: {
-                            sum: {
-                                field: "GPUHours"
-                            }
-                        },
-                        projectJobsRan: {
-                            sum: {
-                                field: "Njobs"
-                            }
-                        }
-                    }
-                }
-            }
-        })
-
-        let projectBuckets = usageQueryResult.aggregations.projects.buckets
-
-        this.usage = projectBuckets.reduce((p, v) => {
-            p[v['key']] = {
-                cpuHours: v['projectCpuUse']['value'],
-                cpu: v['projectCpuUse']['value'] != 0,
-                gpuHours: v['projectGpuUse']['value'],
-                gpu: v['projectGpuUse']['value'] != 0,
-                jobs: v['projectJobsRan']['value']
-            }
-            return p
-        }, {})
-
-        return this.usage
-    }
-
-    static async usedCpu(projectName) {
-        let usage = await UsageToggles.getUsage()
-        if (projectName in usage) {
-            return usage[projectName]["cpu"]
-        }
-        return false
-    }
-
-    static async usedGpu(projectName) {
-        let usage = await UsageToggles.getUsage()
-        if (projectName in usage) {
-            return usage[projectName]["gpu"]
-        }
-        return false
-    }
-}
-
-const GRAFANA_PROJECT_BASE_URL = "https://gracc.opensciencegrid.org/d-solo/tFUN4y44z/projects"
-const GRAFANA_BASE = {
-    orgId: 1,
-    from: DATE_RANGE['oneYearAgo'],
-    to: DATE_RANGE['now']
-}
-
-
-
-/**
- * A node wrapping the project information break down
- */
-class ProjectDisplay{
-    constructor(parentNode) {
-        this.parentNode = parentNode
-        this.grafanaGraphInfo = [
-            {
-                className: "facilities-int",
-                panelId: 12,
-                showDisplay: UsageToggles.usedCpu,
-                height: "400px",
-                ...GRAFANA_BASE
-            },{
-                className: "facilities-bar-graph",
-                panelId: 10,
-                showDisplay: UsageToggles.usedCpu,
-                height: "400px",
-                ...GRAFANA_BASE
-            },{
-                className: "gpu-hours-int",
-                panelId: 16,
-                showDisplay: UsageToggles.usedGpu,
-                ...GRAFANA_BASE
-            },{
-                className: "cpu-core-hours-int",
-                panelId: 4,
-                showDisplay: UsageToggles.usedCpu,
-                ...GRAFANA_BASE
-            },{
-                className: "jobs-ran-int",
-                panelId: 22,
-                showDisplay: UsageToggles.usedCpu,
-                ...GRAFANA_BASE
-            }
-        ]
-        this.display_modal = new bootstrap.Modal(parentNode, {
-            keyboard: true
-        })
-    }
-
-    get graphDisplays(){
-        // Create these when they are needed and not before
-        if(!this._graphDisplays){
-            this._graphDisplays = this.grafanaGraphInfo.map(graph => {
-                let wrapper = document.getElementsByClassName(graph['className'])[0]
-                let graphDisplay = new GraccDisplay(
-                    GRAFANA_PROJECT_BASE_URL,
-                    graph['showDisplay'],
-                    {
-                        to: graph['to'],
-                        from: graph['from'],
-                        orgId: graph['orgId'],
-                        panelId: graph['panelId'],
-                        "var-Filter": "ResourceType|=|Payload"
-                    },
-                    "var-Project",
-                    graph
-                )
-                wrapper.appendChild(graphDisplay.node)
-                return graphDisplay
-            })
-        }
-        return this._graphDisplays
-    }
-
-    setUrl() {
-        const url = new URL(window.location.href);
-        url.searchParams.set("project", this.name)
-        history.pushState({}, '', url)
-    }
-
-    updateTextValue(className, value){
-        this.parentNode.getElementsByClassName(className)[0].textContent = value
-    }
-
-    update({Name, PIName, FieldOfScience, Organization, Description}) {
-        this.name = Name;
-        this.piName = PIName;
-        this.fieldOfScience = FieldOfScience;
-        this.organization = Organization;
-        this.description = Description;
-
-        this.updateTextValue("project-Name", Name)
-        this.updateTextValue("project-PIName", PIName)
-        this.updateTextValue("project-FieldOfScience", FieldOfScience)
-        this.updateTextValue("project-Organization", Organization)
-        this.updateTextValue("project-Description", Description)
-        this.graphDisplays.forEach(gd => {
-            gd.updateSearchParams({"var-Project": Name})
-        })
-        this.setUrl()
-        this.display_modal.show()
-    }
-}
-
-class ProjectCount {
-    constructor(dataGetter, node) {
-        this.node = node
-        this.dataGetter = dataGetter
-        this.update()
-    }
-
-    update = async () => {
-        let data = await this.dataGetter()
-        this.node.textContent = Object.keys(data).length
-        console.log(Object.keys(data).length)
-    }
-}
-
-class Search {
-    constructor(data, listener) {
-        this.node = document.getElementById("project-search")
-        this.listener = listener
-        this.timer = undefined
-        this.node.addEventListener("input", this.search)
-        this.lunr_idx = lunr(function () {
-            this.ref('Name')
-            this.field('FieldOfScience')
-            this.field('Name')
-            this.field('Organization')
-            this.field('PIName')
-
-            data.forEach(function (doc) {
-                this.add(doc)
-            }, this)
-        })
-    }
-    search = () => {
-        clearTimeout(this.timer)
-        this.timer = setTimeout(this.listener, 250)
-    }
-    filter = (data) => {
-        if(this.node.value == ""){
-            return data
-        } else {
-            console.log(this.node.value)
-            let table_keys = this.lunr_idx.search(`*${this.node.value}* ${this.node.value} ${this.node.value}~2`).map(r => r.ref)
-            return table_keys.reduce((pv, k) => {
-                pv[k] = data[k]
-                return pv
-            }, {})
-        }
-    }
-}
+import ProjectDisplay from "./components/ProjectDisplay.mjs";
+import UpdateTextField from "./components/UpdateTextField.mjs";
+import Search from "./Search.mjs"
 
 class Table {
     constructor(wrapper, data_function, updateProjectDisplay){
@@ -274,13 +17,13 @@ class Table {
         this.updateProjectDisplay = updateProjectDisplay
         this.columns = [
             {
-                id: 'jobs',
+                id: 'numJobs',
                 name: 'Jobs Ran',
-                data: (row) => Math.floor(row.jobs).toLocaleString(),
+                data: (row) => Math.floor(row.numJobs).toLocaleString(),
                 sort: { compare: locale_int_string_sort }
             },
             {
-                id: 'Name',
+                id: 'projectName',
                 name: 'Name',
                 sort: { compare: string_sort },
                 attributes: {
@@ -337,7 +80,7 @@ class Table {
     update = async () => {
         let table = this
         this.grid.updateConfig({
-            data: Object.values(await table.data_function()).sort((a, b) => b.jobs - a.jobs)
+            data: Object.values(await table.data_function()).sort((a, b) => b.numJobs - a.numJobs)
         }).forceRender();
     }
     row_click = async (PointerEvent, e) => {
@@ -404,28 +147,20 @@ class DataManager {
 
     _getData = async () => {
 
-        let responseJson = await this._fetch("https://topology.opensciencegrid.org/miscproject/json")
-
-        let ospool_projects = new Set(await this._fetch("https://osg-htc.org/ospool-data/data/ospool_projects.json"))
-        let osgconnect_projects = new Set(await this._fetch("/assets/data/osgconnect_projects.json"))
-
-        let projects = new Set([...ospool_projects, ...osgconnect_projects])
-
+        let topologyData = await this._fetch("https://topology.opensciencegrid.org/miscproject/json")
         let usageJson;
         try {
-            usageJson = await UsageToggles.getUsage()
+            usageJson = await getProjects()
         } catch(e) {
             this.error = "Error fetching usage data, learn more on the OSG status page: status.osg-htc.org"
         }
 
-        this.data = Object.entries(responseJson).reduce((p, [k,v]) => {
-            if(k in usageJson && projects.has(k)){
+        this.data = Object.entries(topologyData).reduce((p, [k,v]) => {
+            if(k in usageJson){
                 p[k] = {...v, ...usageJson[k]}
             }
             return p
         }, {})
-
-        console.log(this.data)
 
         return this.data
     }
@@ -493,7 +228,10 @@ class ProjectPage{
         this.toggleActiveFilterButton = document.getElementById("toggle-active-filter")
         this.toggleActiveFilterButton.addEventListener("click", this.toggleActiveFilter)
 
-        this.projectCount = new ProjectCount(this.dataManager.getFilteredData, document.getElementById("project-count"))
+        this.projectCount = new UpdateTextField(
+            async () => Object.keys(await this.dataManager.getFilteredData()).length,
+            document.getElementById("project-count")
+        )
 
         let urlProject = new URLSearchParams(window.location.search).get('project')
         if(urlProject){
@@ -502,17 +240,17 @@ class ProjectPage{
 
         this.orgPieChart = new PieChart(
             "project-fos-cpu-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "FieldOfScience", "cpuHours"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "broadFieldOfScience", "cpuHours"),
             "# of CPU Hours by Field of Science"
         )
         this.FosPieChart = new PieChart(
             "project-fos-job-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "FieldOfScience", "jobs"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "broadFieldOfScience", "numJobs"),
             "# of Jobs by Field Of Science"
         )
         this.jobPieChart = new PieChart(
             "project-job-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "Name", "jobs"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "projectName", "numJobs"),
             "# of Jobs by Project",
             ({label, value}) => {
                 this.table.updateProjectDisplay(this.dataManager.data[label])
@@ -520,7 +258,7 @@ class ProjectPage{
         )
         this.cpuPieChart = new PieChart(
             "project-cpu-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "Name", "cpuHours"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "projectName", "cpuHours"),
             "# of CPU Hours by Project",
             ({label, value}) => {
                 this.table.updateProjectDisplay(this.dataManager.data[label])
@@ -528,7 +266,7 @@ class ProjectPage{
         )
         this.gpuPieChart = new PieChart(
             "project-gpu-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "Name", "gpuHours"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "projectName", "gpuHours"),
             "# of GPU Hours by Project",
             ({label, value}) => {
                 this.table.updateProjectDisplay(this.dataManager.data[label])
@@ -543,11 +281,9 @@ class ProjectPage{
         this.dataManager.consumerToggles.push(this.projectCount.update)
     }
 
-
-
     minimumJobsFilter = (data) => {
         return Object.entries(data).reduce((pv, [k,v]) => {
-            if(v['jobs'] >= 100){
+            if(v['numJobs'] >= 100){
                 pv[k] = v
             }
             return pv
@@ -573,9 +309,10 @@ const project_page = new ProjectPage()
 const populate_aggregate_statistics = async () => {
     const data = await project_page.dataManager.getData()
     document.getElementById("ospool-projects").textContent = Object.keys(data).length
-    document.getElementById("ospool-jobs").textContent = Object.values(data).reduce((p, v) => p + v.jobs, 0).toLocaleString()
+    document.getElementById("ospool-jobs").textContent = Object.values(data).reduce((p, v) => p + v.numJobs, 0).toLocaleString()
     document.getElementById("ospool-institutions").textContent = new Set(Object.values(data).map(v => v.InstitutionID)).size
     document.getElementById("ospool-fields-of-science").textContent = new Set(Object.values(data).map(v => v.FieldOfScience)).size
     document.getElementById("ospool-aggregate-text").hidden = false
 }
+
 populate_aggregate_statistics()

@@ -120,51 +120,6 @@ class FacilityDisplay {
     }
 }
 
-class Search {
-    constructor(data_function, listener) {
-        this.node = document.getElementById("search")
-        this.lunr_idx = undefined
-        this.data_function = data_function
-        this.listener = listener
-        this.timer = undefined
-        this.node.addEventListener("input", this.search)
-    }
-
-    search = () => {
-        clearTimeout(this.timer)
-        this.timer = setTimeout(this.listener, 250)
-    }
-    initialize = async () => {
-
-        if (this.lunr_idx) {
-            return
-        }
-
-        let data = Object.values(await this.data_function())
-
-        this.lunr_idx = lunr(function () {
-            this.ref('Name')
-
-            let fields = ['cpuProvided', 'gpuProvided', 'numProjects', 'numFieldsOfScience', 'numOrganizations', 'ID', 'IsCCStar', 'Name']
-            for(const field of fields) {
-                this.field(field)
-            }
-            data.forEach(function (doc) {
-                this.add(doc)
-            }, this)
-        })
-    }
-    filter_data = async () => {
-        let data = await this.data_function()
-        if (this.node.value == "") {
-            return Object.values(await this.data_function()).sort((a,b) => b['jobsRan'] - a['jobsRan'])
-        } else {
-            let table_keys = this.lunr_idx.search("*" + this.node.value + "*~2").map(r => r.ref)
-            return table_keys.map(key => data[key])
-        }
-    }
-}
-
 class Table {
     constructor(wrapper, data_function, updateDisplay, tableOptions = {}, summaryData = {}) {
         this.grid = undefined
@@ -253,14 +208,6 @@ class FacilityPage {
     }
     initialize = async () => {
         await this.usePopulatedFacility()
-    }
-    update_data = async () => {
-        let new_filtered_data = await this.search.filter_data()
-
-        if (JSON.stringify(this.filtered_data) != JSON.stringify(new_filtered_data)) {
-            this.filtered_data = new_filtered_data
-            this.table.update(Object.values(this.filtered_data))
-        }
     }
     async usePopulatedFacility() {
         let searchParams = new URLSearchParams(window.location.search)

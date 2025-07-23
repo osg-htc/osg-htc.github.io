@@ -71,7 +71,7 @@
 </div>
 <div class="container-xxl">
     <div class="alert alert-danger" style="display: none" id="error" role="alert"></div>
-    </div>
+</div>
 <div class="bg-dark text-light pb-3">
     <div class="container-xxl">
         <div class="row">
@@ -86,10 +86,8 @@
                         </svg>
                     </span>
                 </h4>
-                <div id="project-job-summary">
-                    <div class="spinner-grow text-light" style="width: 5rem; height: 5rem;" role="status">
-                      <span class="visually-hidden">Loading...</span>
-                    </div>
+                <div id="project-job-summary" class="placeholder-glow">
+                    <span class="placeholder bg-light w-100"></span>
                 </div>
             </div>
             <div class="col-md-4 col-12">
@@ -103,10 +101,8 @@
                         </svg>
                     </span>
                 </h4>
-                <div id="project-cpu-summary">
-                    <div class="spinner-grow text-light" style="width: 5rem; height: 5rem;" role="status">
-                      <span class="visually-hidden">Loading...</span>
-                    </div>
+                <div id="project-cpu-summary" class="placeholder-glow">
+                    <span class="placeholder bg-light w-100"></span>
                 </div>
             </div>
             <div class="col-md-4 col-12">
@@ -120,10 +116,8 @@
                         </svg>
                     </span>
                 </h4>
-                <div id="project-gpu-summary">
-                    <div class="spinner-grow text-light" style="width: 5rem; height: 5rem;" role="status">
-                      <span class="visually-hidden">Loading...</span>
-                    </div>
+                <div id="project-gpu-summary" class="placeholder-glow">
+                    <span class="placeholder bg-light w-100"></span>
                 </div>
             </div>
         </div>
@@ -138,10 +132,8 @@
                         </svg>
                     </span>
                 </h4>
-                <div id="project-fos-job-summary">
-                    <div class="spinner-grow text-light" style="width: 5rem; height: 5rem;" role="status">
-                      <span class="visually-hidden">Loading...</span>
-                    </div>
+                <div id="project-fos-job-summary" class="placeholder-glow">
+                    <span class="placeholder bg-light w-100"></span>
                 </div>
             </div>
             <div class="col-md-6  col-lg-4 col-12">
@@ -155,10 +147,8 @@
                         </svg>
                     </span>
                 </h4>
-                <div id="project-fos-cpu-summary">
-                    <div class="spinner-grow text-light" style="width: 5rem; height: 5rem;" role="status">
-                      <span class="visually-hidden">Loading...</span>
-                    </div>
+                <div id="project-fos-cpu-summary" class="placeholder-glow">
+                    <span class="placeholder bg-light w-100"></span>
                 </div>
             </div>
         </div>
@@ -197,11 +187,11 @@
 </div>
 
 
-<div class="modal fade" id="project-display" tabindex="-1" aria-labelledby="project-Name" aria-hidden="true">
+<div class="modal fade" id="project-display" tabindex="-1" aria-labelledby="project-Name" style="display: none;">
     <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
         <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="project-Name" class="mb-0 project-Name"></h2>
+            <div class="modal-header justify-content-between">
+                <h2 id="project-Name" class="mb-0 project-Name"><span class="placeholder bg-light w-100"></span></h2>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
             </div>
             <div class="modal-body">
@@ -209,34 +199,84 @@
                     <div class="col-12 col-md-6">
                         <div>
                             <h5 class="mb-1">PI</h5>
-                            <p class="project-PIName"></p>
+                            <p class="project-PIName placeholder-glow"><span class="placeholder w-100"></span></p>
                         </div>
                         <div>
-                            <h5 class="mb-1">Field of Research</h5><p class="project-FieldOfScience"></p>
+                            <h5 class="mb-1">Field of Research</h5><p class="project-FieldOfScience placeholder-glow"><span class="placeholder w-100"></span></p>
                         </div>
                         <div>
-                            <h5 class="mb-1">Organization </h5><p class="project-Organization"></p>
+                            <h5 class="mb-1">Organization </h5><p class="project-Organization placeholder-glow"><span class="placeholder w-100"></span></p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <h5 class="mb-1">Description</h5>
-                        <p class="project-Description"></p>
+                        <p class="project-Description  placeholder-glow"><span class="placeholder w-100"></span></p>
                     </div>
                 </div>
-                <h5>Where Jobs Have Run</h5>
-                <div class="row project-usage-row">
-                    <div class="col-12 col-md-8 facilities-bar-graph"></div>
-                    <div class="col-12 col-md-4 facilities-int"></div>
+                <div class="row py-2 gx-1">
+                    <div class="col-12 col-md-8 placeholder-glow">
+                        <div class="card text-bg-dark">
+                          <div class="card-header">
+                            Institutions Providing Project Resources
+                          </div>
+                            <div class="card-body">
+                                <div id="project-institution-pie-chart" class="graph-slot flex-grow-1">
+                                    <span class="placeholder bg-light w-100"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 placeholder-glow d-flex">
+                        <div class="card text-bg-dark flex-grow-1">
+                          <div class="card-header">
+                            Contributing Institution Count
+                          </div>
+                            <div class="card-body d-flex">
+                                <div id="project-institution-count" class="graph-slot flex-grow-1">
+                                    <span class="placeholder bg-light w-100"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h5>Resource Usage</h5>
-                <div class="row project-usage-row">
-                    <div class="col-12 col-md-4 jobs-ran-int"></div>
-                    <div class="col-12 col-md-4 cpu-core-hours-int"></div>
-                    <div class="col-12 col-md-4 gpu-hours-int"></div>
+                <div class="row gx-1">
+                    <div class="col-12 col-md-4 placeholder-glow d-flex">
+                        <div class="card text-bg-dark flex-grow-1">
+                          <div class="card-header">
+                            Jobs Ran by <span class="project-Name"></span>
+                          </div>
+                            <div class="card-body d-flex">
+                                <div id="project-job-count" class="graph-slot flex-grow-1">
+                                    <span class="placeholder bg-light w-100"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 placeholder-glow d-flex">
+                        <div class="card text-bg-dark flex-grow-1">
+                          <div class="card-header">
+                            <span class="project-Name"></span>'s CPU Core Hours
+                          </div>
+                            <div class="card-body d-flex">
+                                <div id="project-cpu-count" class="graph-slot flex-grow-1">
+                                    <span class="placeholder bg-light w-100"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 placeholder-glow d-flex">
+                        <div class="card text-bg-dark flex-grow-1">
+                          <div class="card-header">
+                            <span class="project-Name"></span>'s GPU Hours
+                          </div>
+                            <div class="card-body d-flex">
+                                <div id="project-gpu-count" class="graph-slot flex-grow-1">
+                                    <span class="placeholder bg-light w-100"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

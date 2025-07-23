@@ -52,7 +52,9 @@ permalink: /services/ospool/institutions.html
         </div>
     </div>
 </div>
-
+<div class="container-xxl">
+    <div class="alert alert-danger" style="display: none" id="error" role="alert"></div>
+</div>
 <div class="container-xxl">
     <div id="wrapper" class=" overflow-auto"></div>
 </div>
@@ -61,21 +63,115 @@ permalink: /services/ospool/institutions.html
     <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="facility-Name" class="mb-0 facility-Name"></h2>
+                <h2 id="institution-Name" class="mb-0 institution-Name"></h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h5 class="pt-3">Science Impact</h5>
-                <div class="row project-usage-row">
-                    <div class="col-12 col-xl-6 projects-supported"></div>
-                    <div class="col-12 col-xl-6 fields-of-science-supported"></div>
-                    <div class="col-12 col-xl-6 organizations-supported"></div>
+                <div class="row g-1 pb-1">
+                    <div class="col-12 col-md-6 placeholder-glow d-flex">
+                        <div class="card text-bg-dark flex-grow-1">
+                          <div class="card-header">
+                            Projects Supported by <span class="institution-Name"></span>
+                          </div>
+                            <div class="card-body d-flex">
+                                <div id="supported-projects-table" class="flex-grow-1 rounded" style="max-height: 400px; overflow-y: auto;">
+                                    <table class="table-light table table-sm"">
+                                        <thead class="sticky-top">
+                                            <tr>
+                                              <th scope="col">Project</th>
+                                              <th scope="col" class="text-end">Jobs Ran</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="graph-slot">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 placeholder-glow d-flex">
+                        <div class="card text-bg-dark flex-grow-1">
+                          <div class="card-header">
+                            Field's of Science Supported by<span class="institution-Name"></span>
+                          </div>
+                            <div class="card-body d-flex">
+                                <div id="supported-fos-table" class="flex-grow-1 rounded" style="max-height: 400px; overflow-y: auto;">
+                                    <table class="table-light table table-sm"">
+                                        <thead class="sticky-top">
+                                            <tr>
+                                              <th scope="col">Field Of Science</th>
+                                              <th scope="col" class="text-end">Jobs Ran</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="graph-slot">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 placeholder-glow d-flex">
+                        <div class="card text-bg-dark flex-grow-1">
+                          <div class="card-header">
+                            Institution with projects supported by <span class="institution-Name"></span>
+                          </div>
+                            <div class="card-body d-flex">
+                                <div id="supported-project-institution-table" class="flex-grow-1 rounded" style="max-height: 400px; overflow-y: auto;">
+                                    <table class="table-light table table-sm">
+                                        <thead class="sticky-top">
+                                            <tr>
+                                              <th scope="col">Project Institution</th>
+                                              <th scope="col" class="text-end">Jobs Ran</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="graph-slot">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h5>Resources Provided</h5>
-                <div class="row project-usage-row">
-                    <div class="col-12 col-md-6 jobs-ran"></div>
-                    <div class="col-12 col-md-6 cpu-provided"></div>
-                    <div class="col-12 col-md-6 gpu-provided"></div>
+                <div class="row gx-1">
+                    <div class="col-12 col-md-4 placeholder-glow d-flex">
+                        <div class="card text-bg-dark flex-grow-1">
+                          <div class="card-header">
+                            Jobs Ran by <span class="institution-Name"></span>
+                          </div>
+                            <div class="card-body d-flex">
+                                <div id="institution-job-count" class="graph-slot flex-grow-1">
+                                    <span class="placeholder bg-light w-100"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 placeholder-glow d-flex">
+                        <div class="card text-bg-dark flex-grow-1">
+                          <div class="card-header">
+                            <span class="institution-Name"></span>'s CPU Core Hours Provided
+                          </div>
+                            <div class="card-body d-flex">
+                                <div id="institution-cpu-count" class="graph-slot flex-grow-1">
+                                    <span class="placeholder bg-light w-100"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 placeholder-glow d-flex">
+                        <div class="card text-bg-dark flex-grow-1">
+                          <div class="card-header">
+                            <span class="institution-Name"></span>'s GPU Hours Provided
+                          </div>
+                            <div class="card-body d-flex">
+                                <div id="institution-gpu-count" class="graph-slot flex-grow-1">
+                                    <span class="placeholder bg-light w-100"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">

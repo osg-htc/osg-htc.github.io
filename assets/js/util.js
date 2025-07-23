@@ -148,5 +148,4 @@ function sortByteString(a, b) {
     return 0
 }
 
-
 export {GraccDisplay, string_sort, locale_int_string_sort, hideNode, createNode, formatBytes, sortByteString, byteStringToBytes, localeIntToInt}
