@@ -4,12 +4,13 @@
             <h2 class="subtitle">
                 {% assign date = page.start_date | date: "%B %e" %}
                 {% if page.start_date != page.end_date %}
-                {% assign date = page.end_date | date: "-%e" | prepend: date %}
+                    {% assign date = page.end_date | date: "-%e" | prepend: date %}
                 {% endif %}
 
                 {% assign current_time = 'now' | date: '%Y-%m-%d' | date: '%s' | plus: 0 %}
                 {% assign event_end =  page.end_date | append: "" | date: '%Y-%m-%d' | date: '%s' | plus: 0 %}
-                {% if event_end < current_time %}
+
+                {% if current_time > event_end %}
                     Past Event | {{ date }}
                 {% else %}
                     Upcoming Event | {{ date }}
@@ -19,11 +20,12 @@
     </div>
     <div class="row">
         <div class="col-12 image-container">
-            <img src="{{ page.header_image | relative_url }}"/>
+            <img src="{{ page.banner.path | relataive_url }}" alt="{{ page.banner.alt }}" class="w-100 image-cover">
         </div>
+        
         <div class="col-12">
             <div class="bg-light p-1">
-                <small class="text-muted">{{ page.header_credit }}</small>
+                <small class="text-muted">{{ page.banner.credit }}</small>
             </div>
         </div>
     </div>
