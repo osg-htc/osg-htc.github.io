@@ -5,21 +5,23 @@ layout: container
 <div class="event">
     {% include event/event-header.html %}
 
-    <div class="row event">
-        <div class="main col-12 col-md-8 order-1 order-md-1">
-            {{ content }}
-        </div>
+    <div class="container pb-6">
+        <div class="row">
+            <div class="main col-12 col-md-8 order-1 order-md-1">
+                {{ content }}
+            </div>
 
-        {% if page.sidebar %}
-        <div class="subsection col-12 col-md-4 order-2 order-md-2">
-            {{ page.sidebar | markdownify }}
-        </div>
-        {% endif %}
+            {% if page.sidebar %}
+            <div class="subsection col-12 col-md-4 order-2 order-md-2">
+                {{ page.sidebar | markdownify }}
+            </div>
+            {% endif %}
 
-        {% if page.endblock %}
-        <div class="col-12">
-            {{ page.endblock | markdownify }}
+            {% if page.endblock %}
+            <div class="col-12">
+                {{ page.endblock | markdownify }}
+            </div>
+            {% endif %}
         </div>
-        {% endif %}
     </div>
 </div>
