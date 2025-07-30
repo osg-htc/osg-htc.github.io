@@ -61,8 +61,8 @@ class InstitutionDisplay{
 				"supported-fos-table",
 				Object.entries(
 						Object.values(data)
-							.reduce((acc, {broadFieldOfScience, numJobs}) => {
-							acc[broadFieldOfScience] = acc[broadFieldOfScience] ? acc[broadFieldOfScience] + numJobs : numJobs;
+							.reduce((acc, {detailedFieldOfScience, numJobs}) => {
+							acc[detailedFieldOfScience] = acc[detailedFieldOfScience] ? acc[detailedFieldOfScience] + numJobs : numJobs;
 							return acc;
 						}, {})
 				)
