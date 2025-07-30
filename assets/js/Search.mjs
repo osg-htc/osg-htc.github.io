@@ -6,7 +6,7 @@ class Search {
 		this.node.addEventListener("input", this.search)
 		this.lunr_idx = lunr(function () {
 			this.ref('projectName')
-			this.field('broadFieldOfScience')
+			this.field('detailedFieldOfScience')
 			this.field('projectName')
 			this.field('projectInstitutionName')
 

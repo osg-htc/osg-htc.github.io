@@ -86,9 +86,9 @@ class Table {
                 data: (row) => Math.floor(row.numJobs).toLocaleString(),
                 sort: { compare: locale_int_string_sort }
             }, {
-                id: 'numBroadFieldOfScience',
+                id: 'numDetailedFieldOfScience',
                 name: 'Impacted Fields of Science',
-                data: (row) => row.numBroadFieldOfScience.toLocaleString(),
+                data: (row) => row.numDetailedFieldOfScience.toLocaleString(),
                 sort: { compare: locale_int_string_sort }
             }, {
                 id: 'numProjects',
@@ -170,7 +170,7 @@ class FacilitySummaryPlugin extends BaseComponent {
         this.state = {
             numInstitutions: 0,
             numJobs: 0,
-            numBroadFieldOfScience: 0,
+            numDetailedFieldOfScience: 0,
             numProjects: 0
         };
     }
