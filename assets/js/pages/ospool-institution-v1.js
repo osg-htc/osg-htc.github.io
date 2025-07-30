@@ -196,7 +196,7 @@ class FacilitySummaryPlugin extends BaseComponent {
 
         let numFacilities = h('td', { className: tdClass }, facilitiesDiv)
         let jobsRanTd = h('td', { textContent: this.state['numJobs'].toLocaleString(), className: tdClass + "text-end"})
-        let numFieldsOfScienceTd = h('td', { textContent: this.state['numBroadFieldOfScience'], className: tdClass + "text-end"})
+        let numFieldsOfScienceTd = h('td', { textContent: this.state['numDetailedFieldOfScience'], className: tdClass + "text-end"})
         let numProjectsTd = h('td', { textContent: this.state['numProjects'], className: tdClass + "text-end"})
 
         let row = h("tr", {}, numFacilities, jobsRanTd, numFieldsOfScienceTd, numProjectsTd)
