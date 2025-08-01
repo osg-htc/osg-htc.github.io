@@ -28,7 +28,13 @@
                                     <li><a class="dropdown-item" href="{{ '/services/osdf/data' | relative_url }}">Data</a></li>
                                 </ul>
                             </div>
-                            <a class="dropdown-item" href="{{ '/services/facilitation' | relative_url }}">Research Computing Facilitation</a>
+                            <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" id="services-rcf-dropdown" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Research Computing Facilitation</a>
+                                <ul class="dropdown-menu dropdown-submenu" aria-labelledby="services-osdf-dropdown">
+                                    <li><a class="dropdown-item" href="{{ '/services/facilitation' | relative_url }}">Connect With the Team</a></li>
+                                    <li><a class="dropdown-item" href="{{ '/services/facilitation/monthly-training' | relative_url }}">Monthly Training</a></li>
+                                </ul>
+                            </div>
                             <a class="dropdown-item" href="{{ '/services/access-point' | relative_url }}">OSG-Operated Access Points</a>
                         </div>
                     </li>
