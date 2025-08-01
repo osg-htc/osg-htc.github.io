@@ -13,7 +13,7 @@ The OSG Facilitation Team supports researchers across the United States who want
 to run large computing workloads on HTC capacity like the [OSPool](services/open_science_pool). 
 The team runs monthly training events and the materials from these trainings are publicly available. 
 
-* [Upcoming Training Opportunties](https://portal.osg-htc.org/documentation/support_and_training/training/osgusertraining/) (also listed on the [Events Page](https://osg-htc.org/events.html))
+* [Upcoming Training Opportunties](/services/facilitation/monthly-training) (also listed on the [Events Page](https://osg-htc.org/events.html))
 * [Past Training Materials](https://portal.osg-htc.org/documentation/support_and_training/training/materials/)
 
 Anyone can register and join monthly trainings - no account is needed! 
