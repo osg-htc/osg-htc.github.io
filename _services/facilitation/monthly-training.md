@@ -1,6 +1,6 @@
 ---
 title: Monthly Training with the Facilitation Team
-layout: text-optimized-width
+layout: facilitation
 ---
 
 <div class="container-xxl mw-1000" markdown="1">
