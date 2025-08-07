@@ -294,12 +294,18 @@ class ProjectPage{
         this.filePieChart = new PieChart(
             "project-file-summary",
             this.dataManager.reduceByKey.bind(this.dataManager, "projectName", "osdfFileTransferCount"),
-            "# of Objects Transferred by Project"
+            "# of Objects Transferred by Project",
+            ({label, value}) => {
+                this.table.updateProjectDisplay(this.dataManager.data[label])
+            }
         )
         this.bytePieChart = new PieChart(
             "project-byte-summary",
             this.dataManager.reduceByKey.bind(this.dataManager, "projectName", "osdfByteTransferCount"),
-            "# of Bytes Transferred by Project"
+            "# of Bytes Transferred by Project",
+            ({label, value}) => {
+                this.table.updateProjectDisplay(this.dataManager.data[label])
+            }
         )
 
         this.dataManager.consumerToggles.push(this.fosFilePieChart.update)
