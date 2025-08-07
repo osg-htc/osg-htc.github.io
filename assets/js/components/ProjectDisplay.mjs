@@ -1,3 +1,4 @@
+import {formatBytes} from "../util.js";
 import {PieChart} from "./pie-chart.js";
 import {getProjectOverview} from "../adstash.mjs";
 import Count from "./Count.mjs";
@@ -83,4 +84,37 @@ class ProjectDisplay{
 	}
 }
 
+class OSDFProjectDisplay extends ProjectDisplay {
+	async update(data) {
+		const {Name, PIName, FieldOfScience, Organization, Description} = data;
+		console.log(data);
+		this.updateTextValue("project-Name", Name)
+		this.updateTextValue("project-PIName", PIName)
+		this.updateTextValue("project-FieldOfScience", FieldOfScience)
+		this.updateTextValue("project-Organization", Organization)
+		this.updateTextValue("project-Description", Description)
+		this.setUrl(Name)
+		this.clearGraphSlots()
+		this.parentNode.addEventListener("shown.bs.modal", () => {
+			this.updateGraphs(Name)
+		}, {once : true})
+		this.display_modal.show()
+	}
+
+	async updateGraphs(Name){
+		const data = await this.getData(Name)
+		console.log(data);
+
+		const objects = Math.round(Object.values(data).reduce((p, v) => p + v.osdfFileTransferCount, 0));
+		const bytes = Math.round(Object.values(data).reduce((p, v) => p + v.osdfByteTransferCount, 0));
+		Count("project-osdf-objects", objects, 100)
+		Count("project-osdf-bytes", formatBytes(bytes), 100)
+	}
+
+	async updateInstitutionPieChart(_) {
+		throw new Error("updateInstitutionPieChart not implemented for OSDFProjectDisplay")
+	}
+}
+
+export { OSDFProjectDisplay };
 export default ProjectDisplay;

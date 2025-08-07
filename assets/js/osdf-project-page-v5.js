@@ -13,6 +13,7 @@ import {
     localeIntToInt, byteStringToBytes
 } from "./util.js";
 import Color from "https://colorjs.io/dist/color.js";
+import {OSDFProjectDisplay} from "./components/ProjectDisplay.mjs";
 import {PieChart} from "./components/pie-chart.js";
 import Search from "./Search.mjs";
 
@@ -39,13 +40,14 @@ class ProjectCount {
 }
 
 class Table {
-    constructor(wrapper, data_function){
+    constructor(wrapper, data_function, updateProjectDisplay){
 
         let table = this;
 
         this.grid = undefined
         this.data_function = data_function
         this.wrapper = wrapper
+        this.updateProjectDisplay = updateProjectDisplay
         this.columns = [
             {
                 id: 'projectName',
@@ -122,12 +124,19 @@ class Table {
                 }
             }
         }).render(table.wrapper);
+        this.grid.on('rowClick', this.row_click);
     }
     update = async () => {
         let table = this
         this.grid.updateConfig({
             data: Object.values(await table.data_function()).sort((a, b) => b.osdfFileTransferCount - a.osdfFileTransferCount)
         }).forceRender();
+    }
+    row_click = async (PointerEvent, e) => {
+        let data = await this.data_function();
+        let row_name = e["cells"][0].data
+        let project = data[row_name]
+        this.updateProjectDisplay(project)
     }
 }
 
@@ -169,16 +178,37 @@ class DataManager {
         }
     }
 
-    _getData = async () => {
+    _fetch = async (url, options = {}) => {
+        try {
+            let response = await fetch(url, options)
 
+            if(!response.ok){
+                throw new Error(response.statusText)
+            }
+
+            return response.json()
+
+        } catch(error) {
+            this.error = "Error fetching usage data, learn more on the OSG status page: status.osg-htc.org"
+        }
+    }
+
+    _getData = async () => {
+        let topologyData = await this._fetch("https://topology.opensciencegrid.org/miscproject/json")
         let usageJson;
+
         try {
             usageJson = await getProjects()
         } catch(e) {
             this.error = "Error fetching usage data, learn more on the status page: status.osg-htc.org"
         }
 
-        this.data = usageJson
+        this.data = Object.entries(topologyData).reduce((p, [k,v]) => {
+            if(k in usageJson){
+                p[k] = {...v, ...usageJson[k]}
+            }
+            return p
+        }, {})
 
         return this.data
     }
@@ -232,8 +262,11 @@ class ProjectPage{
         this.mode = undefined
         this.dataManager = new DataManager()
 
+        let projectDisplayNode = document.getElementById("project-display")
+        this.projectDisplay = new OSDFProjectDisplay(projectDisplayNode)
+
         this.wrapper = document.getElementById("wrapper")
-        this.table = new Table(this.wrapper, this.dataManager.getFilteredData)
+        this.table = new Table(this.wrapper, this.dataManager.getFilteredData, this.projectDisplay.update.bind(this.projectDisplay))
         this.dataManager.consumerToggles.push(this.table.update)
 
         this.search = new Search(Object.values(await this.dataManager.getData()), this.dataManager.toggleConsumers)
