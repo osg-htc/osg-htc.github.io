@@ -62,7 +62,7 @@ class Table {
                     className: "gridjs-th gridjs-td pointer gridjs-th-sort text-start"
                 }
             }, {
-                id: 'majorFieldOfScience',
+                id: 'detailedFieldOfScience',
                 name: 'Field Of Science',
                 attributes: {
                     className: "gridjs-th gridjs-td pointer gridjs-th-sort text-start"
@@ -250,12 +250,12 @@ class ProjectPage{
 
         this.fosFilePieChart = new PieChart(
             "project-fos-file-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "majorFieldOfScience", "osdfFileTransferCount"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "detailedFieldOfScience", "osdfFileTransferCount"),
             "# of Objects Transferred by Field Of Science"
         )
         this.fosBytePieChart = new PieChart(
             "project-fos-byte-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "majorFieldOfScience", "osdfByteTransferCount"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "detailedFieldOfScience", "osdfByteTransferCount"),
             "# of Bytes Transferred by Field Of Science"
         )
         this.filePieChart = new PieChart(
