@@ -19,10 +19,10 @@ async function getData() {
     const usageJson = await getProjects();
 
     return Object.entries(topologyData).reduce((p, [k,v]) => {
-        if(k in usageJson){
-            p[k] = {...v, ...usageJson[k]}
+        if(k in usageJson) {
+            p[k] = {...v, ...usageJson[k]};
         }
-        return p
+        return p;
     }, {});
 }
 
@@ -79,7 +79,7 @@ function updateSpotlight(projectData) {
                 value = formatNumber(value);
                 break;
             case "osdfByteTransferCount":
-                value = formatBytes(value).replace(/\s/g, ''); // remove whitespace
+                value = formatBytes(value);
                 break;
             default:
                 value = value.toString();
