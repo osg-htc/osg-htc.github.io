@@ -2,6 +2,10 @@
 layout: default
 css_extension:
 - href: "/assets/css/homepage-v1.css"
+js_extension:
+- src: "/assets/js/homepage-v1.js"
+  loading: "defer"
+  type: "module"
 ---
 
 <div class="bg-secondary d-flex flex-column justify-content-center align-items-center py-5">
@@ -86,6 +90,67 @@ css_extension:
             </div>
         </div>
     </div>
+
+    <!-- Featured User Statistics Section -->
+    <div class="py-4">
+        <div class="container-xxl">
+            <div class="bg-dark rounded p-4 text-white">
+                <h2 class="text-center mb-0">Featured Project</h2>
+                <hr />
+                
+                <!-- Project Information -->
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <p class="h4 mb-3" id="project-spotlight-title">BiomedInfo</p>
+                        <p class="mb-0" id="project-spotlight-fos">Bioinformatics</p>
+                        <p class="mb-0" id="project-spotlight-pi">Erik Wright</p>
+                        <p class="mb-0" id="project-spotlight-organization">University of Pittsburgh</p>
+                    </div>
+                    <div class="col-md-8">
+                        <h4 class="h4 mb-3">Project Description</h4>
+                        <p id="project-spotlight-description">
+                            Development and application of software tools for performing large-scale biomedical informatics on microbial genome sequence data.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Statistics Cards -->
+                <div class="row g-3 justify-content-center">
+                    <div class="col-md-2 col-sm-4 col-6">
+                        <div class="bg-secondary rounded p-3 text-center">
+                            <div class="display-6 fw-bold text-white" id="project-spotlight-jobs-ran">57M</div>
+                            <small class="text-light">Jobs Ran</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6">
+                        <div class="bg-secondary rounded p-3 text-center">
+                            <div class="display-6 fw-bold text-white" id="project-spotlight-cpu-hours">5M</div>
+                            <small class="text-light">CPU Core Hours</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6">
+                        <div class="bg-secondary rounded p-3 text-center">
+                            <div class="display-6 fw-bold text-white" id="project-spotlight-gpu-hours">85</div>
+                            <small class="text-light">GPU Hours</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6">
+                        <div class="bg-secondary rounded p-3 text-center">
+                            <div class="display-6 fw-bold text-white" id="project-spotlight-osdf-objects">75M</div>
+                            <small class="text-light">OSDF Objects</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6">
+                        <div class="bg-secondary rounded p-3 text-center">
+                            <div class="display-6 fw-bold text-white" id="project-spotlight-osdf-bytes">58TB</div>
+                            <small class="text-light">OSDF Bytes</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     {% include /get/hero_story.liquid %}
     <div id="hero-image" class="vh-75 vh-md-50">
         <div class="container-xxl">
@@ -147,6 +212,7 @@ css_extension:
             </div>
         </div>
     </div>
+
     <div class="py-4">
         <div class="container-xxl">
             <div class="row gx-2">
@@ -168,6 +234,7 @@ css_extension:
             <h5 id="osg-by-maps" class="text-center">OSG By Maps</h5>
         </div>
     </div>
+
     <div class="bg-secondary py-4 mb-4">
         <div class="container-xxl">
             <div class="row justify-content-center gx-2">
@@ -182,6 +249,7 @@ css_extension:
             <h5 class="mb-0 text-center">User Spotlights</h5>
         </div>
     </div>
+
     <div class="container-xxl">
         <div class="row border-4 border-primary ">
             <div class="col-12 col-md-6 col-lg-4 mb-4">
@@ -265,6 +333,7 @@ css_extension:
             </div>
         </div>
     </div>
+
     <div class="bg-light my-4">
         <div class="container-xxl">
             <div class="row justify-content-center">
@@ -283,6 +352,7 @@ css_extension:
             </div>
         </div>
     </div>
+
     <div class="container-xxl">
         <div class="card">
             <div class="card-body">
