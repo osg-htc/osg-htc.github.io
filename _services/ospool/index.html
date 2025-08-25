@@ -25,7 +25,9 @@ js_extension:
           <span class="d-inline-block">Triggering </span>
           <b class="d-inline-block"><span id="ospool-file-transfers">1</span> file transfers</b><br>
           <span class="d-inline-block">Consuming</span>
-          <b class="d-inline-block"><span id="ospool-core-hours">1</span> core hours</b>
+          <b class="d-inline-block"><span id="ospool-core-hours">1</span> core hours</b><br>
+          <span class="d-inline-block">Harnessing capacity from</span>
+          <b class="d-inline-block"><span id="ospool-sites">1</span> institutions.</b><br>
         </h2>
       </div>
     </div>
@@ -55,60 +57,12 @@ js_extension:
       </p>
     </div>
   </div>
-  <div class="row justify-content-center">
-    <div class="col-12 col-xl-7 col-lg-8 col-md-10">
-      <h2 id="is-my-workload-a-match-for-the-ospool">Is my workload a match for the OSPool?</h2>
-      <p>
-        Each of your jobs must fit on a single server. It has to be portable so
-        that it can run on a remote server. The distributed nature of the OSPool
-        imposes constraints on the sizes of the input and output sandboxes of a
-        job.
-      </p>
-    </div>
-  </div>
 </div>
+
 
 <div class="container-xxl">
   <div class="row justify-content-center">
     <div class="col-12 col-xl-7 col-lg-8 col-md-10">
-      <h1 class="text-center pt-5 fw-bold">OSPool: Sharing computing capacity in support of Open Science</h1>
-    </div>
-  </div>
-</div>
-<div id="" class="pb-1 my-5 wave-short-display text-display">
-  <div class="container">
-    <div class="row justify-content-center py-3">
-      <div class="col-12 col-xl-9 col-lg-10 col-md-12 col-12 col-sm-11 pt-1 pt-md-0 d-flex">
-        <h2 class="text-center d-inline-block mx-auto">
-          <span class="d-inline-block">On <b id="ospool-site-date"></b></span><br>
-          <span class="d-inline-block py-2 job-text"><b class="d-inline-block"><span id="ospool-site-jobs">1</span> jobs</b> completed</span><br>
-          <span class="d-inline-block">Harnessing capacity from</span>
-          <b class="d-inline-block"><span id="ospool-sites">1</span> institutions.</b><br>
-        </h2>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container-xxl">
-  <div class="row justify-content-center">
-    <div class="col-12 col-xl-7 col-lg-8 col-md-10">
-      <h2 id="who-contributes-capacity-to-the-ospool">Who contributes capacity to the OSPool?</h2>
-
-      <p>
-        The computing resources for the OSPool are contributed by members of the
-        OSG Compute Federation, typically campuses, government-supported
-        supercomputing centers, and research collaborations. The members individually
-        determine their policies for contributing resources, including the
-        amount of resources it contributes and when these resources are available.
-        In addition, some resource providers decide to share their resources with
-        specific research projects, or they may choose to contribute resources to
-        all in the OSPool.
-      </p>
-
-      <p>
-        View institution contributions on our <a href=" {{ '/services/open_science_pool/institutions' | relative_url }}">Institutions Page</a>.
-      </p>
 
       <h2 id="how-can-i-harness-the-ospool-capacity">How Can I Harness the OSPool Capacity?</h2>
 
@@ -167,8 +121,14 @@ js_extension:
           <tr>
             <th>CPU</th>
             <td>1 per job</td>
-            <td>&lt; 8 per job</td>
-            <td>&gt; 8 per job</td>
+            <td>&lt; 12 per job</td>
+            <td>&gt; 12 per job</td>
+          </tr>
+          <tr>
+            <th>GPU</th>
+            <td>1 per job</td>
+            <td>&lt; 4 per job</td>
+            <td>&gt; 4 per job</td>
           </tr>
           <tr>
             <th>Walltime</th>
@@ -184,15 +144,15 @@ js_extension:
           </tr>
           <tr>
             <th>Input</th>
-            <td>&lt; 500 MB</td>
             <td>&lt; 10 GB</td>
-            <td>&gt; 10 GB**</td>
+            <td>&lt; 40 GB</td>
+            <td>&gt; 40 GB**</td>
           </tr>
           <tr>
             <th>Output</th>
-            <td>&lt; 1 GB</td>
             <td>&lt; 10 GB</td>
-            <td>&gt; 10 GB**</td>
+            <td>&lt; 40 GB</td>
+            <td>&gt; 40 GB**</td>
           </tr>
           <tr>
             <th>Software</th>
@@ -217,6 +177,24 @@ js_extension:
         who support all users on OSG-Operated Access Points.</p>
 
       <p>Users submitting jobs can specify their own requirements for per-job compute resources (e.g. CPU cores, memory, etc.) and any special server requirements. We recommend submitting lots of jobs and taking advantage of all the cycles possible, wherever they may be. We cannot guarantee that any single job will finish quickly, but the OSPool will allow you to accomplish a tremendous amount of work across jobs.</p>
+    
+    <h2 id="who-contributes-capacity-to-the-ospool">Who contributes capacity to the OSPool?</h2>
+
+      <p>
+        The computing resources for the OSPool are contributed by members of the
+        OSG Compute Federation, typically campuses, government-supported
+        supercomputing centers, and research collaborations. The members individually
+        determine their policies for contributing resources, including the
+        amount of resources it contributes and when these resources are available.
+        In addition, some resource providers decide to share their resources with
+        specific research projects, or they may choose to contribute resources to
+        all in the OSPool.
+      </p>
+
+      <p>
+        View institution contributions on our <a href=" {{ '/services/open_science_pool/institutions' | relative_url }}">Institutions Page</a>.
+      </p>
+    
     </div>
   </div>
 
