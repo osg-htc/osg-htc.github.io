@@ -36,6 +36,8 @@
       url: /news.html
     - name: Events
       url: /events.html
+    - name: Presentations
+      url: /presentations.html
     - name: Newsletter
       url: /newsletter.html
 
