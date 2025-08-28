@@ -89,7 +89,6 @@ function generateStringHash(value) {
 function fillBadgeColors() {
     const badges = document.querySelectorAll(".tag-badge");
     badges.forEach(badge => {
-        console.log(badge);
         const tagText = badge.textContent.trim();
         let hue = generateStringHash(tagText) % 360;
         if (hue >= 60 && hue <= 140) {
