@@ -7,8 +7,6 @@ layout: text-optimized-width
 
 ## General Overview
 
-TBD: some text about the materials
-
 <details>
 <summary>OSPool Basics: Get Running on the OSPool</summary>
 <br> 
