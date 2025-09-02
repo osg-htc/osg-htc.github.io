@@ -389,8 +389,8 @@ const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 const project_page = new DataPage()
 
 async function initialize_ospool_report () {
-    counter("transferred", 127, 20)
-    counter("delivered", 129, 20)
+    counter("transferred", 175, 20)
+    counter("delivered", 138, 20)
 }
 
 /**

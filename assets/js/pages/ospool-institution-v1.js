@@ -86,9 +86,9 @@ class Table {
                 data: (row) => Math.floor(row.numJobs).toLocaleString(),
                 sort: { compare: locale_int_string_sort }
             }, {
-                id: 'numBroadFieldOfScience',
+                id: 'numDetailedFieldOfScience',
                 name: 'Impacted Fields of Science',
-                data: (row) => row.numBroadFieldOfScience.toLocaleString(),
+                data: (row) => row.numDetailedFieldOfScience.toLocaleString(),
                 sort: { compare: locale_int_string_sort }
             }, {
                 id: 'numProjects',
@@ -170,7 +170,7 @@ class FacilitySummaryPlugin extends BaseComponent {
         this.state = {
             numInstitutions: 0,
             numJobs: 0,
-            numBroadFieldOfScience: 0,
+            numDetailedFieldOfScience: 0,
             numProjects: 0
         };
     }
@@ -196,7 +196,7 @@ class FacilitySummaryPlugin extends BaseComponent {
 
         let numFacilities = h('td', { className: tdClass }, facilitiesDiv)
         let jobsRanTd = h('td', { textContent: this.state['numJobs'].toLocaleString(), className: tdClass + "text-end"})
-        let numFieldsOfScienceTd = h('td', { textContent: this.state['numBroadFieldOfScience'], className: tdClass + "text-end"})
+        let numFieldsOfScienceTd = h('td', { textContent: this.state['numDetailedFieldOfScience'], className: tdClass + "text-end"})
         let numProjectsTd = h('td', { textContent: this.state['numProjects'], className: tdClass + "text-end"})
 
         let row = h("tr", {}, numFacilities, jobsRanTd, numFieldsOfScienceTd, numProjectsTd)
