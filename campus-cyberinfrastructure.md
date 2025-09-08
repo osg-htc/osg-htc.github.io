@@ -125,7 +125,7 @@ following aspects of the proposed project:
 
 {: .fs-5 }
 - Sharing data with authorized users via the [Open Science Data Federation (OSDF)](/services/osdf.html)
-- Bringing the power of high throughput computing via the [OSPool](/services/ospool/l) to your researchers
+- Bringing the power of high throughput computing via the [OSPool](/services/ospool/) to your researchers
 - Meeting CC*-required resource sharing as specified in <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 24-530)</a>, and other options for integrating with the OSG Consortium
 - Providing connections to help with data storage systems for shared inter-campus or intra-campus resources
   - We have collected [community data storage systems](/organization/osdf/example_data_origin.html) for your consideration

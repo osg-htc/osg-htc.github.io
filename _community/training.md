@@ -10,7 +10,7 @@ layout: text-optimized-width
 ## Learn how to use the OSPool and OSDF
 
 The OSG Facilitation Team supports researchers across the United States who want 
-to run large computing workloads on HTC capacity like the [OSPool](services/open_science_pool). 
+to run large computing workloads on HTC capacity like the [OSPool](/services/ospool). 
 The team runs monthly training events and the materials from these trainings are publicly available. 
 
 * [Upcoming Training Opportunties](/services/facilitation/monthly-training) (also listed on the [Events Page](https://osg-htc.org/events.html))
