@@ -4,7 +4,7 @@ layout: none
 "";
 import { getProjects } from "./adstash.mjs"
 
-const ROTATING_PROJECTS = ["UTAustin_Auslen", "Caltech_Drummond", "BiomedInfo"]
+const ROTATING_PROJECTS = ["UTAustin_Auslen", "BiomedInfo"];
 
 async function getData() {
     let topologyRes;
