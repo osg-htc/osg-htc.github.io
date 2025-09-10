@@ -18,7 +18,7 @@ The OSG Consortium runs the OSG School, an annual education event for researcher
 tools.  It is held each summer at the University of Wisconsin–Madison.
 
 
-<img src="/assets/images/osg-school-2024-attendees.jpeg" class="w-100" /> 
+<img src="/assets/images/osgschool25-attendees.jpeg" class="w-100" /> 
 
 *OSG School 2024 Group Photo*
 
@@ -30,8 +30,7 @@ The School is ideal for graduate students in any science or research domain wher
 
 ## Next OSG School
 
-The OSG School 2025 is scheduled for June 23&ndash;27.
-Please visit [the OSG School 2025 website](https://osg-htc.org/school-2025/) for all the details!
+We will announce plans for OSG School 2026 once they have been finalized. 
 
 ## Materials
 
@@ -43,6 +42,7 @@ which means that we were able to record lectures to complement lecture and exerc
 
 ### Past OSG Schools and Materials
 
+- [OSG School 2025](https://osg-htc.org/school-2025/) — 23-27 June 2025
 - [OSG School 2024](https://osg-htc.org/school-2024/) — 5–9 August 2024
 - [OSG School 2023](https://osg-htc.org/user-school-2023/) — 7–11 August 2023
 - [OSG User School 2022](https://osg-htc.org/user-school-2022/) — 25–29 July 2022
