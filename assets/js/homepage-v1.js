@@ -4,7 +4,7 @@ layout: none
 "";
 import { getProjects } from "./adstash.mjs"
 
-const ROTATING_PROJECTS = ["UTAustin_Auslen", "BiomedInfo"];
+const ROTATING_PROJECTS = ["UTAustin_Auslen", "BiomedInfo", "EvolSims", "eht", "SmallMolecule_Hoffman", "USU_Kaundal", "UNL_Hebets"];
 
 async function getData() {
     let topologyRes;
@@ -13,6 +13,10 @@ async function getData() {
     } catch (error) {
         console.error("Topology data fetch failed, trying backup", error);
         topologyRes = await fetch("{{ '/assets/data/project.json' | relative_url }}")
+    }
+
+    if (!topologyRes.ok) {
+        throw new Error(`Failed to fetch topology data: ${topologyRes.status} ${topologyRes.statusText}`);
     }
 
     const topologyData = await topologyRes.json();
@@ -32,7 +36,7 @@ function getWeekOfYear() {
     return Math.ceil((((now - onejan) / 86400000) + onejan.getDay() + 1) / 7);
 }
 
-function formatNumber(num, decimals = 1) {
+function formatNumber(num, decimals = 0) {
     const SCALES = ["", "K", "M", "B", "T"];
     let scaleIndex = 0;
     while (num >= 1000 && scaleIndex < SCALES.length - 1) {
@@ -42,7 +46,7 @@ function formatNumber(num, decimals = 1) {
     return `${Math.round(num * Math.pow(10, decimals)) / Math.pow(10, decimals)}${SCALES[scaleIndex]}`;
 }
 
-function formatBytes(num, decimals = 1) {
+function formatBytes(num, decimals = 0) {
     if (num === 0) return '0B';
     const SCALES = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
     const i = Math.floor(Math.log(num) / Math.log(1024));
@@ -90,15 +94,25 @@ function updateSpotlight(projectData) {
     }
 }
 
+let i = 0;
 function setup() {
     const weekOfTheYear = getWeekOfYear();
-    const project = ROTATING_PROJECTS[weekOfTheYear % ROTATING_PROJECTS.length];
+    const project = ROTATING_PROJECTS[(weekOfTheYear+i) % ROTATING_PROJECTS.length];
 
-    getData().then((data) => {
-        console.log(data);
-        console.log(data[project]);
-        updateSpotlight(data[project]);
-    });
+    getData()
+        .then((data) => {
+            updateSpotlight(data[project]);
+        })
+        .catch(e => {
+            console.error("Failed to get project data", e);
+            document.getElementById("ospool-featured-user").style.display = "none";
+        });
 }
+
+window.rotate=()=> {
+    i++;
+    setup();
+}
+
 
 setup();
