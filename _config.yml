@@ -15,6 +15,7 @@ include:
 exclude:
   - _spotlights/images
   - _events/images
+  - _presentations/images
 
 defaults:
   - scope:
@@ -56,6 +57,10 @@ defaults:
       type: "community"
     values:
       layout: text-optimized-width
+  - scope:
+      type: "presentations"
+    values:
+      layout: presentations
 
 collections:
   about:
@@ -84,6 +89,9 @@ collections:
   community:
     output: true
     permalink: /community/:path.html
+  presentations:
+    output: true
+    permalink: /presentations/:year/:month/:day/:title/
 
 
 sass:
