@@ -109,10 +109,4 @@ function setup() {
         });
 }
 
-window.rotate=()=> {
-    i++;
-    setup();
-}
-
-
 setup();
