@@ -5,6 +5,7 @@
    "userinfo_endpoint": "https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/userinfo",
    "registration_endpoint": "https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/oidc-cm",
    "device_authorization_endpoint": "https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/device_authorization",
+   "authorization_endpoint": "https://osdf-ospool-issuer.osgdev.chtc.io/scitokens-server/authorize",
    "token_endpoint_auth_methods_supported": [
       "client_secret_post",
       "client_secret_basic"
