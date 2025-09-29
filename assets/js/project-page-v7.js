@@ -44,7 +44,7 @@ class Table {
                     className: "gridjs-th gridjs-td pointer gridjs-th-sort text-start"
                 }
             }, {
-                id: 'FieldOfScience',
+                id: 'detailedFieldOfScience',
                 name: 'Field Of Science',
                 sort: { compare: string_sort },
                 attributes: {
@@ -87,7 +87,7 @@ class Table {
         let data = await this.data_function()
         let row_name = e["cells"][1].data
         let project = data[row_name]
-        this.updateProjectDisplay(project)
+        this.updateProjectDisplay({...project, FieldOfScience: project.detailedFieldOfScience})
     }
 }
 
@@ -240,12 +240,12 @@ class ProjectPage{
 
         this.orgPieChart = new PieChart(
             "project-fos-cpu-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "broadFieldOfScience", "cpuHours"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "detailedFieldOfScience", "cpuHours"),
             "# of CPU Hours by Field of Science"
         )
         this.FosPieChart = new PieChart(
             "project-fos-job-summary",
-            this.dataManager.reduceByKey.bind(this.dataManager, "broadFieldOfScience", "numJobs"),
+            this.dataManager.reduceByKey.bind(this.dataManager, "detailedFieldOfScience", "numJobs"),
             "# of Jobs by Field Of Science"
         )
         this.jobPieChart = new PieChart(
@@ -308,10 +308,11 @@ const project_page = new ProjectPage()
 
 const populate_aggregate_statistics = async () => {
     const data = await project_page.dataManager.getData()
+    console.log(data)
     document.getElementById("ospool-projects").textContent = Object.keys(data).length
     document.getElementById("ospool-jobs").textContent = Object.values(data).reduce((p, v) => p + v.numJobs, 0).toLocaleString()
     document.getElementById("ospool-institutions").textContent = new Set(Object.values(data).map(v => v.InstitutionID)).size
-    document.getElementById("ospool-fields-of-science").textContent = new Set(Object.values(data).map(v => v.FieldOfScience)).size
+    document.getElementById("ospool-fields-of-science").textContent = new Set(Object.values(data).map(v => v.detailedFieldOfScience)).size
     document.getElementById("ospool-aggregate-text").hidden = false
 }
 

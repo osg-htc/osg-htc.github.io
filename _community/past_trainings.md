@@ -1,8 +1,9 @@
 ---
-ospool:
-  path: support_and_training/training/materials.md
+title: Past Monthly Training Materials
+layout: text-optimized-width
 ---
 
+<h1 class="mini-bar">{{ page.title }}</h1>
 
 ## General Overview
 

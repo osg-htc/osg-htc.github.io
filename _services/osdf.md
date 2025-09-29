@@ -27,8 +27,9 @@ The OSDF may be for you if...
 
 
 ##### Want to make your dataset available via the OSDF?
-<a class="btn btn-outline-secondary mx-auto mt-3" href="mailto:support@osg-htc.org">Contact OSDF Support Staff</a>
+<a class="btn btn-outline-secondary mx-auto mt-3" href="https://docs.google.com/forms/d/e/1FAIpQLSdr3pLLRlEbhbf-h8cdZ5N9UJpshIDdgUeHJ07keRUK8ecKOw/viewform?usp=dialog">Request a Consultation</a>
 
+CICI PIs, see additional details for your projects here: <a href="https://path-cc.io/cici-awardees/">Dear CICI PIs</a>
 
 {: .mini-bar}
 ### Contribute
