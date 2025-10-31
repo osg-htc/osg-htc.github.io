@@ -41,12 +41,14 @@ layout: default
             </div>
 
 
+            {% if page.links %}
             <h4 class="h4 mt-3 mb-0">Associated Links</h2>
             <ul>
                 {% for link in page.links %}
                 <li><a href="{{ link.value }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a></li>
                 {% endfor %}
             </ul>
+            {% endif %}
         </div>
     </div>
 </div>
