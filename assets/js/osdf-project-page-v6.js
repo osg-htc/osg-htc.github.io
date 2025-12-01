@@ -1,7 +1,4 @@
----
-    layout: blank
----
-
+import { fetchWithBackup } from "./backup.js";
 import {getProjects} from "./adstash.mjs"
 import {
     GraccDisplay,
@@ -73,7 +70,7 @@ class Table {
                 data: (row) => Math.floor(row?.osdfFileTransferCount).toLocaleString(),
                 sort: { compare: locale_int_string_sort },
                 attributes: (cell, row, column) => {
-                    if(cell !== null){
+                    if(cell !== null && table?.data !== undefined){
                         const data = table.data
                         const maxFileCount = Math.max(...Object.values(data).map(x => x.osdfFileTransferCount))
                         const cellValue = localeIntToInt(cell)
@@ -88,7 +85,7 @@ class Table {
                 sort: { compare: sortByteString },
                 data: (row) => formatBytes(row.osdfByteTransferCount),
                 attributes: (cell, row, column) => {
-                    if(cell !== null){
+                    if(cell !== null && table?.data !== undefined){
                         const data = table.data
                         const maxByteCount = Math.max(...Object.values(data).map(x => x.osdfByteTransferCount))
                         const cellValue = byteStringToBytes(cell)
@@ -173,7 +170,7 @@ class DataManager {
 
         let usageJson;
         try {
-            usageJson = await getProjects()
+            usageJson = await fetchWithBackup(getProjects)
         } catch(e) {
             this.error = "Error fetching usage data, learn more on the status page: status.osg-htc.org"
         }

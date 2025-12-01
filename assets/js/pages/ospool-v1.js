@@ -1,3 +1,6 @@
+
+import { fetchWithBackup, fetchForBackup } from "../backup.js";
+
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 let counter = async (id, endValue, numIncrements, decimals=0) => {
@@ -24,8 +27,7 @@ let counter = async (id, endValue, numIncrements, decimals=0) => {
 
 async function initialize_ospool_report () {
     try{
-        let response = await fetch("https://osg-htc.org/ospool-data/data/daily_reports/latest.json")
-        let json = await response.json()
+        let json = await fetchWithBackup(fetchForBackup, "https://topology.opensciencegrid.org/miscproject/json")
 
         let dataDate = new Date(json['date'])
         let dateString = `${months[dataDate.getUTCMonth()]} ${dataDate.getUTCDate()}`

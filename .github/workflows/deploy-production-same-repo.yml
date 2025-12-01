@@ -42,6 +42,14 @@ jobs:
           ruby-version: 3.4.7
           bundler-cache: true
 
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - name: Download Backup Data
+        run: npm run backup
+
       - name: Build and Deploy
         run: |
           # Build the production version of website
