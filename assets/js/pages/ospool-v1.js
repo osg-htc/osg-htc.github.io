@@ -27,7 +27,7 @@ let counter = async (id, endValue, numIncrements, decimals=0) => {
 
 async function initialize_ospool_report () {
     try{
-        let json = await fetchWithBackup(fetchForBackup, "https://topology.opensciencegrid.org/miscproject/json")
+        let json = await fetchWithBackup(fetchForBackup, "https://osg-htc.org/ospool-data/data/daily_reports/latest.json")
 
         let dataDate = new Date(json['date'])
         let dateString = `${months[dataDate.getUTCMonth()]} ${dataDate.getUTCDate()}`

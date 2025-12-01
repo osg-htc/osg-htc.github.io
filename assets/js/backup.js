@@ -24,6 +24,10 @@ const backupMap = async () => {
       args: ["https://topology.opensciencegrid.org/miscproject/json"],
     },
     {
+      function: fetchForBackup,
+      args: ["https://osg-htc.org/ospool-data/data/daily_reports/latest.json"],
+    },
+    {
       function: getProjects,
     },
     {
