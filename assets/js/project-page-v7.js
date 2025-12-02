@@ -130,13 +130,13 @@ class DataManager {
 
         let topologyData = [];
         try {
-          topologyData = await fetchWithBackup(fetchForBackup, "https://topology.opensciencegrid.org/miscproject/json")
+          topologyData = (await fetchWithBackup(fetchForBackup, "https://topology.opensciencegrid.org/miscproject/json"))['data']
         } catch (e) {
           this.error = "Error fetching topology data, learn more on the OSG status page: status.osg-htc.org"
         }
         let usageJson;
         try {
-            usageJson = await fetchWithBackup(getProjects)
+            usageJson = (await fetchWithBackup(getProjects))['data']
         } catch(e) {
             this.error = "Error fetching usage data, learn more on the OSG status page: status.osg-htc.org"
         }

@@ -170,7 +170,7 @@ class DataManager {
 
         let usageJson;
         try {
-            usageJson = await fetchWithBackup(getProjects)
+            usageJson = (await fetchWithBackup(getProjects))['data']
         } catch(e) {
             this.error = "Error fetching usage data, learn more on the status page: status.osg-htc.org"
         }

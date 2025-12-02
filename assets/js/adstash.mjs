@@ -3,7 +3,19 @@
  */
 import ElasticSearchQuery, {ADSTASH_ENDPOINT, ADSTASH_SUMMARY_INDEX, DATE_RANGE} from "./elasticsearch-v1.js";
 
-export const getInstitutionsOverview = async (startTime = DATE_RANGE['now'], endTime = DATE_RANGE['oneYearAgo']) => {
+export async function getLatestOSPoolOverview() {
+    let json = undefined
+    let d = new Date()
+    d.setUTCHours(0,0,0,0)
+    while (!json || json['numJobs'] == 0) {
+        d.setUTCDate(d.getUTCDate() - 1)
+        json = await getInstitutionsOverview(d.getTime(), d.getTime())
+        json['date'] = d
+    }
+    return json
+}
+
+export const getInstitutionsOverview = async (startTime = DATE_RANGE['oneYearAgo'], endTime = DATE_RANGE['now']) => {
 	const elasticSearch = new ElasticSearchQuery(ADSTASH_SUMMARY_INDEX, ADSTASH_ENDPOINT)
 
 	let usageQueryResult = await elasticSearch.search({
@@ -11,7 +23,7 @@ export const getInstitutionsOverview = async (startTime = DATE_RANGE['now'], end
 		query: {
 			range: {
 				Date: {
-          gte: startTime,
+                    gte: startTime,
 					lte: endTime
 				}
 			}
@@ -110,7 +122,7 @@ export const getInstitutionsOverview = async (startTime = DATE_RANGE['now'], end
 	return {}
 }
 
-export const getInstitutions = async (startTime = DATE_RANGE['now'], endTime = DATE_RANGE['oneYearAgo']) => {
+export const getInstitutions = async (startTime = DATE_RANGE['oneYearAgo'], endTime = DATE_RANGE['now']) => {
 	const elasticSearch = new ElasticSearchQuery(ADSTASH_SUMMARY_INDEX, ADSTASH_ENDPOINT)
 
 	let usageQueryResult = await elasticSearch.search({
@@ -235,7 +247,7 @@ export const getInstitutions = async (startTime = DATE_RANGE['now'], endTime = D
 	return {}
 }
 
-export const getProjects = async (startTime = DATE_RANGE['now'], endTime = DATE_RANGE['oneYearAgo']) => {
+export const getProjects = async (startTime = DATE_RANGE['oneYearAgo'], endTime = DATE_RANGE['now']) => {
 	const elasticSearch = new ElasticSearchQuery(ADSTASH_SUMMARY_INDEX, ADSTASH_ENDPOINT)
 
 	let usageQueryResult = await elasticSearch.search({

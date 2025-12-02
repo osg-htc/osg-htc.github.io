@@ -88,7 +88,7 @@ class InstitutionDisplay{
 	}
 
 	async getData(Name){
-    return await fetchWithBackup(getInstitutionOverview, Name)
+    return (await fetchWithBackup(getInstitutionOverview, Name))['data']
 	}
 
 	fillTable(id, data) {

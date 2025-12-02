@@ -2,7 +2,7 @@
 
 
 import {generateHash} from './util.js';
-import {getProjects, getInstitutions, getInstitutionOverview, getProjectOverview} from './adstash.mjs';
+import {getProjects, getInstitutions, getInstitutionOverview, getProjectOverview, getLatestOSPoolOverview} from './adstash.mjs';
 
 const BACKUP_DIRECTORY = '/assets/data/backups/'
 
@@ -26,6 +26,9 @@ const backupMap = async () => {
     {
       function: fetchForBackup,
       args: ["https://osg-htc.org/ospool-data/data/daily_reports/latest.json"],
+    },
+    {
+      function: getLatestOSPoolOverview
     },
     {
       function: getProjects,
@@ -53,17 +56,18 @@ const fetchBackup = async (fetcher, ...args) => {
   const fs = await import('fs')
   const path = await import('path')
 
-  const backupFunctionHash = generateHash(String(fetcher) + JSON.stringify(args));
-
   const data = await fetcher(...args);
+  const backupData = {data, date: "2025-11-30T17:41:23.297Z"};
 
+  const backupFunctionHash = generateHash(String(fetcher) + JSON.stringify(args));
   const backupPath = path.join('./', BACKUP_DIRECTORY, `${backupFunctionHash}.json`);
-  fs.writeFileSync(backupPath, JSON.stringify(data, null, 2));
+  fs.writeFileSync(backupPath, JSON.stringify(backupData, null, 2));
 }
 
 const fetchWithBackup = async (fetcher, ...args) => {
   try {
-    return await fetcher(...args);
+    const data = await fetcher(...args);
+    return {data, date: new Date().toISOString(), fromBackup: false};
   } catch (error) {
     const backupFunctionHash = generateHash(String(fetcher) + JSON.stringify(args));
     const response = await fetch(`${BACKUP_DIRECTORY}${backupFunctionHash}.json`);
@@ -71,10 +75,29 @@ const fetchWithBackup = async (fetcher, ...args) => {
       throw new Error(`Backup not found: ${response.statusText}`);
     }
     const data = await response.json();
-    return data;
+    await updateTimelines(new Date(data['date']))
+    return {data: data['data'], date: data['date'], fromBackup: true};
   }
 }
 
+const updateTimelines = async (d) => {
+
+    // If there is a single date indicating the last update
+    const lastUpdatedNode = document.getElementById("last-updated");
+    if (lastUpdatedNode) {
+        const lastUpdatedDate = new Date(d);
+        lastUpdatedNode.textContent = `Last Updated: ${lastUpdatedDate.toUTCString()}`;
+    }
+
+    // If there is a timeline for a year that needs to be updated
+    const yearTimelineNode = document.getElementById("year-timeline");
+    if (yearTimelineNode) {
+        const lastUpdatedDate = new Date(d);
+        const yearAgoDate = new Date(d);
+        yearAgoDate.setFullYear(yearAgoDate.getFullYear() - 1);
+        yearTimelineNode.textContent = `${yearAgoDate.toLocaleDateString("en-US")} - ${lastUpdatedDate.toLocaleDateString("en-US")}`;
+    }
+}
 
 /**
  * Run on the backend to generate backups

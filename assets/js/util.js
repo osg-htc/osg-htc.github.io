@@ -148,10 +148,6 @@ function sortByteString(a, b) {
     return 0
 }
 
-function fetchWithBackup(url, backupUrl, options) {
-    return fetch(url, options).catch( () => fetch(backupUrl, options) )
-}
-
 function generateHash(string) {
   let hash = 0;
   for (const char of string) {

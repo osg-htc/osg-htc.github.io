@@ -49,7 +49,7 @@ class DataManager {
     }
 
     _getData = async () => {
-        return await fetchWithBackup(getInstitutions)
+        return (await fetchWithBackup(getInstitutions))['data']
     }
 
     /**

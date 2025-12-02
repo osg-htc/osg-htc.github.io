@@ -80,7 +80,7 @@ class ProjectDisplay{
 	}
 
 	async getData(Name){
-		return await fetchWithBackup(getProjectOverview, Name)
+		return (await fetchWithBackup(getProjectOverview, Name))['data']
 	}
 }
 
