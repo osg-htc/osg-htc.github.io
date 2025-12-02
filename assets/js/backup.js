@@ -2,7 +2,10 @@
 
 
 import {generateHash} from './util.js';
-import {getProjects, getInstitutions, getInstitutionOverview, getProjectOverview, getLatestOSPoolOverview} from './adstash.mjs';
+import {
+    getProjects, getInstitutions, getInstitutionOverview, getProjectOverview, getLatestOSPoolOverview,
+    getInstitutionsOverview
+} from './adstash.mjs';
 
 const BACKUP_DIRECTORY = '/assets/data/backups/'
 
@@ -36,6 +39,9 @@ const backupMap = async () => {
     {
       function: getInstitutions,
     },
+    {
+      function: getInstitutionsOverview
+    },
     ...(
       Object.values(await getProjects()).map( project => ({
         function: getProjectOverview,
@@ -57,7 +63,7 @@ const fetchBackup = async (fetcher, ...args) => {
   const path = await import('path')
 
   const data = await fetcher(...args);
-  const backupData = {data, date: "2025-11-30T17:41:23.297Z"};
+  const backupData = {data, date: new Date().toISOString()};
 
   const backupFunctionHash = generateHash(String(fetcher) + JSON.stringify(args));
   const backupPath = path.join('./', BACKUP_DIRECTORY, `${backupFunctionHash}.json`);

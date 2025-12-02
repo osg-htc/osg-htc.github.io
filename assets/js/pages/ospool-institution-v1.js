@@ -177,8 +177,8 @@ class FacilitySummaryPlugin extends BaseComponent {
     }
 
     setTotal() {
-        getInstitutionsOverview().then(data => {
-            this.setState(data);
+        fetchWithBackup(getInstitutionsOverview).then(data => {
+            this.setState(data['data']);
         });
     }
 
