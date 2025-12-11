@@ -259,12 +259,15 @@ class ProjectPage{
             }
         )
 
+        populate_aggregate_statistics()
+
         this.dataManager.consumerToggles.push(this.orgPieChart.update)
         this.dataManager.consumerToggles.push(this.FosPieChart.update)
         this.dataManager.consumerToggles.push(this.jobPieChart.update)
         this.dataManager.consumerToggles.push(this.cpuPieChart.update)
         this.dataManager.consumerToggles.push(this.gpuPieChart.update)
         this.dataManager.consumerToggles.push(this.projectCount.update)
+        this.dataManager.consumerToggles.push(populate_aggregate_statistics)
     }
 
     minimumJobsFilter = (data) => {
@@ -293,7 +296,7 @@ const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 const project_page = new ProjectPage()
 
 const populate_aggregate_statistics = async () => {
-    const data = await project_page.dataManager.getData()
+    const data = await project_page.dataManager.getFilteredData()
     console.log(data)
     document.getElementById("ospool-projects").textContent = Object.keys(data).length
     document.getElementById("ospool-jobs").textContent = Object.values(data).reduce((p, v) => p + v.numJobs, 0).toLocaleString()
@@ -301,5 +304,3 @@ const populate_aggregate_statistics = async () => {
     document.getElementById("ospool-fields-of-science").textContent = new Set(Object.values(data).map(v => v.detailedFieldOfScience)).size
     document.getElementById("ospool-aggregate-text").hidden = false
 }
-
-populate_aggregate_statistics()
