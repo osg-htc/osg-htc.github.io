@@ -1,4 +1,0 @@
-{
-   "issuer":"https://osg.htc.org/collabs/eic",
-   "jwks_uri":"https://osg.htc.org/collabs/eic/.well-known/vo-frontend-jlab-eic-scitokens-key.public.jwks"
-}
