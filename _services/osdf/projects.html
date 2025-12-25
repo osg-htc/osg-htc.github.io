@@ -156,6 +156,63 @@
     <div id="wrapper" class="overflow-auto"></div>
 </div>
 
+<div class="modal fade" id="project-display" tabindex="-1" aria-labelledby="project-Name" style="display: none;">
+    <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h2 id="project-Name" class="mb-0 project-Name"><span class="placeholder bg-light w-100"></span></h2>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div>
+                            <h5 class="mb-1">PI</h5>
+                            <p class="project-PIName placeholder-glow"><span class="placeholder w-100"></span></p>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Field of Research</h5><p class="project-FieldOfScience placeholder-glow"><span class="placeholder w-100"></span></p>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Organization </h5><p class="project-Organization placeholder-glow"><span class="placeholder w-100"></span></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h5 class="mb-1">Description</h5>
+                        <p class="project-Description  placeholder-glow"><span class="placeholder w-100"></span></p>
+                    </div>
+                </div>
+                <div class="row py-2 gx-1">
+                    <div class="col-12 col-md-6 placeholder-glow d-flex">
+                        <div class="card text-bg-dark flex-grow-1">
+                          <div class="card-header">
+                            OSDF Objects Transferred
+                          </div>
+                            <div class="card-body d-flex">
+                                <div id="project-osdf-objects" class="graph-slot flex-grow-1">
+                                    <span class="placeholder bg-light w-100"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 placeholder-glow d-flex">
+                        <div class="card text-bg-dark flex-grow-1">
+                          <div class="card-header">
+                            OSDF Bytes Transferred
+                          </div>
+                            <div class="card-body d-flex">
+                                <div id="project-osdf-bytes" class="graph-slot flex-grow-1">
+                                    <span class="placeholder bg-light w-100"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="row mt-3 justify-content-center">
     <div class="col-auto mt-3">
         <div class="d-flex align-items-center">
