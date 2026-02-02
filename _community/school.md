@@ -30,7 +30,9 @@ The School is ideal for graduate students in any science or research domain wher
 
 ## Next OSG School
 
-We will announce plans for OSG School 2026 once they have been finalized. 
+The next OSG School will be July 13–17, 2026 in Madison, Wisconsin. 
+
+Announcements will be shared on this page: [OSG School 2026](https://osg-htc.org/school-2026/)
 
 ## Materials
 
