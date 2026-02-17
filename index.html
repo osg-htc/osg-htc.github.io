@@ -2,6 +2,10 @@
 layout: default
 css_extension:
 - href: "/assets/css/homepage-v1.css"
+js_extension:
+- src: "/assets/js/homepage-v1.js"
+  loading: "defer"
+  type: "module"
 ---
 
 <div class="bg-secondary d-flex flex-column justify-content-center align-items-center py-5">
@@ -54,7 +58,7 @@ css_extension:
                             Sign up now and join the <a href="/projects">hundreds of researchers and educators</a> already using the OSPool!
                         </p>
                         <div class="mt-auto">
-                            <a href="https://portal.osg-htc.org/application" class="btn btn-secondary">Request An Account</a>
+                            <a href="https://portal.osg-htc.org/application" class="btn btn-secondary">Request Account</a>
                             <a href="https://portal.osg-htc.org/documentation/support_and_training/training/ospool_for_education/" class="btn btn-secondary">OSPool for Educators</a>
                         </div>
                     </div>
@@ -86,6 +90,7 @@ css_extension:
             </div>
         </div>
     </div>
+
     {% include /get/hero_story.liquid %}
     <div id="hero-image" class="vh-75 vh-md-50">
         <div class="container-xxl">
@@ -147,125 +152,182 @@ css_extension:
             </div>
         </div>
     </div>
-    <div class="py-4">
+
+    <div class="container-xxl my-4">
+            <div class="row border-4 border-primary g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 transition-all hover-shadow">
+                        <div class="card-header bg-secondary rounded-top-4 d-flex align-items-center justify-content-center">
+                            <h4 class="my-0 fw-bold py-2">
+                                <i class="bi bi-lightbulb-fill"></i>
+                                What We Do
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-0">The OSG facilitates access to distributed high throughput computing for research in the US. The resources accessible through the OSG are contributed by the community, organized by the OSG, and governed by the OSG consortium.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 transition-all hover-shadow">
+                        <div class="card-header bg-secondary rounded-top-4 d-flex align-items-center justify-content-center">
+                            <h4 class="my-0 fw-bold text-center">
+                                <i class="bi bi-globe2"></i>
+                                Submit Locally,<br/> Run Globally
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-0">Researchers can run jobs on OSG from their home institution or an <a href="https://portal.osg-htc.org/">OSG-Operated Access Point</a> (available for US-based research and scholarship).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 transition-all hover-shadow">
+                        <div class="card-header bg-secondary rounded-top-4 d-flex align-items-center justify-content-center">
+                            <h4 class="my-0 fw-bold py-2">
+                                <i class="bi bi-people-fill"></i>
+                                Sharing Is Key
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted mb-2"><em>Sharing is a core principle of the OSG.</em></p>
+                            <p class="mb-0">Over 350 million CPU hours delivered on the OSPool in the past year were opportunistic, contributed by university campuses, government-supported supercomputing facilities and research collaborations. Sharing allows individual researchers to access larger computing resources and large organizations to keep their utilization high.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 transition-all hover-shadow">
+                        <div class="card-header bg-secondary rounded-top-4 d-flex align-items-center justify-content-center">
+                            <h4 class="my-0 fw-bold py-2">
+                                <i class="bi bi-building"></i>
+                                Resource Providers
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-0">The OSG consists of computing and storage elements at over 100 individual sites spanning the United States. These sites, primarily at universities and national labs, range in size from a few hundred to tens of thousands of CPU cores.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 transition-all hover-shadow">
+                        <div class="card-header  bg-secondary rounded-top-4 d-flex align-items-center justify-content-center">
+                            <h4 class="my-0 fw-bold py-2">
+                                <i class="bi bi-stack"></i>
+                                OSG Software Stack
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-0">The OSG provides an integrated software stack to enable high throughput computing; <a href="https://support.opensciencegrid.org/support/home">visit our technical documents website for information</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 transition-all hover-shadow">
+                        <div class="card-header bg-secondary rounded-top-4 d-flex align-items-center justify-content-center">
+                            <h4 class="my-0 fw-bold py-2">
+                                <i class="bi bi-diagram-3-fill"></i>
+                                Coordinating CI Services
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-0">NSF’s <a href="https://www.nsf.gov/cise/oac/vision/blueprint-2019/">Blueprint for National Cyberinfrastructure Coordination Services</a> highlights OSG as providing distributed high throughput computing services to the U.S. research community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Featured User Statistics Section -->
+    <div class="my-4" id="ospool-featured-user">
+        <div class="container-xxl">
+            <div class="bg-dark rounded text-white">
+                <!-- Project Information -->
+                <div class="row mb-4 py-3 px-4">
+                    <div class="col-md-8 d-flex flex-column">
+                        <h6 class="my-0 text-secondary">Featured User</h2>
+                        <p class="h2 mb-1" id="project-spotlight-title">BiomedInfo</p>
+                        <span class="badge bg-primary me-auto" id="project-spotlight-fos">Bioinformatics</span>
+                        <hr />
+                        <p id="project-spotlight-description">
+                            Development and application of software tools for performing large-scale biomedical informatics on microbial genome sequence data.
+                        </p>
+                        <p class="mt-auto mb-0">Managed by <strong id="project-spotlight-pi">Erik Wright</strong> at the <strong id="project-spotlight-organization">University of Pittsburgh</strong>.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row g-2">
+                            <div class="col-12">
+                                <div class="bg-secondary rounded p-3 text-center h-100">
+                                    <div class="display-6 fw-bold text-white" id="project-spotlight-jobs-ran">57M</div>
+                                    <small class="text-light">Jobs Ran</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-secondary rounded p-3 text-center h-100">
+                                    <div class="display-6 fw-bold text-white" id="project-spotlight-cpu-hours">5M</div>
+                                    <small class="text-light">CPU Core Hours</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-secondary rounded p-3 text-center h-100">
+                                    <div class="display-6 fw-bold text-white" id="project-spotlight-gpu-hours">85</div>
+                                    <small class="text-light">GPU Hours</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-secondary rounded p-3 text-center h-100">
+                                    <div class="display-6 fw-bold text-white" id="project-spotlight-osdf-objects">75M</div>
+                                    <small class="text-light">OSDF Objects</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-secondary rounded p-3 text-center h-100">
+                                    <div class="display-6 fw-bold text-white" id="project-spotlight-osdf-bytes">58TB</div>
+                                    <small class="text-light">OSDF Bytes</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-4">
         <div class="container-xxl">
             <div class="row gx-2">
                 {% for map in site.data.maps %}
                     <div class="col-12 col-sm-6 col-lg-3 {% cycle '', 'd-none d-sm-block', 'd-none d-lg-block', 'd-none d-lg-block' %}">
                         <a href="https://map.osg-htc.org{{ map.params }}">
                             <div class="rounded bg-white hover-shadow ">
-                                <h4 class="m-0 p-2 ps-0">{{ map.title }}</h4>
                                 <picture>
                                     <source srcset="{{ map.image }}.webp">
-                                    <img class="img-fluid rounded-bottom" src="{{ map.image }}.png">
+                                    <img class="img-fluid rounded" src="{{ map.image }}.png">
                                 </picture>
+                                <h6 class="m-0 p-2 ps-0 text-center">{{ map.title }}</h4>
                             </div>
                         </a>
                     </div>
                 {% endfor %}
             </div>
-            <hr/>
-            <h5 id="osg-by-maps" class="text-center">OSG By Maps</h5>
         </div>
     </div>
-    <div class="bg-secondary py-4 mb-4">
-        <div class="container-xxl">
-            <div class="row justify-content-center gx-2">
-                {% include get/spotlights.liquid %}
-                {% for article in spotlights limit: 3 %}
-                    <div class="col-12 col-md-6 col-xl-4 {% cycle 'order-1 order-md-2', 'd-none d-md-block order-3', 'd-none d-xl-block order-3' %}">
-                        {% include /cards/spotlight-card.html height='150' no_date="true" %}
-                    </div>
-                {% endfor %}
-            </div>
-            <hr/>
-            <h5 class="mb-0 text-center">User Spotlights</h5>
-        </div>
-    </div>
-    <div class="container-xxl">
-        <div class="row border-4 border-primary ">
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3>What We Do</h3>
-                        <hr>
-                        <p>The OSG facilitates access to distributed high throughput computing for research in the US.
-                            The resources accessible through the OSG are contributed by the community, organized by the
-                            OSG, and governed by the OSG consortium.
-                            In the last 12 months, we have provided more than 1.2 billion CPU hours to researchers
-                            across a wide variety of projects.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3>Submit Locally, Run Globally</h3>
-                        <hr>
-                        <p>Researchers can run jobs on OSG from their home institution or an <a
-                                    href="https://portal.osg-htc.org/">OSG-Operated Access Point</a> (available for
-                            US-based research and scholarship).</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3>Sharing Is Key</h3>
-                        <hr>
-                        <p><em>Sharing is a core principle of the OSG.</em> Over 100 million CPU hours delivered on the
-                            OSG in the
-                            past year were opportunistic, contributed by university campuses, government-supported
-                            supercomputing facilities and research collaborations.
-                            Sharing allows individual researchers to access larger computing resources and large
-                            organizations to keep their utilization high.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3>Resource Providers</h3>
-                        <hr>
-                        <p>The OSG consists of computing and storage elements at over 100 individual sites spanning the
-                            United States.
-                            These sites, primarily at universities and national labs, range in size from a few hundred
-                            to tens of thousands of CPU cores.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3>The OSG Software Stack</h3>
-                        <hr>
-                        <p>The OSG provides an integrated software stack to enable high throughput computing; <a
-                                    href="https://support.opensciencegrid.org/support/home">visit our technical
-                                documents website for information</a>.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3>Coordinating CI Services</h3>
-                        <hr>
-                        <p>
-                            NSF’s
-                            <a href="https://www.nsf.gov/cise/oac/vision/blueprint-2019/">Blueprint
-                                for National Cyberinfrastructure Coordination Services</a>
-                            lays out the need for coordination services to bring together the distributed elements of a
-                            national CI ecosystem.
-                            It highlights OSG as providing distributed high throughput computing services to the U.S.
-                            research community.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-light my-4">
+
+<!--     <div class="bg-secondary py-4 mb-4"> -->
+<!--         <div class="container-xxl"> -->
+<!--             <div class="row justify-content-center gx-2"> -->
+<!--                 {% include get/spotlights.liquid %} -->
+<!--                 {% for article in spotlights limit: 3 %} -->
+<!--                     <div class="col-12 col-md-6 col-xl-4 {% cycle 'order-1 order-md-2', 'd-none d-md-block order-3', 'd-none d-xl-block order-3' %}"> -->
+<!--                         {% include /cards/spotlight-card.html height='150' no_date="true" %} -->
+<!--                     </div> -->
+<!--                 {% endfor %} -->
+<!--             </div> -->
+<!--             <hr/> -->
+<!--             <h5 class="mb-0 text-center">User Spotlights</h5> -->
+<!--         </div> -->
+<!--     </div> -->
+
+    <div class="my-4">
         <div class="container-xxl">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-10 col-xl-8">
@@ -277,14 +339,13 @@ css_extension:
                         access to the OSPool (available to US-based academic/govt/non-profit research projects).</p>
                     <p>For any other inquiries, reach us at: <a
                                 href="mailto:support@osg-htc.org">support@osg-htc.org</a>.</p>
-                    <p>To see the breadth of the OSG impact, <a href="https://gracc.opensciencegrid.org">explore our
-                            accounting portal</a>.</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-xxl">
-        <div class="card">
+
+    <div class="container-md">
+        <div class="card border-0">
             <div class="card-body">
                 <h3>Support</h3>
                 <p class="text-muted">
