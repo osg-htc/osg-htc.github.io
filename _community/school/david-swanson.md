@@ -72,3 +72,13 @@ The second recipient of the OSG David Swanson Award in 2023 was **Jimena Gonzál
 	* [Presentation at HTC 24](https://agenda.hep.wisc.edu/event/2175/contributions/31164/)
 
 The 2024 recipient of the OSG David Swanson Award is **Cort Posnansky**, who attended the OSG School last year, in 2023. As a graduate student in Physics at Penn State University, and a member of the LIGO-Virgo-KAGRA collaboration, he has been using the knowledge and skills gained at the OSG School to improve several HTCondor workflows used to detect gravitational waves. In addition, Cort has been assisting scientists outside his field in taking advantage of Penn State computing resources with HTCondor, and hosting workshops to teach skills learned at the OSG School. 
+
+### 2025
+
+* **Brandi Pessman**, University of Nebraska - Lincoln (Biological Sciences, OSGS23)
+	* "Reconstructing spider webs from behavioral tracking"
+	* [Presentation at HTC 25](https://agenda.hep.wisc.edu/event/2297/contributions/33499/)
+	* [Spotlight Story](https://osg-htc.org/spotlights/david-swanson-2025.html)
+
+The 2025 recipient of the OSG David Swanson Award is **Brandi Pessman**, who attended the OSG School in 2023. Brandi came to the School with an intractable data problem - 20TB of video data and no computing resources that could support the scale of machine learning analysis she wanted to do. Over the next two years, she used the skills she learned at the OSG School, as well as ongoing staff support and the capacity of the Open Science Pool to analyze her data using machine learning tools. Through her experiences working with the OSPool, Brandi also built up her data science toolkit, ultimately pursuing a data science position after graduation. 
+
