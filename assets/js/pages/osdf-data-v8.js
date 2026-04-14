@@ -122,8 +122,9 @@ class ProjectDisplay{
         }
 
         // If there is a dataRepostioryUrl then make it a link
-        if(repositoryUrl) {
-            this.updateTextValue("data-organization-url", `<a class="btn btn-secondary" href="${repositoryUrl['url']}" target="_blank">${repositoryUrl["label"] || "View Datasets"}</a>`)
+        this.updateTextValue("data-organization-url", null)
+        if(repositoryUrl && repositoryUrl?.url) {
+          this.updateTextValue("data-organization-url", `<a class="btn btn-secondary" href="${repositoryUrl['url']}" target="_blank">${repositoryUrl["label"] || "View Datasets"}</a>`)
         }
 
         // If there is a publicObject then update those pieces
