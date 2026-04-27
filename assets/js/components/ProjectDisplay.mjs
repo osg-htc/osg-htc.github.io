@@ -23,12 +23,17 @@ class ProjectDisplay{
 		})
 	}
 
+  updateIFrame(name) {
+    document.getElementById("project-institution-contibutors-map").src = "https://osg-htc.org/maps/projects/?sidebarHidden=true&project=" + name
+  }
+
 	async update({Name, PIName, FieldOfScience, Organization, Description}) {
 		this.updateTextValue("project-Name", Name)
 		this.updateTextValue("project-PIName", PIName)
 		this.updateTextValue("project-FieldOfScience", FieldOfScience)
 		this.updateTextValue("project-Organization", Organization)
-		this.updateTextValue("project-Description", Description)
+    this.updateTextValue("project-Description", Description)
+    this.updateIFrame(Name)
 		this.setUrl(Name)
 		this.clearGraphSlots()
 		this.parentNode.addEventListener("shown.bs.modal", () => {
@@ -52,7 +57,6 @@ class ProjectDisplay{
 	}
 
 	async updateGraphs(Name){
-
 		const data = await this.getData(Name)
 		this.updateInstitutionPieChart(data)
 		Count("project-institution-count", Object.keys(data).length, 300)
