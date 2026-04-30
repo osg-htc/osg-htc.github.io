@@ -23,21 +23,38 @@ class ProjectDisplay{
 		})
 	}
 
-  updateIFrame(name) {
-    document.getElementById("project-institution-contibutors-map").src = "https://osg-htc.org/maps/projects/?sidebarHidden=true&project=" + name
+  clearIFrame(name) {
+    let container = document.getElementById("project-map-container")
+    let iframe = container.getElementsByTagName("iframe")[0]
+    container.removeChild(iframe)
+    let placeholder = document.createElement("span")
+    placeholder.className = "placeholder bg-light w-100"
+    container.appendChild(placeholder)
   }
 
-	async update({Name, PIName, FieldOfScience, Organization, Description}) {
+  updateIFrame(name) {
+    let container = document.getElementById("project-map-container")
+    let placeholder = container.getElementsByClassName("placeholder")[0]
+    container.removeChild(placeholder)
+    let iframe = document.createElement("iframe")
+    iframe.className = "w-100 rounded"
+    iframe.style = "min-height: 450px; border: none;"
+    iframe.src="https://osg-htc.org/maps/projects/?sidebarHidden=true&project=" + name
+    container.appendChild(iframe)
+  }
+
+  async update({Name, PIName, FieldOfScience, Organization, Description}) {
 		this.updateTextValue("project-Name", Name)
 		this.updateTextValue("project-PIName", PIName)
 		this.updateTextValue("project-FieldOfScience", FieldOfScience)
 		this.updateTextValue("project-Organization", Organization)
     this.updateTextValue("project-Description", Description)
-    this.updateIFrame(Name)
-		this.setUrl(Name)
-		this.clearGraphSlots()
+    this.setUrl(Name)
+    this.clearGraphSlots()
+    this.clearIFrame()
 		this.parentNode.addEventListener("shown.bs.modal", () => {
-			this.updateGraphs(Name)
+      this.updateGraphs(Name)
+      this.updateIFrame(Name)
 		}, {once : true})
 		this.display_modal.show()
 	}
