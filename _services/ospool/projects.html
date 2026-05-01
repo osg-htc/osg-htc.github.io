@@ -33,6 +33,46 @@
     tr td:nth-child(2) {
         text-decoration: underline;
     }
+
+    /* Enable and disable interaction */
+    #project-map-container iframe {
+        pointer-events: none;
+    }
+    #project-map-container.active iframe {
+        pointer-events: auto;
+    }
+
+    .iframe-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 20px;
+        z-index: 5;
+        
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+
+        pointer-events: none; 
+    }
+
+    #project-map-container.active .iframe-overlay {
+        opacity: 0;
+    }
+
+    .iframe-overlay span {
+        color: white;
+        background: rgba(0, 0, 0, 0.45);
+        padding: 4px 12px;
+        border-radius: 8px;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
 </style>
 <div class="container-xxl py-5">
     <div class="row justify-content-center">
@@ -251,8 +291,12 @@
                         Map of Institutions Providing Project Resources
                       </div>
                       <div class="card-body">
-                        <div id="project-map-container" class="ratio ratio-16x9">
+                        <div id="project-map-container" class="ratio ratio-16x9" onclick="this.classList.add('active')"
+                          onmouseleave="this.classList.remove('active')">
                           <iframe class="placeholder bg-light w-100"></iframe>
+                          <div class="iframe-overlay">
+                            <span>Click to Interact</span>
+                          </div>
                         </div>
                       </div>
                     </div>
