@@ -47,14 +47,14 @@ permalink: /services/osdf/alphafold.html
   <div class="row justify-content-center">
     <div class="col-12 col-xl-7 col-lg-8 col-md-10">
       <p>
-        Running AlphaFold3 at scale can be challenging because AlphaFold3 jobs spend
-        substantial time preparing inputs before structure prediction can begin. For
-        each protein sequence, the workflow needs to search large reference
-        databases to build alignments, leading to long runtimes, high disk I/O
-        use, and dependence on very large shared datasets (>750GB). These requirements can make
-        AlphaFold3 jobs difficult to schedule efficiently on shared computing systems,
-        especially for large protein-protein interaction studies where the same
-        protein chains may be analyzed repeatedly across many pairwise combinations.
+        Running AlphaFold3 at scale can be challenging because jobs often spend a long
+        time preparing inputs before structure prediction begins, including searching
+        large reference databases to build alignments. This can lead to long runtimes,
+        heavy disk I/O use, and scheduling challenges on shared computing
+        systems, especially when the same protein chains are analyzed repeatedly across
+        many projects. The AlphaFold3 Alignment Library helps reduce this repeated work
+        by allowing compatible OSPool workflows to reuse precomputed alignments when
+        they are already available.
       </p>
 
       <p>
