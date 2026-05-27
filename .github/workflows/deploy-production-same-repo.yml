@@ -51,6 +51,9 @@ jobs:
       - name: Download Backup Data
         run: npm run backup
 
+      - name: Download updated Alphafold3 data
+        run: curl -k https://149.165.170.71.sslip.io/v1/stats > assets/data/alphafold-caching.json
+
       - name: Build and Deploy
         run: |
           # Build the production version of website
