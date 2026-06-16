@@ -16,7 +16,7 @@ repositoryUrl:
 fieldOfScience: Computer Systems Networking and Telecommunications  # 11.0901
 numberOfDatasets: 1
 dataVisibility: public
-publicObject: /routeviews/chicago/route-views.chicago/bgpdata/2025.03/RIBS/rib.20250319.0400.bz2
+publicObject: /routeviews/route-views.chicago/bgpdata/2025.03/RIBS/rib.20250319.0400.bz2
 size: 113627027734528  # bytes
 display: true
 rank: 1 # zero is lowest priority
