@@ -196,22 +196,24 @@ class Table {
                 name: '',
                 formatter: (cell, row, _) => {
 
-                    const id = row["_cells"][0]['data']
-                    const data = this.data_function()[id]
+                    const repositoryUrl = row["_cells"][5]['data']
 
-                    // If there is a dataRepostioryUrl then make it a link
-                    if(data?.["repositoryUrl"]){
-                        return gridjs.html(`<a class="btn btn-secondary" href="${data["repositoryUrl"]["url"]}" target="_blank" onclick="event.stopPropagation()">${data["repositoryUrl"]["label"] || "View Datasets"}</a>`)
+                    // If there is a dataRepostitoryUrl then make it a link
+                    if(repositoryUrl?.url != null){
+                        return gridjs.html(`<a class="btn btn-secondary" href="${repositoryUrl.url}" target="_blank" onclick="event.stopPropagation()">${repositoryUrl?.label || "View Datasets"}</a>`)
                     }
 
-                    return gridjs.html(`<a class="btn btn-outline-dark" href="${data["organizationUrl"]}" target="_blank" onclick="event.stopPropagation()">Learn More</a>`)
+                    return gridjs.html(`<a class="btn btn-outline-dark" href="${cell}" target="_blank" onclick="event.stopPropagation()">Learn More</a>`)
                 },
                 sort: false,
                 attributes: {
                     className: "m-0"
                 },
                 width: "124px"
-            },
+            }, {
+                id: 'repositoryUrl',
+                hidden: true
+            }
         ]
 
         let table = this;
@@ -224,14 +226,14 @@ class Table {
                 td: "pointer",
                 paginationButton: "mt-2 mt-sm-0"
             },
-            data: () => {
+            data: async () => {
 
 
                 const order = (d) => {
                     return d?.rank * 100 + !!d?.publicObject * 10 + !!d?.size * 1 + !!d?.oneYearReads * 1 + !!d?.numberOfDatasets * 1
                 }
 
-                const data = Object.values(table.data_function())
+                const data = Object.values(await table.data_function())
 
                 return data.sort((a, b) => order(b) - order(a))
 
@@ -252,7 +254,7 @@ class Table {
     update = async () => {
         let table = this
         this.grid.updateConfig({
-            data: Object.values(table.data_function()).sort((a, b) => b.jobs - a.jobs)
+            data: async () => Object.values(await table.data_function()).sort((a, b) => b.jobs - a.jobs)
         }).forceRender();
     }
     row_click = async (PointerEvent, e) => {
@@ -280,21 +282,10 @@ class DataManager {
         this.toggleConsumers()
     }
 
-    getData = () => {
+    getData = async () => {
 
-        let data = {
-            {% for d in site.data.osdf_namespace_metadata %}
-                {{ d[0] | jsonify }}: {
-                    {% for k in d[1] %}
-                        {% if k[0] == "description" %}
-                            {{ k[0] }}: {{ k[1] | markdownify | jsonify }},
-                        {% else %}
-                            {{ k[0] }}: {{ k[1] | jsonify }} ,
-                        {% endif %}
-                    {% endfor %}
-                },
-            {% endfor %}
-        }
+        const r = await fetch("https://fabaid.io/data/data-repositories.json")
+        const data = await r.json()
 
         const visibleData = Object.entries(data).reduce((reduced, v) => {
             if(v[1]['display'] && v[1]['name'] ){
@@ -319,8 +310,8 @@ class DataManager {
      * Filters the original data and returns the remaining data
      * @returns {Promise<*>}
      */
-    getFilteredData = () => {
-        let filteredData = this.getData()
+    getFilteredData = async () => {
+        let filteredData = await this.getData()
         for(const filter of Object.values(this.filters)) {
             filteredData = filter(filteredData)
         }
@@ -371,14 +362,16 @@ class DataPage{
         this.table = new Table(this.wrapper, this.dataManager.getFilteredData, this.projectDisplay.update.bind(this.projectDisplay))
         this.dataManager.consumerToggles.push(this.table.update)
 
+        const data = await this.dataManager.getData()
+
         let urlProject = new URLSearchParams(window.location.search).get('repository')
         if (urlProject) {
-            this.projectDisplay.update((this.dataManager.getData()[urlProject]))
+            this.projectDisplay.update((data[urlProject]))
         }
 
         // Update the repository count
-        document.getElementById("repository-count").innerText = Object.values(this.dataManager.getData()).length
-        counter("connected", Object.values(this.dataManager.getData()).length, 20)
+        document.getElementById("repository-count").innerText = Object.values(data).length
+        counter("connected", Object.values(data).length, 20)
     }
 }
 
