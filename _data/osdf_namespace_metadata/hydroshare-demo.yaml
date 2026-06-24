@@ -1,0 +1,14 @@
+description: |
+  Hydroshare is CUAHSI's online collaboration environment for sharing data, models, and code.
+organization: Hydroshare # Name of the organization
+dataVisibility: public # public, or private
+size: # In bytes so I can parse how I want
+bytesXferd: # In bytes so I can parse how I want
+url: https://www.hydroshare.org/ # Organization URL
+fieldOfScience: 40 # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+numberOfDatasets: 4 # Number of datasets in the namespace
+rank: 0 # Rank of the namespace, 0 will have the lowest priority
+inProgress: false # Whether or not the namespace is in progress
+display: false # Whether or not to display this namespace
+name: Demo Hydroshare Data Endpoint # Human readable name of the namespace
+organizationUrl: https://www.hydroshare.org/
