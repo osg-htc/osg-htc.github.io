@@ -142,6 +142,14 @@ css_extension:
                                 {% include /cards/horizontal-news.html class="mt-2" src=data.banner.path %}
                             {% endfor %}
                         </div>
+                    {% else %}
+                        {% assign recent_presentations = site.presentations | where_exp: "presentation", "presentation.publish_on contains site.key" | sort: "date" | reverse %}
+                        <div class="p-2 bg-white rounded flex-grow-1">
+                            <h6 class="mb-1"><a href="/presentations.html">Presentations &amp; Videos</a></h6>
+                            {% for data in recent_presentations limit: 5 %}
+                                {% include /cards/presentation-summary.html data=data class="mt-2" %}
+                            {% endfor %}
+                        </div>
                     {% endif %}
                 </div>
             </div>

@@ -15,7 +15,9 @@ excerpt: Facilitation Services leverage the CHTC-pioneered principles of Researc
 weight: 2
 featured: true
 ---
-<div class="container-xxl mw-1000" markdown="1">
+<div class="container-xxl">
+<div class="row justify-content-center">
+<div class="col-12 col-lg-8 mw-1000" markdown="1">
 
 <h1 class="mini-bar">{{ page.title }}</h1>
 
@@ -165,4 +167,18 @@ education, and training programs. As part of the services for campuses, the RCF
 team leverages its own experience in dHTC for end-users to offer dHTC
 Facilitation training for personnel at campuses.</p>
 
+</div>
+<div class="col-12 col-lg-3 mt-4 mt-lg-0">
+    {% assign facilitation_presentations = site.presentations | where_exp: "presentation", "presentation.keywords contains 'Facilitation'" | sort: "date" | reverse %}
+    {% if facilitation_presentations.size != 0 %}
+    <aside class="sticky-lg-top" style="top: 1rem;">
+        <h4 class="mini-bar">Presentations &amp; Videos</h4>
+        {% for presentation in facilitation_presentations limit: 2 %}
+            {% include /cards/presentation-summary.html data=presentation stacked=true class="mb-3" %}
+        {% endfor %}
+        <a class="btn btn-outline-primary text-decoration-none" href="{{ '/presentations.html?keyword=Facilitation' | relative_url }}">See All</a>
+    </aside>
+    {% endif %}
+</div>
+</div>
 </div>
