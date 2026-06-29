@@ -1,0 +1,42 @@
+{% if include.data %}
+{% assign data = include.data %}
+{% endif %}
+
+{% if data.youtube_video_id %}
+    {% assign presentation_thumb = "https://img.youtube.com/vi/" | append: data.youtube_video_id | append: "/hqdefault.jpg" %}
+{% elsif data.image %}
+    {% assign presentation_thumb = data.image.path | relative_url %}
+{% endif %}
+
+{% if include.stacked %}
+<a class="text-decoration-none d-block hover-highlight {{ include.class }}" href="{{ data.url | relative_url }}">
+    <div class="border-0">
+        {% if presentation_thumb %}
+        <img class="w-100 rounded mb-2" style="aspect-ratio: 1.91; object-fit: cover;" src="{{ presentation_thumb }}" alt="{{ data.title }} thumbnail">
+        {% endif %}
+        {% if data.keywords %}
+        <div class="mb-1">
+            {% for tag in data.keywords %}
+                <span class="tag-badge badge">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <h6 class="text-decoration-none text-dark mb-0">{{ data.title }}</h6>
+        <div><small class="text-muted text-decoration-none">{{ data.presenter }}{% if data.event %} at {{ data.event }}{% endif %}</small></div>
+        <div><small class="text-muted text-decoration-none">{{ data.date | date: "%B %e, %Y" }}</small></div>
+    </div>
+</a>
+{% else %}
+<a class="text-decoration-none d-block hover-highlight {{ include.class }}" href="{{ data.url | relative_url }}">
+    <div class="border-0 d-flex">
+        {% if presentation_thumb %}
+        <img class="h-80px rounded" style="aspect-ratio: 1; object-fit: cover;" src="{{ presentation_thumb }}" alt="{{ data.title }} thumbnail">
+        {% endif %}
+        <div class="ps-2">
+            <h6 class="text-decoration-none text-dark mb-0">{{ data.title }}</h6>
+            <div><small class="text-muted text-decoration-none">{{ data.presenter }}{% if data.event %} at {{ data.event }}{% endif %}</small></div>
+            <div><small class="text-muted text-decoration-none">{{ data.date | date: "%B %e, %Y" }}</small></div>
+        </div>
+    </div>
+</a>
+{% endif %}
