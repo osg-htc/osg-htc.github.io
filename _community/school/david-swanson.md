@@ -55,10 +55,10 @@ The 2022 recipient of the David Swanson Award was **Connor Natzke**, who attende
 
 * **Aashish Tripathee**, University of Michigan (Physics, OSGVSP20)
 	* "Leveraging [HTC] to search for continuous gravitational waves"
-	* [Presentation at HTC 23](https://agenda.hep.wisc.edu/event/2014/contributions/28462/)
+	* [Presentation at HTC23](https://agenda.hep.wisc.edu/event/2014/contributions/28462/)
 * **Jimena Gonzalez**, UW–Madison (Physics, OSGVS21)
 	* "Searching for gravitational lenses in the Dark Energy Survey"
-	* [Presentation at HTC 23](https://agenda.hep.wisc.edu/event/2014/contributions/28463/)
+	* [Presentation at HTC23](https://agenda.hep.wisc.edu/event/2014/contributions/28463/)
 
 One of the 2023 David Swanson Award recipients was **Aashish Tripathee**, who attended the OSG School virtually in 2020. As a member of the LIGO Collaboration, he came to the School with a basic knowledge of using high-throughput computing tools on LIGO systems. The School helped him access even more computing capacity and in the past 3 years, he has used tens of millions of computing hours over the LIGO and Open Science pools. Aashish, a post-doc at the University of Michigan, shared at HTC23 about the search for _continuous_ gravitational waves using distributed high throughput computing.
 
@@ -69,7 +69,7 @@ The second recipient of the OSG David Swanson Award in 2023 was **Jimena Gonzál
 
 * **Cort Posnansky**, Penn State University (Physics, OSGS23)
 	* "Finding Compact Binary Mergers with GstLAL"
-	* [Presentation at HTC 24](https://agenda.hep.wisc.edu/event/2175/contributions/31164/)
+	* [Presentation at HTC24](https://agenda.hep.wisc.edu/event/2175/contributions/31164/)
 
 The 2024 recipient of the OSG David Swanson Award is **Cort Posnansky**, who attended the OSG School last year, in 2023. As a graduate student in Physics at Penn State University, and a member of the LIGO-Virgo-KAGRA collaboration, he has been using the knowledge and skills gained at the OSG School to improve several HTCondor workflows used to detect gravitational waves. In addition, Cort has been assisting scientists outside his field in taking advantage of Penn State computing resources with HTCondor, and hosting workshops to teach skills learned at the OSG School. 
 
@@ -77,8 +77,18 @@ The 2024 recipient of the OSG David Swanson Award is **Cort Posnansky**, who att
 
 * **Brandi Pessman**, University of Nebraska - Lincoln (Biological Sciences, OSGS23)
 	* "Reconstructing spider webs from behavioral tracking"
-	* [Presentation at HTC 25](https://agenda.hep.wisc.edu/event/2297/contributions/33499/)
+	* [Presentation at HTC25](https://agenda.hep.wisc.edu/event/2297/contributions/33499/)
 	* [Spotlight Story](https://osg-htc.org/spotlights/david-swanson-2025.html)
 
 The 2025 recipient of the OSG David Swanson Award is **Brandi Pessman**, who attended the OSG School in 2023. Brandi came to the School with an intractable data problem - 20TB of video data and no computing resources that could support the scale of machine learning analysis she wanted to do. Over the next two years, she used the skills she learned at the OSG School, as well as ongoing staff support and the capacity of the Open Science Pool to analyze her data using machine learning tools. Through her experiences working with the OSPool, Brandi also built up her data science toolkit, ultimately pursuing a data science position after graduation. 
+
+### 2026
+
+* **Saloni Bhogale**, University of Wisconsin - Madison (Political Science, OSGS23)
+	* "Justice at Scale: Leveraging High-Throughput Computing to Analyze Millions of Judical Records"
+	* [Presentation at HTC26](https://agenda.hep.wisc.edu/event/2432/contributions/37636/)
+	* [Spotlight Story](https://osg-htc.org/spotlights/david-swanson-awardee-saloni-bhogale-presents-at-htc-week-2026.html)
+
+The 2026 recipient of the OSG David Swanson Award is **Saloni Bhogale**, who attended the OSG School in 2023. Bhogale is the first David Swanson awardee whose research focused on political science. Her research explored what determines the effectiveness of legal institutions in the developing world and their ability to achieve stated goals for the people they are meant to serve. Bhogale's research required her to work with about 80 million electronic case records from the Indian government's website. Bhogale is continuing her research as a UW-Madison Ph.D. candidate specializing in comparative politics and political methodology.
+
 
