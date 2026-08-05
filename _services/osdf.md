@@ -333,7 +333,7 @@ The caches in the distribution network are primarily managed by PATh staff but c
 </div>
 <div class="row justify-content-center">
     <div class="col-auto mt-3">
-        <a href="https://pelicanplatform.org/" target="_blank">
+        <a href="https://osg-htc.org/services/osdf" target="_blank">
             <img width="320" src="/assets/images/logos/OSDF_OSPool_Logos.png" alt="Pelican Logo" class="img-fluid">
         </a>
     </div>
