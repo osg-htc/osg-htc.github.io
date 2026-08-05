@@ -6,21 +6,13 @@ layout: text-optimized-width
 
 <h1 class="mini-bar">{{ page.title }}</h1>
 
-{% assign now = "now" | date: "%s" %}
-{% if now < "1712015999" %}
-<div class="alert alert-secondary">
-    Applications are now open for OSG School 2024! Learn more on the official 
-    <a href="https://osg-htc.org/school-2024/#applications">OSG School 2024 Homepage</a>.
-</div>
-{% endif %}
-
 The OSG Consortium runs the OSG School, an annual education event for researchers who want to learn to use DHTC methods and
 tools.  It is held each summer at the University of Wisconsin–Madison.
 
 
-<img src="/assets/images/osgschool25-attendees.jpeg" class="w-100" /> 
+<img src="/assets/images/osgschool26-attendees.jpg" class="w-100" /> 
 
-*OSG School 2024 Group Photo*
+*OSG School 2026 Group Photo*
 
 ## Overview
 
@@ -30,9 +22,11 @@ The School is ideal for graduate students in any science or research domain wher
 
 ## Next OSG School
 
-The next OSG School will be July 13–17, 2026 in Madison, Wisconsin. 
+The most recent School, OSG School 2026, was held July 13–17, 2026 in Madison, Wisconsin —
+read the recap: [OSG School Students Build HTC Skills to Advance Their Research](/spotlights/osg-school-students-build-skills.html).
 
-Announcements will be shared on this page: [OSG School 2026](https://osg-htc.org/school-2026/)
+We will announce plans for OSG School 2027 on this page once they have been finalized.
+Applications are expected to open in March 2027.
 
 ## Materials
 
@@ -44,6 +38,7 @@ which means that we were able to record lectures to complement lecture and exerc
 
 ### Past OSG Schools and Materials
 
+- [OSG School 2026](https://osg-htc.org/school-2026/) — 13–17 July 2026
 - [OSG School 2025](https://osg-htc.org/school-2025/) — 23-27 June 2025
 - [OSG School 2024](https://osg-htc.org/school-2024/) — 5–9 August 2024
 - [OSG School 2023](https://osg-htc.org/user-school-2023/) — 7–11 August 2023
