@@ -58,11 +58,11 @@ the broader HTC community.
 <div class="card">
 	<div class="card-body">
 		<h3 class="card-title mt-1">
-			HTC25
+			HTC26
 		</h3>
 		<hr/>
 		<p class="card-text">
-			HTC25 brings together researchers, campuses, science collaborations, 
+			HTC26 brings together researchers, campuses, science collaborations, 
 			facilitators, administrators, government representatives, and professionals 
 			interested in high throughput computing to: 
 	<ul>
