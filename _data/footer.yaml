@@ -24,9 +24,9 @@
     - name: User
       url: https://portal.osg-htc.org
     - name: System Admin
-      url: https://opensciencegrid.org/docs/
+      url: https://osg-htc.org/docs/
     - name: Security
-      url: https://opensciencegrid.org/security/
+      url: https://osg-htc.org/security/
 - name: Engagement
   id: engagement
   children:

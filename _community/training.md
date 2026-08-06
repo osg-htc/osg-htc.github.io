@@ -73,7 +73,7 @@ the broader HTC community.
 			<div class="row">
 				<div class="col-auto">
 					<a class="btn btn-secondary me-md-2 text-dark"
-					   href="https://osg-htc.org/events/throughput-computing-week-2025/" role="button">Learn More</a> <br>
+					   href="https://osg-htc.org/events/throughput-computing-week-2026/" role="button">Learn More</a> <br>
 				</div>
 			</div>
 		</p>

@@ -14,4 +14,5 @@ button:
   text: Apply by Emailing Mentors
 type: internal
 institution: Morgridge Institute for Research & University of Wisconsin–Madison
-close_date:
+# 2023-06-30; an empty close_date never expires, so this must stay set.
+close_date: 1688187599
