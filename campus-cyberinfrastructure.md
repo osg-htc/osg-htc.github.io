@@ -179,5 +179,4 @@ study ranging from the medicine to economics, and from genomics to physics.
 {: .fs-5 }
 The [Open Science Data Federation](/services/osdf.html) integrates data origins, making data 
 accessible via caches, of which many are strategically located in the R&E network backbone.
-CC* awards for data storage require interoperability with a national and federated data sharing fabric such as PATh/OSDF,
-and many CC* campuses meet that commitment through the OSDF.
+CC* awards for data storage require interoperability with a national and federated data sharing fabric such as PATh/OSDF.
