@@ -34,22 +34,6 @@ table_of_contents:
 # OSG’s Support for Campus Cyberinfrastructure Awardees
 
 
-<div class="p-3 my-4 bg-white-offset fs-5 rounded shadow">
-    <h3 class="mt-0 text-center pb-3">CC* campuses are a cornerstone of Open Science</h3>
-    <p class="text-center">
-        Campuses with awards from the
-        <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748">NSF Campus Cyberinfrastructure (CC*)</a>
-        Program play an important role in supporting Open Science. To date, 37 CC* campuses contribute to the processing and storage capacity of the
-        <a href="{{ '/services/ospool/' | relative_url }}">Open Science Pool (OSPool)</a> that is 
-        harnessed weekly by more than 3M jobs.
-    </p>
-    <p class="mb-0 d-flex justify-content-center pt-3">
-        <a class="btn btn-dark text-decoration-underline fs-5" href="mailto:support@osg-htc.org">Email Us</a>
-        <a class="btn btn-dark text-decoration-underline ms-1 fs-5" href="#cc-campus-impact-on-open-science">Their Impact</a>
-    </p>
-</div>
-
-
 {: .fs-5 }
 Enhancing the capacity of Research Computing of US campuses through local deployment and cross campus sharing is 
 fully aligned with the vision of our NSF funded project - [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io). 
@@ -108,7 +92,7 @@ your researchers have any questions or issues, please contact us at [support@osg
 
 
 
-<div class="accordion" id="accordionFlushExample">
+<div class="accordion pb-5" id="accordionFlushExample"> 
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
