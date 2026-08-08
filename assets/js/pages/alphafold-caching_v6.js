@@ -47,7 +47,7 @@ async function initialize_alphafold_report () {
         counter("alphafold-proteins", json['uniqueProteins'], 20)
         counter("alphafold-species", json['species'], 20)
         counter("alphafold-community", json['communityContributed'], 20)
-        counter("alphafold-queries-today", json['queriesToday'], 20)
+        counter("alphafold-queries-total", json['queriesTotal'], 20)
 
     } catch(e) {
         console.error("Error fetching AlphaFold alignment cache statistics: ", e)
