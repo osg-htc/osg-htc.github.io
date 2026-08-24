@@ -23,7 +23,7 @@
 {% endif %}
 
 <!-- Bootstrap 5 -->
-<link rel="stylesheet" href="{{ '/assets/css/style-v8.css?v=' | append: site.github.build_revision | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/style-v8.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -36,7 +36,9 @@
 {% endfor %}
 
 {% for js in include.js %}
-<script src="{{ js.src | relative_url }}" type="{{ js.type | default: 'text/javascript' }}" {{ js.loading}}></script>
+{% comment %} Version local scripts with the build time so CDN/browser caches
+    can't serve stale copies after a deploy; leave external URLs alone. {% endcomment %}
+<script src="{{ js.src | relative_url }}{% unless js.src contains '//' %}?v={{ site.time | date: '%s' }}{% endunless %}" type="{{ js.type | default: 'text/javascript' }}" {{ js.loading}}></script>
 {% endfor %}
 
 {% for css in include.css %}
