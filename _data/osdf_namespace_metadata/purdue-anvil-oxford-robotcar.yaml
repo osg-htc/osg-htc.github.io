@@ -1,0 +1,22 @@
+description: |
+  The Oxford RobotCar Dataset is a large-scale autonomous driving dataset collected by the University of Oxford's Oxford Robotics Institute (Mobile Robotics Group). Between May 2014 and December 2015, the Oxford RobotCar platform — an autonomous-capable Nissan LEAF equipped with 6 cameras, 2D and 3D LiDAR, and a NovAtel GPS/INS system — traversed a 10 km route through central Oxford roughly twice a week, resulting in over 1,000 km of recorded driving and nearly 20 million images. The data captures a wide range of weather (heavy rain, snow, direct sunlight), illumination (dawn, dusk, night), traffic, and long-term structural changes such as construction and roadworks, enabling research on long-term localization and mapping for autonomous vehicles in real-world, dynamic urban environments. A Real-Time Kinematic (RTK) ground truth release followed in 2020.
+
+  This data is public for research and academic use under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0) license; commercial use requires contacting the authors. This dataset is hosted on Purdue University's Anvil cluster — available read-only from the Purdue Anvil Pelican origin server.
+
+
+organization: Purdue University
+
+dataVisibility: public
+size: null
+fieldOfScience: Computer and Information Sciences and Support Services
+numberOfDatasets: null
+rank: 0
+inProgress: false
+display: true
+name: Oxford RobotCar
+namespace:
+  - "/rcac.purdue.edu/anvil/datasets/ai/oxfordrobotcar"
+thirtyDayReads: 0
+oneYearReads: 0
+organizationUrl: https://rcac.purdue.edu/
+repositoryUrl: null

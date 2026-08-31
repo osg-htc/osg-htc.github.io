@@ -1,0 +1,21 @@
+description: |
+  PhysicalAI-SmartSpaces is a comprehensive, annotated synthetic dataset created by NVIDIA for multi-camera tracking and 2D/3D object detection in smart spaces. Generated with NVIDIA Omniverse and Isaac Sim, it consists of over 250 hours of time-synchronized 1080p video (30 FPS, H.264 MP4) from nearly 1,500 cameras covering indoor scenes in warehouses, hospitals, retail, and more. The dataset supports tracking humans (and in newer releases, forklifts, pallet trucks, and autonomous mobile robots) across multiple cameras using feature representations with no personal data. It was first released as part of the 8th AI City Challenge in conjunction with CVPR 2024, and has been expanded for subsequent editions of the challenge with 2D/3D bounding boxes, depth maps, and detailed camera calibration.
+  
+  This data is public and freely available under the Creative Commons Attribution 4.0 (CC BY 4.0) license. This dataset is hosted on Purdue University's Anvil cluster — available read-only from the Purdue Anvil Pelican origin server.
+
+organization: Purdue University
+
+dataVisibility: public
+size: null
+fieldOfScience: Computer and Information Sciences and Support Services
+numberOfDatasets: null
+rank: 0
+inProgress: false
+display: true
+name: PhysicalAI-SmartSpaces
+namespace:
+  - "/rcac.purdue.edu/anvil/datasets/ai/PhysicalAI-SmartSpaces"
+thirtyDayReads: 0
+oneYearReads: 0
+organizationUrl: https://rcac.purdue.edu/
+repositoryUrl: null

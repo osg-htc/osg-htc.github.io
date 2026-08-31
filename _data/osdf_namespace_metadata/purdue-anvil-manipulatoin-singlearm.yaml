@@ -1,0 +1,21 @@
+description: |
+  PhysicalAI-Robotics-Manipulation-SingleArm is a collection of automatically generated motion datasets created by NVIDIA, featuring a Franka Panda robot performing operations such as block stacking and opening cabinets and drawers. The dataset was generated in NVIDIA Isaac Sim using task and motion planning algorithms (PDDLStream, CuRobo) to solve tasks automatically, in tabletop scenes where object layouts and asset textures are procedurally generated. It comprises six datasets in LeRobot format (panda-stack-wide, panda-stack-platforms, panda-stack-platforms-texture, panda-open-cabinet-left, panda-open-cabinet-right, panda-open-drawer) with RGB and depth video from world and wrist-mounted cameras plus proprioceptive state observations, intended for training robot policies and foundation models. This dataset is available for commercial use.
+
+  This data is public and freely available under the Creative Commons Attribution 4.0 (CC BY 4.0) license. This dataset is hosted on Purdue University's Anvil cluster — available read-only from the Purdue Anvil Pelican origin server.
+
+organization: Purdue University
+
+dataVisibility: public
+size: null
+fieldOfScience: Computer and Information Sciences and Support Services
+numberOfDatasets: null
+rank: 0
+inProgress: false
+display: true
+name: PhysicalAI-Robotics-Manipulation-SingleArm
+namespace:
+  - "/rcac.purdue.edu/anvil/datasets/ai/PhysicalAI-Robotics-Manipulation-SingleArm"
+thirtyDayReads: 0
+oneYearReads: 0
+organizationUrl: https://rcac.purdue.edu/
+repositoryUrl: null

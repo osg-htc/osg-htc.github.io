@@ -1,0 +1,21 @@
+description: |
+  fast.ai datasets are a curated collection of commonly used machine learning datasets, assembled by fast.ai and pre-hosted (mostly on AWS Open Data) in standardized formats and integrated directly into the fastai library. The goal is to remove the friction of finding, downloading, and preprocessing data so users can focus on modeling. The collection spans image classification (Caltech-101, CIFAR-10/100, CUB-200-2011, Food-101, MNIST, Oxford-102-Flowers, Oxford-IIIT-Pets, Stanford Cars, Imagenette, Imagewoof, Imagewang), image localization (CamVid, PASCAL VOC 2007/2012, LSUN Bedrooms, BIWI Head Pose), NLP (AG News, Amazon/Yelp Reviews, DBpedia, Sogou News, WikiText, Yahoo Answers, English–French translation), Kaggle competition data (Dogs vs. Cats), medical imaging (SIIM, TCGA samples), and pretrained models (OpenAI Transformer, WikiText-103 language models). These datasets serve as academic baselines widely used for teaching and for comparing algorithmic changes.
+
+  This data is public; licenses vary by individual dataset — users should cite the original dataset creators (e.g., ImageNet, Oxford-IIIT) and acknowledge the fast.ai/AWS collection. This dataset is hosted on Purdue University's Anvil cluster — available read-only from the Purdue Anvil Pelican origin server.
+
+organization: Purdue University
+
+dataVisibility: public
+size: null
+fieldOfScience: Computer and Information Sciences and Support Services
+numberOfDatasets: null
+rank: 0
+inProgress: false
+display: true
+name: fast.ai
+namespace:
+  - "/rcac.purdue.edu/anvil/datasets/ai/fast.ai"
+thirtyDayReads: 0
+oneYearReads: 0
+organizationUrl: https://rcac.purdue.edu/
+repositoryUrl: null

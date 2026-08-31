@@ -1,0 +1,21 @@
+description: |
+  PhysicalAI-Robotics-GR00T-X-Embodiment-Sim is a set of simulation datasets released by NVIDIA for post-training GR00T N1, an open foundation model for generalist humanoid robots. Each dataset is a collection of trajectories from different robot embodiments and tasks: cross-embodied bimanual manipulation (9K trajectories with Franka Panda and GR1 embodiments), humanoid robot tabletop manipulation (240K trajectories, plus a 24K downsampled version), robot arm kitchen manipulation (72K trajectories), and Unitree G1 loco-manipulation (102 trajectories). The trajectories are provided in LeRobot format and cover tasks such as pick-and-place, pouring, threading, and drawer/cabinet interaction, enabling training and fine-tuning of vision-language-action robot policies.
+
+  This data is public and freely available under the Creative Commons Attribution 4.0 (CC BY 4.0) license. This dataset is hosted on Purdue University's Anvil cluster — available read-only from the Purdue Anvil Pelican origin server.
+
+organization: Purdue University
+
+dataVisibility: public
+size: null
+fieldOfScience: Computer and Information Sciences and Support Services
+numberOfDatasets: null
+rank: 0
+inProgress: false
+display: true
+name: PhysicalAI-Robotics-GR00T-X-Embodiment-Sim
+namespace:
+  - "/rcac.purdue.edu/anvil/datasets/ai/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim"
+thirtyDayReads: 0
+oneYearReads: 0
+organizationUrl: https://rcac.purdue.edu/
+repositoryUrl: null
