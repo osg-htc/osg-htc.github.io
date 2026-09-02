@@ -1,0 +1,23 @@
+description: |
+  LVIS (Large Vocabulary Instance Segmentation) is a benchmark dataset created by Facebook AI Research (FAIR) containing approximately 2 million high-quality instance segmentation masks for over 1,000 entry-level object categories across 164K images (reusing the COCO 2017 image set). Due to the Zipfian distribution of categories in natural images, LVIS naturally has a long tail of categories with few training samples, posing an important scientific challenge for state-of-the-art deep learning methods that perform poorly in the low-sample regime. It was built with a crowdsourced annotation pipeline using a federated dataset design, where each category is exhaustively annotated within its own constituent dataset, yielding higher-quality masks than COCO. LVIS is used for training and evaluating object detection and instance segmentation models on rare, long-tailed categories.
+
+  This data is public; LVIS annotations and the underlying COCO images are licensed under the Creative Commons Attribution 4.0 (CC BY 4.0) license. This dataset is hosted on Purdue University's Anvil cluster — available read-only from the Purdue Anvil Pelican origin server.
+
+organization: Purdue University
+
+dataVisibility: public
+size: null
+fieldOfScience: Computer and Information Sciences and Support Services
+numberOfDatasets: null
+rank: 0
+inProgress: false
+display: true
+name: LVIS
+namespace:
+  - "/rcac.purdue.edu/anvil/datasets/ai/LVIS"
+thirtyDayReads: 0
+oneYearReads: 0
+organizationUrl: https://rcac.purdue.edu/
+repositoryUrl:
+  url: https://osdf-client.osg-htc.org/?url=pelican%3A%2F%2Fosg-htc.org%2Frcac.purdue.edu%2Fanvil%2Fdatasets%2Fai%2FLVIS
+  label: Dataset Catalog

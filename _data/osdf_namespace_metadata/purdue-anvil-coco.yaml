@@ -1,0 +1,23 @@
+description: |
+  COCO (Microsoft COCO: Common Objects in Context) is a large-scale object detection, segmentation, and captioning dataset created by Microsoft Research in collaboration with researchers at Cornell, TTI-Chicago, Caltech, Brown, UC Irvine, and Facebook AI Research. It contains 330K images (over 200K labeled) of complex everyday scenes with common objects in their natural context, totaling 1.5 million object instances across 80 object categories and 91 stuff categories. Annotations include per-instance segmentation masks, bounding boxes, 5 captions per image, and 250,000 people labeled with keypoints, gathered through extensive crowd worker involvement. COCO is one of the most widely used benchmarks in computer vision, advancing research in scene understanding, contextual reasoning, and precise object localization.
+
+  This data is public and freely available under the Creative Commons Attribution 4.0 (CC BY 4.0) license. This dataset is hosted on Purdue University's Anvil cluster — available read-only from the Purdue Anvil Pelican origin server.
+
+organization: Purdue University
+
+dataVisibility: public
+size: null
+fieldOfScience: Computer and Information Sciences and Support Services
+numberOfDatasets: null
+rank: 0
+inProgress: false
+display: true
+name: COCO
+namespace:
+  - "/rcac.purdue.edu/anvil/datasets/ai/COCO"
+thirtyDayReads: 0
+oneYearReads: 0
+organizationUrl: https://rcac.purdue.edu/
+repositoryUrl:
+  url: https://osdf-client.osg-htc.org/?url=pelican%3A%2F%2Fosg-htc.org%2Frcac.purdue.edu%2Fanvil%2Fdatasets%2Fai%2Fcoco
+  label: Dataset Catalog

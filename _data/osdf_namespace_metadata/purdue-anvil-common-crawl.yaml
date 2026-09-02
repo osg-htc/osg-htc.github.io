@@ -1,0 +1,24 @@
+description: |
+  This dataset is the January 2026 crawl archive (CC-MAIN-2026-04) from Common Crawl, a 501©(3) nonprofit organization founded in 2007 that maintains a free, open repository of web crawl data. The crawl archive contains 2.30 billion pages; this copy consists of the WET (WARC Encapsulated Text) files, which contain extracted plain text parsed from HTML, excluding code, images, and other media. Common Crawl's corpus — over 300 billion pages collected since 2008 — is hosted on Amazon S3 under the AWS Open Data Sponsorship Program and is one of the most important sources of pre-training data for large language models; it is cited in over 10,000 research papers and underlies filtered corpora such as C4 and The Pile.
+
+  This data is public and free to use under the Common Crawl Terms of Use; users must comply with applicable laws and respect the intellectual property and privacy rights of original content owners, as the data is derived from publicly crawled web sources. This dataset is hosted on Purdue University's Anvil cluster — available read-only from the Purdue Anvil Pelican origin server.
+
+organization: Purdue University
+
+dataVisibility: public
+size: null
+fieldOfScience: Computer and Information Sciences and Support Services
+numberOfDatasets: null
+rank: 0
+inProgress: false
+display: true
+name: Common Crawl
+namespace:
+  - "/rcac.purdue.edu/anvil/datasets/ai/commoncrawl"
+thirtyDayReads: 0
+oneYearReads: 0
+organizationUrl: https://rcac.purdue.edu/
+repositoryUrl:
+  url: https://osdf-client.osg-htc.org/?url=pelican%3A%2F%2Fosg-htc.org%2Frcac.purdue.edu%2Fanvil%2Fdatasets%2Fai%2Fcommoncrawl
+  label: Dataset Catalog
+
