@@ -18,4 +18,7 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 0
 organizationUrl: https://rcac.purdue.edu/
-repositoryUrl: null
+repositoryUrl:
+  url: https://osdf-client.osg-htc.org/?url=pelican%3A%2F%2Fosg-htc.org%2Frcac.purdue.edu%2Fanvil%2Fdatasets%2Fai%2Fcommoncrawl
+  label: Dataset Catalog
+
