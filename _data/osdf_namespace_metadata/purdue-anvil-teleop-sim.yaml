@@ -1,14 +1,16 @@
 description: |
-  PhysicalAI-Robotics-GR00T-Teleop-Sim is a dataset created by NVIDIA GEAR consisting of 1,000 teleoperation trajectories per task (24 tabletop tasks) recorded in simulation using the GR1 humanoid robot with upper-body control and simulated Fourier hands. The simulation setup mimics tabletop manipulation tasks and uses RGB observations from a virtual camera, with accompanying language instructions (e.g., “pick up the bottled water, place it into the cabinet and close the cabinet”). The data is provided in HDF5 and LeRobot formats and is intended for AI-driven robotics research, algorithm development in simulation, and non-commercial benchmarking and prototyping of policies for tabletop tasks.
+  [PhysicalAI-Robotics-GR00T-Teleop-Sim](https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-Sim) is a dataset created by NVIDIA GEAR consisting of 1,000 teleoperation trajectories per task (24 tabletop tasks) recorded in simulation using the GR1 humanoid robot with upper-body control and simulated Fourier hands. The simulation setup mimics tabletop manipulation tasks and uses RGB observations from a virtual camera, with accompanying language instructions (e.g., “pick up the bottled water, place it into the cabinet and close the cabinet”). The data is provided in HDF5 and LeRobot formats and is intended for AI-driven robotics research, algorithm development in simulation, and non-commercial benchmarking and prototyping of policies for tabletop tasks.
 
-  This data is public, but restricted to non-commercial use under the Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0) license. This dataset is hosted on Purdue University's Anvil cluster — available read-only from the Purdue Anvil Pelican origin server.
+  This data is public, but restricted to non-commercial use under the Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0) license. This dataset is hosted on Purdue University's [Anvil cluster](https://www.rcac.purdue.edu/anvil) — available read-only from the Purdue Anvil Pelican origin server.
+
+  Details about the dataset can be found at [RCAC Documentation website](https://docs.rcac.purdue.edu/datasets/ai/PhysicalAI-Robotics-GR00T-Teleop-Sim/).
 
 organization: Purdue University
 
 dataVisibility: public
-size: null
+size: 159000000  # bytes
 fieldOfScience: Computer and Information Sciences and Support Services
-numberOfDatasets: null
+numberOfDatasets: 1
 rank: 0
 inProgress: false
 display: true
@@ -17,7 +19,8 @@ namespace:
   - "/rcac.purdue.edu/anvil/datasets/ai/PhysicalAI-Robotics-GR00T-Teleop-Sim"
 thirtyDayReads: 0
 oneYearReads: 0
-organizationUrl: https://rcac.purdue.edu/
+publicObject: /rcac.purdue.edu/anvil/datasets/ai/PhysicalAI-Robotics-GR00T-Teleop-Sim
+organizationUrl: https://www.rcac.purdue.edu/
 repositoryUrl:
   url: https://osdf-client.osg-htc.org/?url=pelican%3A%2F%2Fosg-htc.org%2Frcac.purdue.edu%2Fanvil%2Fdatasets%2Fai%2FPhysicalAI-Robotics-GR00T-Teleop-Sim
   label: Dataset Catalog
