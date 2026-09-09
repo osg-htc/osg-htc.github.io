@@ -1,14 +1,16 @@
 description: |
-  PhysicalAI-Robotics-Manipulation-SingleArm is a collection of automatically generated motion datasets created by NVIDIA, featuring a Franka Panda robot performing operations such as block stacking and opening cabinets and drawers. The dataset was generated in NVIDIA Isaac Sim using task and motion planning algorithms (PDDLStream, CuRobo) to solve tasks automatically, in tabletop scenes where object layouts and asset textures are procedurally generated. It comprises six datasets in LeRobot format (panda-stack-wide, panda-stack-platforms, panda-stack-platforms-texture, panda-open-cabinet-left, panda-open-cabinet-right, panda-open-drawer) with RGB and depth video from world and wrist-mounted cameras plus proprioceptive state observations, intended for training robot policies and foundation models. This dataset is available for commercial use.
+  [PhysicalAI-Robotics-Manipulation-SingleArm](https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Manipulation-SingleArm) is a collection of automatically generated motion datasets created by NVIDIA, featuring a Franka Panda robot performing operations such as block stacking and opening cabinets and drawers. The dataset was generated in NVIDIA Isaac Sim using task and motion planning algorithms (PDDLStream, CuRobo) to solve tasks automatically, in tabletop scenes where object layouts and asset textures are procedurally generated. It comprises six datasets in LeRobot format (panda-stack-wide, panda-stack-platforms, panda-stack-platforms-texture, panda-open-cabinet-left, panda-open-cabinet-right, panda-open-drawer) with RGB and depth video from world and wrist-mounted cameras plus proprioceptive state observations, intended for training robot policies and foundation models. This dataset is available for commercial use.
 
-  This data is public and freely available under the Creative Commons Attribution 4.0 (CC BY 4.0) license. This dataset is hosted on Purdue University's Anvil cluster — available read-only from the Purdue Anvil Pelican origin server.
+  This data is public and freely available under the Creative Commons Attribution 4.0 (CC BY 4.0) license. This dataset is hosted on Purdue University's [Anvil cluster](https://www.rcac.purdue.edu/anvil) — available read-only from the Purdue Anvil Pelican origin server.
+
+  Details about the dataset can be found at [RCAC Documentation website](https://docs.rcac.purdue.edu/datasets/ai/PhysicalAI-Robotics-Manipulation-SingleArm/).
 
 organization: Purdue University
 
 dataVisibility: public
-size: null
+size: 359000000  # bytes
 fieldOfScience: Computer and Information Sciences and Support Services
-numberOfDatasets: null
+numberOfDatasets: 1
 rank: 0
 inProgress: false
 display: true
@@ -17,7 +19,8 @@ namespace:
   - "/rcac.purdue.edu/anvil/datasets/ai/PhysicalAI-Robotics-Manipulation-SingleArm"
 thirtyDayReads: 0
 oneYearReads: 0
-organizationUrl: https://rcac.purdue.edu/
+publicObject: /rcac.purdue.edu/anvil/datasets/ai/PhysicalAI-Robotics-Manipulation-SingleArm
+organizationUrl: https://www.rcac.purdue.edu/
 repositoryUrl:
   url: https://osdf-client.osg-htc.org/?url=pelican%3A%2F%2Fosg-htc.org%2Frcac.purdue.edu%2Fanvil%2Fdatasets%2Fai%2FPhysicalAI-Robotics-Manipulation-SingleArm
   label: Dataset Catalog
