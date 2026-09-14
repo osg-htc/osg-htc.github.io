@@ -1,0 +1,15 @@
+description: |
+  The LLMDaL project leverages generative Artificial Intelligence (AI) along with data from the AmLight international research and education (R&E) network to provide an essential and previously unavailable building block necessary for automated network defense. The growing complexity and sophistication of modern networks are driving the need for automated cybersecurity and management. Operators of critical infrastructure must increasingly rely on AI to cope with the sheer scale of information and the growing use of AI by adversaries. However, effective AI defenses depend on both the quantity and quality of data for training. The lack of high-quality, labeled datasets from production environments presents a significant barrier. Without access to such datasets, advanced models often remain untested in real-world scenarios, limiting their effectiveness, as they fail to learn the complexity and uncertainty of production environments. Without labeled packet-level data from production networks, the AI models essential for critical infrastructure defense will fail. 
+
+organization: Florida International University # Name of the organization
+dataVisibility: private # public, or private
+size: # In bytes so I can parse how I want
+bytesXferd: # In bytes so I can parse how I want
+url: https://www.fiu.edu/ # Organization URL
+fieldOfScience: 11 # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+numberOfDatasets: # Number of datasets in the namespace
+rank: 0 # Rank of the namespace, 0 will have the lowest priority
+inProgress: true # Whether or not the namespace is in progress
+display: false # Whether or not to display this namespace
+name: LLMDaL - LLM-Driven Data Labeling for Training ML Models # Human readable name of the namespace
+organizationUrl: https://www.fiu.edu/
