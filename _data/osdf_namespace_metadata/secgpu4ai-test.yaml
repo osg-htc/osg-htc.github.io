@@ -1,0 +1,15 @@
+description: |
+  The SecGPU4AI project enhances GPU memory safety through two complementary thrusts. The first thrust focuses on designing a fuzzing-based framework for detecting and repairing memory safety vulnerabilities in AI GPU toolkits commonly used in scientific computing. The second thrust focuses on developing lightweight, software-based run-time defenses (such as a secure GPU memory allocator) to detect and prevent common memory safety attacks. These defense mechanisms require no changes to GPU hardware or proprietary toolchains, and thus can be readily adopted in existing scientific computing environments. By improving GPU memory safety, this project considerably enhances the security and reliability of AI-driven research across a wide range of scientific domains. It also opens new research directions in GPU security methodologies that extend to other computing areas. The research team will open-source all developed tools and collaborate with CI providers to promote their adoption and real-world impact. 
+
+organization: University of Rochester # Name of the organization
+dataVisibility: private # public, or private
+size: # In bytes so I can parse how I want
+bytesXferd: # In bytes so I can parse how I want
+url: https://www.rochester.edu/ # Organization URL
+fieldOfScience: # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+numberOfDatasets: # Number of datasets in the namespace
+rank: 0 # Rank of the namespace, 0 will have the lowest priority
+inProgress: true # Whether or not the namespace is in progress
+display: false # Whether or not to display this namespace
+name: Securing GPU Computing for AI-Driven Scientific Workflows # Human readable name of the namespace
+organizationUrl: https://www.rochester.edu/
