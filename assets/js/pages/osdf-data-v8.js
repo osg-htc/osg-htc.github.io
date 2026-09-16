@@ -101,6 +101,7 @@ class ProjectDisplay{
            namespace,
            oneYearReads,
            publicObject,
+           is_directory,
            organizationUrl,
            repositoryUrl,
            id
@@ -129,7 +130,7 @@ class ProjectDisplay{
 
     // If there is a publicObject then update those pieces
     document.getElementById("data-public-object").style.display = publicObject ? "block" : "none"
-    document.getElementById("data-pelican-download").innerText = `pelican object get osdf://${publicObject} ./`
+    document.getElementById("data-pelican-download").innerText = `pelican object get ${is_directory ? "-r " : ""}osdf://${publicObject} ./`
     document.getElementById("data-browser-download").href = `https://osdf-director.osg-htc.org${publicObject}`
 
     // Update the big value numbers
