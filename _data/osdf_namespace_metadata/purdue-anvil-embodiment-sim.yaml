@@ -20,6 +20,7 @@ namespace:
 thirtyDayReads: 0
 oneYearReads: 0
 publicObject: /rcac.purdue.edu/anvil/datasets/ai/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim
+is_directory: true
 organizationUrl: https://www.rcac.purdue.edu/
 repositoryUrl:
   url: https://osdf-client.osg-htc.org/?url=pelican%3A%2F%2Fosg-htc.org%2Frcac.purdue.edu%2Fanvil%2Fdatasets%2Fai%2FPhysicalAI-Robotics-GR00T-X-Embodiment-Sim
