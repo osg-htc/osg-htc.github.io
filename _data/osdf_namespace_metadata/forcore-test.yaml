@@ -1,0 +1,14 @@
+description: |
+  As smaller, teaching-focused institutions increasingly expand their research missions, they face critical challenges in securing sensitive research data, maintaining operational resilience, and meeting evolving compliance obligations. The ForCORE (Fortifying Cyberinfrastructure for Research and Education) project directly addresses these issues by implementing scalable, risk-based security solutions that preserve usability while defending against sophisticated cyber threats. Led by Bethune-Cookman University in Daytona Beach, Florida, the approach focuses on securing scientific workflows and enabling safe, collaborative research for faculty and students involved in multi-institutional and data-intensive projects. By aligning its cybersecurity posture with the National Institute of Standards and Technology Cybersecurity Framework and embedding security into the daily operations of a research-active campus, ForCORE creates a model that other small, under-resourced institutions can adapt to strengthen their cyberinfrastructure while advancing their research and student success goals. 
+organization: Bethune-Cookman University # Name of the organization
+dataVisibility: private # public, or private
+size: # In bytes so I can parse how I want
+bytesXferd: # In bytes so I can parse how I want
+url: https://path-cc.io/presentations/2025/08/28/forcore/ # Organization URL
+fieldOfScience: 11 # Top level Field of Science pulled from here https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55
+numberOfDatasets: # Number of datasets in the namespace
+rank: 0 # Rank of the namespace, 0 will have the lowest priority
+inProgress: true # Whether or not the namespace is in progress
+display: false # Whether or not to display this namespace
+name: ForCore - Fortifying Cyberinfrastructure Operations for Research and Education at B-CU # Human readable name of the namespace
+organizationUrl: https://www.cookman.edu/
