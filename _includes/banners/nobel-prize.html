@@ -7,8 +7,7 @@
 {%- assign nobel_banner_expires_ts = nobel_banner_expires | date: "%s" | plus: 0 -%}
 {%- assign nobel_banner_now_ts = site.time | date: "%s" | plus: 0 -%}
 {%- if nobel_banner_now_ts < nobel_banner_expires_ts -%}
-{%- assign nobel_article = site.spotlights | where_exp: "article", "article.path contains 'francis-halzen-nobel-prize'" | first -%}
-<a class="nobel-banner {{ include.class }}" data-expires="{{ nobel_banner_expires }}" href="{{ nobel_article.url | default: '/spotlights/francis-halzen-nobel-prize.html' | relative_url }}">
+<a class="nobel-banner {{ include.class }}" data-expires="{{ nobel_banner_expires }}" href='https://chtc.cs.wisc.edu/behind-nobel-winning-icecube-discoveries.html'>
     <div class="container-xxl py-1 text-center">
         <i class="bi bi-award me-1"></i>
         <span>OSPool User, Francis Halzen awarded the 2026 Nobel Prize</span>
