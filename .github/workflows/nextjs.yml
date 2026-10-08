@@ -78,6 +78,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-next-image-export-optimizer-${{ hashFiles('next.config.mjs', 'remoteOptimizedImages.js') }}-
             ${{ runner.os }}-next-image-export-optimizer-
+      # Same refresh the Jekyll site does on deploy; AlphafoldStats reads this
+      # file, so without it the AlphaFold3 numbers are frozen at whatever was
+      # last committed. A failed fetch leaves the committed copy in place.
+      - name: Refresh AlphaFold3 alignment library stats
+        continue-on-error: true
+        run: |
+          curl -fsS --max-time 60 https://af3-msa-library.dannymorales.com/v1/stats \
+            -o public/data/alphafold-caching.json.new
+          mv public/data/alphafold-caching.json.new public/data/alphafold-caching.json
       - name: Build with Next.js
         run: |
           pnpm run build

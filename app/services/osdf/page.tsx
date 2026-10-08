@@ -371,13 +371,15 @@ export default function Page() {
         </Box>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
-        <ExportedImage
-          src='/images/logos/OSDF_OSPool_Logos.png'
-          alt='OSDF and OSPool Logos'
-          width={3504}
-          height={3502}
-          style={{ width: 320, height: 'auto' }}
-        />
+        <Link href='/services/osdf'>
+          <ExportedImage
+            src='/images/logos/OSDF_OSPool_Logos.png'
+            alt='OSDF and OSPool Logos'
+            width={3504}
+            height={3502}
+            style={{ width: 320, height: 'auto' }}
+          />
+        </Link>
       </Box>
     </Container>
   );

@@ -45,3 +45,149 @@ a {
         display: none;
     }
 }
+/*
+  Pull-quote style for blockquotes in articles, spotlights and MDX pages.
+
+  The `.MuiBox-root` variant is needed because @chtc/web-components renders
+  markdown blockquotes through an `sx` prop, whose emotion class would
+  otherwise win over a bare element selector.
+*/
+blockquote,
+blockquote.MuiBox-root {
+  position: relative;
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem 1.25rem 3.25rem;
+  background-color: #f7f8fa;
+  border-left: 4px solid #f6a32a;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #1f2733;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: 0.1rem;
+  left: 0.9rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: #f6a32a;
+  opacity: 0.6;
+}
+
+blockquote p {
+  margin-bottom: 0.75rem;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Attribution lines, e.g. "— Jane Doe" */
+blockquote cite,
+blockquote footer {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-style: normal;
+  color: #f6a32a;
+}
+
+/*
+  Francis Halzen Nobel Prize homepage banner. The sweep runs once on load and
+  parks off-screen; the settle overlay fades in and stays, leaving the banner
+  lighter than the navbar below it.
+*/
+.nobel-banner {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-color: #f4b627;
+  color: #000;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+/* Keep the text above the shimmer layers so it stays black. */
+.nobel-banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.nobel-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  animation: nobel-banner-settle 0.6s ease-out 1.1s forwards;
+}
+
+.nobel-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: translateX(-100%);
+  animation: nobel-banner-sweep 1.5s ease-in-out 0.2s forwards;
+}
+
+.nobel-banner-cta {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid #000;
+  border-radius: 0.25rem;
+  color: #000;
+  font-size: 0.85rem;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.nobel-banner:hover,
+.nobel-banner:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.nobel-banner:hover .nobel-banner-cta,
+.nobel-banner:focus .nobel-banner-cta {
+  background-color: #000;
+  color: #f4b627;
+}
+
+@media (max-width: 768px) {
+  .nobel-banner {
+    font-size: 0.875rem;
+  }
+}
+
+@keyframes nobel-banner-sweep {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+@keyframes nobel-banner-settle {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nobel-banner::after {
+    animation: none;
+  }
+  .nobel-banner::before {
+    animation: none;
+    opacity: 1;
+  }
+}

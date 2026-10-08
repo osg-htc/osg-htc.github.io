@@ -21,12 +21,15 @@ import LayersOutlinedIcon from '@mui/icons-material/LayersOutlined';
 import HubOutlinedIcon from '@mui/icons-material/HubOutlined';
 import {
   ArticleCard,
+  filterPresentations,
   formatLongDate,
   getArticles,
+  getPresentations,
   sortArticles,
   type BackendArticle,
 } from '@chtc/web-components/content';
 import { getEvents, splitEvents, formatEventDate } from '@/utils/events';
+import { PresentationSummary } from '@/components/PresentationSummary';
 import { SectionHeading } from './_components/SectionHeading';
 import { IntroCard } from './_components/IntroCard';
 import { SupportItem } from './_components/SupportItem';
@@ -98,7 +101,7 @@ const WHAT_WE_DO: { title: string; icon: React.ReactNode; body: React.ReactNode 
       <>
         The OSG provides an integrated software stack to enable high throughput
         computing;{' '}
-        <Link href='https://support.opensciencegrid.org/support/home'>
+        <Link href='https://osg-htc.org/docs/'>
           visit our technical documents website for information
         </Link>
         .
@@ -141,6 +144,20 @@ export default async function Home() {
 
   const events = await getEvents('CHTC', 'events', 'main');
   const upcomingEvents = splitEvents(events).upcoming.slice(0, 3);
+
+  // With nothing upcoming the Events column would be empty, so point at the
+  // presentation archive instead.
+  const recentPresentations =
+    upcomingEvents.length > 0
+      ? []
+      : filterPresentations(
+          await getPresentations('CHTC', 'Presentations', 'main'),
+          'osg'
+        )
+          .sort(
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+          )
+          .slice(0, 5);
 
   return (
     <Box>
@@ -252,7 +269,7 @@ export default async function Home() {
           </Grid>
           <Grid size={{ xs: 12, md: 4 }}>
             <IntroCard
-              image='/images/homepage/HTC25.png'
+              image='/images/homepage/HTC-community.png'
               alt='Throughput Computing Abstract Graphic'
               title='Learn More'
               buttons={[
@@ -274,8 +291,8 @@ export default async function Home() {
                     </Link>
                   </li>
                   <li>
-                    <Link href='https://agenda.hep.wisc.edu/event/2297/'>
-                      Check out our most recent community conference, HTC25
+                    <Link href='https://agenda.hep.wisc.edu/event/2432/'>
+                      Check out our most recent community conference, HTC26
                     </Link>
                   </li>
                 </ul>
@@ -372,6 +389,22 @@ export default async function Home() {
                       </Box>
                     </Box>
                   </Link>
+                ))}
+              </Card>
+            </Grid>
+          )}
+
+          {upcomingEvents.length === 0 && recentPresentations.length > 0 && (
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+              <Card sx={{ height: '100%', p: 2 }}>
+                <Typography variant='subtitle2' gutterBottom>
+                  <Link href='/presentations'>Presentations &amp; Videos</Link>
+                </Typography>
+                {recentPresentations.map((presentation) => (
+                  <PresentationSummary
+                    key={presentation.slug.join('-')}
+                    presentation={presentation}
+                  />
                 ))}
               </Card>
             </Grid>

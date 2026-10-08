@@ -18,7 +18,7 @@ import {
   Select,
   Typography,
 } from '@mui/material';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 function getAllKeywords(presentations: BackendPresentation[]): string[] {
   const keywords: string[] = [];
@@ -56,6 +56,33 @@ export function PresentationGrid({
   const [eventFilter, setEventFilter] = useState<string>('');
   const [keywordFilter, setKeywordFilter] = useState<string[]>([]);
 
+  const allEvents = getAllEvents(presentations);
+  const allKeywords = getAllKeywords(presentations);
+
+  // Seed the filters from the query string so other pages can deep-link into a
+  // pre-filtered view, e.g. /presentations?keyword=Facilitation. `keyword` is
+  // repeatable or comma-separated; `event` takes a single value. Values that
+  // match nothing in the current data are ignored.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+
+    const keywords = params
+      .getAll('keyword')
+      .flatMap((value) => value.split(','))
+      .map((value) => value.trim())
+      .filter((value) => allKeywords.includes(value));
+    if (keywords.length > 0) {
+      setKeywordFilter(keywords);
+    }
+
+    const event = params.get('event');
+    if (event && allEvents.includes(event)) {
+      setEventFilter(event);
+    }
+    // Read once on mount; afterwards the controls own the filter state.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const filteredPresentations = useMemo(() => {
     // Rerun filtering when eventFilter or keywordFilter changes
     const newFiltered = presentations.filter((presentation) => {
@@ -75,9 +102,6 @@ export function PresentationGrid({
 
     return newFiltered;
   }, [eventFilter, keywordFilter, presentations]);
-
-  const allEvents = getAllEvents(presentations);
-  const allKeywords = getAllKeywords(presentations);
 
   return (
     <Box>

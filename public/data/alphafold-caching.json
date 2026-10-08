@@ -1,10 +1,14 @@
 {
-  "data": {
-    "date": "2026-05-27",
-    "alignmentsCached": 139259,
-    "uniqueProteins": 104242,
-    "species": 4353,
-    "communityContributed": 6,
-    "queriesToday": 54
-  }
+    "data": {
+        "date": "2026-10-08",
+        "alignmentsCached": 1264977,
+        "uniqueProteins": 1186855,
+        "species": 25516,
+        "communityContributed": 84087,
+        "osgGenerated": 847309,
+        "queriesToday": 8448,
+        "queriesTotal": 2047907,
+        "queriesWithHitsToday": 0,
+        "queriesWithHitsTotal": 578359
+    }
 }

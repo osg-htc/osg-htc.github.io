@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Container } from '@mui/material';
+import { Box, Divider, Link, Typography, Grid, Container } from '@mui/material';
 import {
   ArticleCard,
   HorizontalArticleCard,
@@ -44,6 +44,16 @@ export default async function Page() {
             </Grid>
           ))}
         </Grid>
+
+        <Divider sx={{ my: 4 }} />
+        <Typography paragraph>
+          The OSG Consortium is pleased to see OSG user spotlights reposted on
+          the websites of other organizations. The spotlights should be reposted
+          with credits to the OSG website and the original authors, as well as a
+          link to the original posting. Any alterations to the text or images for
+          the reposting should be agreed by the OSG Communications team. Please
+          email <Link href='mailto:support@osg-htc.org'>support@osg-htc.org</Link>.
+        </Typography>
       </Container>
     </>
   );

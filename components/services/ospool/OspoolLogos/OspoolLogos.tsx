@@ -46,13 +46,15 @@ export function OspoolLogos() {
         </Box>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
-        <ExportedImage
-          src='/images/logos/OSPool_Logo.png'
-          alt='OSPool Logo'
-          width={3544}
-          height={3530}
-          style={{ width: 320, height: 'auto' }}
-        />
+        <Link href='/services/ospool'>
+          <ExportedImage
+            src='/images/logos/OSPool_Logo.png'
+            alt='OSPool Logo'
+            width={3544}
+            height={3530}
+            style={{ width: 320, height: 'auto' }}
+          />
+        </Link>
       </Box>
     </Container>
   );

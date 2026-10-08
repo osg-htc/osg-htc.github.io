@@ -12,6 +12,8 @@ import "./globals.css"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
+import { NobelBanner } from "@/components/NobelBanner";
+import { NOBEL_BANNER_EXPIRES } from "@/components/NobelBanner/config";
 
 export const metadata: Metadata = {
   title: "OSG Consortium",
@@ -54,7 +56,7 @@ const pages = [
 		label: 'Campuses',
 		children: [
 			{ label: 'Support', path: '/campus/support' },
-			{ label: 'CC* Proposals', path: '/campus-cyberinfrastructure' },
+			{ label: 'CC* Campuses', path: '/campus-cyberinfrastructure' },
 			{ label: 'Contributor Documentation', path: 'https://osg-htc.org/campus-docs/' },
 		],
 	},
@@ -105,6 +107,7 @@ export default function RootLayout({
         <CssBaseline />
         <Box component={"body"} sx={{ margin: 0, padding: 0, bgcolor: 'background.default', color: 'text.primary', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
           <ThemeProvider theme={theme}>
+						{Date.now() < Date.parse(NOBEL_BANNER_EXPIRES) && <NobelBanner />}
 						<Header pages={pages} />
 						{children}
             <Footer />

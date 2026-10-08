@@ -68,25 +68,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </Typography>
     ),
-    blockquote: ({ children }) => (
-      <Box
-        component='blockquote'
-        sx={{
-          borderLeft: 4,
-          borderColor: 'primary.main',
-          pl: 2.5,
-          py: 0.5,
-          my: 3,
-          mx: 0,
-          color: 'text.secondary',
-          fontStyle: 'italic',
-          bgcolor: 'grey.50',
-          borderRadius: 1,
-        }}
-      >
-        {children}
-      </Box>
-    ),
+    // Styling lives in globals.css so articles rendered by
+    // @chtc/web-components get the same pull-quote treatment.
+    blockquote: ({ children }) => <Box component='blockquote'>{children}</Box>,
     img: ({ src, alt }) => (
       // eslint-disable-next-line @next/next/no-img-element
       <img

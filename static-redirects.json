@@ -15,6 +15,7 @@
   { "source": "/newsletter.html", "destination": "/newsletter", "text": "OSG Community Announcements" },
   { "source": "/covid-19.html", "destination": "/covid-19", "text": "OSG Support for COVID-19 Research" },
   { "source": "/code-of-conduct.html", "destination": "/code-of-conduct", "text": "OSG Code of Conduct" },
+  { "source": "/end-user-aup.html", "destination": "/end-user-aup", "text": "End User Acceptable Use Policy" },
   { "source": "/institutions.html", "destination": "/institutions", "text": "OSG Institutions" },
   { "source": "/campus-cyberinfrastructure.html", "destination": "/campus-cyberinfrastructure", "text": "OSG Support for Campus Cyberinfrastructure" },
   { "source": "/about/open_science_pool/", "destination": "/services/ospool", "text": "Open Science Pool" },

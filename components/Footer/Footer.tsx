@@ -35,8 +35,8 @@ const FOOTER_LINKS: {
     name: 'Documentation',
     children: [
       { name: 'User', url: 'https://portal.osg-htc.org' },
-      { name: 'System Admin', url: 'https://opensciencegrid.org/docs/' },
-      { name: 'Security', url: 'https://opensciencegrid.org/security/' },
+      { name: 'System Admin', url: 'https://osg-htc.org/docs/' },
+      { name: 'Security', url: 'https://osg-htc.org/security/' },
     ],
   },
   {

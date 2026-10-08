@@ -67,7 +67,7 @@ export default function Page() {
             more, contact the Campus Coordinator at support@osg-htc.org.
           </Typography>
           <Button href='/campus-cyberinfrastructure' variant='contained' color='secondary' size='small'>
-            Learn about CC* Support
+            Learn about CC* Campuses
           </Button>
         </CardContent>
       </Card>
@@ -93,8 +93,8 @@ export default function Page() {
         For OSG policies, executive information
       </Typography>
       <Typography paragraph>
-        Email: <Link href='mailto:fkw@ucsd.edu'>Frank Wuerthwein</Link> (OSG
-        Executive Director)
+        Email: <Link href='mailto:peter.couvares@ligo.org'>Peter Couvares</Link>{' '}
+        (OSG Executive Director)
       </Typography>
       <Typography variant='h5' component='h2'>
         For help managing an OSG Mailing list membership

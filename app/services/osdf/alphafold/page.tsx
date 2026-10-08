@@ -14,6 +14,7 @@ import {
   Typography,
 } from '@mui/material';
 import AlphafoldStats from '@/components/services/osdf/AlphafoldStats';
+import { AlphafoldSearch } from '@/components/services/osdf/AlphafoldSearch';
 
 export const metadata: Metadata = {
   title: 'AlphaFold3 Alignment Library — OSG Consortium',
@@ -71,7 +72,7 @@ export default function Page() {
 
       <Container maxWidth='md' sx={{ '& p': { mb: 2 } }}>
         <Typography>
-          Running AlphaFold3 at scale can be challenging because jobs often spend
+          Running AlphaFold2 at scale can be challenging because jobs often spend
           a long time preparing inputs before structure prediction begins,
           including searching large reference databases to build alignments. The
           AlphaFold3 Alignment Library helps reduce this repeated work by allowing
@@ -120,6 +121,24 @@ export default function Page() {
           </Typography>
         </Paper>
 
+      </Container>
+
+      <Container maxWidth='lg' sx={{ '& p': { mb: 2 } }}>
+        <Typography variant='h4' component='h2' gutterBottom mt={4} id='search-the-library'>
+          Search the library
+        </Typography>
+        <Typography>
+          Check whether the library already holds alignments for your protein
+          chains. Paste one or more sequences below in FASTA format (a{' '}
+          <code>&gt;name</code> header followed by the sequence) or simply one
+          sequence per line — or drag and drop FASTA file(s) onto the form — then
+          search. Sequences are hashed in your browser and only the hashes are sent
+          to the registry, so the sequences themselves never leave your computer.
+        </Typography>
+        <AlphafoldSearch />
+      </Container>
+
+      <Container maxWidth='md' sx={{ '& p': { mb: 2 } }}>
         <Typography variant='h4' component='h2' gutterBottom mt={4}>
           Why cache alignments?
         </Typography>

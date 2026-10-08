@@ -5,9 +5,7 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
-  Button,
   Container,
-  Paper,
   Typography,
 } from '@mui/material';
 import { ExpandMore } from '@mui/icons-material';
@@ -16,45 +14,17 @@ import ccStar from '@/utils/cc-star.json';
 
 export const metadata: Metadata = {
   title:
-    'OSG’s Support for Campus Cyberinfrastructure Proposals and Awardees — OSG Consortium',
+    'OSG’s Support for Campus Cyberinfrastructure Awardees — OSG Consortium',
   description:
-    'How the PATh team and OSG support NSF Campus Cyberinfrastructure (CC*) proposals and awardees.',
+    'How the PATh team and OSG support campuses holding an NSF Campus Cyberinfrastructure (CC*) award.',
 };
-
-const SOLICITATION =
-  'https://new.nsf.gov/funding/opportunities/campus-cyberinfrastructure-cc/nsf24-530/solicitation';
 
 export default function Page() {
   return (
     <Container maxWidth='md' sx={{ py: 5 }}>
       <Typography variant='h2' component='h1' gutterBottom>
-        OSG’s Support for Campus Cyberinfrastructure Proposals and Awardees
+        OSG’s Support for Campus Cyberinfrastructure Awardees
       </Typography>
-
-      <Paper elevation={2} sx={{ p: 3, my: 4 }}>
-        <Typography variant='h5' component='h2' textAlign='center' gutterBottom>
-          We are here to help with your{' '}
-          <Link href={SOLICITATION}>CC* Proposal (NSF 24-530)!</Link>
-        </Typography>
-        <Typography textAlign='center'>
-          Campuses with awards from the{' '}
-          <Link href='https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748'>
-            NSF Campus Cyberinfrastructure (CC*)
-          </Link>{' '}
-          Program play an important role in supporting Open Science. CC* campuses
-          contribute to the processing and storage capacity of the{' '}
-          <Link href='/services/ospool'>Open Science Pool (OSPool)</Link> that is
-          harnessed weekly by more than 3M jobs.
-        </Typography>
-        <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, mt: 3 }}>
-          <Button href='mailto:cc-star-proposals@osg-htc.org' variant='contained' color='secondary'>
-            Email Us
-          </Button>
-          <Button href='#how-we-can-help' variant='outlined' color='secondary'>
-            How We Can Help
-          </Button>
-        </Box>
-      </Paper>
 
       <Typography paragraph>
         Enhancing the capacity of Research Computing of US campuses through local
@@ -63,50 +33,24 @@ export default function Page() {
         <Link href='https://path-cc.io'>
           Partnership to Advance Throughput Computing (PATh)
         </Link>
-        . Our project is committed to support CC* projects from proposal, through
-        deployment, to operation.
+        . Our project is committed to supporting CC* projects through deployment
+        and operation.
       </Typography>
 
-      <Typography variant='h4' component='h2' gutterBottom mt={4}>
-        <Link href={SOLICITATION}>Proposal</Link>
-      </Typography>
-      <Paper variant='outlined' sx={{ p: 3, bgcolor: 'grey.100', my: 2 }}>
-        <Typography paragraph>
-          Please contact us at{' '}
-          <Link href='mailto:cc-star-proposals@osg-htc.org'>cc-star-proposals@osg-htc.org</Link>{' '}
-          (the earlier the better!) with any questions or requests regarding the
-          involvement of <Link href='https://path-cc.io'>PATh</Link> in your
-          proposed project. The NSF 24-530 solicitation explicitly mentions the
-          OSG services we provide as a means to meet requirements for:
-        </Typography>
-        <Typography fontWeight='bold'>
-          (2) Computing and the Computing Continuum for the Campus or Region
-        </Typography>
-        <Typography paragraph>
-          All Area (2) proposals should commit to a minimum of 20% shared time.
-          NSF strongly encourages joining the PATh campus federation and adopting
-          an appropriate subset of PATh services to make the resource available on
-          a national scale.
-        </Typography>
-        <Typography fontWeight='bold'>
-          (4) Data Storage and Digital Archives for the Campus or Region
-        </Typography>
-        <Typography>
-          All Area (4) proposals are required to have interoperability with a
-          national and federated data sharing fabric such as PATh/OSDF. At least
-          20% of the storage should be made available as part of the chosen
-          federated data sharing fabric.
-        </Typography>
-      </Paper>
-
-      <Typography variant='h4' component='h2' gutterBottom mt={4} id='how-we-can-help'>
-        Let the PATh team help with your proposal
+      <Typography
+        variant='h4'
+        component='h2'
+        gutterBottom
+        mt={4}
+        id='support-for-cc-campuses'
+      >
+        Support for CC* Campuses
       </Typography>
       <Typography paragraph>
-        The NSF Campus Cyberinfrastructure (CC*) program invests in coordinated
-        campus and regional-level cyberinfrastructure improvements and innovation.{' '}
-        <Link href='https://path-cc.io'>PATh</Link> has experience offering
-        consulting to CC* projects during the proposal phase for:
+        Campuses that hold a CC* award can draw on the OSG Consortium and{' '}
+        <Link href='https://path-cc.io'>PATh</Link> throughout the life of their
+        award. Our teams have experience with each of the following aspects of a
+        CC* project:
       </Typography>
       <ul>
         <li>
@@ -117,10 +61,18 @@ export default function Page() {
           Bringing the power of high throughput computing via the{' '}
           <Link href='/services/ospool'>OSPool</Link> to your researchers
         </li>
-        <li>Meeting CC*-required resource sharing, and other options for integrating with the OSG Consortium</li>
+        <li>
+          Meeting the resource sharing commitments in your award, and other
+          options for integrating with the OSG Consortium
+        </li>
         <li>Providing connections to help with data storage systems for shared resources</li>
         <li>Building regional computing networks and developing science gateways</li>
       </ul>
+      <Typography paragraph>
+        Please do not hesitate to contact us at{' '}
+        <Link href='mailto:support@osg-htc.org'>support@osg-htc.org</Link> with
+        questions about any of the above.
+      </Typography>
 
       <Typography variant='h5' component='h3' gutterBottom mt={3} id='deployment'>
         Deployment
@@ -128,9 +80,9 @@ export default function Page() {
       <Typography paragraph>
         Our experienced and friendly team of engineers and facilitators is
         dedicated to supporting system engineers and campus research groups,
-        providing networking, computing and data storage consulting in support of
-        proposals. Post-award, these teams continue their support to ensure smooth
-        integration and onboarding into the OSPool or OSDF. Contact us at{' '}
+        providing networking, computing and data storage consulting, expertise and
+        guidance. These teams support your award to ensure smooth integration and
+        onboarding into the OSPool or OSDF. Contact us at{' '}
         <Link href='mailto:help@osg-htc.org'>help@osg-htc.org</Link> to schedule a
         consultation.
       </Typography>
@@ -184,9 +136,9 @@ export default function Page() {
         CC* Campus impact on Open Science
       </Typography>
       <Typography paragraph>
-        The OSG Consortium has been working with CC* campuses pre- and post-award
-        for several years. These campuses have made significant contributions in
-        support of science, both on their own campus and for the entire country.
+        The OSG Consortium has worked with CC* campuses for many years. These
+        campuses have made significant contributions in support of science, both
+        on their own campus and for the entire country.
       </Typography>
       <Typography variant='h5' component='h3' gutterBottom>
         Computing
@@ -205,9 +157,9 @@ export default function Page() {
       <Typography>
         The <Link href='/services/osdf'>Open Science Data Federation</Link>{' '}
         integrates data origins, making data accessible via caches, many of which
-        are strategically located in the R&amp;E network backbone. The CC*
-        solicitation of 2024 (NSF 24-530) requires interoperability with a
-        national and federated data sharing fabric such as PATh/OSDF.
+        are strategically located in the R&amp;E network backbone. CC* awards for
+        data storage require interoperability with a national and federated data
+        sharing fabric such as PATh/OSDF.
       </Typography>
     </Container>
   );
