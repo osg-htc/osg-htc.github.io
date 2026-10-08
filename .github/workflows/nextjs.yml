@@ -37,20 +37,47 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-      - name: Update Submodules
-        run: git submodule update --init --recursive --remote
+        uses: actions/checkout@v5
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 10
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: "pnpm"
       - name: Install dependencies
         run: pnpm install
+      # The Next.js build cache also holds the fetch data cache, which the
+      # 6-hourly cron refreshes. actions/cache skips the save on an exact key
+      # hit, so the key has to miss every run or those responses are thrown
+      # away: github.run_id never repeats, and restore-keys supplies the
+      # previous run's cache.
+      - name: Cache Next.js build
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('pnpm-lock.yaml') }}-
+            ${{ runner.os }}-nextjs-
+      # next-image-export-optimizer decides what to reuse from the hashes
+      # file, so restoring the generated variants without it re-encodes
+      # everything. remoteImagesForOptimization holds the downloaded staff
+      # headshots. next.config.mjs and remoteOptimizedImages.js both change
+      # what gets generated, so they belong in the key.
+      - name: Cache optimized images
+        uses: actions/cache@v4
+        with:
+          path: |
+            public/images/**/nextImageExportOptimizer
+            public/images/next-image-export-optimizer-hashes.json
+            remoteImagesForOptimization
+          key: ${{ runner.os }}-next-image-export-optimizer-${{ hashFiles('next.config.mjs', 'remoteOptimizedImages.js') }}-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-next-image-export-optimizer-${{ hashFiles('next.config.mjs', 'remoteOptimizedImages.js') }}-
+            ${{ runner.os }}-next-image-export-optimizer-
       - name: Build with Next.js
         run: |
           pnpm run build

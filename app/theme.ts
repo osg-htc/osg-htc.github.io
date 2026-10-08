@@ -1,11 +1,12 @@
 'use client';
 
+import NextLink from 'next/link';
 import { createTheme, type Theme } from '@mui/material/styles';
-import baseTheme from '@chtc/web-components/themes/osg';
+import { osgTheme as baseTheme } from '@chtc/web-components/themes';
 
 /**
  * Modern presentation layer built on top of the OSG brand theme
- * (`@chtc/web-components/themes/osg`). We keep the brand palette — amber
+ * (`@chtc/web-components/themes`). We keep the brand palette — amber
  * primary (#f6a32a) and near-black secondary — and layer on a contemporary
  * type scale, softer surfaces, rounded shapes, and refreshed component
  * defaults so the modernization propagates to every MUI component site-wide.
@@ -37,6 +38,14 @@ const theme = createTheme(baseTheme, {
     MuiLink: {
       // Underline only on hover (not persistently) so links read cleanly.
       defaultProps: { underline: 'hover' },
+    },
+    MuiButtonBase: {
+      // Route any `<Button href>` / `<IconButton href>` / clickable
+      // ButtonBase through next/link so internal links navigate client-side.
+      // Set via the theme (not a per-call `component` prop) so it also works
+      // from Server Components without passing a function across the RSC
+      // boundary. External/mailto hrefs fall back to a normal anchor.
+      defaultProps: { LinkComponent: NextLink },
     },
     MuiButton: {
       defaultProps: { disableElevation: true },

@@ -19,8 +19,13 @@ import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined';
 import DnsOutlinedIcon from '@mui/icons-material/DnsOutlined';
 import LayersOutlinedIcon from '@mui/icons-material/LayersOutlined';
 import HubOutlinedIcon from '@mui/icons-material/HubOutlined';
-import { ArticleCard } from '@chtc/web-components';
-import { getArticles, type BackendArticle } from '@/utils/articles';
+import {
+  ArticleCard,
+  formatLongDate,
+  getArticles,
+  sortArticles,
+  type BackendArticle,
+} from '@chtc/web-components/content';
 import { getEvents, splitEvents, formatEventDate } from '@/utils/events';
 import { SectionHeading } from './_components/SectionHeading';
 import { IntroCard } from './_components/IntroCard';
@@ -123,20 +128,11 @@ function articleHref(article: BackendArticle): string {
   return `${base}/${article.slug.join('/')}`;
 }
 
-function formatArticleDate(date: Date): string {
-  return new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    timeZone: 'UTC',
-  });
-}
-
 export default async function Home() {
   const articles = await getArticles('CHTC', 'Articles', 'main');
-  const osgArticles = articles
-    .filter((a) => a.publish_on?.includes('osg'))
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const osgArticles = sortArticles(
+    articles.filter((a) => a.publish_on?.includes('osg'))
+  );
 
   const news = osgArticles.filter((a) => a.type === 'news').slice(0, 4);
   const spotlights = osgArticles.filter((a) => a.type !== 'news');
@@ -335,7 +331,7 @@ export default async function Home() {
                       {article.title}
                     </Typography>
                     <Typography variant='caption' color='text.secondary'>
-                      {formatArticleDate(article.date)}
+                      {formatLongDate(article.date)}
                     </Typography>
                   </Box>
                 </Link>

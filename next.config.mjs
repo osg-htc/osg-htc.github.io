@@ -6,14 +6,16 @@ import createMDX from '@next/mdx'
 const nextConfig = {
 	// Configure `pageExtensions` to include markdown and MDX files
 	pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-	basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+	basePath: process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_BASE_PATH : '',
 	output: "export",
 	trailingSlash: true,
 	// Image Optimizer https://www.npmjs.com/package/next-image-export-optimizer?activeTab=readme
 	images: {
 		loader: "custom",
-		imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-		deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+		// Every entry here is another generated file per source image, so keep
+		// the list to the widths the layouts actually ask for.
+		imageSizes: [96, 384],
+		deviceSizes: [640, 1200],
 	},
 	transpilePackages: ["next-image-export-optimizer"],
 	env: {
@@ -23,7 +25,8 @@ const nextConfig = {
 		nextImageExportOptimizer_storePicturesInWEBP: "true",
 		nextImageExportOptimizer_exportFolderName: "nextImageExportOptimizer",
 		nextImageExportOptimizer_generateAndUseBlurImages: "true",
-		nextImageExportOptimizer_remoteImageCacheTTL: "0",
+		// 10 days: CI should not re-download the staff headshots every run.
+		nextImageExportOptimizer_remoteImageCacheTTL: "864000",
 	},
 };
 

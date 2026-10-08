@@ -5,7 +5,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import CssBaseline from '@mui/material/CssBaseline';
 
-import { fonts } from "@chtc/web-components/themes/osg"
+import { osgFonts } from "@chtc/web-components/themes"
 
 import theme from "./theme"
 import "./globals.css"
@@ -97,7 +97,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={fonts.map(font => font.className).join(' ')}>
+    <html lang="en" className={osgFonts.map((font) => font.className).join(' ')}>
 			{ process.env.NEXT_PUBLIC_MATOMO_URL && process.env.NEXT_PUBLIC_MATOMO_SITE_ID &&
 				<Analytics url={process.env.NEXT_PUBLIC_MATOMO_URL} siteId={process.env.NEXT_PUBLIC_MATOMO_SITE_ID} />
 			}

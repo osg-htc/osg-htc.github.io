@@ -22,6 +22,12 @@ const eslintConfig = [
     ],
   },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    // next-image-export-optimizer `require()`s this file, so it has to be
+    // CommonJS.
+    files: ["remoteOptimizedImages.js"],
+    rules: { "@typescript-eslint/no-require-imports": "off" },
+  },
 ];
 
 export default eslintConfig;

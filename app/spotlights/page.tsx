@@ -1,10 +1,15 @@
 import { Box, Typography, Grid, Container } from '@mui/material';
-import { HorizontalArticleCard, ArticleCard } from '@chtc/web-components';
-import { getArticles, filterArticles } from '@/utils/articles';
+import {
+  ArticleCard,
+  HorizontalArticleCard,
+  filterArticles,
+  getArticles,
+  sortArticles,
+} from '@chtc/web-components/content';
 
 async function getSpotlights() {
   const articles = await getArticles('CHTC', 'Articles', 'main');
-  return filterArticles(articles, 'osg', 'user');
+  return sortArticles(filterArticles(articles, 'osg', 'user'));
 }
 
 export default async function Page() {

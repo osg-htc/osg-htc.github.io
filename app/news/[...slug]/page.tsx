@@ -1,5 +1,9 @@
-import { Article } from '@chtc/web-components';
-import { getArticles, filterArticles, getArticle } from '@/utils/articles';
+import {
+  Article,
+  filterArticles,
+  getArticle,
+  getArticles,
+} from '@chtc/web-components/content';
 
 export async function generateStaticParams() {
   const articles = await getArticles('CHTC', 'Articles', 'main');

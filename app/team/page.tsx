@@ -1,7 +1,8 @@
 import { Box, Container, Grid, Typography, Divider } from '@mui/material';
 import { LeaderCard, StaffCard } from './cards';
 import React from 'react';
-import { getStaff } from '@/utils/staff';
+import { getStaff } from '@chtc/web-components/content';
+import { recordStaffImages } from '@/utils/staffImages';
 
 export default async function Page() {
   const team = await getStaff('osg');
@@ -24,6 +25,9 @@ export default async function Page() {
     (member) =>
       member.organizations.includes('osg') && member.status === 'Past'
   );
+
+  // Declare the portraits for the export image optimizer; see staffImages.ts.
+  recordStaffImages([...promoted, ...staff, ...pastStaff]);
 
   return (
     <Box pt={6}>

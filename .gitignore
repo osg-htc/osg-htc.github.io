@@ -45,3 +45,8 @@ next-env.d.ts
 
 # Generated Images
 **/nextImageExportOptimizer/**
+**/next-image-export-optimizer-hashes.json
+/remoteImagesForOptimization
+
+# Staff portrait manifest, written during `next build`
+/.staff-images.json

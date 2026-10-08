@@ -1,16 +1,19 @@
 import { Box, Typography, Grid, Container } from '@mui/material';
-import { HorizontalArticleCard, ArticleCard } from '@chtc/web-components';
-import { getArticles, filterArticles } from '@/utils/articles';
+import {
+  ArticleCard,
+  HorizontalArticleCard,
+  filterArticles,
+  getArticles,
+  sortArticles,
+} from '@chtc/web-components/content';
 
 async function getNews() {
   const articles = await getArticles('CHTC', 'Articles', 'main');
-  return filterArticles(articles, 'osg', 'news');
+  return sortArticles(filterArticles(articles, 'osg', 'news'));
 }
 
 export default async function Page() {
   const articles = await getNews();
-
-  console.log(articles)
 
   return (
     <>

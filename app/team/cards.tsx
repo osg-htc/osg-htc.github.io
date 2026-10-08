@@ -1,7 +1,7 @@
 import ExportedImage from 'next-image-export-optimizer';
 import { Box, Grid, Typography, Paper } from '@mui/material';
 import React from 'react';
-import { Staff } from '@/utils/staff';
+import { type Staff } from '@chtc/web-components/content';
 
 export function LeaderCard({ name, title, image, institution }: Staff) {
   return (
@@ -25,6 +25,7 @@ export function LeaderCard({ name, title, image, institution }: Staff) {
               src={image}
               alt={name}
               fill={true}
+              sizes='(max-width: 600px) 60vw, (max-width: 1200px) 50vw, 600px'
               style={{
                 borderRadius: '1rem',
                 objectFit: 'cover',

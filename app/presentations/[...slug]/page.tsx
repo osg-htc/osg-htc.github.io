@@ -1,16 +1,16 @@
 import {
-  BackendPresentation,
+  Presentation,
+  filterPresentations,
   getPresentations,
-} from '@/utils/presentations';
-import { Presentation } from '@chtc/web-components';
+  type BackendPresentation,
+} from '@chtc/web-components/content';
 import { Box, Container, Typography } from '@mui/material';
 
 export async function generateStaticParams() {
   try {
-    const presentations = await getPresentations(
-      'CHTC',
-      'Presentations',
-      'main'
+    const presentations = filterPresentations(
+      await getPresentations('CHTC', 'Presentations', 'main'),
+      'osg'
     );
 
     return presentations.map((presentation) => ({
@@ -26,10 +26,9 @@ async function getPresentationBySlug(
   slug: string[]
 ): Promise<BackendPresentation | null> {
   try {
-    const presentations = await getPresentations(
-      'CHTC',
-      'Presentations',
-      'main'
+    const presentations = filterPresentations(
+      await getPresentations('CHTC', 'Presentations', 'main'),
+      'osg'
     );
     const matchedPresentation = presentations.find(
       (presentation) => presentation.slug.join('-') === slug.join('-')

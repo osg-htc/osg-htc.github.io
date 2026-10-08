@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import ExportedImage from 'next-image-export-optimizer';
 import Link from 'next/link';
 import { Box, Container, Paper, Typography } from '@mui/material';
-import { getStaff } from '@/utils/staff';
+import { getStaff, type Staff } from '@chtc/web-components/content';
+import { recordStaffImages } from '@/utils/staffImages';
 import { CTAButton } from './_components/CTAButton';
 
 export const metadata: Metadata = {
@@ -11,14 +12,23 @@ export const metadata: Metadata = {
     'Facilitation Services accelerate dHTC uptake by campus researchers and collaborations via the OSG.',
 };
 
+/**
+ * `is_facilitator` is an OSG-only field in the shared staff YAML, so it isn't
+ * part of the library's `Staff` type.
+ */
+type Facilitator = Staff & { is_facilitator?: number };
+
 const EXCERPT =
   'Facilitation Services leverage the CHTC-pioneered principles of Research Computing Facilitation to accelerate dHTC uptake by campus researchers and collaborations via the Open Science Federation and OSG-Operated Access Points, and by campuses and other organizations interested in advancing their own dHTC and dHTC Facilitation capabilities.';
 
 export default async function Page() {
-  const team = await getStaff('osg');
+  const team = (await getStaff('osg')) as Facilitator[];
   const facilitators = team
     .filter((member) => member.is_facilitator === 1)
     .sort((a, b) => (a.weight ?? 0) - (b.weight ?? 0));
+
+  // Declare the portraits for the export image optimizer; see staffImages.ts.
+  recordStaffImages(facilitators);
 
   return (
     <Container maxWidth='md' sx={{ py: 4 }}>

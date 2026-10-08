@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Link, Typography } from '@mui/material';
 import Markdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 
@@ -47,9 +47,8 @@ const MarkdownContainer = ({ content }: { content: string }) => {
           </ul>
         ),
         a: ({ children, href }) => (
-          <Typography
-            component='a'
-            href={href}
+          <Link
+            href={href ?? '#'}
             sx={{
               color: '#b45309',
               fontWeight: 600,
@@ -58,7 +57,7 @@ const MarkdownContainer = ({ content }: { content: string }) => {
             }}
           >
             {children}
-          </Typography>
+          </Link>
         ),
         img: ({ src, alt }) => (
           // eslint-disable-next-line @next/next/no-img-element

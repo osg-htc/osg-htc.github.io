@@ -1,7 +1,6 @@
 import matter from 'gray-matter';
-import { getPaths, getRawFile, getTree } from './github';
-
-type Website = 'htcondor' | 'path' | 'osg' | 'chtc' | 'pelican';
+import type { Website } from '@chtc/web-components/content';
+import { getRawFile, getRepoPaths } from '@chtc/web-components/github';
 
 interface Image {
   path: string;
@@ -71,8 +70,7 @@ export async function getEvents(
   repo: string,
   branch: string
 ): Promise<BackendEvent[]> {
-  const tree = await getTree(organization, repo, branch);
-  const paths = getPaths(tree);
+  const paths = await getRepoPaths(organization, repo, branch);
 
   // Filter paths to only include event markdown files
   return Promise.all(
