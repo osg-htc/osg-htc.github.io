@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Box, Container, Typography } from '@mui/material';
 import { ProjectsExplorer } from '@/components/services/ospool/ProjectsExplorer';
+import { ProjectsSummary } from '@/components/services/ospool/ProjectsSummary';
 import { OspoolLogos } from '@/components/services/ospool/OspoolLogos';
 
 export const metadata: Metadata = {
@@ -23,6 +24,8 @@ export default function Page() {
           the <Link href='https://portal.osg-htc.org'>OSG Portal</Link>.
         </Typography>
       </Container>
+
+      <ProjectsSummary />
 
       <ProjectsExplorer />
 

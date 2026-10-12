@@ -170,14 +170,6 @@ export function ProjectsExplorer() {
     [all]
   );
 
-  const aggregate = useMemo(() => {
-    const totalJobs = filtered.reduce((s, p) => s + p.numJobs, 0);
-    const fields = new Set(
-      filtered.map((p) => p.detailedFieldOfScience).filter(Boolean)
-    );
-    return { count: filtered.length, totalJobs, fields: fields.size };
-  }, [filtered]);
-
   const handleSort = (id: keyof MergedProject) => {
     if (orderBy === id) {
       setOrder(order === 'asc' ? 'desc' : 'asc');
@@ -218,14 +210,6 @@ export function ProjectsExplorer() {
         <Typography variant='h4' component='h2' gutterBottom>
           By Project
         </Typography>
-        {projects && (
-          <Typography color='text.secondary' paragraph>
-            In the past 12 months the OSPool completed{' '}
-            {aggregate.totalJobs.toLocaleString()} jobs placed by{' '}
-            {aggregate.count.toLocaleString()} projects representing{' '}
-            {aggregate.fields} fields of science.
-          </Typography>
-        )}
         <Typography sx={{ mb: 2 }}>
           <strong>Click on a project to view its details.</strong>
         </Typography>
