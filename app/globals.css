@@ -1,15 +1,3 @@
-/*
-  Anchors inherit the surrounding text color and carry no underline by default.
-  This removes the browser's default blue/purple link coloring and underlines
-  from raw <a> elements — e.g. next/link usages and the @chtc/web-components
-  cards, whose title/excerpt text would otherwise render blue + underlined.
-  Link affordance is added explicitly where needed (content links, hover
-  states) or provided by the containing component (clickable cards).
-*/
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
 .MuiAlert-message {
   font-size: .875rem; /* Adjust the font size as needed */

@@ -17,7 +17,7 @@ export default function Page() {
 
       <Grid container spacing={4} alignItems='center'>
         <Grid size={{ xs: 12, md: 6 }}>
-          <Typography variant='h6' component='p' paragraph>
+          <Typography paragraph>
             The OSG offers access points that serve as a researcher&rsquo;s home
             for their High Throughput Computing work. Researchers can place their
             workloads and data on the access point, which automates the execution
@@ -25,13 +25,13 @@ export default function Page() {
             <Link href='/services/ospool'>Open Science Pool (OSPool)</Link> and{' '}
             <Link href='/services/osdf'>Open Science Data Federation (OSDF)</Link>.
           </Typography>
-          <Typography variant='h6' component='p' paragraph>
+          <Typography paragraph>
             Working with an access point requires no resources beyond your
             personal computer — it is your &ldquo;home&rdquo; on the nation&rsquo;s
             cyberinfrastructure, leading to our slogan of Submit Locally, Run
             Globally.
           </Typography>
-          <Typography variant='h6' component='p'>
+          <Typography>
             Powered by the{' '}
             <Link href='https://htcondor.org'>HTCondor Software Suite (HTCSS)</Link>,
             access points can also be configured to support &ldquo;Bring Your Own
@@ -40,7 +40,7 @@ export default function Page() {
             <Link href='https://path-cc.io/facility/index.html'>
               PATh Facility credits
             </Link>
-            , and commercial cloud resources.
+            , and commercial cloud resources (including NSFCloud accounts).
           </Typography>
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
@@ -70,7 +70,7 @@ export default function Page() {
           <Typography variant='h4' component='h2' gutterBottom>
             Free for US Researchers
           </Typography>
-          <Typography variant='h6' component='p' paragraph>
+          <Typography paragraph>
             OSG operated access points are available to any US-based research
             projects and collaborators via the{' '}
             <Link href='https://portal.osg-htc.org'>OSG Portal</Link>.
@@ -89,18 +89,18 @@ export default function Page() {
             <Typography component='p' sx={{ mb: 1 }}>
               See who is placing their workloads on our Access Points on our
             </Typography>
-            <Button href='/services/ospool/projects' variant='contained' color='secondary'>
+            <Button href='/services/ospool/projects' variant='contained' color='primary'>
               Projects Page
             </Button>
           </Box>
-          <Typography variant='h6' component='p' paragraph>
+          <Typography paragraph>
             Via an OSG-Operated Access Point, researchers have Fair-Share access
             to the capacity of the <Link href='/services/ospool'>OSPool</Link> and
             the <Link href='/services/osdf'>OSDF</Link>, with options for
             integrating with BYOC.
           </Typography>
-          <Typography variant='h6' component='p'>
-            <strong>Test-drive an access point today</strong> by signing up for an
+          <Typography>
+            Test-drive an access point today by signing up for an
             account on the{' '}
             <Link href='https://portal.osg-htc.org'>OSG Portal</Link>!
           </Typography>
@@ -111,11 +111,11 @@ export default function Page() {
         <Typography variant='h4' component='h2' gutterBottom>
           Interested in Operating an Access Point?
         </Typography>
-        <Typography variant='h6' component='p' paragraph>
+        <Typography paragraph>
           Most researchers are best served by using one of the access points we
           support.
         </Typography>
-        <Typography variant='h6' component='p'>
+        <Typography>
           If you are an IT professional, and your organization wants to consider
           operating an access point for its community of researchers, our
           organization-specific{' '}

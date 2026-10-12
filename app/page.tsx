@@ -193,24 +193,6 @@ export default async function Home() {
           >
             Advancing Open Science through High Throughput Computing
           </Typography>
-          <Box
-            sx={{
-              mt: 4,
-              display: 'flex',
-              gap: 2,
-              justifyContent: 'center',
-              flexWrap: 'wrap',
-            }}
-          >
-            <Button
-              variant='contained'
-              color='navy'
-              size='large'
-              href='https://portal.osg-htc.org/application'
-            >
-              Get Started
-            </Button>
-          </Box>
         </Container>
       </Box>
 
@@ -260,7 +242,7 @@ export default async function Home() {
               </Typography>
               <Typography>
                 Sign up now and join the{' '}
-                <Link href='/projects'>hundreds of researchers and educators</Link>{' '}
+                <Link href='/services/ospool/projects/'>hundreds of researchers and educators</Link>{' '}
                 already using the OSPool!
               </Typography>
             </IntroCard>

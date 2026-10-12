@@ -104,15 +104,21 @@ export default function RootLayout({
 				<Analytics url={process.env.NEXT_PUBLIC_MATOMO_URL} siteId={process.env.NEXT_PUBLIC_MATOMO_SITE_ID} />
 			}
       <AppRouterCacheProvider>
-        <CssBaseline />
-        <Box component={"body"} sx={{ margin: 0, padding: 0, bgcolor: 'background.default', color: 'text.primary', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-          <ThemeProvider theme={theme}>
+        {/*
+          ThemeProvider has to wrap CssBaseline and the body Box, not just the
+          page content: both read from the theme, and outside the provider they
+          resolve against MUI's default one (white `background.default` rather
+          than the brand off-white, default typography on `body`).
+        */}
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Box component={"body"} sx={{ margin: 0, padding: 0, bgcolor: 'background.default', color: 'text.primary', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
 						{Date.now() < Date.parse(NOBEL_BANNER_EXPIRES) && <NobelBanner />}
 						<Header pages={pages} />
 						{children}
             <Footer />
-          </ThemeProvider>
-        </Box>
+          </Box>
+        </ThemeProvider>
       </AppRouterCacheProvider>
     </html>
   );

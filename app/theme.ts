@@ -41,11 +41,25 @@ declare module '@mui/material/Button' {
 const theme = createTheme(baseTheme, {
   shape: { borderRadius: 12 },
   palette: {
-    // Explicit contrast text so contained buttons stay legible: white on the
-    // dark secondary, dark on the light amber primary (MUI's auto-computed
-    // value rendered dark-on-dark for the space-separated secondary color).
+    // Explicit contrast text so contained buttons stay legible: dark on the
+    // light amber primary, white on the near-black secondary below.
     primary: { contrastText: '#1f2733' },
-    secondary: { contrastText: '#ffffff' },
+    // The brand theme states secondary as `rgb(17 24 39)`. MUI's `decomposeColor`
+    // splits channels on commas, so the CSS Color 4 space-separated form parses
+    // as a single channel and `lighten`/`darken`/`alpha` return invalid colors
+    // (`rgb(11, NaN, NaN)`, `rgba(17, , , 0.04)`). A Button sets its background
+    // through `--variant-containedBg`, so an invalid value there is invalid at
+    // computed-value time and the background falls back to transparent — i.e. it
+    // vanishes on hover. Restating main in hex (the same color) and spelling out
+    // light/dark keeps every derived value parseable. light/dark have to be
+    // explicit because createTheme deep-merges the base palette, which already
+    // carries the broken pair, and augmentColor leaves provided channels alone.
+    secondary: {
+      main: '#111827',
+      light: 'rgb(64, 70, 82)',
+      dark: 'rgb(13, 19, 31)',
+      contrastText: '#ffffff',
+    },
     // createTheme only auto-derives light/dark/contrastText for the standard
     // palette keys, so custom ones have to spell every channel out or MUI
     // renders `undefined` backgrounds on hover.

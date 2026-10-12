@@ -305,8 +305,9 @@ export default function Page() {
       <Typography paragraph sx={{ mt: 2 }}>
         The OSDF is part of the OSG Fabric of Services run by the OSG Consortium.
         The effort to operate the OSDF central services and hosted origins is
-        provided by the <Link href='https://path-cc.io/'>PATh project</Link>. The
-        caches in the distribution network are primarily managed by PATh staff but
+        provided by the <Link href='https://path-cc.io/'>PATh project</Link>.
+        Institutions may operate their own origins on behalf of local repositories.
+        The caches in the distribution network are primarily managed by PATh staff but
         consist of hardware contributed by external projects or institutions such
         as:
       </Typography>
