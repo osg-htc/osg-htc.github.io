@@ -98,31 +98,14 @@ jobs:
           path: ./out
 
   # Deployment job if you are serving from GitHub Pages
-  deploy-pages:
-    if: github.event_name != 'pull_request' && github.ref =='refs/heads/main'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-  # Deployment job if you are serving from an artifact server
-  # This will happen automatically after a delay but this hook can be used to trigger it immediately
-  # Make sure to replace <host> with the actual host URL
-  deploy-artifact-server:
-    if: github.event_name != 'pull_request' && github.ref =='refs/heads/main'
-    runs-on: ubuntu-latest
-    needs: build
-    env:
-      HOSTNAME: ${{ vars.HOSTNAME }}
-    steps:
-      - name: Hit Web Hook
-        run: |
-          curl -X 'POST' \
-            "${HOSTNAME}/api/api/hooks/release-download-toggle" \
-            -H 'accept: application/json' \
-            -d ''
+#  deploy-pages:
+#    if: github.event_name != 'pull_request' && github.ref =='refs/heads/main'
+#    environment:
+#      name: github-pages
+#      url: ${{ steps.deployment.outputs.page_url }}
+#    runs-on: ubuntu-latest
+#    needs: build
+#    steps:
+#      - name: Deploy to GitHub Pages
+#        id: deployment
+#        uses: actions/deploy-pages@v4
