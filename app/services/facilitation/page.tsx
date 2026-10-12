@@ -5,10 +5,10 @@ import { Box, Button, Container, Grid, Paper, Typography } from '@mui/material';
 import {
   filterPresentations,
   getPresentations,
-  getStaff,
   type Staff,
 } from '@chtc/web-components/content';
 import { PresentationSummary } from '@/components/PresentationSummary';
+import { getStaff } from '@/utils/staff';
 import { recordStaffImages } from '@/utils/staffImages';
 import { CTAButton } from './_components/CTAButton';
 
@@ -47,7 +47,7 @@ export default async function Page() {
   return (
     <Container maxWidth='lg' sx={{ py: 4 }}>
       <Grid container spacing={4}>
-        <Grid size={{ xs: 12, lg: 8 }}>
+        <Grid size={{ xs: 12, lg: 9 }}>
           <Box sx={{ width: '2rem', height: 5, bgcolor: 'primary.main', mb: 1 }} />
           <Typography variant='h2' component='h1' gutterBottom>
             OSG Research Computing Facilitators
@@ -220,7 +220,7 @@ export default async function Page() {
         </Grid>
 
         {facilitationTalks.length > 0 && (
-          <Grid size={{ xs: 12, lg: 4 }}>
+          <Grid size={{ xs: 12, lg: 3 }}>
             <Box
               component='aside'
               sx={{ position: { lg: 'sticky' }, top: '1rem' }}

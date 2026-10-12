@@ -1,16 +1,16 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { Box } from '@mui/material';
 import {
   ArcElement,
   Chart,
-  Legend,
   PieController,
   Tooltip,
   type ChartConfiguration,
 } from 'chart.js';
 
-Chart.register(PieController, ArcElement, Tooltip, Legend);
+Chart.register(PieController, ArcElement, Tooltip);
 
 const PALETTE = [
   '#f6a32a', '#37a2eb', '#ff6384', '#ff9e40', '#9966ff',
@@ -66,10 +66,10 @@ export function PieChart({
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: {
-            position: 'right',
-            labels: { boxWidth: 14, font: { size: 11 }, color: legendColor },
-          },
+          // The legend is rendered as HTML alongside the canvas so it can
+          // scroll; Chart.js draws inside the canvas and would otherwise
+          // silently drop entries that do not fit.
+          legend: { display: false },
           tooltip: {
             callbacks: {
               label: (ctx) =>
@@ -88,11 +88,75 @@ export function PieChart({
 
     chartRef.current = new Chart(canvas, config);
     return () => chartRef.current?.destroy();
-  }, [labels, data, ariaLabel, legendColor]);
+  }, [labels, data, ariaLabel]);
+
+  const total = data.reduce((sum, value) => sum + value, 0);
 
   return (
-    <div style={{ position: 'relative', height }}>
-      <canvas ref={canvasRef} role='img' aria-label={ariaLabel} />
-    </div>
+    <Box sx={{ display: 'flex', alignItems: 'stretch', gap: 1.5, height }}>
+      <Box sx={{ position: 'relative', flex: '1 1 55%', minWidth: 0 }}>
+        <canvas ref={canvasRef} role='img' aria-label={ariaLabel} />
+      </Box>
+      <Box
+        component='ul'
+        aria-label={`${ariaLabel} legend`}
+        sx={{
+          flex: '1 1 45%',
+          minWidth: 0,
+          m: 0,
+          pl: 0,
+          listStyle: 'none',
+          overflowY: 'auto',
+          overscrollBehavior: 'contain',
+          fontSize: '0.75rem',
+          lineHeight: 1.4,
+          color: legendColor ?? 'inherit',
+          // Keep the scrollbar visible against the dark chart cards.
+          scrollbarWidth: 'thin',
+          scrollbarColor: legendColor
+            ? 'rgba(255,255,255,0.35) transparent'
+            : 'rgba(17,24,39,0.30) transparent',
+        }}
+      >
+        {labels.map((label, index) => (
+          <Box
+            component='li'
+            key={label}
+            onClick={
+              onSliceClick ? () => onSliceClick(String(label)) : undefined
+            }
+            sx={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: 0.75,
+              py: 0.25,
+              cursor: onSliceClick ? 'pointer' : 'default',
+              '&:hover': onSliceClick ? { opacity: 0.75 } : undefined,
+            }}
+          >
+            <Box
+              aria-hidden
+              sx={{
+                flexShrink: 0,
+                width: 12,
+                height: 12,
+                mt: '2px',
+                borderRadius: '2px',
+                bgcolor: PALETTE[index % PALETTE.length],
+              }}
+            />
+            <Box component='span' sx={{ minWidth: 0, wordBreak: 'break-word' }}>
+              {label}
+              <Box component='span' sx={{ opacity: 0.7 }}>
+                {' — '}
+                {data[index].toLocaleString()}
+                {total > 0 &&
+                  ` (${((data[index] / total) * 100).toFixed(1)}%)`}
+              </Box>
+            </Box>
+          </Box>
+        ))}
+      </Box>
+    </Box>
   );
 }

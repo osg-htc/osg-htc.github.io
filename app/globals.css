@@ -191,3 +191,60 @@ blockquote footer {
     opacity: 1;
   }
 }
+
+/*
+  Homepage hero circuitry (app/_components/CircuitryBackdrop.tsx).
+
+  The traces and solder pads are static; the pulse layer re-draws the same
+  paths as a short dash and animates `stroke-dashoffset` so a charge appears to
+  travel along each trace. `pathLength` is normalized to 100 so one dash
+  pattern works for paths of wildly different real lengths.
+*/
+.circuitry {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.circuitry g {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.circuitry-traces path {
+  stroke: rgba(11, 23, 37, 0.22);
+  stroke-width: 2;
+}
+
+.circuitry-pads circle {
+  fill: rgba(11, 23, 37, 0.22);
+  stroke: none;
+}
+
+.circuitry-pulses path {
+  stroke: rgba(11, 23, 37, 0.85);
+  stroke-width: 3.5;
+  /* A 3%-long dash with a 97% gap: exactly one charge in flight per trace. */
+  stroke-dasharray: 3 97;
+  animation-name: circuitry-pulse;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes circuitry-pulse {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circuitry-pulses {
+    display: none;
+  }
+}

@@ -15,7 +15,7 @@ export type DataRepository = {
   fieldOfScience: string;
   numberOfDatasets: number;
   rank: number;
-  inprogress: boolean;
+  inProgress: boolean;
   display: boolean;
   name: string;
   namespace: string[];
@@ -24,4 +24,11 @@ export type DataRepository = {
   organizationUrl: string | null;
   repositoryUrl: RepositoryUrl | null;
   publicObject: string | null;
+  /**
+   * True when `publicObject` names a directory rather than a single object, so
+   * the Pelican download has to recurse (`pelican object get -r`). Named with
+   * the YAML's own snake_case key, which the FabAID generator copies through
+   * verbatim into data-repositories.json.
+   */
+  is_directory?: boolean;
 };

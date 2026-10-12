@@ -21,6 +21,11 @@ import { slugify } from '@/utils/slug';
 
 const TOP_N = 15;
 
+/** Stat-tile formatter for plain counts and hour totals. */
+function formatRounded(value: number): string {
+  return Math.round(value).toLocaleString();
+}
+
 /** Top-N institutions by jobs, grouping the remainder into "Other". */
 function topInstitutions(rows: ProjectUsage[]) {
   const sorted = [...rows]
@@ -134,7 +139,26 @@ export default async function ProjectDetail({ slug }: { slug: string }) {
   );
   const instChart = topInstitutions(institutions);
   const meta = topology[name];
-  const hasOsdf = totals.osdfFiles > 0 || totals.osdfBytes > 0;
+
+  // One stat row for the whole project: OSPool usage and the OSDF transfer
+  // totals side by side. A project that never touched a given resource would
+  // otherwise show a wall of zeros, so empty measures are dropped entirely.
+  const stats = [
+    { label: 'Jobs Ran', value: totals.jobs, format: formatRounded },
+    { label: 'CPU Core Hours', value: totals.cpu, format: formatRounded },
+    { label: 'GPU Hours', value: totals.gpu, format: formatRounded },
+    {
+      label: 'Contributing Institutions',
+      value: institutions.length,
+      format: formatRounded,
+    },
+    {
+      label: 'OSDF Objects Transferred',
+      value: totals.osdfFiles,
+      format: formatRounded,
+    },
+    { label: 'OSDF Bytes Transferred', value: totals.osdfBytes, format: formatBytes },
+  ].filter((stat) => stat.value > 0);
 
   return (
     <Container maxWidth='lg' sx={{ py: { xs: 4, md: 6 } }}>
@@ -166,19 +190,16 @@ export default async function ProjectDetail({ slug }: { slug: string }) {
         </CardContent>
       </Card>
 
-      {/* OSPool stat tiles */}
-      <Grid container spacing={2} sx={{ mt: 1 }}>
-        {[
-          { label: 'Jobs Ran', value: totals.jobs },
-          { label: 'CPU Core Hours', value: totals.cpu },
-          { label: 'GPU Hours', value: totals.gpu },
-          { label: 'Contributing Institutions', value: institutions.length },
-        ].map((stat) => (
-          <Grid key={stat.label} size={{ xs: 6, md: 3 }}>
-            <StatTile label={stat.label} value={Math.round(stat.value).toLocaleString()} />
-          </Grid>
-        ))}
-      </Grid>
+      {/* Project stat tiles — OSPool usage and OSDF transfers together */}
+      {stats.length > 0 && (
+        <Grid container spacing={2} sx={{ mt: 1 }}>
+          {stats.map((stat) => (
+            <Grid key={stat.label} size={{ xs: 6, md: 3 }}>
+              <StatTile label={stat.label} value={stat.format(stat.value)} />
+            </Grid>
+          ))}
+        </Grid>
+      )}
 
       <SectionLabel>Contributing Institutions</SectionLabel>
       <Grid container spacing={2}>
@@ -215,23 +236,6 @@ export default async function ProjectDetail({ slug }: { slug: string }) {
           </Card>
         </Grid>
       </Grid>
-
-      {hasOsdf && (
-        <>
-          <SectionLabel>Open Science Data Federation</SectionLabel>
-          <Grid container spacing={2}>
-            <Grid size={{ xs: 6, md: 3 }}>
-              <StatTile
-                label='Objects Transferred'
-                value={Math.round(totals.osdfFiles).toLocaleString()}
-              />
-            </Grid>
-            <Grid size={{ xs: 6, md: 3 }}>
-              <StatTile label='Bytes Transferred' value={formatBytes(totals.osdfBytes)} />
-            </Grid>
-          </Grid>
-        </>
-      )}
     </Container>
   );
 }

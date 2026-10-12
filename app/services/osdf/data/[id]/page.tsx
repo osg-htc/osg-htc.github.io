@@ -126,7 +126,7 @@ export default async function Page({ params }: PageProps) {
               repository.dataVisibility === 'public' ? 'filled' : 'outlined'
             }
           />
-          {repository.inprogress && (
+          {repository.inProgress && (
             <Chip label='In Progress' color='warning' variant='outlined' />
           )}
           <Chip label={repository.fieldOfScience} variant='outlined' />
@@ -162,20 +162,44 @@ export default async function Page({ params }: PageProps) {
             {repository.publicObject && (
               <Box sx={{ mt: 4 }}>
                 <Typography variant='h6' component='h3' gutterBottom>
-                  Example Public Object
+                  Download a Public Object
+                </Typography>
+                <Typography variant='subtitle2' sx={{ mt: 2, mb: 1 }}>
+                  With the Pelican client on the command line
                 </Typography>
                 <Paper
                   variant='outlined'
+                  component='pre'
                   sx={{
                     p: 2,
+                    m: 0,
                     fontFamily: 'monospace',
                     fontSize: '0.85rem',
+                    whiteSpace: 'pre-wrap',
                     wordBreak: 'break-all',
-                    bgcolor: 'grey.50',
+                    bgcolor: 'secondary.main',
+                    color: 'common.white',
                   }}
                 >
-                  {repository.publicObject}
+                  <code>
+                    {`pelican object get ${
+                      repository.is_directory ? '-r ' : ''
+                    }osdf://${repository.publicObject} ./`}
+                  </code>
                 </Paper>
+                <Typography variant='subtitle2' sx={{ mt: 2, mb: 1 }}>
+                  From your browser
+                </Typography>
+                <Button
+                  href={`https://osdf-director.osg-htc.org${repository.publicObject}`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  variant='contained'
+                  color='secondary'
+                  endIcon={<Launch />}
+                >
+                  Download Public Object
+                </Button>
               </Box>
             )}
           </Grid>

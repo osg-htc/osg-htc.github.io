@@ -60,7 +60,7 @@ export default function RepositoryTable({
                 <Typography variant='body2' sx={{ fontWeight: 600 }}>
                   {repository.name}
                 </Typography>
-                {repository.inprogress && (
+                {repository.inProgress && (
                   <Typography variant='caption' color='text.secondary'>
                     In progress
                   </Typography>

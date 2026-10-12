@@ -5,6 +5,33 @@ import { createTheme, type Theme } from '@mui/material/styles';
 import { osgTheme as baseTheme } from '@chtc/web-components/themes';
 
 /**
+ * The two brand colors the legacy site carried as Bootstrap `$secondary` and
+ * `$dark`. They are not derivable from the MUI primary/secondary pair, so they
+ * get first-class palette entries here rather than being re-typed as hex
+ * literals at each call site (hero callout, service sub-navigation).
+ */
+export const BRAND_ORANGE = '#f4b627';
+export const BRAND_NAVY = '#0b1725';
+
+declare module '@mui/material/styles' {
+  interface Palette {
+    orange: Palette['primary'];
+    navy: Palette['primary'];
+  }
+  interface PaletteOptions {
+    orange?: PaletteOptions['primary'];
+    navy?: PaletteOptions['primary'];
+  }
+}
+
+declare module '@mui/material/Button' {
+  interface ButtonPropsColorOverrides {
+    orange: true;
+    navy: true;
+  }
+}
+
+/**
  * Modern presentation layer built on top of the OSG brand theme
  * (`@chtc/web-components/themes`). We keep the brand palette — amber
  * primary (#f6a32a) and near-black secondary — and layer on a contemporary
@@ -19,6 +46,21 @@ const theme = createTheme(baseTheme, {
     // value rendered dark-on-dark for the space-separated secondary color).
     primary: { contrastText: '#1f2733' },
     secondary: { contrastText: '#ffffff' },
+    // createTheme only auto-derives light/dark/contrastText for the standard
+    // palette keys, so custom ones have to spell every channel out or MUI
+    // renders `undefined` backgrounds on hover.
+    orange: {
+      main: BRAND_ORANGE,
+      light: '#f7c95c',
+      dark: '#cf9612',
+      contrastText: BRAND_NAVY,
+    },
+    navy: {
+      main: BRAND_NAVY,
+      light: '#1d3047',
+      dark: '#050c14',
+      contrastText: BRAND_ORANGE,
+    },
     background: {
       default: '#f7f8fa',
       paper: '#ffffff',

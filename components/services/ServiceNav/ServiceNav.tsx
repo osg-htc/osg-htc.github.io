@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { Box, Container, Stack, Typography } from '@mui/material';
+import { Box, Button, Container, Stack, Typography } from '@mui/material';
 
 export interface ServiceNavLink {
   label: string;
@@ -8,8 +7,11 @@ export interface ServiceNavLink {
 }
 
 /**
- * A dark secondary-bar of sub-navigation links for a service section
- * (e.g. OSPool: Overview / Projects / Institutions / Documentation / Training).
+ * The sub-navigation bar for a service section (e.g. OSPool: Overview /
+ * Projects / Institutions / Documentation / Training).
+ *
+ * Carries the legacy site's bar treatment — the brand navy background with
+ * brand-orange links — from the `navy`/`orange` palette entries in app/theme.ts.
  * Hidden on small screens, where the main header navigation is used instead.
  */
 export function ServiceNav({
@@ -25,7 +27,7 @@ export function ServiceNav({
     <Box
       sx={{
         display: { xs: 'none', md: 'block' },
-        bgcolor: 'grey.900',
+        bgcolor: 'navy.main',
         py: 1,
       }}
     >
@@ -33,7 +35,7 @@ export function ServiceNav({
         <Stack
           direction='row'
           alignItems='center'
-          sx={{ position: 'relative', minHeight: 32 }}
+          sx={{ position: 'relative', minHeight: 40 }}
         >
           <Typography
             variant='subtitle1'
@@ -41,7 +43,8 @@ export function ServiceNav({
               display: 'inline-flex',
               alignItems: 'center',
               gap: 0.5,
-              color: 'grey.500',
+              color: 'orange.main',
+              fontWeight: 700,
             }}
           >
             {icon}
@@ -49,7 +52,7 @@ export function ServiceNav({
           </Typography>
           <Stack
             direction='row'
-            spacing={3}
+            spacing={1}
             sx={{
               alignItems: 'center',
               position: 'absolute',
@@ -58,26 +61,22 @@ export function ServiceNav({
             }}
           >
             {links.map((link) => (
-              <Link
+              <Button
                 key={link.href}
                 href={link.href}
-                style={{ textDecoration: 'none' }}
+                variant='text'
+                color='orange'
+                size='small'
+                startIcon={link.icon}
+                sx={{
+                  fontSize: '0.95rem',
+                  '&:hover': { bgcolor: 'rgba(244, 182, 39, 0.12)' },
+                  '& .MuiButton-startIcon': { mr: 0.5 },
+                  '& svg': { fontSize: '1.1rem' },
+                }}
               >
-                <Box
-                  sx={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: 0.5,
-                    color: 'grey.400',
-                    fontSize: '0.95rem',
-                    '&:hover': { color: 'primary.main' },
-                    '& svg': { fontSize: '1.1rem' },
-                  }}
-                >
-                  {link.icon}
-                  {link.label}
-                </Box>
-              </Link>
+                {link.label}
+              </Button>
             ))}
           </Stack>
         </Stack>

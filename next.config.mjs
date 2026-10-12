@@ -6,7 +6,6 @@ import createMDX from '@next/mdx'
 const nextConfig = {
 	// Configure `pageExtensions` to include markdown and MDX files
 	pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-	basePath: process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_BASE_PATH : '',
 	output: "export",
 	trailingSlash: true,
 	// Image Optimizer https://www.npmjs.com/package/next-image-export-optimizer?activeTab=readme

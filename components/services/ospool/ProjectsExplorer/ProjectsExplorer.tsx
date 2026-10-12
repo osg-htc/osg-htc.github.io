@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import useSWR from 'swr';
 import { useRouter } from 'next/navigation';
 import {
@@ -101,6 +101,25 @@ export function ProjectsExplorer() {
     getMergedProjects,
     { revalidateOnFocus: false }
   );
+
+  // The legacy site opened a project in a modal from `?project=NAME`; those
+  // URLs are still linked to from elsewhere. Each project now has its own
+  // page, so forward to it once the list has loaded and the name resolves.
+  // Read from `window.location` rather than `useSearchParams` so the static
+  // export does not need a Suspense bailout for a value that is only ever
+  // known in the browser.
+  useEffect(() => {
+    if (!projects) return;
+    const requested = new URLSearchParams(window.location.search).get('project');
+    if (!requested) return;
+    const wanted = requested.trim().toLowerCase();
+    const match = projects.find(
+      (p) =>
+        p.projectName.toLowerCase() === wanted ||
+        slugify(p.projectName) === slugify(requested)
+    );
+    if (match) router.replace(`/projects/${slugify(match.projectName)}/`);
+  }, [projects, router]);
 
   const [search, setSearch] = useState('');
   const [orderBy, setOrderBy] = useState<keyof MergedProject>('numJobs');

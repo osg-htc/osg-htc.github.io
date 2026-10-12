@@ -30,6 +30,7 @@ import {
 } from '@chtc/web-components/content';
 import { getEvents, splitEvents, formatEventDate } from '@/utils/events';
 import { PresentationSummary } from '@/components/PresentationSummary';
+import { CircuitryBackdrop } from './_components/CircuitryBackdrop';
 import { SectionHeading } from './_components/SectionHeading';
 import { IntroCard } from './_components/IntroCard';
 import { SupportItem } from './_components/SupportItem';
@@ -138,9 +139,12 @@ export default async function Home() {
   );
 
   const news = osgArticles.filter((a) => a.type === 'news').slice(0, 4);
-  const spotlights = osgArticles.filter((a) => a.type !== 'news');
+  // Only `user` articles are user spotlights. The Articles repo also carries
+  // `feature` and `tech-blog` types, which a `type !== 'news'` test would
+  // wrongly sweep into this section.
+  const spotlights = osgArticles.filter((a) => a.type === 'user');
   const heroStory =
-    osgArticles.find((a) => a.banner_src) ?? osgArticles[0] ?? null;
+    spotlights.find((a) => a.banner_src) ?? spotlights[0] ?? null;
 
   const events = await getEvents('CHTC', 'events', 'main');
   const upcomingEvents = splitEvents(events).upcoming.slice(0, 3);
@@ -161,25 +165,19 @@ export default async function Home() {
 
   return (
     <Box>
-      {/* Hero banner */}
+      {/* Hero callout — brand orange, as on the legacy site, with the darker
+          brand navy for the type and the circuitry traces behind it. */}
       <Box
         sx={{
           position: 'relative',
           overflow: 'hidden',
-          bgcolor: 'secondary.main',
-          color: 'common.white',
+          bgcolor: 'orange.main',
+          color: 'orange.contrastText',
           py: { xs: 8, md: 12 },
           textAlign: 'center',
-          '&::before': {
-            content: '""',
-            position: 'absolute',
-            inset: 0,
-            background:
-              'radial-gradient(70% 130% at 50% -20%, rgba(246,163,42,0.40), transparent 60%)',
-            pointerEvents: 'none',
-          },
         }}
       >
+        <CircuitryBackdrop />
         <Container maxWidth='md' sx={{ position: 'relative' }}>
           <Typography
             variant='h1'
@@ -191,7 +189,7 @@ export default async function Home() {
           <Typography
             variant='h5'
             component='p'
-            sx={{ mt: 2, fontWeight: 400, color: 'rgba(255,255,255,0.82)' }}
+            sx={{ mt: 2, fontWeight: 400, opacity: 0.85 }}
           >
             Advancing Open Science through High Throughput Computing
           </Typography>
@@ -206,7 +204,7 @@ export default async function Home() {
           >
             <Button
               variant='contained'
-              color='primary'
+              color='navy'
               size='large'
               href='https://portal.osg-htc.org/application'
             >
@@ -303,16 +301,48 @@ export default async function Home() {
         </Grid>
       </Container>
 
-      {/* Hero story / News / Events */}
-      <Container maxWidth='xl' sx={{ py: 3 }}>
+      {/* Hero story / News / Events, over the spotlight's banner image */}
+      <Box
+        sx={{
+          position: 'relative',
+          py: 4,
+          ...(heroStory?.banner_src
+            ? {
+                backgroundImage: `url(${heroStory.banner_src})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+              }
+            : { bgcolor: 'grey.100' }),
+        }}
+      >
+      <Container maxWidth='xl' sx={{ position: 'relative' }}>
         {/* Center the columns so there's no empty gap when the (conditional)
             Events column is absent. */}
         <Grid container spacing={2} justifyContent='center'>
           {heroStory && (
             <Grid size={{ xs: 12, md: 5 }}>
-              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', p: 2 }}>
+              {/* Frosted panel over the banner, mirroring the legacy
+                  #hero-content-container treatment. */}
+              <Card
+                sx={{
+                  height: '100%',
+                  minHeight: 300,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  p: 2,
+                  bgcolor: 'rgba(0, 0, 0, 0.6)',
+                  backdropFilter: 'blur(15px)',
+                  WebkitBackdropFilter: 'blur(15px)',
+                  color: 'common.white',
+                  border: 'none',
+                  '&:hover': { transform: 'none', boxShadow: 'none' },
+                }}
+              >
                 <Typography variant='subtitle2'>
-                  <Link href='/spotlights'>Spotlight User</Link>
+                  <Link href='/spotlights' sx={{ color: 'primary.main' }}>
+                    Spotlight User
+                  </Link>
                 </Typography>
                 <Typography variant='h4' component='h2' gutterBottom>
                   {heroStory.title}
@@ -323,7 +353,7 @@ export default async function Home() {
                 <Button
                   href={articleHref(heroStory)}
                   variant='contained'
-                  color='secondary'
+                  color='primary'
                   sx={{ mt: 'auto', mr: 'auto' }}
                 >
                   Read About Spotlight User
@@ -411,6 +441,7 @@ export default async function Home() {
           )}
         </Grid>
       </Container>
+      </Box>
 
       {/* Maps */}
       <Container maxWidth='xl' sx={{ py: 6 }}>
@@ -454,8 +485,8 @@ export default async function Home() {
         <Container maxWidth='xl'>
           <SectionHeading>User Spotlights</SectionHeading>
           <Grid container spacing={2} justifyContent='center'>
-            {spotlights.slice(0, 3).map((article) => (
-              <Grid key={article.slug.join('-')} size={{ xs: 12, md: 6, xl: 4 }}>
+            {spotlights.slice(0, 4).map((article) => (
+              <Grid key={article.slug.join('-')} size={{ xs: 12, sm: 6, lg: 3 }}>
                 <ArticleCard href={articleHref(article)} article={article} />
               </Grid>
             ))}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import useSWR from 'swr';
 import {
@@ -43,6 +43,27 @@ export function InstitutionsExplorer() {
     getInstitutionsForRange,
     { revalidateOnFocus: false }
   );
+
+  // The legacy site opened an institution in a modal from `?institution=NAME`
+  // (or the older `?facility=`). Each institution now has its own page, so
+  // forward to it once the list has loaded and the name resolves. Read from
+  // `window.location` rather than `useSearchParams` so the static export does
+  // not need a Suspense bailout for a value only known in the browser.
+  useEffect(() => {
+    if (!institutions) return;
+    const params = new URLSearchParams(window.location.search);
+    const requested = params.get('institution') ?? params.get('facility');
+    if (!requested) return;
+    const wanted = requested.trim().toLowerCase();
+    const match = institutions.find(
+      (i) =>
+        i.institutionName.toLowerCase() === wanted ||
+        slugify(i.institutionName) === slugify(requested)
+    );
+    if (match) {
+      router.replace(`/institutions/${slugify(match.institutionName)}/`);
+    }
+  }, [institutions, router]);
 
   const [search, setSearch] = useState('');
   const [orderBy, setOrderBy] = useState<keyof InstitutionUsage>('numJobs');

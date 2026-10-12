@@ -1,94 +1,108 @@
 import ExportedImage from 'next-image-export-optimizer';
-import { Box, Grid, Typography, Paper } from '@mui/material';
+import Link from 'next/link';
+import { Box, Card, CardContent, Typography } from '@mui/material';
 import React from 'react';
 import { type Staff } from '@chtc/web-components/content';
 
-export function LeaderCard({ name, title, image, institution }: Staff) {
-  return (
-    <Grid container spacing={2} justifyContent={'center'} mb={2}>
-      <Grid
-        size={{
-          xs: 7,
-          sm: 6,
-          md: 5,
-        }}
-      >
-        <Paper
-          sx={{
-            padding: 2,
-            borderRadius: '50%',
-            bgcolor: 'primary.light',
-          }}
-        >
-          <Box sx={{ position: 'relative', aspectRatio: 1 }}>
-            <ExportedImage
-              src={image}
-              alt={name}
-              fill={true}
-              sizes='(max-width: 600px) 60vw, (max-width: 1200px) 50vw, 600px'
-              style={{
-                borderRadius: '1rem',
-                objectFit: 'cover',
-              }}
-            />
-          </Box>
-        </Paper>
-      </Grid>
-      <Grid sx={{ pl: 1, display: 'flex', flexDirection: 'column' }}>
-        <Box sx={{ m: 'auto' }}>
-          <Typography variant={'h5'} color={'primary.dark'}>
-            {name}
-          </Typography>
-          <Typography variant={'body1'}>{title}</Typography>
-          <Typography variant={'body1'}>{institution}</Typography>
-        </Box>
-      </Grid>
-    </Grid>
-  );
+/** First letters of the first and last name, for the portrait placeholder. */
+function initials(name: string): string {
+  const parts = name.trim().split(/\s+/);
+  const first = parts[0]?.[0] ?? '';
+  const last = parts.length > 1 ? parts[parts.length - 1][0] : '';
+  return (first + last).toUpperCase();
 }
 
-export function StaffCard({ name, title, image, institution }: Staff) {
+/**
+ * A single person on the team page: portrait on top, then name, institution
+ * and role — the vertical card the legacy site used for every section. The
+ * `executive` variant is the same card at a larger grid size, so it only
+ * changes the portrait's `sizes` hint.
+ *
+ * The initials sit *behind* the portrait rather than being swapped in by an
+ * error handler, so the card still reads correctly when a staff entry points
+ * at an image that does not exist. The export optimizer emits no variants for
+ * an image it could not fetch, and next/image renders its `<img>` with
+ * transparent text, so the alternative is a blank tile.
+ */
+export function StaffCard({
+  member,
+  executive = false,
+}: {
+  member: Staff;
+  executive?: boolean;
+}) {
+  const { name, title, image, institution, website } = member;
+
   return (
-    <Box
+    <Card
       sx={{
-        borderRadius: '1rem',
-        padding: '1rem',
-        backgroundColor: 'white',
         height: '100%',
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column',
+        bgcolor: 'background.paper',
       }}
     >
-      <Paper
+      <Box
         sx={{
-          padding: 1,
-          borderRadius: '1rem',
-          bgcolor: 'primary.light',
+          position: 'relative',
+          width: '100%',
+          aspectRatio: 1,
+          display: 'grid',
+          placeItems: 'center',
+          bgcolor: 'grey.200',
         }}
       >
-        <ExportedImage
-          src={image}
-          alt={name}
-          height={150}
-          width={150}
-          style={{
-            borderRadius: '1rem',
-            objectFit: 'cover',
+        <Typography
+          aria-hidden
+          sx={{
+            fontSize: executive ? '3.5rem' : '2.25rem',
+            fontWeight: 700,
+            color: 'grey.500',
+            userSelect: 'none',
           }}
-        />
-      </Paper>
-
-      <Box sx={{ pl: 1, display: 'flex', flexDirection: 'column' }}>
-        <Box sx={{ m: 'auto' }}>
-          <Typography variant={'h5'} color={'primary.dark'}>
-            {name}
-          </Typography>
-          <Typography variant={'subtitle1'}>{title}</Typography>
-          <Typography variant={'subtitle1'} lineHeight={1.4}>
+        >
+          {initials(name)}
+        </Typography>
+        {image && (
+          <ExportedImage
+            src={image}
+            alt={name}
+            fill
+            sizes={
+              executive
+                ? '(max-width: 600px) 100vw, (max-width: 1200px) 33vw, 300px'
+                : '(max-width: 600px) 50vw, (max-width: 1200px) 25vw, 200px'
+            }
+            style={{ objectFit: 'cover' }}
+          />
+        )}
+      </Box>
+      <CardContent
+        sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, p: 2 }}
+      >
+        <Typography variant='subtitle1' component='h3' fontWeight={700}>
+          {website ? (
+            <Link href={website} style={{ textDecoration: 'underline' }}>
+              {name}
+            </Link>
+          ) : (
+            name
+          )}
+        </Typography>
+        {institution && (
+          <Typography variant='caption' color='text.secondary'>
             {institution}
           </Typography>
-        </Box>
-      </Box>
-    </Box>
+        )}
+        <Typography
+          variant='body2'
+          fontStyle='italic'
+          color='text.secondary'
+          sx={{ mt: 'auto', pt: 1.5 }}
+        >
+          {title}
+        </Typography>
+      </CardContent>
+    </Card>
   );
 }
