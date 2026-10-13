@@ -5,6 +5,7 @@ import { InstitutionsExplorer } from '@/components/services/ospool/InstitutionsE
 import { OspoolLogos } from '@/components/services/ospool/OspoolLogos';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services/ospool/institutions' },
   title: 'OSPool Contributing Institutions — OSG Consortium',
   description:
     'Institutions that contribute resources to the OSPool and their contributions to open science.',

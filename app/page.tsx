@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import ExportedImage from 'next-image-export-optimizer';
 import {
   Box,
@@ -125,6 +126,13 @@ const WHAT_WE_DO: { title: string; icon: React.ReactNode; body: React.ReactNode 
     ),
   },
 ];
+
+// Title and description come from the root layout, which describes the site
+// as a whole — exactly what the home page is. Only the canonical is its own;
+// setting one in the layout would make every page claim to be this one.
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 function articleHref(article: BackendArticle): string {
   const base = article.type === 'news' ? '/news' : '/spotlights';
@@ -451,7 +459,13 @@ export default async function Home() {
                   {map.title}
                 </Typography>
                 <Box sx={{ position: 'relative', width: '100%', aspectRatio: 2 }}>
-                  <ExportedImage src={map.image} alt={`${map.title} map preview`} fill style={{ objectFit: 'cover' }} />
+                  <ExportedImage
+                    src={map.image}
+                    alt={`${map.title} map preview`}
+                    fill
+                    sizes='(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 380px'
+                    style={{ objectFit: 'cover' }}
+                  />
                 </Box>
               </Box>
             </Grid>

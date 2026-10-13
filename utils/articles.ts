@@ -6,10 +6,20 @@ import {
   type ArticleType,
   type BackendArticle,
 } from '@chtc/web-components/content';
+import type { Metadata } from 'next';
 import {
   extractMarkdownImageUrls,
   recordRemoteImages,
 } from '@/utils/remoteImages';
+import {
+  OG_SITE,
+  TWITTER_SITE,
+  firstParagraph,
+  isoDate,
+  pageTitle,
+  shareImage,
+  summarize,
+} from '@/utils/metadata';
 
 const ORGANIZATION = 'CHTC';
 const REPOSITORY = 'Articles';
@@ -70,4 +80,45 @@ export async function getSiteArticle(
     `${slug.join('-')}.md`,
     BRANCH
   );
+}
+
+/**
+ * Metadata for one article's page.
+ *
+ * Draws on the frontmatter the repository already carries: the excerpt
+ * becomes the description, the card image becomes the shared image, and
+ * `canonical_url` becomes the canonical link. That field names wherever the
+ * authoritative copy of the article lives — another site for anything
+ * syndicated from the Morgridge newsroom or chtc.cs.wisc.edu, and this page
+ * itself for the ones OSG published first.
+ */
+export function articleMetadata(
+  article: BackendArticle,
+  path: string
+): Metadata {
+  const title = pageTitle(article.title);
+  const description =
+    summarize(article.excerpt) ?? firstParagraph(article.content);
+  const images = shareImage(article.image?.path, article.image?.alt);
+
+  return {
+    title,
+    description,
+    authors: article.author ? [{ name: article.author }] : undefined,
+    keywords: article.tag,
+    alternates: { canonical: article.canonical_url ?? path },
+    openGraph: {
+      ...OG_SITE,
+      type: 'article',
+      title,
+      description,
+      // The page's own address, even when the canonical points off-site: a
+      // share of this URL should resolve to the page that was shared.
+      url: path,
+      publishedTime: isoDate(article.date),
+      authors: article.author ? [article.author] : undefined,
+      images,
+    },
+    twitter: { ...TWITTER_SITE, title, description, images },
+  };
 }

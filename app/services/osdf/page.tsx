@@ -15,6 +15,7 @@ import { ExpandMore } from '@mui/icons-material';
 import { MiniBarHeading } from './_components/MiniBarHeading';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services/osdf' },
   title: 'Open Science Data Federation — OSG Consortium',
   description:
     'The OSDF connects disparate dataset repositories into a single, nation-wide data distribution network.',

@@ -3,6 +3,7 @@ import { Container, Link, Typography } from '@mui/material';
 import MarkEmailReadOutlinedIcon from '@mui/icons-material/MarkEmailReadOutlined';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/pointers/enrollment-email' },
   title: 'Check Your Email — OSG Consortium',
   description: 'Next steps for enrolling in OSG services via CILogon.',
 };

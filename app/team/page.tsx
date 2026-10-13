@@ -7,6 +7,7 @@ import { recordStaffImages } from '@/utils/remoteImages';
 import { StaffCard } from './cards';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/team' },
   title: 'The OSG Team — OSG Consortium',
   description:
     'The executive team, staff, and past members of the OSG Consortium.',

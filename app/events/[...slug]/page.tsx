@@ -1,8 +1,10 @@
 import ExportedImage from 'next-image-export-optimizer';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import MarkdownContainer from '@/components/MarkdownContainer';
+import type { Metadata } from 'next';
 import {
   BackendEvent,
+  eventMetadata,
   formatEventDate,
   getEvents,
   isUpcoming,
@@ -28,6 +30,17 @@ async function getEventBySlug(slug: string[]): Promise<BackendEvent | null> {
     console.error('Error finding event by slug:', error);
     return null;
   }
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string[] }>;
+}): Promise<Metadata> {
+  const slug = (await params).slug;
+  const event = await getEventBySlug(slug);
+  if (!event) return { title: 'Event Not Found — OSG Consortium' };
+  return eventMetadata(event, `/events/${slug.join('/')}`);
 }
 
 export default async function Page({

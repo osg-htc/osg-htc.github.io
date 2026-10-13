@@ -4,6 +4,7 @@ import { Box, Container, Typography } from '@mui/material';
 import { FacilityExplorer } from '@/components/FacilityExplorer';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/institutions' },
   title: 'OSG Institutions — OSG Consortium',
   description:
     'Institutions registered with the OSG Consortium and their contributions over the last year.',

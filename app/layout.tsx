@@ -15,10 +15,33 @@ import Analytics from "@/components/Analytics";
 import { NobelBanner } from "@/components/NobelBanner";
 import { NOBEL_BANNER_EXPIRES } from "@/components/NobelBanner/config";
 
+const SITE_DESCRIPTION =
+	"The OSG fabric of services delivers distributed high throughput computing to researchers";
+
+/*
+ * Site-wide metadata. Every page inherits what it does not set, so this holds
+ * only the fields that are true of the whole site.
+ *
+ * `openGraph` and `twitter` deliberately carry no title, description or url:
+ * a child that sets plain `title`/`description` does not get its values
+ * copied into an inherited `openGraph` block, so anything named here would
+ * stick on all ~50 pages. Left unset, Next fills og:title and og:description
+ * from each page's own title and description. The shared og:image comes from
+ * `opengraph-image.png` in this folder, which applies to every route.
+ */
 export const metadata: Metadata = {
   title: "OSG Consortium",
-  description: "The OSG fabric of services delivers distributed high throughput computing to researchers",
+  description: SITE_DESCRIPTION,
 	metadataBase: new URL(`https://${process.env.HOSTNAME}`),
+	applicationName: "OSG Consortium",
+	openGraph: {
+		type: "website",
+		siteName: "OSG Consortium",
+		locale: "en_US",
+	},
+	twitter: {
+		card: "summary_large_image",
+	},
 };
 
 const pages = [

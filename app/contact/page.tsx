@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Box, Button, Card, CardContent, Container, Divider, Typography } from '@mui/material';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/contact' },
   title: 'Contact Us — OSG Consortium',
   description: 'Reach out to the OSG Consortium with questions, comments, or ideas.',
 };

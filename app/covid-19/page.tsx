@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Container, Typography } from '@mui/material';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/covid-19' },
   title: 'Extra Support for COVID-19 Research — OSG Consortium',
   description: 'OSG support and resources for COVID-19 research.',
 };

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Container, Divider, Typography } from '@mui/material';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/code-of-conduct' },
   title: 'OSG Code of Conduct — OSG Consortium',
   description: 'The OSG Consortium Code of Conduct.',
 };

@@ -3,33 +3,32 @@ import path from 'path';
 import type { Staff } from '@chtc/web-components/content';
 
 /**
- * Manifest of the remote images the build rendered, read back by
- * `remoteOptimizedImages.js` once `next build` has finished.
+ * Directory of per-process shards naming the remote images the build
+ * rendered. `scripts/validate-remote-images.mjs` merges them into
+ * `.remote-images.json`, which `remoteOptimizedImages.js` reads once the
+ * build has finished.
  *
  * next-image-export-optimizer only generates variants for images declared up
  * front, and most of this site's photography is absolute URLs — staff
  * headshots on chtc.github.io, article and event art on
  * raw.githubusercontent.com — rather than files under `public/`. Anything
- * missing from this list renders at full size straight from the origin, so
- * the pages that show remote images record the URLs they used instead of us
+ * missing from the list renders at full size straight from the origin, so the
+ * pages that show remote images record the URLs they used instead of us
  * maintaining a second hand-written list.
+ *
+ * One file per process rather than one shared file: `next build` renders
+ * pages in a pool of workers (three of them on this site today), and a
+ * read-modify-write of a single manifest drops whatever a sibling wrote
+ * between the read and the write. Each process only ever writes its own
+ * shard, so there is nothing to race over.
  */
-export const REMOTE_IMAGE_MANIFEST = path.join(
-  process.cwd(),
-  '.remote-images.json'
-);
+export const REMOTE_IMAGE_DIR = path.join(process.cwd(), '.remote-images');
 
-function readManifest(): string[] {
-  try {
-    const parsed: unknown = JSON.parse(
-      fs.readFileSync(REMOTE_IMAGE_MANIFEST, 'utf-8')
-    );
-    return Array.isArray(parsed) ? (parsed as string[]) : [];
-  } catch {
-    // No manifest yet, or a half-written one from an interrupted build.
-    return [];
-  }
-}
+/**
+ * Everything this process has recorded. Keeping it in memory is what lets the
+ * shard be written whole each time instead of read back and merged.
+ */
+const recorded = new Set<string>();
 
 /**
  * next-image-export-optimizer passes every URL through `new URL()` and keys
@@ -38,32 +37,28 @@ function readManifest(): string[] {
  */
 const OPTIMIZABLE = /^https?:\/\/.+\.(jpe?g|png|gif|webp|avif)(\?.*)?$/i;
 
-/**
- * Add these URLs to the manifest.
- *
- * Merges rather than overwrites: many pages render remote images, and each
- * only knows about the subset it shows. Written through a temporary file so a
- * reader never sees a partial array.
- */
+/** Add these URLs to this process's shard. */
 export function recordRemoteImages(
   candidates: Iterable<string | undefined | null>
 ): void {
-  const urls = new Set(readManifest());
-  const before = urls.size;
+  const before = recorded.size;
 
   for (const candidate of candidates) {
     if (candidate && OPTIMIZABLE.test(candidate)) {
-      urls.add(candidate);
+      recorded.add(candidate);
     }
   }
 
-  // Rewriting on every page would be a lot of churn for nothing; most pages
-  // after the first contribute no new URLs.
-  if (urls.size === before) return;
+  // Most pages after the first contribute nothing new.
+  if (recorded.size === before) return;
 
-  const tmp = `${REMOTE_IMAGE_MANIFEST}.${process.pid}.tmp`;
-  fs.writeFileSync(tmp, JSON.stringify([...urls].sort(), null, 2));
-  fs.renameSync(tmp, REMOTE_IMAGE_MANIFEST);
+  fs.mkdirSync(REMOTE_IMAGE_DIR, { recursive: true });
+  const shard = path.join(REMOTE_IMAGE_DIR, `${process.pid}.json`);
+  const tmp = `${shard}.tmp`;
+  // Written through a temporary file so the merge step never reads a shard
+  // that is half-written.
+  fs.writeFileSync(tmp, JSON.stringify([...recorded].sort(), null, 2));
+  fs.renameSync(tmp, shard);
 }
 
 /** Add these people's portraits to the manifest. */
@@ -76,18 +71,20 @@ export function recordStaffImages(staff: Staff[]): void {
  *
  * Article and event bodies carry both markdown `![](url)` images and raw HTML
  * `<img src="url">` tags, so this matches the URL itself rather than either
- * syntax. The manifest is a set, so duplicates and the odd false positive in
- * a code block cost nothing but one extra download.
+ * syntax. A trailing query string is part of the URL: the optimizer and the
+ * runtime loader both hash the whole string, so recording `x.png` for a page
+ * that renders `x.png?raw=true` would generate the variant under one name and
+ * request it under another.
  */
 const MARKDOWN_IMAGE_URL =
-  /https?:\/\/[^\s"'()<>\\]+\.(?:jpe?g|png|gif|webp|avif)/gi;
+  /https?:\/\/[^\s"'()<>\\]+\.(?:jpe?g|png|gif|webp|avif)(?:\?[^\s"'()<>\\]*)?/gi;
 
 export function extractMarkdownImageUrls(
   ...bodies: (string | undefined | null)[]
 ): string[] {
   const urls: string[] = [];
   for (const body of bodies) {
-    if (body) urls.push(...body.match(MARKDOWN_IMAGE_URL) ?? []);
+    if (body) urls.push(...(body.match(MARKDOWN_IMAGE_URL) ?? []));
   }
   return urls;
 }

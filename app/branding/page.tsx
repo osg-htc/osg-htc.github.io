@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Box, Container, Stack, Typography } from '@mui/material';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/branding' },
   title: 'OSG Branding and Logos — OSG Consortium',
   description: 'OSG brand colors and downloadable logo assets.',
 };

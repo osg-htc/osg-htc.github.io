@@ -1,6 +1,13 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import { EventCard } from '@/components/EventCard';
 import { getEvents, splitEvents } from '@/utils/events';
+import { listingMetadata } from '@/utils/metadata';
+
+export const metadata = listingMetadata(
+  'Events',
+  'Upcoming and past workshops, trainings, and meetings hosted by or involving the OSG Consortium.',
+  '/events'
+);
 
 export default async function Page() {
   const events = await getEvents('CHTC', 'events', 'main');

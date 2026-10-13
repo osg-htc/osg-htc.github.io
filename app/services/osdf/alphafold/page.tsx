@@ -17,6 +17,7 @@ import AlphafoldStats from '@/components/services/osdf/AlphafoldStats';
 import { AlphafoldSearch } from '@/components/services/osdf/AlphafoldSearch';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services/osdf/alphafold' },
   title: 'AlphaFold3 Alignment Library — OSG Consortium',
   description:
     'A growing OSDF-hosted library of reusable AlphaFold3 multiple sequence alignments for structure prediction workflows.',

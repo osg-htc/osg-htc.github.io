@@ -5,6 +5,7 @@ import { getDataRepositories } from '@/utils/dataRepositories';
 import { RepositoryTable } from './_components';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services/osdf/data' },
   title: 'OSDF Data Repositories — OSG Consortium',
   description:
     'Browse the data repositories integrated with the Open Science Data Federation (OSDF).',

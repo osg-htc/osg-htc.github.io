@@ -14,6 +14,7 @@ import { FacilityExplorer } from '@/components/FacilityExplorer';
 import ccStar from '@/utils/cc-star.json';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/campus-cyberinfrastructure' },
   title:
     'OSG’s Support for Campus Cyberinfrastructure Awardees — OSG Consortium',
   description:

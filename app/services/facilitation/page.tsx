@@ -13,6 +13,7 @@ import { recordStaffImages } from '@/utils/remoteImages';
 import { CTAButton } from './_components/CTAButton';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services/facilitation' },
   title: 'OSG Research Computing Facilitators — OSG Consortium',
   description:
     'Facilitation Services accelerate dHTC uptake by campus researchers and collaborations via the OSG.',

@@ -2,6 +2,13 @@ import ExportedImage from 'next-image-export-optimizer';
 import { Box, Divider, Link, Typography, Grid, Container } from '@mui/material';
 import { ArticleCard, HorizontalArticleCard } from '@chtc/web-components/content';
 import { getSiteArticles } from '@/utils/articles';
+import { listingMetadata } from '@/utils/metadata';
+
+export const metadata = listingMetadata(
+  'User Spotlights',
+  'Stories from the researchers using the OSPool and the OSG fabric of services to do their science.',
+  '/spotlights'
+);
 
 export default async function Page() {
   const articles = await getSiteArticles('user');

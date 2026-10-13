@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Box, Container, Typography } from '@mui/material';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/end-user-aup' },
   title: 'End User Acceptable Use Policy — OSG Consortium',
   description:
     'The rules of acceptable use for the OSG Fabric of Services, which end users accept before gaining access.',

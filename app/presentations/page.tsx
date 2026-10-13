@@ -4,6 +4,13 @@ import {
   getPresentations,
 } from '@chtc/web-components/content';
 import { Box, Container, Typography } from '@mui/material';
+import { listingMetadata } from '@/utils/metadata';
+
+export const metadata = listingMetadata(
+  'Presentations',
+  'Slides, recordings, and talks from the OSG Consortium and the wider high throughput computing community.',
+  '/presentations'
+);
 
 export default async function Page() {
   const presentations = filterPresentations(

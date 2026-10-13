@@ -4,6 +4,7 @@ import { Box, Container, Typography } from '@mui/material';
 import { OsdfProjectsExplorer } from '@/components/services/osdf/OsdfProjectsExplorer';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services/osdf/projects' },
   title: 'OSDF via the OSPool — OSG Consortium',
   description:
     'Statistics for how jobs running on the OSPool have leveraged the OSDF services.',

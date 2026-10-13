@@ -6,6 +6,7 @@ import { ProjectsSummary } from '@/components/services/ospool/ProjectsSummary';
 import { OspoolLogos } from '@/components/services/ospool/OspoolLogos';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services/ospool/projects' },
   title: 'OSPool Projects — OSG Consortium',
   description:
     'Projects active across reporting pools in the OSG Consortium in the last year.',

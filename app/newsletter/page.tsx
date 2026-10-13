@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Box, Button, Container, TextField, Typography } from '@mui/material';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/newsletter' },
   title: 'OSG Community Announcements — OSG Consortium',
   description:
     'Sign up for the OSG announcement mailing list for researchers, campuses, collaborators and operators.',

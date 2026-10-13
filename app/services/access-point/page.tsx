@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Box, Button, Container, Grid, Paper, Typography } from '@mui/material';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services/access-point' },
   title: 'OSG-Operated Access Points — OSG Consortium',
   description:
     "A researcher's home for High Throughput Computing work on the nation's cyberinfrastructure.",

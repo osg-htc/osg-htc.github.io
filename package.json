@@ -6,7 +6,7 @@
   "scripts": {
     "predev": "node scripts/copy-pelican-sw.mjs",
     "dev": "next dev --turbopack",
-    "prebuild": "node scripts/copy-pelican-sw.mjs",
+    "prebuild": "node scripts/copy-pelican-sw.mjs && node scripts/reset-remote-images.mjs",
     "build": "next build",
     "postbuild": "node scripts/validate-remote-images.mjs && next-image-export-optimizer && next-sitemap && tsx scripts/generate-redirects.mjs",
     "start": "next start",

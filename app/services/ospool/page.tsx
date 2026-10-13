@@ -18,6 +18,7 @@ import OspoolStats from '@/components/services/OspoolStats';
 import { Prose } from './_components/Prose';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services/ospool' },
   title: 'OSPool — OSG Consortium',
   description:
     'The OSPool is a source of computing capacity accessible to any researcher affiliated with a US academic institution.',

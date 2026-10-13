@@ -4,6 +4,7 @@ import { EventCard } from '@/components/EventCard';
 import { getEvents, splitEvents } from '@/utils/events';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services/facilitation/monthly-training' },
   title: 'Monthly Training with the Facilitation Team — OSG Consortium',
   description:
     'The Facilitation Team offers monthly training sessions for the HTC community.',

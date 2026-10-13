@@ -3,6 +3,7 @@ import { Container, Typography } from '@mui/material';
 import MarkEmailReadOutlinedIcon from '@mui/icons-material/MarkEmailReadOutlined';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/pointers/account-request' },
   title: 'Account Requested — OSG Consortium',
   description:
     'Confirmation that your OSPool Access Point account request was received.',

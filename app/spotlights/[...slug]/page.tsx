@@ -1,10 +1,25 @@
+import type { Metadata } from 'next';
 import ExportedImage from 'next-image-export-optimizer';
 import { Article } from '@chtc/web-components/content';
-import { getSiteArticle, getSiteArticles } from '@/utils/articles';
+import {
+  articleMetadata,
+  getSiteArticle,
+  getSiteArticles,
+} from '@/utils/articles';
 
 export async function generateStaticParams() {
   const articles = await getSiteArticles('user');
   return articles.map((article) => ({ slug: article.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string[] }>;
+}): Promise<Metadata> {
+  const slug = (await params).slug;
+  const article = await getSiteArticle(slug);
+  return articleMetadata(article, `/spotlights/${slug.join('/')}`);
 }
 
 export default async function Page({

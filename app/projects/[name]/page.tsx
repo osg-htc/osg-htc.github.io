@@ -32,6 +32,7 @@ export async function generateMetadata({
   if (!project) return { title: 'Project — OSG Consortium' };
   const meta = topology[project.projectName];
   return {
+    alternates: { canonical: `/projects/${slug}` },
     title: `${project.projectName} — OSPool Project | OSG Consortium`,
     description:
       meta?.Description ??

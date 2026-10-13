@@ -4,6 +4,11 @@ import { Container, Typography } from '@mui/material';
 
 export const metadata: Metadata = {
   title: '404 Not Found — OSG Consortium',
+  description:
+    'The page you were looking for was not found on the OSG Consortium website.',
+  // Nothing here is worth a search result, and it has no canonical URL of its
+  // own: the same page answers for every address that does not exist.
+  robots: { index: false, follow: true },
 };
 
 export default function NotFound() {

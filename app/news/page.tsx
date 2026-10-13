@@ -2,6 +2,13 @@ import ExportedImage from 'next-image-export-optimizer';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import { ArticleCard, HorizontalArticleCard } from '@chtc/web-components/content';
 import { getSiteArticles } from '@/utils/articles';
+import { listingMetadata } from '@/utils/metadata';
+
+export const metadata = listingMetadata(
+  'News',
+  'Announcements, releases, and reporting from the OSG Consortium and the researchers it supports.',
+  '/news'
+);
 
 export default async function Page() {
   const articles = await getSiteArticles('news');

@@ -45,6 +45,10 @@ export async function generateMetadata({
   }
 
   return {
+    // Ids contain dots (`pnfs-fnal.gov-dune`), and Next treats a final
+    // segment with a dot as a file, so `trailingSlash` does not apply. The
+    // slash is explicit here to match the URL the page is served at.
+    alternates: { canonical: `/services/osdf/data/${id}/` },
     title: `${repository.name} — OSDF Data Repository | OSG Consortium`,
     description: `${repository.name} — a data repository operated by ${repository.organization}, available through the Open Science Data Federation.`,
   };

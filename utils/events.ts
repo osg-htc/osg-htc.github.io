@@ -1,10 +1,19 @@
 import matter from 'gray-matter';
 import type { Website } from '@chtc/web-components/content';
 import { getRawFile, getRepoPaths } from '@chtc/web-components/github';
+import type { Metadata } from 'next';
 import {
   extractMarkdownImageUrls,
   recordRemoteImages,
 } from '@/utils/remoteImages';
+import {
+  OG_SITE,
+  TWITTER_SITE,
+  isoDate,
+  pageTitle,
+  shareImage,
+  summarize,
+} from '@/utils/metadata';
 
 interface Image {
   path: string;
@@ -171,4 +180,37 @@ export function formatEventDate(start: string, end: string): string {
     return `${month(startDate)} ${day(startDate)} – ${month(endDate)} ${day(endDate)}, ${year(endDate)}`;
   }
   return `${month(startDate)} ${day(startDate)}–${day(endDate)}, ${year(endDate)}`;
+}
+
+/**
+ * Metadata for one event's page.
+ *
+ * The card image is preferred over the banner: it is the 2:1 crop, which is
+ * the shape social previews want.
+ */
+export function eventMetadata(event: BackendEvent, path: string): Metadata {
+  const title = pageTitle(event.title);
+  const description = summarize(event.excerpt);
+  const art = event.image ?? event.banner;
+  const images = shareImage(art?.path, art?.alt);
+
+  return {
+    title,
+    description,
+    keywords: event.tags,
+    alternates: { canonical: path },
+    openGraph: {
+      ...OG_SITE,
+      type: 'article',
+      title,
+      description,
+      url: path,
+      // Only the start date. `expirationTime` would say the *page* goes out
+      // of date when the event ends, and a past event's page is a valid
+      // archive that should still preview.
+      publishedTime: isoDate(event.start_date),
+      images,
+    },
+    twitter: { ...TWITTER_SITE, title, description, images },
+  };
 }

@@ -24,6 +24,7 @@ export async function generateMetadata({
   const institution = list.find((i) => slugify(i.institutionName) === slug);
   if (!institution) return { title: 'Institution — OSG Consortium' };
   return {
+    alternates: { canonical: `/institutions/${slug}` },
     title: `${institution.institutionName} — OSPool Institution | OSG Consortium`,
     description: `Open Science Pool computing resources contributed by ${institution.institutionName}, and the research projects and fields of science they support.`,
   };
