@@ -25,6 +25,10 @@ export function EventCard({ event }: { event: BackendEvent }) {
               src={event.image.path}
               alt={event.image.alt}
               fill
+              // One per row below `sm`, two up to `lg`, then three in an `xl`
+              // container. Without this the browser assumes the full viewport
+              // width and fetches the widest variant for a ~500px card.
+              sizes='(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 500px'
               style={{ objectFit: 'cover' }}
             />
           </Box>

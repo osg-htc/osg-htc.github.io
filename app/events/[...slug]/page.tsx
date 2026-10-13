@@ -68,6 +68,8 @@ export default async function Page({
               src={event.banner.path}
               alt={event.banner.alt}
               fill
+              // Full width of the default `md` container.
+              sizes='(max-width: 1200px) 100vw, 1200px'
               style={{ objectFit: 'cover' }}
             />
           </Box>

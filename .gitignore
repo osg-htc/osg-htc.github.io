@@ -49,4 +49,4 @@ next-env.d.ts
 /remoteImagesForOptimization
 
 # Staff portrait manifest, written during `next build`
-/.staff-images.json
+/.remote-images.json

@@ -1,6 +1,25 @@
+import ExportedImage from 'next-image-export-optimizer';
 import { Box, Link, Typography } from '@mui/material';
 import Markdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
+
+/*
+ * Event bodies are raw HTML from the content repository, and their `<img>`
+ * tags rarely declare dimensions. `ExportedImage` needs both — it uses them
+ * for the placeholder's aspect ratio and to cap the srcset, while the CSS
+ * below decides the rendered size — so an assumed landscape ratio is safe.
+ */
+const FALLBACK_IMAGE_WIDTH = 1200;
+const FALLBACK_IMAGE_HEIGHT = 800;
+/** The body column is two thirds of a default `md` container at most. */
+const BODY_IMAGE_SIZES = '(max-width: 900px) 100vw, 600px';
+
+/** Parse an HTML dimension attribute, which arrives as a string. */
+const toPixels = (value: unknown): number | undefined => {
+  const parsed =
+    typeof value === 'number' ? value : Number.parseInt(String(value ?? ''), 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined;
+};
 
 const MarkdownContainer = ({ content }: { content: string }) => {
   return (
@@ -59,14 +78,30 @@ const MarkdownContainer = ({ content }: { content: string }) => {
             {children}
           </Link>
         ),
-        img: ({ src, alt }) => (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={typeof src === 'string' ? src : ''}
-            alt={alt ?? ''}
-            style={{ maxWidth: '100%', height: 'auto', borderRadius: 12, margin: '1rem 0' }}
-          />
-        ),
+        img: ({ src, alt, width, height }) => {
+          if (typeof src !== 'string' || src === '') return null;
+
+          const declaredWidth = toPixels(width);
+
+          return (
+            <ExportedImage
+              src={src}
+              alt={alt ?? ''}
+              width={declaredWidth ?? FALLBACK_IMAGE_WIDTH}
+              height={toPixels(height) ?? FALLBACK_IMAGE_HEIGHT}
+              // A declared width is what the image renders at — `maxWidth`
+              // only ever shrinks it — so it beats the page-level hint.
+              sizes={declaredWidth ? `${declaredWidth}px` : BODY_IMAGE_SIZES}
+              style={{
+                maxWidth: '100%',
+                width: declaredWidth ? `${declaredWidth}px` : undefined,
+                height: 'auto',
+                borderRadius: 12,
+                margin: '1rem 0',
+              }}
+            />
+          );
+        },
         strong: ({ children }) => (
           <Box component='span' display='inline' fontWeight='bold'>
             {children}

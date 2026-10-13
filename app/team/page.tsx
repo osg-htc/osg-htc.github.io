@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import { type Staff } from '@chtc/web-components/content';
 import { getStaff } from '@/utils/staff';
-import { recordStaffImages } from '@/utils/staffImages';
+import { recordStaffImages } from '@/utils/remoteImages';
 import { StaffCard } from './cards';
 
 export const metadata: Metadata = {
@@ -53,7 +53,7 @@ export default async function Page() {
   const current = team.filter((member) => member.status !== 'Past').sort(byName);
   const past = team.filter((member) => member.status === 'Past').sort(byName);
 
-  // Declare the portraits for the export image optimizer; see staffImages.ts.
+  // Declare the portraits for the export image optimizer; see remoteImages.ts.
   recordStaffImages(team);
 
   return (

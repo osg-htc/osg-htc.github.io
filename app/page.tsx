@@ -23,11 +23,10 @@ import {
   ArticleCard,
   filterPresentations,
   formatLongDate,
-  getArticles,
   getPresentations,
-  sortArticles,
   type BackendArticle,
 } from '@chtc/web-components/content';
+import { getSiteArticles } from '@/utils/articles';
 import { getEvents, splitEvents, formatEventDate } from '@/utils/events';
 import { PresentationSummary } from '@/components/PresentationSummary';
 import { CircuitryBackdrop } from './_components/CircuitryBackdrop';
@@ -133,10 +132,7 @@ function articleHref(article: BackendArticle): string {
 }
 
 export default async function Home() {
-  const articles = await getArticles('CHTC', 'Articles', 'main');
-  const osgArticles = sortArticles(
-    articles.filter((a) => a.publish_on?.includes('osg'))
-  );
+  const osgArticles = await getSiteArticles();
 
   const news = osgArticles.filter((a) => a.type === 'news').slice(0, 4);
   // Only `user` articles are user spotlights. The Articles repo also carries
@@ -387,6 +383,7 @@ export default async function Home() {
                             src={event.banner.path}
                             alt={event.banner.alt}
                             fill
+                            sizes='80px'
                             style={{ objectFit: 'cover', borderRadius: 4 }}
                           />
                         </Box>
@@ -469,7 +466,11 @@ export default async function Home() {
           <Grid container spacing={2} justifyContent='center'>
             {spotlights.slice(0, 4).map((article) => (
               <Grid key={article.slug.join('-')} size={{ xs: 12, sm: 6, lg: 3 }}>
-                <ArticleCard href={articleHref(article)} article={article} />
+                <ArticleCard
+                  href={articleHref(article)}
+                  article={article}
+                  imageComponent={ExportedImage}
+                />
               </Grid>
             ))}
           </Grid>

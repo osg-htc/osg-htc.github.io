@@ -1,6 +1,10 @@
 import matter from 'gray-matter';
 import type { Website } from '@chtc/web-components/content';
 import { getRawFile, getRepoPaths } from '@chtc/web-components/github';
+import {
+  extractMarkdownImageUrls,
+  recordRemoteImages,
+} from '@/utils/remoteImages';
 
 interface Image {
   path: string;
@@ -73,11 +77,24 @@ export async function getEvents(
   const paths = await getRepoPaths(organization, repo, branch);
 
   // Filter paths to only include event markdown files
-  return Promise.all(
+  const events = await Promise.all(
     paths
       .filter(isEvent)
       .map(async (path) => await getEvent(organization, repo, path, branch))
-  ).then((events) => events.filter(filterVisibleEvents));
+  ).then((all) => all.filter(filterVisibleEvents));
+
+  // Declare the art for the export image optimizer; see remoteImages.ts.
+  // Every page that shows events goes through here, so this is the one place
+  // that sees the whole set.
+  recordRemoteImages(
+    events.flatMap((event) => [
+      event.image?.path,
+      event.banner?.path,
+      ...extractMarkdownImageUrls(event.content, event.sidebar, event.endblock),
+    ])
+  );
+
+  return events;
 }
 
 export async function getEvent(

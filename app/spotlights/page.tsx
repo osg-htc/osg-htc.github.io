@@ -1,19 +1,10 @@
+import ExportedImage from 'next-image-export-optimizer';
 import { Box, Divider, Link, Typography, Grid, Container } from '@mui/material';
-import {
-  ArticleCard,
-  HorizontalArticleCard,
-  filterArticles,
-  getArticles,
-  sortArticles,
-} from '@chtc/web-components/content';
-
-async function getSpotlights() {
-  const articles = await getArticles('CHTC', 'Articles', 'main');
-  return sortArticles(filterArticles(articles, 'osg', 'user'));
-}
+import { ArticleCard, HorizontalArticleCard } from '@chtc/web-components/content';
+import { getSiteArticles } from '@/utils/articles';
 
 export default async function Page() {
-  const articles = await getSpotlights();
+  const articles = await getSiteArticles('user');
 
   return (
     <>
@@ -21,6 +12,7 @@ export default async function Page() {
         <HorizontalArticleCard
           href={`/spotlights/${articles[0].slug.join('/')}`}
           article={articles[0]}
+          imageComponent={ExportedImage}
         />
       )}
       <Box textAlign={'center'} py={5}>
@@ -40,6 +32,7 @@ export default async function Page() {
               <ArticleCard
                 href={`/spotlights/${article.slug.join('/')}`}
                 article={article}
+                imageComponent={ExportedImage}
               />
             </Grid>
           ))}

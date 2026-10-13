@@ -9,7 +9,7 @@ import {
 } from '@chtc/web-components/content';
 import { PresentationSummary } from '@/components/PresentationSummary';
 import { getStaff } from '@/utils/staff';
-import { recordStaffImages } from '@/utils/staffImages';
+import { recordStaffImages } from '@/utils/remoteImages';
 import { CTAButton } from './_components/CTAButton';
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default async function Page() {
     .filter((member) => member.is_facilitator === 1)
     .sort((a, b) => (a.weight ?? 0) - (b.weight ?? 0));
 
-  // Declare the portraits for the export image optimizer; see staffImages.ts.
+  // Declare the portraits for the export image optimizer; see remoteImages.ts.
   recordStaffImages(facilitators);
 
   const facilitationTalks = filterPresentations(

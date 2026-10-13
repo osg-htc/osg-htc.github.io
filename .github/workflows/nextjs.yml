@@ -64,9 +64,12 @@ jobs:
             ${{ runner.os }}-nextjs-
       # next-image-export-optimizer decides what to reuse from the hashes
       # file, so restoring the generated variants without it re-encodes
-      # everything. remoteImagesForOptimization holds the downloaded staff
-      # headshots. next.config.mjs and remoteOptimizedImages.js both change
-      # what gets generated, so they belong in the key.
+      # everything. remoteImagesForOptimization holds the downloaded remote
+      # originals — staff headshots, and the article and event art from the
+      # content repositories, which is the bulk of it. next.config.mjs and
+      # remoteOptimizedImages.js both change what gets generated, so they
+      # belong in the key, as does the optimizer patch, which changes the name
+      # a downloaded file is stored under.
       - name: Cache optimized images
         uses: actions/cache@v4
         with:
@@ -74,9 +77,9 @@ jobs:
             public/images/**/nextImageExportOptimizer
             public/images/next-image-export-optimizer-hashes.json
             remoteImagesForOptimization
-          key: ${{ runner.os }}-next-image-export-optimizer-${{ hashFiles('next.config.mjs', 'remoteOptimizedImages.js') }}-${{ github.run_id }}
+          key: ${{ runner.os }}-next-image-export-optimizer-${{ hashFiles('next.config.mjs', 'remoteOptimizedImages.js', 'patches/*.patch') }}-${{ github.run_id }}
           restore-keys: |
-            ${{ runner.os }}-next-image-export-optimizer-${{ hashFiles('next.config.mjs', 'remoteOptimizedImages.js') }}-
+            ${{ runner.os }}-next-image-export-optimizer-${{ hashFiles('next.config.mjs', 'remoteOptimizedImages.js', 'patches/*.patch') }}-
             ${{ runner.os }}-next-image-export-optimizer-
       # Same refresh the Jekyll site does on deploy; AlphafoldStats reads this
       # file, so without it the AlphaFold3 numbers are frozen at whatever was

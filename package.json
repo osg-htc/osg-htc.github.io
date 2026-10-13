@@ -7,14 +7,14 @@
     "dev": "next dev --turbopack",
     "prebuild": "node scripts/copy-pelican-sw.mjs",
     "build": "next build",
-    "postbuild": "next-image-export-optimizer && next-sitemap && tsx scripts/generate-redirects.mjs",
+    "postbuild": "node scripts/validate-remote-images.mjs && next-image-export-optimizer && next-sitemap && tsx scripts/generate-redirects.mjs",
     "start": "next start",
     "lint": "eslint .",
     "analyze": "ANALYZE=true next build",
     "compare:migration": "tsx scripts/compare-migration.mjs"
   },
   "dependencies": {
-    "@chtc/web-components": "^2.0.7",
+    "@chtc/web-components": "^2.0.8",
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
