@@ -14,7 +14,7 @@
     "compare:migration": "tsx scripts/compare-migration.mjs"
   },
   "dependencies": {
-    "@chtc/web-components": "^2.0.8",
+    "@chtc/web-components": "^2.0.9",
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
