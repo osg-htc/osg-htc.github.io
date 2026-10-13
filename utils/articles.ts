@@ -35,13 +35,16 @@ const PUBLISHED_TYPES: ArticleType[] = ['news', 'user'];
 
 /**
  * Declare an article's art for the export image optimizer; see
- * remoteImages.ts. Covers the card image and every image in the body, which
- * the list fetch already has in hand — the detail pages need no separate pass.
+ * remoteImages.ts. Covers the card image, the wide banner the home page
+ * renders behind its hero story, and every image in the body — all of which
+ * the list fetch already has in hand, so the detail pages need no separate
+ * pass.
  */
 function recordArticleImages(articles: BackendArticle[]): void {
   recordRemoteImages(
     articles.flatMap((article) => [
       article.image?.path,
+      article.banner_src,
       ...extractMarkdownImageUrls(article.content, article.excerpt),
     ])
   );

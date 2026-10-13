@@ -287,22 +287,32 @@ export default async function Home() {
         </Grid>
       </Container>
 
-      {/* Hero story / News / Events, over the spotlight's banner image */}
+      {/* Hero story / News / Events, over the spotlight's banner image.
+
+          The banner is an element rather than a CSS `background-image`: the
+          export optimizer only rewrites real images, so a `url()` here would
+          ship the full-size original from the content repository on every
+          visit. `fill` makes it behave like `background-size: cover` while
+          still getting a WebP srcset. */}
       <Box
         sx={{
           position: 'relative',
           py: 4,
-          ...(heroStory?.banner_src
-            ? {
-                backgroundImage: `url(${heroStory.banner_src})`,
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-              }
-            : { bgcolor: 'grey.100' }),
+          ...(heroStory?.banner_src ? {} : { bgcolor: 'grey.100' }),
         }}
       >
-      <Container maxWidth='xl' sx={{ position: 'relative' }}>
+      {heroStory?.banner_src && (
+        <ExportedImage
+          src={heroStory.banner_src}
+          // Decorative unless the author described it: the story it belongs
+          // to is titled and linked in the card on top of it.
+          alt={heroStory.banner_alt ?? ''}
+          fill
+          sizes='100vw'
+          style={{ objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
+        />
+      )}
+      <Container maxWidth='xl' sx={{ position: 'relative', zIndex: 1 }}>
         {/* Center the columns so there's no empty gap when the (conditional)
             Events column is absent. */}
         <Grid container spacing={2} justifyContent='center'>
