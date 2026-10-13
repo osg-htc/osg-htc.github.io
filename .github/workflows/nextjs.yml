@@ -39,9 +39,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Install pnpm
+        # Version comes from the packageManager field in package.json, so CI
+        # and developers run the same pnpm. They have to: pnpm 10 and 11 write
+        # incompatible patchedDependencies entries into the lockfile, and the
+        # mismatch fails the frozen install here.
         uses: pnpm/action-setup@v4
-        with:
-          version: 10
       - name: Use Node.js
         uses: actions/setup-node@v7
         with:

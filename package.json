@@ -2,6 +2,7 @@
   "name": "osg-website",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@11.5.0",
   "scripts": {
     "predev": "node scripts/copy-pelican-sw.mjs",
     "dev": "next dev --turbopack",
