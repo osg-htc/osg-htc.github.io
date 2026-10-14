@@ -3,17 +3,16 @@ import {
   Presentation,
   filterPresentations,
   getPresentations,
+  isoDate,
+  openGraphDefaults,
+  pageTitle,
+  shareImages,
+  summarize,
+  twitterDefaults,
   type BackendPresentation,
 } from '@chtc/web-components/content';
 import { Box, Container, Typography } from '@mui/material';
-import {
-  OG_SITE,
-  TWITTER_SITE,
-  isoDate,
-  pageTitle,
-  shareImage,
-  summarize,
-} from '@/utils/metadata';
+import { OSG_SITE } from '@/site.config';
 
 export async function generateStaticParams() {
   try {
@@ -63,7 +62,7 @@ export async function generateMetadata({
   const presentation = await getPresentationBySlug(slug);
   if (!presentation) return { title: 'Presentation Not Found — OSG Consortium' };
 
-  const title = pageTitle(presentation.title);
+  const title = pageTitle(presentation.title, OSG_SITE);
   // Frontmatter rarely carries a description, so fall back to the facts the
   // listing itself shows: who gave the talk, and where.
   const attribution = [
@@ -73,9 +72,10 @@ export async function generateMetadata({
     .filter(Boolean)
     .join(' at ');
   const description = summarize(presentation.description) ?? (attribution || undefined);
-  const images = shareImage(
+  const images = shareImages(
     presentation.thumbnail?.src,
-    presentation.thumbnail?.alt
+    presentation.thumbnail?.alt,
+    OSG_SITE
   );
 
   return {
@@ -87,7 +87,7 @@ export async function generateMetadata({
     keywords: presentation.keywords,
     alternates: { canonical: `/presentations/${slug.join('/')}` },
     openGraph: {
-      ...OG_SITE,
+      ...openGraphDefaults(OSG_SITE),
       type: 'article',
       title,
       description,
@@ -96,7 +96,7 @@ export async function generateMetadata({
       authors: presentation.presenter ? [presentation.presenter] : undefined,
       images,
     },
-    twitter: { ...TWITTER_SITE, title, description, images },
+    twitter: { ...twitterDefaults, title, description, images },
   };
 }
 

@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
-import { EventCard } from '@/components/EventCard';
-import { getEvents, splitEvents } from '@/utils/events';
+import ExportedImage from 'next-image-export-optimizer';
+import { EventCard, splitEvents } from '@chtc/web-components/content';
+import { getSiteEvents } from '@/utils/events';
 import { listingMetadata } from '@/utils/metadata';
 
 export const metadata = listingMetadata(
@@ -10,7 +11,7 @@ export const metadata = listingMetadata(
 );
 
 export default async function Page() {
-  const events = await getEvents('CHTC', 'events', 'main');
+  const events = await getSiteEvents();
   const { upcoming, past } = splitEvents(events);
 
   return (
@@ -26,7 +27,11 @@ export default async function Page() {
                 key={event.slug.join('-')}
                 size={{ xs: 12, sm: 6, lg: 4 }}
               >
-                <EventCard event={event} />
+                <EventCard
+                  href={`/events/${event.slug.join('/')}`}
+                  event={event}
+                  imageComponent={ExportedImage}
+                />
               </Grid>
             ))}
           </Grid>
@@ -38,7 +43,11 @@ export default async function Page() {
         <Grid container spacing={2} mt={1}>
           {past.map((event) => (
             <Grid key={event.slug.join('-')} size={{ xs: 12, sm: 6, lg: 4 }}>
-              <EventCard event={event} />
+              <EventCard
+                href={`/events/${event.slug.join('/')}`}
+                event={event}
+                imageComponent={ExportedImage}
+              />
             </Grid>
           ))}
         </Grid>

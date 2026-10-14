@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
 import ExportedImage from 'next-image-export-optimizer';
-import { Article } from '@chtc/web-components/content';
-import {
-  articleMetadata,
-  getSiteArticle,
-  getSiteArticles,
-} from '@/utils/articles';
+import { Article, articleMetadata } from '@chtc/web-components/content';
+import { getSiteArticle, getSiteArticles } from '@/utils/articles';
+import { OSG_SITE } from '@/site.config';
 
 export async function generateStaticParams() {
   const articles = await getSiteArticles('news');
@@ -19,7 +16,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const slug = (await params).slug;
   const article = await getSiteArticle(slug);
-  return articleMetadata(article, `/news/${slug.join('/')}`);
+  return articleMetadata(article, {
+    path: `/news/${slug.join('/')}`,
+    site: OSG_SITE,
+  });
 }
 
 export default async function Page({

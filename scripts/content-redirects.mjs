@@ -8,7 +8,7 @@
 // so Node reads the `content` entry as CommonJS and can't see through its
 // re-exports to the named bindings. The default import is the module object.
 import content from '@chtc/web-components/content';
-import { getEvents } from '../utils/events';
+import { getSiteEvents } from '../utils/events';
 
 const { getArticles } = content;
 
@@ -63,11 +63,12 @@ export async function articleRedirects() {
 
 /**
  * Legacy date-less event URLs (`/events/<page-name>`) → their new dated path
- * (`/events/<y>/<m>/<d>/<name>`). getEvents already filters to OSG-published.
+ * (`/events/<y>/<m>/<d>/<name>`). getSiteEvents already filters to
+ * OSG-published.
  * @returns {Promise<Redirect[]>}
  */
 export async function eventRedirects() {
-  const events = await getEvents('CHTC', 'events', 'main');
+  const events = await getSiteEvents();
   return events.map((event) => {
     const pageName = event.slug[3] ?? event.slug.slice(3).join('-');
     return {

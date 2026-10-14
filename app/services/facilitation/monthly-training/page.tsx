@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
-import { EventCard } from '@/components/EventCard';
-import { getEvents, splitEvents } from '@/utils/events';
+import ExportedImage from 'next-image-export-optimizer';
+import { EventCard, splitEvents } from '@chtc/web-components/content';
+import { getSiteEvents } from '@/utils/events';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/services/facilitation/monthly-training' },
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const events = await getEvents('CHTC', 'events', 'main');
+  const events = await getSiteEvents();
   const trainings = splitEvents(events).upcoming.filter((e) =>
     e.tags?.includes('osg-training')
   );
@@ -67,7 +68,11 @@ export default async function Page() {
         <Grid container spacing={2} sx={{ mt: 1 }}>
           {trainings.map((event) => (
             <Grid key={event.slug.join('-')} size={{ xs: 12, sm: 6 }}>
-              <EventCard event={event} />
+              <EventCard
+                href={`/events/${event.slug.join('/')}`}
+                event={event}
+                imageComponent={ExportedImage}
+              />
             </Grid>
           ))}
         </Grid>

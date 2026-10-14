@@ -14,9 +14,7 @@ import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
 import { NobelBanner } from "@/components/NobelBanner";
 import { NOBEL_BANNER_EXPIRES } from "@/components/NobelBanner/config";
-
-const SITE_DESCRIPTION =
-	"The OSG fabric of services delivers distributed high throughput computing to researchers";
+import { siteConfig } from "@/site.config";
 
 /*
  * Site-wide metadata. Every page inherits what it does not set, so this holds
@@ -30,14 +28,14 @@ const SITE_DESCRIPTION =
  * `opengraph-image.png` in this folder, which applies to every route.
  */
 export const metadata: Metadata = {
-  title: "OSG Consortium",
-  description: SITE_DESCRIPTION,
-	metadataBase: new URL(`https://${process.env.HOSTNAME}`),
-	applicationName: "OSG Consortium",
+  title: siteConfig.name,
+  description: siteConfig.description,
+	metadataBase: new URL(siteConfig.url),
+	applicationName: siteConfig.name,
 	openGraph: {
 		type: "website",
-		siteName: "OSG Consortium",
-		locale: "en_US",
+		siteName: siteConfig.name,
+		locale: siteConfig.locale,
 	},
 	twitter: {
 		card: "summary_large_image",

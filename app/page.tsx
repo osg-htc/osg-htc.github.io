@@ -23,12 +23,14 @@ import HubOutlinedIcon from '@mui/icons-material/HubOutlined';
 import {
   ArticleCard,
   filterPresentations,
+  formatEventDate,
   formatLongDate,
   getPresentations,
+  splitEvents,
   type BackendArticle,
 } from '@chtc/web-components/content';
 import { getSiteArticles } from '@/utils/articles';
-import { getEvents, splitEvents, formatEventDate } from '@/utils/events';
+import { getSiteEvents } from '@/utils/events';
 import { PresentationSummary } from '@/components/PresentationSummary';
 import { CircuitryBackdrop } from './_components/CircuitryBackdrop';
 import { SectionHeading } from './_components/SectionHeading';
@@ -150,7 +152,7 @@ export default async function Home() {
   const heroStory =
     spotlights.find((a) => a.banner_src) ?? spotlights[0] ?? null;
 
-  const events = await getEvents('CHTC', 'events', 'main');
+  const events = await getSiteEvents();
   const upcomingEvents = splitEvents(events).upcoming.slice(0, 3);
 
   // With nothing upcoming the Events column would be empty, so point at the

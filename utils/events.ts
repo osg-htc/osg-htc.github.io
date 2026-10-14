@@ -1,216 +1,40 @@
-import matter from 'gray-matter';
-import type { Website } from '@chtc/web-components/content';
-import { getRawFile, getRepoPaths } from '@chtc/web-components/github';
-import type { Metadata } from 'next';
+import {
+  filterEvents,
+  getEvents,
+  type BackendEvent,
+} from '@chtc/web-components/content';
 import {
   extractMarkdownImageUrls,
   recordRemoteImages,
 } from '@/utils/remoteImages';
-import {
-  OG_SITE,
-  TWITTER_SITE,
-  isoDate,
-  pageTitle,
-  shareImage,
-  summarize,
-} from '@/utils/metadata';
 
-interface Image {
-  path: string;
-  alt: string;
-  credit?: string;
-}
-
-export interface Event {
-  title: string;
-  short_title?: string;
-  published?: boolean;
-  start_date: string;
-  end_date: string;
-  publish_on: Website[];
-  tags?: string[];
-  excerpt?: string;
-  image?: Image;
-  banner?: Image;
-  sidebar?: string;
-  endblock?: string;
-  content: string;
-}
+const ORGANIZATION = 'CHTC';
+const REPOSITORY = 'events';
+const BRANCH = 'main';
 
 /**
- * The event data with additional fields used for the site.
+ * The events this site publishes.
+ *
+ * Everything about an event other than which site shows it lives in the
+ * library; what is left here is the `osg` filter and declaring the art to
+ * the export image optimizer. Every page that shows events goes through this
+ * function, so it is the one place that sees the whole set.
  */
-export interface BackendEvent extends Event {
-  slug: string[];
-  path: string;
-}
+export async function getSiteEvents(): Promise<BackendEvent[]> {
+  const onOsg = filterEvents(
+    await getEvents(ORGANIZATION, REPOSITORY, BRANCH),
+    'osg'
+  );
 
-function getSlug(path: string) {
-  const splitSlug = path.slice(0, -3).split('-');
-  return [
-    splitSlug[0],
-    splitSlug[1],
-    splitSlug[2],
-    splitSlug.slice(3).join('-'),
-  ];
-}
-
-function isEvent(path: string) {
-  const regex = /\d\d\d\d-\d\d?-\d\d?-.*?\.md/g;
-  return path.search(regex) !== -1;
-}
-
-/**
- * Coerce a frontmatter date into a `YYYY-MM-DD` string. Unquoted YAML dates
- * (e.g. `start_date: 2024-08-05`) are parsed into JS `Date` objects by
- * gray-matter/js-yaml, so normalize using UTC to avoid timezone drift.
- */
-function toISODate(value: unknown): string {
-  if (value instanceof Date) {
-    return value.toISOString().slice(0, 10);
-  }
-  return String(value ?? '');
-}
-
-function filterVisibleEvents(event: BackendEvent) {
-  const isPublished = event.published ?? true;
-  const isOnOsg = event.publish_on?.includes('osg') ?? false;
-  return isPublished && isOnOsg;
-}
-
-export async function getEvents(
-  organization: string,
-  repo: string,
-  branch: string
-): Promise<BackendEvent[]> {
-  const paths = await getRepoPaths(organization, repo, branch);
-
-  // Filter paths to only include event markdown files
-  const events = await Promise.all(
-    paths
-      .filter(isEvent)
-      .map(async (path) => await getEvent(organization, repo, path, branch))
-  ).then((all) => all.filter(filterVisibleEvents));
-
-  // Declare the art for the export image optimizer; see remoteImages.ts.
-  // Every page that shows events goes through here, so this is the one place
-  // that sees the whole set.
+  // See remoteImages.ts: an image the optimizer is not told about is left at
+  // its original size and fetched from the content repository on every view.
   recordRemoteImages(
-    events.flatMap((event) => [
+    onOsg.flatMap((event) => [
       event.image?.path,
       event.banner?.path,
       ...extractMarkdownImageUrls(event.content, event.sidebar, event.endblock),
     ])
   );
 
-  return events;
-}
-
-export async function getEvent(
-  organization: string,
-  repo: string,
-  path: string,
-  branch: string
-): Promise<BackendEvent> {
-  const text = await getRawFile(organization, repo, path, branch);
-  const frontMatter = matter(text);
-
-  return {
-    title: frontMatter.data.title,
-    short_title: frontMatter.data.short_title,
-    published: frontMatter.data.published,
-    start_date: toISODate(frontMatter.data.start_date),
-    end_date: toISODate(frontMatter.data.end_date),
-    publish_on: frontMatter.data.publish_on,
-    tags: frontMatter.data.tags ?? undefined,
-    excerpt: frontMatter.data.excerpt,
-    image: frontMatter.data.image ?? undefined,
-    banner: frontMatter.data.banner ?? undefined,
-    sidebar: frontMatter.data.sidebar ?? undefined,
-    endblock: frontMatter.data.endblock ?? undefined,
-    content: frontMatter.content,
-    slug: getSlug(path),
-    path: path,
-  };
-}
-
-/** True when an event's end date is today or later (in UTC). */
-export function isUpcoming(event: Event): boolean {
-  const today = new Date().toISOString().slice(0, 10);
-  return event.end_date >= today;
-}
-
-/**
- * Split events into upcoming (soonest first) and past (most recent first).
- */
-export function splitEvents(events: BackendEvent[]): {
-  upcoming: BackendEvent[];
-  past: BackendEvent[];
-} {
-  const upcoming = events
-    .filter(isUpcoming)
-    .sort((a, b) => a.end_date.localeCompare(b.end_date));
-  const past = events
-    .filter((event) => !isUpcoming(event))
-    .sort((a, b) => b.end_date.localeCompare(a.end_date));
-  return { upcoming, past };
-}
-
-/**
- * Format an event's date range, e.g. "August 5–9, 2024", "March 29, 2024",
- * or "January 30 – February 2, 2024".
- */
-export function formatEventDate(start: string, end: string): string {
-  if (!start) return '';
-  const startDate = new Date(`${start}T00:00:00Z`);
-  const endDate = end ? new Date(`${end}T00:00:00Z`) : startDate;
-
-  const month = (d: Date) =>
-    d.toLocaleDateString('en-US', { month: 'long', timeZone: 'UTC' });
-  const day = (d: Date) => d.getUTCDate();
-  const year = (d: Date) => d.getUTCFullYear();
-
-  if (start === end || !end) {
-    return `${month(startDate)} ${day(startDate)}, ${year(startDate)}`;
-  }
-  if (year(startDate) !== year(endDate)) {
-    return `${month(startDate)} ${day(startDate)}, ${year(startDate)} – ${month(endDate)} ${day(endDate)}, ${year(endDate)}`;
-  }
-  if (month(startDate) !== month(endDate)) {
-    return `${month(startDate)} ${day(startDate)} – ${month(endDate)} ${day(endDate)}, ${year(endDate)}`;
-  }
-  return `${month(startDate)} ${day(startDate)}–${day(endDate)}, ${year(endDate)}`;
-}
-
-/**
- * Metadata for one event's page.
- *
- * The card image is preferred over the banner: it is the 2:1 crop, which is
- * the shape social previews want.
- */
-export function eventMetadata(event: BackendEvent, path: string): Metadata {
-  const title = pageTitle(event.title);
-  const description = summarize(event.excerpt);
-  const art = event.image ?? event.banner;
-  const images = shareImage(art?.path, art?.alt);
-
-  return {
-    title,
-    description,
-    keywords: event.tags,
-    alternates: { canonical: path },
-    openGraph: {
-      ...OG_SITE,
-      type: 'article',
-      title,
-      description,
-      url: path,
-      // Only the start date. `expirationTime` would say the *page* goes out
-      // of date when the event ends, and a past event's page is a valid
-      // archive that should still preview.
-      publishedTime: isoDate(event.start_date),
-      images,
-    },
-    twitter: { ...TWITTER_SITE, title, description, images },
-  };
+  return onOsg;
 }

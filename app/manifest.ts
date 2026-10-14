@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { siteConfig } from '@/site.config';
 
 /*
  * Web app manifest, emitted at /manifest.webmanifest and linked from every
@@ -15,10 +16,9 @@ export const dynamic = 'force-static';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'OSG Consortium',
-    short_name: 'OSG',
-    description:
-      'The OSG fabric of services delivers distributed high throughput computing to researchers',
+    name: siteConfig.name,
+    short_name: siteConfig.shortName,
+    description: siteConfig.description,
     start_url: '/',
     display: 'browser',
     background_color: '#f7f8fa', // palette.background.default

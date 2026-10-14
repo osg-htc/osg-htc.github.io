@@ -3,16 +3,17 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 import MarkdownContainer from '@/components/MarkdownContainer';
 import type { Metadata } from 'next';
 import {
-  BackendEvent,
   eventMetadata,
   formatEventDate,
-  getEvents,
   isUpcoming,
-} from '@/utils/events';
+  type BackendEvent,
+} from '@chtc/web-components/content';
+import { getSiteEvents } from '@/utils/events';
+import { OSG_SITE } from '@/site.config';
 
 export async function generateStaticParams() {
   try {
-    const events = await getEvents('CHTC', 'events', 'main');
+    const events = await getSiteEvents();
     return events.map((event) => ({ slug: event.slug }));
   } catch (error) {
     console.error('Error:', error);
@@ -22,7 +23,7 @@ export async function generateStaticParams() {
 
 async function getEventBySlug(slug: string[]): Promise<BackendEvent | null> {
   try {
-    const events = await getEvents('CHTC', 'events', 'main');
+    const events = await getSiteEvents();
     return (
       events.find((event) => event.slug.join('-') === slug.join('-')) ?? null
     );
@@ -40,7 +41,10 @@ export async function generateMetadata({
   const slug = (await params).slug;
   const event = await getEventBySlug(slug);
   if (!event) return { title: 'Event Not Found — OSG Consortium' };
-  return eventMetadata(event, `/events/${slug.join('/')}`);
+  return eventMetadata(event, {
+    path: `/events/${slug.join('/')}`,
+    site: OSG_SITE,
+  });
 }
 
 export default async function Page({
