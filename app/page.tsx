@@ -207,6 +207,7 @@ export default async function Home() {
             <IntroCard
               image='/images/logos/OSDF_OSPool_Logos.png'
               alt='OSDF Logo'
+              sizes='139px'
               title='OSDF'
               buttons={[{ href: '/services/osdf', label: 'Explore OSDF' }]}
             >
@@ -229,6 +230,7 @@ export default async function Home() {
             <IntroCard
               image='/images/logos/OSPool_Logo.png'
               alt='OSPool Logo'
+              sizes='139px'
               title='OSPool'
               subtitle='No Proposal, No Allocation, No Cost'
               buttons={[
@@ -255,6 +257,7 @@ export default async function Home() {
             <IntroCard
               image='/images/homepage/HTC-community.png'
               alt='Throughput Computing Abstract Graphic'
+              sizes='362px'
               title='Learn More'
               buttons={[
                 { href: 'https://path-cc.io/contact/', label: 'Contact Us' },
@@ -397,11 +400,17 @@ export default async function Home() {
                     <Box sx={{ display: 'flex', mt: 1.5, '&:hover': { color: 'primary.main' } }}>
                       {event.banner?.path && (
                         <Box sx={{ position: 'relative', width: 80, height: 80, flexShrink: 0 }}>
+                          {/* `sizes` describes the width the image is painted
+                              at, which is not the width of the box: `cover`
+                              scales these ~2:1 banners until the short edge
+                              fills the 80px square, so each is drawn ~164px
+                              wide and cropped. Saying `80px` had 1x displays
+                              pick the 96px variant and upscale it 1.7x. */}
                           <ExportedImage
                             src={event.banner.path}
                             alt={event.banner.alt}
                             fill
-                            sizes='80px'
+                            sizes='164px'
                             style={{ objectFit: 'cover', borderRadius: 4 }}
                           />
                         </Box>
