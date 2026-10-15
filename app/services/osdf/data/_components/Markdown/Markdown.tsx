@@ -1,6 +1,7 @@
 'use client';
 
 import ReactMarkdown, { type Components } from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import { Box, Link, Typography } from '@mui/material';
 
 export interface MarkdownProps {
@@ -66,6 +67,17 @@ const components: Components = {
 };
 
 export default function Markdown({ children }: MarkdownProps) {
-  return <ReactMarkdown components={components}>{children}</ReactMarkdown>;
+  /*
+   * `rehypeRaw` because these descriptions are markdown that also contains raw
+   * HTML — the NCAR repository embeds `<img>` tags and a `<br>`. Without it
+   * react-markdown escapes the tags and prints them, which is what this page
+   * did. The content comes from fabaid.io, the same trust level as the rest of
+   * the federated content this site renders.
+   */
+  return (
+    <ReactMarkdown rehypePlugins={[rehypeRaw]} components={components}>
+      {children}
+    </ReactMarkdown>
+  );
 }
 

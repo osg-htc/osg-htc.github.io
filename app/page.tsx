@@ -20,8 +20,11 @@ import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined';
 import DnsOutlinedIcon from '@mui/icons-material/DnsOutlined';
 import LayersOutlinedIcon from '@mui/icons-material/LayersOutlined';
 import HubOutlinedIcon from '@mui/icons-material/HubOutlined';
+import type { Components } from 'react-markdown';
 import {
   ArticleCard,
+  MarkdownContent,
+  excerptComponents,
   filterPresentations,
   formatEventDate,
   formatLongDate,
@@ -37,6 +40,22 @@ import { SectionHeading } from './_components/SectionHeading';
 import { IntroCard } from './_components/IntroCard';
 import { SupportItem } from './_components/SupportItem';
 import { FindUsCard } from './_components/FindUsCard';
+
+/*
+ * Article excerpts are markdown — the same field `ArticleCard` renders as
+ * markdown — so the hero story's has to be rendered, not printed.
+ *
+ * The hero panel is white text on a dark blur, so a link inherits that colour
+ * instead of taking `excerptComponents`' `text.primary`, which would be
+ * near-black on near-black. It keeps an underline, since nothing else here
+ * marks it as a link.
+ */
+const HERO_EXCERPT_COMPONENTS: Components = {
+  ...excerptComponents,
+  a: ({ node, ...props }) => (
+    <Link underline='always' sx={{ color: 'inherit' }} {...props} />
+  ),
+};
 
 const MAPS = [
   {
@@ -349,7 +368,9 @@ export default async function Home() {
                   {heroStory.title}
                 </Typography>
                 <Box sx={{ minHeight: 120 }}>
-                  <Typography>{heroStory.excerpt}</Typography>
+                  <MarkdownContent components={HERO_EXCERPT_COMPONENTS}>
+                    {heroStory.excerpt}
+                  </MarkdownContent>
                 </Box>
                 <Button
                   href={articleHref(heroStory)}
