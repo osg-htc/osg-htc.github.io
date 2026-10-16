@@ -29,8 +29,14 @@ const components: Components = {
       {children}
     </Typography>
   ),
+  // The descriptions come from fabaid.io, not this repository, and some write
+  // links as `www.example.org`, which a browser resolves as a relative path.
   a: ({ children, href }) => (
-    <Link href={href} target='_blank' rel='noopener noreferrer'>
+    <Link
+      href={href?.startsWith('www.') ? `https://${href}` : href}
+      target='_blank'
+      rel='noopener noreferrer'
+    >
       {children}
     </Link>
   ),
