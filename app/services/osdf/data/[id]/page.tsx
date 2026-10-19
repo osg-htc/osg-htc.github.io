@@ -16,12 +16,12 @@ import {
 import { ArrowBack, Launch } from '@mui/icons-material';
 
 import {
-  filterValidNamespaces,
   formatBytes,
   formatCount,
   getDataRepository,
   getDataRepositoryIds,
 } from '@/utils/dataRepositories';
+import { filterValidNamespaces } from '@/utils/validNamespaces';
 import { Markdown, RepositoryFileBrowser } from '../_components';
 
 type PageParams = { id: string };
@@ -89,8 +89,8 @@ export default async function Page({ params }: PageProps) {
     ? repository.repositoryUrl
     : null;
 
-  // Only show namespaces registered in the federation (valid-namespaces.json).
-  const namespaces = filterValidNamespaces(repository.namespace ?? []);
+  // Only show namespaces visitors can browse; see utils/validNamespaces.ts.
+  const namespaces = await filterValidNamespaces(repository.namespace ?? []);
 
   return (
     <Box pt={6} pb={8}>

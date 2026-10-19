@@ -51,3 +51,4 @@ next-env.d.ts
 # Staff portrait manifest, written during `next build`
 /.remote-images.json
 /.remote-images/
+/.namespace-cache.json

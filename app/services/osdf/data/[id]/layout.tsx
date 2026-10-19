@@ -1,11 +1,8 @@
 import * as React from 'react';
 import { PelicanClientProvider } from '@pelicanplatform/components';
 
-import {
-  filterValidNamespaces,
-  getDataRepository,
-  pelicanObjectUrl,
-} from '@/utils/dataRepositories';
+import { getDataRepository, pelicanObjectUrl } from '@/utils/dataRepositories';
+import { filterValidNamespaces } from '@/utils/validNamespaces';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -19,7 +16,7 @@ export default async function RepositoryLayout({
   const { id } = await params;
   const repository = await getDataRepository(id);
 
-  const validNamespaces = filterValidNamespaces(repository?.namespace ?? []);
+  const validNamespaces = await filterValidNamespaces(repository?.namespace ?? []);
   const initialNamespace = validNamespaces[0] ?? '';
   const initialObjectUrl = initialNamespace
     ? pelicanObjectUrl(initialNamespace)

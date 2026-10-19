@@ -219,7 +219,7 @@ URL with `utils/slug.ts` and recovered from the data at render time.
 | Facility usage (institutions / CC*) | GRACC `https://gracc.opensciencegrid.org/q`, index `gracc.osg.summary` |
 | Topology metadata | `https://topology.opensciencegrid.org/miscproject/json` and `/miscfacility/json` |
 | OSDF data repositories | `https://fabaid.io/data/data-repositories.json` (keyed by id) |
-| OSDF valid namespaces | `public/data/valid-namespaces.json` |
+| OSDF valid namespaces | `https://osdf-director.osg-htc.org/api/v1.0/director_ui/namespaces`, filtered in `utils/validNamespaces.ts` |
 | AlphaFold cache stats | `public/data/alphafold-caching.json` (local) |
 | Maps | `map.osg-htc.org` iframes |
 
