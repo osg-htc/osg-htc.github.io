@@ -6,11 +6,9 @@ name: Check external links
 # have been broken for a week.
 
 on:
-  # 6am Central on weekdays. Cron is UTC and Central shifts between UTC-5 and
-  # UTC-6, so both hours are scheduled and the run that is not 6am in Chicago
-  # skips itself.
+  # Every day at 11:00 UTC: 6am Central in summer, 5am in winter.
   schedule:
-    - cron: '0 11,12 * * 1-5'
+    - cron: '0 6 * * *'
 
   workflow_dispatch:
 
@@ -27,24 +25,13 @@ jobs:
       SITE_ROOT: ${{ github.workspace }}/_site
       HISTORY: external-link-history.json
     steps:
-      - name: Check the time
-        id: time
-        run: |
-          if [ "${{ github.event_name }}" != schedule ] || [ "$(TZ=America/Chicago date +%H)" = 06 ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "Not 6am in Chicago; skipping."
-          fi
-
       - name: Checkout
-        if: steps.time.outputs.run
         uses: actions/checkout@v5
 
       # The deploy workflow builds main several times a day and its artifact
       # lasts a day, so there is normally one to reuse. Only when there is not
       # does this build the site itself.
       - name: Find latest build
-        if: steps.time.outputs.run
         id: latest
         run: |
           for run in $(gh run list --workflow nextjs.yml --branch main --status success \
@@ -73,16 +60,15 @@ jobs:
       # The fallback build. Same steps as nextjs.yml, restoring its caches
       # without saving over them.
       - name: Install pnpm
-        if: steps.time.outputs.run && !steps.latest.outputs.run-id
+        if: ${{ !steps.latest.outputs.run-id }}
         uses: pnpm/action-setup@v4
       - name: Use Node.js
-        if: steps.time.outputs.run
         uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: ${{ !steps.latest.outputs.run-id && 'pnpm' || '' }}
       - name: Restore Next.js build cache
-        if: steps.time.outputs.run && !steps.latest.outputs.run-id
+        if: ${{ !steps.latest.outputs.run-id }}
         uses: actions/cache/restore@v4
         with:
           path: .next/cache
@@ -91,7 +77,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('pnpm-lock.yaml') }}-
             ${{ runner.os }}-nextjs-
       - name: Restore optimized images
-        if: steps.time.outputs.run && !steps.latest.outputs.run-id
+        if: ${{ !steps.latest.outputs.run-id }}
         uses: actions/cache/restore@v4
         with:
           path: |
@@ -103,7 +89,7 @@ jobs:
             ${{ runner.os }}-next-image-export-optimizer-${{ hashFiles('next.config.mjs', 'remoteOptimizedImages.js', 'patches/*.patch') }}-
             ${{ runner.os }}-next-image-export-optimizer-
       - name: Build with Next.js
-        if: steps.time.outputs.run && !steps.latest.outputs.run-id
+        if: ${{ !steps.latest.outputs.run-id }}
         run: |
           pnpm install
           pnpm run build
@@ -112,7 +98,6 @@ jobs:
       # Same never-repeating key as the build caches: an exact hit would skip
       # the save, and the history has to be written back every run.
       - name: Restore link history
-        if: steps.time.outputs.run
         uses: actions/cache/restore@v4
         with:
           path: ${{ env.HISTORY }}
@@ -124,7 +109,6 @@ jobs:
       # publishers (most doi.org links land on one), 999 from LinkedIn, 418
       # from bot filters, and 429 for being asked to slow down.
       - name: Check links
-        if: steps.time.outputs.run
         uses: lycheeverse/lychee-action@v2.9.0
         with:
           fail: false
@@ -141,14 +125,13 @@ jobs:
             --accept '100..=103,200..=299,403,418,429,999'
             '${{ env.SITE_ROOT }}/**/*.html'
       - name: Update link history
-        if: steps.time.outputs.run
         run: |
           status=0
           node scripts/external-link-history.mjs lychee/external.json "$HISTORY" external-links.md || status=$?
           cat external-links.md >> "$GITHUB_STEP_SUMMARY"
           exit $status
       - name: Save link history
-        if: always() && steps.time.outputs.run && hashFiles(env.HISTORY) != ''
+        if: always() && hashFiles(env.HISTORY) != ''
         uses: actions/cache/save@v4
         with:
           path: ${{ env.HISTORY }}

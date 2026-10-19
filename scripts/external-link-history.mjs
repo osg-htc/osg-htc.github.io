@@ -38,15 +38,17 @@ function statusText(status) {
   return status?.details ?? status?.text ?? 'unknown error';
 }
 
-// lychee reports failures per page; this wants them per URL.
+// lychee reports failures per page; this wants them per URL. A URL on several
+// pages is only fetched once, and the repeats say "Error (cached)" rather than
+// why, so the real reason wins whichever page it was reported against.
+const CACHED = 'Error (cached)';
 /** @type {Map<string, { status: string, pages: Set<string> }>} */
 const failing = new Map();
 for (const [page, entries] of Object.entries(report.error_map ?? {})) {
   for (const entry of entries) {
-    const failure = failing.get(entry.url) ?? {
-      status: statusText(entry.status),
-      pages: new Set(),
-    };
+    const status = statusText(entry.status);
+    const failure = failing.get(entry.url) ?? { status, pages: new Set() };
+    if (failure.status === CACHED) failure.status = status;
     failure.pages.add(page);
     failing.set(entry.url, failure);
   }
