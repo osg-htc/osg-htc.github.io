@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useState } from "react";
+import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from "react";
 import NextLink from "next/link";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
@@ -23,23 +23,49 @@ import { NavigationItem } from "@/components/Header";
 // Render dropdowns above the sticky AppBar (zIndex.appBar === 1100).
 const MENU_ZINDEX = 1300;
 
-// Open on hover, with a small delay before closing so the pointer can travel
-// across a sub-pixel gap between trigger and menu without flicker.
-function useHoverMenu() {
-	const [open, setOpen] = useState(false);
+type MenuLevelState = {
+	/** Key of the open menu at this level, if any. */
+	active: string | null;
+	/** Open this menu, or with `null` close whichever is open, immediately. */
+	enter: (key: string | null) => void;
+	/** Close whichever menu is open, after a short delay. */
+	leave: () => void;
+};
+
+const MenuLevelContext = createContext<MenuLevelState | null>(null);
+
+/**
+ * The menus at one level — the bar, or the items of one dropdown — share
+ * which of them is open, so pointing at one closes its siblings at once.
+ * Leaving only closes after a delay, so the pointer can cross the sub-pixel
+ * gap between a trigger and its menu without flicker; entering anything at
+ * the same level cancels that delay.
+ */
+const MenuLevel = ({ children }: { children: React.ReactNode }) => {
+	const [active, setActive] = useState<string | null>(null);
 	const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-	const enter = () => {
+	useEffect(() => () => {
 		if (timer.current) clearTimeout(timer.current);
-		setOpen(true);
-	};
-	const leave = () => {
-		if (timer.current) clearTimeout(timer.current);
-		timer.current = setTimeout(() => setOpen(false), 120);
-	};
+	}, []);
 
-	return { open, enter, leave };
-}
+	const value = useMemo<MenuLevelState>(() => ({
+		active,
+		enter: (key) => {
+			if (timer.current) clearTimeout(timer.current);
+			setActive(key);
+		},
+		leave: () => {
+			if (timer.current) clearTimeout(timer.current);
+			timer.current = setTimeout(() => setActive(null), 120);
+		},
+	}), [active]);
+
+	return <MenuLevelContext.Provider value={value}>{children}</MenuLevelContext.Provider>;
+};
+
+/** Identifies a navigation node among its siblings. */
+const navKey = (item: NavigationItem) => item.label + (item.path ?? '');
 
 /**
  * A navigation node that may contain children. At the top level it renders as a
@@ -50,15 +76,24 @@ function useHoverMenu() {
 const NavNode = ({ item, top = false }: { item: NavigationItem; top?: boolean }) => {
 	const hasChildren = !!item.children?.length;
 	const anchorRef = useRef<HTMLElement | null>(null);
-	const { open, enter, leave } = useHoverMenu();
+	const level = useContext(MenuLevelContext)!;
+	const key = navKey(item);
+	const open = level.active === key;
 
 	if (!hasChildren) {
+		// A plain link has no menu of its own, but pointing at it should still
+		// close a sibling's.
 		return top ? (
-			<Button component={NextLink} href={item.path ?? '#'} sx={{ my: 2, color: 'common.white' }}>
+			<Button
+				component={NextLink}
+				href={item.path ?? '#'}
+				onMouseEnter={() => level.enter(null)}
+				sx={{ my: 2, color: 'common.white' }}
+			>
 				{item.label}
 			</Button>
 		) : (
-			<MenuItem component={NextLink} href={item.path ?? '#'}>
+			<MenuItem component={NextLink} href={item.path ?? '#'} onMouseEnter={() => level.enter(null)}>
 				<ListItemText>{item.label}</ListItemText>
 			</MenuItem>
 		);
@@ -80,7 +115,7 @@ const NavNode = ({ item, top = false }: { item: NavigationItem; top?: boolean })
 	);
 
 	return (
-		<Box onMouseEnter={enter} onMouseLeave={leave} sx={{ display: top ? 'inline-flex' : 'block' }}>
+		<Box onMouseEnter={() => level.enter(key)} onMouseLeave={level.leave} sx={{ display: top ? 'inline-flex' : 'block' }}>
 			{trigger}
 			<Popper
 				open={open}
@@ -90,11 +125,13 @@ const NavNode = ({ item, top = false }: { item: NavigationItem; top?: boolean })
 				sx={{ zIndex: MENU_ZINDEX }}
 			>
 				<Paper elevation={3} sx={{ minWidth: 220 }}>
-					<MenuList dense>
-						{item.children!.map((child) => (
-							<NavNode key={child.label + (child.path ?? '')} item={child} />
-						))}
-					</MenuList>
+					<MenuLevel>
+						<MenuList dense>
+							{item.children!.map((child) => (
+								<NavNode key={navKey(child)} item={child} />
+							))}
+						</MenuList>
+					</MenuLevel>
 				</Paper>
 			</Popper>
 		</Box>
@@ -116,9 +153,11 @@ const DesktopHeader = ({ pages }: { pages: NavigationItem[] }) => {
 					<Title />
 				</Box>
 				<Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-					{pages.map((page) => (
-						<NavNode key={page.label} item={page} top />
-					))}
+					<MenuLevel>
+						{pages.map((page) => (
+							<NavNode key={navKey(page)} item={page} top />
+						))}
+					</MenuLevel>
 				</Box>
 				<Box sx={{ ml: 'auto', display: 'flex', alignItems: 'center', gap: 0.5, flex: '0 0 auto' }}>
 					<Tooltip title="Apply for Account">
