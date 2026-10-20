@@ -1,0 +1,27 @@
+description: |
+  [DROID (Distributed Robot Interaction Dataset)](https://droid-dataset.github.io) is a large-scale, open-source dataset for robot manipulation collected across diverse real-world environments. It comprises 76k demonstration trajectories (~350 hours of interaction) collected over 12 months using Franka Panda arms across 564 scenes and 86 tasks, supporting generalist robot policy training.
+
+  This data is public and freely available under the Creative Commons Attribution 4.0 (CC BY 4.0) license. This dataset is hosted on Purdue University's [Anvil cluster](https://www.rcac.purdue.edu/anvil) — available read-only from the Purdue Anvil Pelican origin server.
+
+  Details about the dataset can be found at [RCAC Documentation website](https://docs.rcac.purdue.edu/datasets/ai/droid/).
+
+organization: Purdue University
+
+dataVisibility: public
+size: 3400000000000  # bytes
+fieldOfScience: Computer and Information Sciences and Support Services
+numberOfDatasets: 2
+rank: 0
+inProgress: false
+display: true
+name: DROID
+namespace:
+  - "/rcac.purdue.edu/anvil/datasets/ai/droid"
+thirtyDayReads: 0
+oneYearReads: 0
+publicObject: /rcac.purdue.edu/anvil/datasets/ai/droid
+is_directory: true
+organizationUrl: https://www.rcac.purdue.edu/
+repositoryUrl:
+  url: https://osdf-client.osg-htc.org/?url=pelican%3A%2F%2Fosg-htc.org%2Frcac.purdue.edu%2Fanvil%2Fdatasets%2Fai%2Fdroid
+  label: Dataset Catalog
