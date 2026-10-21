@@ -191,19 +191,25 @@ export default async function Page({ params }: PageProps) {
                     }osdf://${repository.publicObject} ./`}
                   </code>
                 </Paper>
-                <Typography variant='subtitle2' sx={{ mt: 2, mb: 1 }}>
-                  From your browser
-                </Typography>
-                <Button
-                  href={`https://osdf-director.osg-htc.org${repository.publicObject}`}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  variant='contained'
-                  color='secondary'
-                  endIcon={<Launch />}
-                >
-                  Download Public Object
-                </Button>
+                {/* The director 404s on a directory, so only files get a
+                    browser download. */}
+                {!repository.is_directory && (
+                  <>
+                    <Typography variant='subtitle2' sx={{ mt: 2, mb: 1 }}>
+                      From your browser
+                    </Typography>
+                    <Button
+                      href={`https://osdf-director.osg-htc.org${repository.publicObject}`}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      variant='contained'
+                      color='secondary'
+                      endIcon={<Launch />}
+                    >
+                      Download Public Object
+                    </Button>
+                  </>
+                )}
               </Box>
             )}
           </Grid>
