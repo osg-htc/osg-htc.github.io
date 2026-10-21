@@ -159,8 +159,8 @@
   },
   {
     "source": "/ospool-ace-training.html",
-    "destination": "https://forms.gle/zni7McQTp5ZhYxGr9",
-    "text": "Click Here to be Redirected to OSPOOL ACE training!"
+    "destination": "/community/training/",
+    "text": "Learning Opportunities"
   },
   {
     "source": "/ospool-enroll.html",

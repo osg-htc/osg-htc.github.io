@@ -135,10 +135,7 @@ const WHAT_WE_DO: { title: string; icon: React.ReactNode; body: React.ReactNode 
     icon: <HubOutlinedIcon />,
     body: (
       <>
-        NSF’s{' '}
-        <Link href='https://www.nsf.gov/cise/oac/vision/blueprint-2019/'>
-          Blueprint for National Cyberinfrastructure Coordination Services
-        </Link>{' '}
+        NSF’s Blueprint for National Cyberinfrastructure Coordination Services
         lays out the need for coordination services to bring together the
         distributed elements of a national CI ecosystem. It highlights OSG as
         providing distributed high throughput computing services to the U.S.
