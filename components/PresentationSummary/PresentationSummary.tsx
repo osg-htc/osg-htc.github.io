@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import ExportedImage from 'next-image-export-optimizer';
 import { Box, Chip, Stack, Typography } from '@mui/material';
+import { recordRemoteImages } from '@/utils/remoteImages';
 import {
   formatLongDate,
   getTagColor,
@@ -11,8 +13,8 @@ import {
  * the site. `stacked` puts the thumbnail above the text (sidebar); the default
  * sits it alongside (list column).
  *
- * The thumbnail is a plain `<img>`: YouTube thumbnails are remote URLs that the
- * static-export image optimizer has no variants for.
+ * The thumbnail is usually a remote YouTube frame, so it is recorded for the
+ * image optimizer to download and resize at build time.
  */
 export function PresentationSummary({
   presentation,
@@ -27,6 +29,7 @@ export function PresentationSummary({
   const thumbnailSrc =
     thumbnail?.src ??
     (youtubeId ? `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg` : null);
+  recordRemoteImages([thumbnailSrc]);
 
   const byline = event ? `${presenter} at ${event}` : presenter;
 
@@ -44,15 +47,20 @@ export function PresentationSummary({
         }}
       >
         {thumbnailSrc && (
-          <Box
-            component='img'
+          <ExportedImage
             src={thumbnailSrc}
             alt={`${title} thumbnail`}
-            sx={{
-              borderRadius: 1,
+            // YouTube's hqdefault frames are 480x360; `cover` crops them.
+            width={480}
+            height={360}
+            // `cover` fills the short edge, so the 80px square paints the
+            // 4:3 frame ~107px wide.
+            sizes={stacked ? '(max-width: 600px) 100vw, 400px' : '107px'}
+            style={{
+              borderRadius: 12,
               objectFit: 'cover',
               ...(stacked
-                ? { width: '100%', aspectRatio: '1.91', mb: 1 }
+                ? { width: '100%', height: 'auto', aspectRatio: '1.91', marginBottom: 8 }
                 : { width: 80, height: 80, flexShrink: 0 }),
             }}
           />

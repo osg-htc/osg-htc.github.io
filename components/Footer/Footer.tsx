@@ -1,3 +1,4 @@
+import ExportedImage from 'next-image-export-optimizer';
 import { Box, Container, Grid, Link, Typography } from '@mui/material';
 
 const PARTNER_LOGOS = [
@@ -80,11 +81,12 @@ export default function Footer() {
                     rel='noopener'
                     sx={{ display: 'inline-flex' }}
                   >
-                    <Box
-                      component='img'
+                    <ExportedImage
                       src={logo.src}
                       alt={logo.alt}
-                      sx={{ height: '4rem', width: 'auto' }}
+                      width={64}
+                      height={64}
+                      style={{ width: 64, height: 64, objectFit: 'contain' }}
                     />
                   </Box>
                 ))}
@@ -135,11 +137,12 @@ export default function Footer() {
             gap: 3,
           }}
         >
-          <Box
-            component='img'
+          <ExportedImage
             src='/images/logos/nsf.png'
             alt='National Science Foundation logo'
-            sx={{ height: 80, width: 'auto', flexShrink: 0 }}
+            width={80}
+            height={80}
+            style={{ width: 80, height: 80, flexShrink: 0 }}
           />
           <Typography
             variant='body2'

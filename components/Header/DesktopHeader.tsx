@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from "react";
 import NextLink from "next/link";
+import ExportedImage from "next-image-export-optimizer";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -172,7 +173,13 @@ const DesktopHeader = ({ pages }: { pages: NavigationItem[] }) => {
 					</Tooltip>
 					{partners.map((p) => (
 						<Box key={p.href} component="a" href={p.href} target="_blank" rel="noopener" sx={{ display: 'inline-flex', ml: 0.5 }}>
-							<Box component="img" src={p.src} alt={p.alt} sx={{ height: 40 }} />
+							<ExportedImage
+								src={p.src}
+								alt={p.alt}
+								width={40}
+								height={40}
+								style={{ width: 40, height: 40, objectFit: 'contain' }}
+							/>
 						</Box>
 					))}
 				</Box>

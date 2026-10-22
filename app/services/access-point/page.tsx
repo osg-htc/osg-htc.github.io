@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ExportedImage from 'next-image-export-optimizer';
 import Link from '@mui/material/Link';
 import { Box, Button, Container, Grid, Paper, Typography } from '@mui/material';
 
@@ -59,11 +60,13 @@ export default function Page() {
       <Grid container spacing={4} alignItems='center' sx={{ my: 4 }}>
         <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: 'center' }}>
           <Link href='https://portal.osg-htc.org/'>
-            <Box
-              component='img'
+            <ExportedImage
               src='/images/logos/OSG-Portal-Logo.png'
               alt='OSG Portal'
-              sx={{ maxWidth: '100%', height: 'auto' }}
+              width={12770}
+              height={3179}
+              sizes='(max-width: 900px) 100vw, 600px'
+              style={{ maxWidth: '100%', height: 'auto' }}
             />
           </Link>
         </Grid>

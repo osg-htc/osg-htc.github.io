@@ -32,6 +32,7 @@
     "@socialgouv/matomo-next": "^1.11.0",
     "chart.js": "^4.5.0",
     "gray-matter": "^4.0.3",
+    "image-size": "^2.0.4",
     "js-yaml": "^5.4.3",
     "next": "^16.1.5",
     "next-image-export-optimizer": "^1.20.1",

@@ -17,10 +17,12 @@ declare module '@mui/material/styles' {
   interface Palette {
     orange: Palette['primary'];
     navy: Palette['primary'];
+    link: { main: string; visited: string };
   }
   interface PaletteOptions {
     orange?: PaletteOptions['primary'];
     navy?: PaletteOptions['primary'];
+    link?: { main: string; visited: string };
   }
 }
 
@@ -75,6 +77,12 @@ const theme = createTheme(baseTheme, {
       dark: '#050c14',
       contrastText: BRAND_ORANGE,
     },
+    // Steel navy that reads as a link apart from near-black body text, and a
+    // muted violet once visited. Both clear WCAG AA on the page background.
+    link: {
+      main: '#24518a',
+      visited: '#6b5b95',
+    },
     background: {
       default: '#f7f8fa',
       paper: '#ffffff',
@@ -92,17 +100,17 @@ const theme = createTheme(baseTheme, {
   },
   components: {
     MuiLink: {
-      // Navy, always-underlined links that lighten once visited. Links that need
-      // another color (light-on-dark, navigation) pass a `color` prop rather
-      // than `sx`, so this `:visited` rule no longer matches them.
-      defaultProps: { color: 'secondary', underline: 'always' },
+      // Navy, always-underlined links that turn violet once visited. Links that
+      // need another color (light-on-dark, navigation) pass a `color` prop
+      // rather than `sx`, so this `:visited` rule no longer matches them.
+      defaultProps: { color: 'link', underline: 'always' },
       variants: [
         {
-          props: { color: 'secondary' },
+          props: { color: 'link' },
           style: ({ theme }: { theme: Theme }) => ({
             '&:visited': {
-              color: theme.palette.secondary.light,
-              textDecorationColor: alpha(theme.palette.secondary.light, 0.4),
+              color: theme.palette.link.visited,
+              textDecorationColor: alpha(theme.palette.link.visited, 0.4),
             },
           }),
         },

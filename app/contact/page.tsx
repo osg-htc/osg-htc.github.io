@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ExportedImage from 'next-image-export-optimizer';
 import Link from '@mui/material/Link';
 import { Box, Button, Card, CardContent, Container, Divider, Typography } from '@mui/material';
 
@@ -11,11 +12,14 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <Container maxWidth='md' sx={{ py: 5 }}>
-      <Box
-        component='img'
+      <ExportedImage
         src='/images/talk-to-us-chicago.jpeg'
         alt='OSG staff at a community event'
-        sx={{ width: '100%', borderRadius: 1 }}
+        width={1000}
+        height={398}
+        sizes='(max-width: 900px) 100vw, 900px'
+        priority
+        style={{ width: '100%', height: 'auto', borderRadius: 12 }}
       />
       <Typography variant='h2' component='h1' mt={4} gutterBottom>
         We Want to Hear From You

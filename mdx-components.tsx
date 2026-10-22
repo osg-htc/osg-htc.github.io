@@ -1,5 +1,6 @@
 import type { MDXComponents } from 'mdx/types';
 import { Box, Container, Link, Typography } from '@mui/material';
+import { MarkdownImage } from '@/components/MarkdownImage';
 
 /**
  * Styles MDX content pages with MUI components and wraps each page in a
@@ -63,17 +64,15 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     // Styling lives in globals.css so articles rendered by
     // @chtc/web-components get the same pull-quote treatment.
     blockquote: ({ children }) => <Box component='blockquote'>{children}</Box>,
-    img: ({ src, alt }) => (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img
-        src={typeof src === 'string' ? src : ''}
-        alt={alt ?? ''}
+    img: ({ src, alt, width, height }) => (
+      <MarkdownImage
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
         style={{
-          maxWidth: '100%',
-          height: 'auto',
           display: 'block',
           margin: '1.5rem auto',
-          borderRadius: 12,
           border: '1px solid rgba(17,24,39,0.10)',
         }}
       />

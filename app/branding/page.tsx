@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ExportedImage from 'next-image-export-optimizer';
 import { Box, Container, Stack, Typography } from '@mui/material';
 
 export const metadata: Metadata = {
@@ -14,10 +15,20 @@ const COLORS = [
 ];
 
 const LOGOS = [
-  { label: 'OSG Logo (SVG)', src: '/images/logos/OSG-logo.svg' },
-  { label: 'OSG Logo with Text (SVG)', src: '/images/logos/OSG_Logo_W_Text.svg' },
-  { label: 'OSG Logo (PNG)', src: '/images/logos/OSG-logo.png' },
-  { label: 'OSG Logo with Text (PNG)', src: '/images/logos/OSG_Logo_W_Text.png' },
+  { label: 'OSG Logo (SVG)', src: '/images/logos/OSG-logo.svg', width: 586, height: 291 },
+  {
+    label: 'OSG Logo with Text (SVG)',
+    src: '/images/logos/OSG_Logo_W_Text.svg',
+    width: 336,
+    height: 224,
+  },
+  { label: 'OSG Logo (PNG)', src: '/images/logos/OSG-logo.png', width: 2444, height: 1213 },
+  {
+    label: 'OSG Logo with Text (PNG)',
+    src: '/images/logos/OSG_Logo_W_Text.png',
+    width: 1402,
+    height: 933,
+  },
 ];
 
 export default function Page() {
@@ -61,11 +72,20 @@ export default function Page() {
               </a>
             </Typography>
             <a href={logo.src} download>
-              <Box
-                component='img'
+              {/* The preview is optimized; the download link stays the original. */}
+              <ExportedImage
                 src={logo.src}
                 alt={logo.label}
-                sx={{ width: '50%', bgcolor: 'grey.100', p: 2, borderRadius: 1 }}
+                width={logo.width}
+                height={logo.height}
+                sizes='(max-width: 900px) 50vw, 450px'
+                style={{
+                  width: '50%',
+                  height: 'auto',
+                  backgroundColor: '#f5f5f5',
+                  padding: 16,
+                  borderRadius: 12,
+                }}
               />
             </a>
           </Box>

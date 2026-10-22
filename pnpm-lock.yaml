@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
-  next-image-export-optimizer@1.20.1: 062910ae223261b0b80e6c3f785682ac46624b89bbb22eb59dd4220ab9ad7a9f
+  next-image-export-optimizer@1.20.1: 492c91f427f2b0bed8a1dfee779c3f925f9ef00b200b02cec520f27b1a97f3fd
 
 importers:
 
@@ -59,6 +59,9 @@ importers:
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
+      image-size:
+        specifier: ^2.0.4
+        version: 2.0.4
       js-yaml:
         specifier: ^5.4.3
         version: 5.4.3
@@ -67,7 +70,7 @@ importers:
         version: 16.1.5(@opentelemetry/api@1.10.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next-image-export-optimizer:
         specifier: ^1.20.1
-        version: 1.20.1(patch_hash=062910ae223261b0b80e6c3f785682ac46624b89bbb22eb59dd4220ab9ad7a9f)(next@16.1.5(@opentelemetry/api@1.10.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
+        version: 1.20.1(patch_hash=492c91f427f2b0bed8a1dfee779c3f925f9ef00b200b02cec520f27b1a97f3fd)(next@16.1.5(@opentelemetry/api@1.10.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       next-sitemap:
         specifier: ^4.2.3
         version: 4.2.3(next@16.1.5(@opentelemetry/api@1.10.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
@@ -3434,6 +3437,11 @@ packages:
   ignore@7.0.5:
     resolution: {integrity: sha512-Hs59xBNfUIunMFgWAbGX5cq6893IbWg4KnrjbYwX3tx0ztorVgTDA6B2sxf8ejHJ4wz8BqGUMYlnzNBer5NvGg==}
     engines: {node: '>= 4'}
+
+  image-size@2.0.4:
+    resolution: {integrity: sha512-QRUkFFsRV/6fuESxb9Vkq+a0LkSrgKXuc2NEqfikiXxxN/G3tjWt5EVUlMaImRBZRZK/jRBEbYvpPYZL8t08Zw==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   image-ssim@0.2.0:
     resolution: {integrity: sha512-W7+sO6/yhxy83L0G7xR8YAc5Z5QFtYEXXRV6EaE8tuYBZJnA3gVgp3q7X7muhLZVodeb9UfvjSbwt9VJwjIYAg==}
@@ -9636,6 +9644,8 @@ snapshots:
 
   ignore@7.0.5: {}
 
+  image-size@2.0.4: {}
+
   image-ssim@0.2.0: {}
 
   immediate@3.0.6: {}
@@ -10585,7 +10595,7 @@ snapshots:
 
   netmask@2.1.1: {}
 
-  next-image-export-optimizer@1.20.1(patch_hash=062910ae223261b0b80e6c3f785682ac46624b89bbb22eb59dd4220ab9ad7a9f)(next@16.1.5(@opentelemetry/api@1.10.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
+  next-image-export-optimizer@1.20.1(patch_hash=492c91f427f2b0bed8a1dfee779c3f925f9ef00b200b02cec520f27b1a97f3fd)(next@16.1.5(@opentelemetry/api@1.10.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
     dependencies:
       next: 16.1.5(@opentelemetry/api@1.10.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react: 19.1.0
