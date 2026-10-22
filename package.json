@@ -12,7 +12,8 @@
     "start": "next start",
     "lint": "eslint .",
     "analyze": "ANALYZE=true next build",
-    "compare:migration": "tsx scripts/compare-migration.mjs"
+    "compare:migration": "tsx scripts/compare-migration.mjs",
+    "unlighthouse:live": "unlighthouse --config-file unlighthouse.config.ts"
   },
   "dependencies": {
     "@chtc/web-components": "^2.0.10",
@@ -50,6 +51,7 @@
     "eslint": "^9.39.2",
     "eslint-config-next": "15.4.6",
     "tsx": "^4.22.4",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "unlighthouse": "^0.19.1"
   }
 }

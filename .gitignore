@@ -52,3 +52,6 @@ next-env.d.ts
 /.remote-images.json
 /.remote-images/
 /.namespace-cache.json
+
+# Unlighthouse reports
+/.unlighthouse/
