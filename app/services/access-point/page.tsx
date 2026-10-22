@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@mui/material/Link';
 import { Box, Button, Container, Grid, Paper, Typography } from '@mui/material';
 
 export const metadata: Metadata = {

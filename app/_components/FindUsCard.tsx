@@ -40,6 +40,7 @@ export function FindUsCard({
           </Typography>
           <Link
             href={href}
+            underline={"hover"}
             sx={{
               mt: 'auto',
               pt: 1,
@@ -47,9 +48,7 @@ export function FindUsCard({
               alignItems: 'center',
               flexWrap: 'wrap',
               gap: 0.5,
-              color: '#b45309',
               fontWeight: 600,
-              '&:hover': { color: 'primary.main' },
             }}
           >
             <Box component='span' sx={{ minWidth: 0 }}>

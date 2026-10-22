@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {
   Box,
   Card,
@@ -6,6 +5,7 @@ import {
   CardHeader,
   Container,
   Grid,
+  Link,
   Typography,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -45,20 +45,12 @@ function topInstitutions(rows: ProjectUsage[]) {
 function BackLink() {
   return (
     <Box sx={{ mb: 2 }}>
-      <Link href='/services/ospool/projects' style={{ textDecoration: 'none' }}>
-        <Box
-          component='span'
-          sx={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 0.5,
-            color: '#b45309',
-            fontWeight: 600,
-          }}
-        >
-          <ArrowBackIcon sx={{ fontSize: '1rem' }} />
-          All projects
-        </Box>
+      <Link
+        href='/services/ospool/projects'
+        sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, fontWeight: 600 }}
+      >
+        <ArrowBackIcon sx={{ fontSize: '1rem' }} />
+        All projects
       </Link>
     </Box>
   );

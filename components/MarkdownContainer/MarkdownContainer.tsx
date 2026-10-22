@@ -68,12 +68,7 @@ const MarkdownContainer = ({ content }: { content: string }) => {
         a: ({ children, href }) => (
           <Link
             href={href ?? '#'}
-            sx={{
-              color: '#b45309',
-              fontWeight: 600,
-              textUnderlineOffset: '0.15em',
-              '&:hover': { color: 'primary.main', textDecoration: 'underline' },
-            }}
+            sx={{ fontWeight: 600, textUnderlineOffset: '0.15em' }}
           >
             {children}
           </Link>

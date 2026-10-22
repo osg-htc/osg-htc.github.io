@@ -1,5 +1,5 @@
 import ExportedImage from 'next-image-export-optimizer';
-import Link from 'next/link';
+import Link from '@mui/material/Link';
 import { Box, Card, CardContent, Typography } from '@mui/material';
 import React from 'react';
 import { type Staff } from '@chtc/web-components/content';

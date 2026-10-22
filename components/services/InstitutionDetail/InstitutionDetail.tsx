@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {
   Box,
   Card,
@@ -6,6 +5,7 @@ import {
   CardHeader,
   Container,
   Grid,
+  Link,
   Table,
   TableBody,
   TableCell,
@@ -24,20 +24,12 @@ import { slugify } from '@/utils/slug';
 function BackLink() {
   return (
     <Box sx={{ mb: 2 }}>
-      <Link href='/services/ospool/institutions' style={{ textDecoration: 'none' }}>
-        <Box
-          component='span'
-          sx={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 0.5,
-            color: '#b45309',
-            fontWeight: 600,
-          }}
-        >
-          <ArrowBackIcon sx={{ fontSize: '1rem' }} />
-          All institutions
-        </Box>
+      <Link
+        href='/services/ospool/institutions'
+        sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, fontWeight: 600 }}
+      >
+        <ArrowBackIcon sx={{ fontSize: '1rem' }} />
+        All institutions
       </Link>
     </Box>
   );

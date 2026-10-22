@@ -53,7 +53,7 @@ import { FindUsCard } from './_components/FindUsCard';
 const HERO_EXCERPT_COMPONENTS: Components = {
   ...excerptComponents,
   a: ({ node, ...props }) => (
-    <Link underline='always' sx={{ color: 'inherit' }} {...props} />
+    <Link color='inherit' {...props} />
   ),
 };
 
@@ -357,7 +357,7 @@ export default async function Home() {
                 }}
               >
                 <Typography variant='subtitle2'>
-                  <Link href='/spotlights' sx={{ color: 'primary.main' }}>
+                  <Link href='/spotlights' color='primary'>
                     Spotlight User
                   </Link>
                 </Typography>
@@ -390,6 +390,7 @@ export default async function Home() {
                 <Link
                   key={article.slug.join('-')}
                   href={articleHref(article)}
+                  color='inherit'
                   style={{ textDecoration: 'none', display: 'block' }}
                 >
                   <Box sx={{ my: 1.5, '&:hover': { color: 'primary.main' } }}>
@@ -415,6 +416,7 @@ export default async function Home() {
                   <Link
                     key={event.slug.join('-')}
                     href={`/events/${event.slug.join('/')}`}
+                    color='inherit'
                     style={{ textDecoration: 'none', display: 'block' }}
                   >
                     <Box sx={{ display: 'flex', mt: 1.5, '&:hover': { color: 'primary.main' } }}>
@@ -559,7 +561,7 @@ export default async function Home() {
                     variant='body2'
                     color='text.secondary'
                     component='div'
-                    sx={{ lineHeight: 1.7, '& a': { color: '#b45309', fontWeight: 600 } }}
+                    sx={{ lineHeight: 1.7, '& a': { fontWeight: 600 } }}
                   >
                     {item.body}
                   </Typography>

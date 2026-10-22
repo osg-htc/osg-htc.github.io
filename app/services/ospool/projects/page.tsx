@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@mui/material/Link';
 import { Box, Container, Typography } from '@mui/material';
 import { ProjectsExplorer } from '@/components/services/ospool/ProjectsExplorer';
 import { ProjectsSummary } from '@/components/services/ospool/ProjectsSummary';

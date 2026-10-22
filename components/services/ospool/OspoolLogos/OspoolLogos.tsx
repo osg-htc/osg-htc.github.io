@@ -1,5 +1,5 @@
 import ExportedImage from 'next-image-export-optimizer';
-import Link from 'next/link';
+import Link from '@mui/material/Link';
 import { Box, Container, Typography } from '@mui/material';
 
 /** "Powered By HTCondor / Operated by PATh" + OSPool logo footer. */

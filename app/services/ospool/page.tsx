@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import ExportedImage from 'next-image-export-optimizer';
-import Link from 'next/link';
+import Link from '@mui/material/Link';
 import {
   Box,
   Button,

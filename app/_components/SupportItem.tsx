@@ -30,12 +30,8 @@ export function SupportItem({
               style={{ width: 72, height: 72, objectFit: 'contain' }}
             />
           </Link>
-          <Typography
-            variant='h5'
-            component='h3'
-            sx={{ '& a:hover': { color: 'primary.main' } }}
-          >
-            <Link href={href}>{title}</Link>
+          <Typography variant='h5' component='h3'>
+            <Link underline={'hover'} href={href}>{title}</Link>
           </Typography>
         </Box>
         <Typography color='text.secondary' sx={{ lineHeight: 1.7 }}>

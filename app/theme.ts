@@ -1,7 +1,7 @@
 'use client';
 
 import NextLink from 'next/link';
-import { createTheme, type Theme } from '@mui/material/styles';
+import { alpha, createTheme, type Theme } from '@mui/material/styles';
 import { osgTheme as baseTheme } from '@chtc/web-components/themes';
 
 /**
@@ -92,8 +92,21 @@ const theme = createTheme(baseTheme, {
   },
   components: {
     MuiLink: {
-      // Underline only on hover (not persistently) so links read cleanly.
-      defaultProps: { underline: 'hover' },
+      // Navy, always-underlined links that lighten once visited. Links that need
+      // another color (light-on-dark, navigation) pass a `color` prop rather
+      // than `sx`, so this `:visited` rule no longer matches them.
+      defaultProps: { color: 'secondary', underline: 'always' },
+      variants: [
+        {
+          props: { color: 'secondary' },
+          style: ({ theme }: { theme: Theme }) => ({
+            '&:visited': {
+              color: theme.palette.secondary.light,
+              textDecorationColor: alpha(theme.palette.secondary.light, 0.4),
+            },
+          }),
+        },
+      ],
     },
     MuiButtonBase: {
       // Route any `<Button href>` / `<IconButton href>` / clickable

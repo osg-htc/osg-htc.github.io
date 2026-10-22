@@ -45,15 +45,6 @@ const CONTENTS: { name: string; href: string; children?: { name: string; href: s
   },
 ];
 
-/** The legacy page set `.fs-5` on every body paragraph of this page. */
-const BODY = {
-  fontSize: '1.25rem',
-  lineHeight: 1.6,
-  // globals.css strips color and underline from bare anchors, so in-copy links
-  // need the warm amber the MDX content pages use or they read as plain text.
-  '& a': { color: '#b45309', fontWeight: 600 },
-} as const;
-
 export default function Page() {
   return (
     <Container maxWidth='xl' sx={{ py: 5 }}>
@@ -63,7 +54,7 @@ export default function Page() {
             OSG’s Support for Campus Cyberinfrastructure Awardees
           </Typography>
 
-          <Typography paragraph sx={BODY}>
+          <Typography variant={'body1'}>
             Enhancing the capacity of Research Computing of US campuses through
             local deployment and cross campus sharing is fully aligned with the
             vision of our NSF funded project —{' '}
@@ -83,13 +74,13 @@ export default function Page() {
           >
             Support for CC* Campuses
           </Typography>
-          <Typography paragraph sx={BODY}>
+          <Typography variant={'body1'}>
             Campuses that hold a CC* award can draw on the OSG Consortium and{' '}
             <Link href='https://path-cc.io'>PATh</Link> throughout the life of
             their award. Our teams have experience with each of the following
             aspects of a CC* project:
           </Typography>
-          <Box component='ul' sx={{ ...BODY, pl: 3, '& li': { mb: 1 } }}>
+          <Box component='ul' sx={{  pl: 3, '& li': { mb: 1 } }}>
             <li>
               Sharing data with authorized users via the{' '}
               <Link href='/services/osdf'>
@@ -128,7 +119,7 @@ export default function Page() {
               via the <Link href='/services/ospool'>OSPool</Link>
             </li>
           </Box>
-          <Typography paragraph sx={BODY}>
+          <Typography variant={'body1'}>
             Please do not hesitate to contact us at{' '}
             <Link href='mailto:support@osg-htc.org'>support@osg-htc.org</Link>{' '}
             with questions about any of the above.
@@ -143,19 +134,19 @@ export default function Page() {
           >
             Deployment
           </Typography>
-          <Typography paragraph sx={BODY}>
+          <Typography variant={'body1'}>
             Our experienced and friendly team of engineers and facilitators is
             dedicated to supporting system engineers and campus research groups.
             This team provides networking, computing and data storage
             consulting, providing expertise and guidance.
           </Typography>
-          <Typography paragraph sx={BODY}>
+          <Typography variant={'body1'}>
             These teams support your award to ensure smooth integration and
             onboarding into the OSPool or OSDF. The facilitation team also
             provides extensive support to researchers with regular training,
             weekly office hours, documentation, videos and more.
           </Typography>
-          <Typography paragraph sx={BODY}>
+          <Typography variant={'body1'}>
             Please contact us at{' '}
             <Link href='mailto:help@osg-htc.org'>help@osg-htc.org</Link> to
             schedule a consultation to discuss deployment of OSG resources at
@@ -171,7 +162,7 @@ export default function Page() {
           >
             Operation
           </Typography>
-          <Typography paragraph sx={BODY}>
+          <Typography variant={'body1'}>
             After your campus has integrated with the OSPool or OSDF, our team
             offers continued support to make the best use of computational
             resources at your campus. This includes troubleshooting of OSG
@@ -180,7 +171,7 @@ export default function Page() {
             our CC* liaison will meet with you periodically to see how things are
             going and what we can do to better support you.
           </Typography>
-          <Typography paragraph sx={BODY}>
+          <Typography variant={'body1'}>
             Our staff remains available to assist you with meeting your goals as
             your research computing needs evolve. If you or your researchers have
             any questions or issues, please contact us at{' '}
@@ -215,7 +206,7 @@ export default function Page() {
             <AccordionDetails>
               <Box
                 component='ul'
-                sx={{ pl: 3, '& a': { color: '#b45309', fontWeight: 600 } }}
+                sx={{ pl: 3, '& a': { fontWeight: 600 } }}
               >
                 {ccStar.map((site) => (
                   <li key={site.name}>
@@ -239,7 +230,7 @@ export default function Page() {
           >
             CC* Campus impact on Open Science
           </Typography>
-          <Typography paragraph sx={BODY}>
+          <Typography variant={'body1'}>
             The OSG Consortium has worked with CC* campuses for many years. These
             campuses have made significant contributions in support of science,
             both on their own campus and for the entire country.
@@ -254,7 +245,7 @@ export default function Page() {
           >
             Computing
           </Typography>
-          <Typography paragraph sx={BODY}>
+          <Typography variant={'body1'}>
             Campuses contribute core hours to researchers via the{' '}
             <Link href='/services/ospool'>OSPool</Link>, a compute resource
             accessible to any researcher affiliated with a US academic
@@ -273,7 +264,7 @@ export default function Page() {
           >
             Data Storage
           </Typography>
-          <Typography sx={BODY}>
+          <Typography>
             The{' '}
             <Link href='/services/osdf'>Open Science Data Federation</Link>{' '}
             integrates data origins, making data accessible via caches, of which
@@ -293,7 +284,7 @@ export default function Page() {
               sx={{
                 pl: 3,
                 '& li': { mb: 0.75 },
-                '& a': { color: '#b45309', fontWeight: 600 },
+                '& a': { fontWeight: 600 },
               }}
             >
               {CONTENTS.map((entry) => (

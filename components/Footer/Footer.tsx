@@ -104,8 +104,9 @@ export default function Footer() {
                         <Box component='li' key={child.url + child.name} sx={{ mb: 0.5 }}>
                           <Link
                             href={child.url}
+                            color='text.secondary'
+                            underline='hover'
                             sx={{
-                              color: 'text.secondary',
                               fontSize: '0.95rem',
                               '&:hover': { color: 'primary.main' },
                             }}

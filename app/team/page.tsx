@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@mui/material/Link';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import { type Staff } from '@chtc/web-components/content';
 import { getStaff } from '@/utils/staff';

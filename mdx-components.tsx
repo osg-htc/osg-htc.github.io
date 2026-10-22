@@ -40,15 +40,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     a: ({ href, children }) => (
       <Link
         href={href ?? '#'}
-        sx={{
-          // Warm, on-brand link color (amber-700) that stays readable on
-          // light backgrounds; underline appears on hover only.
-          color: '#b45309',
-          fontWeight: 600,
-          textUnderlineOffset: '0.15em',
-          transition: 'color .15s ease',
-          '&:hover': { color: 'primary.main' },
-        }}
+        sx={{ fontWeight: 600, textUnderlineOffset: '0.15em' }}
       >
         {children}
       </Link>
