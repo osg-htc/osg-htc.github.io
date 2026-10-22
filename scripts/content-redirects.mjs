@@ -4,13 +4,8 @@
 // used by generate-redirects.mjs (postbuild) and, opportunistically, by
 // compare-migration.mjs.
 
-// @chtc/web-components ships ESM from a package without `"type": "module"`,
-// so Node reads the `content` entry as CommonJS and can't see through its
-// re-exports to the named bindings. The default import is the module object.
-import content from '@chtc/web-components/content';
+import { getArticles } from '@chtc/web-components/content';
 import { getSiteEvents } from '../utils/events';
-
-const { getArticles } = content;
 
 /** @typedef {{ source: string, destination: string, text?: string }} Redirect */
 
