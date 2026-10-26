@@ -60,4 +60,3 @@ docker compose up
 Run `pnpm run dev`.
 
 This will be the fastest if you aren't on linux.
-
